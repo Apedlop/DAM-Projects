@@ -1,0 +1,187 @@
+<odoo>
+  <data>
+    <!-- ESCUELAS -->
+
+    <!-- Definición de la vista en lista -->
+    <record model="ir.ui.view" id="modulo_escuela_vela.escuela_list">
+      <field name="name">Escuela List</field>
+      <field name="model">modulo_escuela_vela.escuela</field>
+      <field name="arch" type="xml">
+        <list>
+          <field name="name"/>
+          <field name="telefono"/>
+          <field name="email"/>
+        </list>
+      </field>
+    </record>
+
+    <!-- Definición de la vista en formulario -->
+    <record model="ir.ui.view" id="modulo_escuela_vela.escuela_form">
+      <field name="name">Escuela Form</field>
+      <field name="model">modulo_escuela_vela.escuela</field>
+      <field name="arch" type="xml">
+        <form>
+          <group>
+            <field name="name"/>
+            <field name="direccion"/>
+            <field name="telefono"/>
+            <field name="email"/>
+          </group>
+          <group>
+            <field name="logo" widget="image"/>
+          </group>
+        </form>
+      </field>
+    </record>
+
+    <!-- Acción que abre la vista -->
+    <record model="ir.actions.act_window" id="modulo_escuela_vela.escuela_action_window">
+      <field name="name">Escuelas</field>
+      <field name="res_model">modulo_escuela_vela.escuela</field>
+      <field name="view_mode">list,form</field>
+    </record>
+
+    <!-- CURSOS -->
+
+    <!-- Definición de la vista en lista -->
+    <record model="ir.ui.view" id="modulo_escuela_vela.curso_list">
+      <field name="name">Curso List</field>
+      <field name="model">modulo_escuela_vela.curso</field>
+      <field name="arch" type="xml">
+        <list>
+          <field name="titulo"/>
+          <field name="duracion_dias"/>
+          <field name="duracion_horas"/>
+          <field name="precio"/>
+          <field name="escuela_id"/>
+        </list>
+      </field>
+    </record>
+
+    <!-- Definición de la vista en formulario -->
+    <record model="ir.ui.view" id="modulo_escuela_vela.curso_form">
+      <field name="name">Curso Form</field>
+      <field name="model">modulo_escuela_vela.curso</field>
+      <field name="arch" type="xml">
+        <form>
+          <group>
+            <field name="titulo"/>
+            <field name="duracion_dias"/>
+            <field name="duracion_horas"/>
+            <field name="precio"/>
+            <field name="escuela_id"/>
+          </group>
+        </form>
+      </field>
+    </record>
+
+    <!-- Acción que abre la vista -->
+    <record model="ir.actions.act_window" id="modulo_escuela_vela.curso_action_window">
+      <field name="name">Cursos</field>
+      <field name="res_model">modulo_escuela_vela.curso</field>
+      <field name="view_mode">list,form</field>
+    </record>
+
+    <!-- MONITORES -->
+
+    <!-- Definición de la vista en lista -->
+    <record model="ir.ui.view" id="modulo_escuela_vela.monitor_list">
+      <field name="name">Monitor List</field>
+      <field name="model">modulo_escuela_vela.monitor</field>
+      <field name="arch" type="xml">
+        <list>
+          <field name="name"/>
+          <field name="code"/>
+          <field name="telefono"/>
+          <field name="email"/>
+        </list>
+      </field>
+    </record>
+
+    <!-- Definición de la vista en formulario -->
+    <record model="ir.ui.view" id="modulo_escuela_vela.monitor_form">
+      <field name="name">Monitor Form</field>
+      <field name="model">modulo_escuela_vela.monitor</field>
+      <field name="arch" type="xml">
+        <form>
+          <group>
+            <field name="name"/>
+            <field name="code"/>
+            <field name="telefono"/>
+            <field name="email"/>
+          </group>
+          <group>
+            <field name="escuelas_ids"/>
+          </group>
+        </form>
+      </field>
+    </record>
+
+    <!-- Acción que abre la vista -->
+    <record model="ir.actions.act_window" id="modulo_escuela_vela.monitor_action_window">
+      <field name="name">Monitores</field>
+      <field name="res_model">modulo_escuela_vela.monitor</field>
+      <field name="view_mode">list,form</field>
+    </record>
+
+    <!-- ALUMNOS -->
+
+    <!-- Definición de la vista en lista -->
+    <record model="ir.ui.view" id="modulo_escuela_vela.alumno_list">
+      <field name="name">Alumno List</field>
+      <field name="model">modulo_escuela_vela.alumno</field>
+      <field name="arch" type="xml">
+        <list>
+          <field name="name"/>
+          <field name="matricula"/>
+          <field name="telefono"/>
+          <field name="email"/>
+          <field name="escuela_id"/>
+        </list>
+      </field>
+    </record>
+
+    <!-- Definición de la vista en formulario -->
+    <record model="ir.ui.view" id="modulo_escuela_vela.alumno_form">
+      <field name="name">Alumno Form</field>
+      <field name="model">modulo_escuela_vela.alumno</field>
+      <field name="arch" type="xml">
+        <form>
+          <group>
+            <field name="name"/>
+            <field name="matricula"/>
+            <field name="telefono"/>
+            <field name="email"/>
+            <field name="escuela_id"/>
+          </group>
+         
+          <button class="btn-primary" type="object" name="report_alumno"/>
+       
+        </form>
+      </field>
+    </record>
+
+    <!-- Acción que abre la vista -->
+    <record model="ir.actions.act_window" id="modulo_escuela_vela.alumno_action_window">
+      <field name="name">Alumnos</field>
+      <field name="res_model">modulo_escuela_vela.alumno</field>
+      <field name="view_mode">list,form</field>
+    </record>
+
+    <!-- Menú principal -->
+    <menuitem  id="modulo_escuela_vela.menu_root" name="EscuelaVela"/>
+
+    <!-- Menú de Escuelas dentro de EscuelaVela -->
+    <menuitem name="Escuelas" id="modulo_escuela_vela.escuela_menu" parent="modulo_escuela_vela.menu_root" action="modulo_escuela_vela.escuela_action_window"/>
+    
+    <!-- Menú de Cursos dentro de EscuelaVela -->
+    <menuitem name="Cursos" id="modulo_escuela_vela.curso_menu" parent="modulo_escuela_vela.menu_root" action="modulo_escuela_vela.curso_action_window"/>
+
+    <!-- Menú de Monitores dentro de EscuelaVela -->
+    <menuitem name="Monitores" id="modulo_escuela_vela.monitor_menu" parent="modulo_escuela_vela.menu_root" action="modulo_escuela_vela.monitor_action_window"/>
+
+    <!-- Menú de Alumnos dentro de EscuelaVela -->
+    <menuitem name="Alumnos" id="modulo_escuela_vela.alumno_menu" parent="modulo_escuela_vela.menu_root" action="modulo_escuela_vela.alumno_action_window"/>
+
+  </data>
+</odoo>

@@ -1,0 +1,298 @@
+<html>
+
+
+<!-- Mirrored from www.tutorialesprogramacionya.com/javascriptya/temarios/descripcion.php?inicio=80&cod=91 by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 18 Mar 2024 10:33:22 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QWKWPBDEFK"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-QWKWPBDEFK');
+</script>
+
+<script async src="../../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-4669394804436935",
+    enable_page_level_ads: true
+  });
+</script>
+<title>Tutorial de JavaScript : Conceptos</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="../css/estilos.css" rel="stylesheet" type="text/css">
+  <meta charset="UTF-8">
+
+<style>
+html,body {
+	background-color: #D3E9D0;
+	font-family: Trebuchet MS, Verdana, Arial, sans-serif;
+	font-size: 10pt;
+	text-align:center;
+}
+
+h1 {
+	font-size: 14pt;
+	margin: 0%;
+}
+
+div#contentdetalle{clear:left;
+                   max-width:900px;
+				   border-top:0px solid #999;
+				   padding-top:15px;
+				   background-color: #aed7a8;
+				   text-align:left;
+				   font-size:1.3em;
+				   font-weight:normal;
+				   font-family:arial;
+				   padding:20px}
+				   
+.recuadro {
+  background-color:#ffffcc;
+  text-align:left;
+  font-family:courier;
+  font-size:1em;
+  border-width:0;
+  padding:5px;
+
+  border: 1px dotted #ffaa00;
+  margin-left:5px;  
+}		
+
+.tablajs {
+    border-collapse: collapse;
+    background-color: #fff;
+    border: 1px solid #dee2e6;    
+    padding: 0.3rem;    
+}
+
+.tablajs th,
+.tablajs td {
+  padding: 0.75rem;
+  vertical-align: top;
+  border-top: 1px solid #dee2e6;
+}
+
+		   
+</style>
+
+<style>
+.uno { width: 320px; height: 100px; }
+@media(min-width: 500px) { .uno { width: 320px; height: 100px; } }
+@media(min-width: 800px) { .uno { width: 336px; height: 280px; } }
+
+.dos { width: 320px; height: 100px; }
+@media(min-width: 500px) { .dos { width: 320px; height: 100px; } }
+@media(min-width: 800px) { .dos { width: 336px; height: 280px; } }
+</style>
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','../../../www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-80268657-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</head>
+
+<body>
+
+<div class="upperleft">
+  <div class="upperright">
+    <div class="lowerleft">
+      <div class="lowerright">
+<table width="98%">
+<tr>
+<td>
+<span style="float:right"><a target="_blank" style="margin-right:0.1em;" href="https://www.tutorialesprogramacionya.com/">Listado completo de tutoriales</a></span>
+<h1>ES6 - Plantillas de cadenas de caracteres</h1></td>
+<td align="right">
+
+
+</td>
+</tr>
+</table>
+
+      </div>
+    </div>
+  </div>
+</div>
+<br>
+
+
+<div class="upperleft">
+  <div class="upperright">
+    <div class="lowerleft">
+      <div class="lowerright">
+
+<div id="contentdetalle">
+
+<div style="display:block;float:left;margin: 5px;"> 
+ <script async src="../../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<!-- adaptable1 -->
+<ins class="adsbygoogle uno"
+     style="display:inline-block"
+     data-ad-client="ca-pub-4669394804436935"
+     data-ad-slot="4716538363"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script> 
+</div> 
+
+<p>El manejo de cadenas de caracteres en JavaScript tradicional se emplean las comillas simples o dobles:</p>
+<pre>
+let titulo1='Administración';
+let titulo2="Contabilidad";
+</pre>
+<p>Cuando se requieren generar otra cadena formada por varias variables de tipo cadena, numérica etc. normalmente se utiliza el operador + para concatenar.</p>
+<p>Con ES6 se incorpora la posibilidad de definir cadenas de caracteres utilizando las comillas invertidas `.</p>
+<p>Emplearemos este tipo de cadenas cuando necesitemos sustituir el contenido de variables dentro de la cadena de caracteres sin tener que utilizar el operador de concatenación:</p>
+<pre class="recuadro">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+
+&lt;head&gt;
+    &lt;title&gt;Ejemplo de JavaScript&lt;/title&gt;
+    &lt;meta charset="UTF-8"&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+
+    &lt;script&gt;
+        const valor1 = parseInt(prompt('Ingrese primer valor:'));
+        const valor2 = parseInt(prompt('Ingrese segundo valor:'));
+        document.write(`La suma de ${valor1} y ${valor2} es ${valor1+valor2}`);
+    &lt;/script&gt;
+
+&lt;/body&gt;
+
+&lt;/html&gt;
+</pre>
+<p>Para interpolar el contenido de una variable dentro de una plantilla de cadena de caracteres encerramos entre llaves la variable y le antecedemos el caracter $:</p>
+<pre>
+  document.write(`La suma de ${valor1} y ${valor2} es ${valor1+valor2}`);
+</pre>
+<p>También es importante ver que dentro de las llaves podemos disponer una operación.</p>
+<p>Podemos comprobar que es una sintaxis más clara a la de emplear el operador de concatenación:</p>
+<pre>
+  document.write("La suma de "+valor1+" y "+valor2+" es "+(valor1+valor2));
+</pre>
+
+<h3>Llamada a funciones.</h3>
+<p>Cuando utilizamos una plantilla de cadenas de caracteres podemos llamar a una función dentro de la plantilla:</p>
+<pre class="recuadro">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+
+&lt;head&gt;
+    &lt;title&gt;Ejemplo de JavaScript&lt;/title&gt;
+    &lt;meta charset="UTF-8"&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+
+    &lt;script&gt;
+        function mayor(v1, v2) {
+            if (v1 &gt; v2)
+                return v1;
+            else
+                return v2;
+        }
+
+        const valor1 = parseInt(prompt('Ingrese primer valor:'));
+        const valor2 = parseInt(prompt('Ingrese segundo valor:'));
+        document.write(`El mayor de ${valor1} y ${valor2} es ${mayor(valor1,valor2)}`);
+    &lt;/script&gt;
+
+&lt;/body&gt;
+
+&lt;/html&gt;
+</pre>
+
+<h3>Plantillas de cadenas de caracteres de múltiples líneas</h3>
+<p>No se requiere ninguna sintaxis especial si queremos disponer una plantilla de texto de múltiples líneas.</p>
+<pre class="recuadro">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+
+&lt;head&gt;
+    &lt;title&gt;Ejemplo de JavaScript&lt;/title&gt;
+    &lt;meta charset="UTF-8"&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+
+    &lt;script&gt;
+        const dia1 = 'Lunes';
+        const dia2 = 'Miércoles';
+        const dia3 = 'Jueves'
+        const cadena = `
+  &lt;ol&gt;
+    &lt;li&gt;${dia1}&lt;/li&gt;
+    &lt;li&gt;${dia2}&lt;/li&gt;
+    &lt;li&gt;${dia3}&lt;/li&gt;        
+  &lt;/ol&gt;`;
+        document.write(cadena);
+    &lt;/script&gt;
+
+&lt;/body&gt;
+
+&lt;/html&gt;
+</pre>
+<p>Hemos definido la constante 'cadena' con múltiples líneas:</p>
+<pre>
+  const cadena=`
+  &lt;ol&gt;
+    &lt;li&gt;${dia1}&lt;/li&gt;
+    &lt;li&gt;${dia2}&lt;/li&gt;
+    &lt;li&gt;${dia3}&lt;/li&gt;        
+  &lt;/ol&gt;`;
+</pre></p>
+</div>
+
+<div>
+<!--publi-->
+<script async src="../../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<!-- adaptable2 -->
+<ins class="adsbygoogle dos"
+     style="display:inline-block"
+     data-ad-client="ca-pub-4669394804436935"
+     data-ad-slot="5774469161"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+<!--publi-->
+<script async src="../../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<!-- adaptable2 -->
+<ins class="adsbygoogle dos"
+     style="display:inline-block"
+     data-ad-client="ca-pub-4669394804436935"
+     data-ad-slot="5774469161"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+</div>
+
+
+   <h2><a href="../index20ff.html?inicio=80">Retornar</a></h2>   
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+</body>
+
+
+<!-- Mirrored from www.tutorialesprogramacionya.com/javascriptya/temarios/descripcion.php?inicio=80&cod=91 by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 18 Mar 2024 10:33:22 GMT -->
+</html>

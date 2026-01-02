@@ -1,0 +1,308 @@
+<html>
+
+
+<!-- Mirrored from www.tutorialesprogramacionya.com/javascriptya/temarios/descripcion.php?inicio=100&cod=109 by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 18 Mar 2024 10:33:28 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QWKWPBDEFK"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-QWKWPBDEFK');
+</script>
+
+<script async src="../../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-4669394804436935",
+    enable_page_level_ads: true
+  });
+</script>
+<title>Tutorial de JavaScript : Conceptos</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="../css/estilos.css" rel="stylesheet" type="text/css">
+  <meta charset="UTF-8">
+
+<style>
+html,body {
+	background-color: #D3E9D0;
+	font-family: Trebuchet MS, Verdana, Arial, sans-serif;
+	font-size: 10pt;
+	text-align:center;
+}
+
+h1 {
+	font-size: 14pt;
+	margin: 0%;
+}
+
+div#contentdetalle{clear:left;
+                   max-width:900px;
+				   border-top:0px solid #999;
+				   padding-top:15px;
+				   background-color: #aed7a8;
+				   text-align:left;
+				   font-size:1.3em;
+				   font-weight:normal;
+				   font-family:arial;
+				   padding:20px}
+				   
+.recuadro {
+  background-color:#ffffcc;
+  text-align:left;
+  font-family:courier;
+  font-size:1em;
+  border-width:0;
+  padding:5px;
+
+  border: 1px dotted #ffaa00;
+  margin-left:5px;  
+}		
+
+.tablajs {
+    border-collapse: collapse;
+    background-color: #fff;
+    border: 1px solid #dee2e6;    
+    padding: 0.3rem;    
+}
+
+.tablajs th,
+.tablajs td {
+  padding: 0.75rem;
+  vertical-align: top;
+  border-top: 1px solid #dee2e6;
+}
+
+		   
+</style>
+
+<style>
+.uno { width: 320px; height: 100px; }
+@media(min-width: 500px) { .uno { width: 320px; height: 100px; } }
+@media(min-width: 800px) { .uno { width: 336px; height: 280px; } }
+
+.dos { width: 320px; height: 100px; }
+@media(min-width: 500px) { .dos { width: 320px; height: 100px; } }
+@media(min-width: 800px) { .dos { width: 336px; height: 280px; } }
+</style>
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','../../../www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-80268657-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</head>
+
+<body>
+
+<div class="upperleft">
+  <div class="upperright">
+    <div class="lowerleft">
+      <div class="lowerright">
+<table width="98%">
+<tr>
+<td>
+<span style="float:right"><a target="_blank" style="margin-right:0.1em;" href="https://www.tutorialesprogramacionya.com/">Listado completo de tutoriales</a></span>
+<h1>ES6 - API fetch (consumir API públicas)</h1></td>
+<td align="right">
+
+
+</td>
+</tr>
+</table>
+
+      </div>
+    </div>
+  </div>
+</div>
+<br>
+
+
+<div class="upperleft">
+  <div class="upperright">
+    <div class="lowerleft">
+      <div class="lowerright">
+
+<div id="contentdetalle">
+
+<div style="display:block;float:left;margin: 5px;"> 
+ <script async src="../../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<!-- adaptable1 -->
+<ins class="adsbygoogle uno"
+     style="display:inline-block"
+     data-ad-client="ca-pub-4669394804436935"
+     data-ad-slot="4716538363"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script> 
+</div> 
+
+<p>Hay muchas empresas y organismos públicos que hacen públicos sus datos y permiten que otros sitios web y aplicaciones puedan consultar dicha información.</p>
+<p>Con el API fetch podemos fácilmente acceder a las API que suministran otros sitios web.</p>
+<p>Veamos con un ejemplo como consumimos del sitio <a href="https://jsonplaceholder.typicode.com/" target="_blank">jsonplaceholder.typicode.com/</a> datos ficticios sobre 10 usuarios.</p>
+<p>Debemos conocer dos cosas para poder consumir los datos:</p>
+<ol>
+<li>
+<p>La URL que nos suministra el recurso, en nuestro caso es:</p>
+<pre>
+https://jsonplaceholder.typicode.com/users
+</pre>
+</li>
+<li>
+<p>La estructura del archivo JSON para conocer los nombres de propiedades que accederemos:</p>
+<pre>
+[
+  {
+    "id": 1,
+    "name": "Leanne Graham",
+    "username": "Bret",
+    "email": "Sincere@april.biz",
+    "address": {
+      "street": "Kulas Light",
+      "suite": "Apt. 556",
+      "city": "Gwenborough",
+      "zipcode": "92998-3874",
+      "geo": {
+        "lat": "-37.3159",
+        "lng": "81.1496"
+      }
+    },
+    "phone": "1-770-736-8031 x56442",
+    "website": "hildegard.org",
+    "company": {
+      "name": "Romaguera-Crona",
+      "catchPhrase": "Multi-layered client-server neural-net",
+      "bs": "harness real-time e-markets"
+    }
+  },
+  etc.
+</pre>
+</li>
+</ol>
+<p>Veamos lo sencillo que es recuperar los datos de la petición mediante la API fetch:</p>
+<pre class="recuadro">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+
+&lt;head&gt;
+    &lt;title&gt;Ejemplo de JavaScript&lt;/title&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+    &lt;div class="container"&gt;
+        &lt;div class="row"&gt;
+            &lt;table class="table table-striped" id="tabla1"&gt;
+            &lt;/table&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;script&gt;
+        fetch("https://jsonplaceholder.typicode.com/users")
+            .then(response =&gt; response.json())
+            .then(datos =&gt; {
+                let cad = '&lt;tr&gt;&lt;th&gt;Nombre&lt;/th&gt;&lt;th&gt;Email&lt;/th&gt;&lt;th&gt;Télefono&lt;/th&gt;&lt;/tr&gt;';
+                for (let usuario of datos) {
+                    cad += `&lt;tr&gt;&lt;td&gt;${usuario.name}&lt;/td&gt;
+                                &lt;td&gt;${usuario.email}&lt;/td&gt;
+                                &lt;td&gt;${usuario.phone}&lt;/td&gt;&lt;/tr&gt;`;
+                }
+                document.getElementById("tabla1").innerHTML = cad;
+            });
+    &lt;/script&gt;
+
+&lt;/body&gt;
+
+&lt;/html&gt;
+</pre>
+<p>Tenemos como resultado cuando pedimos la página al servidor web:</p>
+<img src="imagentema/foto017.jpg" border="0" alt="fetch API públicas javascript"><br>
+<p>Solo a efectos que la tabla de datos se muestre con una mejor estética hemos importado de un CDN la librería CSS de Bootstrap:</p>
+<pre>
+    &lt;link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"&gt;
+</pre>
+<p>Luego en el bloque de HTML hemos dispuesto una tabla HTML vacía, con la intención que en forma dinámica se carguen con los datos que recuperaremos mediante el API fetch:</p>
+<pre>
+  &lt;div class="container"&gt;
+    &lt;div class="row"&gt;
+      &lt;table class="table table-striped" id="tabla1"&gt;
+      &lt;/table&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+</pre>
+<p>Si se encuentra olvidado de la librería Bootstrap puede recordarlo con el curso de <a href="http://www.tutorialesprogramacionya.com/bootstrap5ya/" target="_blank">Bootstrap Ya</a>.</p>
+
+<p>Inmediatamente el DOM de la página se encuentra cargado por el navegador web procedemos a llamar a la función 'fetch' y le pasamos como parámetro la URL del recurso que sabemos que retorna los datos de 10 usuarios ficticios:</p>
+  <pre>
+        fetch("https://jsonplaceholder.typicode.com/users")
+</pre>
+<p>Enlazamos la promesa que devuelve la función 'fetch' con la función 'then', donde procedemos pedir que se conviertan los datos recuperados a formato JSON:</p>
+<pre>
+            .then(response =&gt; response.json())
+</pre>
+<p>Finalmente llamamos al método 'then' de la segunda promesa donde disponemos la función donde concatenamos todos los datos que almacena el array almacenado en el parámetro 'datos':</p>
+<pre>
+            .then(datos =&gt; {
+                let cad = '&lt;tr&gt;&lt;th&gt;Nombre&lt;/th&gt;&lt;th&gt;Email&lt;/th&gt;&lt;th&gt;Télefono&lt;/th&gt;&lt;/tr&gt;';
+                for (let usuario of datos) {
+                    cad += `&lt;tr&gt;&lt;td&gt;${usuario.name}&lt;/td&gt;
+                                &lt;td&gt;${usuario.email}&lt;/td&gt;
+                                &lt;td&gt;${usuario.phone}&lt;/td&gt;&lt;/tr&gt;`;
+                }
+                document.getElementById("tabla1").innerHTML = cad;
+            });
+</pre>
+<p>Actualizamos el contenido de la 'tabla1' luego de generar el string respectivo.</p></p>
+</div>
+
+<div>
+<!--publi-->
+<script async src="../../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<!-- adaptable2 -->
+<ins class="adsbygoogle dos"
+     style="display:inline-block"
+     data-ad-client="ca-pub-4669394804436935"
+     data-ad-slot="5774469161"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+<!--publi-->
+<script async src="../../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<!-- adaptable2 -->
+<ins class="adsbygoogle dos"
+     style="display:inline-block"
+     data-ad-client="ca-pub-4669394804436935"
+     data-ad-slot="5774469161"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+</div>
+
+
+   <h2><a href="../indexf6ce.html?inicio=100">Retornar</a></h2>   
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+</body>
+
+
+<!-- Mirrored from www.tutorialesprogramacionya.com/javascriptya/temarios/descripcion.php?inicio=100&cod=109 by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 18 Mar 2024 10:33:28 GMT -->
+</html>

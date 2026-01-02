@@ -1,0 +1,290 @@
+<html>
+
+
+<!-- Mirrored from www.tutorialesprogramacionya.com/javascriptya/temarios/descripcion.php?inicio=0&cod=3 by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 18 Mar 2024 10:31:39 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QWKWPBDEFK"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-QWKWPBDEFK');
+</script>
+
+<script async src="../../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-4669394804436935",
+    enable_page_level_ads: true
+  });
+</script>
+<title>Tutorial de JavaScript : Conceptos</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="../css/estilos.css" rel="stylesheet" type="text/css">
+  <meta charset="UTF-8">
+
+<style>
+html,body {
+	background-color: #D3E9D0;
+	font-family: Trebuchet MS, Verdana, Arial, sans-serif;
+	font-size: 10pt;
+	text-align:center;
+}
+
+h1 {
+	font-size: 14pt;
+	margin: 0%;
+}
+
+div#contentdetalle{clear:left;
+                   max-width:900px;
+				   border-top:0px solid #999;
+				   padding-top:15px;
+				   background-color: #aed7a8;
+				   text-align:left;
+				   font-size:1.3em;
+				   font-weight:normal;
+				   font-family:arial;
+				   padding:20px}
+				   
+.recuadro {
+  background-color:#ffffcc;
+  text-align:left;
+  font-family:courier;
+  font-size:1em;
+  border-width:0;
+  padding:5px;
+
+  border: 1px dotted #ffaa00;
+  margin-left:5px;  
+}		
+
+.tablajs {
+    border-collapse: collapse;
+    background-color: #fff;
+    border: 1px solid #dee2e6;    
+    padding: 0.3rem;    
+}
+
+.tablajs th,
+.tablajs td {
+  padding: 0.75rem;
+  vertical-align: top;
+  border-top: 1px solid #dee2e6;
+}
+
+		   
+</style>
+
+<style>
+.uno { width: 320px; height: 100px; }
+@media(min-width: 500px) { .uno { width: 320px; height: 100px; } }
+@media(min-width: 800px) { .uno { width: 336px; height: 280px; } }
+
+.dos { width: 320px; height: 100px; }
+@media(min-width: 500px) { .dos { width: 320px; height: 100px; } }
+@media(min-width: 800px) { .dos { width: 336px; height: 280px; } }
+</style>
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','../../../www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-80268657-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</head>
+
+<body>
+
+<div class="upperleft">
+  <div class="upperright">
+    <div class="lowerleft">
+      <div class="lowerright">
+<table width="98%">
+<tr>
+<td>
+<span style="float:right"><a target="_blank" style="margin-right:0.1em;" href="https://www.tutorialesprogramacionya.com/">Listado completo de tutoriales</a></span>
+<h1>Variables.</h1></td>
+<td align="right">
+
+
+</td>
+</tr>
+</table>
+
+      </div>
+    </div>
+  </div>
+</div>
+<br>
+
+
+<div class="upperleft">
+  <div class="upperright">
+    <div class="lowerleft">
+      <div class="lowerright">
+
+<div id="contentdetalle">
+
+<div style="display:block;float:left;margin: 5px;"> 
+ <script async src="../../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<!-- adaptable1 -->
+<ins class="adsbygoogle uno"
+     style="display:inline-block"
+     data-ad-client="ca-pub-4669394804436935"
+     data-ad-slot="4716538363"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script> 
+</div> 
+
+<p>Una variable es un depósito donde hay un valor. Consta de un nombre y pertenece a un tipo (númerico, cadena de caracteres, etc.)</p>
+<p>Tipos de variable:</p>
+<p>Una variable puede almacenar:<br>
+Valores Enteros (100, 260, etc.)<br>
+Valores Reales (1.24, 2.90, 5.01, etc.)<br>
+Cadenas de caracteres ('Juan', 'Compras', 'Listado', etc.)<br>
+Valores lógicos (true,false)<br>
+Existen otros tipos de variables que veremos más adelante.</p>
+<p>Las variables son nombres que ponemos a los lugares donde almacenamos la información. En JavaScript, deben comenzar por una letra o un subrayado (_), pudiendo haber además dígitos entre los demás caracteres. Una variable no puede tener el mismo nombre de una palabra clave del lenguaje.</p>
+<p>Una variable se define anteponiéndole la palabra clave let (en JavaScript antiguo se utiliza la palabra clave var, que veremos hay algunas diferencias importantes):</p>
+<pre>
+let dia;
+</pre>
+
+<p>se pueden declarar varias variables en una misma línea:</p>
+<pre>
+let dia, mes, anio;
+</pre>
+<p>a una variable se la puede definir e inmediatamente inicializarla con un valor:</p>
+<pre>
+let edad=20;
+</pre>
+<p>o en su defecto en dos pasos:</p>
+<pre>
+let edad;<br>
+edad=20;<br>
+</pre>
+
+<p>Elección del nombre de una variable:</p>
+<p>Debemos elegir nombres de variables representativos. En el ejemplo anterior los nombres dia, mes, anio son lo suficientemente claros para darnos una idea acabada sobre su contenido, una mala elección de nombres hubiera sido llamarlas a, b y c. Podemos darle otros buenos nombres. Otros no son tan representativos, por ejemplo d, m, a. Posiblemente cuando estemos resolviendo un problema dicho nombre nos recuerde que almacenamos el dia, pero pasado un tiempo lo olvidaríamos.</p>
+
+<p>Impresión de variables en una página HTML.</p>
+<p>Para mostrar el contenido de una variable en una página utilizamos el objeto document y llamamos a la función write.<br>
+En el siguiente ejemplo definimos una serie de variables y las mostramos en la página:</p>
+<pre class="recuadro">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+
+&lt;head&gt;
+    &lt;title&gt;Ejemplo de JavaScript&lt;/title&gt;
+    &lt;meta charset="UTF-8"&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+
+    &lt;script&gt;
+        let nombre = 'Juan';
+        let edad = 10;
+        let altura = 1.92;
+        let casado = false;
+        document.write(nombre);
+        document.write('&lt;br&gt;');
+        document.write(edad);
+        document.write('&lt;br&gt;');
+        document.write(altura);
+        document.write('&lt;br&gt;');
+        document.write(casado);
+    &lt;/script&gt;
+
+&lt;/body&gt;
+
+&lt;/html&gt;
+</pre>
+<p>Cuando imprimimos una variable, no la debemos disponer entre simples comillas (en caso de hacer esto, aparecerá el nombre de la variable y no su contenido)</p>
+<p>Los valores de las variables que almacenan nombres (es decir, son cadenas de caracteres) deben ir encerradas entre comillas simples o dobles. Los valores de las variables enteras (en este ejemplo la variable edad) y reales no deben ir encerradas entre comillas. Cada instrucción finaliza con un punto y coma (luego veremos que en muchos casos se puede obviar, pero cuando comenzamos a aprender a programar no es conveniente ya que se nos pueden presentar errores difíciles de detectar)</p>
+<p>Las variables de tipo boolean pueden almacenar solo dos valores: true o false.</p>
+<p>El resultado al visualizar la página debe ser 4 líneas similares a éstas:</p>
+<pre>
+Juan
+10
+1.92
+false
+</pre>
+
+<p>Es decir que se muestran los contenidos de las 4 variables. Una variable es de un tipo determinado cuando le asignamos un valor:</p>
+<pre>
+  let edad=10;
+</pre>
+<p>Es de tipo entera ya que le asignamos un valor entero.</p>
+<pre>
+  let nombre='juan';
+</pre>
+<p>Es de tipo cadena (string)</p>
+
+<p>Para mostrar el contenido de una variable en una página debemos utilizar el método 'write' que pertenece al objeto document.</p>
+<p>Recordemos que el lenguaje JavaScript es sensible a mayúsculas y minúsculas y no será lo mismo si tipeamos:</p>
+<pre>
+  Document.Write(nombre);
+</pre>
+<p>Esto porque no existe el objeto 'Document' sino el objeto 'document' (con d minúscula), lo mismo no existe el método 'Write' sino 'write', este es un error muy común cuando comenzamos a programar en JavaScript</p>
+
+
+<p>Si queremos probar esta página en forma local en nuestra computadora debemos utilizar un editor de texto yo recomiendo <a href="https://code.visualstudio.com/download" target="_blank">Visual Studio Code</a>, luego puede desarrollar un tutorial de este editor en  <a href="https://www.tutorialesprogramacionya.com/herramientas/vscodeya/" target="_blank">VS Code Ya</a></p>
+<p>Escribimos la página web en el editor de texto:</p>
+<img src="imagentema/foto005.jpg" border="0" alt="editor de javascript"><br>
+<p>Y luego lo podemos abrir:</p>
+<img src="imagentema/foto004.jpg" border="0" alt="pagina con javascript"><br>
+
+<p>Por el momento si no quiere instalar un editor de texto puede hacer las pruebas en este mismo sitio.</p>
+
+</p>
+</div>
+
+<div>
+<!--publi-->
+<script async src="../../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<!-- adaptable2 -->
+<ins class="adsbygoogle dos"
+     style="display:inline-block"
+     data-ad-client="ca-pub-4669394804436935"
+     data-ad-slot="5774469161"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+<!--publi-->
+<script async src="../../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<!-- adaptable2 -->
+<ins class="adsbygoogle dos"
+     style="display:inline-block"
+     data-ad-client="ca-pub-4669394804436935"
+     data-ad-slot="5774469161"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+</div>
+
+
+   <h2><a href="../index2904.html?inicio=0">Retornar</a></h2>   
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+</body>
+
+
+<!-- Mirrored from www.tutorialesprogramacionya.com/javascriptya/temarios/descripcion.php?inicio=0&cod=3 by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 18 Mar 2024 10:31:41 GMT -->
+</html>

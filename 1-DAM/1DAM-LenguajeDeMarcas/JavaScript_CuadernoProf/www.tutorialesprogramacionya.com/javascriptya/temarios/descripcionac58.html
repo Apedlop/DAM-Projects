@@ -1,0 +1,359 @@
+<html>
+
+
+<!-- Mirrored from www.tutorialesprogramacionya.com/javascriptya/temarios/descripcion.php?inicio=50&cod=58 by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 18 Mar 2024 10:33:15 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QWKWPBDEFK"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-QWKWPBDEFK');
+</script>
+
+<script async src="../../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-4669394804436935",
+    enable_page_level_ads: true
+  });
+</script>
+<title>Tutorial de JavaScript : Conceptos</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="../css/estilos.css" rel="stylesheet" type="text/css">
+  <meta charset="UTF-8">
+
+<style>
+html,body {
+	background-color: #D3E9D0;
+	font-family: Trebuchet MS, Verdana, Arial, sans-serif;
+	font-size: 10pt;
+	text-align:center;
+}
+
+h1 {
+	font-size: 14pt;
+	margin: 0%;
+}
+
+div#contentdetalle{clear:left;
+                   max-width:900px;
+				   border-top:0px solid #999;
+				   padding-top:15px;
+				   background-color: #aed7a8;
+				   text-align:left;
+				   font-size:1.3em;
+				   font-weight:normal;
+				   font-family:arial;
+				   padding:20px}
+				   
+.recuadro {
+  background-color:#ffffcc;
+  text-align:left;
+  font-family:courier;
+  font-size:1em;
+  border-width:0;
+  padding:5px;
+
+  border: 1px dotted #ffaa00;
+  margin-left:5px;  
+}		
+
+.tablajs {
+    border-collapse: collapse;
+    background-color: #fff;
+    border: 1px solid #dee2e6;    
+    padding: 0.3rem;    
+}
+
+.tablajs th,
+.tablajs td {
+  padding: 0.75rem;
+  vertical-align: top;
+  border-top: 1px solid #dee2e6;
+}
+
+		   
+</style>
+
+<style>
+.uno { width: 320px; height: 100px; }
+@media(min-width: 500px) { .uno { width: 320px; height: 100px; } }
+@media(min-width: 800px) { .uno { width: 336px; height: 280px; } }
+
+.dos { width: 320px; height: 100px; }
+@media(min-width: 500px) { .dos { width: 320px; height: 100px; } }
+@media(min-width: 800px) { .dos { width: 336px; height: 280px; } }
+</style>
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','../../../www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-80268657-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</head>
+
+<body>
+
+<div class="upperleft">
+  <div class="upperright">
+    <div class="lowerleft">
+      <div class="lowerright">
+<table width="98%">
+<tr>
+<td>
+<span style="float:right"><a target="_blank" style="margin-right:0.1em;" href="https://www.tutorialesprogramacionya.com/">Listado completo de tutoriales</a></span>
+<h1>Funciones: objeto arguments</h1></td>
+<td align="right">
+
+
+</td>
+</tr>
+</table>
+
+      </div>
+    </div>
+  </div>
+</div>
+<br>
+
+
+<div class="upperleft">
+  <div class="upperright">
+    <div class="lowerleft">
+      <div class="lowerright">
+
+<div id="contentdetalle">
+
+<div style="display:block;float:left;margin: 5px;"> 
+ <script async src="../../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<!-- adaptable1 -->
+<ins class="adsbygoogle uno"
+     style="display:inline-block"
+     data-ad-client="ca-pub-4669394804436935"
+     data-ad-slot="4716538363"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script> 
+</div> 
+
+<p>Cuando llamamos a una función JavaScript crea automáticamente un objeto llamado "arguments" que almacena los valores que le pasamos a dicha función. También este objeto arguments almacena en una propiedad llamada length la cantidad de parámetros que llegaron. Veamos un ejemplo muy sencillo.</p>
+<p>Confeccionar una función que retorne la suma de dos enteros:</p>
+<pre class="recuadro">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+
+&lt;head&gt;
+    &lt;title&gt;Ejemplo de JavaScript&lt;/title&gt;
+    &lt;meta charset="UTF-8"&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+
+    &lt;script&gt;
+        function sumar(x, y) {
+            let s = x + y;
+            return s;
+        }
+
+        document.write(sumar(5, 3));
+    &lt;/script&gt;
+
+&lt;/body&gt;
+
+&lt;/html&gt;
+</pre>
+<p>Luego podemos resolver esta misma función accediendo al objeto arguments que se crea cada vez que llamamos a una función:</p>
+<pre class="recuadro">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+
+&lt;head&gt;
+    &lt;title&gt;Ejemplo de JavaScript&lt;/title&gt;
+    &lt;meta charset="UTF-8"&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+
+    &lt;script&gt;
+        function sumar(x, y) {
+            let s = arguments[0] + arguments[1];
+            return s;
+        }
+
+        document.write(sumar(5, 3));
+    &lt;/script&gt;
+
+&lt;/body&gt;
+
+&lt;/html&gt;
+</pre>
+<p>Como podemos observar dentro de la función sumar accedemos al primer parámetro mediante el objeto arguments (con el subíndice 0 accedemos al primer parámetro llamado x) Tenemos dos formas de acceder al primer parámetro de la función : con el nombre x o con arguments[0].</p>
+<p>Si debemos sumar dos valores que llegan como parámetro el algoritmo más claro es el primero en lugar que tener que acceder al objeto "arguments", pero veremos que en muchas situaciones el objeto "arguments" nos favorece en la implementación de funciones mucho más complejas y reutilizables.</p>
+<strong>Problema</strong>
+<p>Confeccionar una función que reciba un conjunto variable de enteros y nos retorne su suma:</p>
+<pre class="recuadro">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+
+&lt;head&gt;
+    &lt;title&gt;Ejemplo de JavaScript&lt;/title&gt;
+    &lt;meta charset="UTF-8"&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+
+    &lt;script&gt;
+        function sumar() {
+            let s = 0;
+            for (let f = 0; f &lt; arguments.length; f++) {
+                s = s + arguments[f];
+            }
+            return s;
+        }
+
+        document.write(sumar(2, 4));
+        document.write('&lt;br&gt;');
+        document.write(sumar(1, 2, 3, 4, 5));
+        document.write('&lt;br&gt;');
+        document.write(sumar(100, 200, 300));
+    &lt;/script&gt;
+
+&lt;/body&gt;
+
+&lt;/html&gt;
+</pre>
+
+<p>Como no sabemos con cuantos parámetros llamaremos a la función sumar no indicamos ningún parámetro. Luego la única forma de acceder a los parámetros es mediante el objeto "arguments" y por medio del subíndice accedemos uno a uno. También el objeto "arguments" tiene una propiedad length que almacena la cantidad de parámetros recibidos por la función.</p>
+<p>Esta sintaxis nos permite codificar funciones muy poderosas que se adaptan a muchas situaciones, como vemos luego podemos llamar a la función sumar pasando 2 parámetros:</p>
+<pre>
+  document.write(sumar(2,4));
+</pre>
+<p>5 parámetros:</p>
+<pre>
+  document.write(sumar(1,2,3,4,5));
+</pre>
+<p>3 parámetros:</p>
+<pre>
+  document.write(sumar(100,200,300));
+</pre>
+<p>etc.</p>
+
+
+<strong>Problema</strong>
+<p>Confeccionar una función que reciba un conjunto de string y genere dentro de la página una lista ordenada (&lt;ol&gt;). La función debe recibir en el primer parámetro el id de un div.</p>
+<pre class="recuadro">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+
+&lt;head&gt;
+    &lt;title&gt;Ejemplo de JavaScript&lt;/title&gt;
+    &lt;meta charset="UTF-8"&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+
+    &lt;div id="lista1"&gt;&lt;/div&gt;
+
+    &lt;script&gt;
+        function iniciar() {
+            generarLista('lista1', 'uno', 'dos', 'tres', 'cuatro', 'cinco', 'seis');
+        }
+
+        function generarLista() {
+            let s = '&lt;ol&gt;';
+            for (let f = 1; f &lt; arguments.length; f++) {
+                s = s + '&lt;li&gt;' + arguments[f] + '&lt;/li&gt;';
+            }
+            s = s + '&lt;/ol&gt;';
+            let elemento1 = document.getElementById(arguments[0]);
+            elemento1.innerHTML = s;
+        }
+
+        iniciar();
+    &lt;/script&gt;
+
+&lt;/body&gt;
+
+&lt;/html&gt;
+</pre>
+<p>Veamos por partes el funcionamiento de este programa. En el body de la página hemos definido un div con id llamado "lista1" sin contenido:</p>
+<pre>
+&lt;div id="lista1"&gt;&lt;/div&gt;
+</pre>
+<p>Al final del script llamamos a la función 'iniciar':</p>
+<pre>
+        iniciar();
+</pre>
+<p>Es decir que la función iniciar se ejecuta una vez que la página está completamente construida (es decir ya está en memoria el div definido en el body)</p>
+<p>La función iniciar es la que llama a la función generarLista pasando como parámetros primero el id del div a cargar y a partir del segundo parámetro en adelante los distintos string a mostrar en cada elemento del &lt;ol&gt;:</p>
+<pre>
+        function iniciar() {
+            generarLista('lista1', 'uno', 'dos', 'tres', 'cuatro', 'cinco', 'seis');
+        }
+</pre>
+
+<p>Finalmente la función generarLista que como podemos observar no tiene parámetros explícitos, sino que los accedemos luego mediante el objeto arguments. Disponemos un for que lo inicializamos en 1 ya que el argumento cero tiene el nombre del id del div:</p>
+<pre>
+        function generarLista() {
+            let s = '&lt;ol&gt;';
+            for (let f = 1; f &lt; arguments.length; f++) {
+                s = s + '&lt;li&gt;' + arguments[f] + '&lt;/li&gt;';
+            }
+            s = s + '&lt;/ol&gt;';
+            let elemento1 = document.getElementById(arguments[0]);
+            elemento1.innerHTML = s;
+        }
+</pre>
+<p>Mediante el método getElementById obtenemos la referencia del div que llega como parámetro en el arguments[0]. y luego mediante la propiedad innerHTML indicamos todo el código HTML que debe cargarse en el div. En este caso almacenamos en la variable s todas las marcas necesarios para generar la lista ordenada.</p>
+</p>
+</div>
+
+<div>
+<!--publi-->
+<script async src="../../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<!-- adaptable2 -->
+<ins class="adsbygoogle dos"
+     style="display:inline-block"
+     data-ad-client="ca-pub-4669394804436935"
+     data-ad-slot="5774469161"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+<!--publi-->
+<script async src="../../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<!-- adaptable2 -->
+<ins class="adsbygoogle dos"
+     style="display:inline-block"
+     data-ad-client="ca-pub-4669394804436935"
+     data-ad-slot="5774469161"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+</div>
+
+
+   <h2><a href="../indexefd7.html?inicio=50">Retornar</a></h2>   
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+</body>
+
+
+<!-- Mirrored from www.tutorialesprogramacionya.com/javascriptya/temarios/descripcion.php?inicio=50&cod=58 by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 18 Mar 2024 10:33:15 GMT -->
+</html>

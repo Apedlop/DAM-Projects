@@ -1,0 +1,350 @@
+<html>
+
+
+<!-- Mirrored from www.tutorialesprogramacionya.com/javascriptya/temarios/descripcion.php?inicio=60&cod=62 by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 18 Mar 2024 10:33:17 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QWKWPBDEFK"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-QWKWPBDEFK');
+</script>
+
+<script async src="../../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-4669394804436935",
+    enable_page_level_ads: true
+  });
+</script>
+<title>Tutorial de JavaScript : Conceptos</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="../css/estilos.css" rel="stylesheet" type="text/css">
+  <meta charset="UTF-8">
+
+<style>
+html,body {
+	background-color: #D3E9D0;
+	font-family: Trebuchet MS, Verdana, Arial, sans-serif;
+	font-size: 10pt;
+	text-align:center;
+}
+
+h1 {
+	font-size: 14pt;
+	margin: 0%;
+}
+
+div#contentdetalle{clear:left;
+                   max-width:900px;
+				   border-top:0px solid #999;
+				   padding-top:15px;
+				   background-color: #aed7a8;
+				   text-align:left;
+				   font-size:1.3em;
+				   font-weight:normal;
+				   font-family:arial;
+				   padding:20px}
+				   
+.recuadro {
+  background-color:#ffffcc;
+  text-align:left;
+  font-family:courier;
+  font-size:1em;
+  border-width:0;
+  padding:5px;
+
+  border: 1px dotted #ffaa00;
+  margin-left:5px;  
+}		
+
+.tablajs {
+    border-collapse: collapse;
+    background-color: #fff;
+    border: 1px solid #dee2e6;    
+    padding: 0.3rem;    
+}
+
+.tablajs th,
+.tablajs td {
+  padding: 0.75rem;
+  vertical-align: top;
+  border-top: 1px solid #dee2e6;
+}
+
+		   
+</style>
+
+<style>
+.uno { width: 320px; height: 100px; }
+@media(min-width: 500px) { .uno { width: 320px; height: 100px; } }
+@media(min-width: 800px) { .uno { width: 336px; height: 280px; } }
+
+.dos { width: 320px; height: 100px; }
+@media(min-width: 500px) { .dos { width: 320px; height: 100px; } }
+@media(min-width: 800px) { .dos { width: 336px; height: 280px; } }
+</style>
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','../../../www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-80268657-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</head>
+
+<body>
+
+<div class="upperleft">
+  <div class="upperright">
+    <div class="lowerleft">
+      <div class="lowerright">
+<table width="98%">
+<tr>
+<td>
+<span style="float:right"><a target="_blank" style="margin-right:0.1em;" href="https://www.tutorialesprogramacionya.com/">Listado completo de tutoriales</a></span>
+<h1>Funciones: parámetros de tipo función</h1></td>
+<td align="right">
+
+
+</td>
+</tr>
+</table>
+
+      </div>
+    </div>
+  </div>
+</div>
+<br>
+
+
+<div class="upperleft">
+  <div class="upperright">
+    <div class="lowerleft">
+      <div class="lowerright">
+
+<div id="contentdetalle">
+
+<div style="display:block;float:left;margin: 5px;"> 
+ <script async src="../../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<!-- adaptable1 -->
+<ins class="adsbygoogle uno"
+     style="display:inline-block"
+     data-ad-client="ca-pub-4669394804436935"
+     data-ad-slot="4716538363"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script> 
+</div> 
+
+<p>Hasta ahora siempre que hemos implementado una función le hemos pasado como parámetro tipos de dato numérico, string, boolean, objetos etc.<br>
+Ahora veremos que también podemos implementar funciones que reciban como parámetro otra función.<p>
+<p>Primero veamos un simple ejemplo para entender que una función se la podemos asignar a una variable y luego a través de esta variable llamar a la función:</p>
+<pre class="recuadro">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+
+&lt;head&gt;
+    &lt;title&gt;Ejemplo de JavaScript&lt;/title&gt;
+    &lt;meta charset="UTF-8"&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+
+    &lt;script&gt;
+        let f1 = function(x, y) {
+            let s = x + y;
+            return s;
+        }
+
+        document.write(f1(4, 6) + '&lt;br&gt;');
+        let f2 = f1;
+        document.write(f2(3, 3) + '&lt;br&gt;');
+    &lt;/script&gt;
+
+&lt;/body&gt;
+
+&lt;/html&gt;
+</pre>
+
+<p>Vemos que definimos una variable llamada f1 y le asignamos la función propiamente dicha:</p>
+<pre>
+        let f1 = function(x, y) {
+            let s = x + y;
+            return s;
+        }
+</pre>
+<p>Luego para llamar la función lo hacemos a través de la variable f1:</p>
+<pre>
+  document.write(f1(4,6)+'&lt;br&gt;');  
+</pre>
+<p>De la misma manera podemos definir una segunda variable que obtenga la referencia de la otra variable y podremos entonces llamar a la misma función con este segundo nombre:</p>
+<pre>
+        let f2 = f1;
+        document.write(f2(3, 3) + '&lt;br&gt;');
+</pre>
+<strong>Problema</strong>
+<p>Ahora si implementaremos otro problema que declare una función que reciba tres parámetros, el último de ellos es una función:</p>
+<pre class="recuadro">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+
+&lt;head&gt;
+    &lt;title&gt;Ejemplo de JavaScript&lt;/title&gt;
+    &lt;meta charset="UTF-8"&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+
+    &lt;script&gt;
+        function calcular(x, y, fu) {
+            let resu = fu(x, y);
+            return resu;
+        }
+
+        let s1 = calcular(10, 5, function(v1, v2) {
+            return v1 + v2;
+        });
+
+        document.write(s1 + '&lt;br&gt;');
+
+        let s2 = calcular(10, 5, function(v1, v2) {
+            return v1 - v2;
+        });
+
+        document.write(s2 + '&lt;br&gt;');
+    &lt;/script&gt;
+
+&lt;/body&gt;
+
+&lt;/html&gt;
+</pre>
+<p>Es importante entender la sintaxis que presentamos en este problema elemental para entender que una función puede recibir como parámetros una función y luego llamarla desde dentro.</p>
+<p>Primero analicemos como llamamos a la función calcular:</p>
+<pre>
+        let s1 = calcular(10, 5, function(v1, v2) {
+            return v1 + v2;
+        });
+</pre>
+<p>A la función calcular le pasamos dos enteros:10 y 5, y una función que definimos en el mismo parámetro:</p>
+<pre>
+function (v1,v2) {
+    return v1+v2;
+}
+</pre>
+<p>La función calcular recibe los tres parámetros y sabiendo que el tercer parámetro llega la referencia a la función procedemos a llamarla enviando los dos parámetros requeridos:</pre>
+<pre>
+        function calcular(x, y, fu) {
+            let resu = fu(x, y);
+            return resu;
+        }
+</pre>
+<p>Como vemos podemos llamar nuevamente a la función calcular pero pasando otra función:</p>
+<pre>
+        let s2 = calcular(10, 5, function(v1, v2) {
+            return v1 - v2;
+        });
+</pre>
+<p>Podemos en vez de definir funciones anónimas cuando llamamos a calcular pasar el nombre de funciones declaradas:</p>
+<pre class="recuadro">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+
+&lt;head&gt;
+    &lt;title&gt;Ejemplo de JavaScript&lt;/title&gt;
+    &lt;meta charset="UTF-8"&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+
+    &lt;script&gt;
+        function sumar(v1, v2) {
+            return v1 + v2;
+        }
+
+        function restar(v1, v2) {
+            return v1 - v2;
+        }
+
+        function calcular(x, y, fu) {
+            let resu = fu(x, y);
+            return resu;
+        }
+
+        let s1 = calcular(10, 5, sumar);
+
+        document.write(s1 + '&lt;br&gt;');
+
+        let s2 = calcular(10, 5, restar);
+
+        document.write(s2 + '&lt;br&gt;');
+    &lt;/script&gt;
+
+&lt;/body&gt;
+
+&lt;/html&gt;
+</pre>
+<p>Podemos observar que definimos las funciones sumar y restar:</p>
+<pre>
+        function sumar(v1, v2) {
+            return v1 + v2;
+        }
+
+        function restar(v1, v2) {
+            return v1 - v2;
+        }
+</pre>
+<p>Y cuando llamamos a calcular en el tercer parámetro indicamos el nombre de la función a enviarle:</p>
+<pre>
+        let s1 = calcular(10, 5, sumar);
+</pre></p>
+</div>
+
+<div>
+<!--publi-->
+<script async src="../../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<!-- adaptable2 -->
+<ins class="adsbygoogle dos"
+     style="display:inline-block"
+     data-ad-client="ca-pub-4669394804436935"
+     data-ad-slot="5774469161"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+<!--publi-->
+<script async src="../../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<!-- adaptable2 -->
+<ins class="adsbygoogle dos"
+     style="display:inline-block"
+     data-ad-client="ca-pub-4669394804436935"
+     data-ad-slot="5774469161"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+</div>
+
+
+   <h2><a href="../indexd6cc.html?inicio=60">Retornar</a></h2>   
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+</body>
+
+
+<!-- Mirrored from www.tutorialesprogramacionya.com/javascriptya/temarios/descripcion.php?inicio=60&cod=62 by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 18 Mar 2024 10:33:17 GMT -->
+</html>

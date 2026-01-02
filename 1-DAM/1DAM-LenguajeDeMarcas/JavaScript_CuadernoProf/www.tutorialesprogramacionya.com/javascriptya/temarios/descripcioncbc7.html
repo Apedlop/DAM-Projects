@@ -1,0 +1,301 @@
+<html>
+
+
+<!-- Mirrored from www.tutorialesprogramacionya.com/javascriptya/temarios/descripcion.php?inicio=80&cod=89 by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 18 Mar 2024 10:33:21 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QWKWPBDEFK"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-QWKWPBDEFK');
+</script>
+
+<script async src="../../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-4669394804436935",
+    enable_page_level_ads: true
+  });
+</script>
+<title>Tutorial de JavaScript : Conceptos</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="../css/estilos.css" rel="stylesheet" type="text/css">
+  <meta charset="UTF-8">
+
+<style>
+html,body {
+	background-color: #D3E9D0;
+	font-family: Trebuchet MS, Verdana, Arial, sans-serif;
+	font-size: 10pt;
+	text-align:center;
+}
+
+h1 {
+	font-size: 14pt;
+	margin: 0%;
+}
+
+div#contentdetalle{clear:left;
+                   max-width:900px;
+				   border-top:0px solid #999;
+				   padding-top:15px;
+				   background-color: #aed7a8;
+				   text-align:left;
+				   font-size:1.3em;
+				   font-weight:normal;
+				   font-family:arial;
+				   padding:20px}
+				   
+.recuadro {
+  background-color:#ffffcc;
+  text-align:left;
+  font-family:courier;
+  font-size:1em;
+  border-width:0;
+  padding:5px;
+
+  border: 1px dotted #ffaa00;
+  margin-left:5px;  
+}		
+
+.tablajs {
+    border-collapse: collapse;
+    background-color: #fff;
+    border: 1px solid #dee2e6;    
+    padding: 0.3rem;    
+}
+
+.tablajs th,
+.tablajs td {
+  padding: 0.75rem;
+  vertical-align: top;
+  border-top: 1px solid #dee2e6;
+}
+
+		   
+</style>
+
+<style>
+.uno { width: 320px; height: 100px; }
+@media(min-width: 500px) { .uno { width: 320px; height: 100px; } }
+@media(min-width: 800px) { .uno { width: 336px; height: 280px; } }
+
+.dos { width: 320px; height: 100px; }
+@media(min-width: 500px) { .dos { width: 320px; height: 100px; } }
+@media(min-width: 800px) { .dos { width: 336px; height: 280px; } }
+</style>
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','../../../www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-80268657-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</head>
+
+<body>
+
+<div class="upperleft">
+  <div class="upperright">
+    <div class="lowerleft">
+      <div class="lowerright">
+<table width="98%">
+<tr>
+<td>
+<span style="float:right"><a target="_blank" style="margin-right:0.1em;" href="https://www.tutorialesprogramacionya.com/">Listado completo de tutoriales</a></span>
+<h1>Expresiones regulares: métodos search, replace, split, match del objeto String.</h1></td>
+<td align="right">
+
+
+</td>
+</tr>
+</table>
+
+      </div>
+    </div>
+  </div>
+</div>
+<br>
+
+
+<div class="upperleft">
+  <div class="upperright">
+    <div class="lowerleft">
+      <div class="lowerright">
+
+<div id="contentdetalle">
+
+<div style="display:block;float:left;margin: 5px;"> 
+ <script async src="../../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<!-- adaptable1 -->
+<ins class="adsbygoogle uno"
+     style="display:inline-block"
+     data-ad-client="ca-pub-4669394804436935"
+     data-ad-slot="4716538363"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script> 
+</div> 
+
+<p>El objeto String tiene métodos que reciben como parámetro una expresión regular.</p>
+<p>El primer método es el <strong>search</strong>. Este método busca la primer ocurrencia del string según la expresión que le hemos pasado como parámetro. Devuelve un entero indicando la posición donde comienza la cadena encontrada o un -1 si no encuentra el patrón en el string.</p>
+<pre class="recuadro">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+
+&lt;head&gt;
+    &lt;title&gt;Ejemplo de JavaScript&lt;/title&gt;
+    &lt;meta charset="UTF-8"&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+
+    &lt;script&gt;
+        let oracion = 'La noche está muy oscura y estrellada.';
+        if (oracion.search(/estrella/) != -1)
+            alert('el string estrella está contenido en la variable oracion');
+    &lt;/script&gt;
+
+&lt;/body&gt;
+
+&lt;/html&gt;
+</pre>
+<p>Hemos dispuesto un if para controlar si el string 'estrella' está contenido en la variable oración:</p>
+<pre>
+        if (oracion.search(/estrella/) != -1)
+            alert('el string estrella está contenido en la variable oracion');
+</pre>
+<p>Por supuesto que podemos emplear expresiones regulares tan complejas como necesitemos utilizando distintos metacaracteres y modificadores.</p>
+<p>El segundo método del objeto String que veremos es el <strong>replace</strong>.</p>
+<p>El método replace realiza una búsqueda y reemplazo. Se toma una expresión regular como primer parámetro y un string de reemplazo como su segundo argumento.
+Si la expresión regular tiene la bandera g, el método replace sustituye todas las coincidencias
+en la cadena de reemplazo, en caso contrario, se reemplaza sólo la primera coincidencia que encuentre.</p>
+
+<pre class="recuadro">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+
+&lt;head&gt;
+    &lt;title&gt;Ejemplo de JavaScript&lt;/title&gt;
+    &lt;meta charset="UTF-8"&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+
+    &lt;script&gt;
+        let oracion = 'uno dos tres uno dos tres uno dos tres';
+        let cadena = oracion.replace(/uno/g, '1');
+        alert(cadena); //1 dos tres 1 dos tres 1 dos tres
+    &lt;/script&gt;
+
+&lt;/body&gt;
+
+&lt;/html&gt;
+</pre>
+<p>En este problema queremos obtener otro String sustituyendo todas las cadenas 'uno' por el caracter '1'. Para hacer que se sustituyan todas las ocurrencias debemos emplear el modificador g:</p>
+<pre>
+        let cadena=oracion.replace(/uno/g,'1');
+</pre>
+<p>Es importante tener en cuenta que la variable que llama al método replace no se modifica, sino que retorna otro String con el resultado.</p>
+<p>El tercer método es el <strong>split</strong> que tiene por objetivo subdividir un string y retornar un vector con dichas partes. Para la división toma en cuenta la expresión regular pasada como parámetro.</p>
+<pre class="recuadro">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+
+&lt;head&gt;
+    &lt;title&gt;Ejemplo de JavaScript&lt;/title&gt;
+    &lt;meta charset="UTF-8"&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+
+    &lt;script&gt;
+        let cadena = '(2,3)-(4,4)-(9,3)';
+        let vec = cadena.split(/-/);
+        for (let x = 0; x &lt; vec.length; x++) {
+            document.write(vec[x] + '&lt;br&gt;');
+        }
+    &lt;/script&gt;
+
+&lt;/body&gt;
+
+&lt;/html&gt;
+</pre>
+<p>El vector vec almacena los valores: (2,3) (4,4) y (9,3), ya que la expresión regular indicada define el caracter - como patrón de corte.</p>
+<p>El último método a analizar del objeto String es el <strong>match</strong>. Tiene como parámetro una expresión regular y retorna un vector con todos los string que cumplen el patrón especificado (siempre y cuando hallamos activado la bandera 'g' (global))</p>
+<strong>Problema</strong>
+<p>Se tiene un string donde tenemos almacenados los nombres de personas seguido de sus edades. Generar un vector solo con las edades de todas las personas.</p>
+<pre class="recuadro">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+
+&lt;head&gt;
+    &lt;title&gt;Ejemplo de JavaScript&lt;/title&gt;
+    &lt;meta charset="UTF-8"&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+
+    &lt;script&gt;
+        let cadena = 'juan 10 luis 43 pedro 21 carlos 33';
+        let vec = cadena.match(/\d+/g);
+        for (let x = 0; x &lt; vec.length; x++) {
+            document.write(vec[x] + '&lt;br&gt;');
+        }
+    &lt;/script&gt;
+
+&lt;/body&gt;
+
+&lt;/html&gt;
+</pre>
+</p>
+</div>
+
+<div>
+<!--publi-->
+<script async src="../../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<!-- adaptable2 -->
+<ins class="adsbygoogle dos"
+     style="display:inline-block"
+     data-ad-client="ca-pub-4669394804436935"
+     data-ad-slot="5774469161"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+<!--publi-->
+<script async src="../../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<!-- adaptable2 -->
+<ins class="adsbygoogle dos"
+     style="display:inline-block"
+     data-ad-client="ca-pub-4669394804436935"
+     data-ad-slot="5774469161"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+</div>
+
+
+   <h2><a href="../index20ff.html?inicio=80">Retornar</a></h2>   
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+</body>
+
+
+<!-- Mirrored from www.tutorialesprogramacionya.com/javascriptya/temarios/descripcion.php?inicio=80&cod=89 by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 18 Mar 2024 10:33:21 GMT -->
+</html>

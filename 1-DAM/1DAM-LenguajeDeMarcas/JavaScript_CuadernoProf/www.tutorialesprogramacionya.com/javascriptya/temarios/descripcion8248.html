@@ -1,0 +1,301 @@
+<html>
+
+
+<!-- Mirrored from www.tutorialesprogramacionya.com/javascriptya/temarios/descripcion.php?inicio=90&cod=99 by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 18 Mar 2024 10:33:25 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QWKWPBDEFK"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-QWKWPBDEFK');
+</script>
+
+<script async src="../../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-4669394804436935",
+    enable_page_level_ads: true
+  });
+</script>
+<title>Tutorial de JavaScript : Conceptos</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="../css/estilos.css" rel="stylesheet" type="text/css">
+  <meta charset="UTF-8">
+
+<style>
+html,body {
+	background-color: #D3E9D0;
+	font-family: Trebuchet MS, Verdana, Arial, sans-serif;
+	font-size: 10pt;
+	text-align:center;
+}
+
+h1 {
+	font-size: 14pt;
+	margin: 0%;
+}
+
+div#contentdetalle{clear:left;
+                   max-width:900px;
+				   border-top:0px solid #999;
+				   padding-top:15px;
+				   background-color: #aed7a8;
+				   text-align:left;
+				   font-size:1.3em;
+				   font-weight:normal;
+				   font-family:arial;
+				   padding:20px}
+				   
+.recuadro {
+  background-color:#ffffcc;
+  text-align:left;
+  font-family:courier;
+  font-size:1em;
+  border-width:0;
+  padding:5px;
+
+  border: 1px dotted #ffaa00;
+  margin-left:5px;  
+}		
+
+.tablajs {
+    border-collapse: collapse;
+    background-color: #fff;
+    border: 1px solid #dee2e6;    
+    padding: 0.3rem;    
+}
+
+.tablajs th,
+.tablajs td {
+  padding: 0.75rem;
+  vertical-align: top;
+  border-top: 1px solid #dee2e6;
+}
+
+		   
+</style>
+
+<style>
+.uno { width: 320px; height: 100px; }
+@media(min-width: 500px) { .uno { width: 320px; height: 100px; } }
+@media(min-width: 800px) { .uno { width: 336px; height: 280px; } }
+
+.dos { width: 320px; height: 100px; }
+@media(min-width: 500px) { .dos { width: 320px; height: 100px; } }
+@media(min-width: 800px) { .dos { width: 336px; height: 280px; } }
+</style>
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','../../../www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-80268657-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</head>
+
+<body>
+
+<div class="upperleft">
+  <div class="upperright">
+    <div class="lowerleft">
+      <div class="lowerright">
+<table width="98%">
+<tr>
+<td>
+<span style="float:right"><a target="_blank" style="margin-right:0.1em;" href="https://www.tutorialesprogramacionya.com/">Listado completo de tutoriales</a></span>
+<h1>ES6 - Definición de getters y setters</h1></td>
+<td align="right">
+
+
+</td>
+</tr>
+</table>
+
+      </div>
+    </div>
+  </div>
+</div>
+<br>
+
+
+<div class="upperleft">
+  <div class="upperright">
+    <div class="lowerleft">
+      <div class="lowerright">
+
+<div id="contentdetalle">
+
+<div style="display:block;float:left;margin: 5px;"> 
+ <script async src="../../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<!-- adaptable1 -->
+<ins class="adsbygoogle uno"
+     style="display:inline-block"
+     data-ad-client="ca-pub-4669394804436935"
+     data-ad-slot="4716538363"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script> 
+</div> 
+
+<p>En JavaScript disponemos ahora de la posibilidad de definir setters que son métodos que establecen un valor a una propiedad y getters que son métodos que rescatan un valor.</p>
+<p>Para la definición de setters y getters disponemos de las palabras claves set y get.</p>
+<p>La definición de propiedades con set y get nos permiten un mejor encapsulamiento de nuestra clase.</p>
+<p>Veremos con un ejemplo sencillo la sintaxis para definir una propiedad definiendo su setter y getter.</p>
+<h3>Problema</h3>
+<p>Declarar una clase llamada Dado y definir un atributo llamado '_valor' que almacene el valor actual del dado. Luego definir los métodos set y get para poder fijar un nuevo valor al dado y conocer el valor actual.</p>
+
+<pre class="recuadro">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+
+&lt;head&gt;
+    &lt;title&gt;Ejemplo de JavaScript&lt;/title&gt;
+    &lt;meta charset="UTF-8"&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+
+    &lt;script&gt;
+        class Dado {
+            constructor() {
+                this._valor = 1;
+            }
+
+            get valor() {
+                return this._valor;
+            }
+
+            set valor(v) {
+                this._valor = v;
+            }
+
+            imprimir() {
+                document.write(this.valor + '&lt;br&gt;');
+            }
+        }
+
+        const dado1 = new Dado();
+        dado1.imprimir();
+        dado1.valor = 6;
+        dado1.imprimir();
+    &lt;/script&gt;
+
+&lt;/body&gt;
+
+&lt;/html&gt;
+</pre>
+
+<p>En el constructor definimos un atributo llamado _valor que almacena el valor 1:</p>
+<pre>
+            constructor() {
+                this._valor = 1;
+            }
+</pre>
+<p>Definimos la propiedad 'valor' con sus respectivos 'set' y 'get':</p>
+<pre>
+            get valor() {
+                return this._valor;
+            }
+
+            set valor(v) {
+                this._valor = v;
+            }
+</pre>
+<p>El método get retorna el valor almacenado en el atributo '_valor' y el método set actualiza el valor almacenado en el atributo '_valor'.</p>
+<p>Donde definimos un objeto de la clase Dado accedemos a la propiedad dado para cambiar su valor por medio de una asignación:</p>
+<pre>
+        dado1.valor = 6;
+</pre>
+<p>Es decir que en dicha asignación se está ejecutando el método:</p>
+<pre>
+            set valor(v) {
+                this._valor = v;
+            }
+</pre>
+
+<p>En principio podría pensarse que lo más fácil es acceder directamente al atributo _valor y olvidarnos del método set:</p>
+<pre>
+            dado1._valor=6;
+</pre>
+<p>Pero si queremos luego mejorar la clase 'Dado' y hacerla más robusta, por ejemplo no dejar cargar valores inválidos para un dado podemos mejorar el método 'set' con la siguiente sintaxis:</p>
+<pre>
+      set valor(v) {
+          if (v&gt;=1 && v&lt;=6 && v%1===0)
+              this._valor=v;
+          else
+              throw "Error en asignación de valor del dado"; 
+    }
+</pre>
+<p>Con ésta nueva implementación del método set solo almacenaremos valores válidos en el atributo _valor si llega un número entero comprendido entre 1 y 6. En el caso que llegue un valor con coma 1.4 que no está comprendido entre 1 y 6 luego no cumple la tercer condición que el resto de dividirlo sea cero.</p>
+<p>Cualquiera de estas asignaciones detiene el programa con un error:</p>
+<pre>
+dado1.valor=7;
+dado1.valor=0;
+dado1.valor=3.4;
+dado1.valor='Hola';
+</pre>
+<p>Ahora podemos comprobar la ventaja de definir propiedades de acceso a una clase en lugar de acceder directamente a sus atributos.</p>
+<p>Si accedemos directamente al atributos '_valor' luego no se genera un error si le asignamos:</p>
+<pre>
+dado1._valor=3.4;
+</pre>
+<p>Esto hace que nuestro programa sea más difícil de mantener y propenso a errores.</p>
+<p>Vimos que llamamos al método set mediante una asignación, al método get lo llamamos directamente por su nombre:</p>
+<pre>
+const dado1=new Dado();
+dado1.valor=5;
+document.write(dado1.valor);
+</pre>
+<p>Cuando llamamos al método write del objeto document estamos accediendo al método get del objeto dado1.</p>
+
+</p>
+</div>
+
+<div>
+<!--publi-->
+<script async src="../../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<!-- adaptable2 -->
+<ins class="adsbygoogle dos"
+     style="display:inline-block"
+     data-ad-client="ca-pub-4669394804436935"
+     data-ad-slot="5774469161"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+<!--publi-->
+<script async src="../../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<!-- adaptable2 -->
+<ins class="adsbygoogle dos"
+     style="display:inline-block"
+     data-ad-client="ca-pub-4669394804436935"
+     data-ad-slot="5774469161"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+</div>
+
+
+   <h2><a href="../indexce34.html?inicio=90">Retornar</a></h2>   
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+</body>
+
+
+<!-- Mirrored from www.tutorialesprogramacionya.com/javascriptya/temarios/descripcion.php?inicio=90&cod=99 by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 18 Mar 2024 10:33:25 GMT -->
+</html>

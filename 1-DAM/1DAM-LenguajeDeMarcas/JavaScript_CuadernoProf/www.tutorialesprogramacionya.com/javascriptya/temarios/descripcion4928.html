@@ -1,0 +1,255 @@
+<html>
+
+
+<!-- Mirrored from www.tutorialesprogramacionya.com/javascriptya/temarios/descripcion.php?inicio=30&cod=40 by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 18 Mar 2024 10:33:12 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QWKWPBDEFK"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-QWKWPBDEFK');
+</script>
+
+<script async src="../../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-4669394804436935",
+    enable_page_level_ads: true
+  });
+</script>
+<title>Tutorial de JavaScript : Conceptos</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="../css/estilos.css" rel="stylesheet" type="text/css">
+  <meta charset="UTF-8">
+
+<style>
+html,body {
+	background-color: #D3E9D0;
+	font-family: Trebuchet MS, Verdana, Arial, sans-serif;
+	font-size: 10pt;
+	text-align:center;
+}
+
+h1 {
+	font-size: 14pt;
+	margin: 0%;
+}
+
+div#contentdetalle{clear:left;
+                   max-width:900px;
+				   border-top:0px solid #999;
+				   padding-top:15px;
+				   background-color: #aed7a8;
+				   text-align:left;
+				   font-size:1.3em;
+				   font-weight:normal;
+				   font-family:arial;
+				   padding:20px}
+				   
+.recuadro {
+  background-color:#ffffcc;
+  text-align:left;
+  font-family:courier;
+  font-size:1em;
+  border-width:0;
+  padding:5px;
+
+  border: 1px dotted #ffaa00;
+  margin-left:5px;  
+}		
+
+.tablajs {
+    border-collapse: collapse;
+    background-color: #fff;
+    border: 1px solid #dee2e6;    
+    padding: 0.3rem;    
+}
+
+.tablajs th,
+.tablajs td {
+  padding: 0.75rem;
+  vertical-align: top;
+  border-top: 1px solid #dee2e6;
+}
+
+		   
+</style>
+
+<style>
+.uno { width: 320px; height: 100px; }
+@media(min-width: 500px) { .uno { width: 320px; height: 100px; } }
+@media(min-width: 800px) { .uno { width: 336px; height: 280px; } }
+
+.dos { width: 320px; height: 100px; }
+@media(min-width: 500px) { .dos { width: 320px; height: 100px; } }
+@media(min-width: 800px) { .dos { width: 336px; height: 280px; } }
+</style>
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','../../../www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-80268657-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</head>
+
+<body>
+
+<div class="upperleft">
+  <div class="upperright">
+    <div class="lowerleft">
+      <div class="lowerright">
+<table width="98%">
+<tr>
+<td>
+<span style="float:right"><a target="_blank" style="margin-right:0.1em;" href="https://www.tutorialesprogramacionya.com/">Listado completo de tutoriales</a></span>
+<h1>Archivo JavaScript externo (*.js)</h1></td>
+<td align="right">
+
+
+</td>
+</tr>
+</table>
+
+      </div>
+    </div>
+  </div>
+</div>
+<br>
+
+
+<div class="upperleft">
+  <div class="upperright">
+    <div class="lowerleft">
+      <div class="lowerright">
+
+<div id="contentdetalle">
+
+<div style="display:block;float:left;margin: 5px;"> 
+ <script async src="../../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<!-- adaptable1 -->
+<ins class="adsbygoogle uno"
+     style="display:inline-block"
+     data-ad-client="ca-pub-4669394804436935"
+     data-ad-slot="4716538363"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script> 
+</div> 
+
+<p>El lenguaje JavaScript permite agrupar funciones y disponerlas en un archivo separado a la página HTML.</p>
+<p>Esto trae muchos beneficios:</p>
+<ul>
+<li>
+Reutilización de funciones de uso común. No tenemos que copiar y pegar sucesivamente las funciones en las páginas en las que necesitamos.
+</li>
+<li>
+Facilita el mantenimiento de las funciones al encontrarse en archivos separados.
+</li>
+<li>
+Nos obliga a ser más ordenados.
+</li>
+</ul>
+<p>La mecánica para implementar estos archivos externos en JavaScript es:</p>
+<p>1 - Crear un archivo con extensión *.js y tipear las funciones en la misma:</p>
+<p>funciones.js</p>
+<pre class="recuadro">
+function retornarFecha() {
+    let fecha;
+    fecha = new Date();
+    var cadena = fecha.getDate() + '/' + (fecha.getMonth() + 1) + '/' + fecha.getFullYear();
+    return cadena;
+}
+
+function retornarHora() {
+    let fecha;
+    fecha = new Date();
+    var cadena = fecha.getHours() + ':' + fecha.getMinutes() + ':' + fecha.getSeconds();
+    return cadena;
+}
+</pre>
+<p>2 - Creamos un archivo html que utilizará las funciones contenidas en el archivo funciones.js:</p>
+<pre class="recuadro">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+
+&lt;head&gt;
+    &lt;title&gt;Ejemplo de JavaScript&lt;/title&gt;
+    &lt;meta charset="UTF-8"&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+    &lt;h1&gt;Página HTML&lt;/h1&gt;
+	&lt;p&gt;Disponemos el contenido HTML&lt;/p&gt;
+    &lt;script src="funciones.js"&gt;&lt;/script&gt;
+    &lt;script&gt;
+        document.write('La fecha de hoy es:' + retornarFecha());
+        document.write('&lt;br&gt;');
+        document.write('La hora es:' + retornarHora());
+    &lt;/script&gt;
+&lt;/body&gt;
+
+&lt;/html&gt;
+</pre>
+<p>Es decir debemos disponer la etiqueta 'script' para importar el archivo funciones.js:</p>
+<pre>
+    &lt;script src="funciones.js"&gt;&lt;/script&gt;
+</pre>
+<p>Mediante la propiedad 'src' indicamos el nombre del archivo a importar (debe encontrar se el mismo directorio, o en su defecto hay que indicar el path de su ubicación)</p>
+<p>Luego, podemos llamar dentro de la página HTML, a las funciones que contiene el archivo externo funciones.js; en nuestro ejemplo llamamos a las funciones retornarFecha() y retornarHora().</p>
+<p>Como podemos ver, el archivo html queda mucho más limpio.</p>
+<p>Es importante notar que primero se importa el archivo 'funciones.js' y recién podemos llamar a las funciones contenidas.</p>
+<p>Si quiere probar en su equipo este ejemplo debe generar los dos archivos 'funciones.js' y 'pagina1.html', luego llamar desde el navegador la página HTML.</p>
+
+<p>Durante este curso seguiremos trabajando solo con el archivo HTML para facilitar el aprendizaje, pero luego cuando profundice JavaScript haciendo el curso de <a href="https://www.tutorialesprogramacionya.com/dhtmlya/" target="_blank">DHTML YA (DOM)</a> trabajará dividiendo las páginas mediante archivos HTML, JS y CSS</p>
+</p>
+</div>
+
+<div>
+<!--publi-->
+<script async src="../../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<!-- adaptable2 -->
+<ins class="adsbygoogle dos"
+     style="display:inline-block"
+     data-ad-client="ca-pub-4669394804436935"
+     data-ad-slot="5774469161"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+<!--publi-->
+<script async src="../../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<!-- adaptable2 -->
+<ins class="adsbygoogle dos"
+     style="display:inline-block"
+     data-ad-client="ca-pub-4669394804436935"
+     data-ad-slot="5774469161"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+</div>
+
+
+   <h2><a href="../index7732.html?inicio=30">Retornar</a></h2>   
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+</body>
+
+
+<!-- Mirrored from www.tutorialesprogramacionya.com/javascriptya/temarios/descripcion.php?inicio=30&cod=40 by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 18 Mar 2024 10:33:12 GMT -->
+</html>

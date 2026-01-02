@@ -1,0 +1,370 @@
+<html>
+
+
+<!-- Mirrored from www.tutorialesprogramacionya.com/javascriptya/temarios/descripcion.php?inicio=90&cod=95 by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 18 Mar 2024 10:33:24 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QWKWPBDEFK"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-QWKWPBDEFK');
+</script>
+
+<script async src="../../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-4669394804436935",
+    enable_page_level_ads: true
+  });
+</script>
+<title>Tutorial de JavaScript : Conceptos</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="../css/estilos.css" rel="stylesheet" type="text/css">
+  <meta charset="UTF-8">
+
+<style>
+html,body {
+	background-color: #D3E9D0;
+	font-family: Trebuchet MS, Verdana, Arial, sans-serif;
+	font-size: 10pt;
+	text-align:center;
+}
+
+h1 {
+	font-size: 14pt;
+	margin: 0%;
+}
+
+div#contentdetalle{clear:left;
+                   max-width:900px;
+				   border-top:0px solid #999;
+				   padding-top:15px;
+				   background-color: #aed7a8;
+				   text-align:left;
+				   font-size:1.3em;
+				   font-weight:normal;
+				   font-family:arial;
+				   padding:20px}
+				   
+.recuadro {
+  background-color:#ffffcc;
+  text-align:left;
+  font-family:courier;
+  font-size:1em;
+  border-width:0;
+  padding:5px;
+
+  border: 1px dotted #ffaa00;
+  margin-left:5px;  
+}		
+
+.tablajs {
+    border-collapse: collapse;
+    background-color: #fff;
+    border: 1px solid #dee2e6;    
+    padding: 0.3rem;    
+}
+
+.tablajs th,
+.tablajs td {
+  padding: 0.75rem;
+  vertical-align: top;
+  border-top: 1px solid #dee2e6;
+}
+
+		   
+</style>
+
+<style>
+.uno { width: 320px; height: 100px; }
+@media(min-width: 500px) { .uno { width: 320px; height: 100px; } }
+@media(min-width: 800px) { .uno { width: 336px; height: 280px; } }
+
+.dos { width: 320px; height: 100px; }
+@media(min-width: 500px) { .dos { width: 320px; height: 100px; } }
+@media(min-width: 800px) { .dos { width: 336px; height: 280px; } }
+</style>
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','../../../www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-80268657-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</head>
+
+<body>
+
+<div class="upperleft">
+  <div class="upperright">
+    <div class="lowerleft">
+      <div class="lowerright">
+<table width="98%">
+<tr>
+<td>
+<span style="float:right"><a target="_blank" style="margin-right:0.1em;" href="https://www.tutorialesprogramacionya.com/">Listado completo de tutoriales</a></span>
+<h1>ES6 - Arrow functions (funciones flecha)</h1></td>
+<td align="right">
+
+
+</td>
+</tr>
+</table>
+
+      </div>
+    </div>
+  </div>
+</div>
+<br>
+
+
+<div class="upperleft">
+  <div class="upperright">
+    <div class="lowerleft">
+      <div class="lowerright">
+
+<div id="contentdetalle">
+
+<div style="display:block;float:left;margin: 5px;"> 
+ <script async src="../../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<!-- adaptable1 -->
+<ins class="adsbygoogle uno"
+     style="display:inline-block"
+     data-ad-client="ca-pub-4669394804436935"
+     data-ad-slot="4716538363"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script> 
+</div> 
+
+<p>Las funciones flecha es una nueva sintaxis propuesta en ES6 para expresar las funciones anónimas.</p>
+<p>Un ejemplo de definir una arrow function es:</p>
+<pre>
+const mayor = (x,y) =&gt; {
+    if (x&gt;y)
+        return x;
+    else
+        return y;
+}
+
+document.write(mayor(10,2));
+</pre>
+<p>Como es una función anónima si queremos guardar una referencia a la misma se la debemos asignar a una constante o variable. Indicamos entre paréntesis los parámetros de la función luego la flecha => y finalmente entre llaves el algoritmo propiamente de la función.</p>
+<p>Con la sintaxis anterior de JavaScript este algoritmo lo codificamos con la sintaxis:</p>
+<pre>
+const mayor = function(x,y) {
+    if (x&gt;y)
+        return x;
+    else
+        return y;
+}
+
+document.write(mayor(10,2));
+</pre>
+
+<h3>Problema</h3>
+<p>Ordenar un vector de enteros mediante el método sort, pasar una arrow function.</p>
+<pre class="recuadro">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+
+&lt;head&gt;
+    &lt;title&gt;Ejemplo de JavaScript&lt;/title&gt;
+    &lt;meta charset="UTF-8"&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+
+    &lt;script&gt;
+        const vec = [100, 22, 17, 50, 3];
+        vec.sort((x, y) =&gt; {
+            if (x &gt; y)
+                return 1;
+            else
+                return -1;
+        })
+
+        document.write(vec.toString());
+    &lt;/script&gt;
+
+&lt;/body&gt;
+
+&lt;/html&gt;
+</pre>
+
+<p>A la función sort le pasamos una función flecha.</p>
+
+<h3>Funciones flecha con un único parámetro.</h3>
+<p>Cuando una función flecha tiene un parámetro no es necesario encerrarlo entre paréntesis:</p>
+<pre>
+const vec = [100, 22, 17, 50, 3];
+vec.forEach(elemento =&gt; {
+    document.write(elemento+' ');
+})
+</pre>
+<p>En este ejemplo el parámetro 'elemento 'es único y por eso no lo encerramos entre paréntesis.</p>
+
+<h3>Funciones flecha de una única línea.</h3>
+<p>Podemos definir funciones flecha de una única línea, en dichas situaciones no es necesario encerrar entre llaves el algoritmo.</p>
+<pre>
+const doble = x => x*2;
+
+document.write(doble(10)); //20
+document.write(doble(7)); //14
+</pre>
+<p>La función tiene un único parámetro llamado x y su algoritmo es multiplicar el valor que llega por 2. La función retorna el resultado sin tener que indicar la palabra clave return.</p>
+
+<p>Otro ejemplo de arrow function con dos parámetros y resuelto con una única expresión:</p>
+<pre>
+const mayor = (x, y) => (x>y)?x:y;
+
+document.write(mayor(7, 20)) // 20
+document.write(mayor(60, 40)) // 60
+</pre>
+
+<p>Conociendo entonces que podemos definir funciones flecha de una única línea podemos plantear el algoritmo de ordenar un vector con una sintaxis más concisa:</p>
+<pre>
+const vec = [100, 22, 17, 50, 3];
+vec.sort((x,y) => (x>y)?1:-1);
+
+document.write(vec.toString());
+</pre>
+
+<h3>Problema</h3>
+<p>Definir un vector con un conjunto de elementos. Generar un nuevo vector llamando al método filter pasando una función de flecha para definir cuales rescatar.</p>
+<pre class="recuadro">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+
+&lt;head&gt;
+    &lt;title&gt;Ejemplo de JavaScript&lt;/title&gt;
+    &lt;meta charset="UTF-8"&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+
+    &lt;script&gt;
+        const vec = [100, 22, 17, 50, 3, 78];
+        const pares = vec.filter(elemento =&gt; elemento % 2 == 0);
+        document.write('Vector completo:' + vec.toString());
+        document.write('&lt;br&gt;');
+        document.write('Vector generado con elementos pares:' + pares.toString());
+    &lt;/script&gt;
+
+&lt;/body&gt;
+
+&lt;/html&gt;
+</pre>
+
+<h3>Funciones flecha sin parámetros.</h3>
+<p>Una función flecha que no tiene parámetros debemos disponer en forma obligatoria los paréntesis abiertos y cerrados previos a la flecha:</p>
+<pre class="recuadro">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+
+&lt;head&gt;
+    &lt;title&gt;Ejemplo de JavaScript&lt;/title&gt;
+    &lt;meta charset="UTF-8"&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+
+    &lt;script&gt;
+        window.addEventListener(
+            'DOMContentLoaded',
+            setTimeout(() =&gt; alert('pasó 3 segundos desde que se cargó la página'), 3000),
+            false);
+    &lt;/script&gt;
+
+&lt;/body&gt;
+
+&lt;/html&gt;
+</pre>
+
+<p>Registramos en el evento 'DOMContentLoaded' de la página la referencia de la llamada a la función setTimeout pasando a esta función una función de flecha que no tiene parámetros y que tiene por objetivo mostrar una ventana de alerta.</p>
+
+<p>El uso de las arrow functions se está generalizando en la programación en JavaScript.</p>
+
+<h3>Diferencia con las funciones tradicionales cuando se trata de un método.</h3>
+<pre class="recuadro">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+
+&lt;head&gt;
+    &lt;title&gt;Ejemplo de JavaScript&lt;/title&gt;
+    &lt;meta charset="UTF-8"&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+
+    &lt;script&gt;
+        var objeto1 = {
+            x: 10,
+            metodo1: function() {
+                alert(this.x);
+            },
+            metodo2: () =&gt; {
+                alert(this.x);
+            }
+        }
+        objeto1.metodo1(); //10
+        objeto1.metodo2(); //undefined
+    &lt;/script&gt;
+
+&lt;/body&gt;
+
+&lt;/html&gt;
+</pre>
+<p>Cuando definimos un método con funciones flecha no existe el contexto de this para acceder a las propiedades del objeto. Es decir que las funciones flecha son más adecuadas cuando las trabajamos como funciones independientes y no como métodos de un objeto.</p>
+
+</p>
+</div>
+
+<div>
+<!--publi-->
+<script async src="../../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<!-- adaptable2 -->
+<ins class="adsbygoogle dos"
+     style="display:inline-block"
+     data-ad-client="ca-pub-4669394804436935"
+     data-ad-slot="5774469161"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+<!--publi-->
+<script async src="../../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<!-- adaptable2 -->
+<ins class="adsbygoogle dos"
+     style="display:inline-block"
+     data-ad-client="ca-pub-4669394804436935"
+     data-ad-slot="5774469161"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+</div>
+
+
+   <h2><a href="../indexce34.html?inicio=90">Retornar</a></h2>   
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+</body>
+
+
+<!-- Mirrored from www.tutorialesprogramacionya.com/javascriptya/temarios/descripcion.php?inicio=90&cod=95 by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 18 Mar 2024 10:33:24 GMT -->
+</html>

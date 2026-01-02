@@ -1,0 +1,474 @@
+<html>
+
+
+<!-- Mirrored from www.tutorialesprogramacionya.com/javascriptya/temarios/descripcion.php?inicio=80&cod=90 by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 18 Mar 2024 10:33:21 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QWKWPBDEFK"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-QWKWPBDEFK');
+</script>
+
+<script async src="../../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-4669394804436935",
+    enable_page_level_ads: true
+  });
+</script>
+<title>Tutorial de JavaScript : Conceptos</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="../css/estilos.css" rel="stylesheet" type="text/css">
+  <meta charset="UTF-8">
+
+<style>
+html,body {
+	background-color: #D3E9D0;
+	font-family: Trebuchet MS, Verdana, Arial, sans-serif;
+	font-size: 10pt;
+	text-align:center;
+}
+
+h1 {
+	font-size: 14pt;
+	margin: 0%;
+}
+
+div#contentdetalle{clear:left;
+                   max-width:900px;
+				   border-top:0px solid #999;
+				   padding-top:15px;
+				   background-color: #aed7a8;
+				   text-align:left;
+				   font-size:1.3em;
+				   font-weight:normal;
+				   font-family:arial;
+				   padding:20px}
+				   
+.recuadro {
+  background-color:#ffffcc;
+  text-align:left;
+  font-family:courier;
+  font-size:1em;
+  border-width:0;
+  padding:5px;
+
+  border: 1px dotted #ffaa00;
+  margin-left:5px;  
+}		
+
+.tablajs {
+    border-collapse: collapse;
+    background-color: #fff;
+    border: 1px solid #dee2e6;    
+    padding: 0.3rem;    
+}
+
+.tablajs th,
+.tablajs td {
+  padding: 0.75rem;
+  vertical-align: top;
+  border-top: 1px solid #dee2e6;
+}
+
+		   
+</style>
+
+<style>
+.uno { width: 320px; height: 100px; }
+@media(min-width: 500px) { .uno { width: 320px; height: 100px; } }
+@media(min-width: 800px) { .uno { width: 336px; height: 280px; } }
+
+.dos { width: 320px; height: 100px; }
+@media(min-width: 500px) { .dos { width: 320px; height: 100px; } }
+@media(min-width: 800px) { .dos { width: 336px; height: 280px; } }
+</style>
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','../../../www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-80268657-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</head>
+
+<body>
+
+<div class="upperleft">
+  <div class="upperright">
+    <div class="lowerleft">
+      <div class="lowerright">
+<table width="98%">
+<tr>
+<td>
+<span style="float:right"><a target="_blank" style="margin-right:0.1em;" href="https://www.tutorialesprogramacionya.com/">Listado completo de tutoriales</a></span>
+<h1>ES6 - Definición de constantes y variables.</h1></td>
+<td align="right">
+
+
+</td>
+</tr>
+</table>
+
+      </div>
+    </div>
+  </div>
+</div>
+<br>
+
+
+<div class="upperleft">
+  <div class="upperright">
+    <div class="lowerleft">
+      <div class="lowerright">
+
+<div id="contentdetalle">
+
+<div style="display:block;float:left;margin: 5px;"> 
+ <script async src="../../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<!-- adaptable1 -->
+<ins class="adsbygoogle uno"
+     style="display:inline-block"
+     data-ad-client="ca-pub-4669394804436935"
+     data-ad-slot="4716538363"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script> 
+</div> 
+
+<p>ES6 o también conocido como ECMAScript 2015 es una actualización del  lenguaje de programación JavaScript que actualmente todos los navegadores ya implementan en 2021.</p>
+<p>Todos los agregados a JavaScript definidos en este nuevo estándar ya se los está aplicando desde hace un tiempo con Node.js en el servidor, y en framework de cliente como React, Angular y Vue.</p>
+<p>Estos agregados al lenguaje JavaScript nos facilitan la programación.</p>
+<p>Si queremos averiguar el porcentaje de navegadores que soportan una característica de JavaScript ES6 podemos visitar el sitio caniuse.com, por ejemplo si queremos que porcentaje de navegadores soportan la palabra clave 'const' para definir constantes:</p>
+<p><a href="https://caniuse.com/#search=const" target="_blank">caniuse.com</a></p>
+
+<h3>const</h3>
+<p>Hasta que llega ES6 la única forma de definir variables en JavaScript es mediante la palabra clave 'var':</p>
+<pre>
+var edad=12;
+var sueldo=1000.50;
+var titulo='Administración';
+</pre>
+<p>Con ES6 si sabemos que la variable nunca cambiará luego en lugar de definir con var debemos definir una constante con la palabra clave 'const':</p>
+
+<pre class="recuadro">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+
+&lt;head&gt;
+    &lt;title&gt;Ejemplo de JavaScript&lt;/title&gt;
+    &lt;meta charset="UTF-8"&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+
+    &lt;script&gt;
+        const titulo = 'Administracion';
+        const empleados = 10;
+        const pi = 3.1416;
+        alert(titulo);
+        alert(empleados);
+        alert(pi);
+    &lt;/script&gt;
+
+&lt;/body&gt;
+
+&lt;/html&gt;
+</pre>
+<p>Mediante la palabra clave const antecedemos al nombre de la constante:</p>
+<pre>
+        const titulo = 'Administracion';
+</pre>
+<p>Luego no podemos asignarle otro valor a 'titulo', en el caso que por error asignemos otro valor o tratemos de redefinirla se genera un error en tiempo de ejecución:</p>
+<pre>
+        const titulo='Administracion';
+        titulo='fin';
+</pre>
+<p>En el navegador aparece el siguiente error en la Consola:</p>
+<img src="imagentema/foto006.jpg" border="0" alt="const error de asignacion javascript"><br>
+
+<p>Todo aquel almacenamiento de datos que no cambiará durante la ejecución del programa es conveniente definirlo como constante.</p>
+
+<h3>let</h3>
+<p>Para definir variables que pueden cambiar su contenido podemos utilizar 'var' y 'let', ya desde hace tiempo se utiliza let. Veremos cuales son las diferencias entre estos dos formas de definirlas.</p>
+<p>Con 'let' se define una variable que tendrá solo alcance al bloque donde se la ha definido, veamos un ejemplo definiendo variables con let:</p>
+<pre class="recuadro">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+
+&lt;head&gt;
+    &lt;title&gt;Ejemplo de JavaScript&lt;/title&gt;
+    &lt;meta charset="UTF-8"&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+
+    &lt;script&gt;
+        //Si el primer valor es mayor o igual al segundo luego sumarlos y restarlos, sin
+        //efectuar su producto
+        const v1 = parseInt(prompt("Ingrese primer valor"));
+        const v2 = parseInt(prompt("Ingrese segundo valor"));
+        if (v1 &gt;= v2) {
+            let resu;
+            resu = v1 + v2;
+            document.write('La suma es:' + resu + '&lt;br&gt;');
+            resu = v1 - v2;
+            document.write('La resta es:' + resu);
+        } else {
+            const producto = v1 * v2;
+            document.write('El producto es:' + producto);
+        }
+    &lt;/script&gt;
+
+&lt;/body&gt;
+
+&lt;/html&gt;
+</pre>
+<p>La variable 'resu' solo se define y reserva espacio si la condición del if se verifica verdadera. Luego al finalizar el bloque del verdadero deja de existir 'resu'.</p>
+<p>Si resolvemos este mismo problema utilizando JavaScript antiguo es decir definiendo variables con 'var' en la página no hay cambios:</p>
+<pre class="recuadro">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+
+&lt;head&gt;
+    &lt;title&gt;Ejemplo de JavaScript&lt;/title&gt;
+    &lt;meta charset="UTF-8"&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+
+    &lt;script&gt;
+        //Si el primer valor es mayor o igual al segundo luego sumarlos y restarlos, sin
+        //efectuar su producto
+        var v1 = parseInt(prompt("Ingrese primer valor"));
+        var v2 = parseInt(prompt("Ingrese segundo valor"));
+        if (v1 &gt;= v2) {
+            var resu;
+            resu = v1 + v2;
+            document.write('La suma es:' + resu + '&lt;br&gt;');
+            resu = v1 - v2;
+            document.write('La resta es:' + resu);
+        } else {
+            var producto = v1 * v2;
+            document.write('El producto es:' + producto);
+        }
+    &lt;/script&gt;
+
+&lt;/body&gt;
+
+&lt;/html&gt;
+</pre>
+<p>La ventaja de utilizar let y const es que si accedemos a la variable fuera del bloque de llaves donde se la define se produce un error, ya que no existe:</p>
+<pre class="recuadro">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+
+&lt;head&gt;
+    &lt;title&gt;Ejemplo de JavaScript&lt;/title&gt;
+    &lt;meta charset="UTF-8"&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+
+    &lt;script&gt;
+        //Si el primer valor es mayor o igual al segundo luego sumarlos y restarlos, sin
+        //efectuar su producto
+        const v1 = parseInt(prompt("Ingrese primer valor"));
+        const v2 = parseInt(prompt("Ingrese segundo valor"));
+        if (v1 &gt;= v2) {
+            let resu;
+            resu = v1 + v2;
+            document.write('La suma es:' + resu + '&lt;br&gt;');
+            resu = v1 - v2;
+            document.write('La resta es:' + resu);
+        } else {
+            const producto = v1 * v2;
+            document.write('El producto es:' + producto);
+        }
+        document.write(resu); //error: resu no está definida
+        document.write(producto); //error: producto no está definida
+    &lt;/script&gt;
+
+&lt;/body&gt;
+
+&lt;/html&gt;
+</pre>
+<img src="imagentema/foto007.jpg" border="0" alt="let const error fuera de ámbito"><br>
+<p>Este error no se produce si utilizamos definiciones de variables con 'var' ya que las mismas siempre se definen como globales y si escribimos:</p>
+<pre class="recuadro">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+
+&lt;head&gt;
+    &lt;title&gt;Ejemplo de JavaScript&lt;/title&gt;
+    &lt;meta charset="UTF-8"&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+
+    &lt;script&gt;
+        //Si el primer valor es mayor o igual al segundo luego sumarlos y restarlos, sin
+        //efectuar su producto
+        var v1 = parseInt(prompt("Ingrese primer valor"));
+        var v2 = parseInt(prompt("Ingrese segundo valor"));
+        if (v1 &gt;= v2) {
+            var resu;
+            resu = v1 + v2;
+            document.write('La suma es:' + resu + '&lt;br&gt;');
+            resu = v1 - v2;
+            document.write('La resta es:' + resu + '&lt;br&gt;');
+        } else {
+            var producto = v1 * v2;
+            document.write('El producto es:' + producto);
+        }
+        document.write(resu);
+        document.write(producto);
+    &lt;/script&gt;
+
+&lt;/body&gt;
+
+&lt;/html&gt;
+</pre>
+<p>Después del if las variables 'resu' y 'producto' siguen existiendo (inclusive producto que no se ha cargado si se ejecutó la rama del verdadero del if):</p>
+<img src="imagentema/foto008.jpg" border="0" alt="problemas de var con JavaScript"><br>
+<p>Entonces 'const' y 'let' definidas dentro de bloques de llaves evitan que se creen variables globales. Esto es una gran ventaja cuando tenemos programas grandes y el manejo de variables locales generan errores difíciles de detectar.</p>
+
+<h3>let y const dentro de funciones</h3>
+<p>El mismo concepto se aplica cuando definamos almacenamientos de datos dentro de una función:</p>
+<ul>
+<li>
+Con let y const se definen espacios de almacenamiento que tienen existencia en el bloque de llaves donde se los definió.
+</li>
+<li>
+Con var se reserva espacio y se la puede acceder dentro de cualquier parte de la función.
+</li>
+</ul>
+<pre class="recuadro">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+
+&lt;head&gt;
+    &lt;title&gt;Ejemplo de JavaScript&lt;/title&gt;
+    &lt;meta charset="UTF-8"&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+
+    &lt;script&gt;
+        function mostrar(x, y) {
+            for (let avance = x; avance &lt;= y; avance++) {
+                document.write(avance + ' ');
+            }
+            document.write(avance); // error variable no definida
+        }
+
+        mostrar(1, 10);
+    &lt;/script&gt;
+
+&lt;/body&gt;
+
+&lt;/html&gt;
+</pre>
+<p>Si ejecutamos este programa se genera un error en la primer línea fuera del for al tratar de acceder a la variable 'avance', esto debido a que no existe fuera del ámbito del for.</p>
+<p>Si utilizamos la palabra clave 'var' y ejecutamos:</p>
+<pre>
+  function mostrar(x,y) {
+    document.write(avance);
+    for(var avance=x;avance&lt;=y;avance++) {
+      document.write(avance+' ');
+    } 
+    document.write(avance);
+  }
+</pre>
+<p>Se muestra primero "undefined" ya que la variable 'avance' existe en la función pero no está definida. Luego muestra dentro del for los números del 1 al 10 y finalmente muestra fuera del for el 11.</p>
+
+<p>Como hemos visto hasta ahora siempre definimos las variables con la palabra clave 'let' o si no requiere cambios con 'const', pero encotrará mucho software antiguo que utiliza 'var'.</p>
+
+<h3>Definición de objetos con 'const' y 'let'</h3>
+<p>Cuando definimos por ejemplo un vector con la palabra clave const luego dicha variable no puede referenciar a otro objeto:</p>
+<pre>
+  const dias=[3,7,12];
+  dias=[40,22]; //error: asignación inválida
+</pre>
+<p>Pero si puede modificar sus componentes:</pre>
+<pre>
+  const dias=[3,7,12];
+  dias[0]=4;
+  dias[1]=5;
+  dias[2]=6;
+</pre>
+
+<p>Lo mismo con una constante de tipo objeto literal podemos cambiar su contenido pero no hacer que apunte a otro objeto:</p>
+<pre>
+  const empresa = {
+    nombre: 'Segui Hnos',
+    empleados: 34
+  }
+  empresa.nombre='Condor';
+  empresa.empleados=39;
+</pre>
+<p>Produce un error si ejecutamos:</p>
+<pre>
+  const empresa = {
+    nombre: 'Segui Hnos',
+    empleados: 34
+  }
+
+  empresa = {
+    nombre:'Condor',
+    empleados: 39,
+    fundacion: 1947
+  }   //error 
+</pre>
+</p>
+</div>
+
+<div>
+<!--publi-->
+<script async src="../../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<!-- adaptable2 -->
+<ins class="adsbygoogle dos"
+     style="display:inline-block"
+     data-ad-client="ca-pub-4669394804436935"
+     data-ad-slot="5774469161"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+<!--publi-->
+<script async src="../../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<!-- adaptable2 -->
+<ins class="adsbygoogle dos"
+     style="display:inline-block"
+     data-ad-client="ca-pub-4669394804436935"
+     data-ad-slot="5774469161"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+</div>
+
+
+   <h2><a href="../index20ff.html?inicio=80">Retornar</a></h2>   
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+</body>
+
+
+<!-- Mirrored from www.tutorialesprogramacionya.com/javascriptya/temarios/descripcion.php?inicio=80&cod=90 by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 18 Mar 2024 10:33:22 GMT -->
+</html>

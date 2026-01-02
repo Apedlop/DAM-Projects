@@ -1,0 +1,366 @@
+<html>
+
+
+<!-- Mirrored from www.tutorialesprogramacionya.com/javascriptya/temarios/descripcion.php?inicio=100&cod=111 by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 18 Mar 2024 10:33:30 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QWKWPBDEFK"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-QWKWPBDEFK');
+</script>
+
+<script async src="../../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-4669394804436935",
+    enable_page_level_ads: true
+  });
+</script>
+<title>Tutorial de JavaScript : Conceptos</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="../css/estilos.css" rel="stylesheet" type="text/css">
+  <meta charset="UTF-8">
+
+<style>
+html,body {
+	background-color: #D3E9D0;
+	font-family: Trebuchet MS, Verdana, Arial, sans-serif;
+	font-size: 10pt;
+	text-align:center;
+}
+
+h1 {
+	font-size: 14pt;
+	margin: 0%;
+}
+
+div#contentdetalle{clear:left;
+                   max-width:900px;
+				   border-top:0px solid #999;
+				   padding-top:15px;
+				   background-color: #aed7a8;
+				   text-align:left;
+				   font-size:1.3em;
+				   font-weight:normal;
+				   font-family:arial;
+				   padding:20px}
+				   
+.recuadro {
+  background-color:#ffffcc;
+  text-align:left;
+  font-family:courier;
+  font-size:1em;
+  border-width:0;
+  padding:5px;
+
+  border: 1px dotted #ffaa00;
+  margin-left:5px;  
+}		
+
+.tablajs {
+    border-collapse: collapse;
+    background-color: #fff;
+    border: 1px solid #dee2e6;    
+    padding: 0.3rem;    
+}
+
+.tablajs th,
+.tablajs td {
+  padding: 0.75rem;
+  vertical-align: top;
+  border-top: 1px solid #dee2e6;
+}
+
+		   
+</style>
+
+<style>
+.uno { width: 320px; height: 100px; }
+@media(min-width: 500px) { .uno { width: 320px; height: 100px; } }
+@media(min-width: 800px) { .uno { width: 336px; height: 280px; } }
+
+.dos { width: 320px; height: 100px; }
+@media(min-width: 500px) { .dos { width: 320px; height: 100px; } }
+@media(min-width: 800px) { .dos { width: 336px; height: 280px; } }
+</style>
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','../../../www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-80268657-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</head>
+
+<body>
+
+<div class="upperleft">
+  <div class="upperright">
+    <div class="lowerleft">
+      <div class="lowerright">
+<table width="98%">
+<tr>
+<td>
+<span style="float:right"><a target="_blank" style="margin-right:0.1em;" href="https://www.tutorialesprogramacionya.com/">Listado completo de tutoriales</a></span>
+<h1>ES6 - API fetch (enviar datos de un formulario)</h1></td>
+<td align="right">
+
+
+</td>
+</tr>
+</table>
+
+      </div>
+    </div>
+  </div>
+</div>
+<br>
+
+
+<div class="upperleft">
+  <div class="upperright">
+    <div class="lowerleft">
+      <div class="lowerright">
+
+<div id="contentdetalle">
+
+<div style="display:block;float:left;margin: 5px;"> 
+ <script async src="../../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<!-- adaptable1 -->
+<ins class="adsbygoogle uno"
+     style="display:inline-block"
+     data-ad-client="ca-pub-4669394804436935"
+     data-ad-slot="4716538363"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script> 
+</div> 
+
+<p>Hemos visto en varios de los conceptos anteriores como recuperar datos con distintos formatos de un servidor web. Ahora veremos que el API fetch también nos sirve para enviar datos a un servidor web.</p>
+<p>Implementaremos una aplicación para cargar en un formulario HTML la descripción y precio de un artículo y al presionar un botón se envíen dichos datos al servidor web.</p>
+<p>Almacenaremos los datos en una base de datos, además implementaremos algo que ya conocemos que es la recuperación de datos de los artículos mediante una petición fetch al servidor.</p>
+<p>El resultado final de la página es el formulario para la carga de artículos y una tabla HTML con todos los datos que se almacenan en el servidor:</p>
+<img src="imagentema/foto019.jpg" border="0" alt="fetch API enviar datos de un formulario javascript"><br>
+
+<pre class="recuadro">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+
+&lt;head&gt;
+    &lt;title&gt;Ejemplo de JavaScript&lt;/title&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+
+    &lt;div class="container h-100"&gt;
+        &lt;div class="row"&gt;
+            &lt;form id="formulario1"&gt;
+                &lt;div class="form-group"&gt;
+                    &lt;label for="descripcion"&gt;Descripción del artículo&lt;/label&gt;
+                    &lt;input type="text" class="form-control" id="descripcion" name="descripcion" required&gt;
+                &lt;/div&gt;
+                &lt;div class="form-group"&gt;
+                    &lt;label for="precio"&gt;Precio:&lt;/label&gt;
+                    &lt;input type="number" class="form-control" id="precio" name="precio" required&gt;
+                &lt;/div&gt;
+                &lt;div class="form-group"&gt;
+                    &lt;button type="button" id="boton1" class="btn btn-primary"&gt;Nuevo artículo&lt;/button&gt;
+                &lt;/div&gt;
+            &lt;/form&gt;
+
+            &lt;table class="table table-striped" id="tabla1"&gt;
+            &lt;/table&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;script&gt;
+        listarArticulos();
+        document.getElementById("boton1").addEventListener("click", () =&gt; agregar());
+
+
+        function agregar() {
+            const datos = new URLSearchParams(new FormData(document.getElementById("formulario1")));
+            fetch('nuevoarticulo.php', {
+                method: 'POST',
+                body: datos
+            })
+                .then(response =&gt; response.json())
+                .then(datos =&gt; listarArticulos());
+        }
+
+        function listarArticulos() {
+            fetch("listadoarticulos.php")
+                .then(response =&gt; response.json())
+                .then(datos =&gt; {
+                    let cad = '&lt;tr&gt;&lt;th&gt;Código&lt;/th&gt;&lt;th&gt;Descripción&lt;/th&gt;&lt;th&gt;Precio&lt;/th&gt;&lt;/tr&gt;';
+                    for (let articulo of datos) {
+                        cad += `&lt;tr&gt;&lt;td&gt;${articulo.codigo}&lt;/td&gt;
+            &lt;td&gt;${articulo.descripcion}&lt;/td&gt;
+            &lt;td&gt;${articulo.precio}&lt;/td&gt;&lt;/tr&gt;`;
+                    }
+                    document.getElementById("tabla1").innerHTML = cad;
+                });
+        }
+    &lt;/script&gt;
+
+&lt;/body&gt;
+
+&lt;/html&gt;
+</pre>
+
+<p>Creamos un formulario HTML donde se permite la carga de la descripción de un artículo y su precio, además definimos una marca 'button':</p>
+<pre>
+    &lt;div class="row"&gt;
+      &lt;form id="formulario1"&gt;
+        &lt;div class="form-group"&gt;
+          &lt;label for="descripcion"&gt;Descripción del artículo&lt;/label&gt;
+          &lt;input type="text" class="form-control" id="descripcion" name="descripcion" required&gt;
+        &lt;/div&gt;
+        &lt;div class="form-group"&gt;
+          &lt;label for="precio"&gt;Precio:&lt;/label&gt;
+          &lt;input type="number" class="form-control" id="precio" name="precio" required&gt;
+        &lt;/div&gt;
+        &lt;div class="form-group"&gt;
+          &lt;button type="button" id="boton1" class="btn btn-primary"&gt;Nuevo artículo&lt;/button&gt;
+        &lt;/div&gt;
+      &lt;/form&gt;
+</pre>
+<p>Definimos una tabla HTML vacía que la generaremos en forma dinámica cuando carguemos la página y cada vez que se ingrese un nuevo artículo:</p>
+<pre>
+      &lt;table class="table table-striped" id="tabla1"&gt;
+      &lt;/table&gt;
+</pre>
+
+<p>Inmediatamente se encuentra cargada la página en el navegador procedemos a llamar a la función listarArticulos:</p>
+<pre>
+        listarArticulos();
+        document.getElementById("boton1").addEventListener("click", () =&gt; agregar());
+</pre>
+<p>La función listarArticulos contiene un algoritmo que ya vimos en conceptos anteriores, donde mediante la llamada al método 'fetch' recuperamos un recurso en formato JSON con todos los datos de la tabla 'articulos' que se encuentra en el servidor:</p>
+<pre>
+        function listarArticulos() {
+            fetch("listadoarticulos.php")
+                .then(response =&gt; response.json())
+                .then(datos =&gt; {
+                    let cad = '&lt;tr&gt;&lt;th&gt;Código&lt;/th&gt;&lt;th&gt;Descripción&lt;/th&gt;&lt;th&gt;Precio&lt;/th&gt;&lt;/tr&gt;';
+                    for (let articulo of datos) {
+                        cad += `&lt;tr&gt;&lt;td&gt;${articulo.codigo}&lt;/td&gt;
+            &lt;td&gt;${articulo.descripcion}&lt;/td&gt;
+            &lt;td&gt;${articulo.precio}&lt;/td&gt;&lt;/tr&gt;`;
+                    }
+                    document.getElementById("tabla1").innerHTML = cad;
+                });
+        }
+</pre>
+
+<p>Lo nuevo se presenta cuando capturamos el click del botón de 'Nuevo artículo', donde llamamos al método fetch configurando el segundo parámetro de tal forma que se adjunten en la petición al servidor los datos almacenados en el formulario:</p>
+<pre>
+        function agregar() {
+            const datos = new URLSearchParams(new FormData(document.getElementById("formulario1")));
+            fetch('nuevoarticulo.php', {
+                method: 'POST',
+                body: datos
+            })
+                .then(response =&gt; response.json())
+                .then(datos =&gt; listarArticulos());
+        }
+</pre>
+<p>El segundo parámetro del método fetch debe ser un objeto literal con la configuración de las propiedades 'method' y 'body'.</p>
+<p>En los ejercicios anteriores no es necesario pasar este objeto ya que se encuentran configurados datos por defecto, el resultado es lo mismo si en el listadoArticulos pasamos la propiedad 'method' con el valor "GET":</p>
+<pre>
+function listarArticulos() {
+      fetch("listadoarticulos.php",{
+        method:"GET"
+      })
+      ...... 
+</pre>
+<p>Cuando se envían datos al servidor debemos configurar las propiedades 'method' con el valor 'GET' y la propiedad 'body' con un objeto 'URLSearchParams' que además recibe en el constructor la referencia de un objeto 'FormData'.</p>
+
+<p>Para poder probar en forma local debemos tener los dos archivos PHP y creada la base de datos:</p>
+<p><strong>listadoarticulos.php</strong></p>
+<pre class="recuadro">
+&lt;?php
+$server = "localhost";
+$usuario = "root";
+$clave = "";
+$base = "base1";
+$con = mysqli_connect($server, $usuario, $clave, $base) or die("problemas");
+mysqli_set_charset($con, 'utf8');
+
+$datos = mysqli_query($con, "select codigo,descripcion,precio from articulos");
+$resultado = mysqli_fetch_all($datos, MYSQLI_ASSOC);
+echo json_encode($resultado);
+?&gt;
+</pre>
+<p>Y por otro lado tenemos la página que contiene el algoritmo que almacena los datos del artículo en el servidor:</p>
+
+<p><strong>nuevoarticulo.php</strong></p>
+<pre class="recuadro">
+&lt;?php
+header('Content-Type: application/json');
+$server = "localhost";
+$usuario = "root";
+$clave = "";
+$base = "base1";
+$con = mysqli_connect($server, $usuario, $clave, $base) or die("problemas");
+mysqli_set_charset($con, 'utf8');
+
+mysqli_query($con, "insert into articulos(descripcion,precio) values 
+                             ('$_REQUEST[descripcion]',$_REQUEST[precio])");
+echo '{"resultado":"Ok"}';
+?&gt;
+</pre>
+</p>
+</div>
+
+<div>
+<!--publi-->
+<script async src="../../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<!-- adaptable2 -->
+<ins class="adsbygoogle dos"
+     style="display:inline-block"
+     data-ad-client="ca-pub-4669394804436935"
+     data-ad-slot="5774469161"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+<!--publi-->
+<script async src="../../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<!-- adaptable2 -->
+<ins class="adsbygoogle dos"
+     style="display:inline-block"
+     data-ad-client="ca-pub-4669394804436935"
+     data-ad-slot="5774469161"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+</div>
+
+
+   <h2><a href="../indexf6ce.html?inicio=100">Retornar</a></h2>   
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+</body>
+
+
+<!-- Mirrored from www.tutorialesprogramacionya.com/javascriptya/temarios/descripcion.php?inicio=100&cod=111 by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 18 Mar 2024 10:33:30 GMT -->
+</html>

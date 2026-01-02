@@ -1,0 +1,471 @@
+<html>
+
+
+<!-- Mirrored from www.tutorialesprogramacionya.com/javascriptya/temarios/descripcion.php?inicio=50&cod=52 by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 18 Mar 2024 10:33:14 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QWKWPBDEFK"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-QWKWPBDEFK');
+</script>
+
+<script async src="../../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-4669394804436935",
+    enable_page_level_ads: true
+  });
+</script>
+<title>Tutorial de JavaScript : Conceptos</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="../css/estilos.css" rel="stylesheet" type="text/css">
+  <meta charset="UTF-8">
+
+<style>
+html,body {
+	background-color: #D3E9D0;
+	font-family: Trebuchet MS, Verdana, Arial, sans-serif;
+	font-size: 10pt;
+	text-align:center;
+}
+
+h1 {
+	font-size: 14pt;
+	margin: 0%;
+}
+
+div#contentdetalle{clear:left;
+                   max-width:900px;
+				   border-top:0px solid #999;
+				   padding-top:15px;
+				   background-color: #aed7a8;
+				   text-align:left;
+				   font-size:1.3em;
+				   font-weight:normal;
+				   font-family:arial;
+				   padding:20px}
+				   
+.recuadro {
+  background-color:#ffffcc;
+  text-align:left;
+  font-family:courier;
+  font-size:1em;
+  border-width:0;
+  padding:5px;
+
+  border: 1px dotted #ffaa00;
+  margin-left:5px;  
+}		
+
+.tablajs {
+    border-collapse: collapse;
+    background-color: #fff;
+    border: 1px solid #dee2e6;    
+    padding: 0.3rem;    
+}
+
+.tablajs th,
+.tablajs td {
+  padding: 0.75rem;
+  vertical-align: top;
+  border-top: 1px solid #dee2e6;
+}
+
+		   
+</style>
+
+<style>
+.uno { width: 320px; height: 100px; }
+@media(min-width: 500px) { .uno { width: 320px; height: 100px; } }
+@media(min-width: 800px) { .uno { width: 336px; height: 280px; } }
+
+.dos { width: 320px; height: 100px; }
+@media(min-width: 500px) { .dos { width: 320px; height: 100px; } }
+@media(min-width: 800px) { .dos { width: 336px; height: 280px; } }
+</style>
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','../../../www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-80268657-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</head>
+
+<body>
+
+<div class="upperleft">
+  <div class="upperright">
+    <div class="lowerleft">
+      <div class="lowerright">
+<table width="98%">
+<tr>
+<td>
+<span style="float:right"><a target="_blank" style="margin-right:0.1em;" href="https://www.tutorialesprogramacionya.com/">Listado completo de tutoriales</a></span>
+<h1>Array: método splice</h1></td>
+<td align="right">
+
+
+</td>
+</tr>
+</table>
+
+      </div>
+    </div>
+  </div>
+</div>
+<br>
+
+
+<div class="upperleft">
+  <div class="upperright">
+    <div class="lowerleft">
+      <div class="lowerright">
+
+<div id="contentdetalle">
+
+<div style="display:block;float:left;margin: 5px;"> 
+ <script async src="../../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<!-- adaptable1 -->
+<ins class="adsbygoogle uno"
+     style="display:inline-block"
+     data-ad-client="ca-pub-4669394804436935"
+     data-ad-slot="4716538363"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script> 
+</div> 
+
+<p>El método splice permite eliminar componentes, insertar componentes o eliminar e insertar componentes en forma simultánea.</p>
+<strong>Borrar</strong>
+<p>Veamos primero como podemos utilizar éste método para borrar elementos. Para borrar elementos debemos indicar dos parámetros al método splice, el primero indica a partir de que posición procedemos a borrar componentes y el segundo parámetro indica la cantidad de componentes a borrar.</p>
+<p>Veamos con un ejemplo como eliminamos 3 componentes del vector a partir de la segunda componentes:</p>
+<pre class="recuadro">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+
+&lt;head&gt;
+    &lt;title&gt;Ejemplo de JavaScript&lt;/title&gt;
+    &lt;meta charset="UTF-8"&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+
+    &lt;script&gt;
+        let vec = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+        document.write('Vector inicial&lt;br&gt;');
+        for (let f = 0; f &lt; vec.length; f++) {
+            document.write(vec[f] + '&lt;br&gt;');
+        }
+        vec.splice(1, 3);
+        document.write('Vector luego de borrar&lt;br&gt;');
+        for (let f = 0; f &lt; vec.length; f++) {
+            document.write(vec[f] + '&lt;br&gt;');
+        }
+    &lt;/script&gt;
+
+&lt;/body&gt;
+
+&lt;/html&gt;
+</pre>
+<p>Por pantalla obtenemos como resultado:</p>
+<pre class="recuadro">
+Vector inicial
+0
+1
+2
+3
+4
+5
+6
+7
+8
+9
+Vector luego de borrar
+0
+4
+5
+6
+7
+8
+9
+</pre>
+<p>Con la llamada al método splice:</p>
+<pre>
+  vec.splice(1,3);
+</pre>
+<p>estamos indicando que a partir de la componente de la posición 1 (recordemos que los vectores se enumeran a partir de cero) proceda a eliminar 3 componentes.</p>
+<p>Otra cosa que hay que tener en cuenta que el método splice retorna un vector con los elementos borrados, luego si queremos podemos guardar esa referencia:</p>
+<pre class="recuadro">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+
+&lt;head&gt;
+    &lt;title&gt;Ejemplo de JavaScript&lt;/title&gt;
+    &lt;meta charset="UTF-8"&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+
+    &lt;script&gt;
+        let vec = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+        document.write('Vector inicial&lt;br&gt;');
+        for (let f = 0; f &lt; vec.length; f++) {
+            document.write(vec[f] + '&lt;br&gt;');
+        }
+        let vec2 = vec.splice(1, 3);
+        document.write('Elementos extraídos&lt;br&gt;');
+        for (let f = 0; f &lt; vec2.length; f++) {
+            document.write(vec2[f] + '&lt;br&gt;');
+        }
+    &lt;/script&gt;
+
+&lt;/body&gt;
+
+&lt;/html&gt;
+</pre>
+<p>El resultado es:</p>
+<pre class="recuadro">
+Vector inicial
+0
+1
+2
+3
+4
+5
+6
+7
+8
+9
+Elementos extraídos
+1
+2
+3
+</pre>
+<p>Podemos indicar un valor negativo y el posicionamiento se cuenta desde el final del vector, por ejemplo si queremos eliminar los dos últimos elementos del vector luego debemos codificar:</p>
+<pre class="recuadro">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+
+&lt;head&gt;
+    &lt;title&gt;Ejemplo de JavaScript&lt;/title&gt;
+    &lt;meta charset="UTF-8"&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+
+    &lt;script&gt;
+        let vec = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+        document.write('Vector inicial&lt;br&gt;');
+        for (let f = 0; f &lt; vec.length; f++) {
+            document.write(vec[f] + '&lt;br&gt;');
+        }
+        vec.splice(-2, 2);
+        document.write('Eliminados los dos últimos elementos&lt;br&gt;');
+        for (let f = 0; f &lt; vec.length; f++) {
+            document.write(vec[f] + '&lt;br&gt;');
+        }
+    &lt;/script&gt;
+
+&lt;/body&gt;
+
+&lt;/html&gt;
+</pre>
+<p>El resultado en pantalla es:</p>
+<pre class="recuadro">
+Vector inicial
+0
+1
+2
+3
+4
+5
+6
+7
+8
+9
+Eliminados los dos últimos elementos
+0
+1
+2
+3
+4
+5
+6
+7
+</pre>
+
+
+<strong>Insertar</strong>
+<p>Veamos ahora como procedemos a insertar valores dentro del vector. Debemos pasar como mínimo 3 o más parámetros. Los dos primeros cumplen la misma función que cuando borramos (pero en este caso pasamos un cero en el segundo parámetro) y del tercer parámetro en adelante se indican los valores a insertar en el vector.</p>
+<p>Codificaremos un programa que inserte los valores 10,20,30,40 a partir de la segunda componente:</p>
+<pre class="recuadro">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+
+&lt;head&gt;
+    &lt;title&gt;Ejemplo de JavaScript&lt;/title&gt;
+    &lt;meta charset="UTF-8"&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+
+    &lt;script&gt;
+        let vec = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+        document.write('Vector inicial&lt;br&gt;');
+        for (let f = 0; f &lt; vec.length; f++) {
+            document.write(vec[f] + '&lt;br&gt;');
+        }
+        vec.splice(1, 0, 10, 20, 30, 40);
+        document.write('Vector luego insertar 4 valores&lt;br&gt;');
+        for (let f = 0; f &lt; vec.length; f++) {
+            document.write(vec[f] + '&lt;br&gt;');
+        }
+    &lt;/script&gt;
+
+&lt;/body&gt;
+
+&lt;/html&gt;
+</pre>
+<p>El resultado por pantalla es:</p>
+<pre class="recuadro">
+Vector inicial
+0
+1
+2
+3
+4
+5
+6
+7
+8
+9
+Vector luego insertar 4 valores
+0
+10
+20
+30
+40
+1
+2
+3
+4
+5
+6
+7
+8
+9
+</pre>
+<p>En esta llamada al método splice indicamos que a partir de la posición 1 del vector borre cero componentes e inserte los valores 10,20,30 y 40:</p>
+<pre>
+  vec.splice(1,0,10,20,30,40);
+</pre>
+<strong>Borrar e insertar</strong>
+<p>La tercer posibilidad que nos presenta este método es en el mismo momento que borramos elementos procedemos a insertar otros.</p>
+<p>Para probar el borrar e insertar en forma simultánea confeccionaremos un programa que borre desde la posición 1 tres elementos e inserte otros cinco elementos:</p>
+<pre class="recuadro">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+
+&lt;head&gt;
+    &lt;title&gt;Ejemplo de JavaScript&lt;/title&gt;
+    &lt;meta charset="UTF-8"&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+
+    &lt;script&gt;
+        let vec = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+        document.write('Vector inicial&lt;br&gt;');
+        for (let f = 0; f &lt; vec.length; f++) {
+            document.write(vec[f] + '&lt;br&gt;');
+        }
+        vec.splice(1, 3, 10, 20, 30, 40, 50);
+        document.write('Vector luego de borrar 3 elementos e insertar otros 5 valores&lt;br&gt;');
+        for (let f = 0; f &lt; vec.length; f++) {
+            document.write(vec[f] + '&lt;br&gt;');
+        }
+    &lt;/script&gt;
+
+&lt;/body&gt;
+
+&lt;/html&gt;
+</pre>
+<p>El resultado por pantalla es:</p>
+<pre class="recuadro">
+Vector inicial
+0
+1
+2
+3
+4
+5
+6
+7
+8
+9
+Vector luego de borrar 3 elementos e insertar otros 5 valores
+0
+10
+20
+30
+40
+50
+4
+5
+6
+7
+8
+9
+</pre></p>
+</div>
+
+<div>
+<!--publi-->
+<script async src="../../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<!-- adaptable2 -->
+<ins class="adsbygoogle dos"
+     style="display:inline-block"
+     data-ad-client="ca-pub-4669394804436935"
+     data-ad-slot="5774469161"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+<!--publi-->
+<script async src="../../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<!-- adaptable2 -->
+<ins class="adsbygoogle dos"
+     style="display:inline-block"
+     data-ad-client="ca-pub-4669394804436935"
+     data-ad-slot="5774469161"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+</div>
+
+
+   <h2><a href="../indexefd7.html?inicio=50">Retornar</a></h2>   
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+</body>
+
+
+<!-- Mirrored from www.tutorialesprogramacionya.com/javascriptya/temarios/descripcion.php?inicio=50&cod=52 by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 18 Mar 2024 10:33:14 GMT -->
+</html>

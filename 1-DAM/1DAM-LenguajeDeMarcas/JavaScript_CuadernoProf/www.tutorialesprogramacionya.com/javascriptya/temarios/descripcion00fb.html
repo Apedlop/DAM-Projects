@@ -1,0 +1,269 @@
+<html>
+
+
+<!-- Mirrored from www.tutorialesprogramacionya.com/javascriptya/temarios/descripcion.php?inicio=10&cod=14 by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 18 Mar 2024 10:33:05 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QWKWPBDEFK"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-QWKWPBDEFK');
+</script>
+
+<script async src="../../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-4669394804436935",
+    enable_page_level_ads: true
+  });
+</script>
+<title>Tutorial de JavaScript : Conceptos</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="../css/estilos.css" rel="stylesheet" type="text/css">
+  <meta charset="UTF-8">
+
+<style>
+html,body {
+	background-color: #D3E9D0;
+	font-family: Trebuchet MS, Verdana, Arial, sans-serif;
+	font-size: 10pt;
+	text-align:center;
+}
+
+h1 {
+	font-size: 14pt;
+	margin: 0%;
+}
+
+div#contentdetalle{clear:left;
+                   max-width:900px;
+				   border-top:0px solid #999;
+				   padding-top:15px;
+				   background-color: #aed7a8;
+				   text-align:left;
+				   font-size:1.3em;
+				   font-weight:normal;
+				   font-family:arial;
+				   padding:20px}
+				   
+.recuadro {
+  background-color:#ffffcc;
+  text-align:left;
+  font-family:courier;
+  font-size:1em;
+  border-width:0;
+  padding:5px;
+
+  border: 1px dotted #ffaa00;
+  margin-left:5px;  
+}		
+
+.tablajs {
+    border-collapse: collapse;
+    background-color: #fff;
+    border: 1px solid #dee2e6;    
+    padding: 0.3rem;    
+}
+
+.tablajs th,
+.tablajs td {
+  padding: 0.75rem;
+  vertical-align: top;
+  border-top: 1px solid #dee2e6;
+}
+
+		   
+</style>
+
+<style>
+.uno { width: 320px; height: 100px; }
+@media(min-width: 500px) { .uno { width: 320px; height: 100px; } }
+@media(min-width: 800px) { .uno { width: 336px; height: 280px; } }
+
+.dos { width: 320px; height: 100px; }
+@media(min-width: 500px) { .dos { width: 320px; height: 100px; } }
+@media(min-width: 800px) { .dos { width: 336px; height: 280px; } }
+</style>
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','../../../www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-80268657-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</head>
+
+<body>
+
+<div class="upperleft">
+  <div class="upperright">
+    <div class="lowerleft">
+      <div class="lowerright">
+<table width="98%">
+<tr>
+<td>
+<span style="float:right"><a target="_blank" style="margin-right:0.1em;" href="https://www.tutorialesprogramacionya.com/">Listado completo de tutoriales</a></span>
+<h1>Estructura repetitiva (for)</h1></td>
+<td align="right">
+
+
+</td>
+</tr>
+</table>
+
+      </div>
+    </div>
+  </div>
+</div>
+<br>
+
+
+<div class="upperleft">
+  <div class="upperright">
+    <div class="lowerleft">
+      <div class="lowerright">
+
+<div id="contentdetalle">
+
+<div style="display:block;float:left;margin: 5px;"> 
+ <script async src="../../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<!-- adaptable1 -->
+<ins class="adsbygoogle uno"
+     style="display:inline-block"
+     data-ad-client="ca-pub-4669394804436935"
+     data-ad-slot="4716538363"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script> 
+</div> 
+
+<p>Cualquier problema que requiera una estructura repetitiva se puede resolver empleando la estructura while. Pero hay otra estructura repetitiva cuyo planteo es más sencillo en ciertas situaciones.</p>
+<p>Esta estructura se emplea en aquellas situaciones en las cuales CONOCEMOS la cantidad de veces que queremos que se ejecute el bloque de instrucciones. Ejemplo: cargar 10 números, ingresar 5 notas de alumnos, etc. Conocemos de antemano la cantidad de veces que queremos que el bloque se repita.</p>
+
+<p>Por último, hay que decir que la ejecución de la sentencia break dentro de cualquier parte del bucle provoca la salida inmediata del mismo.</p>
+<pre>
+Sintaxis:
+for (&lt;Inicializaci&oacute;n&gt; ; &lt;Condici&oacute;n&gt; ; &lt;Incremento o Decremento&gt;)
+{
+  &lt;Instrucciones&gt;
+}
+</pre>
+<p>Esta estructura repetitiva tiene tres argumentos: variable de inicialización, condición y variable de incremento o decremento.</p>
+<pre>
+Funcionamiento:
+	1 - Primero se ejecuta por única vez el primer argumento &lt;Inicialización&gt;.
+            Por lo general se inicializa una variable.
+	2 - El segundo paso es evaluar la (Condición), en caso de ser verdadera se ejecuta
+            el bloque, en caso contrario continúa el programa.
+	3 - El tercer paso es la ejecución de las instrucciones.
+	4 - El cuarto paso es ejecutar el tercer argumento (Incremento o Decremento).
+	5 - Luego se repiten sucesivamente del Segundo al Cuarto Paso.
+</pre>
+<p>Este tipo de estructura repetitiva se utiliza generalmente cuando sabemos la cantidad de veces que deseamos que se repita el bloque.</p>
+
+<p>Ejemplo: Mostrar por pantalla los números del 1 al 10.</p>
+<pre class="recuadro">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+
+&lt;head&gt;
+    &lt;title&gt;Ejemplo de JavaScript&lt;/title&gt;
+    &lt;meta charset="UTF-8"&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+
+    &lt;script&gt;
+        for (let f = 1; f &lt;= 10; f++) {
+            document.write(f + " ");
+        }
+    &lt;/script&gt;
+
+&lt;/body&gt;
+
+&lt;/html&gt;
+</pre>
+<p>Podemos definir la variable f directamente dentro del for si no se la requiere a dicha variable después del for. Como la condición se verifica como verdadera (1&lt;=10) se ejecuta el bloque del for (en este caso mostramos el contenido de la variable f y un espacio en blanco). Luego de ejecutar el bloque pasa al tercer argumento del for (en este caso con el operador ++ se incrementa en uno el contenido de la variable f, existe otro operador -- que decrementa en uno una variable), hubiera sido lo mismo poner f=f+1 pero este otro operador matemático nos simplifica las cosas.</p>
+
+<p>Importante: Tener en cuenta que no lleva punto y coma al final de los tres argumentos del for.</p>
+<p>El disponer un punto y coma provoca un error lógico y no sintáctico, por lo que el navegador no avisará.</p>
+
+
+<h3>Acotaciones</h3>
+<p>Acá ya podemos mostrar una ventaja de utilizar la palabra clave 'let' para definir la variable en lugar de la sintaxis antigua de JavaScript de utilizar la palabra clave 'var'.</p>
+<p>Si utilizamos la palabra clave 'var' en principio el resultado es lo mismo:</p>
+<pre>
+    &lt;script&gt;
+        for (var f = 1; f &lt;= 10; f++) {
+            document.write(f + " ");
+        }
+    &lt;/script&gt;
+</pre>
+<p>Pero si nos equivocamos y volvemos a mostrar la variable 'f' fuera del for:</p>
+<img src="imagentema/foto005e.jpg" border="0" alt="javascript let var"><br>
+<p>Como podemos comprobar la variable 'f' sigue existiendo y tiene almacenado el valor '10' (gracias a dicho valor sale del for)</p>
+<p>Si utilizamos la palabra clave 'let' la variable 'f' tiene existencia dentro del ámbito donde se la definió, en nuestro caso solo
+existe dentro del for, luego si codificamos:</p>
+<pre>
+    &lt;script&gt;
+        for (let f = 1; f &lt;= 10; f++) {
+            document.write(f + " ");
+        }
+        document.write(f + " ");
+    &lt;/script&gt;
+</pre>
+<p>Podemos ver que el intérprete de JavaScript detecta como un error el acceso a la variable 'f' fuera del for:</p>
+<img src="imagentema/foto005f.jpg" border="0" alt="javascript let var"><br>
+<p>La ventana de "Herramientas para desarrolladores" es de fundamental importancia para detectar los errores sintácticos y lógicos de nuestra aplicación. La podemos abrir presionando la tecla 'F12' o desde el menú de opciones:</p>
+<img src="imagentema/foto005g.jpg" border="0" alt="javascript herramienta para  desarrolladores"><br>
+<p>Acotar el ámbito para el acceso a una variable es una muy buena práctica que nos va a evitar dolores de cabeza cuando tenemos programas grandes (cientos o miles de líneas)</p></p>
+</div>
+
+<div>
+<!--publi-->
+<script async src="../../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<!-- adaptable2 -->
+<ins class="adsbygoogle dos"
+     style="display:inline-block"
+     data-ad-client="ca-pub-4669394804436935"
+     data-ad-slot="5774469161"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+<!--publi-->
+<script async src="../../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<!-- adaptable2 -->
+<ins class="adsbygoogle dos"
+     style="display:inline-block"
+     data-ad-client="ca-pub-4669394804436935"
+     data-ad-slot="5774469161"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+</div>
+
+
+   <h2><a href="../index4231.html?inicio=10">Retornar</a></h2>   
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+</body>
+
+
+<!-- Mirrored from www.tutorialesprogramacionya.com/javascriptya/temarios/descripcion.php?inicio=10&cod=14 by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 18 Mar 2024 10:33:05 GMT -->
+</html>

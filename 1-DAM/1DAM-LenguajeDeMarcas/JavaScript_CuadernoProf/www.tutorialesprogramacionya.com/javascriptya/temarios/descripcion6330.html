@@ -1,0 +1,307 @@
+<html>
+
+
+<!-- Mirrored from www.tutorialesprogramacionya.com/javascriptya/temarios/descripcion.php?inicio=100&cod=107 by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 18 Mar 2024 10:33:27 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QWKWPBDEFK"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-QWKWPBDEFK');
+</script>
+
+<script async src="../../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-4669394804436935",
+    enable_page_level_ads: true
+  });
+</script>
+<title>Tutorial de JavaScript : Conceptos</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="../css/estilos.css" rel="stylesheet" type="text/css">
+  <meta charset="UTF-8">
+
+<style>
+html,body {
+	background-color: #D3E9D0;
+	font-family: Trebuchet MS, Verdana, Arial, sans-serif;
+	font-size: 10pt;
+	text-align:center;
+}
+
+h1 {
+	font-size: 14pt;
+	margin: 0%;
+}
+
+div#contentdetalle{clear:left;
+                   max-width:900px;
+				   border-top:0px solid #999;
+				   padding-top:15px;
+				   background-color: #aed7a8;
+				   text-align:left;
+				   font-size:1.3em;
+				   font-weight:normal;
+				   font-family:arial;
+				   padding:20px}
+				   
+.recuadro {
+  background-color:#ffffcc;
+  text-align:left;
+  font-family:courier;
+  font-size:1em;
+  border-width:0;
+  padding:5px;
+
+  border: 1px dotted #ffaa00;
+  margin-left:5px;  
+}		
+
+.tablajs {
+    border-collapse: collapse;
+    background-color: #fff;
+    border: 1px solid #dee2e6;    
+    padding: 0.3rem;    
+}
+
+.tablajs th,
+.tablajs td {
+  padding: 0.75rem;
+  vertical-align: top;
+  border-top: 1px solid #dee2e6;
+}
+
+		   
+</style>
+
+<style>
+.uno { width: 320px; height: 100px; }
+@media(min-width: 500px) { .uno { width: 320px; height: 100px; } }
+@media(min-width: 800px) { .uno { width: 336px; height: 280px; } }
+
+.dos { width: 320px; height: 100px; }
+@media(min-width: 500px) { .dos { width: 320px; height: 100px; } }
+@media(min-width: 800px) { .dos { width: 336px; height: 280px; } }
+</style>
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','../../../www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-80268657-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</head>
+
+<body>
+
+<div class="upperleft">
+  <div class="upperright">
+    <div class="lowerleft">
+      <div class="lowerright">
+<table width="98%">
+<tr>
+<td>
+<span style="float:right"><a target="_blank" style="margin-right:0.1em;" href="https://www.tutorialesprogramacionya.com/">Listado completo de tutoriales</a></span>
+<h1>ES6 - API fetch (recuperar archivo json)</h1></td>
+<td align="right">
+
+
+</td>
+</tr>
+</table>
+
+      </div>
+    </div>
+  </div>
+</div>
+<br>
+
+
+<div class="upperleft">
+  <div class="upperright">
+    <div class="lowerleft">
+      <div class="lowerright">
+
+<div id="contentdetalle">
+
+<div style="display:block;float:left;margin: 5px;"> 
+ <script async src="../../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<!-- adaptable1 -->
+<ins class="adsbygoogle uno"
+     style="display:inline-block"
+     data-ad-client="ca-pub-4669394804436935"
+     data-ad-slot="4716538363"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script> 
+</div> 
+
+<p>El API fech remplaza las peticiones asíncronas del objeto XMLHttpRequest que hemos utilizado y seguimos utilizando en sitos web que tienen algunos años, es más conocida esta tecnología con el término Ajax (puede refrescar los conceptos en <a href="https://www.tutorialesprogramacionya.com/ajaxya" target="_blank">Ajax Ya</a>).</p>
+<p>El API fetch proporciona una mecánica más organizada para hacer peticiones asíncronas a servidores web.</p>
+<p>Todos los navegadores modernos implementan el API fetch y se rigen por el estándar definido en <a href="https://fetch.spec.whatwg.org/" target="_blank">whatwg.org</a>.</p>
+<p>El API fetch se base en un método llamado 'fetch' que depende del objeto 'window' como sucede con otros métodos vistos como 'alert', 'prompt' etc.</p>
+<p>La sintáxis es muy sencilla, si tenemos que solicitar un archivo con formato JSON a un servidor web tenemos:</p>
+<pre class="recuadro">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+
+&lt;head&gt;
+    &lt;title&gt;Ejemplo de JavaScript&lt;/title&gt;
+    &lt;meta charset="UTF-8"&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+    &lt;script&gt;
+
+        fetch("datos.php")
+            .then(response=&gt;response.json())
+            .then(datos=&gt;console.log(datos));
+
+    &lt;/script&gt;
+    &lt;/body&gt;
+
+&lt;/html&gt;
+</pre>
+<p>Teniendo en cuenta que hemos creado en el servidor una aplicación en el archivo "datos.php" que genera un archivo JSON con un listado de productos:</p>
+<img src="imagentema/foto015.jpg" border="0" alt="JSON PHP"><br>
+<p>Luego mediante la llamada al método fetch se crea un objeto de tipo 'Promise', el cual tiene un método then que le debemos pasar como parámetro una función anónima que recibe en forma asíncrona la respuesta del servidor.<br>
+La respuesta la debemos convertir en nuestro caso a formato JSON, ese proceso se resuelve mediante un segundo objeto de tipo 'Promise':</p>
+<pre>
+    fetch("datos.php")
+      .then(response=&gt;response.json())
+</pre>
+<p>Como el método then retorna un nuevo objeto de tipo 'Promise' podemos encadenar una nueva llamada al método then donde procedemos a procesar el archivo JSON recuperado del servidor:</p>
+<pre>
+      .then(datos=&gt;console.log(datos));
+</pre>
+<p>Es decir que con estas dos llamadas encadenadas al método 'then' tenemos en nuestro navegador los datos del archivo 'JSON' listo para ser procesado (en nuestro caso solo lo hemos impreso en la 'console'):</p>
+<img src="imagentema/foto016.jpg" border="0" alt="API fetch"><br>
+
+<h3>Acotaciones</h3>
+<p>En la práctica se utilizan las llamadas encadenadas por el método 'then' con el API fetch, pero para un mayor entendimiento resolveremos el mismo problema pero de la forma larga:</p>
+<pre>
+  &lt;script&gt;
+    const promesa1=window.fetch("datos.php");
+    const promesa2=promesa1.then(response=&gt;response.json());
+    promesa2.then(datos=&gt;console.log(datos));
+  &lt;/script&gt;
+</pre>
+<p>Como vemos llamamos al método 'fetch', recordando que es un método del objeto global 'window' y le pasamos el nombre del recurso que se encuentra en nuestro servidor web. El metodo 'fetch' retorna un objeto de tipo 'Promise' (una promesa encapsula la terminación o el fracaso de una operación asíncrona).</p>
+<p>La terminación de la promesa se recibe en la llamada al método 'then', dicho método retorna una nueva promesa que en nuestro caso guardamos la referencia en la constante 'promesa2':</p>
+<pre>
+    const promesa2=promesa1.then(response=&gt;response.json());
+</pre>
+<p>Nuevamente el resultado de la segunda promesa se captura en la llamada al método 'then', donde procedemos a mostrar los datos ya transformado a formato JSON que se hizo en el 'then' anterior:</p>
+<pre>
+    promesa2.then(datos=&gt;console.log(datos));
+</pre>
+<p>Por último si no utilizamos funciones flecha el código anterior queda:</p>
+<pre>
+  &lt;script&gt;
+    const promesa1 = window.fetch("datos.php");
+    const promesa2 = promesa1.then(function (response) {
+      return response.json()
+    });
+    promesa2.then(function (datos) {
+      console.log(datos);
+    });
+  &lt;/script&gt;
+</pre>
+<p>El código JavaScript anterior tiene por objetivo buscar un entendimiento de porque la llamada al método 'then' de la promesa1 recibe la respuesta del servidor y retorna una nueva promesa de convertir el flujo de datos recibidos del servidor a formato JSON. Luego el método 'then' de la segunda promesa recibe los datos en formato JSON y procede a imprimirlos.</p>
+
+<p>Usaremos en los próximos conceptos el formato de llamadas encadenadas al método 'then'.</p>
+
+<p>Si quiere probar la aplicación en forma local, primero debe instalar un servidor local (puede ver los pasos en el curso de <a href="https://www.tutorialesprogramacionya.com/phpya" target="_blank">PHP Ya</a>) y luego crear el archivo datos.php:</p>
+<pre class="recuadro">
+&lt;?php
+header('Content-Type: application/json');
+
+function retornarConexion() {
+  $server="localhost";
+  $usuario="root";
+  $clave="";
+  $base="base1";
+  $con=mysqli_connect($server,$usuario,$clave,$base) or die("problemas") ;
+  mysqli_set_charset($con,'utf8'); 
+  return $con;
+}
+
+$conexion = retornarConexion();
+
+$datos = mysqli_query($conexion, "select codigo,descripcion,precio from articulos");
+$resultado = mysqli_fetch_all($datos, MYSQLI_ASSOC);
+echo json_encode($resultado);
+?&gt;
+</pre>
+<p>La tabla artículos tiene la siguiente estructura y datos iniciales:</p>
+<pre class="recuadro">
+CREATE TABLE `articulos` (
+  `codigo` int(11) NOT NULL AUTO_INCREMENT,
+  `descripcion` varchar(50) NOT NULL,
+  `precio` float NOT NULL,
+  PRIMARY KEY (`codigo`)
+);
+
+insert into `articulos` values 
+
+(1,'peras',55),
+
+(2,'manzanas',60),
+
+(3,'naranjas',25),
+
+(4,'pepino',33);
+</pre>
+
+</pre></p>
+</div>
+
+<div>
+<!--publi-->
+<script async src="../../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<!-- adaptable2 -->
+<ins class="adsbygoogle dos"
+     style="display:inline-block"
+     data-ad-client="ca-pub-4669394804436935"
+     data-ad-slot="5774469161"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+<!--publi-->
+<script async src="../../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<!-- adaptable2 -->
+<ins class="adsbygoogle dos"
+     style="display:inline-block"
+     data-ad-client="ca-pub-4669394804436935"
+     data-ad-slot="5774469161"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+</div>
+
+
+   <h2><a href="../indexf6ce.html?inicio=100">Retornar</a></h2>   
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+</body>
+
+
+<!-- Mirrored from www.tutorialesprogramacionya.com/javascriptya/temarios/descripcion.php?inicio=100&cod=107 by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 18 Mar 2024 10:33:28 GMT -->
+</html>

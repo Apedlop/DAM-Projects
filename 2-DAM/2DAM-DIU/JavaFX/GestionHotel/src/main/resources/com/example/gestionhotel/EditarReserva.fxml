@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Button?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="325.0" prefWidth="450.0" stylesheets="@styles/styles.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.gestionhotel.controller.EditarReservaController">
+    <children>
+        <AnchorPane minWidth="300.0" prefHeight="323.0" prefWidth="450.0" styleClass="background">
+            <children>
+                <Label layoutX="121.0" layoutY="14.0" styleClass="label-header" text="Detalles Reserva" AnchorPane.leftAnchor="121.0" AnchorPane.topAnchor="14.0">
+                    <font>
+                        <Font name="System Bold" size="25.0" />
+                    </font>
+                </Label>
+                <HBox AnchorPane.bottomAnchor="5.0" AnchorPane.rightAnchor="5.0" />
+                <DatePicker fx:id="fechaLlegada" layoutX="23.0" layoutY="77.0" prefHeight="29.0" prefWidth="136.0" />
+                <Label layoutX="23.0" layoutY="58.0" text="Fecha Llegada" />
+                <Label layoutX="205.0" layoutY="58.0" text="Fecha Salida" />
+                <DatePicker fx:id="fechaSalida" layoutX="205.0" layoutY="77.0" prefHeight="29.0" prefWidth="136.0" />
+                <Label layoutX="23.0" layoutY="115.0" text="Tipo de Habitacion" />
+                <SplitMenuButton fx:id="tipoHabitacion" layoutX="149.0" layoutY="112.0" minHeight="20.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="192.0" text="-- Seleccionar --" />
+                <CheckBox fx:id="fumador" layoutX="256.0" layoutY="152.0" mnemonicParsing="false" text="Fumador" />
+                <Label layoutX="23.0" layoutY="184.0" text="Regimen de alojamiento:" />
+                <VBox layoutX="38.0" layoutY="209.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="21.0" AnchorPane.leftAnchor="38.0" AnchorPane.topAnchor="209.0">
+                    <children>
+                        <RadioButton fx:id="alojamientoDesayuno" mnemonicParsing="false" text="Alojamiento y desayuno" />
+                        <RadioButton fx:id="mediaPension" mnemonicParsing="false" text="Media pension">
+                            <padding>
+                                <Insets top="5.0" />
+                            </padding>
+                        </RadioButton>
+                        <RadioButton fx:id="pensionCompleta" mnemonicParsing="false" text="Pension completa">
+                            <padding>
+                                <Insets top="5.0" />
+                            </padding>
+                        </RadioButton>
+                    </children>
+                </VBox>
+                <SplitMenuButton fx:id="numHabitaciones" layoutX="179.0" layoutY="149.0" minHeight="25.0" mnemonicParsing="false" prefHeight="25.0" text="1" />
+                <Label layoutX="24.0" layoutY="152.0" text="Numero de habitaciones" />
+                <Button layoutX="296.0" layoutY="288.0" mnemonicParsing="false" onAction="#BotonAceptar" text="Aceptar" />
+                <Button layoutX="366.0" layoutY="288.0" mnemonicParsing="false" onAction="#botonCancelar" text="Cancelar" />
+            <Label fx:id="alertaFumador" layoutX="211.0" layoutY="193.0" prefHeight="77.0" prefWidth="209.0" />
+            </children>
+        </AnchorPane>
+    </children>
+</AnchorPane>

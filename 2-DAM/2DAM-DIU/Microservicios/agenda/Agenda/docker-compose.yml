@@ -1,0 +1,53 @@
+version: '3.8'
+
+networks:
+  mired:
+    ipam:
+      config:
+        - subnet: 182.28.0.0/16
+          gateway: 182.28.0.1
+
+services:
+  dbmongo:
+    image: bitnami/mongodb:latest
+    container_name: mongo_DB
+    networks:
+      mired:
+        ipv4_address: 182.28.0.11
+    ports:
+      - "27017:27017"
+    environment:
+      MONGO_INITDB_DATABASE: shared-db
+    restart: always
+
+  app-tutorials:
+    image: apedlop042/tutorials2025:4
+    container_name: tutorialsapp
+    networks:
+      mired:
+        ipv4_address: 182.28.0.13
+    ports:
+      - "8098:8098"
+    depends_on:
+      - dbmongo
+    environment:
+      SPRING_DATA_MONGODB_HOST: mongo_DB
+      SPRING_DATA_MONGODB_PORT: 27017
+      SPRING_DATA_MONGODB_DATABASE: shared-db
+    restart: always
+
+  app-agenda:
+    image: apedlop042/agenda2025:1
+    container_name: agendaapp
+    networks:
+      mired:
+        ipv4_address: 182.28.0.14
+    ports:
+      - "8099:8099"
+    depends_on:
+      - dbmongo
+    environment:
+      SPRING_DATA_MONGODB_HOST: mongo_DB
+      SPRING_DATA_MONGODB_PORT: 27017
+      SPRING_DATA_MONGODB_DATABASE: shared-db
+    restart: always

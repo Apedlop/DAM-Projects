@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="1000.0" styleClass="background" stylesheets="@styles/styles.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.gestionhotel.controller.RootLayoutController">
+    <top>
+        <MenuBar BorderPane.alignment="CENTER">
+            <menus>
+                <Menu mnemonicParsing="false" text="Documentacion">
+                    <items>
+                        <MenuItem onAction="#botonDocumentacion" text="Ver Documentacion" />
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Estadisticas">
+                    <items>
+                        <MenuItem onAction="#botonVerEstadisticas" text="Ver Estadisticas" />
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Habitaciones">
+                    <items>
+                        <MenuItem onAction="#botonTiposHabitacion" text="Ver Tipos Habitaciones" />
+                    </items>
+                </Menu>
+            </menus>
+        </MenuBar>
+    </top>
+</BorderPane>

@@ -1,0 +1,386 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asignaturas</title>
+    <link rel="icon" href="../../image/logo.png">
+
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../../style/menu.css">
+    <link rel="stylesheet" href="../../Hogwarts/Asignaturas/asignatura.css">
+
+    <script src="../../javaScript/modo.js"></script>
+    <script src="../../javaScript/recarga.js"></script>
+
+</head>
+
+<body>
+    <div class="contenedor_loader">
+        <div><img src="../../image/carga_snichDorada.gif" class="gif"></div>
+    </div>
+    <!-- Navigation -->
+    <div class="navigation-wrap bg-light start-header start-style">
+        <div class="container-fluid">
+            <div class="row justify-content-between align-items-center">
+                <div class="row">
+                    <div class="col">
+                        <!-- Logo -->
+                        <a class="navbar-brand" href="../../index.html" target="_self">
+                            <img src="../../image/logo.png" alt="Logo" class="logo">
+                        </a>
+                    </div>
+                    <div class="col altura">
+                        <b>
+                            <a href="../Mortifagos.html" class="decoracion">
+                                <h1 class="titulo">Mortífagos</h1>
+                            </a>
+                        </b>
+                    </div>
+                    <div class="col posicionModo">
+                        <button type="button" class="btn btn-light colorModo" onclick="toggleTheme()">
+                            <img id="lightImage" src="../../image/soleado.png" alt="Light Theme">
+                            <img id="darkImage" src="../../image/luna.png" alt="Dark Theme">
+                        </button>
+                    </div>
+                </div>
+                <div class="col-auto flex-grow-0 flex-shrink-0">
+                    <!-- Opciones del Navbar -->
+                    <nav class="navbar navbar-expand-md">
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav ms-auto">
+                                <li class="nav-item">
+                                    <a class="nav-link dropdown-toggle" href="../../Hogwarts/Hogwart.html" role="button"
+                                        data-bs-toggle="dropdown" aria-haspopup="true"
+                                        aria-expanded="false">Hogwarts</a>
+                                    <div class="dropdown-menu">
+                                        <a class="dropdown-item" href="../../Hogwarts/Profesores/Profesores.html">Profesores</a>
+                                        <a class="dropdown-item" href="../../Hogwarts/Alumnos/Alumnos.html">Alumnos</a>
+                                        <a class="dropdown-item" href="../../Hogwarts/Asignaturas/asignaturas.html">Asignaturas</a>
+                                        <a class="dropdown-item" href="../../Hogwarts/Casas/casa.html">Casas</a>
+                                    </div>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link dropdown-toggle" href="../Mortifagos.html" role="button"
+                                        data-bs-toggle="dropdown" aria-haspopup="true"
+                                        aria-expanded="false">Mortífagos</a>
+                                    <div class="dropdown-menu">
+                                        <a class="dropdown-item"
+                                            href="../Personajes/Personajes.html">Personajes</a>
+                                        <a class="dropdown-item"
+                                            href="horrocruxes.html">Horrocruxes</a>
+                                        <a class="dropdown-item" href="../Mortifagos.html">Marca Tenebrosa</a>
+                                    </div>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link dropdown-toggle" href="../../Familias/Familias.html">Familias</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="../../Mapa/mapa.html">Mapa</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+                <div class="col-auto">
+                    <!-- Segunda sección de opciones del Navbar -->
+                    <nav class="navbar navbar-expand-md navbar-light">
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav ms-auto">
+                                <li class="nav-item">
+                                    <a class="nav-link dropdown-toggle" href="../../Adaptaciones/Adaptaciones.html"
+                                        role="button" data-bs-toggle="dropdown" aria-haspopup="true"
+                                        aria-expanded="false">Adaptaciones</a>
+                                    <div class="dropdown-menu">
+                                        <a class="dropdown-item" href="../../Adaptaciones/Libros.html">Libros</a>
+                                        <a class="dropdown-item" href="../../Adaptaciones/Peliculas.html">Películas</a>
+                                        <a class="dropdown-item" href="../../Adaptaciones/Videojuegos.html">Videojuegos</a>
+                                    </div>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="../../Curiosidades/curiosidad.html">Curiosidades</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="../../Comentarios/Comentarios.html">Comentarios</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="../../quiz/quiz.html">Quiz</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                    <div class="nav-images-container">
+                        <img src="https://cdn-hogwartslegacy.warnerbrosgames.com/static/bar-left.png" alt
+                            class="nav-bar left">
+                        <img src="https://cdn-hogwartslegacy.warnerbrosgames.com/static/bar-right.png" alt
+                            class="nav-bar right">
+                    </div>
+                    <div>
+                        <div class="nav-bar-corner-container">
+                            <div class="nav-bar-corner left">
+                                <img src="https://cdn-hogwartslegacy.warnerbrosgames.com/static/corner-left.webp" alt=""
+                                    class="img-fluid">
+                            </div>
+                            <div class="nav-bar-corner right">
+                                <img src="https://cdn-hogwartslegacy.warnerbrosgames.com/static/corner-right.webp"
+                                    alt="" class="img-fluid">
+                            </div>
+                        </div>
+                        <div class="nav-bar-corner-container1">
+                            <div class="nav-bar-corner bottomLeft">
+                                <img src="https://cdn-hogwartslegacy.warnerbrosgames.com/static/corner-bottom-left.webp"
+                                    alt="" class="img-fluid">
+                            </div>
+                            <div class="nav-bar-corner bottomRight">
+                                <img src="https://cdn-hogwartslegacy.warnerbrosgames.com/static/corner-bottom-right.webp"
+                                    alt="" class="img-fluid">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="my-5 py-5 content-fluid text-center">
+        <div class="text-center">
+
+            <picture>
+                <source srcset="../../image/titulo-arriba.webp" type="image/webp">
+                <img src="../../image/titulo-arriba.webp" class="title-decoration margen">
+            </picture>
+
+            <h1 class="letraBlanca">Horrocruxes</h1>
+
+            <picture>
+                <source srcset="../../image/titulo-bajo.png" type="image/webp">
+                <img src="../../image/titulo-bajo.png" class="title-decoration">
+            </picture>
+
+        </div>
+        <div class="container-fluid justify-content-center">
+            <div class="row justify-content-center barra">
+                <div class="row mt-4 justify-content-center margen-izquierdo">
+                    <div class="col-md-4 mb-4"> <!-- Agregamos la clase mb-4 para agregar margen inferior -->
+                        <figure>
+                            <div class="flip-card">
+                                <div class="flip-card-inner">
+                                    <div class="flip-card-front">
+                                        <img src="../image/anilloResurreccion.png" class="carta">
+                                    </div>
+                                    <div class="flip-card-back">
+                                        <h1>Anillo de Sorvolo Gaunt</h1>
+                                        <hr>
+                                        <p>
+                                            Tom Ryddle, conocido como Lord Voldemort, creó su primer horrocrux a los
+                                            dieciséis años usando un anillo de su abuelo materno, Sorvolo Gaunt, tras
+                                            asesinar a su padre. Voldemort ocultó el anillo en la casa de los Gaunt,
+                                            donde Dumbledore lo encontró y destruyó en 1996. Antes de morir, Dumbledore
+                                            escondió la piedra del anillo, la Piedra de la Resurrección, dentro de una
+                                            snitch dorada. En 1998, Harry utilizó la piedra para invocar a seres
+                                            queridos antes de enfrentarse a Voldemort, dejando caer la piedra en el
+                                            Bosque Prohibido.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </figure>
+                    </div>
+                    <div class="col-md-4 mb-4"> <!-- Agregamos la clase mb-4 para agregar margen inferior -->
+                        <figure>
+                            <div class="position-relative">
+                                <div class="flip-card">
+                                    <div class="flip-card-inner">
+                                        <div class="flip-card-front">
+                                            <img src="../image/diarioTom.png" class="carta">
+                                        </div>
+                                        <div class="flip-card-back">
+                                            <h1>Diario de Tom Riddle</h1>
+                                            <hr>
+                                            <p>Tom Ryddle creó su segundo horrocrux durante su sexto año en Hogwarts,
+                                                utilizando su diario tras asesinar a Myrtle Warren. Voldemort confió el
+                                                diario a Lucius Malfoy, quien años después se lo pasó a Ginny Weasley.
+                                                Harry y Ron encontraron el diario en el baño de Myrtle la Llorona, y
+                                                Harry descubrió que escribir en él permitía comunicarse con el joven Tom
+                                                Ryddle. El fragmento de alma de Ryddle poseyó a Ginny, usándola para
+                                                abrir la Cámara de los Secretos. Harry salvó a Ginny y destruyó el
+                                                diario con un colmillo de basilisco.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </figure>
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-center barra">
+                <div class="row mt-4 justify-content-center margen-izquierdo">
+                    <div class="col-md-4 mb-4"> <!-- Agregamos la clase mb-4 para agregar margen inferior -->
+                        <figure>
+                            <div class="position-relative">
+                                <div class="flip-card">
+                                    <div class="flip-card-inner">
+                                        <div class="flip-card-front">
+                                            <img src="../image/relicarioSlytherin.png" class="carta">
+                                        </div>
+                                        <div class="flip-card-back">
+                                            <h1>Guardapelo de Salazar Slytherin</h1>
+                                            <hr>
+                                            <p>El tercer horrocrux de Voldemort fue el guardapelo de Salazar Slytherin,
+                                                elegido por su valor histórico y herencia. Pasó por varias manos antes
+                                                de ser robado por Voldemort y oculto en una cueva protegida por Inferi y
+                                                hechizos. Fue recuperado por Harry, Ron y Hermione en el Ministerio de
+                                                Magia y finalmente destruido por Ron en el Bosque de Dean, tras
+                                                torturarlo con ilusiones.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </figure>
+                    </div>
+                    <div class="col-md-4 mb-4"> <!-- Agregamos la clase mb-4 para agregar margen inferior -->
+                        <figure>
+                            <div class="flip-card">
+                                <div class="flip-card-inner">
+                                    <div class="flip-card-front">
+                                        <img src="../image/copaHufflepuff.png" class="carta">
+                                    </div>
+                                    <div class="flip-card-back">
+                                        <h1>Copa de Helga Hufflepuff</h1>
+                                        <hr>
+                                        <p>
+
+                                            Tom Ryddle creó su cuarto horrocrux utilizando la copa de Helga Hufflepuff,
+                                            asesinando a Hepzibah Smith y luego inculpando a su elfina doméstica por el
+                                            crimen. Voldemort confió la copa a Bellatrix Lestrange, quien la protegió en
+                                            la bóveda familiar de Gringotts. Harry, Ron y Hermione robaron la copa del
+                                            banco y Hermione la destruyó utilizando un colmillo de basilisco.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </figure>
+                    </div>
+                    <div class="col-md-4 mb-4"> <!-- Agregamos la clase mb-4 para agregar margen inferior -->
+                        <figure>
+                            <div class="position-relative">
+                                <div class="flip-card">
+                                    <div class="flip-card-inner">
+                                        <div class="flip-card-front">
+                                            <img src="../image/diademaRavenclaw.png" class="carta">
+                                        </div>
+                                        <div class="flip-card-back">
+                                            <h1>Diadema de Rowena Ravenclaw</h1>
+                                            <hr>
+                                            <p>Tom Ryddle creó su quinto horrocrux utilizando la diadema de Rowena Ravenclaw, que representaba su enorme inteligencia. Helena Ravenclaw, el fantasma de la Casa Ravenclaw, reveló su ubicación en un árbol hueco en los bosques de Albania. Harry descubrió la diadema en la Sala de los Menesteres y, al darse cuenta de su naturaleza, buscó información con Helena Ravenclaw, quien reveló que Lord Voldemort también había buscado la diadema en el pasado.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </figure>
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-center barra">
+                <div class="row mt-4 justify-content-center margen-izquierdo">
+                    <div class="col-md-4 mb-4"> <!-- Agregamos la clase mb-4 para agregar margen inferior -->
+                        <figure>
+                            <div class="position-relative">
+                                <div class="flip-card">
+                                    <div class="flip-card-inner">
+                                        <div class="flip-card-front">
+                                            <img src="../image/nagini.png" class="carta">
+                                        </div>
+                                        <div class="flip-card-back">
+                                            <h1>Nagini</h1>
+                                            <hr>
+                                            <p>El sexto horrocrux de Voldemort fue Nagini, su serpiente compañera. A pesar de que era poco común convertir animales en horrocruxes, Voldemort lo hizo para alcanzar su objetivo de seis horrocruxes y debido a la lealtad de Nagini en momentos de debilidad. La serpiente se convirtió en un horrocrux con el asesinato de Bertha Jorkins en 1994. Después de la destrucción de los otros horrocruxes, Voldemort protegió a Nagini con un encantamiento. Levantó la protección cuando creyó que Harry Potter estaba muerto, lo que permitió que Neville Longbottom la matara con la espada de Gryffindor por orden de Harry.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </figure>
+                    </div>
+                    <div class="col-md-4 mb-4"> <!-- Agregamos la clase mb-4 para agregar margen inferior -->
+                        <figure>
+                            <div class="flip-card">
+                                <div class="flip-card-inner">
+                                    <div class="flip-card-front">
+                                        <img src="../image/harryPotter.png" class="carta">
+                                    </div>
+                                    <div class="flip-card-back">
+                                        <h1>Harry Potter</h1>
+                                        <hr>
+                                        <p>El séptimo horrocrux de Voldemort fue Harry Potter, aunque no fue intencional. Voldemort no sabía que Harry se había convertido en un horrocrux. Esta situación se debe a que Harry llevaba un fragmento del alma de Voldemort, lo que le permitía hablar pársel. Las muertes de James Potter y Lily Evans fueron las que permitieron que este hechizo se realizara. Harry descubre la verdad sobre su conexión con Voldemort cuando explora los últimos recuerdos de Snape, donde Dumbledore le reveló a Snape esta información. El horrocrux dentro de Harry fue destruido por Voldemort cuando intentó matarlo con la maldición asesina, Avada Kedavra.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </figure>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+    </div>
+
+
+    <footer class="text-center fondoFooter">
+        <div class="lineaSeparacion">
+            <img src="https://cdn-hogwartslegacy.warnerbrosgames.com/static/bar-left.png" class="izquierda">
+            <img src="https://cdn-hogwartslegacy.warnerbrosgames.com/static/bar-right.png" class="derecha">
+        </div>
+        <!-- Grid container -->
+        <div class="container pt-4">
+            <!-- Section: Social media -->
+            <section class="mb-4">
+                <!-- Facebook -->
+                <a data-mdb-ripple-init class="btn btn-link btn-floating btn-lg text-body m-1"
+                    href="https://www.facebook.com/harrypotter" role="button"><img src="../../image/facebook.png"
+                        class="footer"></a>
+
+                <!-- Instagram -->
+                <a data-mdb-ripple-init class="btn btn-link btn-floating btn-lg text-body m-1"
+                    href="https://www.instagram.com/harrypotter/?hl=es" role="button"><img
+                        src="../../image/instagram.png" class="footer"></a>
+
+                <!-- Twitter -->
+                <a data-mdb-ripple-init class="btn btn-link btn-floating btn-lg text-body m-1"
+                    href="https://x.com/harrypotter" role="button"><img src="../../image/twitter.png"
+                        class="footer2"></a>
+
+                <!-- YouTube -->
+                <a data-mdb-ripple-init class="btn btn-link btn-floating btn-lg text-body m-1"
+                    href="https://www.youtube.com/@harrypotter" role="button"><img src="../../image/youtube.png"
+                        class="footer"></a>
+
+                <!-- TikTok -->
+                <a data-mdb-ripple-init class="btn btn-link btn-floating btn-lg text-body m-1"
+                    href="https://www.tiktok.com/@harrypotter" role="button"><img src="../../image/tik-tok.png"
+                        class="footer"></a>
+
+            </section>
+        </div>
+        <!-- Grid container -->
+
+        <!-- Copyright -->
+        <div class="text-center p-3 fondoFooter2">
+            Copyright © 2024
+        </div>
+    </footer>
+</body>
+
+</html>

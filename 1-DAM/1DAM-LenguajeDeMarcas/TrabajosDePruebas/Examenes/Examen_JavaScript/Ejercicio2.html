@@ -1,0 +1,83 @@
+<html>
+
+<head>
+    <title>Ejercicio 2</title>
+</head>
+
+<body>
+
+    <h1>Ejercicio 2</h1>
+
+    <script src="Ejercicio1.js">
+
+        const insertarNum = lista => {
+            for (let i = 0; i < lista.length; i++) {
+                lista[i] = parseInt(prompt(`Introduce el ${i + 1}º número: `));
+            }
+        }
+
+        const incrementar = lista => {
+            for (let i = 0; i < lista.length; i++) {
+                lista[i] += 1;
+            }
+        }
+
+        const sumaValores = (l1, l2, l3) => {
+            for (let i = 0; i < l3.length; i++) {
+                l3[i] = l1[i] + l2[i];
+            }
+            return l3;
+        }
+
+        const guiones = l3 => {
+            guion = "";
+            for (let i = 0; i < l3.length; i++) {
+                guion += l3[i];
+                i != l3.length - 1 ? guion += "-" : guion += "";
+            }
+            return guion;
+        }
+
+        const listar = lista => {
+            coma = ""
+            for (let i = 0; i < lista.length; i++) {
+                coma += lista[i];
+                i != lista.length - 1 ? coma += ", " : coma += "";
+            }
+            return coma;
+        }
+
+        const verificar = num => {
+            if (num > 5) {
+                while (num > 5) {
+                    num = parseInt(prompt("Introduce un número para el tamaño de los Arrays: "));
+                    l1 = new Array(num);
+                    l2 = new Array(num);
+                    l3 = new Array(num);
+                }
+            } else {
+                l1 = new Array(num);
+                l2 = new Array(num);
+                l3 = new Array(num);
+            }
+            return (l1, l2, l3);
+        }
+
+        let l1, l2, l3;
+        let num = parseInt(prompt("Introduce un número para el tamaño de los Arrays: "));
+
+        verificar(num);
+        insertarNum(l1);
+        incrementar(l1);
+        document.write(`Lista 1: ${listar(l1)} <br>`);
+        insertarNum(l2);
+        incrementar(l2);
+        document.write(`Lista 2: ${listar(l2)} <br>`);
+        sumaValores(l1, l2, l3);
+        document.write(`Lista 3: ${listar(l3)}`);
+
+    </script>
+
+</body>
+
+</html>

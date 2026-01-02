@@ -1,0 +1,776 @@
+<html>
+
+
+<!-- Mirrored from www.tutorialesprogramacionya.com/javascriptya/temarios/descripcion.php?inicio=100&cod=106 by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 18 Mar 2024 10:33:27 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QWKWPBDEFK"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-QWKWPBDEFK');
+</script>
+
+<script async src="../../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-4669394804436935",
+    enable_page_level_ads: true
+  });
+</script>
+<title>Tutorial de JavaScript : Conceptos</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="../css/estilos.css" rel="stylesheet" type="text/css">
+  <meta charset="UTF-8">
+
+<style>
+html,body {
+	background-color: #D3E9D0;
+	font-family: Trebuchet MS, Verdana, Arial, sans-serif;
+	font-size: 10pt;
+	text-align:center;
+}
+
+h1 {
+	font-size: 14pt;
+	margin: 0%;
+}
+
+div#contentdetalle{clear:left;
+                   max-width:900px;
+				   border-top:0px solid #999;
+				   padding-top:15px;
+				   background-color: #aed7a8;
+				   text-align:left;
+				   font-size:1.3em;
+				   font-weight:normal;
+				   font-family:arial;
+				   padding:20px}
+				   
+.recuadro {
+  background-color:#ffffcc;
+  text-align:left;
+  font-family:courier;
+  font-size:1em;
+  border-width:0;
+  padding:5px;
+
+  border: 1px dotted #ffaa00;
+  margin-left:5px;  
+}		
+
+.tablajs {
+    border-collapse: collapse;
+    background-color: #fff;
+    border: 1px solid #dee2e6;    
+    padding: 0.3rem;    
+}
+
+.tablajs th,
+.tablajs td {
+  padding: 0.75rem;
+  vertical-align: top;
+  border-top: 1px solid #dee2e6;
+}
+
+		   
+</style>
+
+<style>
+.uno { width: 320px; height: 100px; }
+@media(min-width: 500px) { .uno { width: 320px; height: 100px; } }
+@media(min-width: 800px) { .uno { width: 336px; height: 280px; } }
+
+.dos { width: 320px; height: 100px; }
+@media(min-width: 500px) { .dos { width: 320px; height: 100px; } }
+@media(min-width: 800px) { .dos { width: 336px; height: 280px; } }
+</style>
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','../../../www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-80268657-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</head>
+
+<body>
+
+<div class="upperleft">
+  <div class="upperright">
+    <div class="lowerleft">
+      <div class="lowerright">
+<table width="98%">
+<tr>
+<td>
+<span style="float:right"><a target="_blank" style="margin-right:0.1em;" href="https://www.tutorialesprogramacionya.com/">Listado completo de tutoriales</a></span>
+<h1>ES6 - Array</h1></td>
+<td align="right">
+
+
+</td>
+</tr>
+</table>
+
+      </div>
+    </div>
+  </div>
+</div>
+<br>
+
+
+<div class="upperleft">
+  <div class="upperright">
+    <div class="lowerleft">
+      <div class="lowerright">
+
+<div id="contentdetalle">
+
+<div style="display:block;float:left;margin: 5px;"> 
+ <script async src="../../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<!-- adaptable1 -->
+<ins class="adsbygoogle uno"
+     style="display:inline-block"
+     data-ad-client="ca-pub-4669394804436935"
+     data-ad-slot="4716538363"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script> 
+</div> 
+
+<p>El objeto Array existe desde la primer versión de JavaScript, pero a lo largo del tiempo ha ido incorporando nuevas funcionalidades.</p>
+<p>Veremos los métodos que ha incorporado el objeto Array con la versión de ES6, recordando que todos los navegadores actuales los implementan en su totalidad.</p>
+<h3>Método estático 'from'.</h3>
+<p>El método estático 'from' retorna la referencia de un objeto de tipo Array que se crea a partir del dato que le pasamos:</p>
+<pre class="recuadro">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+
+&lt;head&gt;
+    &lt;title&gt;Ejemplo de JavaScript&lt;/title&gt;
+    &lt;meta charset="UTF-8"&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+    &lt;script&gt;
+        const arreglo1 = [10, 20, 30];
+        const arreglo2 = Array.from(arreglo1);
+        arreglo1.fill(5);
+        console.log(arreglo1); // [5,5,5]
+        console.log(arreglo2); // [10,20,30]
+    &lt;/script&gt;
+&lt;/body&gt;
+
+&lt;/html&gt;
+</pre>
+<p>Creamos un arreglo con 3 elementos:</p>
+<pre>
+        const arreglo1 = [10, 20, 30];
+</pre>
+<p>Luego llamamos al método 'from' del objeto 'Array', el cual nos retorna un nuevo arreglo con el mismo contenido de 'arreglo1'.</p>
+<p>Es importante recordar que los objetos en JavaScript (y los arreglos son objetos) almacenan la referencia del objeto y no los datos propiamente dichos como los hacen las variables de tipo primitiva. No es lo mismo hacer la asignación:</p>
+<pre>
+        const arreglo2=arreglo1;
+</pre>
+<p>Con la asignación previa sigue existiendo un solo objeto y luego dos referencias (arreglo1 y arreglo2) a dicho objeto.</p>
+<p>Si utilizamos la asignación tenemos como resultado:</p>
+<pre>
+    &lt;script&gt;
+        const arreglo1 = [10, 20, 30];
+        const arreglo2 = arreglo1;
+        arreglo1.fill(5);
+        console.log(arreglo1); // [5,5,5]
+        console.log(arreglo2); // [5,5,5]
+    &lt;/script&gt;
+</pre>
+<p>Como podemos comprobar si imprimimos el único arreglo ya sea con la referencia arreglo1 o arreglo2 luego se acceden al mismo contenido.</p>
+<p>Luego veremos que el método 'fill' cambia el contenido de un arreglo con el dato que le pasamos como parámetro.</p>
+<p>Al método 'from' podemos pasar cualquier objeto que tenga la capacidad de iterar (más adelande veremos como crear objetos iterables). Por ejemplo un string es iterable:</p>
+<pre>
+  &lt;script&gt;
+      const titulo = "administración";
+      const arreglo1 = Array.from(titulo);
+      console.log(arreglo1);        // ["a", "d", "m", "i", "n", "i", "s", "t", "r", "a", "c", "i", "ó", "n"]
+      console.log(arreglo1.length); // 14
+  &lt;/script&gt;
+</pre>
+<p>Un objeto de tipo Map es iterable:</p>
+<pre>
+  &lt;script&gt;
+      const mapa1 = new Map();
+      mapa1.set("casa", "house");
+      mapa1.set("rojo", "red");
+      mapa1.set("auto", "car");
+      const arreglo1 = Array.from(mapa1);
+      console.log(arreglo1);        // [["casa", "house"], ["rojo", "red"], ["auto", "car"]]
+      console.log(arreglo1.length); // 3
+  &lt;/script&gt;</pre>
+<p>Un objeto de tipo Set es iterable:</p>
+<pre>
+  &lt;script&gt;
+      const conjunto1 = new Set();
+      conjunto1.add("C");
+      conjunto1.add("Pascal");
+      conjunto1.add("PHP");
+      conjunto1.add("Python");
+      const arreglo1 = Array.from(conjunto1);
+      console.log(arreglo1);        // ["C", "Pascal", "PHP", "Python"]
+      console.log(arreglo1.length); // 4
+  &lt;/script&gt;
+</pre>
+<p>Por ejemplo no son iterables los objetos WeakMap, WeapSet, Object etc.</p>
+<p>El método 'from' tiene opcionalmente un segundo parámetro al cual podemos pasar una función que reciba cada elemento del arreglo y retorne el dato a almacenar:</p>
+<pre class="recuadro">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+
+&lt;head&gt;
+    &lt;title&gt;Ejemplo de JavaScript&lt;/title&gt;
+    &lt;meta charset="UTF-8"&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+    &lt;script&gt;
+        const arreglo1 = [10, 20, 30];
+        const arreglo2 = Array.from(arreglo1, (elemento) =&gt; elemento * 2);
+        console.log(arreglo2); // [20, 40, 60]
+    &lt;/script&gt;
+&lt;/body&gt;
+
+&lt;/html&gt;
+</pre>
+<p>La función anonima retorna que valor debe almacenar en el arreglo que se crea, en éste caso almacenamos los valores originarios del arreglo1 pero multiplicados por 2.</p>
+<p>Recordemos que las funciones flecha son ámpliamente utilizadas a partir de ES6 ya que nos permiten generar un código muy conciso, utilizando la sintaxis anterior tenemos:</p>
+<pre>
+  &lt;script&gt;
+      const arreglo1 = [10, 20, 30];
+      const arreglo2 = Array.from(arreglo1, function (elemento) { return elemento * 2 });
+      console.log(arreglo2); // [20, 40, 60]
+  &lt;/script&gt;
+</pre>
+
+<h3>Método estático 'of'.</h3>
+<p>El método estático 'of' retorna la referencia de un objeto de tipo Array a partir de una lista de valores que le pasamos a dicho método:</p>
+<pre class="recuadro">
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Ejemplo de JavaScript</title>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+    <script>
+        const arreglo1 = Array.of(10, 20, 30, 40);
+        console.log(arreglo1); // [10, 20, 30, 40]
+    </script>
+</body>
+
+
+<!-- Mirrored from www.tutorialesprogramacionya.com/javascriptya/temarios/descripcion.php?inicio=100&cod=106 by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 18 Mar 2024 10:33:27 GMT -->
+</html>
+</pre>
+
+<h3>Métodos 'keys', 'values' y 'entries'.</h3>
+<p>El objeto Array implementan los métodos que permiten iterar sobre sus claves y valores:</p>
+<pre class="recuadro">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+
+&lt;head&gt;
+    &lt;title&gt;Ejemplo de JavaScript&lt;/title&gt;
+    &lt;meta charset="UTF-8"&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+    &lt;script&gt;
+        const lenguajes = ["domingo", "lunes", "martes", "miércoles",
+            "jueves", "viernes", "sábado"];
+        for (let indice of lenguajes.keys())
+            console.log(indice); // 0 1 2 3 4 5 6
+        for (let valor of lenguajes.values())
+            console.log(valor); // "domingo" "lunes" "martes" "miércoles" 
+        // "jueves" "viernes" "sábado"
+        for (let componente of lenguajes.entries())
+            console.log(componente);  // [0, "domingo"] [1, "lunes"] [2, "martes"] 
+                                // [3, "miércoles"] [4, "jueves"]
+                                // [5, "viernes"] [6, "sábado"] [7, "domingo"]
+
+    &lt;/script&gt;
+&lt;/body&gt;
+
+&lt;/html&gt;
+</pre>
+<p>Los datos que se recuperan en cada ciclo son:</p>
+<img src="imagentema/foto014.jpg" border="0" alt="Array keys values entries javascript"><br>
+<p>En un solo 'for of' podemos recuperar cada componente y guardarlo en un Array el índice por un lado y el valor por otro:</p>
+<pre>
+    for (let [indice,valor] of lenguajes.entries())
+        console.log(indice,valor);
+</pre>
+
+<h3>Método 'fill'.</h3>
+<p>El método 'fill' permite cambiar el contenido de todas o algunas componentes de un arreglo existente. En ningún caso permite redimensionarlo.</p>
+<p>Veamos un ejemplo y los efectos del método 'fill':</p>
+<pre class="recuadro">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+
+&lt;head&gt;
+    &lt;title&gt;Ejemplo de JavaScript&lt;/title&gt;
+    &lt;meta charset="UTF-8"&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+    &lt;script&gt;
+        const arreglo1 = [9, 9, 9, 9, 9, 9, 9];
+        // fijamos el valor 3 a todas las componentes del arreglo
+        arreglo1.fill(3);
+        console.log(arreglo1); // [3, 3, 3, 3, 3, 3, 3]
+        // fijamos el valor 0 desde la componente 3 del arreglo
+        // hasta el final
+        arreglo1.fill(0, 3);
+        console.log(arreglo1); // [3, 3, 3, 0, 0, 0, 0]
+        // fijamos el valor 5 a todas las componentes
+        arreglo1.fill(5);
+        console.log(arreglo1); // [5, 5, 5, 5, 5, 5, 5]
+        // fijamos el valor 100 desde la componente 3 hasta
+        // la componente 5 sin incluirla
+        arreglo1.fill(100, 3, 5);
+        console.log(arreglo1); // [5, 5, 5, 100, 100, 5, 5]
+        // fijamos el valor 5 a todas las componentes
+        arreglo1.fill(5);
+        console.log(arreglo1); // [5, 5, 5, 5, 5, 5, 5]
+        // fijamos el valor 100 en las dos últimas componentes
+        arreglo1.fill(100, -2);
+        console.log(arreglo1); // [5, 5, 5, 5, 5, 100, 100]
+        // fijamos el valor 5 a todas las componentes
+        arreglo1.fill(5);
+        console.log(arreglo1); // [5, 5, 5, 5, 5, 5, 5]
+        // fijamos el valor 100 en la antepenúltima y penúltima
+        // posición
+        arreglo1.fill(100, -3, -1);
+        console.log(arreglo1); // [5, 5, 5, 5, 100, 100, 5]
+    &lt;/script&gt;
+&lt;/body&gt;
+
+&lt;/html&gt;
+</pre>
+
+<p>Si indicamos un solo valor se modifican todas las componentes del arreglo:</p>
+<pre>
+    arreglo1.fill(3);
+</pre>
+<p>Podemos indicar desde que posición se comienza a modificar:</p>
+<pre>
+    // fijamos el valor 0 desde la componente 3 del arreglo
+    // hasta el final
+    arreglo1.fill(0, 3);
+</pre>
+<p>También podemos indicar desde y hasta que componente se deben modificar:</p>
+<pre>
+    // fijamos el valor 100 desde la componente 3 hasta
+    // la componente 5 sin incluirla
+    arreglo1.fill(100, 3, 5);
+</pre>
+<p>Finalmente podemos indicar con valores negativos comenzar desde el final del arreglo:</p>
+<pre>
+    // fijamos el valor 100 en las dos últimas componentes
+    arreglo1.fill(100, -2);
+    console.log(arreglo1); // [5, 5, 5, 5, 5, 100, 100]
+    // fijamos el valor 100 en la antepenúltima y penúltima
+    // posición
+    arreglo1.fill(100, -3, -1);
+    console.log(arreglo1); // [5, 5, 5, 5, 100, 100, 5]
+</pre>
+
+
+<h3>Método 'copyWithin'.</h3>
+<p>El método 'copyWithin' permite copiar algunas componentes de un arreglo en otra parte del mismo arreglo. En ningún caso permite redimensionarlo.</p>
+<p>Veamos un ejemplo y los efectos del método 'copyWithin':</p>
+<pre class="recuadro">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+
+&lt;head&gt;
+    &lt;title&gt;Ejemplo de JavaScript&lt;/title&gt;
+    &lt;meta charset="UTF-8"&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+    &lt;script&gt;
+        let arreglo1 = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+        // Copiar a partir de la posición cero del arreglo
+        // los elementos comprendidos entre las posiciones
+        // 5 y 8
+        arreglo1.copyWithin(0, 5, 8);
+        console.log(arreglo1); // [6, 7, 8, 4, 5, 6, 7, 8, 9]
+        arreglo1 = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+        // Copiar a partir de la posición cero del arreglo
+        // los elementos comprendidos desde la posición 5
+        // hasta el final
+        arreglo1.copyWithin(0, 5);
+        console.log(arreglo1); // [6, 7, 8, 9, 5, 6, 7, 8, 9]    
+        arreglo1 = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+        // Copiar a partir de la posición cero los dos últimos
+        // elementos del arreglo
+        arreglo1.copyWithin(0, -2);
+        console.log(arreglo1); // [8, 9, 3, 4, 5, 6, 7, 8, 9]
+    &lt;/script&gt;
+&lt;/body&gt;
+
+&lt;/html&gt;
+</pre>
+<p>El método 'copyWithin' es muy eficiente cuando debemos copiar un bloque de un arreglo a otra parte dentro del mismo arreglo.</p>
+
+<h3>Búsquedas de valores e índices en un arreglo: indexOf, lastIndexOf e include.</h3>
+<p>Disponemos de una serie de métodos para recuperar el índice donde se encuentra un elemento en un arreglo. También mediante el método 'include' podemos identificar si un determinado valor está contenido en el Array.</p>
+<p>El siguiente ejemplo muestra distintas variantes de los métodos:</p>
+<pre class="recuadro">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+
+&lt;head&gt;
+    &lt;title&gt;Ejemplo de JavaScript&lt;/title&gt;
+    &lt;meta charset="UTF-8"&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+    &lt;script&gt;
+        let arreglo1 = [10, 20, 30, 40, 50, 60, 10, 20, 30];
+        // Indice donde se almacena el valor 30
+        console.log(arreglo1.indexOf(30)); // 2
+        // Indice donde se almacena un valor inexistente
+        console.log(arreglo1.indexOf(100)); // -1
+        // Indice donde se almacena el valor 20
+        // buscándo desde el final
+        console.log(arreglo1.lastIndexOf(20)); // 7
+        // Indice donde se almacena el valor 10
+        // comenzando la búsqueda en la posición 5
+        console.log(arreglo1.indexOf(10, 5)); // 6
+        // Existe el valor 50 en el arreglo?
+        console.log(arreglo1.includes(50)); // true
+        // Existe el valor 100 en el arreglo?
+        console.log(arreglo1.includes(100)); // false
+
+    &lt;/script&gt;
+&lt;/body&gt;
+
+&lt;/html&gt;
+</pre>
+<p>Al método includes también podemos pasar un segundo parámetro que indica a partir de que posición dentro del arreglo comenzar a buscar:</p>
+<pre>
+    // Existe el valor 100 en el arreglo a partir de
+    // la posición 2?
+    console.log(arreglo1.includes(100, 2)); 
+</pre>
+
+
+<h3>Métodos 'find' y 'findIndex'.</h3>
+<p>Estos dos métodos nos permiten enviar una función anónima donde definimos el algoritmo de la búsqueda:</p>
+<pre class="recuadro">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+
+&lt;head&gt;
+    &lt;title&gt;Ejemplo de JavaScript&lt;/title&gt;
+    &lt;meta charset="UTF-8"&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+    &lt;script&gt;
+        const personas = [
+            {
+                nombre: "pedro",
+                edad: 34
+            },
+            {
+                nombre: "ana",
+                edad: 54
+            },
+            {
+                nombre: "carlos",
+                edad: 12
+            },
+            {
+                nombre: "maría",
+                edad: 22
+            },
+            {
+                nombre: "oscar",
+                edad: 72
+            }
+        ];
+
+        let per = personas.find((persona, indice) =&gt; persona.nombre == "maría");
+        if (per != undefined)
+            console.log(per);
+        else
+            console.log("No se encuentra maría en el vector de objetos");
+        let indice = personas.findIndex((persona, indice) =&gt; persona.nombre == "maría");
+        if (indice != -1)
+            console.log("Se encuentra en la posción " + indice + " del arreglo.");
+        else
+            console.log("No se encuentra maría en el vector de objetos");
+
+    &lt;/script&gt;
+&lt;/body&gt;
+
+&lt;/html&gt;
+</pre>
+<p>El método find retorna el valor 'undefined' si no retorna true el algoritmo dispuesto en la función anónima. En el caso que se encuentra el valor buscado luego retorna el valor de la posición donde se lo ubicó.</p>
+<p>Finalmente el método findIndex si la función anónima retorna true luego el método retorna la posición donde se encontró el valor a buscar.</p>
+<p>Estamos utilizando funciones flecha, pero nada nos impide de utilizar la sintaxis de funciones anónimas tradicionales:</p>
+<pre>
+    let per = personas.find(function (persona, indice) { return persona.nombre == "maría" });
+    if (per != undefined)
+        console.log(per);
+    else
+        console.log("No se encuentra maría en el vector de objetos");
+    let indice = personas.findIndex(function (persona, indice) { return persona.nombre == "maría" });
+    if (indice != -1)
+        console.log("Se encuentra en la posción " + indice + " del arreglo.");
+    else
+        console.log("No se encuentra maría en el vector de objetos");
+</pre>
+
+
+<h3>Métodos every y some.</h3>
+<p>Al método 'every' debemos pasar una función anónima que procesa cada elemento del arreglo. Si todos los elementos cumplen la condición impuesta dentro de la función, luego el método 'every' retorna true.<br>
+En cambio con el método 'some' con que un elemento cumpla la condición impuesta luego el método retorna true.</p>
+<p>every (todos)  some (alguno)</p>
+<pre class="recuadro">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+
+&lt;head&gt;
+    &lt;title&gt;Ejemplo de JavaScript&lt;/title&gt;
+    &lt;meta charset="UTF-8"&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+    &lt;script&gt;
+        const personas = [
+            {
+                nombre: "pedro",
+                edad: 34
+            },
+            {
+                nombre: "ana",
+                edad: 54
+            },
+            {
+                nombre: "carlos",
+                edad: 12
+            },
+            {
+                nombre: "maría",
+                edad: 22
+            },
+            {
+                nombre: "oscar",
+                edad: 72
+            }
+        ];
+        // Todas las personas tienen una edad menor a 100?
+        console.log(personas.every((elemento, indice, arreglo) =&gt; elemento.edad &lt; 100)); // true
+        // Todas las personas son mayor de edad?
+        console.log(personas.every((elemento, indice, arreglo) =&gt; elemento.edad &gt;= 18)); // false
+        // Todas las personas tienen un nombre con 6 o menos caracteres?
+        console.log(personas.every((elemento, indice, arreglo) =&gt; elemento.nombre.length &lt;= 6)); // true
+        // Alguna persona tiene 100 años de edad?
+        console.log(personas.some((elemento, indice, arreglo) =&gt; elemento.edad == 100)); // false
+        // Alguna persona es menor de edad?
+        console.log(personas.some((elemento, indice, arreglo) =&gt; elemento.edad &lt;= 18)); // true
+    &lt;/script&gt;
+&lt;/body&gt;
+
+&lt;/html&gt;
+</pre>
+
+<h3>Método filter.</h3>
+<p>El método 'filter' retorna un arreglo con todos los elementos del arreglo original que cumplen una condición que definimos en la función anónima que le pasamos:</p>
+<pre class="recuadro">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+
+&lt;head&gt;
+    &lt;title&gt;Ejemplo de JavaScript&lt;/title&gt;
+    &lt;meta charset="UTF-8"&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+    &lt;script&gt;
+        const personas = [
+            {
+                nombre: "pedro",
+                edad: 34
+            },
+            {
+                nombre: "ana",
+                edad: 54
+            },
+            {
+                nombre: "carlos",
+                edad: 12
+            },
+            {
+                nombre: "maría",
+                edad: 22
+            },
+            {
+                nombre: "oscar",
+                edad: 72
+            }
+        ];
+        // Recuperar todas las personas mayores de edad
+        const personasmayores = personas.filter((elemento, indice, arreglo) =&gt; elemento.edad &gt;= 18);
+        console.log(personasmayores); // [{nombre: "pedro",edad: 34},{nombre: "ana",edad: 54},
+                                  //  {nombre: "maría",edad: 22},{nombre: "oscar",edad: 72}]
+    &lt;/script&gt;
+&lt;/body&gt;
+
+&lt;/html&gt;
+</pre>
+<p>Tener en cuenta que la función anónima debe retornar true si queremos que el elemento se almacene
+en el arreglo generado. Si bien no tiene sentido, si queremos que se guarden todos los elementos
+luego podemos codificar:</p>
+<pre>
+    const personasmayores = personas.filter((elemento, indice, arreglo) => true);
+</pre>
+<p>Recordar que si no utilizamos funciones flecha el algoritmo será:</p>
+<pre>
+    const personasmayores = personas.filter(function (elemento, indice, arreglo) { return true });
+</pre>
+
+<h3>Método map.</h3>
+<p>El método 'map' similar al método 'filter' retorna un arreglo cuyos elementos resultan de las operaciones que se efectúan dentro de la función anónima que le pasamos como parámetro:</p>
+<pre class="recuadro">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+
+&lt;head&gt;
+    &lt;title&gt;Ejemplo de JavaScript&lt;/title&gt;
+    &lt;meta charset="UTF-8"&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+    &lt;script&gt;
+        const arreglo1 = [1, 2, 3, 4, 5];
+        // Generar un nuevo arreglo con los elementos del arreglo1 elevalos al cuadrado
+        const arreglo2 = arreglo1.map((elemento, indice, arreglo) =&gt; elemento ** 2);
+        console.log(arreglo2); //[1, 4, 9, 16, 25]
+    &lt;/script&gt;
+&lt;/body&gt;
+
+&lt;/html&gt;
+</pre>
+<p>El arreglo generado siempre es del mismo tamaño que el arreglo original.</p>
+
+<h3>Métodos reduce y reduceRight.</h3>
+<p>El método 'reduce' recibe como primer parámetro una función cuyo primer parámetro es un valor que se arrastra entre cada proceso de un elemento del arreglo, el segundo parámetro de reduce es el valor inicial con el que inicia el acumulador (si no pasamos el segundo parámetro se inicia con el primer elemento del arreglo):</p>
+<pre class="recuadro">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+
+&lt;head&gt;
+    &lt;title&gt;Ejemplo de JavaScript&lt;/title&gt;
+    &lt;meta charset="UTF-8"&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+    &lt;script&gt;
+        const arreglo1 = [1, 2, 73, 3, 4, 120, 5, 18];
+        // Acumular todos los elementos que tienen un solo dígito
+        const cantidad = arreglo1.reduce((acumulador, elemento, indice, arreglo) =&gt; {
+            if (elemento &lt; 10)
+                acumulador += elemento;
+            return acumulador;
+        }, 0);
+        console.log(cantidad); // 15
+    &lt;/script&gt;
+&lt;/body&gt;
+
+&lt;/html&gt;
+</pre>
+
+<p>El método 'reduceRight' es simila a 'reduce' con la diferencia que visita cada elemento del arreglo partiendo del final.</p>
+<pre class="recuadro">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+
+&lt;head&gt;
+    &lt;title&gt;Ejemplo de JavaScript&lt;/title&gt;
+    &lt;meta charset="UTF-8"&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+    &lt;script&gt;
+        const arreglo1 = [1, 2, 73, 3, 4, 120, 5, 18];
+        // Generar un nuevo arreglo con los elementos invertidos
+        const arreglo2 = arreglo1.reduceRight((acumulador, elemento, indice, arreglo) =&gt; {
+            acumulador.push(elemento);
+            return acumulador;
+        }, []);
+        console.log(arreglo2); // [18, 5, 120, 4, 3, 73, 2, 1]
+    &lt;/script&gt;
+&lt;/body&gt;
+
+&lt;/html&gt;
+</pre>
+<p>El valor inicial es un arreglo vacío que le pasamos al método reduceRight:</p>
+<pre>
+[]
+</pre>
+<p>Y dentro de la función anónima agregamos cada elemento del vector visitando sus componentes a partir del final:</p>
+<pre>
+      acumulador.push(elemento);
+</pre></p>
+</div>
+
+<div>
+<!--publi-->
+<script async src="../../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<!-- adaptable2 -->
+<ins class="adsbygoogle dos"
+     style="display:inline-block"
+     data-ad-client="ca-pub-4669394804436935"
+     data-ad-slot="5774469161"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+<!--publi-->
+<script async src="../../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<!-- adaptable2 -->
+<ins class="adsbygoogle dos"
+     style="display:inline-block"
+     data-ad-client="ca-pub-4669394804436935"
+     data-ad-slot="5774469161"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+</div>
+
+
+   <h2><a href="../indexf6ce.html?inicio=100">Retornar</a></h2>   
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+</body>
+
+</html>

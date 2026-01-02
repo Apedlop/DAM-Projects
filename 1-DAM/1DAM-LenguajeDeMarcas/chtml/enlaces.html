@@ -1,0 +1,93 @@
+<!--Este documento ha sido generado con XT, de James Clark--><html xmlns:date="http://www.jclark.com/xt/java/java.util.Date"><head><title>Curso de HTML: Enlaces</title><META HTTP-EQUIV="pragma" CONTENT="no-cache"></head><!--Cuerpo del documento--><body bgcolor="#FEFEFE"><table width="630" border="0"><tr><td valign="top" align="center" width="40" rowspan="2"><a href="index.html"><img src="graficos/logo.jpg" border="0"></a></td><td align="center" width="590"><IFRAME SRC="http://ad.es.doubleclick.net/adi/ES-programacion.net/ES-redferca-programacion-html;sz=468x60;ord=44126913875755190?" name="frame1" width="468" height="60" frameborder="no" border="0" MARGINWIDTH="0" MARGINHEIGHT="0" SCROLLING="no"><SCRIPT language="JavaScript1.1" SRC="http://ad.es.doubleclick.net/adj/ES-programacion.net/ES-redferca-programacion-html;abr=!ie;sz=468x60;ord=44126913875755190?"></SCRIPT><NOSCRIPT><A HREF="http://ad.es.doubleclick.net/jump/ES-programacion.net/ES-redferca-programacion-html;abr=!ie;sz=468x60;ord=44126913875755190?"><IMG SRC="http://ad.es.doubleclick.net/ad/ES-programacion.net/ES-redferca-programacion-html;abr=!ie;sz=468x60;ord=44126913875755190?" border="0" height="60" width="468"></A></NOSCRIPT></IFRAME></td></tr><tr><td valign="top"><font face="Arial,Helvetica,sans-serif"><font size="+3" color="#005CA0"><b>6. Enlaces</b></font>
+      <p align="justify">Las siglas HTML significan <i>HyperText Markup
+      Language</i>, lo que para nosotros quiere decir que es un lenguaje
+      para hipertexto. Existen m&uacute;ltiples formatos de hipertexto (por
+      ejemplo, los ficheros de ayuda de Windows) y lo que tienen en com&uacute;n
+      es que todos poseen enlaces.</p>
+      <p align="justify">Un enlace es una zona de texto o gr&aacute;ficos que si son seleccionados
+      nos trasladan a otro documento de hipertexto o a otra posici&oacute;n dentro del
+      documento actual. Siendo HTML el lenguaje de Internet, la diferencia que
+      posee con respecto a otros tipos de hipertexto es que ese otro documento
+      puede estar f&iacute;sicamente en la otra punta del planeta. Son los enlaces
+      lo que hacen de la telara&ntilde;a o <i>World Wide Web</i> lo que es.</p>
+    <br><br><a name="1"></a><font size="+2" color="#005CA0">6.1. La etiqueta &lt;A&gt;</font>
+        <p align="justify">Para incorporar un enlace hay que utilizar esta etiqueta. Todo lo que
+        encerremos entre &lt;A&gt; y &lt;/A&gt;, ya sea texto o im&aacute;genes, ser&aacute;
+        considerado como enlace y sufrir&aacute; dos modificaciones:</p>
+        <ol>
+          <li>Se visualizar&aacute; de manera distinta en el navegador. El texto
+          aparecer&aacute; subrayado y de un color distinto al habitual, y las
+          im&aacute;genes estar&aacute;n rodeadas por un borde del mismo color que
+          el del texto del enlace.</li>
+          <li>Al pulsar sobre el enlace, seremos enviados al documento que apuntaba
+          el enlace.</li>
+        </ol>
+        <p align="justify">Para que el enlace sirva para algo debemos especificarle una
+        direcci&oacute;n. Lo haremos de la siguiente manera:</p>
+        <div align="center"><pre><font color="#006600" face="monospace">&lt;A HREF="direccion"&gt;Pulsame&lt;/A&gt;</font></pre></div>
+        <p align="justify">La direcci&oacute;n estar&aacute; en formato URL (<i>Uniform Resource
+        Locator</i>).</p>
+      <br><br><a name="2"></a><font size="+2" color="#005CA0">6.2. Las URLs</font>
+        <p align="justify">Una URL nos indica tanto una direcci&oacute;n de Internet como el
+        servicio que esperamos nos ofrezca el servidor al que corresponde la
+        direcci&oacute;n. Tiene el siguiente formato:</p>
+        <div align="center"><pre><font color="#006600" face="monospace">servicio://m&aacute;quina:puerto/ruta/fichero@usuario</font></pre></div>
+        <p align="justify">donde el servicio podr&aacute; ser uno de los siguientes:</p>
+        <dl>
+          <dt></dt><b>http</b>
+          <dd></dd>Es el servicio invocado para transmitir p&aacute;ginas web y el que
+          usaremos normalmente en los enlaces.
+          <dt></dt><b>https</b>
+          <dd></dd>Es una innovaci&oacute;n sobre el anterior, que nos permite acceder
+          a servidores (generalmente comerciales) que nos ofrecen el uso de
+          t&eacute;cnicas de enciptaci&oacute;n para proteger los datos que
+          intercambiemos con &eacute;l de terceras personas.
+          <dt></dt><b>ftp</b>
+          <dd></dd>Permite trasmitir ficheros desde servidores de <i>ftp</i> an&oacute;nimo.
+          Si no le pedimos un fichero sino un directorio, en general el navegador se
+          encargar&aacute; de mostrarnos el contenido del mismo para que podamos
+          escogerlo c&oacute;modamente. Utilizando la @ podremos acceder a servidores
+          privados.
+          <dt></dt><b>mailto</b>
+          <dd></dd>Para poder mandar un mensaje. Por ejemplo, la URL
+          <samp>mailto:multivac@idecnet.com</samp> me mandar&iacute;a un mensaje a
+          m&iacute;.
+          <dt></dt><b>news</b>
+          <dd></dd>Para poder acceder a foros de discusi&oacute;n (mal traducidos a veces
+          como grupos de noticias). Se indica el servidor y el grupo. Por ejemplo
+          <samp>news://news.ibernet.es/es.comp.demos</samp> nos conectar&iacute;a con el foro
+          <samp>es.comp.demos</samp> en el servidor nacional de Telef&oacute;nica.
+          <dt></dt><b>telnet</b>
+          <dd></dd>No es implementado generalmente por los navegadores, que suelen invocar
+          un programa externo. Nos permite conectarnos con otros ordenadores y entrar
+          en ellos como si nuestro ordenador fuese una terminal del mismo.
+        </dl>
+        <p align="justify">La direcci&oacute;n de la m&aacute;quina puede ser, o bien una serie de
+        cuatro n&uacute;meros entre 0 y 255 (<samp>123.3.5.65</samp>) o bien algo
+        m&aacute;s facil de recordar como es una serie de palabras separadas por
+        puntos (<samp>www.programacion.net</samp>). El puerto generalmente no se indica, ya que
+        el servicio predetermina uno.</p>
+        <p align="justify">La ruta es una serie de directorios separados por el s&iacute;mbolo /,
+        que es el utilizado en UNIX (el sistema operativo m&aacute;s extendido en
+        los servidores de Internet).</p>
+        <p align="justify">Existe otro formato de URL. Cuando queremos acceder a un fichero situado
+        en la misma m&aacute;quina que la p&aacute;gina web que estamos creando
+        podemos utilizar este formato:</p>
+        <div align="center"><pre><font color="#006600" face="monospace">ruta_relativa/fichero</font></pre></div>
+        <p align="justify">En la ruta relativa podremos utilizar los dos puntos (..) para acceder
+        al directorio padre o comenzar con la barra diagonal (/) para acceder a
+        una ruta absoluta dentro de nuestro ordenador.</p>
+      <br><br><a name="3"></a><font size="+2" color="#005CA0">6.3. Anclas</font>
+        <p align="justify">Como dijimos, es posible acceder a una posici&oacute;n del documento HTML.
+        Para hacerlo, primero debemos especificar el lugar del documento al que
+        queremos acceder:</p>
+        <div align="center"><pre><font color="#006600" face="monospace">&lt;A NAME="ancla"&gt;</font></pre></div>
+        <p align="justify">Para poder ver bien como funciona, he colocado un ancla de ejemplo en
+        el t&iacute;tulo de la secci&oacute;n 6.2. Para poder acceder a ese lugar
+        incluimos el enlace de esta manera:</p>
+        <div align="center"><pre><font color="#006600" face="monospace">&lt;A HREF="#ancla"&gt;<a href="#2">Vamos a donde antes</a>&lt;/A&gt;</font></pre></div>
+        <p align="justify">Tambi&eacute;n podemos acceder a anclas situadas en documentos remotos.
+        Para ello a&ntilde;adiremos el nombre del ancla al URL as&iacute;:</p>
+        <div align="center"><pre><font color="#006600" face="monospace">&lt;A HREF="enlaces.html#ancla"&gt;<a href="#2">Otra vez</a>&lt;/A&gt;</font></pre></div>
+      <p></p><img src="graficos/linea.gif" height="1" width="590"><table cellspacing="0" cellpadding="0" border="0" width="100%"><tr><td><img src="graficos/transp.gif" height="2" width="90"></td></tr></table><table cellspacing="0" cellpadding="0" border="0" width="100%"><tr><td align="left"><a href="caracteres.html"><img src="graficos/izq.gif" align="MIDDLE" border="0"></a><font size="-1" face="Arial,Helvetica,sans-serif">Caracteres especiales</font></td><td align="right"><font size="-1" face="Arial,Helvetica,sans-serif">Listas</font><a href="listas.html"><img src="graficos/der.gif" align="MIDDLE" border="0"></a></td></tr></table><font size="-1"><div align="center">&copy; 1998-2000 <a href="mailto:multivac@idecnet.com">Daniel
+    Rodr&iacute;guez</a><br><a href="index.html"><img src="graficos/loguito.gif" border="0"></a></div></font></font></td></tr></table></body></html>

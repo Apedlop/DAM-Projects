@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Ejercicio 8</title>
+</head>
+
+<body>
+
+    <h1>Ejercicio 8</h1>
+
+    <script>
+
+        const menor = (num1, num2, num3) => {
+
+            num1 < num2 && num1 < num3 ?
+                document.write(`Número menor: ${num1}`)
+                :
+                num2 < num3 && num2 < num1 ?
+                    document.write(`Número menor: ${num2}`)
+                    :
+                    document.write(`Número menor: ${num3}`);
+
+        }
+
+        let num1 = parseInt(prompt('Introduce un número entero: '));
+        let num2 = parseInt(prompt('Introduce un número entero: '));
+        let num3 = parseInt(prompt('Introduce un número entero: '));
+        menor(num1, num2, num3);
+
+    </script>
+
+</body>
+
+</html>

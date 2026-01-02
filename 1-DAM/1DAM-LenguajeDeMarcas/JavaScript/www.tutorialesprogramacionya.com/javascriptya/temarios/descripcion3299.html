@@ -1,0 +1,242 @@
+<html>
+
+
+<!-- Mirrored from www.tutorialesprogramacionya.com/javascriptya/temarios/descripcion.php?inicio=20&cod=23 by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 18 Mar 2024 10:33:08 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QWKWPBDEFK"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-QWKWPBDEFK');
+</script>
+
+<script async src="../../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-4669394804436935",
+    enable_page_level_ads: true
+  });
+</script>
+<title>Tutorial de JavaScript : Conceptos</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="../css/estilos.css" rel="stylesheet" type="text/css">
+  <meta charset="UTF-8">
+
+<style>
+html,body {
+	background-color: #D3E9D0;
+	font-family: Trebuchet MS, Verdana, Arial, sans-serif;
+	font-size: 10pt;
+	text-align:center;
+}
+
+h1 {
+	font-size: 14pt;
+	margin: 0%;
+}
+
+div#contentdetalle{clear:left;
+                   max-width:900px;
+				   border-top:0px solid #999;
+				   padding-top:15px;
+				   background-color: #aed7a8;
+				   text-align:left;
+				   font-size:1.3em;
+				   font-weight:normal;
+				   font-family:arial;
+				   padding:20px}
+				   
+.recuadro {
+  background-color:#ffffcc;
+  text-align:left;
+  font-family:courier;
+  font-size:1em;
+  border-width:0;
+  padding:5px;
+
+  border: 1px dotted #ffaa00;
+  margin-left:5px;  
+}		
+
+.tablajs {
+    border-collapse: collapse;
+    background-color: #fff;
+    border: 1px solid #dee2e6;    
+    padding: 0.3rem;    
+}
+
+.tablajs th,
+.tablajs td {
+  padding: 0.75rem;
+  vertical-align: top;
+  border-top: 1px solid #dee2e6;
+}
+
+		   
+</style>
+
+<style>
+.uno { width: 320px; height: 100px; }
+@media(min-width: 500px) { .uno { width: 320px; height: 100px; } }
+@media(min-width: 800px) { .uno { width: 336px; height: 280px; } }
+
+.dos { width: 320px; height: 100px; }
+@media(min-width: 500px) { .dos { width: 320px; height: 100px; } }
+@media(min-width: 800px) { .dos { width: 336px; height: 280px; } }
+</style>
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','../../../www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-80268657-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</head>
+
+<body>
+
+<div class="upperleft">
+  <div class="upperright">
+    <div class="lowerleft">
+      <div class="lowerright">
+<table width="98%">
+<tr>
+<td>
+<span style="float:right"><a target="_blank" style="margin-right:0.1em;" href="https://www.tutorialesprogramacionya.com/">Listado completo de tutoriales</a></span>
+<h1>Formularios y Eventos.</h1></td>
+<td align="right">
+
+
+</td>
+</tr>
+</table>
+
+      </div>
+    </div>
+  </div>
+</div>
+<br>
+
+
+<div class="upperleft">
+  <div class="upperright">
+    <div class="lowerleft">
+      <div class="lowerright">
+
+<div id="contentdetalle">
+
+<div style="display:block;float:left;margin: 5px;"> 
+ <script async src="../../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<!-- adaptable1 -->
+<ins class="adsbygoogle uno"
+     style="display:inline-block"
+     data-ad-client="ca-pub-4669394804436935"
+     data-ad-slot="4716538363"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script> 
+</div> 
+
+<p>El uso de Javascript en los formularios HTML se hace fundamentalmente con el objetivo de validar los datos ingresados. Se hace esta actividad en el cliente (navegador) para desligar de esta actividad al servidor que recibirá los datos ingresados por el usuario.</p>
+<p>Esta posibilidad de hacer pequeños programas que se ejecutan en el navegador, evitan intercambios innecesarios entre el cliente y el servidor (navegador y sitio web).</p>
+<p>Suponemos que conoce las etiquetas HTML para la creación de formularios en una página web:</p>
+<pre>
+  form &lt;form&gt; ... &lt;/form&gt;
+  text &lt;input type=&quot;text&quot;&gt;
+  password &lt;input type=&quot;password&quot;&gt;
+  textarea &lt;textarea&gt; ... &lt;/textarea&gt;
+  button &lt;input type=&quot;button&quot;&gt;
+  submit &lt;input type=&quot;submit&quot;&gt;
+  reset &lt;input type=&quot;reset&quot;&gt;
+  checkbox &lt;input type=&quot;checkbox&quot;&gt;
+  radio &lt;input type=&quot;radio&quot;&gt;
+  select &lt;select&gt; ... &lt;/select&gt;
+  hidden &lt;input type=&quot;hidden&quot;&gt;
+</pre>
+<p>El navegador crea un objeto por cada control visual que aparece dentro de la página. Nosotros podemos acceder posteriormente desde JavaScript a dichos objetos.</p>
+<p>El objeto principal es el FORM que contendrá todos los otros objetos: TEXT (editor de líneas), TEXTAREA (editor de varias líneas), etc.</p>
+<p>Nuestra actividad en JavaScript es procesar los eventos que generan estos controles (un evento es una acción que se dispara, por ejemplo si se presiona un botón).</p>
+<p>Vamos a hacer un problema muy sencillo empleando el lenguaje Javascript; dispondremos un botón y cada vez que se presione, mostraremos un contador:</p>
+<pre class="recuadro">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+
+&lt;head&gt;
+    &lt;title&gt;Ejemplo de JavaScript&lt;/title&gt;
+    &lt;meta charset="UTF-8"&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+
+    &lt;form&gt;
+        &lt;input type="button" onClick="incrementar()" value="incrementar"&gt;
+    &lt;/form&gt;
+
+    &lt;script&gt;
+        let contador = 0;
+
+        function incrementar() {
+            contador++;
+            alert('El contador ahora vale :' + contador);
+        }
+    &lt;/script&gt;
+
+&lt;/body&gt;
+
+&lt;/html&gt;
+</pre>
+<p>A los eventos de los objetos HTML se les asocia una función, dicha función se ejecuta cuando se dispara el evento respectivo. En este caso cada vez que presionamos el botón, se llama a la función incrementar, en la misma incrementamos la variable contador en uno. Hay que tener en cuenta que a la variable contador la definimos fuera de la función para que no se inicialice cada vez que se dispara el evento.</p>
+<p>La función alert crea una ventana que puede mostrar un mensaje.</p>
+<p>Vamos a trabajar con los eventos principales de los controles de formulario, no haremos un estudio profundo en este momento, ya que el curso de <a href="https://www.tutorialesprogramacionya.com/dhtmlya/" target="_blank">DHTML YA (DOM)</a> tiene dicho objetivo.</p>
+<p>Lo fundamental del curso de JavaScript es aprender y practicar la lógica con este lenguaje y no profundizar el DOM (Document Object Model) para acceder a los elementos del navegador.</p>
+</p>
+</div>
+
+<div>
+<!--publi-->
+<script async src="../../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<!-- adaptable2 -->
+<ins class="adsbygoogle dos"
+     style="display:inline-block"
+     data-ad-client="ca-pub-4669394804436935"
+     data-ad-slot="5774469161"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+<!--publi-->
+<script async src="../../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<!-- adaptable2 -->
+<ins class="adsbygoogle dos"
+     style="display:inline-block"
+     data-ad-client="ca-pub-4669394804436935"
+     data-ad-slot="5774469161"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+</div>
+
+
+   <h2><a href="../index28fa.html?inicio=20">Retornar</a></h2>   
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+</body>
+
+
+<!-- Mirrored from www.tutorialesprogramacionya.com/javascriptya/temarios/descripcion.php?inicio=20&cod=23 by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 18 Mar 2024 10:33:08 GMT -->
+</html>

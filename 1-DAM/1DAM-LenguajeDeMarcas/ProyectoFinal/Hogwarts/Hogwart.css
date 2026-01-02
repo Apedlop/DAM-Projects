@@ -1,0 +1,59 @@
+body {
+    overflow-x: hidden;
+}
+
+.imagen {
+    width: 300px;
+    height: 170px;
+    object-fit: cover;
+    margin-top: 15.5px;
+    margin-left: 25px;
+    filter: brightness(50%);
+}
+
+h1.image-description:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+}
+
+.marco {
+    width: 350px;
+    height: 200px;
+    position: absolute;
+    top: 0;
+    z-index: -1; /* Mueve el marco detrás de la imagen */
+}
+
+.image-description {
+    position: absolute;
+    top: 60px;
+    left: 25px;
+    right: 0;
+    bottom: 0;
+    padding: 20px; /* Ajusta el espaciado según sea necesario */
+}
+
+.img-container::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 56px;
+    width: 80%;
+    height: 110%;
+    background: 
+        /* Degradado radial para simular bordes difuminados */
+        radial-gradient(ellipse at center, #8a6a28, transparent);
+    opacity: 0;
+    transition: opacity 0.5s;
+    z-index: -1; /* Asegura que la sombra esté detrás de la imagen */
+    /*border-radius: 15%;*/
+}
+
+.img-container:hover::after {
+    opacity: 1; /* Muestra la sombra cuando se pasa el cursor sobre el contenedor */
+}
+
+h1.aumento:hover {
+    transform: scale(1.1);
+    transition: 0.5s;
+}

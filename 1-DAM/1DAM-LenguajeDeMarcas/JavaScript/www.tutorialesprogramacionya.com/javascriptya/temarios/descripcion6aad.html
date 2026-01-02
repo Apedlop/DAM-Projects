@@ -1,0 +1,292 @@
+<html>
+
+
+<!-- Mirrored from www.tutorialesprogramacionya.com/javascriptya/temarios/descripcion.php?inicio=60&cod=64 by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 18 Mar 2024 10:33:17 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QWKWPBDEFK"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-QWKWPBDEFK');
+</script>
+
+<script async src="../../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-4669394804436935",
+    enable_page_level_ads: true
+  });
+</script>
+<title>Tutorial de JavaScript : Conceptos</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="../css/estilos.css" rel="stylesheet" type="text/css">
+  <meta charset="UTF-8">
+
+<style>
+html,body {
+	background-color: #D3E9D0;
+	font-family: Trebuchet MS, Verdana, Arial, sans-serif;
+	font-size: 10pt;
+	text-align:center;
+}
+
+h1 {
+	font-size: 14pt;
+	margin: 0%;
+}
+
+div#contentdetalle{clear:left;
+                   max-width:900px;
+				   border-top:0px solid #999;
+				   padding-top:15px;
+				   background-color: #aed7a8;
+				   text-align:left;
+				   font-size:1.3em;
+				   font-weight:normal;
+				   font-family:arial;
+				   padding:20px}
+				   
+.recuadro {
+  background-color:#ffffcc;
+  text-align:left;
+  font-family:courier;
+  font-size:1em;
+  border-width:0;
+  padding:5px;
+
+  border: 1px dotted #ffaa00;
+  margin-left:5px;  
+}		
+
+.tablajs {
+    border-collapse: collapse;
+    background-color: #fff;
+    border: 1px solid #dee2e6;    
+    padding: 0.3rem;    
+}
+
+.tablajs th,
+.tablajs td {
+  padding: 0.75rem;
+  vertical-align: top;
+  border-top: 1px solid #dee2e6;
+}
+
+		   
+</style>
+
+<style>
+.uno { width: 320px; height: 100px; }
+@media(min-width: 500px) { .uno { width: 320px; height: 100px; } }
+@media(min-width: 800px) { .uno { width: 336px; height: 280px; } }
+
+.dos { width: 320px; height: 100px; }
+@media(min-width: 500px) { .dos { width: 320px; height: 100px; } }
+@media(min-width: 800px) { .dos { width: 336px; height: 280px; } }
+</style>
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','../../../www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-80268657-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</head>
+
+<body>
+
+<div class="upperleft">
+  <div class="upperright">
+    <div class="lowerleft">
+      <div class="lowerright">
+<table width="98%">
+<tr>
+<td>
+<span style="float:right"><a target="_blank" style="margin-right:0.1em;" href="https://www.tutorialesprogramacionya.com/">Listado completo de tutoriales</a></span>
+<h1>Eventos: click y dblclick</h1></td>
+<td align="right">
+
+
+</td>
+</tr>
+</table>
+
+      </div>
+    </div>
+  </div>
+</div>
+<br>
+
+
+<div class="upperleft">
+  <div class="upperright">
+    <div class="lowerleft">
+      <div class="lowerright">
+
+<div id="contentdetalle">
+
+<div style="display:block;float:left;margin: 5px;"> 
+ <script async src="../../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<!-- adaptable1 -->
+<ins class="adsbygoogle uno"
+     style="display:inline-block"
+     data-ad-client="ca-pub-4669394804436935"
+     data-ad-slot="4716538363"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script> 
+</div> 
+
+<p>Dos eventos que podemos capturar de cualquier elemento HTML son cuando un usuario hace un clic o un doble clic sobre el mismo.<br>
+El evento click se produce cuando el usuario hace un solo clic sobre el elemento HTML y suelta inmediatamente el botón del mouse en el mismo lugar y el dblclick cuando presiona en forma sucesiva en la misma ubicación.</p>
+<p>Para probar como registramos estos eventos implementaremos una página que muestre dos div y definiremos el evento click para el primero y el evento dblclick para el segundo.</p>
+<pre class="recuadro">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+
+&lt;head&gt;
+    &lt;title&gt;Ejemplo de JavaScript&lt;/title&gt;
+    &lt;meta charset="UTF-8"&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+    &lt;script&gt;
+        addEventListener('DOMContentLoaded', inicio);
+
+        function inicio() {
+            document.getElementById('recuadro1').addEventListener('click', presion1);
+            document.getElementById('recuadro2').addEventListener('dblclick', presion2);
+        }
+
+        function presion1() {
+            alert('se hizo click');
+        }
+
+        function presion2() {
+            alert('se hizo doble click');
+        }
+    &lt;/script&gt;
+
+    &lt;div style="width:200px;height:200px;background:#ffff00" id="recuadro1"&gt;
+        Prueba del evento click
+    &lt;/div&gt;
+    &lt;div style="width:200px;height:200px;background:#ff5500" id="recuadro2"&gt;
+        Prueba del evento dblclick
+    &lt;/div&gt;
+
+&lt;/body&gt;
+
+&lt;/html&gt;
+</pre>
+
+<p>Primero registramos mediante la llamada al método addEventListener el evento DOMContentLoaded, y dentro de la función inicio registramos los eventos click y dblclick para los dos div que definimos en la página HTML:</p>
+<pre>
+        addEventListener('DOMContentLoaded', inicio);
+
+        function inicio() {
+            document.getElementById('recuadro1').addEventListener('click', presion1);
+            document.getElementById('recuadro2').addEventListener('dblclick', presion2);
+        }
+</pre>
+ 
+<p>Como vemos lo único que hacemos en los métodos que se disparan es mostrar un mensaje:</p>
+<pre>
+        function presion1() {
+            alert('se hizo click');
+        }
+
+        function presion2() {
+            alert('se hizo doble click');
+        }
+</pre>
+
+<h3>Disponer el código JavaScript después de todas las etiquetas HTML</h3>
+<p>Cuando disponemos el código JavaScript previo a la declaración de todas las etiquetas HTML estamos obligados a escuchar el evento 'DOMContentLoaded' para asegurarnos que se ha construido la página HTML y poder acceder a los dos 'div'.</p>
+<p>Otra forma de codificar el programa en una forma más concisa es disponer el bloque de JavaScript al final de la página, con lo cual podemos obviar el evento 'DOMContentLoaded':</p>
+<pre class="recuadro">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+
+&lt;head&gt;
+    &lt;title&gt;Ejemplo de JavaScript&lt;/title&gt;
+    &lt;meta charset="UTF-8"&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+    &lt;div style="width:200px;height:200px;background:#ffff00" id="recuadro1"&gt;
+        Prueba del evento click
+    &lt;/div&gt;
+    &lt;div style="width:200px;height:200px;background:#ff5500" id="recuadro2"&gt;
+        Prueba del evento dblclick
+    &lt;/div&gt;
+
+    &lt;script&gt;
+        document.getElementById('recuadro1').addEventListener('click', presion1);
+        document.getElementById('recuadro2').addEventListener('dblclick', presion2);
+
+        function presion1() {
+            alert('se hizo click');
+        }
+
+        function presion2() {
+            alert('se hizo doble click');
+        }
+    &lt;/script&gt;
+
+&lt;/body&gt;
+
+&lt;/html&gt;
+</pre>
+<p>Es de fundamental importancia la ubicación del bloque de JavaScript (previo a cerrar el body)<br>
+Si al código JavaScript lo ubicamos primero luego se genera un error debido a que las etiquetas HTML no se han creado:</p>
+<img src="imagentema/foto005n.jpg" border="0" alt="javascript"><br></p>
+</div>
+
+<div>
+<!--publi-->
+<script async src="../../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<!-- adaptable2 -->
+<ins class="adsbygoogle dos"
+     style="display:inline-block"
+     data-ad-client="ca-pub-4669394804436935"
+     data-ad-slot="5774469161"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+<!--publi-->
+<script async src="../../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<!-- adaptable2 -->
+<ins class="adsbygoogle dos"
+     style="display:inline-block"
+     data-ad-client="ca-pub-4669394804436935"
+     data-ad-slot="5774469161"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+</div>
+
+
+   <h2><a href="../indexd6cc.html?inicio=60">Retornar</a></h2>   
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+</body>
+
+
+<!-- Mirrored from www.tutorialesprogramacionya.com/javascriptya/temarios/descripcion.php?inicio=60&cod=64 by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 18 Mar 2024 10:33:17 GMT -->
+</html>

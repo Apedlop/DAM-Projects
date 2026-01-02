@@ -1,0 +1,344 @@
+<html>
+
+
+<!-- Mirrored from www.tutorialesprogramacionya.com/javascriptya/temarios/descripcion.php?inicio=10&cod=17 by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 18 Mar 2024 10:33:07 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QWKWPBDEFK"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-QWKWPBDEFK');
+</script>
+
+<script async src="../../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-4669394804436935",
+    enable_page_level_ads: true
+  });
+</script>
+<title>Tutorial de JavaScript : Conceptos</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="../css/estilos.css" rel="stylesheet" type="text/css">
+  <meta charset="UTF-8">
+
+<style>
+html,body {
+	background-color: #D3E9D0;
+	font-family: Trebuchet MS, Verdana, Arial, sans-serif;
+	font-size: 10pt;
+	text-align:center;
+}
+
+h1 {
+	font-size: 14pt;
+	margin: 0%;
+}
+
+div#contentdetalle{clear:left;
+                   max-width:900px;
+				   border-top:0px solid #999;
+				   padding-top:15px;
+				   background-color: #aed7a8;
+				   text-align:left;
+				   font-size:1.3em;
+				   font-weight:normal;
+				   font-family:arial;
+				   padding:20px}
+				   
+.recuadro {
+  background-color:#ffffcc;
+  text-align:left;
+  font-family:courier;
+  font-size:1em;
+  border-width:0;
+  padding:5px;
+
+  border: 1px dotted #ffaa00;
+  margin-left:5px;  
+}		
+
+.tablajs {
+    border-collapse: collapse;
+    background-color: #fff;
+    border: 1px solid #dee2e6;    
+    padding: 0.3rem;    
+}
+
+.tablajs th,
+.tablajs td {
+  padding: 0.75rem;
+  vertical-align: top;
+  border-top: 1px solid #dee2e6;
+}
+
+		   
+</style>
+
+<style>
+.uno { width: 320px; height: 100px; }
+@media(min-width: 500px) { .uno { width: 320px; height: 100px; } }
+@media(min-width: 800px) { .uno { width: 336px; height: 280px; } }
+
+.dos { width: 320px; height: 100px; }
+@media(min-width: 500px) { .dos { width: 320px; height: 100px; } }
+@media(min-width: 800px) { .dos { width: 336px; height: 280px; } }
+</style>
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','../../../www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-80268657-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</head>
+
+<body>
+
+<div class="upperleft">
+  <div class="upperright">
+    <div class="lowerleft">
+      <div class="lowerright">
+<table width="98%">
+<tr>
+<td>
+<span style="float:right"><a target="_blank" style="margin-right:0.1em;" href="https://www.tutorialesprogramacionya.com/">Listado completo de tutoriales</a></span>
+<h1>Funciones que retornan un valor.</h1></td>
+<td align="right">
+
+
+</td>
+</tr>
+</table>
+
+      </div>
+    </div>
+  </div>
+</div>
+<br>
+
+
+<div class="upperleft">
+  <div class="upperright">
+    <div class="lowerleft">
+      <div class="lowerright">
+
+<div id="contentdetalle">
+
+<div style="display:block;float:left;margin: 5px;"> 
+ <script async src="../../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<!-- adaptable1 -->
+<ins class="adsbygoogle uno"
+     style="display:inline-block"
+     data-ad-client="ca-pub-4669394804436935"
+     data-ad-slot="4716538363"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script> 
+</div> 
+
+<p>Son comunes los casos donde una función, luego de hacer un proceso, retorne un valor.</p>
+<p>Ejemplo 1: Confeccionar una función que reciba un valor entero comprendido entre 1 y 5. Luego retornar en castellano el valor recibido.</p>
+<pre class="recuadro">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+
+&lt;head&gt;
+    &lt;title&gt;Ejemplo de JavaScript&lt;/title&gt;
+    &lt;meta charset="UTF-8"&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+
+    &lt;script&gt;
+        function convertirCastellano(x) {
+            if (x == 1) {
+                return "uno";
+            } else {
+                if (x == 2) {
+                    return "dos";
+                } else {
+                    if (x == 3) {
+                        return "tres";
+                    } else {
+                        if (x == 4) {
+                            return "cuatro";
+                        } else {
+                            if (x == 5) {
+                                return "cinco";
+                            } else {
+                                return "valor incorrecto";
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        let valor = parseInt(prompt("Ingrese un valor entre 1 y 5"));
+        let r = convertirCastellano(valor);
+        document.write(r);
+    &lt;/script&gt;
+
+&lt;/body&gt;
+
+&lt;/html&gt;
+</pre>
+<p>Podemos ver que el valor retornado por una función lo indicamos por medio de la palabra clave return. Cuando se llama a la función, debemos asignar el nombre de la función a una variable, ya que la misma retorna un valor.</p>
+<p>Una función puede tener varios parámetros, pero sólo puede retornar un único valor.
+</p>
+<p>La estructura condicional if de este ejemplo puede ser remplazada por la instrucción switch, la función queda codificada de la siguiente manera:</p>
+<pre>
+        function convertirCastellano(x) {
+            switch (x) {
+                case 1:
+                    return "uno";
+                case 2:
+                    return "dos";
+                case 3:
+                    return "tres";
+                case 4:
+                    return "cuatro";
+                case 5:
+                    return "cinco";
+                default:
+                    return "valor incorrecto";
+            }
+        }
+</pre>
+<p>Esta es una forma más elegante que una serie de if anidados. La instrucción switch analiza el contenido de la variable x con respecto al valor de cada caso. En la situación de ser igual, ejecuta el bloque seguido de los 2 puntos hasta que encuentra la instrucción return o break.</p>
+<p>Ejemplo 2: Confeccionar una función que reciba una fecha con el formato de día, mes y año y retorne un string con un formato similar a: "Hoy es 27 de enero de 2021".</p>
+<pre class="recuadro">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+
+&lt;head&gt;
+    &lt;title&gt;Ejemplo de JavaScript&lt;/title&gt;
+    &lt;meta charset="UTF-8"&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+
+    &lt;script&gt;
+        function formatearFecha(dia, mes, año) {
+            let s = 'Hoy es ' + dia + ' de ';
+            switch (mes) {
+                case 1:
+                    s = s + 'enero ';
+                    break;
+                case 2:
+                    s = s + 'febrero ';
+                    break;
+                case 3:
+                    s = s + 'marzo ';
+                    break;
+                case 4:
+                    s = s + 'abril ';
+                    break;
+                case 5:
+                    s = s + 'mayo ';
+                    break;
+                case 6:
+                    s = s + 'junio ';
+                    break;
+                case 7:
+                    s = s + 'julio ';
+                    break;
+                case 8:
+                    s = s + 'agosto ';
+                    break;
+                case 9:
+                    s = s + 'septiembre ';
+                    break;
+                case 10:
+                    s = s + 'octubre ';
+                    break;
+                case 11:
+                    s = s + 'noviembre ';
+                    break;
+                case 12:
+                    s = s + 'diciembre ';
+                    break;
+            } //fin del switch
+            s = s + 'de ' + año;
+            return s;
+        }
+
+        document.write(formatearFecha(27, 1, 2021));
+    &lt;/script&gt;
+
+&lt;/body&gt;
+
+&lt;/html&gt;
+</pre>
+<p>Analicemos un poco la función formatearFecha. Llegan tres parámetros con el día, mes y año.<br>
+Definimos e inicializamos una variable con:</p>
+<pre>
+            let s = 'Hoy es ' + dia + ' de ';
+</pre>
+<p>Luego le concatenamos o sumamos el mes:</p>
+<pre>
+s=s+'enero ';
+</pre>
+<p>Esto, si el parámetro mes tiene un uno. Observemos como acumulamos lo que tiene 's' más el string 'enero '. En caso de hacer s='enero ' perderíamos el valor previo que tenía la variable s.</p>
+<p>Por último concatenamos el año:</p>
+<pre>
+s=s+'de '+año;
+</pre>
+<p>Cuando se llama a la función directamente, al valor devuelto se lo enviamos a la función write del objeto document. Esto último lo podemos hacer en dos pasos:</p>
+<pre>
+  let fec = formatearFecha(27, 1, 2021);
+  document.write(fec);
+</pre>
+<p>Guardamos en la variable 'fec' el string devuelto por la función.</p>
+</p>
+</div>
+
+<div>
+<!--publi-->
+<script async src="../../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<!-- adaptable2 -->
+<ins class="adsbygoogle dos"
+     style="display:inline-block"
+     data-ad-client="ca-pub-4669394804436935"
+     data-ad-slot="5774469161"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+<!--publi-->
+<script async src="../../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<!-- adaptable2 -->
+<ins class="adsbygoogle dos"
+     style="display:inline-block"
+     data-ad-client="ca-pub-4669394804436935"
+     data-ad-slot="5774469161"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+</div>
+
+
+   <h2><a href="../index4231.html?inicio=10">Retornar</a></h2>   
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+</body>
+
+
+<!-- Mirrored from www.tutorialesprogramacionya.com/javascriptya/temarios/descripcion.php?inicio=10&cod=17 by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 18 Mar 2024 10:33:07 GMT -->
+</html>

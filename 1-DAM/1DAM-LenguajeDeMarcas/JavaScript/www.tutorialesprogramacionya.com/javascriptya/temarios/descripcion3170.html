@@ -1,0 +1,273 @@
+<html>
+
+
+<!-- Mirrored from www.tutorialesprogramacionya.com/javascriptya/temarios/descripcion.php?inicio=10&cod=11 by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 18 Mar 2024 10:33:04 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QWKWPBDEFK"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-QWKWPBDEFK');
+</script>
+
+<script async src="../../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-4669394804436935",
+    enable_page_level_ads: true
+  });
+</script>
+<title>Tutorial de JavaScript : Conceptos</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="../css/estilos.css" rel="stylesheet" type="text/css">
+  <meta charset="UTF-8">
+
+<style>
+html,body {
+	background-color: #D3E9D0;
+	font-family: Trebuchet MS, Verdana, Arial, sans-serif;
+	font-size: 10pt;
+	text-align:center;
+}
+
+h1 {
+	font-size: 14pt;
+	margin: 0%;
+}
+
+div#contentdetalle{clear:left;
+                   max-width:900px;
+				   border-top:0px solid #999;
+				   padding-top:15px;
+				   background-color: #aed7a8;
+				   text-align:left;
+				   font-size:1.3em;
+				   font-weight:normal;
+				   font-family:arial;
+				   padding:20px}
+				   
+.recuadro {
+  background-color:#ffffcc;
+  text-align:left;
+  font-family:courier;
+  font-size:1em;
+  border-width:0;
+  padding:5px;
+
+  border: 1px dotted #ffaa00;
+  margin-left:5px;  
+}		
+
+.tablajs {
+    border-collapse: collapse;
+    background-color: #fff;
+    border: 1px solid #dee2e6;    
+    padding: 0.3rem;    
+}
+
+.tablajs th,
+.tablajs td {
+  padding: 0.75rem;
+  vertical-align: top;
+  border-top: 1px solid #dee2e6;
+}
+
+		   
+</style>
+
+<style>
+.uno { width: 320px; height: 100px; }
+@media(min-width: 500px) { .uno { width: 320px; height: 100px; } }
+@media(min-width: 800px) { .uno { width: 336px; height: 280px; } }
+
+.dos { width: 320px; height: 100px; }
+@media(min-width: 500px) { .dos { width: 320px; height: 100px; } }
+@media(min-width: 800px) { .dos { width: 336px; height: 280px; } }
+</style>
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','../../../www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-80268657-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</head>
+
+<body>
+
+<div class="upperleft">
+  <div class="upperright">
+    <div class="lowerleft">
+      <div class="lowerright">
+<table width="98%">
+<tr>
+<td>
+<span style="float:right"><a target="_blank" style="margin-right:0.1em;" href="https://www.tutorialesprogramacionya.com/">Listado completo de tutoriales</a></span>
+<h1>Estructura repetitiva (while)</h1></td>
+<td align="right">
+
+
+</td>
+</tr>
+</table>
+
+      </div>
+    </div>
+  </div>
+</div>
+<br>
+
+
+<div class="upperleft">
+  <div class="upperright">
+    <div class="lowerleft">
+      <div class="lowerright">
+
+<div id="contentdetalle">
+
+<div style="display:block;float:left;margin: 5px;"> 
+ <script async src="../../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<!-- adaptable1 -->
+<ins class="adsbygoogle uno"
+     style="display:inline-block"
+     data-ad-client="ca-pub-4669394804436935"
+     data-ad-slot="4716538363"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script> 
+</div> 
+
+<p>Hasta ahora hemos empleado estructuras SECUENCIALES y CONDICIONALES. Existe otro tipo de estructuras tan importantes como las anteriores que son las estructuras REPETITIVAS.</p>
+<p>Una estructura repetitiva permite ejecutar una instrucción o un conjunto de instrucciones varias veces.</p>
+<p>Una ejecución repetitiva de sentencias se caracteriza por:</p>
+<p>
+- La o las sentencias que se repiten.<br>
+- El test o prueba de condición antes de cada repetición, que motivará que se repitan o no las sentencias.
+</p>
+<p>Funcionamiento del while: En primer lugar se verifica la condición, si la misma resulta verdadera se ejecutan las operaciones que indicamos entre las llaves que le siguen al while.<br>
+En caso que la condición sea Falsa continúa con la instrucción siguiente al bloque de llaves.</p>
+<p>El bloque se repite MIENTRAS la condición sea Verdadera.</p>
+
+<p><strong>Importante</strong>: Si la condición siempre retorna verdadero estamos en presencia de un ciclo repetitivo infinito. Dicha situación es un error de programación, nunca finalizará el programa.</p>
+
+<p>Ejemplo: Realizar un programa que imprima en pantalla los números del 1 al 100.</p>
+
+<p>Sin conocer las estructuras repetitivas podemos resolver el problema empleando una estructura secuencial. Inicializamos una variable con el valor 1, luego imprimimos la variable, incrementamos nuevamente la variable y así sucesivamente. Pero esta solución es muy larga.</p>
+<p>La mejor forma de resolver este problema es emplear una estructura repetitiva:</p>
+<pre class="recuadro">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+
+&lt;head&gt;
+    &lt;title&gt;Ejemplo de JavaScript&lt;/title&gt;
+    &lt;meta charset="UTF-8"&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+
+    &lt;script&gt;
+        let x;
+        x = 1;
+        while (x &lt;= 100) {
+            document.write(x);
+            document.write('&lt;br&gt;');
+            x = x + 1;
+        }
+    &lt;/script&gt;
+
+&lt;/body&gt;
+
+&lt;/html&gt;
+</pre>
+<p>Para que se impriman los números, uno en cada línea, agregamos la etiqueta HTML de &lt;br&gt;.</p>
+<p>Es muy importante analizar este programa:<br>
+La primera operación inicializa la variable x en 1, seguidamente comienza la estructura repetitiva while y disponemos la siguiente condición ( x &lt= 100), se lee MIENTRAS la variable x sea menor o igual a 100.<br>
+Es importante decir que NO debe haber un punto y coma al final del while, si hacemos esto estamos en presencia de un error lógico.<br>
+Al ejecutarse la condición, retorna VERDADERO, porque el contenido de x (1) es menor o igual a 100.<br>
+Al ser la condición verdadera se ejecuta el bloque de instrucciones que contiene la estructura while. El bloque de instrucciones contiene dos salidas al documento y una operación.</p>
+<p>Se imprime el contenido de x y seguidamente se incrementa la variable x en uno.</p>
+<p>La operación x = x + 1 se lee como "en la variable x se guarda el contenido de x más 1". Es decir, si x contiene 1 luego de ejecutarse esta operación se almacenará en x un 2.</p>
+
+<p>Al finalizar el bloque de instrucciones que contiene la estructura repetitiva, se verifica nuevamente la condición de la estructura repetitiva y se repite el proceso explicado anteriormente.</p>
+
+<p>Mientras la condición retorne verdadero, se ejecuta el bloque de instrucciones; al retornar falso la verificación de la condición, se sale de la estructura repetitiva y continúa el algoritmo, en este caso, finaliza el programa.</p>
+
+<p>Lo más difícil es la definición de la condición de la estructura while y qué bloque de instrucciones se va a repetir. Observar que si, por ejemplo, disponemos la condición  x &gt;=100 ( si x es mayor o igual a 100) no provoca ningún error sintáctico pero estamos en presencia de un error lógico porque al evaluarse por primera vez la condición retorna falso y no se ejecuta el bloque de instrucciones que queríamos repetir 100 veces.</p>
+
+<p>No existe una RECETA para definir una condición de una estructura repetitiva, sino que se logra con una práctica continua, solucionando problemas.</p>
+
+<p>Una vez planteado el programa debemos verificar si el mismo es una solución válida al problema (en este caso se deben imprimir los números del 1 al 100 en la página), para ello podemos hacer un seguimiento del flujo y los valores que toman las variables a lo largo de la ejecución:</p>
+
+<pre>
+	x
+	1
+	2
+	3
+	4
+	.
+	.
+	100
+        101	Cuando x vale 101 la condición de la estructura 
+                repetitiva retorna falso, en este caso finaliza la estructura repetitiva.
+</pre>
+<p>La variable x recibe el nombre de CONTADOR. Un contador es un tipo especial de variable que se incrementa o decrementa con valores constantes durante la ejecución del programa.</p>
+<p>El contador x nos indica en cada momento la cantidad de valores impresos en la página.</p>
+<p>Importante: Podemos observar que el bloque repetitivo puede no ejecutarse si la condición retorna falso la primera vez.  </p>
+<p>La variable x debe estar inicializada con algún valor antes que se ejecute la operación x = x + 1.
+</p>
+<p>Probemos algunas modificaciones de este programa y veamos qué cambios se deberían hacer para:</p>
+<p>1 - Imprimir los números del 1 al 500.<br>
+2 - Imprimir los números del 50 al 100.<br>
+3 - Imprimir los números del -50 al 0.<br>
+4 - Imprimir los números del 2 al 100 pero de 2 en 2 (2,4,6,8 ....100).<br>
+</p></p>
+</div>
+
+<div>
+<!--publi-->
+<script async src="../../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<!-- adaptable2 -->
+<ins class="adsbygoogle dos"
+     style="display:inline-block"
+     data-ad-client="ca-pub-4669394804436935"
+     data-ad-slot="5774469161"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+<!--publi-->
+<script async src="../../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<!-- adaptable2 -->
+<ins class="adsbygoogle dos"
+     style="display:inline-block"
+     data-ad-client="ca-pub-4669394804436935"
+     data-ad-slot="5774469161"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+</div>
+
+
+   <h2><a href="../index4231.html?inicio=10">Retornar</a></h2>   
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+</body>
+
+
+<!-- Mirrored from www.tutorialesprogramacionya.com/javascriptya/temarios/descripcion.php?inicio=10&cod=11 by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 18 Mar 2024 10:33:04 GMT -->
+</html>

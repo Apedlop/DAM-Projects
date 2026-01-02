@@ -1,0 +1,114 @@
+<!--Este documento ha sido generado con XT, de James Clark--><html xmlns:date="http://www.jclark.com/xt/java/java.util.Date"><head><title>Curso de HTML: Controles avanzados para formularios</title><META HTTP-EQUIV="pragma" CONTENT="no-cache"></head><!--Cuerpo del documento--><body bgcolor="#FEFEFE"><table width="630" border="0"><tr><td valign="top" align="center" width="40" rowspan="2"><a href="index.html"><img src="graficos/logo.jpg" border="0"></a></td><td align="center" width="590"><IFRAME SRC="http://ad.es.doubleclick.net/adi/ES-programacion.net/ES-redferca-programacion-html;sz=468x60;ord=44126913875755190?" name="frame1" width="468" height="60" frameborder="no" border="0" MARGINWIDTH="0" MARGINHEIGHT="0" SCROLLING="no"><SCRIPT language="JavaScript1.1" SRC="http://ad.es.doubleclick.net/adj/ES-programacion.net/ES-redferca-programacion-html;abr=!ie;sz=468x60;ord=44126913875755190?"></SCRIPT><NOSCRIPT><A HREF="http://ad.es.doubleclick.net/jump/ES-programacion.net/ES-redferca-programacion-html;abr=!ie;sz=468x60;ord=44126913875755190?"><IMG SRC="http://ad.es.doubleclick.net/ad/ES-programacion.net/ES-redferca-programacion-html;abr=!ie;sz=468x60;ord=44126913875755190?" border="0" height="60" width="468"></A></NOSCRIPT></IFRAME></td></tr><tr><td valign="top"><font face="Arial,Helvetica,sans-serif"><font size="+3" color="#005CA0"><b>12. Controles avanzados para formularios<img src="graficos/40.gif" width="26" height="26" border="0" align="middle"></b></font>
+      <p align="justify">El est&aacute;ndar HTML 4.0 ha tra&iacute;do varias mejoras
+      a los formularios, que acercan los mismos a las caracter&iacute;sticas
+      que tienen en lenguajes como Java o Visual Basic. Desafortunadamente,
+      el Netscape 4, lanzado al mercado antes de la aprobaci&oacute;n
+      del HTML 4.0, no implementa ninguna de estas mejoras, por lo que
+      los ejemplos de este cap&iacute;tulo s&oacute;lo ser&aacute;n
+      contemplados correctamente por los usuarios de Explorer 4 y 5 y
+      los arriesgados usuarios de las versiones beta del futuro Netscape 5.</p>
+    <br><br><a name="1"></a><font size="+2" color="#005CA0">12.1. Botones</font>
+        <p align="justify">Una de las cosas que m&aacute;s han mejorado son los botones.
+        Ahora disponen de una etiqueta propia, de modo que se pueda encerrar
+        con ella todo tipo de elementos HTML, como gr&aacute;ficos o, incluso,
+        tablas enteras.</p>
+        <p align="justify">Como no pod&iacute;a ser de otra manera, la etiqueta en cuesti&oacute;n
+        se llama <tt><font color="#006600" face="monospace">BUTTON</font></tt>:</p>
+        <form method="post"><table border="0" width="100%"><tr><td valign="top" align="left"><tt><font color="#006600" face="monospace">&lt;BUTTON TYPE="button"&gt;<br>
+&nbsp;&nbsp;&lt;table border="1"&gt;<br>
+&nbsp;&nbsp;&lt;tr&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;th&gt;Soy una&lt;/th&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;th&gt;tabla&lt;/th&gt;<br>
+&nbsp;&nbsp;&lt;/tr&gt;<br>
+&nbsp;&nbsp;&lt;tr&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;que est&aacute;&lt;/td&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;en un bot&oacute;n&lt;/td&gt;<br>
+&nbsp;&nbsp;&lt;/tr&gt;<br>
+&nbsp;&nbsp;&lt;/table&gt;<br>
+&lt;/BUTTON&gt;</font></tt></td><td align="right"><font face="Arial,Helvetica,sans-serif">
+              <button type="button">
+                <table border="1">
+                <tr>
+                  <th>Soy una</th>
+                  <th>tabla</th>
+                </tr>
+                <tr>
+                  <td>que est&aacute;</td>
+                  <td>en un bot&oacute;n</td>
+                </tr>
+                </table>
+              </button></font></td></tr></table></form>
+        <p align="justify">Los par&aacute;metros de dicha etiqueta son los normales,
+        <tt><font color="#006600" face="monospace">TYPE</font></tt>, que podr&aacute; tomar los valores <tt><font color="#006600" face="monospace">SUBMIT</font></tt>
+        (por defecto), <tt><font color="#006600" face="monospace">RESET</font></tt> y <tt><font color="#006600" face="monospace">BUTTON</font></tt>, <tt><font color="#006600" face="monospace">NAME</font></tt>
+        y <tt><font color="#006600" face="monospace">VALUE</font></tt>.</p>
+        <p align="justify">Por otro lado, ahora podemos declarar un gr&aacute;fico como
+        un elemento m&aacute;s de entrada. como un nuevo tipo dentro del
+        elemento <tt><font color="#006600" face="monospace">INPUT</font></tt>:</p>
+        <form method="post"><table border="0" width="100%"><tr><td valign="top" align="left"><tt><font color="#006600" face="monospace">&lt;INPUT TYPE="image" SRC="graficos/nav.gif" alt="Elije navegador"&gt;</font></tt></td><td align="right"><font face="Arial,Helvetica,sans-serif">
+              <input type="image" src="graficos/nav.gif" alt="Elije navegador">
+              </font></td></tr></table></form>
+        <p align="justify">Este elemento se comportar&aacute; de mismo modo que un bot&oacute;n
+        de tipo <tt><font color="#006600" face="monospace">SUBMIT</font></tt>, pero a&ntilde;adir&aacute; como
+        informaci&oacute;n en el formulario las coordenadas x e y donde el
+        usuario lo puls&oacute;.</p>
+      <br><br><a name="2"></a><font size="+2" color="#005CA0">12.2. Etiquetas</font>
+        <p align="justify">Hasta hora, el texto que acompa&ntilde;aba a los campos
+        de entrada no estaba asociado a los mismos de ninguna manera. As&iacute;,
+        por ejemplo, si puls&aacute;bamos en el texto que acompa&ntilde;aba a
+        un control de confirmaci&oacute;n, no suced&iacute;a nada. Ahora, en cambio,
+        si utilizamos la etiqueta <tt><font color="#006600" face="monospace">LABEL</font></tt>, el control cambiar&aacute;
+        de estado (s&oacute;lo disponible en Netscape 5):</p>
+        <form method="post"><table border="0" width="100%"><tr><td valign="top" align="left"><tt><font color="#006600" face="monospace">&lt;LABEL&gt;<br>
+&nbsp;&nbsp;&lt;INPUT NAME="Belleza" TYPE=CHECKBOX&gt;<br>
+&nbsp;&nbsp;Me considero guapo/a<br>
+&lt;/LABEL&gt;</font></tt></td><td align="right"><font face="Arial,Helvetica,sans-serif">
+              <LABEL><INPUT NAME="Belleza" TYPE=CHECKBOX>Me considero guapo/a</LABEL>
+              </font></td></tr></table></form>
+        <p align="justify">Lo bueno que tiene es que se puede usar sin peligro, ya que no
+        afectar&aacute; a los usuarios de navegadores antiguos.</p>
+      <br><br><a name="3"></a><font size="+2" color="#005CA0">12.3. Agrupaci&oacute;n de elementos</font>
+        <p align="justify">Hasta ahora, no dispon&iacute;amos de ninguna manera de
+        agrupar visualmente varios controles, si no ech&aacute;bamos
+        mano de elementos que no son del formulario, como tablas o
+        im&aacute;genes.</p>
+        <p align="justify">Ahora, si encerramos una parte de un formulario dentro
+        de la etiqueta <tt><font color="#006600" face="monospace">FIELDSET</font></tt> se mostrar&aacute; un
+        rect&aacute;ngulo alrededor de los mismos. Si adem&aacute;s,
+        le indicamos un t&iacute;tulo por medio de la etiqueta
+        <tt><font color="#006600" face="monospace">LEGEND</font></tt> nuestros formularios quedar&aacute;n hechos
+        un verdadero primor:</p>
+        <form method="post"><table border="0" width="100%"><tr><td valign="top" align="left"><tt><font color="#006600" face="monospace">&lt;FIELDSET&gt;<br>
+&nbsp;&nbsp;&lt;LEGEND&gt;Mi hermoso formulario&lt;/LEGEND&gt;<br>
+&nbsp;&nbsp;&lt;LABEL&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Mi texto:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;INPUT TYPE="text"&gt;<br>
+&nbsp;&nbsp;&lt;/LABEL&gt;<br>
+&lt;/FIELDSET&gt;</font></tt></td><td align="right"><font face="Arial,Helvetica,sans-serif">
+              <FIELDSET><LEGEND>Mi hermoso formulario</LEGEND>
+              <LABEL>Mi texto: <INPUT TYPE="text" SIZE="10"></LABEL></FIELDSET>
+              </font></td></tr></table></form>
+        <p align="justify"><tt><font color="#006600" face="monospace">LEGEND</font></tt> admite como par&aacute;metro <tt><font color="#006600" face="monospace">ALIGN</font></tt>,
+        que indicar&aacute; en qu&eacute; lugar se coloca el t&iacute;tulo.
+        Por defecto es <tt><font color="#006600" face="monospace">TOP</font></tt> (arriba), pudiendo estar tambi&eacute;n
+        abajo (<tt><font color="#006600" face="monospace">BOTTOM</font></tt>), a la izquierda (<tt><font color="#006600" face="monospace">LEFT</font></tt>)
+        o a la derecha (<tt><font color="#006600" face="monospace">RIGHT</font></tt>).</p>
+      <br><br><a name="4"></a><font size="+2" color="#005CA0">12.4. Desactivaci&oacute;n de elementos</font>
+        <p align="justify">Todos los controles de un formulario se pueden desactivar, impidiendo
+        as&iacute; al usuario que los utilice. Se seguir&aacute;n mostrando en
+        pantalla, aunque con un aspecto distinto para indicar su triste estado.
+        Para ello s&oacute;lo tenemos que indicarle el par&aacute;metro
+        <tt><font color="#006600" face="monospace">DISABLED</font></tt>:</p>
+        <form method="post"><table border="0" width="100%"><tr><td valign="top" align="left"><tt><font color="#006600" face="monospace">&lt;LABEL DISABLED&gt;Texto:<br>
+&nbsp;&nbsp;&lt;INPUT TYPE=TEXT DISABLED&gt;<br>
+&lt;/LABEL&gt;</font></tt></td><td align="right"><font face="Arial,Helvetica,sans-serif">
+              <LABEL DISABLED>Texto: <INPUT NAME="Belleza" TYPE=TEXT DISABLED></LABEL>
+              </font></td></tr></table></form>
+        <p align="justify">Esto, en principio, no parece de demasiada utilidad. &iquest;Para
+        qu&eacute; queremos tener controles desactivados? Para eso no los ponemos,
+        &iquest;no? Lo bueno que tiene es que el estado de activaci&oacute;n de
+        un control es accesible desde JavaScript. Eso nos permitir&aacute; activar
+        o desactivar una parte de nuestro formulario dependiendo de lo que
+        el usuario haya introducido previamente en otros controles del mismo.</p>
+      <p></p><img src="graficos/linea.gif" height="1" width="590"><table cellspacing="0" cellpadding="0" border="0" width="100%"><tr><td><img src="graficos/transp.gif" height="2" width="90"></td></tr></table><table cellspacing="0" cellpadding="0" border="0" width="100%"><tr><td align="left"><a href="formularios.html"><img src="graficos/izq.gif" align="MIDDLE" border="0"></a><font size="-1" face="Arial,Helvetica,sans-serif">Formularios</font></td><td align="right"><font size="-1" face="Arial,Helvetica,sans-serif">Mapas</font><a href="mapas.html"><img src="graficos/der.gif" align="MIDDLE" border="0"></a></td></tr></table><font size="-1"><div align="center">&copy; 1998-2000 <a href="mailto:multivac@idecnet.com">Daniel
+    Rodr&iacute;guez</a><br><a href="index.html"><img src="graficos/loguito.gif" border="0"></a></div></font></font></td></tr></table></body></html>

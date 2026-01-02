@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curiosidades</title>
+    <link rel="icon" href="../image/logo.png">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../style/menu.css">
+    <link rel="stylesheet" href="curiosidad.css">
+
+    <script src="../javaScript/modo.js"></script>
+    <script src="../javaScript/recarga.js"></script>
+    <script src="curiosidad.js"></script>
+
+</head>
+
+<body>
+    <div class="contenedor_loader">
+        <div><img src="../image/carga_snichDorada.gif" class="gif"></div>
+    </div>
+    <!-- Navigation -->
+    <div class="navigation-wrap bg-light start-header start-style">
+        <div class="container-fluid">
+            <div class="row justify-content-between align-items-center">
+                <div class="row">
+                    <div class="col">
+                        <!-- Logo -->
+                        <a class="navbar-brand" href="../index.html" target="_self">
+                            <img src="../image/logo.png" alt="Logo" class="logo">
+                        </a>
+                    </div>
+                    <div class="col posicionModo">
+                        <button type="button" class="btn btn-light colorModo" onclick="toggleTheme()">
+                            <img id="lightImage" src="../image/soleado.png" alt="Light Theme">
+                            <img id="darkImage" src="../image/luna.png" alt="Dark Theme">
+                        </button>
+                    </div>
+                </div>
+                <div class="col-auto flex-grow-0 flex-shrink-0">
+                    <!-- Opciones del Navbar -->
+                    <nav class="navbar navbar-expand-md">
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav ms-auto">
+                                <li class="nav-item">
+                                    <a class="nav-link dropdown-toggle" href="../Hogwarts/Hogwart.html" role="button"
+                                        data-bs-toggle="dropdown" aria-haspopup="true"
+                                        aria-expanded="false">Hogwarts</a>
+                                    <div class="dropdown-menu">
+                                        <a class="dropdown-item" href="../Hogwarts/Profesores/Profesores.html">Profesores</a>
+                                        <a class="dropdown-item" href="../Hogwarts/Alumnos/Alumnos.html">Alumnos</a>
+                                        <a class="dropdown-item" href="../Hogwarts/Asignaturas/asignaturas.html">Asignaturas</a>
+                                        <a class="dropdown-item" href="../Hogwarts/Casas/casa.html">Casas</a>
+                                    </div>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link dropdown-toggle" href="../Mortifagos/Mortifagos.html" role="button"
+                                        data-bs-toggle="dropdown" aria-haspopup="true"
+                                        aria-expanded="false">Mortífagos</a>
+                                    <div class="dropdown-menu">
+                                        <a class="dropdown-item"
+                                            href="../Mortifagos/Personajes/Personajes.html">Personajes</a>
+                                        <a class="dropdown-item"
+                                            href="../Mortifagos/Horrocruxes/horrocruxes.html">Horrocruxes</a>
+                                        <a class="dropdown-item" href="../Mortifagos/Mortifagos.html">Marca Tenebrosa</a>
+                                    </div>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link dropdown-toggle" href="../Familias/Familias.html">Familias</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="../Mapa/mapa.html">Mapa</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+                <div class="col-auto">
+                    <!-- Segunda sección de opciones del Navbar -->
+                    <nav class="navbar navbar-expand-md navbar-light">
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav ms-auto">
+                                <li class="nav-item">
+                                    <a class="nav-link dropdown-toggle" href="../Adaptaciones/Adaptaciones.html"
+                                        role="button" data-bs-toggle="dropdown" aria-haspopup="true"
+                                        aria-expanded="false">Adaptaciones</a>
+                                    <div class="dropdown-menu">
+                                        <a class="dropdown-item" href="../Adaptaciones/Libros.html">Libros</a>
+                                        <a class="dropdown-item" href="../Adaptaciones/Peliculas.html">Películas</a>
+                                        <a class="dropdown-item" href="../Adaptaciones/Videojuegos.html">Videojuegos</a>
+                                    </div>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="../Curiosidades/curiosidad.html">Curiosidades</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="../Comentarios/Comentarios.html">Comentarios</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="../quiz/quiz.html">Quiz</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                    <div class="nav-images-container">
+                        <img src="https://cdn-hogwartslegacy.warnerbrosgames.com/static/bar-left.png" alt
+                            class="nav-bar left">
+                        <img src="https://cdn-hogwartslegacy.warnerbrosgames.com/static/bar-right.png" alt
+                            class="nav-bar right">
+                    </div>
+                    <div>
+                        <div class="nav-bar-corner-container">
+                            <div class="nav-bar-corner left">
+                                <img src="https://cdn-hogwartslegacy.warnerbrosgames.com/static/corner-left.webp" alt=""
+                                    class="img-fluid">
+                            </div>
+                            <div class="nav-bar-corner right">
+                                <img src="https://cdn-hogwartslegacy.warnerbrosgames.com/static/corner-right.webp"
+                                    alt="" class="img-fluid">
+                            </div>
+                        </div>
+                        <div class="nav-bar-corner-container1">
+                            <div class="nav-bar-corner bottomLeft">
+                                <img src="https://cdn-hogwartslegacy.warnerbrosgames.com/static/corner-bottom-left.webp"
+                                    alt="" class="img-fluid">
+                            </div>
+                            <div class="nav-bar-corner bottomRight">
+                                <img src="https://cdn-hogwartslegacy.warnerbrosgames.com/static/corner-bottom-right.webp"
+                                    alt="" class="img-fluid">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="my-5 py-5 content-fluid text-center">
+        <div class="text-center">
+            <picture>
+                <source srcset="../image/titulo-arriba.webp" type="image/webp">
+                <img src="../image/titulo-arriba.webp" class="title-decoration margen">
+            </picture>
+
+            <h1 class="letraBlanca">Curiosidades</h1>
+
+            <picture>
+                <source srcset="../image/titulo-bajo.png" type="image/png">
+                <img src="../image/titulo-bajo.png" class="title-decoration">
+            </picture>
+        </div>
+        <br>
+        <div class="divAncho">
+            <div>
+                <div>
+                    <img src="../image/separador.png" class="tamaño">
+                </div>
+                <div id="accordion">
+                    <a class="btn letra" data-bs-toggle="collapse" href="#collapseOne" onclick="loadXMLDoc()">
+                        Muertos
+                    </a>
+                </div>
+                <div id="collapseOne" class="collapse centrado" data-bs-parent="#accordion">
+                    <div>
+                        <img src="../image/separador.png" class="tamaño">
+                    </div>
+                    <div class="card-body" id="demo"> <!-- Agregamos un id al div para mostrar el XML -->
+                        <!-- Aquí se mostrará el contenido del XML -->
+                    </div>
+                </div>
+            </div>
+            <div>
+                <img src="../image/separador.png" class="tamaño">
+            </div>
+            <div>
+                <div id="accordion">
+                    <a class="collapsed btn letra" data-bs-toggle="collapse" href="#collapseTwo">
+                        El origen del nombre "Harry Potter"
+                    </a>
+                </div>
+                <div id="collapseTwo" class="collapse" data-bs-parent="#accordion">
+                    <div>
+                        <img src="../image/separador.png" class="tamaño">
+                    </div>
+                    <div class="card-body">
+                        J.K. Rowling obtuvo el nombre de "Harry" de un niño que ella conocía en su infancia, y "Potter"
+                        es el apellido de una familia que vivía cerca de ella en su juventud.
+                    </div>
+                </div>
+            </div>
+            <div>
+                <img src="../image/separador.png" class="tamaño">
+            </div>
+            <div>
+                <div id="accordion">
+                    <a class="collapsed btn letra" data-bs-toggle="collapse" href="#collapseThree">
+                        El sombrero seleccionador
+                    </a>
+                </div>
+                <div id="collapseThree" class="collapse" data-bs-parent="#accordion">
+                    <div>
+                        <img src="../image/separador.png" class="tamaño">
+                    </div>
+                    <div class="card-body">
+                        El sombrero seleccionador originalmente perteneció a Godric Gryffindor, uno de los fundadores de Hogwarts. Fue encantado para seleccionar a los estudiantes para las casas basándose en sus cualidades y preferencias.
+                    </div>
+                </div>
+                <div>
+                    <img src="../image/separador.png" class="tamaño">
+                </div>
+            </div>
+            <div>
+                <div id="accordion">
+                    <a class="collapsed btn letra" data-bs-toggle="collapse" href="#4">
+                        La cicatriz de Harry
+                    </a>
+                </div>
+                <div id="4" class="collapse" data-bs-parent="#accordion">
+                    <div>
+                        <img src="../image/separador.png" class="tamaño">
+                    </div>
+                    <div class="card-body">
+                        La cicatriz en forma de rayo de Harry Potter se asemeja al signo del rayo en la frente de James Potter en las películas. Sin embargo, en los libros, la cicatriz de James no se menciona específicamente.
+                    </div>
+                </div>
+                <div>
+                    <img src="../image/separador.png" class="tamaño">
+                </div>
+            </div>
+            <div>
+                <div id="accordion">
+                    <a class="collapsed btn letra" data-bs-toggle="collapse" href="#5">
+                        El hechizo "Expelliarmus"
+                    </a>
+                </div>
+                <div id="5" class="collapse" data-bs-parent="#accordion">
+                    <div>
+                        <img src="../image/separador.png" class="tamaño">
+                    </div>
+                    <div class="card-body">
+                        Este hechizo es conocido como el desarmador y es el hechizo característico de Harry Potter. Se usa para desarmar a un oponente, pero también se muestra que puede bloquear hechizos ofensivos. Gracias a él pudo derrotar a Lord Voldemort.
+                    </div>
+                </div>
+                <div>
+                    <img src="../image/separador.png" class="tamaño">
+                </div>
+            </div>
+            <div>
+                <div id="accordion">
+                    <a class="collapsed btn letra" data-bs-toggle="collapse" href="#6">
+                        El secreto del Callejón Diagon
+                    </a>
+                </div>
+                <div id="6" class="collapse" data-bs-parent="#accordion">
+                    <div>
+                        <img src="../image/separador.png" class="tamaño">
+                    </div>
+                    <div class="card-body">
+                        El Callejón Diagon, donde los magos compran sus suministros escolares y otros artículos mágicos, está oculto a la vista de los muggles por un hechizo que hace que parezca una pared de ladrillos ordinaria, la cual se enciantra detrás del Caldero Chorreante en un pequeño patio amurallado con un cubo de basura.
+                    </div>
+                </div>
+                <div>
+                    <img src="../image/separador.png" class="tamaño">
+                </div>
+            </div>
+            <div>
+                <div id="accordion">
+                    <a class="collapsed btn letra" data-bs-toggle="collapse" href="#7">
+                        El Giratiempo
+                    </a>
+                </div>
+                <div id="7" class="collapse" data-bs-parent="#accordion">
+                    <div>
+                        <img src="../image/separador.png" class="tamaño">
+                    </div>
+                    <div class="card-body">
+                        Hermione Granger utiliza un Giratiempo para asistir a múltiples clases al mismo tiempo. Este dispositivo le permite viajar en el tiempo para volver atrás en el día y realizar actividades adicionales. La primera vez que se menciona en las pelícuilas es en el prisionero de Azkaban, donde Harry y Hermione lo usaron para salvar a Sirius Black del beso del Dementor.
+                    </div>
+                </div>
+                <div>
+                    <img src="../image/separador.png" class="tamaño">
+                </div>
+            </div>
+            <div>
+                <div id="accordion">
+                    <a class="collapsed btn letra" data-bs-toggle="collapse" href="#8">
+                        Los dementores
+                    </a>
+                </div>
+                <div id="8" class="collapse" data-bs-parent="#accordion">
+                    <div>
+                        <img src="../image/separador.png" class="tamaño">
+                    </div>
+                    <div class="card-body">
+                        Los dementores son criaturas siniestras que se alimentan de las emociones humanas, particularmente de la felicidad. Son guardianes de la prisión de Azkaban y son temidos por su capacidad para succionar las almas de los humanos.
+                    </div>
+                </div>
+                <div>
+                    <img src="../image/separador.png" class="tamaño">
+                </div>
+            </div>
+            <div>
+                <div id="accordion">
+                    <a class="collapsed btn letra" data-bs-toggle="collapse" href="#9">
+                        La Profecía
+                    </a>
+                </div>
+                <div id="9" class="collapse" data-bs-parent="#accordion">
+                    <div>
+                        <img src="../image/separador.png" class="tamaño">
+                    </div>
+                    <div class="card-body">
+                        La Profecía es una predicción hecha por Sybill Trelawney sobre el nacimiento y la caída de un niño con el poder de vencer a Lord Voldemort. Esta profecía es la base de la trama de la serie, ya que Voldemort busca matar a Harry Potter, quien es el "niño que vivió" mencionado en la profecía.
+                    </div>
+                </div>
+                <div>
+                    <img src="../image/separador.png" class="tamaño">
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="text-center fondoFooter">
+        <div class="lineaSeparacion">
+            <img src="https://cdn-hogwartslegacy.warnerbrosgames.com/static/bar-left.png" class="izquierda">
+            <img src="https://cdn-hogwartslegacy.warnerbrosgames.com/static/bar-right.png" class="derecha">
+        </div>
+        <!-- Grid container -->
+        <div class="container pt-4">
+            <!-- Section: Social media -->
+            <section class="mb-4">
+                <!-- Facebook -->
+                <a data-mdb-ripple-init class="btn btn-link btn-floating btn-lg text-body m-1"
+                    href="https://www.facebook.com/harrypotter" role="button"><img src="../image/facebook.png"
+                        class="footer"></a>
+
+                <!-- Instagram -->
+                <a data-mdb-ripple-init class="btn btn-link btn-floating btn-lg text-body m-1"
+                    href="https://www.instagram.com/harrypotter/?hl=es" role="button"><img src="../image/instagram.png"
+                        class="footer"></a>
+
+                <!-- Twitter -->
+                <a data-mdb-ripple-init class="btn btn-link btn-floating btn-lg text-body m-1"
+                    href="https://x.com/harrypotter" role="button"><img src="../image/twitter.png" class="footer2"></a>
+
+                <!-- YouTube -->
+                <a data-mdb-ripple-init class="btn btn-link btn-floating btn-lg text-body m-1"
+                    href="https://www.youtube.com/@harrypotter" role="button"><img src="../image/youtube.png"
+                        class="footer"></a>
+
+                <!-- TikTok -->
+                <a data-mdb-ripple-init class="btn btn-link btn-floating btn-lg text-body m-1"
+                    href="https://www.tiktok.com/@harrypotter" role="button"><img src="../image/tik-tok.png"
+                        class="footer"></a>
+
+            </section>
+        </div>
+        <!-- Grid container -->
+
+        <!-- Copyright -->
+        <div class="text-center p-3 fondoFooter2">
+            Copyright © 2024
+        </div>
+    </footer>
+
+</body>
+
+</html>

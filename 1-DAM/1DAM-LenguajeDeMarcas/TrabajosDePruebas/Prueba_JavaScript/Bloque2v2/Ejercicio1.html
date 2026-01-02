@@ -1,0 +1,37 @@
+<html>
+
+<head>
+    <title>Ejercicio 1</title>
+</head>
+
+<body>
+
+    <h1>Ejercicio 1</h1>
+
+    <script>
+        const palabrasIngles = palabra => {
+            switch (palabra) {
+                case 'casa':
+                    document.write('Inglés --> House');
+                    break;
+                case 'mesa':
+                    document.write('Inglés --> Table');
+                    break;
+                case 'perro':
+                    document.write('Inglés --> Dog');
+                    break;
+                case 'gato':
+                    document.write('Inglés --> Cat');
+                    break;
+                default:
+                    document.write('Introduce una palabra válida.');
+            }
+        };
+
+        let palabra = prompt('Introduce una palabra: ');
+        palabrasIngles(palabra);
+    </script>
+
+</body>
+
+</html>

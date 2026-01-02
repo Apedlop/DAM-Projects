@@ -1,0 +1,496 @@
+<html>
+
+
+<!-- Mirrored from www.tutorialesprogramacionya.com/javascriptya/temarios/descripcion.php?inicio=60&cod=63 by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 18 Mar 2024 10:33:17 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QWKWPBDEFK"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-QWKWPBDEFK');
+</script>
+
+<script async src="../../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-4669394804436935",
+    enable_page_level_ads: true
+  });
+</script>
+<title>Tutorial de JavaScript : Conceptos</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="../css/estilos.css" rel="stylesheet" type="text/css">
+  <meta charset="UTF-8">
+
+<style>
+html,body {
+	background-color: #D3E9D0;
+	font-family: Trebuchet MS, Verdana, Arial, sans-serif;
+	font-size: 10pt;
+	text-align:center;
+}
+
+h1 {
+	font-size: 14pt;
+	margin: 0%;
+}
+
+div#contentdetalle{clear:left;
+                   max-width:900px;
+				   border-top:0px solid #999;
+				   padding-top:15px;
+				   background-color: #aed7a8;
+				   text-align:left;
+				   font-size:1.3em;
+				   font-weight:normal;
+				   font-family:arial;
+				   padding:20px}
+				   
+.recuadro {
+  background-color:#ffffcc;
+  text-align:left;
+  font-family:courier;
+  font-size:1em;
+  border-width:0;
+  padding:5px;
+
+  border: 1px dotted #ffaa00;
+  margin-left:5px;  
+}		
+
+.tablajs {
+    border-collapse: collapse;
+    background-color: #fff;
+    border: 1px solid #dee2e6;    
+    padding: 0.3rem;    
+}
+
+.tablajs th,
+.tablajs td {
+  padding: 0.75rem;
+  vertical-align: top;
+  border-top: 1px solid #dee2e6;
+}
+
+		   
+</style>
+
+<style>
+.uno { width: 320px; height: 100px; }
+@media(min-width: 500px) { .uno { width: 320px; height: 100px; } }
+@media(min-width: 800px) { .uno { width: 336px; height: 280px; } }
+
+.dos { width: 320px; height: 100px; }
+@media(min-width: 500px) { .dos { width: 320px; height: 100px; } }
+@media(min-width: 800px) { .dos { width: 336px; height: 280px; } }
+</style>
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','../../../www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-80268657-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</head>
+
+<body>
+
+<div class="upperleft">
+  <div class="upperright">
+    <div class="lowerleft">
+      <div class="lowerright">
+<table width="98%">
+<tr>
+<td>
+<span style="float:right"><a target="_blank" style="margin-right:0.1em;" href="https://www.tutorialesprogramacionya.com/">Listado completo de tutoriales</a></span>
+<h1>Eventos: load y DOMContentLoaded</h1></td>
+<td align="right">
+
+
+</td>
+</tr>
+</table>
+
+      </div>
+    </div>
+  </div>
+</div>
+<br>
+
+
+<div class="upperleft">
+  <div class="upperright">
+    <div class="lowerleft">
+      <div class="lowerright">
+
+<div id="contentdetalle">
+
+<div style="display:block;float:left;margin: 5px;"> 
+ <script async src="../../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<!-- adaptable1 -->
+<ins class="adsbygoogle uno"
+     style="display:inline-block"
+     data-ad-client="ca-pub-4669394804436935"
+     data-ad-slot="4716538363"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script> 
+</div> 
+
+<p>Como hemos visto hasta ahora uno de los usos principales de JavaScript es la implementación de algoritmos que reaccionan a eventos que se producen en una página web. Cuando se termina de cargar completamente una página web se dispara el evento onload, cuando se presiona un botón de tipo submit se dispara el evento onsubmit, cuando movemos la flecha del mouse se dispara onmousemove y otra gran cantidad de eventos que nos informa el navegador y nosotros podemos capturarlos y hacer un algoritmo a nuestra medida.</p>
+<p>A lo largo de estos más de 25 años de la existencia de JavaScript, se han implementado tres formas distintas de capturar los eventos que emite el navegador.</p>
+<h3>Eventos definidos directamente en la marca HTML.</h3>
+<p>Esta metodología esta en desuso, de todos modos muchos sitios antiguos implementan esta técnica.</p>
+<strong>Problema</strong>
+<p>Implementar un formulario que solicite la carga del nombre de usuario y su clave. Mostrar un mensaje si no se ingresan datos en alguno de los dos controles.</p>
+
+<pre class="recuadro">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+
+&lt;head&gt;
+    &lt;title&gt;Ejemplo de JavaScript&lt;/title&gt;
+    &lt;meta charset="UTF-8"&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+
+    &lt;form method="post" action="procesar.php" onsubmit="validar();" id="formulario1"&gt;
+        Ingrese nombre:
+        &lt;input type="text" id="usuario" name="usuario" size="20"&gt;
+        &lt;br&gt; Ingrese clave:
+        &lt;input type="password" id="clave" name="clave" size="20"&gt;
+        &lt;br&gt;
+        &lt;input type="submit" id="confirmar" name="confirmar" value="Confirmar"&gt;
+    &lt;/form&gt;
+
+    &lt;script&gt;
+        function validar() {
+            let usu = document.getElementById("usuario").value;
+            let cla = document.getElementById("clave").value;
+            if (usu.length == 0 || cla.length == 0) {
+                alert('El nombre de usuario o clave está vacío');
+                return false;
+            } else
+                return true;
+        }
+    &lt;/script&gt;
+
+&lt;/body&gt;
+&lt;/html
+</pre>
+<p>Lo primero que tenemos que ver que la marca form define la propiedad onsubmit y le asigna el nombre de la función JavaScript que debe llamarse previo a que el navegador empaquete todos los datos del formulario y los envía al servidor para ser procesados:</p>
+<pre>
+&lt;form method="post" action="procesar.php" onsubmit="validar();"&gt;
+</pre>
+<p>Como vemos debemos indicar el nombre de la función y los paréntesis (en este caso no se envían parámetros por lo que los paréntesis van abiertos y cerrados)</p>
+<p>En el bloque JavaScript debemos implementar la función validar donde extraemos los valores de cada control y verificamos si alguno de los dos no tiene cargado caracteres, en caso que suceda esto mostramos un mensaje y retornamos un false para que el navegador no envíe los datos del formulario al servidor. Si la función retorna true los datos del formulario son enviados por el navegador al servidor:</p>
+<pre>
+        function validar() {
+            let usu = document.getElementById("usuario").value;
+            let cla = document.getElementById("clave").value;
+            if (usu.length == 0 || cla.length == 0) {
+                alert('El nombre de usuario o clave está vacío');
+                return false;
+            } else
+                return true;
+        }
+</pre>
+<p>Esta metodología de inicializar eventos debe ser evitada en todo lo posible.</p>
+<h3>Eventos definidos accediendo a propiedades del objeto.</h3>
+<p>Esta metodología es todavía ampliamente utilizada ya que la mayoría de los navegadores lo implementan en forma similar.</p>
+
+<strong>Problema</strong>
+<p>Implementar un formulario que solicite la carga del nombre de usuario y su clave. Mostrar un mensaje si no se ingresan datos en alguno de los dos controles.</p>
+<pre class="recuadro">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+
+&lt;head&gt;
+    &lt;title&gt;Ejemplo de JavaScript&lt;/title&gt;
+    &lt;meta charset="UTF-8"&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+
+    &lt;form method="post" action="procesar.php" id="formulario1"&gt;
+        Ingrese nombre:
+        &lt;input type="text" id="usuario" name="usuario" size="20"&gt;
+        &lt;br&gt; Ingrese clave:
+        &lt;input type="password" id="clave" name="clave" size="20"&gt;
+        &lt;br&gt;
+        &lt;input type="submit" id="confirmar" name="confirmar" value="Confirmar"&gt;
+    &lt;/form&gt;
+
+    &lt;script&gt;
+        window.onload = inicio;
+
+        function inicio() {
+            document.getElementById("formulario1").onsubmit = validar;
+        }
+
+        function validar() {
+            let usu = document.getElementById("usuario").value;
+            let cla = document.getElementById("clave").value;
+            if (usu.length == 0 || cla.length == 0) {
+                alert('El nombre de usuario o clave está vacío');
+                return false;
+            } else
+                return true;
+        }
+    &lt;/script&gt;
+
+&lt;/body&gt;
+
+&lt;/html&gt;
+</pre>
+<p>Con esta segunda metodología vemos que el código HTML queda limpio de llamadas a funciones JavaScript y todo el código queda dentro del bloque del script (pudiendo luego llevar todo este bloque a un archivo externo *.js)</p>
+<p>Lo primero que vemos es inicializar la propiedad onload del objeto window con el nombre de la función que se ejecutará cuando finalice la carga completa de la página, es importante notar que a la propiedad onload le asignamos el nombre de la función y NO debemos disponer los paréntesis abiertos y cerrados (ya que no se está llamando a la función sino le estamos pasando la dirección o referencia de la misma)</p>
+<pre>
+        window.onload = inicio;
+</pre>
+<p>La función inicio es llamada por el objeto window cuando se termina de cargar la página. En esta función obtenemos la referencia del objeto formulario1 mediante el método getElementById e inicializamos la propiedad onsubmit con el nombre de la función que será llamada cuando se presione el botón submit del formulario:</p>
+<pre>
+        function inicio() {
+            document.getElementById("formulario1").onsubmit = validar;
+        }
+</pre>
+<p>Por último tenemos la función validar que verifica si los dos controles del formulario están cargados:</p>
+<pre>
+        function validar() {
+            let usu = document.getElementById("usuario").value;
+            let cla = document.getElementById("clave").value;
+            if (usu.length == 0 || cla.length == 0) {
+                alert('El nombre de usuario o clave está vacío');
+                return false;
+            } else
+                return true;
+        }
+</pre>
+
+<p>La misma metodología pero utilizando funciones anónimas para cada evento el código ahora queda mas conciso:</p>
+<pre class="recuadro">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+
+&lt;head&gt;
+    &lt;title&gt;Ejemplo de JavaScript&lt;/title&gt;
+    &lt;meta charset="UTF-8"&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+
+    &lt;form method="post" action="procesar.php" id="formulario1"&gt;
+        Ingrese nombre:
+        &lt;input type="text" id="usuario" name="usuario" size="20"&gt;
+        &lt;br&gt; Ingrese clave:
+        &lt;input type="password" id="clave" name="clave" size="20"&gt;
+        &lt;br&gt;
+        &lt;input type="submit" id="confirmar" name="confirmar" value="Confirmar"&gt;
+    &lt;/form&gt;
+
+    &lt;script&gt;
+        window.onload = function() {
+            document.getElementById("formulario1").onsubmit = function() {
+                let usu = document.getElementById("usuario").value;
+                let cla = document.getElementById("clave").value;
+                if (usu.length == 0 || cla.length == 0) {
+                    alert('El nombre de usuario o clave está vacío');
+                    return false;
+                } else
+                    return true;
+            }
+        }
+    &lt;/script&gt;
+
+&lt;/body&gt;
+
+&lt;/html&gt;
+</pre>
+<p>Analicemos un poco el código implementado, a la propiedad onload del objeto window le asignamos una función anónima:</p>
+<pre>
+        window.onload = function() {
+        ...
+        }
+</pre>
+<p>En la implementación de la función anónima inicializamos la propiedad onsubmit del objeto formulario1 con otra función anónima:</p>
+<pre>
+            document.getElementById("formulario1").onsubmit = function() {
+            ...
+            }
+</pre>
+
+<p>Esta sintaxis de funciones anónimas es ampliamente utilizado.</p>
+
+<h3>Modelo de eventos definidos por W3C (World Wide Web Consortium)</h3>
+<p>Este modelo de eventos se basa en la implementación de un método para todos los objetos que nos permite registrar eventos. La sintaxis del método es:</p>
+<pre>
+  addEventListener(evento, método a ejecutar);
+</pre>
+<p>Veamos como implementamos el problema anterior utilizando este nuevo modelo de eventos:</p>
+<pre class="recuadro">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+
+&lt;head&gt;
+    &lt;title&gt;Ejemplo de JavaScript&lt;/title&gt;
+    &lt;meta charset="UTF-8"&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+
+    &lt;form method="post" action="procesar.php" id="formulario1"&gt;
+        Ingrese nombre:
+        &lt;input type="text" id="usuario" name="usuario" size="20"&gt;
+        &lt;br&gt; Ingrese clave:
+        &lt;input type="password" id="clave" name="clave" size="20"&gt;
+        &lt;br&gt;
+        &lt;input type="submit" id="confirmar" name="confirmar" value="Confirmar"&gt;
+    &lt;/form&gt;
+
+    &lt;script&gt;
+        window.addEventListener('load', inicio);
+
+        function inicio() {
+            document.getElementById("formulario1").addEventListener('submit', validar);
+        }
+
+        function validar(evt) {
+            let usu = document.getElementById("usuario").value;
+            let cla = document.getElementById("clave").value;
+            if (usu.length == 0 || cla.length == 0) {
+                alert('El nombre de usuario o clave está vacío');
+                evt.preventDefault();
+            }
+        }
+    &lt;/script&gt;
+
+&lt;/body&gt;
+
+&lt;/html&gt;</pre>
+<p>Lo primero que vemos es que en vez de inicializar la propiedad onload procedemos a llamar al método addEventListener:</p>
+<pre>
+        window.addEventListener('load', inicio);
+</pre>
+<p>El primer parámetro es un string con el nombre del evento a inicializar, el segundo parámetro es el nombre de la función a ejecutar .</p>
+<p>Cuando se carga completamente la página el objeto window tiene la referencia al método que se debe llamar, en nuestro caso se llama inicio. La función inicio obtiene la referencia del objeto formulario1 y procede a registrar el evento submit indicando en el segundo parámetro el nombre de la función que debe ejecutarse:</p>
+<pre>
+        function inicio() {
+            document.getElementById("formulario1").addEventListener('submit', validar);
+        }
+</pre>
+<p>El código de la función validar se modifica, llega como parámetro una referencia al evento y mediante este llamamos al método preventDefault si queremos que no se envíen los datos al servidor:</p>
+<pre>
+        function validar(evt) {
+            let usu = document.getElementById("usuario").value;
+            let cla = document.getElementById("clave").value;
+            if (usu.length == 0 || cla.length == 0) {
+                alert('El nombre de usuario o clave está vacío');
+                evt.preventDefault();
+            }
+        }
+</pre>
+<p>Este modelo de eventos está siendo ampliamente implementado por los navegadores modernos. El problema es el IE8 o inferiores que no lo implementa de esta forma.</p>
+
+<h3>Evento DOMContentLoaded</h3>
+<ul>
+<li>
+Evento 'load': El evento load se dispara cuando el contenido del archivo HTML y las referencias a todos los recursos asociados (imágenes, hojas de estilo etc.) se han cargado en memoria del navegador.
+</li>
+<li>
+Evento 'DOMContentLoaded': El evento DOMContentLoaded se dispara cuando el contenido del archivo HTML se ha cargado en el navegador, sin necesitar esperar imágenes, hojas de estilo etc.<br>
+Es muy conveniente en la mayoría de las veces  inicializar script de JavaScript utilizando éste evento en lugar del evento 'load'. Todos los navegadores modernos disponen del evento 'DOMContentLoaded'.</p>
+</li>
+</ul>
+<p>En el problema anterior solo cambiamos la referencia del evento load por DOMContentLoaded:</p>
+<pre class="recuadro">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+
+&lt;head&gt;
+    &lt;title&gt;Ejemplo de JavaScript&lt;/title&gt;
+    &lt;meta charset="UTF-8"&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+
+    &lt;form method="post" action="procesar.php" id="formulario1"&gt;
+        Ingrese nombre:
+        &lt;input type="text" id="usuario" name="usuario" size="20"&gt;
+        &lt;br&gt; Ingrese clave:
+        &lt;input type="password" id="clave" name="clave" size="20"&gt;
+        &lt;br&gt;
+        &lt;input type="submit" id="confirmar" name="confirmar" value="Confirmar"&gt;
+    &lt;/form&gt;
+
+    &lt;script&gt;
+        window.addEventListener('DOMContentLoaded', inicio);
+
+        function inicio() {
+            document.getElementById("formulario1").addEventListener('submit', validar);
+        }
+
+        function validar(evt) {
+            let usu = document.getElementById("usuario").value;
+            let cla = document.getElementById("clave").value;
+            if (usu.length == 0 || cla.length == 0) {
+                alert('El nombre de usuario o clave está vacío');
+                evt.preventDefault();
+            }
+        }
+    &lt;/script&gt;
+
+&lt;/body&gt;
+
+&lt;/html&gt;
+</pre></p>
+</div>
+
+<div>
+<!--publi-->
+<script async src="../../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<!-- adaptable2 -->
+<ins class="adsbygoogle dos"
+     style="display:inline-block"
+     data-ad-client="ca-pub-4669394804436935"
+     data-ad-slot="5774469161"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+<!--publi-->
+<script async src="../../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<!-- adaptable2 -->
+<ins class="adsbygoogle dos"
+     style="display:inline-block"
+     data-ad-client="ca-pub-4669394804436935"
+     data-ad-slot="5774469161"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+</div>
+
+
+   <h2><a href="../indexd6cc.html?inicio=60">Retornar</a></h2>   
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+</body>
+
+
+<!-- Mirrored from www.tutorialesprogramacionya.com/javascriptya/temarios/descripcion.php?inicio=60&cod=63 by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 18 Mar 2024 10:33:17 GMT -->
+</html>

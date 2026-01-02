@@ -1,0 +1,26 @@
+p.clase1 {
+    color: red;
+    font-family:'Courier New', Courier, monospace;
+    font-style: italic;
+    font-weight: bold;
+    text-align: left;
+    font-size: 30px;
+}
+
+p.clase2 {
+    color: red;
+    font-family:'Courier New', Courier, monospace;
+    font-style: italic;
+    font-weight: bold;
+    text-align: left;
+    font-size: 30px;
+    border: blue 2px solid;
+    background-color: yellow;
+}
+
+p.clase3 img {
+    float: right;
+    width: 60px;
+    height: 60px;
+    padding: 2px;
+}

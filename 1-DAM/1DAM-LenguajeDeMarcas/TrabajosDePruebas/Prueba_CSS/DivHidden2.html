@@ -1,0 +1,32 @@
+<html>
+    <body>
+        
+        <div style="border: 5px solid red; width: 200px;">
+            <div style="background: #0000ff; color: white;">BLOQUE 1</div>
+            <div style="background: #00a0a0; color: white;">BLOQUE 2</div>
+            <div style="background: #ffc0c0; color: white;">BLOQUE 3</div>
+        </div>
+
+        <h1>DESAPARECE EL DIV</h1>
+
+        <script>
+            function Alternar(Seccion){ 
+                if (Seccion.style.visibility=="hidden"){Seccion.style.visibility=""}
+                else{Seccion.style.visibility="hidden"} 
+            }
+        </script>
+            
+        <p style="cursor:s-resize" onClick="Alternar(seccion3)">
+           Pulsar aquí para ocultar o mostrar el párrafo siguiente.
+        </p>
+            
+        <div id="seccion3" style="background: #ffc0c0; color: white; display: block">
+           Este bloque 1 aparece y desaparece de la página.
+        </div>
+
+        <div id="seccion4" style="background: #ffc0c0; color: white; display: block">
+            Este bloque 2 aparece y desaparece de la página.
+        </div>
+
+    </body>
+</html>

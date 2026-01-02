@@ -1,0 +1,61 @@
+<!--Este documento ha sido generado con XT, de James Clark--><html xmlns:date="http://www.jclark.com/xt/java/java.util.Date"><head><title>Curso de HTML: Im&aacute;genes</title><META HTTP-EQUIV="pragma" CONTENT="no-cache"></head><!--Cuerpo del documento--><body bgcolor="#FEFEFE"><table width="630" border="0"><tr><td valign="top" align="center" width="40" rowspan="2"><a href="index.html"><img src="graficos/logo.jpg" border="0"></a></td><td align="center" width="590"><IFRAME SRC="http://ad.es.doubleclick.net/adi/ES-programacion.net/ES-redferca-programacion-html;sz=468x60;ord=44126913875755190?" name="frame1" width="468" height="60" frameborder="no" border="0" MARGINWIDTH="0" MARGINHEIGHT="0" SCROLLING="no"><SCRIPT language="JavaScript1.1" SRC="http://ad.es.doubleclick.net/adj/ES-programacion.net/ES-redferca-programacion-html;abr=!ie;sz=468x60;ord=44126913875755190?"></SCRIPT><NOSCRIPT><A HREF="http://ad.es.doubleclick.net/jump/ES-programacion.net/ES-redferca-programacion-html;abr=!ie;sz=468x60;ord=44126913875755190?"><IMG SRC="http://ad.es.doubleclick.net/ad/ES-programacion.net/ES-redferca-programacion-html;abr=!ie;sz=468x60;ord=44126913875755190?" border="0" height="60" width="468"></A></NOSCRIPT></IFRAME></td></tr><tr><td valign="top"><font face="Arial,Helvetica,sans-serif"><font size="+3" color="#005CA0"><b>8. Im&aacute;genes</b></font>
+      <p align="justify">Para incluir gr&aacute;ficos e im&aacute;genes en nuestras p&aacute;ginas
+      utilizaremos la etiqueta &lt;IMG&gt; de esta manera:</p>
+      <div align="center"><pre><font color="#006600" face="monospace">&lt;IMG SRC="fichero_grafico" ALT="descripcion"&gt;</font></pre></div>
+      <p align="justify">El par&aacute;metro <tt><font color="#006600" face="monospace">SRC</font></tt> especifica el nombre del fichero que contiene
+      el gr&aacute;fico. Los formatos est&aacute;ndar en la red son el GIF y el JPG.
+      La &uacute;ltimas versiones de Netscape y Explorer aceptan tambi&eacute;n el
+      formato PNG.</p>
+      <p align="justify">El par&aacute;metro <tt><font color="#006600" face="monospace">ALT</font></tt> especifica el texto que se mostrar&aacute;
+      en lugar del gr&aacute;fico en aquellos navegadores que no sean capaces de mostrarlos
+      (como el Lynx) y en el supuesto de que el usuario los haya desactivado. Algunos
+      navegadores lo muestran cuando pasamos el rat&oacute;n por encima de la imagen.
+      Es por eso que, aunque algunos usuarios no lo lleguen a ver nunca, conviene
+      ponerlo siempre. De hecho, el est&aacute;dar HTML 4.0 obliga a hacerlo.</p>
+      <p align="justify">Existen dos atributos que, aunque opcionales, conviene indicar
+      siempre: la altura y la anchura del gr&aacute;fico en pixels. De este modo,
+      el navegador puede mostrar un recuadro del tama&ntilde;o de la imagen mientras
+      la va leyendo de la red y as&iacute; poder mostrar el resto de la p&aacute;gina
+      correctamente mientras tanto.</p>
+      <div align="center"><pre><font color="#006600" face="monospace">&lt;IMG SRC="graficos/dwnldns.gif" ALT="Netscape 4.0" WIDTH=88 HEIGHT=31&gt;</font></pre></div>
+      <p align="justify">Se ve as&iacute;:</p>
+      
+           <img src="graficos/dwnldns.gif" alt="Netscape 4.0" width="88" height="31"> 
+        
+      <p align="justify">Para los menos avezados en ingl&eacute;s, decir que WIDTH es la anchura y
+      HEIGHT la altura.</p>
+    <br><br><a name="1"></a><font size="+2" color="#005CA0">8.1. Im&aacute;genes y enlaces</font>
+        <p align="justify">Suele ser com&uacute;n incluir enlaces dentro de un gr&aacute;fico. En ese
+        caso, por defecto, los navegadores le pondr&aacute;n un borde al gr&aacute;fico
+        para indicar que efectivamente es un enlace. Pr&aacute;ctico, pero la mayor&iacute;a
+        de las veces bastante poco est&eacute;tico. Por medio del par&aacute;metro
+        <tt><font color="#006600" face="monospace">BORDER</font></tt> podremos alterar el grosor de ese borde o incluso
+        eliminarlo poniendolo a cero.</p>
+        <pre><font color="#006600" face="monospace">&lt;A HREF="http://www.netscape.com"&gt;
+  &lt;IMG SRC="graficos/dwnldns.gif" ALT="Netscape 4.0" WIDTH=88 HEIGHT=31&gt;
+&lt;/A&gt;</font></pre>
+        <p align="justify">Se ve as&iacute;:</p>
+        
+             <a href="http://www.netscape.com"><img src="graficos/dwnldns.gif" alt="Netscape 4.0" width="88" height="31" border="2"></a> 
+          
+        <p align="justify">Sin embargo,</p>
+        <pre><font color="#006600" face="monospace">&lt;A HREF="http://www.netscape.com"&gt;
+  &lt;IMG SRC="graficos/dwnldns.gif" ALT="Netscape 4.0" WIDTH=88 HEIGHT=31
+   <font color="red">BORDER=0</font>&gt;
+&lt;/A&gt;</font></pre>
+        <p align="justify">Se ve as&iacute;:</p>
+        
+             <a href="http://www.netscape.com"><img src="graficos/dwnldns.gif" alt="Netscape 4.0" width="88" height="31" border="0"></a> 
+          
+      <br><br><a name="2"></a><font size="+2" color="#005CA0">8.2. Alineaci&oacute;n respecto al texto</font>
+        <p align="justify">Para poder maquetar conjuntamente texto y gr&aacute;ficos, el HTML
+        proporciona, por medio del par&aacute;metro <tt><font color="#006600" face="monospace">ALIGN</font></tt>, las siguientes
+        maneras de alinear una imagen respecto del texto que la acompa&ntilde;a:</p>
+        <table align="center" border="1"><tr><th>Valor de <TT>ALIGN</TT></th><th>Utilidad</th><th>Resultado</th></tr><tr><td><tt><font color="#006600" face="monospace">TOP</font></tt></td><td><font face="Arial,Helvetica,sans-serif">Coloca el punto m&aacute;s alto de la imagen coincidiendo con
+            m&aacute;s alto de la l&iacute;nea de texto actual.</font></td><td nowrap><font face="Arial,Helvetica,sans-serif"><img src="graficos/dwnldns.gif" alt="Netscape 4.0" width="88" height="31" border="0" align="top">Este es el texto</font></td></tr><tr><td><tt><font color="#006600" face="monospace">MIDDLE</font></tt></td><td><font face="Arial,Helvetica,sans-serif">Alinea el punto medio (en altura) de la imagen con la base
+            del texto.</font></td><td nowrap><font face="Arial,Helvetica,sans-serif"><img src="graficos/dwnldns.gif" alt="Netscape 4.0" width="88" height="31" border="0" align="middle">Este es el texto</font></td></tr><tr><td><tt><font color="#006600" face="monospace">BOTTOM <font color="red">Por defecto</font></font></tt></td><td><font face="Arial,Helvetica,sans-serif">Alinea el punto m&aacute;s bajo de la imagen con la base del
+            texto.</font></td><td nowrap><font face="Arial,Helvetica,sans-serif"><img src="graficos/dwnldns.gif" alt="Netscape 4.0" width="88" height="31" border="0" align="bottom">Este es el texto</font></td></tr><tr><td><tt><font color="#006600" face="monospace">LEFT<img src="graficos/32.gif" width="26" height="26" border="0" align="middle"></font></tt></td><td><font face="Arial,Helvetica,sans-serif">Coloca la imagen a la izquierda del texto.</font></td><td nowrap><font face="Arial,Helvetica,sans-serif"><img src="graficos/dwnldns.gif" alt="Netscape 4.0" width="88" height="31" border="0" align="left">Este es el texto</font></td></tr><tr><td><tt><font color="#006600" face="monospace">RIGHT<img src="graficos/32.gif" width="26" height="26" border="0" align="middle"></font></tt></td><td><font face="Arial,Helvetica,sans-serif">Coloca la imagen a la derecha del texto.</font></td><td nowrap><font face="Arial,Helvetica,sans-serif"><img src="graficos/dwnldns.gif" alt="Netscape 4.0" width="88" height="31" border="0" align="right">Este es el texto</font></td></tr></table>
+        <p align="justify">Hay que aclarar que la base del texto es la l&iacute;nea donde descansan
+        casi todas las letras del alfabeto excepto algunas como la p, la g o la j.</p>
+      <p></p><img src="graficos/linea.gif" height="1" width="590"><table cellspacing="0" cellpadding="0" border="0" width="100%"><tr><td><img src="graficos/transp.gif" height="2" width="90"></td></tr></table><table cellspacing="0" cellpadding="0" border="0" width="100%"><tr><td align="left"><a href="listas.html"><img src="graficos/izq.gif" align="MIDDLE" border="0"></a><font size="-1" face="Arial,Helvetica,sans-serif">Listas</font></td><td align="right"><font size="-1" face="Arial,Helvetica,sans-serif">Formateo fino</font><a href="font.html"><img src="graficos/der.gif" align="MIDDLE" border="0"></a></td></tr></table><font size="-1"><div align="center">&copy; 1998-2000 <a href="mailto:multivac@idecnet.com">Daniel
+    Rodr&iacute;guez</a><br><a href="index.html"><img src="graficos/loguito.gif" border="0"></a></div></font></font></td></tr></table></body></html>

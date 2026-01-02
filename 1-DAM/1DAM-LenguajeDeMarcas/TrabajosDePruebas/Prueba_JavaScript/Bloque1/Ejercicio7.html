@@ -1,0 +1,38 @@
+<html>
+    <head>
+        <title>Ejercicio 7</title>
+    </head>
+
+    <body>
+
+        <h1>Ejercicio 7</h1>
+
+        <script>
+
+            let num1 = parseInt(prompt('Introduce un número:'))
+            let num2 = parseInt(prompt('Introduce otro número:'))
+
+            if(num1 == num2) {
+                document.write('Los números son iguales.')
+            } else if(num1 < num2) {
+                document.write('Su producto es: ' + num1 + ' x ' + num2 + ' = ' + num1 * num2);
+                document.write('<br>')
+                document.write('Su división es: ' + num2 + '/' + num1 + ' = ' + num2 / num1);
+            } else if (num1 > num2) {
+                let suma = num1 + num2;
+                document.write('Su suma es: ' + num1 + ' + ' + num2 + ' = ' + suma);
+                document.write('<br>');
+                
+                if (num1 < num2) {
+                    let resta = num2 - num1;
+                    document.write('Su diferencia es de: ' + num2 + ' - ' + num1 + ' = ' + resta);
+                } else {
+                    let resta = num1 - num2;
+                    document.write('Su diferencia es de: ' + num1 + ' - ' + num2 + ' = ' + resta)
+                }
+            }
+
+        </script>
+
+    </body>
+</html>

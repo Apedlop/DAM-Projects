@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <title>Ejercicio 2</title>
+    </head>
+
+    <body>
+
+        <h1>Ejercicio 2</h1>
+
+        <script>
+            const mostrarMultiplosHasta500 = (numero) =>{
+                for (let contador = numero; contador <= 500; contador = contador + numero){
+                    (contador + numero) <= 500 ? document.write(`${contador}-`) 
+                    : 
+                    document.write(`${contador}`);
+                }
+    
+            }
+
+            let num = parseFloat(prompt("Intorduce un número:"))
+            mostrarMultiplosHasta500(num);
+        </script>
+
+    </body>
+</html>

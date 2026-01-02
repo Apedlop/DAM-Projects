@@ -1,0 +1,398 @@
+<html>
+
+
+<!-- Mirrored from www.tutorialesprogramacionya.com/javascriptya/temarios/descripcion.php?inicio=20&cod=20 by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 18 Mar 2024 10:33:07 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QWKWPBDEFK"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-QWKWPBDEFK');
+</script>
+
+<script async src="../../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-4669394804436935",
+    enable_page_level_ads: true
+  });
+</script>
+<title>Tutorial de JavaScript : Conceptos</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="../css/estilos.css" rel="stylesheet" type="text/css">
+  <meta charset="UTF-8">
+
+<style>
+html,body {
+	background-color: #D3E9D0;
+	font-family: Trebuchet MS, Verdana, Arial, sans-serif;
+	font-size: 10pt;
+	text-align:center;
+}
+
+h1 {
+	font-size: 14pt;
+	margin: 0%;
+}
+
+div#contentdetalle{clear:left;
+                   max-width:900px;
+				   border-top:0px solid #999;
+				   padding-top:15px;
+				   background-color: #aed7a8;
+				   text-align:left;
+				   font-size:1.3em;
+				   font-weight:normal;
+				   font-family:arial;
+				   padding:20px}
+				   
+.recuadro {
+  background-color:#ffffcc;
+  text-align:left;
+  font-family:courier;
+  font-size:1em;
+  border-width:0;
+  padding:5px;
+
+  border: 1px dotted #ffaa00;
+  margin-left:5px;  
+}		
+
+.tablajs {
+    border-collapse: collapse;
+    background-color: #fff;
+    border: 1px solid #dee2e6;    
+    padding: 0.3rem;    
+}
+
+.tablajs th,
+.tablajs td {
+  padding: 0.75rem;
+  vertical-align: top;
+  border-top: 1px solid #dee2e6;
+}
+
+		   
+</style>
+
+<style>
+.uno { width: 320px; height: 100px; }
+@media(min-width: 500px) { .uno { width: 320px; height: 100px; } }
+@media(min-width: 800px) { .uno { width: 336px; height: 280px; } }
+
+.dos { width: 320px; height: 100px; }
+@media(min-width: 500px) { .dos { width: 320px; height: 100px; } }
+@media(min-width: 800px) { .dos { width: 336px; height: 280px; } }
+</style>
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','../../../www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-80268657-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</head>
+
+<body>
+
+<div class="upperleft">
+  <div class="upperright">
+    <div class="lowerleft">
+      <div class="lowerright">
+<table width="98%">
+<tr>
+<td>
+<span style="float:right"><a target="_blank" style="margin-right:0.1em;" href="https://www.tutorialesprogramacionya.com/">Listado completo de tutoriales</a></span>
+<h1>Clase Array</h1></td>
+<td align="right">
+
+
+</td>
+</tr>
+</table>
+
+      </div>
+    </div>
+  </div>
+</div>
+<br>
+
+
+<div class="upperleft">
+  <div class="upperright">
+    <div class="lowerleft">
+      <div class="lowerright">
+
+<div id="contentdetalle">
+
+<div style="display:block;float:left;margin: 5px;"> 
+ <script async src="../../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<!-- adaptable1 -->
+<ins class="adsbygoogle uno"
+     style="display:inline-block"
+     data-ad-client="ca-pub-4669394804436935"
+     data-ad-slot="4716538363"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script> 
+</div> 
+
+<p>Un vector es una estructura de datos que permite almacenar un CONJUNTO de datos.<br>
+Con un único nombre se define un vector y por medio de un subíndice hacemos referencia a cada elemento del mismo (componente).</p>
+
+<p>Ejemplo 1: Crear un vector para almacenar los cinco sueldos de operarios y luego mostrar el total de gastos en sueldos (cada actividad en una función)</p>
+<pre class="recuadro">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+
+&lt;head&gt;
+    &lt;title&gt;Ejemplo de JavaScript&lt;/title&gt;
+    &lt;meta charset="UTF-8"&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+
+    &lt;script&gt;
+        function cargar(sueldos) {
+            for (let f = 0; f &lt; sueldos.length; f++) {
+                let v = prompt('Ingrese sueldo:');
+                sueldos[f] = parseInt(v);
+            }
+        }
+
+        function calcularGastos(sueldos) {
+            let total = 0;
+            for (let f = 0; f &lt; sueldos.length; f++) {
+                total = total + sueldos[f];
+            }
+            document.write('Listado de sueldos&lt;br&gt;');
+            for (let f = 0; f &lt; sueldos.length; f++) {
+                document.write(sueldos[f] + '&lt;br&gt;');
+            }
+            document.write('Total de gastos en sueldos:' + total);
+        }
+
+        let sueldos;
+        sueldos = new Array(5);
+        cargar(sueldos);
+        calcularGastos(sueldos);
+    &lt;/script&gt;
+
+&lt;/body&gt;
+
+&lt;/html&gt;
+</pre>
+<p>Recordemos que el programa comienza a ejecutarse a partir de las líneas que se encuentran fuera de la funciones:</p>
+<pre>
+        let sueldos;
+        sueldos = new Array(5);
+        cargar(sueldos);
+        calcularGastos(sueldos);
+</pre>
+<p>Lo primero, definimos una variable y posteriormente creamos un objeto de la clase Array, indicándole que queremos almacenar 5 valores.</p>
+<p>Llamamos a la función cargar enviándole el vector. En la función, a través de un ciclo for recorremos las distintas componentes del vector y almacenamos valores enteros que ingresamos por teclado.</p>
+<p>Para conocer el tamaño del vector accedemos a la propiedad length de la clase Array.</p>
+<p>Cuando en la función 'cargar' ingresamos los elementos del arreglo, sucede que se modifica la variable 'sueldos' definida en la parte inferior.</p>
+<p>En la segunda función sumamos todas las componentes del vector, imprimimos en la página los valores y el total de gastos.</p>
+
+<p>Ejemplo 2: Crear un vector con elementos de tipo string. Almacenar los meses del año. En una función solicitar el ingreso de un número entre 1 y 12. Mostrar a qué mes corresponde y cuántos días tiene dicho mes.</p>
+<pre class="recuadro">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+
+&lt;head&gt;
+    &lt;title&gt;Ejemplo de JavaScript&lt;/title&gt;
+    &lt;meta charset="UTF-8"&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+
+    &lt;script&gt;
+        function mostrarFecha(meses, dias) {
+            let num = parseInt(prompt('Ingrese número de mes:'));
+            document.write('Corresponde al mes:' + meses[num - 1]);
+            document.write('&lt;br&gt;');
+            document.write('Tiene ' + dias[num - 1] + ' días');
+        }
+
+        let meses;
+        meses = new Array(12);
+        meses[0] = 'Enero';
+        meses[1] = 'Febrero';
+        meses[2] = 'Marzo';
+        meses[3] = 'Abril';
+        meses[4] = 'Mayo';
+        meses[5] = 'Junio';
+        meses[6] = 'Julio';
+        meses[7] = 'Agosto';
+        meses[8] = 'Septiembre';
+        meses[9] = 'Octubre';
+        meses[10] = 'Noviembre';
+        meses[11] = 'Diciembre';
+
+        let dias;
+        dias = new Array(12);
+        dias[0] = 31;
+        dias[1] = 28;
+        dias[2] = 31;
+        dias[3] = 30;
+        dias[4] = 31;
+        dias[5] = 30;
+        dias[6] = 31;
+        dias[7] = 31;
+        dias[8] = 30;
+        dias[9] = 31;
+        dias[10] = 30;
+        dias[11] = 31;
+        mostrarFecha(meses, dias);
+    &lt;/script&gt;
+
+&lt;/body&gt;
+
+&lt;/html&gt;
+</pre>
+<p>En este problema definimos dos vectores, uno para almacenar los meses y otro los días. Decimos que se trata de vectores paralelos porque en la componente cero del vector meses almacenamos el string 'Enero' y en el vector dias, la cantidad de días del mes de enero.</p>
+<p>Es importante notar que cuando imprimimos, disponemos como subíndice el valor ingresado menos 1, esto debido a que normalmente el operador de nuestro programa carga un valor comprendido entre 1 y 12. Recordar que los vectores comienzan a numerarse a partir de la componente cero.</p>
+<pre>
+    document.write('Corresponde al mes:'+meses[num-1]);
+</pre>
+<h3>Acotaciones</h3>
+<p>Es común utilizar una sintaxis más concisa para inicializar los dos vectores:</p>
+<pre class="recuadro">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+
+&lt;head&gt;
+    &lt;title&gt;Ejemplo de JavaScript&lt;/title&gt;
+    &lt;meta charset="UTF-8"&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+
+    &lt;script&gt;
+        function mostrarFecha(meses, dias) {
+            let num = parseInt(prompt('Ingrese número de mes:'));
+            document.write('Corresponde al mes:' + meses[num - 1]);
+            document.write('&lt;br&gt;');
+            document.write('Tiene ' + dias[num - 1] + ' días');
+        }
+
+        let meses = ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'];
+        let dias = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+        mostrarFecha(meses, dias);
+    &lt;/script&gt;
+
+&lt;/body&gt;
+
+&lt;/html&gt;
+</pre>
+
+<p>Hay mucho por ver de la clase Array más adelante, por ejemplo:</p>
+<ul>
+<li>
+<p>Podemos definir arreglos con elementos de distinto tipo en cada componente:</p>
+<pre>
+        let persona = ['Diego Martinez', 50, 78.50];
+        document.write(persona[0] + ' tiene una edad de ' + persona[1] + ' y un peso de ' + persona[2])
+</pre>
+<p>Por pantalla aparece:</p>
+<pre>
+Diego Martinez tiene una edad de 50 y un peso de 78.5
+</pre>
+</li>
+<li>
+<p>Podemos definir un vector sin indicar el tamaño del mismo y luego cargar en cualquier posición:</p>
+<pre>
+        let ingresos = [];
+        ingresos[3] = 1000;
+        ingresos[5] = 5000;
+        for (let f = 0; f &lt;= 6; f++) {
+            document.write(ingresos[f] + '&lt;br&gt;')
+        }
+</pre>
+<p>Las componentes que no han sido inicializadas retornan el valor undefined.</p>
+<pre>
+undefined
+undefined
+undefined
+1000
+undefined
+5000
+undefined
+</pre>
+</pre>
+</li>
+<li>
+<p>Podemos definir componentes del arreglo que sean otro arreglo (crear estructuras de datos tan complejas como necesitemos):</p>
+<pre>
+        let matrizIdentidad = [
+            [1, 0, 0],
+            [0, 1, 0],
+            [0, 0, 1]
+        ];
+        for (let f = 0; f &lt; 3; f++) {
+            for (let c = 0; c &lt; 3; c++) {
+                document.write(matrizIdentidad[f][c] + ' ');
+            }
+            document.write('&lt;br&gt;');
+        }
+</pre>
+<p>Luego tenemos como resultado en la pantalla:</p>
+<pre>
+1 0 0
+0 1 0
+0 0 1
+</pre>
+</li>
+</ul>
+<p>Luego veremos que tenemos otras muchísimas funcionalidades con esta estructura de datos.</p></p>
+</div>
+
+<div>
+<!--publi-->
+<script async src="../../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<!-- adaptable2 -->
+<ins class="adsbygoogle dos"
+     style="display:inline-block"
+     data-ad-client="ca-pub-4669394804436935"
+     data-ad-slot="5774469161"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+<!--publi-->
+<script async src="../../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<!-- adaptable2 -->
+<ins class="adsbygoogle dos"
+     style="display:inline-block"
+     data-ad-client="ca-pub-4669394804436935"
+     data-ad-slot="5774469161"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+</div>
+
+
+   <h2><a href="../index28fa.html?inicio=20">Retornar</a></h2>   
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+</body>
+
+
+<!-- Mirrored from www.tutorialesprogramacionya.com/javascriptya/temarios/descripcion.php?inicio=20&cod=20 by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 18 Mar 2024 10:33:07 GMT -->
+</html>

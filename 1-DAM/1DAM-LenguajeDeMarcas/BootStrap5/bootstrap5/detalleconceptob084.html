@@ -1,0 +1,323 @@
+
+<!DOCTYPE html>
+<html>
+
+
+<!-- Mirrored from www.tutorialesprogramacionya.com/bootstrap5ya/detalleconcepto.php?punto=61&codigo=61&inicio=60 by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 19 Dec 2023 11:11:20 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QWKWPBDEFK"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-QWKWPBDEFK');
+</script>
+
+<script async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-4669394804436935",
+    enable_page_level_ads: true
+  });
+</script>
+
+<title>Componente : pagination</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">    
+<meta name="keywords" content="bootstrap 5,css, html, programación, webmaster, tutorial">
+<meta name="description" content="El objetivo de este tutorial 
+    es presentar los conceptos básicos de bootstrap 5.">
+<meta name="author" content="Diego Moisset">
+
+<link href="../css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="estilos.css">
+
+<style>
+html,body {
+	background-color: #D3E9D0;
+	font-family: sans-serif,arial;
+
+}
+</style>
+
+<style>
+.uno { width: 320px; height: 100px; }
+@media(min-width: 500px) { .uno { width: 320px; height: 100px; } }
+@media(min-width: 800px) { .uno { width: 336px; height: 280px; } }
+
+.dos { width: 320px; height: 100px; }
+@media(min-width: 500px) { .dos { width: 320px; height: 100px; } }
+@media(min-width: 800px) { .dos { width: 336px; height: 280px; } }
+</style>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','../../www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-80268657-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+</head>
+
+<body>
+
+
+<div class="container">
+
+<div class="row">
+  <div class="col-md-12">
+
+<div class="titulodetalle">
+<h1>61 - Componente : pagination</h1></div>
+
+  </div>
+</div>  
+
+
+<div class="row">
+  <div class="col-md-12">
+
+<div class="cuerpodetalle">
+<div style="display:block;float:left;margin: 5px;"> 
+ <script async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<!-- adaptable1 -->
+<ins class="adsbygoogle uno"
+     style="display:inline-block"
+     data-ad-client="ca-pub-4669394804436935"
+     data-ad-slot="4716538363"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script> 
+</div> 
+
+
+<p>Para mostrar un paginador de datos muy común en sitios web Bootstrap 5 nos provee de una clase llamada "pagination" que debemos asignársela a una lista no ordenada de HTML.</p>
+<p>Las clases que debemos utilizar son:</p>
+<ul>
+<li>
+pagination (se aplica a un "ul")
+</li>
+
+<li>
+page-item (se aplica a cada "li")
+</li>
+
+<li>
+page-link (se aplica a cada "a")
+</li>
+</ul>
+
+<p>Veamos en un ejemplo como implementamos la componente de paginación:</p>
+<pre class="recuadro">
+&lt;!doctype html&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;title&gt;Prueba de Bootstrap 5&lt;/title&gt; 
+  &lt;meta charset="utf-8"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"&gt;
+  &lt;link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+  &lt;div class="container"&gt;
+    &lt;ul class="pagination"&gt;
+      &lt;li class="page-item"&gt;&lt;a class="page-link" href="#"&gt;&lt;&lt;/a&gt;&lt;/li&gt;
+      &lt;li class="page-item"&gt;&lt;a class="page-link" href="#"&gt;1&lt;/a&gt;&lt;/li&gt;
+      &lt;li class="page-item"&gt;&lt;a class="page-link" href="#"&gt;2&lt;/a&gt;&lt;/li&gt;
+      &lt;li class="page-item"&gt;&lt;a class="page-link" href="#"&gt;3&lt;/a&gt;&lt;/li&gt;
+      &lt;li class="page-item"&gt;&lt;a class="page-link" href="#"&gt;4&lt;/a&gt;&lt;/li&gt;
+      &lt;li class="page-item"&gt;&lt;a class="page-link" href="#"&gt;5&lt;/a&gt;&lt;/li&gt;
+      &lt;li class="page-item"&gt;&lt;a class="page-link" href="#"&gt;6&lt;/a&gt;&lt;/li&gt;
+      &lt;li class="page-item"&gt;&lt;a class="page-link" href="#"&gt;&gt;&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/div&gt; 
+
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+
+<p>En el navegador tenemos:</p>
+<img src="imagentema/foto100.jpg" border="0" alt="bootstrap 5 pagination page-item page-link"><br>
+
+<p>Podemos mostrar los enlaces más grandes o más pequeño dependiendo si le agregamos las clases "pagination-sm" o "pagination-lg":</p>
+<pre class="recuadro">
+&lt;!doctype html&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;title&gt;Prueba de Bootstrap 4&lt;/title&gt; 
+  &lt;meta charset="utf-8"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"&gt;
+  &lt;link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;div class="container"&gt;
+    &lt;ul class="pagination"&gt;
+      &lt;li class="page-item"&gt;&lt;a class="page-link" href="#"&gt;&lt;&lt;/a&gt;&lt;/li&gt;
+      &lt;li class="page-item"&gt;&lt;a class="page-link" href="#"&gt;1&lt;/a&gt;&lt;/li&gt;
+      &lt;li class="page-item"&gt;&lt;a class="page-link" href="#"&gt;2&lt;/a&gt;&lt;/li&gt;
+      &lt;li class="page-item"&gt;&lt;a class="page-link" href="#"&gt;3&lt;/a&gt;&lt;/li&gt;
+      &lt;li class="page-item"&gt;&lt;a class="page-link" href="#"&gt;4&lt;/a&gt;&lt;/li&gt;
+      &lt;li class="page-item"&gt;&lt;a class="page-link" href="#"&gt;5&lt;/a&gt;&lt;/li&gt;
+      &lt;li class="page-item"&gt;&lt;a class="page-link" href="#"&gt;6&lt;/a&gt;&lt;/li&gt;
+      &lt;li class="page-item"&gt;&lt;a class="page-link" href="#"&gt;&gt;&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;hr&gt;
+    &lt;ul class="pagination pagination-sm"&gt;
+      &lt;li class="page-item"&gt;&lt;a class="page-link" href="#"&gt;&lt;&lt;/a&gt;&lt;/li&gt;
+      &lt;li class="page-item"&gt;&lt;a class="page-link" href="#"&gt;1&lt;/a&gt;&lt;/li&gt;
+      &lt;li class="page-item"&gt;&lt;a class="page-link" href="#"&gt;2&lt;/a&gt;&lt;/li&gt;
+      &lt;li class="page-item"&gt;&lt;a class="page-link" href="#"&gt;3&lt;/a&gt;&lt;/li&gt;
+      &lt;li class="page-item"&gt;&lt;a class="page-link" href="#"&gt;4&lt;/a&gt;&lt;/li&gt;
+      &lt;li class="page-item"&gt;&lt;a class="page-link" href="#"&gt;5&lt;/a&gt;&lt;/li&gt;
+      &lt;li class="page-item"&gt;&lt;a class="page-link" href="#"&gt;6&lt;/a&gt;&lt;/li&gt;
+      &lt;li class="page-item"&gt;&lt;a class="page-link" href="#"&gt;&gt;&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;hr&gt;
+    &lt;ul class="pagination  pagination-lg"&gt;
+      &lt;li class="page-item"&gt;&lt;a class="page-link" href="#"&gt;&lt;&lt;/a&gt;&lt;/li&gt;
+      &lt;li class="page-item"&gt;&lt;a class="page-link" href="#"&gt;1&lt;/a&gt;&lt;/li&gt;
+      &lt;li class="page-item active"&gt;&lt;a class="page-link" href="#"&gt;2&lt;/a&gt;&lt;/li&gt;
+      &lt;li class="page-item"&gt;&lt;a class="page-link" href="#"&gt;3&lt;/a&gt;&lt;/li&gt;
+      &lt;li class="page-item"&gt;&lt;a class="page-link" href="#"&gt;4&lt;/a&gt;&lt;/li&gt;
+      &lt;li class="page-item"&gt;&lt;a class="page-link" href="#"&gt;5&lt;/a&gt;&lt;/li&gt;
+      &lt;li class="page-item"&gt;&lt;a class="page-link" href="#"&gt;6&lt;/a&gt;&lt;/li&gt;
+      &lt;li class="page-item"&gt;&lt;a class="page-link" href="#"&gt;&gt;&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/div&gt; 
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+
+<p>En el navegador tenemos:</p>
+<img src="imagentema/foto101.jpg" border="0" alt="bootstrap 5 pagination page-item page-link pagination-sm pagination-lg"><br>
+<p>Para indicar cual página está activa debemos agregar la clase "active" a un "li":</p>
+<pre>
+      &lt;li class="page-item active"&gt;&lt;a class="page-link" href="#"&gt;2&lt;/a&gt;&lt;/li&gt;
+</pre>
+
+<h3>Alineamiento de la barra de paginación</h3>
+<p>Podemos alinear la barra de paginación agregando alguna de estas tres clases al elemento "ul":</p>
+<ul>
+<li>
+justify-content-center
+</li>
+<li>
+justify-content-start
+</li>
+<li>
+justify-content-end
+</li>
+</ul>
+<pre class="recuadro">
+&lt;!doctype html&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;title&gt;Prueba de Bootstrap 5&lt;/title&gt; 
+  &lt;meta charset="utf-8"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"&gt;
+  &lt;link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+  &lt;div class="container"&gt;
+    &lt;ul class="pagination"&gt;
+      &lt;li class="page-item"&gt;&lt;a class="page-link" href="#"&gt;&lt;&lt;/a&gt;&lt;/li&gt;
+      &lt;li class="page-item"&gt;&lt;a class="page-link" href="#"&gt;1&lt;/a&gt;&lt;/li&gt;
+      &lt;li class="page-item"&gt;&lt;a class="page-link" href="#"&gt;2&lt;/a&gt;&lt;/li&gt;
+      &lt;li class="page-item"&gt;&lt;a class="page-link" href="#"&gt;3&lt;/a&gt;&lt;/li&gt;
+      &lt;li class="page-item"&gt;&lt;a class="page-link" href="#"&gt;4&lt;/a&gt;&lt;/li&gt;
+      &lt;li class="page-item"&gt;&lt;a class="page-link" href="#"&gt;5&lt;/a&gt;&lt;/li&gt;
+      &lt;li class="page-item"&gt;&lt;a class="page-link" href="#"&gt;6&lt;/a&gt;&lt;/li&gt;
+      &lt;li class="page-item"&gt;&lt;a class="page-link" href="#"&gt;&gt;&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;hr&gt;
+    &lt;ul class="pagination pagination-sm"&gt;
+      &lt;li class="page-item"&gt;&lt;a class="page-link" href="#"&gt;&lt;&lt;/a&gt;&lt;/li&gt;
+      &lt;li class="page-item"&gt;&lt;a class="page-link" href="#"&gt;1&lt;/a&gt;&lt;/li&gt;
+      &lt;li class="page-item"&gt;&lt;a class="page-link" href="#"&gt;2&lt;/a&gt;&lt;/li&gt;
+      &lt;li class="page-item"&gt;&lt;a class="page-link" href="#"&gt;3&lt;/a&gt;&lt;/li&gt;
+      &lt;li class="page-item"&gt;&lt;a class="page-link" href="#"&gt;4&lt;/a&gt;&lt;/li&gt;
+      &lt;li class="page-item"&gt;&lt;a class="page-link" href="#"&gt;5&lt;/a&gt;&lt;/li&gt;
+      &lt;li class="page-item"&gt;&lt;a class="page-link" href="#"&gt;6&lt;/a&gt;&lt;/li&gt;
+      &lt;li class="page-item"&gt;&lt;a class="page-link" href="#"&gt;&gt;&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;hr&gt;
+    &lt;ul class="pagination  pagination-lg"&gt;
+      &lt;li class="page-item"&gt;&lt;a class="page-link" href="#"&gt;&lt;&lt;/a&gt;&lt;/li&gt;
+      &lt;li class="page-item"&gt;&lt;a class="page-link" href="#"&gt;1&lt;/a&gt;&lt;/li&gt;
+      &lt;li class="page-item active"&gt;&lt;a class="page-link" href="#"&gt;2&lt;/a&gt;&lt;/li&gt;
+      &lt;li class="page-item"&gt;&lt;a class="page-link" href="#"&gt;3&lt;/a&gt;&lt;/li&gt;
+      &lt;li class="page-item"&gt;&lt;a class="page-link" href="#"&gt;4&lt;/a&gt;&lt;/li&gt;
+      &lt;li class="page-item"&gt;&lt;a class="page-link" href="#"&gt;5&lt;/a&gt;&lt;/li&gt;
+      &lt;li class="page-item"&gt;&lt;a class="page-link" href="#"&gt;6&lt;/a&gt;&lt;/li&gt;
+      &lt;li class="page-item"&gt;&lt;a class="page-link" href="#"&gt;&gt;&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/div&gt;
+  
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+<p>En el navegador tenemos:</p>
+<img src="imagentema/foto102.jpg" border="0" alt="bootstrap 5 pagination page-item page-link pagination-sm pagination-lg justify-content-start justify-content-center justify-content-end"><br>
+<h2><a target="_blank" href="ejecutar3880.html?cod=61">Ejecutar Ejemplo</a></h2><h2><a href="indexd6cc.html?inicio=60">Retornar</a></h2> 
+
+<div>
+<!--publi-->
+<script async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<!-- adaptable2 -->
+<ins class="adsbygoogle dos"
+     style="display:inline-block"
+     data-ad-client="ca-pub-4669394804436935"
+     data-ad-slot="5774469161"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+<!--publi-->
+<script async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<!-- adaptable2 -->
+<ins class="adsbygoogle dos"
+     style="display:inline-block"
+     data-ad-client="ca-pub-4669394804436935"
+     data-ad-slot="5774469161"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+</div>
+
+
+
+
+</div>
+
+  </div>
+</div>  
+
+</div>
+
+<script type="text/javascript">
+function cambiar()
+{
+  var lista=document.getElementsByTagName('pre');
+  for(f=0;f<lista.length;f++)
+  {
+   lista[f].style.display='block';
+  }
+  document.getElementById('solucion').style.display='none';
+}
+
+</script>
+
+</body>
+
+
+<!-- Mirrored from www.tutorialesprogramacionya.com/bootstrap5ya/detalleconcepto.php?punto=61&codigo=61&inicio=60 by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 19 Dec 2023 11:11:21 GMT -->
+</html>

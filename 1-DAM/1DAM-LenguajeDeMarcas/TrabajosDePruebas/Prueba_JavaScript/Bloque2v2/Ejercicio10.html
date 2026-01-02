@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Ejercicio 10</title>
+</head>
+
+<body>
+
+    <h1>Ejercicio 10</h1>
+
+    <script>
+
+        const cuatrimestre = () => {
+            
+            let fechaActual = new Date();
+            let mes = fechaActual.getMonth(); 
+            let cuatrimestre;
+
+            mes >= 0 && mes <= 2 ?
+                cuatrimestre = 'Primer Cuatrimestre'
+            : mes >= 3 && mes <= 5 ?
+                cuatrimestre = 'Segundo Cuatrimestre'
+            : mes >= 6 && mes <= 8 ?
+                cuatrimestre = 'Tercer Cuatrimestre'
+            : 
+                cuatrimestre = 'Cuarto Cuatrimestre';
+
+            return cuatrimestre;
+        }
+
+        document.write(`Nos encontramos en el ${cuatrimestre()}.`);
+
+    </script>
+
+</body>
+
+</html>

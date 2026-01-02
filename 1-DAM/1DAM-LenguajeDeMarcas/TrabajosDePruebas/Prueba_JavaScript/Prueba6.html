@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Ejemplo de JavaScript</title>
+    <meta charset="UTF-8">
+</head>
+
+<body onLoad="activarPrimerControl()">
+
+    <form>
+        <input type="text" id="nombre" onFocus="vaciar(this)" onBlur="verificarEntrada(this)" value="nombre"><br>
+        <input type="text" id="edad" onFocus="vaciar(this)" onBlur="verificarEntrada(this)" value="edad">
+        <br>
+        <input type="button" value="Confirmar">
+
+        <br>
+        <br>
+
+        <a href="#" onMouseOver="pintar('#f00')" onMouseOut="pintar('#000')">Rojo</a> -
+        <a href="#" onMouseOver="pintar('#0f0')" onMouseOut="pintar('#000')">Verde</a> -
+        <a href="#" onMouseOver="pintar('#00f')" onMouseOut="pintar('#000')">Azul</a>
+        <div id="cuadrado1" style="background:#000;width:200px;height:200px"></div>
+
+        <br>
+        <br>
+
+        Ingrese su nombre:
+        <input type="text" id="nombre"><br>
+        Ingrese su edad:
+        <input type="text" id="edad"><br>
+        <input type="button" value="Confirmar">
+    </form>
+
+    <script>
+        function activarPrimerControl() {
+            document.getElementById('nombre').focus();
+        }
+
+        function pintar(col) {
+            document.getElementById('cuadrado1').style.backgroundColor = col;
+        }
+
+        function vaciar(control) {
+            control.value = '';
+        }
+
+        function verificarEntrada(control) {
+            alert('ingreso:' + control.value);
+        }
+    </script>
+
+
+</body>
+
+</html>

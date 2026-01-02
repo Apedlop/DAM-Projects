@@ -1,0 +1,50 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 1</title>
+</head>
+
+<body>
+    <h2>Ejercicio 1</h2>
+
+    <form>
+        <label for="dia">Día:</label>
+        <input type="text" id="dia" name="dia"><br><br>
+
+        <label for="mes">Mes:</label>
+        <input type="text" id="mes" name="mes"><br><br>
+
+        <label for="año">Año:</label>
+        <input type="text" id="año" name="año"><br><br>
+
+        <label for="hora">Hora:</label>
+        <input type="text" id="hora" name="hora"><br><br>
+
+        <input type="button" value="Rellenar" onclick="rellenarFechaHora()">
+    </form>
+
+    <script>
+        const rellenarFechaHora = () => {
+            let fechaHoraActual = new Date();
+            let dia = fechaHoraActual.getDate();
+            let mes = obtenerNombreMes(fechaHoraActual.getMonth());
+            let año = fechaHoraActual.getFullYear();
+            let hora = formatoHora(fechaHoraActual.getHours()) + ":" + formatoHora(fechaHoraActual.getMinutes());
+
+            document.getElementById('dia').value = dia;
+            document.getElementById('mes').value = mes;
+            document.getElementById('año').value = año;
+            document.getElementById('hora').value = hora;
+        }
+
+        const obtenerNombreMes = (numeroMes) => {
+            let meses = ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'];
+            return meses[numeroMes];
+        }
+
+        const formatoHora = (hora) => hora < 10 ? '0' + hora : hora;
+    </script>
+</body>
+
+</html>

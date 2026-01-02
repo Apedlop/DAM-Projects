@@ -1,0 +1,55 @@
+<html>
+    <head>
+        <title>Ejercicio 3</title>
+    </head>
+
+    <body>
+
+        <h1>Ejercicio 3</h1>
+
+        <script>
+
+            function acumulador() {
+                let contadorEmpleadosMenos = 0;
+                let contadorEmpleadosMas = 0;
+                let contadorSueldo = 0;
+            
+                for (let i = 1; i <= 5; i++) {
+                    let sueldo = parseFloat(prompt('Introduce cuánto cobra el trabajador ' + i + ': '));
+            
+                    // if (sueldo >= 100 && sueldo <= 500) {
+                    //     if (sueldo >= 100 && sueldo <= 300) {
+                    //         contadorEmpleadosMenos++;
+                    //         contadorSueldo += sueldo;
+                    //     } else {
+                    //         contadorEmpleadosMas++;
+                    //         contadorSueldo += sueldo;
+                    //     }
+                    // } else if (sueldo > 500) {
+                    //     document.write('El trabajador ' + i + ' cobra más de lo que debería.<br>');
+                    // } else {
+                    //     document.write('El trabajador ' + i + ' cobra menos de lo que debería.<br>');
+                    // }
+
+                    (sueldo >= 100 && sueldo <= 500) ? 
+                        (sueldo >= 100 && sueldo <= 300) ? 
+                            (contadorEmpleadosMenos++, contadorSueldo += sueldo) 
+                        : 
+                        (contadorEmpleadosMas++, contadorSueldo += sueldo)
+                    : 
+                    (sueldo > 500) ? document.write('El trabajador ' + i + ' cobra más de lo que debería.<br>') 
+                    : 
+                    document.write('El trabajador ' + i + ' cobra menos de lo que debería.<br>');
+
+                }
+            
+                document.write('Cantidad de empleados que cobran entre $100 y $300: ' + contadorEmpleadosMenos + '<br>');
+                document.write('Cantidad de empleados que cobran entre $301 y $500: ' + contadorEmpleadosMas + '<br>');
+                document.write('Suma de sueldos de todos los empleados: ' + contadorSueldo + '<br>');
+            }
+            
+            acumulador();
+            
+        </script>
+    </body>
+</html>

@@ -1,0 +1,392 @@
+
+<!DOCTYPE html>
+<html>
+
+
+<!-- Mirrored from www.tutorialesprogramacionya.com/bootstrap5ya/detalleconcepto.php?punto=40&codigo=40&inicio=20 by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 19 Dec 2023 11:10:56 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QWKWPBDEFK"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-QWKWPBDEFK');
+</script>
+
+<script async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-4669394804436935",
+    enable_page_level_ads: true
+  });
+</script>
+
+<title>Tipografía</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">    
+<meta name="keywords" content="bootstrap 5,css, html, programación, webmaster, tutorial">
+<meta name="description" content="El objetivo de este tutorial 
+    es presentar los conceptos básicos de bootstrap 5.">
+<meta name="author" content="Diego Moisset">
+
+<link href="../css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="estilos.css">
+
+<style>
+html,body {
+	background-color: #D3E9D0;
+	font-family: sans-serif,arial;
+
+}
+</style>
+
+<style>
+.uno { width: 320px; height: 100px; }
+@media(min-width: 500px) { .uno { width: 320px; height: 100px; } }
+@media(min-width: 800px) { .uno { width: 336px; height: 280px; } }
+
+.dos { width: 320px; height: 100px; }
+@media(min-width: 500px) { .dos { width: 320px; height: 100px; } }
+@media(min-width: 800px) { .dos { width: 336px; height: 280px; } }
+</style>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','../../www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-80268657-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+</head>
+
+<body>
+
+
+<div class="container">
+
+<div class="row">
+  <div class="col-md-12">
+
+<div class="titulodetalle">
+<h1>40 - Tipografía</h1></div>
+
+  </div>
+</div>  
+
+
+<div class="row">
+  <div class="col-md-12">
+
+<div class="cuerpodetalle">
+<div style="display:block;float:left;margin: 5px;"> 
+ <script async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<!-- adaptable1 -->
+<ins class="adsbygoogle uno"
+     style="display:inline-block"
+     data-ad-client="ca-pub-4669394804436935"
+     data-ad-slot="4716538363"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script> 
+</div> 
+
+
+<p>Bootstrap 5 usa por defecto un font-size de 16px para el elemento "html".</p>
+<p>Muchas etiquetas utilizan como medida relativa el rem que es proporcional al font-size definido en la etiqueta "html".</p>
+<p>La fuente por defecto que define Bootstrap 5 para la propiedad "font-family" de la marca "body" es:</p>
+<pre>
+  --bs-font-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+</pre>
+<p>Bootstrap 5 usa una "lista de fuentes nativas" (fuentes del sistema operativo del usuario), con una reserva para Helvetica Neue, Arial y sans-serif.</p>
+<p>Los tamaños de las etiquetas h1, h2, h3 etc. se dimensionan de acuerdo a medidas relativos (rem), si abrimos el código fuente del archivo bootstrap.css tenemos las siguientes reglas:</p>
+<pre>
+h6, .h6, h5, .h5, h4, .h4, h3, .h3, h2, .h2, h1, .h1 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+h1, .h1 {
+  font-size: calc(1.375rem + 1.5vw);
+}
+@media (min-width: 1200px) {
+  h1, .h1 {
+    font-size: 2.5rem;
+  }
+}
+
+h2, .h2 {
+  font-size: calc(1.325rem + 0.9vw);
+}
+@media (min-width: 1200px) {
+  h2, .h2 {
+    font-size: 2rem;
+  }
+}
+
+h3, .h3 {
+  font-size: calc(1.3rem + 0.6vw);
+}
+@media (min-width: 1200px) {
+  h3, .h3 {
+    font-size: 1.75rem;
+  }
+}
+
+h4, .h4 {
+  font-size: calc(1.275rem + 0.3vw);
+}
+@media (min-width: 1200px) {
+  h4, .h4 {
+    font-size: 1.5rem;
+  }
+}
+
+h5, .h5 {
+  font-size: 1.25rem;
+}
+
+h6, .h6 {
+  font-size: 1rem;
+}
+</pre>
+<p>Como vemos los tamaños para las etiquetas son proporcionales al font-size de la etiqueta "html" al utilizar rem como medida.</p>
+<p>Es decir que la etiqueta h6 tiene tamaño de fuente de 1rem que es igual a 16px. Luego h5 tiene un tamaño de 20px que resulta de multiplicar 1.25 * 16px etc.</p>
+<h3>Problema</h3>
+<p>Mostrar una serie de títulos empleando primero las etiquetas h1 al h6, luego hacer lo mismo con las clases "h1" a "h6".</p>
+<pre class="recuadro">
+&lt;!doctype html&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;title&gt;Prueba de Bootstrap 5&lt;/title&gt; 
+  &lt;meta charset="utf-8"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"&gt;
+  &lt;link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  
+  &lt;div class="container"&gt;
+    &lt;h1&gt;Titulo de nivel 1&lt;/h1&gt; 
+    &lt;h2&gt;Titulo de nivel 2&lt;/h2&gt;
+    &lt;h3&gt;Titulo de nivel 3&lt;/h3&gt;
+    &lt;h4&gt;Titulo de nivel 4&lt;/h4&gt;
+    &lt;h5&gt;Titulo de nivel 5&lt;/h5&gt;
+    &lt;h6&gt;Titulo de nivel 6&lt;/h6&gt;
+    &lt;hr&gt;
+    &lt;p class="h1"&gt;Texto con la clase h1&lt;/p&gt; 
+    &lt;p class="h2"&gt;Texto con la clase h2&lt;/p&gt; 
+    &lt;p class="h3"&gt;Texto con la clase h3&lt;/p&gt; 
+    &lt;p class="h4"&gt;Texto con la clase h4&lt;/p&gt; 
+    &lt;p class="h5"&gt;Texto con la clase h5&lt;/p&gt; 
+    &lt;p class="h6"&gt;Texto con la clase h6&lt;/p&gt;                 
+  &lt;/div&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+
+<p>En pantalla tenemos como resultado:</p>
+<img src="imagentema/foto058.jpg" border="0" alt="bootstrap 4 h1 h2 h3 h4 h5 h6 .h1 .h2 .h3 .h4 .h5 .h6"><br>
+<p>Si tenemos que mostrar títulos debemos utilizar las etiquetas h1, h2, h3 etc., en el caso que necesitemos mostrar texto dentro del navegador que coincida en tamaño y fuente con respecto a los títulos pero que no sean títulos utilizaremos las clases "h1", "h2" etc.</p>
+
+<h3>Clases display-1, display-2, display-3, display-4, display-6 y display-6</h3>
+<p>Si necesitamos destacar alguna etiqueta h1, h2, h3 etc. podemos agregarle alguna de estas cuatro clases definidas en Bootstrap 5:</p>
+<pre>
+.display-1 {
+  font-size: calc(1.625rem + 4.5vw);
+  font-weight: 300;
+  line-height: 1.2;
+}
+@media (min-width: 1200px) {
+  .display-1 {
+    font-size: 5rem;
+  }
+}
+
+.display-2 {
+  font-size: calc(1.575rem + 3.9vw);
+  font-weight: 300;
+  line-height: 1.2;
+}
+@media (min-width: 1200px) {
+  .display-2 {
+    font-size: 4.5rem;
+  }
+}
+
+.display-3 {
+  font-size: calc(1.525rem + 3.3vw);
+  font-weight: 300;
+  line-height: 1.2;
+}
+@media (min-width: 1200px) {
+  .display-3 {
+    font-size: 4rem;
+  }
+}
+
+.display-4 {
+  font-size: calc(1.475rem + 2.7vw);
+  font-weight: 300;
+  line-height: 1.2;
+}
+@media (min-width: 1200px) {
+  .display-4 {
+    font-size: 3.5rem;
+  }
+}
+
+.display-5 {
+  font-size: calc(1.425rem + 2.1vw);
+  font-weight: 300;
+  line-height: 1.2;
+}
+@media (min-width: 1200px) {
+  .display-5 {
+    font-size: 3rem;
+  }
+}
+
+.display-6 {
+  font-size: calc(1.375rem + 1.5vw);
+  font-weight: 300;
+  line-height: 1.2;
+}
+@media (min-width: 1200px) {
+  .display-6 {
+    font-size: 2.5rem;
+  }
+}
+</pre>
+
+<p>Una página que los emplea es:</p>
+<pre class="recuadro">
+&lt;!doctype html&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;title&gt;Prueba de Bootstrap 5&lt;/title&gt; 
+  &lt;meta charset="utf-8"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"&gt;
+  &lt;link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  
+  &lt;div class="container"&gt;
+    &lt;h1 class="display-1"&gt;Titulo 1 con display-1&lt;/h1&gt; 
+    &lt;h1 class="display-2"&gt;Titulo 1 con display-2&lt;/h1&gt; 
+    &lt;h1 class="display-3"&gt;Titulo 1 con display-3&lt;/h1&gt; 
+    &lt;h1 class="display-4"&gt;Titulo 1 con display-4&lt;/h1&gt;             
+    &lt;h1 class="display-5"&gt;Titulo 1 con display-5&lt;/h1&gt;             
+    &lt;h1 class="display-6"&gt;Titulo 1 con display-6&lt;/h1&gt;                     
+  &lt;/div&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+<p>En el navegador tenemos como resultado:</p>
+<img src="imagentema/foto059.jpg" border="0" alt="bootstrap 4 h1 h2 h3 h4 h5 h6 .display-1 .display-2 .display-3 .display-4 .display-5 .display-6"><br>
+
+<h3>Etiqueta o clase small dentro de los títulos</h3>
+<p>Si dentro de un título utilizamos la etiqueta small luego dicho contenido aparece con un tamaño de 0.875em del título que lo contiene, si vemos el código fuente de "bootstrap.css" podemos encontrar la siguiente definición:</p>
+<pre>
+small, .small {
+  font-size: 0.875em;
+</pre>
+<p>Aplicando a una página:</p>
+<pre class="recuadro">
+&lt;!doctype html&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;title&gt;Prueba de Bootstrap 5&lt;/title&gt; 
+  &lt;meta charset="utf-8"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"&gt;
+  &lt;link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  
+  &lt;div class="container"&gt;
+    &lt;h1&gt;Titulo de nivel 1&lt;small&gt;(acotación)&lt;/small&gt;&lt;/h1&gt; 
+    &lt;h2&gt;Titulo de nivel 2&lt;small&gt;(acotación)&lt;/small&gt;&lt;/h2&gt;
+    &lt;h3&gt;Titulo de nivel 3&lt;small&gt;(acotación)&lt;/small&gt;&lt;/h3&gt;
+    &lt;h4&gt;Titulo de nivel 4&lt;small&gt;(acotación)&lt;/small&gt;&lt;/h4&gt;
+    &lt;h5&gt;Titulo de nivel 5&lt;small&gt;(acotación)&lt;/small&gt;&lt;/h5&gt;
+    &lt;h6&gt;Titulo de nivel 6&lt;small&gt;(acotación)&lt;/small&gt;&lt;/h6&gt;
+  &lt;/div&gt;
+  
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+
+<p>Y tenemos como resultado en el navegador:</p>
+<img src="imagentema/foto060.jpg" border="0" alt="bootstrap 5 h1 h2 h3 h4 h5 h6 small"><br>
+
+<p>Podemos agregar la clase 'text-muted' cuando definimos la etiqueta 'small' dentro del título:</p>
+<pre>
+  &lt;div class="container"&gt;
+    &lt;h1&gt;Curso Web&lt;small class="text-muted"&gt;(html, css y javascript)&lt;/small&gt;&lt;/h1&gt; 
+  &lt;/div&gt;
+</pre>
+<p>La representación visual es:</p>
+<img src="imagentema/foto060b.jpg" border="0" alt="bootstrap 5 text-muted small"><br><h2><a target="_blank" href="ejecutard326.html?cod=40">Ejecutar Ejemplo</a></h2><h2><a href="index28fa.html?inicio=20">Retornar</a></h2> 
+
+<div>
+<!--publi-->
+<script async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<!-- adaptable2 -->
+<ins class="adsbygoogle dos"
+     style="display:inline-block"
+     data-ad-client="ca-pub-4669394804436935"
+     data-ad-slot="5774469161"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+<!--publi-->
+<script async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<!-- adaptable2 -->
+<ins class="adsbygoogle dos"
+     style="display:inline-block"
+     data-ad-client="ca-pub-4669394804436935"
+     data-ad-slot="5774469161"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+</div>
+
+
+
+
+</div>
+
+  </div>
+</div>  
+
+</div>
+
+<script type="text/javascript">
+function cambiar()
+{
+  var lista=document.getElementsByTagName('pre');
+  for(f=0;f<lista.length;f++)
+  {
+   lista[f].style.display='block';
+  }
+  document.getElementById('solucion').style.display='none';
+}
+
+</script>
+
+</body>
+
+
+<!-- Mirrored from www.tutorialesprogramacionya.com/bootstrap5ya/detalleconcepto.php?punto=40&codigo=40&inicio=20 by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 19 Dec 2023 11:10:58 GMT -->
+</html>

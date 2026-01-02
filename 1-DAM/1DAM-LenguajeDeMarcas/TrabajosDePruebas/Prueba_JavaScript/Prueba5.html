@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Ejemplo de JavaScript</title>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+    <script>
+        const mapa1 = new Map([
+            ["casa", "house"],
+            ["rojo", "red"],
+            ["auto", "car"]
+        ]);
+        const palcastellano = prompt("Ingrese una palabra en castellano:");
+        if (mapa1.has(palcastellano))
+            document.write(`La traducción de ${palcastellano} es ${mapa1.get(palcastellano)}`);
+        else
+            document.write(`No existe una traducción para la palabra ${palcastellano}`)
+    </script>
+</body>
+
+</html>

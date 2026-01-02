@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <title>IMC</title>
+    </head>
+    <body>
+        <h1>Ejercicio 3 // IMC</h1>
+        <h3>Índice de Masa Corporal</h3>
+        <script>
+            const imc = (peso, altura) => {
+                let bmi = peso / Math.pow(altura, 2);
+                bmi < 18.5 ? "bajo de peso" :
+                    bmi >= 18.5 && bmi <= 24.9 ? "normal": 
+                        bmi >= 25 && bmi <= 29.9 ? "sobrepeso" : "obeso";
+            }
+            
+            let peso = parseFloat(prompt("Introduce un peso: "));
+            let altura = parseFloat(prompt("Introduce una altura: "));
+            document.write(`Usted está ${imc(peso, altura)}`);
+        </script>
+    </body>
+</html>

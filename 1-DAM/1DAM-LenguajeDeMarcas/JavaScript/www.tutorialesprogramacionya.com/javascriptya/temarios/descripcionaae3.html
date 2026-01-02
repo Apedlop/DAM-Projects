@@ -1,0 +1,399 @@
+<html>
+
+
+<!-- Mirrored from www.tutorialesprogramacionya.com/javascriptya/temarios/descripcion.php?inicio=40&cod=51 by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 18 Mar 2024 10:33:14 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QWKWPBDEFK"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-QWKWPBDEFK');
+</script>
+
+<script async src="../../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-4669394804436935",
+    enable_page_level_ads: true
+  });
+</script>
+<title>Tutorial de JavaScript : Conceptos</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="../css/estilos.css" rel="stylesheet" type="text/css">
+  <meta charset="UTF-8">
+
+<style>
+html,body {
+	background-color: #D3E9D0;
+	font-family: Trebuchet MS, Verdana, Arial, sans-serif;
+	font-size: 10pt;
+	text-align:center;
+}
+
+h1 {
+	font-size: 14pt;
+	margin: 0%;
+}
+
+div#contentdetalle{clear:left;
+                   max-width:900px;
+				   border-top:0px solid #999;
+				   padding-top:15px;
+				   background-color: #aed7a8;
+				   text-align:left;
+				   font-size:1.3em;
+				   font-weight:normal;
+				   font-family:arial;
+				   padding:20px}
+				   
+.recuadro {
+  background-color:#ffffcc;
+  text-align:left;
+  font-family:courier;
+  font-size:1em;
+  border-width:0;
+  padding:5px;
+
+  border: 1px dotted #ffaa00;
+  margin-left:5px;  
+}		
+
+.tablajs {
+    border-collapse: collapse;
+    background-color: #fff;
+    border: 1px solid #dee2e6;    
+    padding: 0.3rem;    
+}
+
+.tablajs th,
+.tablajs td {
+  padding: 0.75rem;
+  vertical-align: top;
+  border-top: 1px solid #dee2e6;
+}
+
+		   
+</style>
+
+<style>
+.uno { width: 320px; height: 100px; }
+@media(min-width: 500px) { .uno { width: 320px; height: 100px; } }
+@media(min-width: 800px) { .uno { width: 336px; height: 280px; } }
+
+.dos { width: 320px; height: 100px; }
+@media(min-width: 500px) { .dos { width: 320px; height: 100px; } }
+@media(min-width: 800px) { .dos { width: 336px; height: 280px; } }
+</style>
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','../../../www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-80268657-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</head>
+
+<body>
+
+<div class="upperleft">
+  <div class="upperright">
+    <div class="lowerleft">
+      <div class="lowerright">
+<table width="98%">
+<tr>
+<td>
+<span style="float:right"><a target="_blank" style="margin-right:0.1em;" href="https://www.tutorialesprogramacionya.com/">Listado completo de tutoriales</a></span>
+<h1>Array: métodos sort y reverse</h1></td>
+<td align="right">
+
+
+</td>
+</tr>
+</table>
+
+      </div>
+    </div>
+  </div>
+</div>
+<br>
+
+
+<div class="upperleft">
+  <div class="upperright">
+    <div class="lowerleft">
+      <div class="lowerright">
+
+<div id="contentdetalle">
+
+<div style="display:block;float:left;margin: 5px;"> 
+ <script async src="../../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<!-- adaptable1 -->
+<ins class="adsbygoogle uno"
+     style="display:inline-block"
+     data-ad-client="ca-pub-4669394804436935"
+     data-ad-slot="4716538363"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script> 
+</div> 
+
+<p>Otro método muy útil de la clase Array es sort. La sintaxis más sencilla y por defecto es para ordenar una lista de string:</p>
+<pre class="recuadro">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+
+&lt;head&gt;
+    &lt;title&gt;Ejemplo de JavaScript&lt;/title&gt;
+    &lt;meta charset="UTF-8"&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+
+    &lt;script&gt;
+        let nombres = ['marcos', 'ana', 'luis', 'jorge', 'carlos'];
+        document.write('Vector antes de ordenarlo&lt;br&gt;');
+        for (let f = 0; f &lt; nombres.length; f++) {
+            document.write(nombres[f] + '&lt;br&gt;');
+        }
+        nombres.sort();
+        document.write('Vector después de ordenarlo&lt;br&gt;');
+        for (let f = 0; f &lt; nombres.length; f++) {
+            document.write(nombres[f] + '&lt;br&gt;');
+        }
+    &lt;/script&gt;
+
+&lt;/body&gt;
+
+&lt;/html&gt;
+</pre>
+<p>Como vemos creamos un vector con una lista de string:</p>
+<pre>
+        let nombres = ['marcos', 'ana', 'luis', 'jorge', 'carlos'];
+</pre>
+<p>Luego con llamar simplemente al método sort el mismo se encarga de intercambiar las componentes de tal forma que el menor alfabéticamente se encuentra al principio y así sucesivamente:</p>
+<pre>
+        nombres.sort();
+</pre>
+<p>Para ordenar una lista de enteros se complica el algoritmo ya que debemos pasar al método sort una función anónima indicando como implementar la comparación entre elementos:</p>
+<pre class="recuadro">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+
+&lt;head&gt;
+    &lt;title&gt;Ejemplo de JavaScript&lt;/title&gt;
+    &lt;meta charset="UTF-8"&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+
+    &lt;script&gt;
+        let vec = [100, 5, 60, 3, 90];
+        document.write('Vector antes de ordenarlo&lt;br&gt;');
+        for (let f = 0; f &lt; vec.length; f++) {
+            document.write(vec[f] + '&lt;br&gt;');
+        }
+        vec.sort(function(v1, v2) {
+            if (v1 &lt; v2)
+                return -1; // v1 es menor que v2
+            else
+                return 1; // v1 es mayor que v2
+        });
+        document.write('Vector después de ordenarlo&lt;br&gt;');
+        for (let f = 0; f &lt; vec.length; f++) {
+            document.write(vec[f] + '&lt;br&gt;');
+        }
+    &lt;/script&gt;
+
+&lt;/body&gt;
+
+&lt;/html&gt;
+</pre>
+<p>Como vemos al método sort hemos pasado una función que retorna un 1 o -1:</p>
+<pre>
+        vec.sort(function(v1, v2) {
+            if (v1 &lt; v2)
+                return -1; // v1 es menor que v2
+            else
+                return 1; // v1 es mayor que v2
+        });
+</pre>
+<p>Los parámetros v1 y v2 son los elementos que se comparan:</p>
+<p>Si el contenido de v1 es menor que v2, se sitúa v1 en un indice menor que v2 (debe retornar un valor menor a cero)</p>
+<p>Si el contenido de v1 es mayor que v2, se sitúa v2 en un indice menor que v1 (debe retornar un valor mayor a cero)</p>
+
+<p>El siguiente método a analizar en éste concepto es reverse(), como podemos intuir este método invierte el orden de los elementos del vector. Nos puede ser de utilidad si tenemos ordenado un vector en orden ascendente y lo queremos en forma descendente.<p>
+<strong>Problema</strong>
+<p>Crear un vector con 10 elementos enteros con valores aleatorios. Ordenarlos de menor a mayor. Luego invertir el vector para verlo de mayor a menor.</p>
+<pre class="recuadro">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+
+&lt;head&gt;
+    &lt;title&gt;Ejemplo de JavaScript&lt;/title&gt;
+    &lt;meta charset="UTF-8"&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+
+    &lt;script&gt;
+        let vec = new Array(10);
+        for (let f = 0; f &lt; vec.length; f++) {
+            vec[f] = parseInt(Math.random() * 1000);
+        }
+        vec.sort(function(v1, v2) {
+            if (v1 &gt; v2)
+                return 1;
+            else
+                return -1;
+        });
+        document.write('Vector ordenado en forma ascendente&lt;br&gt;');
+        for (let f = 0; f &lt; vec.length; f++) {
+            document.write(vec[f] + '&lt;br&gt;');
+        }
+        vec.reverse();
+        document.write('Vector ordenado en forma descendente&lt;br&gt;');
+        for (let f = 0; f &lt; vec.length; f++) {
+            document.write(vec[f] + '&lt;br&gt;');
+        }
+    &lt;/script&gt;
+
+&lt;/body&gt;
+
+&lt;/html&gt;
+</pre>
+<p>El resultado de ejecutar el programa es:</p>
+<pre class="recuadro">
+Vector ordenado en forma ascendente
+32
+131
+329
+364
+488
+515
+860
+864
+919
+919
+Vector ordenado en forma descendente
+919
+919
+864
+860
+515
+488
+364
+329
+131
+32
+</pre>
+<p>Como vemos luego de imprimirlo en forma ordenada procedemos a llamar al método reverse() que invierte los elementos del vector (es decir el último pasa a ser primero, el anteúltimo pasa a ser segundo y así sucesivamente)</p>
+<p><strong>Problema</strong></p>
+<p>Definir un arreglo de cuatro elementos de tipo objeto, cada objeto representa una persona con su nombre y edad.<br>
+Imprimir el vector previo y posteriormente a su ordenamiento por la edad.</p>
+<pre class="recuadro">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+
+&lt;head&gt;
+    &lt;title&gt;Ejemplo de JavaScript&lt;/title&gt;
+    &lt;meta charset="UTF-8"&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+
+    &lt;script&gt;
+        let personas = [{
+            nombre: 'diego',
+            edad: 53
+        }, {
+            nombre: 'carlos',
+            edad: 26
+        }, {
+            nombre: 'ana',
+            edad: 70
+        }, {
+            nombre: 'victoria',
+            edad: 15
+        }];
+        document.write('Personas y sus edades&lt;br&gt;');
+        for (let f = 0; f &lt; personas.length; f++) {
+            document.write('Nombre:' + personas[f].nombre + ' - ' + 'Edad:' + personas[f].edad + '&lt;br&gt;');
+        }
+        document.write('Personas ordenadas por su edad sus edades&lt;br&gt;');
+        personas.sort(function(persona1, persona2) {
+            if (persona1.edad &gt; persona2.edad) {
+                return -1;
+            } else {
+                return 1;
+            }
+        });
+        document.write('Personas y sus edades&lt;br&gt;');
+        for (let f = 0; f &lt; personas.length; f++) {
+            document.write('Nombre:' + personas[f].nombre + ' - ' + 'Edad:' + personas[f].edad + '&lt;br&gt;');
+        }
+    &lt;/script&gt;
+
+&lt;/body&gt;
+
+&lt;/html&gt;
+</pre>
+<p>Ahora en la función anónima del método sort debemos acceder al atributo edad de cada persona:</p>
+<pre>
+        personas.sort(function(persona1, persona2) {
+            if (persona1.edad &gt; persona2.edad) {
+                return -1;
+            } else {
+                return 1;
+            }
+        });
+</pre></p>
+</div>
+
+<div>
+<!--publi-->
+<script async src="../../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<!-- adaptable2 -->
+<ins class="adsbygoogle dos"
+     style="display:inline-block"
+     data-ad-client="ca-pub-4669394804436935"
+     data-ad-slot="5774469161"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+<!--publi-->
+<script async src="../../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<!-- adaptable2 -->
+<ins class="adsbygoogle dos"
+     style="display:inline-block"
+     data-ad-client="ca-pub-4669394804436935"
+     data-ad-slot="5774469161"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+</div>
+
+
+   <h2><a href="../index1e61.html?inicio=40">Retornar</a></h2>   
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+</body>
+
+
+<!-- Mirrored from www.tutorialesprogramacionya.com/javascriptya/temarios/descripcion.php?inicio=40&cod=51 by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 18 Mar 2024 10:33:14 GMT -->
+</html>

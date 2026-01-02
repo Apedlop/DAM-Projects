@@ -1,0 +1,393 @@
+<html>
+
+
+<!-- Mirrored from www.tutorialesprogramacionya.com/javascriptya/temarios/descripcion.php?inicio=100&cod=103 by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 18 Mar 2024 10:33:26 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QWKWPBDEFK"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-QWKWPBDEFK');
+</script>
+
+<script async src="../../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-4669394804436935",
+    enable_page_level_ads: true
+  });
+</script>
+<title>Tutorial de JavaScript : Conceptos</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="../css/estilos.css" rel="stylesheet" type="text/css">
+  <meta charset="UTF-8">
+
+<style>
+html,body {
+	background-color: #D3E9D0;
+	font-family: Trebuchet MS, Verdana, Arial, sans-serif;
+	font-size: 10pt;
+	text-align:center;
+}
+
+h1 {
+	font-size: 14pt;
+	margin: 0%;
+}
+
+div#contentdetalle{clear:left;
+                   max-width:900px;
+				   border-top:0px solid #999;
+				   padding-top:15px;
+				   background-color: #aed7a8;
+				   text-align:left;
+				   font-size:1.3em;
+				   font-weight:normal;
+				   font-family:arial;
+				   padding:20px}
+				   
+.recuadro {
+  background-color:#ffffcc;
+  text-align:left;
+  font-family:courier;
+  font-size:1em;
+  border-width:0;
+  padding:5px;
+
+  border: 1px dotted #ffaa00;
+  margin-left:5px;  
+}		
+
+.tablajs {
+    border-collapse: collapse;
+    background-color: #fff;
+    border: 1px solid #dee2e6;    
+    padding: 0.3rem;    
+}
+
+.tablajs th,
+.tablajs td {
+  padding: 0.75rem;
+  vertical-align: top;
+  border-top: 1px solid #dee2e6;
+}
+
+		   
+</style>
+
+<style>
+.uno { width: 320px; height: 100px; }
+@media(min-width: 500px) { .uno { width: 320px; height: 100px; } }
+@media(min-width: 800px) { .uno { width: 336px; height: 280px; } }
+
+.dos { width: 320px; height: 100px; }
+@media(min-width: 500px) { .dos { width: 320px; height: 100px; } }
+@media(min-width: 800px) { .dos { width: 336px; height: 280px; } }
+</style>
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','../../../www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-80268657-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</head>
+
+<body>
+
+<div class="upperleft">
+  <div class="upperright">
+    <div class="lowerleft">
+      <div class="lowerright">
+<table width="98%">
+<tr>
+<td>
+<span style="float:right"><a target="_blank" style="margin-right:0.1em;" href="https://www.tutorialesprogramacionya.com/">Listado completo de tutoriales</a></span>
+<h1>ES6 - Map</h1></td>
+<td align="right">
+
+
+</td>
+</tr>
+</table>
+
+      </div>
+    </div>
+  </div>
+</div>
+<br>
+
+
+<div class="upperleft">
+  <div class="upperright">
+    <div class="lowerleft">
+      <div class="lowerright">
+
+<div id="contentdetalle">
+
+<div style="display:block;float:left;margin: 5px;"> 
+ <script async src="../../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<!-- adaptable1 -->
+<ins class="adsbygoogle uno"
+     style="display:inline-block"
+     data-ad-client="ca-pub-4669394804436935"
+     data-ad-slot="4716538363"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script> 
+</div> 
+
+<p>Con la llegada de ES6 se presenta un nuevo objeto llamado 'Map' que nos evita tener que implementar desde cero una estructura de datos tipo diccionario o mapa.</p>
+<p>La estructura de datos tipo 'Map' utiliza una clave para acceder a un valor.</p>
+
+<p>Podemos relacionarlo con conceptos que conocemos:</p>
+<ul>
+<li>
+<p>Un diccionario tradicional que conocemos podemos utilizar un 'Map' para representarlo. La clave sería la palabra y el valor sería la definición de dicha palabra.</p>
+</li>
+<li>
+<p>Una agenda personal también la podemos representar como un diccionario. La fecha sería la clave y las actividades de dicha fecha sería el valor.</p>
+</li>
+<li>
+<p>Un conjunto de usuarios de un sitio web podemos almacenarlo en un diccionario. El nombre de usuario sería la clave y como valor podríamos almacenar su mail, clave, fechas de login etc.</p>
+</li>
+</ul>
+<p>Como clave se puede utilizar cualquier tipo de dato primitivo como también de tipo objeto. Podemos almacenar como valor también datos primitivos como objetos.</p>
+<h3>Creación de un Map.</h3>
+<ol>
+<li>
+<p>Podemos crear un Map vacío y posteriormente añadir elementos al mapa mediante el método 'set':</p>
+<pre class="recuadro">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+
+&lt;head&gt;
+    &lt;title&gt;Ejemplo de JavaScript&lt;/title&gt;
+    &lt;meta charset="UTF-8"&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+    &lt;script&gt;
+        const mapa1 = new Map();
+        mapa1.set("casa", "house");
+        mapa1.set("rojo", "red");
+        mapa1.set("auto", "car");
+        console.log(mapa1);
+    &lt;/script&gt;
+&lt;/body&gt;
+
+&lt;/html&gt;
+</pre>
+<p>Utilizamos el método log del objeto console para mostrar el contenido del mapa (recordar que en Chrome y FireFox debemos presionar la tecla 'F12' para que se muestre la ventana de la console):</p>
+<img src="imagentema/foto011.jpg" border="0" alt="Map javascript"><br>
+</li>
+
+<li>
+<p>Podemos crear un Map e inmediatamente pasar los datos iniciales en el constructor del mismo:</p>
+<pre class="recuadro">
+    &lt;script&gt;
+        const mapa1 = new Map([
+            ["casa", "house"],
+            ["rojo", "red"],
+            ["auto", "car"]
+        ]);
+        console.log(mapa1);
+    &lt;/script&gt;
+</pre>
+</li>
+</ol>
+
+<h3>Recuperar el valor para una determinada clave.</h3>
+<p>Para recuperar un valor para una determinada clave del 'Map' disponemos del método 'get'.</p>
+<p><strong>Problema</strong></p>
+<p>Ingresar por teclado una palabra en castellano y posteriormente mostrar su traducción al inglés.</p>
+<pre class="recuadro">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+
+&lt;head&gt;
+    &lt;title&gt;Ejemplo de JavaScript&lt;/title&gt;
+    &lt;meta charset="UTF-8"&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+    &lt;script&gt;
+        const mapa1 = new Map([
+            ["casa", "house"],
+            ["rojo", "red"],
+            ["auto", "car"]
+        ]);
+        const palcastellano = prompt("Ingrese una palabra en castellano:");
+        document.write(`La traducción de ${palcastellano} es ${mapa1.get(palcastellano)}`);
+    &lt;/script&gt;
+&lt;/body&gt;
+
+&lt;/html&gt;
+</pre>
+<p>Como podemos comprobar al ejecutar el algoritmo si ingresamos una palabra que existe en el 'Map' luego el método get nos retorna el valor para dicha palabra. Si ingresamos una palabra que no existe el método nos retorna el valor 'undefined'.</p>
+<p>Disponemos de otro método en el objeto 'Map' llamado 'has' que le debemos pasar como parámetro una clave y en el caso que exista nos retorna true, en caso negativo nos retorna false. Luego podemos modificar nuestra aplicación para que nos muestre un mensaje en el caso que no exista la traducción de la palabra ingresada:</p>
+<pre>
+  &lt;script&gt;
+    const mapa1 = new Map([
+      ["casa", "house"],
+      ["rojo", "red"],
+      ["auto", "car"]
+    ]);
+    const palcastellano = prompt("Ingrese una palabra en castellano:");
+    if (mapa1.has(palcastellano))
+      document.write(`La traducción de ${palcastellano} es ${mapa1.get(palcastellano)}`);
+    else
+      document.write(`No existe una traducción para la palabra ${palcastellano}`)
+  &lt;/script&gt;
+</pre>
+
+<h3>Tamaño del Map.</h3>
+<p>Mediante la propiedad 'size' podemos conocer la cantidad de entradas almacenadas en el mapa:</p>
+<pre>
+  &lt;script&gt;
+    const mapa1 = new Map([
+      ["casa", "house"],
+      ["rojo", "red"],
+      ["auto", "car"]
+    ]);
+    mapa1.set("ventana","window");
+    console.log(mapa1.size);    // 4
+  &lt;/script&gt;
+</pre>
+
+<h3>Eliminación de elementos del Map.</h3>
+<p>Podemos eliminar elementos mediante el método 'delete':</p>
+<pre>
+  &lt;script&gt;
+    const mapa1 = new Map([
+      ["casa", "house"],
+      ["rojo", "red"],
+      ["auto", "car"]
+    ]);
+    mapa1.delete("casa");
+    console.log(mapa1.size);    // 2
+  &lt;/script&gt;
+</pre>
+<p>El método 'delete' retorna true si se eliminó la entrada en el Map y false en caso que le hayamos pasado una clave que no exista.</p>
+<p>Para eliminar todos los elementos del mapa disponemos del método 'clear':</p>
+<pre>
+  &lt;script&gt;
+    const mapa1 = new Map([
+      ["casa", "house"],
+      ["rojo", "red"],
+      ["auto", "car"]
+    ]);
+    mapa1.clear();
+    console.log(mapa1.size);    // 0
+  &lt;/script&gt;
+</pre>
+
+
+<h3>Recorrido de un Map.</h3>
+<p>Los elementos almacenado en el 'Map' mantienen el orden en que se agregaron.</p>
+<p>Podemos recorrer un mapa mediante la estructura repetitiva 'for of':</p>
+<pre class="recuadro">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+
+&lt;head&gt;
+    &lt;title&gt;Ejemplo de JavaScript&lt;/title&gt;
+    &lt;meta charset="UTF-8"&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+    &lt;script&gt;
+        const mapa1 = new Map([
+            ["casa", "house"],
+            ["rojo", "red"],
+            ["auto", "car"]
+        ]);
+
+        document.write("Claves del mapa.&lt;br&gt;")
+        for (let clave of mapa1.keys()) {
+            document.write(clave);
+            document.write("&lt;br&gt;");
+        }
+        document.write("Valores del mapa.&lt;br&gt;")
+        for (let valor of mapa1.values()) {
+            document.write(valor);
+            document.write("&lt;br&gt;");
+        }
+        document.write("Claves y valores del mapa.&lt;br&gt;")
+        for (let [clave, valor] of mapa1) {
+            document.write(clave + '-' + valor);
+            document.write("&lt;br&gt;");
+        }
+    &lt;/script&gt;
+&lt;/body&gt;
+
+&lt;/html&gt;
+</pre>
+<p>Al ejecutar el algoritmo podemos ver como recorrer el mapa y recuperar en forma individual solo las claves como los valores, pero también podemos recuperar en forma simultanea las claves y valores del diccionario:</p>
+<img src="imagentema/foto012.jpg" border="0" alt="Map for of javascript"><br>
+
+<p>El objeto Map igual que el objeto Array dispone de un método 'forEach' para iterar sobre los elementos del 'Map':</p>
+<pre>
+  &lt;script&gt;
+      const mapa1 = new Map([
+          ["casa", "house"],
+          ["rojo", "red"],
+          ["auto", "car"]
+      ]);
+
+      document.write("Claves y valores del mapa.&lt;br&gt;")
+      mapa1.forEach((valor, clave) =&gt; document.write(`${clave}  ${valor}&lt;br&gt;`));
+  &lt;/script&gt;
+</pre>
+
+</p>
+</div>
+
+<div>
+<!--publi-->
+<script async src="../../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<!-- adaptable2 -->
+<ins class="adsbygoogle dos"
+     style="display:inline-block"
+     data-ad-client="ca-pub-4669394804436935"
+     data-ad-slot="5774469161"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+<!--publi-->
+<script async src="../../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<!-- adaptable2 -->
+<ins class="adsbygoogle dos"
+     style="display:inline-block"
+     data-ad-client="ca-pub-4669394804436935"
+     data-ad-slot="5774469161"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+</div>
+
+
+   <h2><a href="../indexf6ce.html?inicio=100">Retornar</a></h2>   
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+</body>
+
+
+<!-- Mirrored from www.tutorialesprogramacionya.com/javascriptya/temarios/descripcion.php?inicio=100&cod=103 by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 18 Mar 2024 10:33:26 GMT -->
+</html>

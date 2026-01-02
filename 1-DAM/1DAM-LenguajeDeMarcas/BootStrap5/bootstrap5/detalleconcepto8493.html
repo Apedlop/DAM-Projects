@@ -1,0 +1,396 @@
+
+<!DOCTYPE html>
+<html>
+
+
+<!-- Mirrored from www.tutorialesprogramacionya.com/bootstrap5ya/detalleconcepto.php?punto=48&codigo=48&inicio=40 by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 19 Dec 2023 11:11:05 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QWKWPBDEFK"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-QWKWPBDEFK');
+</script>
+
+<script async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-4669394804436935",
+    enable_page_level_ads: true
+  });
+</script>
+
+<title>Componente : card (con colores contextuales para fondo, borde y texto)</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">    
+<meta name="keywords" content="bootstrap 5,css, html, programación, webmaster, tutorial">
+<meta name="description" content="El objetivo de este tutorial 
+    es presentar los conceptos básicos de bootstrap 5.">
+<meta name="author" content="Diego Moisset">
+
+<link href="../css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="estilos.css">
+
+<style>
+html,body {
+	background-color: #D3E9D0;
+	font-family: sans-serif,arial;
+
+}
+</style>
+
+<style>
+.uno { width: 320px; height: 100px; }
+@media(min-width: 500px) { .uno { width: 320px; height: 100px; } }
+@media(min-width: 800px) { .uno { width: 336px; height: 280px; } }
+
+.dos { width: 320px; height: 100px; }
+@media(min-width: 500px) { .dos { width: 320px; height: 100px; } }
+@media(min-width: 800px) { .dos { width: 336px; height: 280px; } }
+</style>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','../../www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-80268657-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+</head>
+
+<body>
+
+
+<div class="container">
+
+<div class="row">
+  <div class="col-md-12">
+
+<div class="titulodetalle">
+<h1>48 - Componente : card (con colores contextuales para fondo, borde y texto)</h1></div>
+
+  </div>
+</div>  
+
+
+<div class="row">
+  <div class="col-md-12">
+
+<div class="cuerpodetalle">
+<div style="display:block;float:left;margin: 5px;"> 
+ <script async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<!-- adaptable1 -->
+<ins class="adsbygoogle uno"
+     style="display:inline-block"
+     data-ad-client="ca-pub-4669394804436935"
+     data-ad-slot="4716538363"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script> 
+</div> 
+
+
+<p>Vimos en el concepto anterior la estructura básica que provee Bootstrap 5. Veamos ahora como podemos fijar el color de fondo y el color de texto según las clases contextuales.</p>
+<p>Para el color de fondo disponemos de las clases:</p>
+
+<ul>
+<li>
+bg-primary
+</li>
+<li>
+bg-success
+</li>
+<li>
+bg-info
+</li>
+<li>
+bg-warning
+</li>
+<li>
+bg-danger
+</li>
+<li>
+bg-secondary
+</li>
+<li>
+bg-dark
+</li>
+<li>
+bg-light
+</li>
+</ul>
+
+<h3>Problema</h3>
+<p>Crear tres tarjetas básicas en la misma fila que ocupen anchos iguales y utilicen un color de fondo contextual distinto:</p>
+<pre class="recuadro">
+&lt;!doctype html&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;title&gt;Prueba de Bootstrap 5&lt;/title&gt; 
+  &lt;meta charset="utf-8"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"&gt;
+  &lt;link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+  &lt;div class="container"&gt;   
+    &lt;h1&gt;Prueba de tarjetas&lt;/h1&gt;
+    &lt;div class="row"&gt;       
+      &lt;div class="col-md"&gt;        
+          &lt;div class="card bg-success text-white"&gt;
+            &lt;div class="card-body"&gt;
+              &lt;h4 class="card-title"&gt;Titulo de la tarjeta 1&lt;/h4&gt;
+              &lt;p class="card-text"&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam lectus sem, 
+                                    tempor vitae mattis malesuada, ornare sed erat. Pellentesque nulla dui, congue
+                                    nec tortor sit amet, maximus mattis dui. &lt;/p&gt;
+              &lt;a href="#" class="btn btn-primary"&gt;Entrar&lt;/a&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;          
+      &lt;/div&gt;
+
+      &lt;div class="col-md"&gt;        
+          &lt;div class="card bg-warning text-white"&gt;
+            &lt;div class="card-body"&gt;
+              &lt;h4 class="card-title"&gt;Titulo de la tarjeta 2&lt;/h4&gt;
+              &lt;p class="card-text"&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam lectus sem, 
+                                    tempor vitae mattis malesuada, ornare sed erat. Pellentesque nulla dui, congue
+                                    nec tortor sit amet, maximus mattis dui. &lt;/p&gt;
+              &lt;a href="#" class="btn btn-primary"&gt;Entrar&lt;/a&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;          
+      &lt;/div&gt;
+      
+      &lt;div class="col-md"&gt;        
+          &lt;div class="card bg-danger text-white"&gt;
+            &lt;div class="card-body"&gt;
+              &lt;h4 class="card-title"&gt;Titulo de la tarjeta 3&lt;/h4&gt;
+              &lt;p class="card-text"&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam lectus sem, 
+                                    tempor vitae mattis malesuada, ornare sed erat. Pellentesque nulla dui, congue
+                                    nec tortor sit amet, maximus mattis dui. &lt;/p&gt;
+              &lt;a href="#" class="btn btn-primary"&gt;Entrar&lt;/a&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;          
+      &lt;/div&gt;      
+    &lt;/div&gt;
+  &lt;/div&gt;
+    
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+
+<p>En el navegador tenemos como resultado:</p>
+<img src="imagentema/foto076.jpg" border="0" alt="bootstrap 5 card colores contextuales"><br>
+
+<p>Como podemos comprobar le agregamos algunas de las clases de color de fondo al div que define la tarjeta:</p>
+<pre>
+          &lt;div class="card bg-success text-white"&gt;
+</pre>
+<p>Agregamos a la tarjeta la clase text-white que hace que el texto salga de color blanco.</p>
+
+<h3>Colores contextuales para el borde.</h3>
+<p>Podemos fijar un color de borde para las tarjetas mediante las clases:</p>
+<ul>
+<li>
+border-primary
+</li>
+<li>
+border-success
+</li>
+<li>
+border-info
+</li>
+<li>
+border-warning
+</li>
+<li>
+border-danger
+</li>
+<li>
+border-secondary
+</li>
+<li>
+border-dark
+</li>
+<li>
+border-light
+</li>
+</ul>
+
+<p>Si tenemos el siguiente trozo de código:</p>
+<pre>
+    &lt;div class="row"&gt;       
+        &lt;div class="col-md"&gt;        
+            &lt;div class="card border-success"&gt;
+              &lt;div class="card-body"&gt;
+                &lt;h4 class="card-title"&gt;Titulo de la tarjeta 1&lt;/h4&gt;
+                &lt;p class="card-text"&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam lectus sem, 
+                                      tempor vitae mattis malesuada, ornare sed erat. Pellentesque nulla dui, congue
+                                      nec tortor sit amet, maximus mattis dui. &lt;/p&gt;
+                &lt;a href="#" class="btn btn-primary"&gt;Entrar&lt;/a&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;          
+        &lt;/div&gt;
+  
+        &lt;div class="col-md"&gt;        
+            &lt;div class="card border-warning"&gt;
+              &lt;div class="card-body"&gt;
+                &lt;h4 class="card-title"&gt;Titulo de la tarjeta 2&lt;/h4&gt;
+                &lt;p class="card-text"&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam lectus sem, 
+                                      tempor vitae mattis malesuada, ornare sed erat. Pellentesque nulla dui, congue
+                                      nec tortor sit amet, maximus mattis dui. &lt;/p&gt;
+                &lt;a href="#" class="btn btn-primary"&gt;Entrar&lt;/a&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;          
+        &lt;/div&gt;
+        
+        &lt;div class="col-md"&gt;        
+            &lt;div class="card border-danger"&gt;
+              &lt;div class="card-body"&gt;
+                &lt;h4 class="card-title"&gt;Titulo de la tarjeta 3&lt;/h4&gt;
+                &lt;p class="card-text"&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam lectus sem, 
+                                      tempor vitae mattis malesuada, ornare sed erat. Pellentesque nulla dui, congue
+                                      nec tortor sit amet, maximus mattis dui. &lt;/p&gt;
+                &lt;a href="#" class="btn btn-primary"&gt;Entrar&lt;/a&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;          
+        &lt;/div&gt;      
+      &lt;/div&gt;    
+</pre>
+<p>En el navegador tenemos como resultado:</p>
+<img src="imagentema/foto079.jpg" border="0" alt="bootstrap 5 card colores contextuales para el borde"><br>
+
+<h3>Colores contextuales para texto.</h3>
+<p>Finalmente podemos fijar un color de texto contextual para las tarjetas mediante las clases:</p>
+<ul>
+<li>
+text-primary
+</li>
+<li>
+text-success
+</li>
+<li>
+text-info
+</li>
+<li>
+text-warning
+</li>
+<li>
+text-danger
+</li>
+<li>
+text-secondary
+</li>
+<li>
+text-dark
+</li>
+<li>
+text-light
+</li>
+</ul>
+
+<p>Si tenemos el siguiente trozo de código:</p>
+<pre>
+  &lt;div class="row"&gt;       
+      &lt;div class="col-md"&gt;        
+          &lt;div class="card"&gt;
+            &lt;div class="card-body text-success"&gt;
+              &lt;h4 class="card-title"&gt;Titulo de la tarjeta 1&lt;/h4&gt;
+              &lt;p class="card-text"&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam lectus sem, 
+                                    tempor vitae mattis malesuada, ornare sed erat. Pellentesque nulla dui, congue
+                                    nec tortor sit amet, maximus mattis dui. &lt;/p&gt;
+              &lt;a href="#" class="btn btn-primary"&gt;Entrar&lt;/a&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;          
+      &lt;/div&gt;
+
+      &lt;div class="col-md"&gt;        
+          &lt;div class="card"&gt;
+            &lt;div class="card-body text-warning"&gt;
+              &lt;h4 class="card-title"&gt;Titulo de la tarjeta 2&lt;/h4&gt;
+              &lt;p class="card-text"&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam lectus sem, 
+                                    tempor vitae mattis malesuada, ornare sed erat. Pellentesque nulla dui, congue
+                                    nec tortor sit amet, maximus mattis dui. &lt;/p&gt;
+              &lt;a href="#" class="btn btn-primary"&gt;Entrar&lt;/a&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;          
+      &lt;/div&gt;
+      
+      &lt;div class="col-md"&gt;        
+          &lt;div class="card"&gt;
+            &lt;div class="card-body text-danger"&gt;
+              &lt;h4 class="card-title"&gt;Titulo de la tarjeta 3&lt;/h4&gt;
+              &lt;p class="card-text"&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam lectus sem, 
+                                    tempor vitae mattis malesuada, ornare sed erat. Pellentesque nulla dui, congue
+                                    nec tortor sit amet, maximus mattis dui. &lt;/p&gt;
+              &lt;a href="#" class="btn btn-primary"&gt;Entrar&lt;/a&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;          
+      &lt;/div&gt;      
+    &lt;/div&gt;    
+</pre>
+
+<p>En el navegador tenemos como resultado:</p>
+<img src="imagentema/foto080.jpg" border="0" alt="bootstrap 5 card colores contextuales para el texto"><br>
+<h2><a target="_blank" href="ejecutar251b.html?cod=48">Ejecutar Ejemplo</a></h2><h2><a href="index1e61.html?inicio=40">Retornar</a></h2> 
+
+<div>
+<!--publi-->
+<script async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<!-- adaptable2 -->
+<ins class="adsbygoogle dos"
+     style="display:inline-block"
+     data-ad-client="ca-pub-4669394804436935"
+     data-ad-slot="5774469161"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+<!--publi-->
+<script async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<!-- adaptable2 -->
+<ins class="adsbygoogle dos"
+     style="display:inline-block"
+     data-ad-client="ca-pub-4669394804436935"
+     data-ad-slot="5774469161"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+</div>
+
+
+
+
+</div>
+
+  </div>
+</div>  
+
+</div>
+
+<script type="text/javascript">
+function cambiar()
+{
+  var lista=document.getElementsByTagName('pre');
+  for(f=0;f<lista.length;f++)
+  {
+   lista[f].style.display='block';
+  }
+  document.getElementById('solucion').style.display='none';
+}
+
+</script>
+
+</body>
+
+
+<!-- Mirrored from www.tutorialesprogramacionya.com/bootstrap5ya/detalleconcepto.php?punto=48&codigo=48&inicio=40 by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 19 Dec 2023 11:11:07 GMT -->
+</html>

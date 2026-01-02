@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hogwarts House Quiz</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            padding-top: 20px;
+        }
+        .quiz-container, .comments-container {
+            max-width: 600px;
+            margin: auto;
+        }
+        .comments-container {
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="quiz-container">
+        <h1 class="text-center">Hogwarts House Quiz</h1>
+        <form id="quizForm">
+            <div class="form-group">
+                <label>1. What trait do you value most?</label>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q1" id="q1a" value="Gryffindor" required>
+                    <label class="form-check-label" for="q1a">Bravery</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q1" id="q1b" value="Hufflepuff">
+                    <label class="form-check-label" for="q1b">Loyalty</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q1" id="q1c" value="Ravenclaw">
+                    <label class="form-check-label" for="q1c">Intelligence</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q1" id="q1d" value="Slytherin">
+                    <label class="form-check-label" for="q1d">Ambition</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label>2. What is your favorite class at Hogwarts?</label>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q2" id="q2a" value="Ravenclaw" required>
+                    <label class="form-check-label" for="q2a">Charms</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q2" id="q2b" value="Gryffindor">
+                    <label class="form-check-label" for="q2b">Defense Against the Dark Arts</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q2" id="q2c" value="Slytherin">
+                    <label class="form-check-label" for="q2c">Potions</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q2" id="q2d" value="Hufflepuff">
+                    <label class="form-check-label" for="q2d">Herbology</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label>3. Which magical creature do you like the most?</label>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q3" id="q3a" value="Hufflepuff" required>
+                    <label class="form-check-label" for="q3a">Niffler</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q3" id="q3b" value="Ravenclaw">
+                    <label class="form-check-label" for="q3b">Phoenix</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q3" id="q3c" value="Gryffindor">
+                    <label class="form-check-label" for="q3c">Hippogriff</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q3" id="q3d" value="Slytherin">
+                    <label class="form-check-label" for="q3d">Basilisk</label>
+                </div>
+            </div>
+            <div class="text-center">
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#resultModal" onclick="calculateResult()">Finish Quiz</button>
+            </div>
+        </form>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="resultModal" tabindex="-1" aria-labelledby="resultModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="resultModalLabel">Your Hogwarts House</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body" id="resultText">
+                    <!-- Result will be displayed here -->
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Comments Section -->
+    <div class="comments-container">
+        <h2 class="text-center">Comments</h2>
+        <form id="commentForm">
+            <div class="form-group">
+                <label for="comment">Leave a Comment:</label>
+                <textarea class="form-control" id="comment" rows="3" required></textarea>
+            </div>
+            <div class="text-center">
+                <button type="submit" class="btn btn-primary">Submit Comment</button>
+            </div>
+        </form>
+        <div id="commentsList" class="mt-4"></div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        function calculateResult() {
+            const q1 = document.querySelector('input[name="q1"]:checked').value;
+            const q2 = document.querySelector('input[name="q2"]:checked').value;
+            const q3 = document.querySelector('input[name="q3"]:checked').value;
+
+            const answers = [q1, q2, q3];
+            const houseCounts = {
+                Gryffindor: 0,
+                Hufflepuff: 0,
+                Ravenclaw: 0,
+                Slytherin: 0
+            };
+
+            answers.forEach(answer => {
+                houseCounts[answer]++;
+            });
+
+            let resultHouse = '';
+            let maxCount = 0;
+
+            for (const house in houseCounts) {
+                if (houseCounts[house] > maxCount) {
+                    maxCount = houseCounts[house];
+                    resultHouse = house;
+                }
+            }
+
+            document.getElementById('resultText').innerText = `Congratulations! You belong to ${resultHouse}!`;
+        }
+
+        document.getElementById('commentForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const commentText = document.getElementById('comment').value;
+            if (commentText) {
+                saveComment(commentText);
+                displayComments();
+                document.getElementById('commentForm').reset();
+            }
+        });
+
+        function saveComment(comment) {
+            const comments = JSON.parse(localStorage.getItem('comments')) || [];
+            comments.push(comment);
+            localStorage.setItem('comments', JSON.stringify(comments));
+        }
+
+        function displayComments() {
+            const comments = JSON.parse(localStorage.getItem('comments')) || [];
+            const commentsList = document.getElementById('commentsList');
+            commentsList.innerHTML = '';
+            comments.forEach((comment, index) => {
+                const commentDiv = document.createElement('div');
+                commentDiv.className = 'card mt-2';
+                commentDiv.innerHTML = `
+                    <div class="card-body">
+                        <p class="card-text">${comment}</p>
+                    </div>
+                `;
+                commentsList.appendChild(commentDiv);
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', displayComments);
+    </script>
+</body>
+</html>

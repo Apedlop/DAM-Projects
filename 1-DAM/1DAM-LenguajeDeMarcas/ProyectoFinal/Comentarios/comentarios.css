@@ -1,0 +1,94 @@
+body {
+    padding-top: 20px;
+    overflow-x: hidden;
+}
+
+.quiz-container, .comments-container {
+    max-width: 600px;
+    margin: auto;
+}
+
+.comments-container {
+    margin-top: 50px;
+}
+
+.letraComentario {
+    color: white;
+    font-size: 25px;
+    margin-bottom: 40px;
+}
+
+.foto {
+    width: 20px;
+}
+
+.fondo {
+    background-color: #b69451;
+    margin-left: 10px;
+    margin-right: 25px;
+}
+
+.fondo:hover {
+    background-color: #9e8146;
+}
+
+.comments-container {
+    border: 3px solid #b69451;
+    max-width: 800px;
+}
+
+.borde {
+    margin: 20px;
+}
+
+.colorLetra {
+    color: white;
+    text-align: left;
+    margin-left: 20px;
+    margin-top: 50px;
+}
+
+/* Additional styles for better responsiveness */
+.title-decoration {
+    max-width: 100%;
+    height: auto;
+}
+
+.margen {
+    margin-bottom: 1rem;
+}
+
+
+.foto {
+    width: 24px;
+    height: 24px;
+}
+
+/* Additional styles for better responsiveness */
+.title-decoration {
+    max-width: 100%;
+    height: auto;
+}
+
+.margen {
+    margin-bottom: 1rem;
+}
+
+.foto {
+    width: 24px;
+    height: 24px;
+}
+
+/* Ensure textarea and button are aligned properly */
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group .d-flex {
+    align-items: center;
+}
+
+.form-control {
+    margin-left: -15px;
+}

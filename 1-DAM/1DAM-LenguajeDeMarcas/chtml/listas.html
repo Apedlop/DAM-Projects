@@ -1,0 +1,76 @@
+<!--Este documento ha sido generado con XT, de James Clark--><html xmlns:date="http://www.jclark.com/xt/java/java.util.Date"><head><title>Curso de HTML: Listas</title><META HTTP-EQUIV="pragma" CONTENT="no-cache"></head><!--Cuerpo del documento--><body bgcolor="#FEFEFE"><table width="630" border="0"><tr><td valign="top" align="center" width="40" rowspan="2"><a href="index.html"><img src="graficos/logo.jpg" border="0"></a></td><td align="center" width="590"><IFRAME SRC="http://ad.es.doubleclick.net/adi/ES-programacion.net/ES-redferca-programacion-html;sz=468x60;ord=44126913875755190?" name="frame1" width="468" height="60" frameborder="no" border="0" MARGINWIDTH="0" MARGINHEIGHT="0" SCROLLING="no"><SCRIPT language="JavaScript1.1" SRC="http://ad.es.doubleclick.net/adj/ES-programacion.net/ES-redferca-programacion-html;abr=!ie;sz=468x60;ord=44126913875755190?"></SCRIPT><NOSCRIPT><A HREF="http://ad.es.doubleclick.net/jump/ES-programacion.net/ES-redferca-programacion-html;abr=!ie;sz=468x60;ord=44126913875755190?"><IMG SRC="http://ad.es.doubleclick.net/ad/ES-programacion.net/ES-redferca-programacion-html;abr=!ie;sz=468x60;ord=44126913875755190?" border="0" height="60" width="468"></A></NOSCRIPT></IFRAME></td></tr><tr><td valign="top"><font face="Arial,Helvetica,sans-serif"><font size="+3" color="#005CA0"><b>7. Listas</b></font>
+      <p align="justify">Existen varios tipos de listas en HTML. Todas ellas se pueden meter
+      unas dentro de otras formando &aacute;rboles muy bonitos y preciosos.
+      Todos los tipos siguen el siguiente formato:</p>
+      <pre><font color="#006600" face="monospace">&lt;tipo_lista&gt;
+  &lt;LI&gt;Primer elemento
+  &lt;LI&gt;Segundo elemento
+&lt;/tipo_lista&gt;</font></pre>
+      <p align="justify"><tt><font color="#006600" face="monospace">tipo_lista</font></tt> puede ser una de las siguientes: <tt><font color="#006600" face="monospace">DIR</font></tt>,
+      <tt><font color="#006600" face="monospace">DL</font></tt>, <tt><font color="#006600" face="monospace">MENU</font></tt>, <tt><font color="#006600" face="monospace">OL</font></tt> y <tt><font color="#006600" face="monospace">UL</font></tt>.</p>
+    <br><br><a name="1"></a><font size="+2" color="#005CA0">7.1. Listas desordenadas</font>
+        <p align="justify">La etiqueta <tt><font color="#006600" face="monospace">&lt;UL&gt; </font></tt>nos permite presentar listas de elementos sin orden
+        alguno. Cada elemento de la lista ir&aacute; normalmente precedido por un
+        c&iacute;rculo. Por ejemplo,</p>
+        <pre><font color="#006600" face="monospace">&lt;UL&gt;
+  &lt;LI&gt;Primer elemento
+  &lt;LI&gt;Segundo elemento
+&lt;/UL&gt;</font></pre>
+        <p align="justify">se ver&aacute; como</p>
+        <ul>
+          <li>Primer elemento</li>
+          <li>Segundo elemento</li>
+        </ul>
+        <p align="justify">La etiqueta <tt><font color="#006600" face="monospace">&lt;UL&gt;</font></tt> admite estos par&aacute;metros:</p>
+        <table align="center" border="1"><tr><th>Par&aacute;metro</th><th>Utilidad</th><th>Resultado</th></tr><tr><td><tt><font color="#006600" face="monospace">COMPACT<img src="graficos/32.gif" width="26" height="26" border="0" align="middle"></font></tt></td><td><font face="Arial,Helvetica,sans-serif">Indica al navegador que debe representar la lista de la manera
+            m&aacute;s compacta posible.</font></td><td><font face="Arial,Helvetica,sans-serif"><ul compact><li>Primer elemento</li><li>Segundo elemento</li></ul></font></td></tr><tr><td><tt><font color="#006600" face="monospace">TYPE="disc", "circle", "square"<img src="graficos/32.gif" width="26" height="26" border="0" align="middle"></font></tt></td><td><font face="Arial,Helvetica,sans-serif">Indica al navegador el dibujo que preceder&aacute; a cada
+            elemento de la lista. Para mayor flexibilidad se admite tambi&eacute;n
+            como par&aacute;metro de <tt><font color="#006600" face="monospace">&lt;LI&gt;</font></tt>.</font></td><td><font face="Arial,Helvetica,sans-serif"><ul><li type="disc">Tipo <cod>disc</cod></li><li type="circle">Tipo <cod>circle</cod></li><li type="square">Tipo <cod>square</cod></li></ul></font></td></tr></table>
+        <p align="justify">Tambi&eacute;n son listas desordenadas aquellas que utilizan las etiquetas
+        <tt><font color="#006600" face="monospace">&lt;DIR&gt;</font></tt> y <tt><font color="#006600" face="monospace">&lt;MENU&gt;</font></tt>. En principio ten&iacute;an como
+        prop&oacute;sito representar una lista estilo directorio (multicolumna) o
+        tipo men&uacute; (una sola columna). En la pr&aacute;ctica los navegadores
+        lo han implementado como sinonimos de <tt><font color="#006600" face="monospace">&lt;UL&gt;</font></tt>, por lo que no los
+        estudiaremos aqu&iacute;.</p>
+      <br><br><a name="2"></a><font size="+2" color="#005CA0">7.2. Listas ordenadas</font>
+        <p align="justify">La etiqueta <tt><font color="#006600" face="monospace">&lt;OL&gt;</font></tt> nos permite presentar listas de elementos ordenados
+        de menor a mayor. Normalmente cada elemento de la lista ir&aacute;
+        precedido por su n&uacute;mero en el orden. Por ejemplo,</p>
+        <pre><font color="#006600" face="monospace">&lt;OL&gt;
+  &lt;LI&gt;Primer elemento
+  &lt;LI&gt;Segundo elemento
+&lt;/OL&gt;</font></pre>
+        <p align="justify">se ver&aacute; como</p>
+        <ol>
+          <li>Primer elemento</li>
+          <li>Segundo elemento</li>
+        </ol>
+        <p align="justify">La etiqueta <tt><font color="#006600" face="monospace">&lt;OL&gt;</font></tt> admite estos par&aacute;metros:</p>
+        <table align="center" border="1"><tr><th>Par&aacute;metro</th><th>Utilidad</th><th>Resultado</th></tr><tr><td><tt><font color="#006600" face="monospace">COMPACT<img src="graficos/32.gif" width="26" height="26" border="0" align="middle"></font></tt></td><td><font face="Arial,Helvetica,sans-serif">Indica al navegador que debe representar la lista de la manera
+            m&aacute;s compacta posible.</font></td><td><font face="Arial,Helvetica,sans-serif"><ol compact><li>Primer elemento</li><li>Segundo elemento</li></ol></font></td></tr><tr><td><tt><font color="#006600" face="monospace">TYPE="1", "a", "A", "i", "I"<img src="graficos/32.gif" width="26" height="26" border="0" align="middle"></font></tt></td><td><font face="Arial,Helvetica,sans-serif">Indica al navegador el tipo de numeraci&oacute;n que preceder&aacute; a
+            cada elemento de la lista. Para mayor flexibilidad se admite tambi&eacute;n como
+            par&aacute;metro de <tt><font color="#006600" face="monospace">&lt;LI&gt;</font></tt>.</font></td><td><font face="Arial,Helvetica,sans-serif"><ol><li type="1">Tipo <cod>1</cod></li><li type="a">Tipo <cod>a</cod></li><li type="A">Tipo <cod>A</cod></li><li type="i">Tipo <cod>i</cod></li><li type="I">Tipo <cod>I</cod></li></ol></font></td></tr><tr><td><tt><font color="#006600" face="monospace">START="num"<img src="graficos/32.gif" width="26" height="26" border="0" align="middle"></font></tt></td><td><font face="Arial,Helvetica,sans-serif">Indica al navegador el n&uacute;mero por el que se
+            empezar&aacute; a contar los elementos de la lista.</font></td><td><font face="Arial,Helvetica,sans-serif"><ol start="3"><li>Primer elemento</li><li>Segundo elemento</li></ol></font></td></tr><tr><td><tt><font color="#006600" face="monospace">VALUE="num"<img src="graficos/32.gif" width="26" height="26" border="0" align="middle"></font></tt></td><td><font face="Arial,Helvetica,sans-serif">Atributo de <tt><font color="#006600" face="monospace">&lt;LI&gt;</font></tt>, act&uacute;a como <tt><font color="#006600" face="monospace">START</font></tt>
+            pero a partir de un elemento predeterminado.</font></td><td><font face="Arial,Helvetica,sans-serif"><ol compact="compact"><li>Primer elemento</li><li value="4">Segundo elemento</li><li>Tercer elemento</li></ol></font></td></tr></table>
+      <br><br><a name="3"></a><font size="+2" color="#005CA0">7.3. Listas de definiciones</font>
+        <p align="justify">Este es el &uacute;nico tipo de lista que no utiliza la etiqueta
+        <tt><font color="#006600" face="monospace">&lt;LI&gt;</font></tt>. Al tener como objetivo presentar una lista de
+        definiciones, de modo que tiene que representar de manera distinta el
+        objeto definido y la definici&oacute;n. Esto se hace por medio de las
+        etiquetas <tt><font color="#006600" face="monospace">&lt;DT&gt;</font></tt> y <tt><font color="#006600" face="monospace">&lt;DD&gt;</font></tt>:</p>
+        <pre><font color="#006600" face="monospace">&lt;DL&gt;
+  &lt;DT&gt;Primer elemento&lt;DD&gt;Es un elemento muy bonito.
+  &lt;DT&gt;Segundo elemento&lt;DD&gt;Este, en cambio, es peor.
+&lt;/DL&gt;</font></pre>
+        <p align="justify">se ver&aacute; como</p>
+        
+            <dl>
+              <dt>Primer elemento<dd>Es un elemento muy bonito.
+              <dt>Segundo elemento<dd>Este, en cambio, es peor.
+            </dl>
+          
+        <p align="justify">La etiqueta <tt><font color="#006600" face="monospace">&lt;DL&gt;</font></tt> s&oacute;lo admite como par&aacute;metro
+        el ya conocido <tt><font color="#006600" face="monospace">COMPACT</font></tt>, que tiene el mismo comportamiento que
+        con los otros dos tipos de lista anteriores.</p>
+      <p></p><img src="graficos/linea.gif" height="1" width="590"><table cellspacing="0" cellpadding="0" border="0" width="100%"><tr><td><img src="graficos/transp.gif" height="2" width="90"></td></tr></table><table cellspacing="0" cellpadding="0" border="0" width="100%"><tr><td align="left"><a href="enlaces.html"><img src="graficos/izq.gif" align="MIDDLE" border="0"></a><font size="-1" face="Arial,Helvetica,sans-serif">Enlaces</font></td><td align="right"><font size="-1" face="Arial,Helvetica,sans-serif">Im&aacute;genes</font><a href="imagenes.html"><img src="graficos/der.gif" align="MIDDLE" border="0"></a></td></tr></table><font size="-1"><div align="center">&copy; 1998-2000 <a href="mailto:multivac@idecnet.com">Daniel
+    Rodr&iacute;guez</a><br><a href="index.html"><img src="graficos/loguito.gif" border="0"></a></div></font></font></td></tr></table></body></html>

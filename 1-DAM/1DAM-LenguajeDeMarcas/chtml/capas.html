@@ -1,0 +1,77 @@
+<!--Este documento ha sido generado con XT, de James Clark--><html xmlns:date="http://www.jclark.com/xt/java/java.util.Date"><head><title>Curso de HTML: Capas</title><META HTTP-EQUIV="pragma" CONTENT="no-cache"></head><!--Cuerpo del documento--><body bgcolor="#FEFEFE"><table width="630" border="0"><tr><td valign="top" align="center" width="40" rowspan="2"><a href="index.html"><img src="graficos/logo.jpg" border="0"></a></td><td align="center" width="590"><IFRAME SRC="http://ad.es.doubleclick.net/adi/ES-programacion.net/ES-redferca-programacion-html;sz=468x60;ord=44126913875755190?" name="frame1" width="468" height="60" frameborder="no" border="0" MARGINWIDTH="0" MARGINHEIGHT="0" SCROLLING="no"><SCRIPT language="JavaScript1.1" SRC="http://ad.es.doubleclick.net/adj/ES-programacion.net/ES-redferca-programacion-html;abr=!ie;sz=468x60;ord=44126913875755190?"></SCRIPT><NOSCRIPT><A HREF="http://ad.es.doubleclick.net/jump/ES-programacion.net/ES-redferca-programacion-html;abr=!ie;sz=468x60;ord=44126913875755190?"><IMG SRC="http://ad.es.doubleclick.net/ad/ES-programacion.net/ES-redferca-programacion-html;abr=!ie;sz=468x60;ord=44126913875755190?" border="0" height="60" width="468"></A></NOSCRIPT></IFRAME></td></tr><tr><td valign="top"><font face="Arial,Helvetica,sans-serif"><font size="+3" color="#005CA0"><b>19. Capas<img src="graficos/40.gif" width="26" height="26" border="0" align="middle"></b></font>
+      <p align="justify">Las capas se pueden definir como p&aacute;ginas que se pueden incrustar
+      dentro de otras. Los atributos de una capa (posici&oacute;n, visibilidad, etc.),
+      como los de cualquier otro elemento HTML, pueden definirse dentro de una
+      hoja de estilo. Su contenido, en cambio, siempre deber&aacute; ser
+      especificado dentro de la parte principal de la p&aacute;gina. Como se puede
+      ver, de nuevo estamos siguiendo la filosof&iacute;a de separar el contenido
+      y la forma de representarlo.</p>
+      <p align="justify">En realidad, el nombre de capas no es nada oficial: es un invento de
+      Netscape. La denominaci&oacute;n oficial podr&iacute;a traducirse como
+      "contenido HTML posicionable din&aacute;micamente". Toma ya. Tampoco se las
+      puede considerar dentro de ning&uacute;n est&aacute;ndar HTML sino de los
+      est&aacute;ndares CSS, pero son la base de lo que se ha dado en llamar
+      HTML din&aacute;mico.</p>
+      <p align="justify">Sin duda, lo m&aacute;s importante de las capas es la posibilidad que
+      presentan de ser movidas y modificadas desde un lenguaje de <i>script</i>.
+      Desgraciadamente, las implementaciones de Netscape y Explorer son
+      incompatibles entre s&iacute;, por lo que resulta complicado escribir
+      c&oacute;digo que funcione en ambas plataformas. Estos temas los estudia en
+      profundidad <a href="">el curso de
+      HTML din&aacute;mico</a>.</p>
+    <br><br><a name="1"></a><font size="+2" color="#005CA0">19.1. Definici&oacute;n</font>
+        <p align="justify">La &uacute;nica manera com&uacute;n de definir capas en Explorer y
+        Netscape (versiones 4 y superiores cuandos las haya) es mediante hojas de
+        estilo en sintaxis CSS, por lo que ser&aacute; la que usemos de aqu&iacute;
+        en adelante.</p>
+        <p align="justify">La definici&oacute;n de una capa sigue la misma estructura que la que
+        usabamos para decidir las caracter&iacute;sticas de una etiqueta con el
+        par&aacute;metro <tt><font color="#006600" face="monospace">ID</font></tt>:</p>
+        <pre><font color="#006600" face="monospace">&lt;STYLE TYPE="text/css"&gt;
+  #micapa {position:absolute; top:100px; left:20px;}
+&lt;/STYLE&gt;</font></pre>
+        <p align="justify">Esto colocar&iacute;a a la capa que hemos denominado <tt><font color="#006600" face="monospace">micapa</font></tt> a
+        20 pixels de la izquierda de la p&#6633;na y a 100 del comienzo de la misma.
+        Muy bien, pero... &iquest;donde escribimos lo que queremos que contenga
+        la capa? Utilizaremos para ello la etiqueta <tt><font color="#006600" face="monospace">&lt;SPAN&gt;</font></tt>:</p>
+        <pre><font color="#006600" face="monospace">&lt;DIV ID="micapa"&gt;
+  &lt;H1&gt;El t&iacute;tulo de la capa&lt;/H1&gt;
+  &lt;P&gt;Aqu&iacute; es donde ir&iacute;a el texto.
+  ...
+&lt;/DIV&gt;</font></pre>
+        <p align="justify">Las capas que hemos definido hasta ahora se colocan en una posici&oacute;n
+        determinada de la p&aacute;gina. Pero existe otro tipo de capas llamadas
+        flotantes cuya colocaci&oacute;n depende, en cambio, de la posici&oacute;n
+        dentro del c&oacute;digo fuente de la p&aacute;gina donde las hayamos
+        colocado. Se definen as&iacute;:</p>
+        <pre><font color="#006600" face="monospace">&lt;STYLE TYPE="text/css"&gt;
+  #flotante {position: relative; left: 20px;  top: 100px;}
+&lt;/STYLE&gt;</font></pre>
+        <p align="justify">Puedes ver un <a href="ejemplos/capas.html" target="_new">ejemplo</a>
+        que te mostrar&aacute; las diferencias entre capas absolutas y relativas.</p>
+      <br><br><a name="2"></a><font size="+2" color="#005CA0">19.2. Propiedades</font>
+        <p align="justify">Existen varias propiedades de las capas que podemos modificar, como son
+        la posici&oacute;n, la visibilidad, el orden en que se ponen en pantalla,
+        etc... Son estos:</p>
+        <table align="center" border="1"><tr><th>Propiedad</th><th>Descripci&oacute;n</th><th>Posibles valores</th></tr><tr><td><tt><font color="#006600" face="monospace">left y top</font></tt></td><td><font face="Arial,Helvetica,sans-serif">Sit&uacute;an la esquina superior izquierda de la capa
+            respecto a la esquina superior izquierda de la capa donde est&eacute;
+            metida. Hay que tener en cuenta que el documento completo tambi&eacute;n
+            se considera una capa.</font></td><td><font face="Arial,Helvetica,sans-serif">distancia en pixels, por defecto cero.</font></td></tr><tr><td><tt><font color="#006600" face="monospace">width y height</font></tt></td><td><font face="Arial,Helvetica,sans-serif">Determinan la anchura y altura de la capa.</font></td><td><font face="Arial,Helvetica,sans-serif">un tama&ntilde;o en pixels.</font></td></tr><tr><td><tt><font color="#006600" face="monospace">clip</font></tt></td><td><font face="Arial,Helvetica,sans-serif">Nos permite definir el &aacute;rea que se podr&aacute; ver
+            dentro de la capa. Por ejemplo, <tt><font color="#006600" face="monospace">clip:rect(20px 30px 40px 10px);</font></tt>
+            recortar&aacute; la capa creando un cuadro visible cuya esquina superior
+            izquierda est&aacute; a 10 pixels por la izquierda y 20 por arriba de la
+            de la capa y cuyo tama&ntilde;o ser&iacute;a de 30-10 de ancho y
+            40-20 de alto.</font></td><td><font face="Arial,Helvetica,sans-serif">un &aacute;rea.</font></td></tr><tr><td><tt><font color="#006600" face="monospace">z-index</font></tt></td><td><font face="Arial,Helvetica,sans-serif">Las capas con un mayor <tt><font color="#006600" face="monospace">z-index</font></tt> se colocar&aacute;n
+            m&aacute;s arriba (se dibujar&aacute;n al final, encima de las otras).
+            Debe ser un valor positivo y &uacute;nico: dos capas no pueden tener el
+            mismo <tt><font color="#006600" face="monospace">z-index</font></tt>.</font></td><td><font face="Arial,Helvetica,sans-serif">n&uacute;mero positivo, por defecto las capas definidas en
+            el c&oacute;digo HTML m&aacute;s tarde est&aacute;n m&aacute;s
+            arriba.</font></td></tr><tr><td><tt><font color="#006600" face="monospace">visibility</font></tt></td><td><font face="Arial,Helvetica,sans-serif">Especifican si la capa debe verse o estar oculta.</font></td><td><font face="Arial,Helvetica,sans-serif"><tt><font color="#006600" face="monospace">visible</font></tt>, <tt><font color="#006600" face="monospace">hidden</font></tt> (oculta) o
+            <tt><font color="#006600" face="monospace">inherit</font></tt> (hereda la visibilidad de la capa padre). En aquellas
+            capas que simplemente est&eacute;n dentro de la p&aacute;gina principal,
+            este valor es equivalente a <tt><font color="#006600" face="monospace">visible</font></tt>.</font></td></tr><tr><td><tt><font color="#006600" face="monospace">background-image</font></tt></td><td><font face="Arial,Helvetica,sans-serif">Gr&aacute;fico de fondo de la capa.</font></td><td><font face="Arial,Helvetica,sans-serif">una direcci&oacute;n.</font></td></tr><tr><td><tt><font color="#006600" face="monospace">background-color<img src="graficos/explorer.gif" width="26" height="26" border="0" align="middle"> y layer-background-color<img src="graficos/netscape.gif" width="26" height="26" border="0" align="middle"></font></tt></td><td><font face="Arial,Helvetica,sans-serif">Color de fondo de la capa.</font></td><td><font face="Arial,Helvetica,sans-serif">un color.</font></td></tr></table>
+        <p align="justify">Esto es todo. Si quieres saber algo sobre modificaci&oacute;n
+        din&aacute;mica de capas desde JavaScript, visita
+        <a href="">mi curso</a>.</p>
+      <p></p><img src="graficos/linea.gif" height="1" width="590"><table cellspacing="0" cellpadding="0" border="0" width="100%"><tr><td><img src="graficos/transp.gif" height="2" width="90"></td></tr></table><table cellspacing="0" cellpadding="0" border="0" width="100%"><tr><td align="left"><a href="script.html"><img src="graficos/izq.gif" align="MIDDLE" border="0"></a><font size="-1" face="Arial,Helvetica,sans-serif">Lenguajes de script</font></td><td align="right"><font size="-1" face="Arial,Helvetica,sans-serif">Sonido</font><a href="sonido.html"><img src="graficos/der.gif" align="MIDDLE" border="0"></a></td></tr></table><font size="-1"><div align="center">&copy; 1998-2000 <a href="mailto:multivac@idecnet.com">Daniel
+    Rodr&iacute;guez</a><br><a href="index.html"><img src="graficos/loguito.gif" border="0"></a></div></font></font></td></tr></table></body></html>

@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <link href="https://fonts.cdnfonts.com/css/harry-potter" rel="stylesheet">
+
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
+
+    </head>
+    <body>
+        <p style="font-family: 'harry potter'">Esta es una frase con la fuente especificada en CSS. Harry Potter</p>
+
+        <p style="font-family: 'Bluu Next', 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', Osaka, メイリオ, Meiryo, 'ＭＳ Ｐゴシック', 'MS PGothic', serif;">Esta es una frase con la fuente especificada en CSS.</p>
+
+        <div class="container-fluid">
+
+            <li><a href="" id="dropdownMenuConfiguacion" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Configuracion <span class="caret"></span></a>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuConfiguracion">
+                  <ul class="nav navbar-nav">
+                      <li><a href="" id="dropdownMenuUsuarios" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Usuarios <span class="caret"></span></a>
+                          <div class="dropdown-menu" aria-labelledby="dropdownMenuUsuarios">
+                             <ul class="nav navbar-nav">
+                                <li><a href="{% url 'usuarios' %}" title="Gestión de Usuarios">Todos</a></li>
+                                <li><a href="{% url 'usuarios' %}" title="Gestión de Usuarios">Solicitudes boutique</a></li>
+                             </ul>
+                          </div>
+                       </li>                 
+                  </ul>
+                </div>
+            </li>
+
+        </div>
+        
+    </body>
+</html>

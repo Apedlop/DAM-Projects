@@ -1,0 +1,161 @@
+<!--Este documento ha sido generado con XT, de James Clark--><html xmlns:date="http://www.jclark.com/xt/java/java.util.Date"><head><title>Curso de HTML: Tablas</title><META HTTP-EQUIV="pragma" CONTENT="no-cache"></head><!--Cuerpo del documento--><body bgcolor="#FEFEFE"><table width="630" border="0"><tr><td valign="top" align="center" width="40" rowspan="2"><a href="index.html"><img src="graficos/logo.jpg" border="0"></a></td><td align="center" width="590"><IFRAME SRC="http://ad.es.doubleclick.net/adi/ES-programacion.net/ES-redferca-programacion-html;sz=468x60;ord=44126913875755190?" name="frame1" width="468" height="60" frameborder="no" border="0" MARGINWIDTH="0" MARGINHEIGHT="0" SCROLLING="no"><SCRIPT language="JavaScript1.1" SRC="http://ad.es.doubleclick.net/adj/ES-programacion.net/ES-redferca-programacion-html;abr=!ie;sz=468x60;ord=44126913875755190?"></SCRIPT><NOSCRIPT><A HREF="http://ad.es.doubleclick.net/jump/ES-programacion.net/ES-redferca-programacion-html;abr=!ie;sz=468x60;ord=44126913875755190?"><IMG SRC="http://ad.es.doubleclick.net/ad/ES-programacion.net/ES-redferca-programacion-html;abr=!ie;sz=468x60;ord=44126913875755190?" border="0" height="60" width="468"></A></NOSCRIPT></IFRAME></td></tr><tr><td valign="top"><font face="Arial,Helvetica,sans-serif"><font size="+3" color="#005CA0"><b>14. Tablas<img src="graficos/32.gif" width="26" height="26" border="0" align="middle"></b></font>
+    <p align="justify">Las tablas son posiblemente la manera m&aacute;s clara de organizar la
+    informaci&oacute;n. Tambi&eacute;n es el modo m&aacute;s adecuado de
+    maquetar texto y gr&aacute;ficos de una manera algo m&aacute;s controlada
+    que con los par&aacute;metros <tt><font color="#006600" face="monospace">ALIGN</font></tt>.</p>
+    <p align="justify">Las tablas se definen de la siguiente manera. Primero, las
+    caracter&iacute;sticas de la tabla, luego las de cada fila y dentro de
+    &eacute;sta, cada celda. As&iacute; pues, una tabla con 2 filas y 3
+    columnas se declarar&aacute; as&iacute;:</p>
+    <table align="center" border="1"><tr><th>C&oacute;digo</th><th>Resultado</th></tr><tr><td><tt><font color="#006600" face="monospace"><pre><font color="#006600" face="monospace">&lt;TABLE&gt;
+&nbsp;&nbsp;&lt;TR&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;TD&gt;1,1&lt;/TD&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;TD&gt;1,2&lt;/TD&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;TD&gt;1,3&lt;/TD&gt;
+&nbsp;&nbsp;&lt;/TR&gt;
+&nbsp;&nbsp;&lt;TR&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;TD&gt;2,1&lt;/TD&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;TD&gt;2,2&lt;/TD&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;TD&gt;2,3&lt;/TD&gt;
+&nbsp;&nbsp;&lt;/TR&gt;
+&lt;/TABLE&gt;</font></pre></font></tt></td><td><font face="Arial,Helvetica,sans-serif"><TABLE>
+            <TR>
+              <TD>1,1</TD>
+              <TD>1,2</TD>
+              <TD>1,3</TD>
+            </TR>
+            <TR>
+              <TD>2,1</TD>
+              <TD>2,2</TD>
+              <TD>2,3</TD>
+            </TR>
+          </TABLE>
+        </font></td></tr></table>
+    <p align="justify">Como pod&eacute;is ver (o mejor no ver) la tabla no tiene mucho aspecto
+    de tabla. Quedar&iacute;a mejor con unos bordes, &iquest;no? Puede que
+    tampoco le viniese mal mayor espacio entre celdas o mayor anchura. Estas son
+    las cosas que podremos cambiar con los atributos de <tt><font color="#006600" face="monospace">TABLE</font></tt>:</p>
+    <table align="center" border="1"><tr><th>Par&aacute;metro</th><th>Utilidad</th></tr><tr><td><tt><font color="#006600" face="monospace">BORDER</font></tt></td><td><font face="Arial,Helvetica,sans-serif">Especifica el grosor del borde que se dibujar&aacute;
+        alrededor de las celdas. Por defecto es cero, lo que significa que no
+        dibujar&aacute; borde alguno.</font></td></tr><tr><td><tt><font color="#006600" face="monospace">CELLSPACING</font></tt></td><td><font face="Arial,Helvetica,sans-serif">Define el n&uacute;mero de pixels que separar&aacute;n las
+        celdas.</font></td></tr><tr><td><tt><font color="#006600" face="monospace">CELLPADDING</font></tt></td><td><font face="Arial,Helvetica,sans-serif">Especifica el n&uacute;mero de pixels que habr&aacute; entre el
+        borde de una celda y su contenido.</font></td></tr><tr><td><tt><font color="#006600" face="monospace">WIDTH</font></tt></td><td><font face="Arial,Helvetica,sans-serif">Especifica la anchura de la tabla. Puede estar tanto en pixels
+        como en porcentaje de la anchura total disponible para &eacute;l
+        (pondremos "100%" si queremos que ocupe todo el ancho de la
+        ventana del navegador).</font></td></tr><tr><td><tt><font color="#006600" face="monospace">ALIGN</font></tt></td><td><font face="Arial,Helvetica,sans-serif">Alinea la tabla a izquierda (<tt><font color="#006600" face="monospace">LEFT</font></tt>),
+        derecha (<tt><font color="#006600" face="monospace">RIGHT</font></tt>) o centro (<tt><font color="#006600" face="monospace">CENTER</font></tt>).</font></td></tr></table>
+    <p align="justify">Si ahora, por ejemplo definimos ahora la tabla anterior como
+    <tt><font color="#006600" face="monospace">&lt;TABLE BORDER=1 WIDTH="50%" ALIGN=CENTER&gt;</font></tt> veremos lo
+    siguiente:</p>
+    <TABLE BORDER="1" WIDTH="50%" ALIGN="CENTER">
+    <TR>
+      <TD>1,1</TD>
+      <TD>1,2</TD>
+      <TD>1,3</TD>
+    </TR>
+    <TR>
+      <TD>2,1</TD>
+      <TD>2,2</TD>
+      <TD>2,3</TD>
+    </TR>
+    </TABLE>
+  <br><br><a name="1"></a><font size="+2" color="#005CA0">14.1. Definir las filas</font>
+    <p align="justify">Ahora que hemos definido la tabla nos toca hacer lo mismo con las
+    filas. Cada fila se define con una etiqueta <tt><font color="#006600" face="monospace">TR</font></tt>, que tiene los
+    siguientes atributos:</p>
+    <table align="center" border="1"><tr><th>Par&aacute;metro</th><th>Utilidad</th></tr><tr><td><tt><font color="#006600" face="monospace">ALIGN</font></tt></td><td><font face="Arial,Helvetica,sans-serif">Alinea el contenido de las celdas de la fila horizontalmente
+        a izquierda (<tt><font color="#006600" face="monospace">LEFT</font></tt>), derecha (<tt><font color="#006600" face="monospace">RIGHT</font></tt>) o centro
+        (<tt><font color="#006600" face="monospace">CENTER</font></tt>).</font></td></tr><tr><td><tt><font color="#006600" face="monospace">VALIGN</font></tt></td><td><font face="Arial,Helvetica,sans-serif">Alinea el contenido de las celdas de la fila verticalmente
+        arriba (<tt><font color="#006600" face="monospace">TOP</font></tt>), abajo (<tt><font color="#006600" face="monospace">BOTTOM</font></tt>) o centro
+        (<tt><font color="#006600" face="monospace">MIDDLE</font></tt>).</font></td></tr></table>
+  <br><br><a name="2"></a><font size="+2" color="#005CA0">14.2. Definir las celdas</font>
+    <p align="justify">Por &uacute;ltimo, nos queda definir cada celda gracias a la etiquetas
+    <tt><font color="#006600" face="monospace">TD</font></tt> y <tt><font color="#006600" face="monospace">TH</font></tt>. Estas etiquetas son equivalentes, pero
+    la &uacute;ltima se utiliza para encabezados, de modo que su interior se
+    escribir&aacute; por defecto en negrita y centrado. Estos son los atributos
+    de ambas:</p>
+    <table align="center" border="1"><tr><th>Par&aacute;metro</th><th>Utilidad</th></tr><tr><td><tt><font color="#006600" face="monospace">ALIGN</font></tt></td><td><font face="Arial,Helvetica,sans-serif">Alinea el contenido de la celda horizontalmente
+        a izquierda (<tt><font color="#006600" face="monospace">LEFT</font></tt>), derecha (<tt><font color="#006600" face="monospace">RIGHT</font></tt>) o centro
+        (<tt><font color="#006600" face="monospace">CENTER</font></tt>).</font></td></tr><tr><td><tt><font color="#006600" face="monospace">VALIGN</font></tt></td><td><font face="Arial,Helvetica,sans-serif">Alinea el contenido de la celda verticalmente
+        arriba (<tt><font color="#006600" face="monospace">TOP</font></tt>), abajo (<tt><font color="#006600" face="monospace">BOTTOM</font></tt>) o centro
+        (<tt><font color="#006600" face="monospace">MIDDLE</font></tt>).</font></td></tr><tr><td><tt><font color="#006600" face="monospace">WIDTH</font></tt></td><td><font face="Arial,Helvetica,sans-serif">Especifica la anchura de la celda. Tambi&eacute;n se puede
+        especificar tanto en pixels como en porcentaje, teniendo en cuenta que,
+        en este &uacute;ltimo caso, ser&aacute; un porcentaje respecto al ancho
+        total de la tabla (no de la ventana del navegador).</font></td></tr><tr><td><tt><font color="#006600" face="monospace">NOWRAP</font></tt></td><td><font face="Arial,Helvetica,sans-serif">Impide que, en el interior de la celda, se rompa la
+        l&iacute;nea en un espacio.</font></td></tr><tr><td><tt><font color="#006600" face="monospace">COLSPAN</font></tt></td><td><font face="Arial,Helvetica,sans-serif">Especifica el n&uacute;mero de celdas de la fila situadas a la
+        derecha de la actual que se unen a &eacute;sta (incluyendo la celda en
+        que se declara este par&aacute;metro). Es por defecto uno. Si se pone
+        igual a cero, se unir&aacute;n todas las celdas que queden a la
+        derecha.</font></td></tr><tr><td><tt><font color="#006600" face="monospace">ROWSPAN</font></tt></td><td><font face="Arial,Helvetica,sans-serif">Especifica el n&uacute;mero de celdas de la columna situadas
+        debajo de la actual que se unen a &eacute;sta.</font></td></tr></table>
+    <p align="justify">Posiblemente los dos &uacute;ltimos par&aacute;metros no puedan quedar
+    claros sin ejemplos. De hecho, a&uacute;n entendiendo perfectamente su
+    funci&oacute;n es habitual que confundamos a uno con otro. Pero bueno, vamos
+    a ver una tabla de 3x3 con una celda que se une a una de la derecha y otra
+    que se une a otra de debajo:</p>
+    <table align="center" border="1"><tr><th>C&oacute;digo</th><th>Resultado</th></tr><tr><td><tt><font color="#006600" face="monospace"><pre><font color="#006600" face="monospace">&lt;TABLE BORDER=1&gt;
+&nbsp;&nbsp;&lt;TR&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;TD COLSPAN=2&gt;1,1 y 1,2&lt;/TD&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;TD&gt;1,3&lt;/TD&gt;
+&nbsp;&nbsp;&lt;/TR&gt;
+&nbsp;&nbsp;&lt;TR&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;TD ROWSPAN=2&gt;2,1 y 3,1&lt;/TD&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;TD&gt;2,2&lt;/TD&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;TD&gt;2,3&lt;/TD&gt;
+&nbsp;&nbsp;&lt;/TR&gt;
+&nbsp;&nbsp;&lt;TR&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;TD&gt;3,2&lt;/TD&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;TD&gt;3,3&lt;/TD&gt;
+&nbsp;&nbsp;&lt;/TR&gt;
+&lt;/TABLE&gt;</font></pre></font></tt></td><td><font face="Arial,Helvetica,sans-serif"><TABLE BORDER="1">
+        <TR>
+          <TD COLSPAN="2">1,1 y 1,2</TD>
+          <TD>1,3</TD>
+        </TR>
+        <TR>
+          <TD ROWSPAN="2">2,1 y 3,1</TD>
+          <TD>2,2</TD>
+          <TD>2,3</TD>
+        </TR>
+        <TR>
+          <TD>3,2</TD>
+          <TD>3,3</TD>
+        </TR>
+        </TABLE>
+        </font></td></tr></table>
+    <p align="justify">Como podemos ver, cuando declaramos un celda con <tt><font color="#006600" face="monospace">ROWSPAN</font></tt> o
+    <tt><font color="#006600" face="monospace">COLSPAN</font></tt>, no deberemos declarar las celdas "absorbidas" o
+    la creaci&oacute;n de la tabla se nos complicar&aacute; de horrible manera.</p>
+  <br><br><a name="3"></a><font size="+2" color="#005CA0">14.3. T&iacute;tulo de la tabla</font>
+    <p align="justify">Por &uacute;ltimo, vamos a ver como definir un t&iacute;tulo a la tabla.
+    Esto se hace por medio de la etiqueta <tt><font color="#006600" face="monospace">CAPTION</font></tt>. Para ver
+    c&oacute;mo funciona, vamos a incluirlo en la declaraci&oacute;n de la
+    tabla anterior:</p>
+    <table align="center" border="1"><tr><th>C&oacute;digo</th><th>Resultado</th></tr><tr><td><tt><font color="#006600" face="monospace"><pre><font color="#006600" face="monospace">&lt;TABLE BORDER=1&gt;
+&nbsp;&nbsp;&lt;CAPTION&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;Ejemplo de tablas
+&nbsp;&nbsp;&lt;/CAPTION&gt;
+...
+&lt;/TABLE&gt;</font></pre></font></tt></td><td><font face="Arial,Helvetica,sans-serif"><TABLE BORDER="1">
+        <CAPTION>Ejemplo de tablas</CAPTION>
+        <TR>
+          <TD COLSPAN="2">1,1 y 1,2</TD>
+          <TD>1,3</TD>
+        </TR>
+        <TR>
+          <TD ROWSPAN="2">2,1 y 3,1</TD>
+          <TD>2,2</TD>
+          <TD>2,3</TD>
+        </TR>
+        <TR>
+          <TD>3,2</TD>
+          <TD>3,3</TD>
+        </TR>
+        </TABLE>
+        </font></td></tr></table>
+    <p align="justify">Esta etiqueta admite s&oacute;lo un par&aacute;metro: <tt><font color="#006600" face="monospace">ALIGN</font></tt>,
+    que es por defecto <tt><font color="#006600" face="monospace">TOP</font></tt>. Si lo definimos como <tt><font color="#006600" face="monospace">BOTTOM</font></tt>
+    el t&iacute;tulo se colocar&aacute; al final de la tabla en lugar del
+    comienzo.</p>
+  <p></p><img src="graficos/linea.gif" height="1" width="590"><table cellspacing="0" cellpadding="0" border="0" width="100%"><tr><td><img src="graficos/transp.gif" height="2" width="90"></td></tr></table><table cellspacing="0" cellpadding="0" border="0" width="100%"><tr><td align="left"><a href="mapas.html"><img src="graficos/izq.gif" align="MIDDLE" border="0"></a><font size="-1" face="Arial,Helvetica,sans-serif">Mapas</font></td><td align="right"><font size="-1" face="Arial,Helvetica,sans-serif">Marcos</font><a href="marcos.html"><img src="graficos/der.gif" align="MIDDLE" border="0"></a></td></tr></table><font size="-1"><div align="center">&copy; 1998-2000 <a href="mailto:multivac@idecnet.com">Daniel
+    Rodr&iacute;guez</a><br><a href="index.html"><img src="graficos/loguito.gif" border="0"></a></div></font></font></td></tr></table></body></html>

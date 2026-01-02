@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Harry Potter</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style/menu.css">
+    <link rel="stylesheet" href="style/index.css">
+    <link rel="icon" href="image/logo.png">
+
+    <script src="javaScript/modo.js"></script>
+    <script src="javaScript/recarga.js"></script>
+    <script src="javaScript/scroll.js"></script>
+
+
+
+</head>
+
+<body>
+    <div class="contenedor_loader">
+        <div><img src="image/carga_snichDorada.gif" class="gif"></div>
+    </div>
+    <!-- Navigation -->
+    <div class="navigation-wrap bg-light start-header start-style">
+        <div class="container-fluid">
+            <div class="row justify-content-between align-items-center">
+                <div class="row">
+                    <div class="col">
+                        <!-- Logo -->
+                        <a class="navbar-brand" href="index.html" target="_self">
+                            <img src="image/logo.png" alt="Logo" class="logo">
+                        </a>
+                    </div>
+                    <div class="col posicionModo">
+                        <button type="button" class="btn btn-light colorModo" onclick="toggleTheme()">
+                            <img id="lightImage" src="image/soleado.png" alt="Light Theme">
+                            <img id="darkImage" src="image/luna.png" alt="Dark Theme">
+                        </button>
+                    </div>
+                </div>
+                <div class="col-auto flex-grow-0 flex-shrink-0">
+                    <!-- Opciones del Navbar -->
+                    <nav class="navbar navbar-expand-md">
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav ms-auto">
+                                <li class="nav-item">
+                                    <a class="nav-link dropdown-toggle" href="Hogwarts/Hogwart.html" role="button"
+                                        data-bs-toggle="dropdown" aria-haspopup="true"
+                                        aria-expanded="false">Hogwarts</a>
+                                    <div class="dropdown-menu">
+                                        <a class="dropdown-item"
+                                            href="Hogwarts/Profesores/Profesores.html">Profesores</a>
+                                        <a class="dropdown-item" href="Hogwarts/Alumnos/Alumnos.html">Alumnos</a>
+                                        <a class="dropdown-item"
+                                            href="Hogwarts/Asignaturas/asignaturas.html">Asignaturas</a>
+                                        <a class="dropdown-item" href="Hogwarts/Casas/casa.html">Casas</a>
+                                    </div>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link dropdown-toggle" href="Mortifagos/Mortifagos.html" role="button"
+                                        data-bs-toggle="dropdown" aria-haspopup="true"
+                                        aria-expanded="false">Mortífagos</a>
+                                    <div class="dropdown-menu">
+                                        <a class="dropdown-item"
+                                            href="Mortifagos/Personajes/Personajes.html">Personajes</a>
+                                        <a class="dropdown-item"
+                                            href="Mortifagos/Horrocruxes/horrocruxes.html">Horrocruxes</a>
+                                        <a class="dropdown-item" href="Mortifagos/Mortifagos.html">Marca Tenebrosa</a>
+                                    </div>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link dropdown-toggle" href="Familias/Familias.html">Familias</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="Mapa/mapa.html">Mapa</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+                <div class="col-auto">
+                    <!-- Segunda sección de opciones del Navbar -->
+                    <nav class="navbar navbar-expand-md navbar-light">
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav ms-auto">
+                                <li class="nav-item">
+                                    <a class="nav-link dropdown-toggle" href="Adaptaciones/Adaptaciones.html"
+                                        role="button" data-bs-toggle="dropdown" aria-haspopup="true"
+                                        aria-expanded="false">Adaptaciones</a>
+                                    <div class="dropdown-menu">
+                                        <a class="dropdown-item" href="Adaptaciones/Libros.html">Libros</a>
+                                        <a class="dropdown-item" href="Adaptaciones/Peliculas.html">Películas</a>
+                                        <a class="dropdown-item" href="Adaptaciones/Videojuegos.html">Videojuegos</a>
+                                    </div>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="Curiosidades/curiosidad.html">Curiosidades</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="Comentarios/Comentarios.html">Comentarios</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="quiz/quiz.html">Quiz</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                    <div class="nav-images-container">
+                        <img src="https://cdn-hogwartslegacy.warnerbrosgames.com/static/bar-left.png" alt
+                            class="nav-bar left">
+                        <img src="https://cdn-hogwartslegacy.warnerbrosgames.com/static/bar-right.png" alt
+                            class="nav-bar right">
+                    </div>
+                    <div>
+                        <div class="nav-bar-corner-container">
+                            <div class="nav-bar-corner left">
+                                <img src="https://cdn-hogwartslegacy.warnerbrosgames.com/static/corner-left.webp" alt=""
+                                    class="img-fluid">
+                            </div>
+                            <div class="nav-bar-corner right">
+                                <img src="https://cdn-hogwartslegacy.warnerbrosgames.com/static/corner-right.webp"
+                                    alt="" class="img-fluid">
+                            </div>
+                        </div>
+                        <div class="nav-bar-corner-container1">
+                            <div class="nav-bar-corner bottomLeft">
+                                <img src="https://cdn-hogwartslegacy.warnerbrosgames.com/static/corner-bottom-left.webp"
+                                    alt="" class="img-fluid">
+                            </div>
+                            <div class="nav-bar-corner bottomRight">
+                                <img src="https://cdn-hogwartslegacy.warnerbrosgames.com/static/corner-bottom-right.webp"
+                                    alt="" class="img-fluid">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Your main content here -->
+    <div id="video-container">
+        <video autoplay muted loop id="bgVideo">
+            <source src="howartLegasy.mp4" type="video/mp4">
+        </video>
+        <div class="posicion">
+            <img src="image//welcome.png" class="tamaño">
+        </div>
+
+    </div>
+
+    <div class="row justify-content-center barra text-center">
+        <div class="row mt-4">
+            <div class="col-md-4">
+                <figure class="position-relative">
+                    <div class="position-relative">
+                        <img src="image/borde-carrusel.png" class="imagenCirculo">
+                        <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+                            <div class="carousel-indicators">
+                                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0"
+                                    class="active" aria-current="true" aria-label="Slide 1"></button>
+                                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                                    aria-label="Slide 2"></button>
+                                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                                    aria-label="Slide 3"></button>
+                                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3"
+                                    aria-label="Slide 4"></button>
+                                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="4"
+                                    aria-label="Slide 5"></button>
+                                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="5"
+                                    aria-label="Slide 6"></button>
+                                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="6"
+                                    aria-label="Slide 7"></button>
+                                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="7"
+                                    aria-label="Slide 8"></button>
+                            </div>
+                            <div class="carousel-inner fondo">
+                                <div class="carousel-item active">
+                                    <a href="Hogwarts/Hogwart.html">
+                                        <img src="image/hogwarts.gif" class="d-block w-100" alt="...">
+                                        <div class="carousel-caption d-none d-md-block">
+                                            <h1>Hogwarts</h1>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="carousel-item">
+                                    <a href="Mortifagos/Mortifagos.html">
+                                        <img src="image/mortifagos.webp" class="d-block w-100" alt="...">
+                                        <div class="carousel-caption d-none d-md-block">
+                                            <h1>Mortífagos</h1>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="carousel-item">
+                                    <a href="Familias/Familias.html">
+                                        <img src="image/familias.gif" class="d-block w-100" alt="...">
+                                        <div class="carousel-caption d-none d-md-block">
+                                            <h1>Familias</h1>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="carousel-item">
+                                    <a href="Mapa/mapa.html">
+                                        <img src="image/mapa.gif" class="d-block w-100" alt="...">
+                                        <div class="carousel-caption d-none d-md-block">
+                                            <h1>Mapa</h1>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="carousel-item">
+                                    <a href="Adaptaciones/Adaptaciones.html">
+                                        <img src="image/adaptaciones.gif" class="d-block w-100" alt="...">
+                                        <div class="carousel-caption d-none d-md-block">
+                                            <h1>Adaptaciones</h1>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="carousel-item">
+                                    <a href="Curiosidades/curiosidad.html">
+                                        <img src="image/curiosidades.gif" class="d-block w-100" alt="...">
+                                        <div class="carousel-caption d-none d-md-block">
+                                            <h1>Curiosidades</h1>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="carousel-item">
+                                    <a href="Comentarios/Comentarios.html">
+                                        <img src="image/comentarios.gif" class="d-block w-100" alt="...">
+                                        <div class="carousel-caption d-none d-md-block">
+                                            <h1>Comentarios</h1>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="carousel-item">
+                                    <a href="quiz/quiz.html">
+                                        <img src="image/quiz.jpg" class="d-block w-100" alt="...">
+                                        <div class="carousel-caption d-none d-md-block">
+                                            <h1>Quiz</h1>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </figure>
+            </div>
+        </div>
+        <!-- Controles del carrusel -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+            data-bs-slide="prev">
+
+            <img src="image/previus.png" class="flechas">
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+            data-bs-slide="next">
+            <img src="image/next.png" class="flechas">
+        </button>
+    </div>
+
+    <footer class="text-center fondoFooter">
+        <div class="lineaSeparacion">
+            <img src="https://cdn-hogwartslegacy.warnerbrosgames.com/static/bar-left.png" class="izquierda">
+            <img src="https://cdn-hogwartslegacy.warnerbrosgames.com/static/bar-right.png" class="derecha">
+        </div>
+        <!-- Grid container -->
+        <div class="container pt-4">
+            <!-- Section: Social media -->
+            <section class="mb-4">
+                <!-- Facebook -->
+                <a data-mdb-ripple-init class="btn btn-link btn-floating btn-lg text-body m-1"
+                    href="https://www.facebook.com/harrypotter" role="button"><img src="image/facebook.png"
+                        class="footer"></a>
+
+                <!-- Instagram -->
+                <a data-mdb-ripple-init class="btn btn-link btn-floating btn-lg text-body m-1"
+                    href="https://www.instagram.com/harrypotter/?hl=es" role="button"><img src="image/instagram.png"
+                        class="footer"></a>
+
+                <!-- Twitter -->
+                <a data-mdb-ripple-init class="btn btn-link btn-floating btn-lg text-body m-1"
+                    href="https://x.com/harrypotter" role="button"><img src="image/twitter.png" class="footer2"></a>
+
+                <!-- YouTube -->
+                <a data-mdb-ripple-init class="btn btn-link btn-floating btn-lg text-body m-1"
+                    href="https://www.youtube.com/@harrypotter" role="button"><img src="image/youtube.png"
+                        class="footer"></a>
+
+                <!-- TikTok -->
+                <a data-mdb-ripple-init class="btn btn-link btn-floating btn-lg text-body m-1"
+                    href="https://www.tiktok.com/@harrypotter" role="button"><img src="image/tik-tok.png"
+                        class="footer"></a>
+
+            </section>
+        </div>
+        <!-- Grid container -->
+
+        <!-- Copyright -->
+        <div class="text-center p-3 fondoFooter2">
+            Copyright © 2024
+        </div>
+    </footer>
+
+
+</body>
+
+</html>

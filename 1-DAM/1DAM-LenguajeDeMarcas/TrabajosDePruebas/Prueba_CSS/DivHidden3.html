@@ -1,0 +1,55 @@
+<html>
+    <head>
+
+       <style>
+            .ParentDiv01 .ChildDivOrig {display: block;} 
+            .ParentDiv01 .ChildDivNew {display: none;}
+            .ParentDiv02 .ChildDivOrig {display: none;}
+            .ParentDiv02 .ChildDivNew {display: block;}  
+        </style> 
+
+    </head>
+    
+    <body>
+    
+        <script>
+
+            function change2New(bozo) {
+                document.getElementById(bozo).className = "ParentDiv02";
+            }
+
+            function change2Orig(bozo) {
+                document.getElementById(bozo).className = "ParentDiv01";
+            }
+        
+        </script>
+        
+        <div id="Changer1" class="ParentDiv01">
+            
+            <div class="ChildDivOrig" style="height: 100px;">
+               <div style="border: 2px solid red;  width: 200px;">
+                  <div style="background: #0000ff;  color: white;">BLOQUE 1</div>
+                  <div style="background: #00a0a0;  color: white;">BLOQUE 2</div>
+                  <div style="background: #ffc0c0;  color: white;">BLOQUE 3</div>
+               </div>
+            </div>
+         
+            <div class="ChildDivNew" style="height: 100px;">
+                <div style="font-size: 12px;"><BR>
+                    <tt>&lt;div style="border: 5px solid red; width: 200px;"&gt;</tt><BR>
+                    <tt>&lt;div style="background: #0000ff; color: white;"&gt;BLOQUE 1&lt;/div&gt;</tt><BR>
+                    <tt>&lt;div style="background: #00a0a0; color: white;"&gt;BLOQUE 2&lt;/div&gt;</tt><BR>
+                    <tt>&lt;div style="background: #ffc0c0; color: white;"&gt;BLOQUE 3&lt;/div&gt;</tt><BR>
+                    <tt>&lt;/div&gt;</tt>
+                </div>
+            </div>
+         
+        </div>
+         
+        <form action="" >
+           <input type="button" onclick="change2New('Changer1');" value="Ver c&oacute;digo" >
+           <input type="button" onclick="change2Orig('Changer1');" value="Ver bloque">
+        </form>
+
+    </body>
+</html>

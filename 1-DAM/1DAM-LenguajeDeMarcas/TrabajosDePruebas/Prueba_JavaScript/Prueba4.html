@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Ejemplo de JavaScript</title>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+
+    <form>
+        <p>Ingrese su nombre:<input type="text" id="nombre"></p>
+        <p>Ingrese su edad:<input type="text" id="edad"></p>
+        <p><input type="button" value="Confirmar" onClick="mostrar()"></p>
+
+        <p><select id="select1" onChange="cambiarColor()">
+                <option value="ff0000">Rojo</option>
+                <option value="00ff00">Verde</option>
+                <option value="0000ff">Azul</option>
+            </select>
+        </p>
+        <p>Número de índice seleccionado del objeto SELECT:<input type="text" id="text1"></p>
+        <p>Texto seleccionado:<input type="text" id="text2"></p>
+        <p>Valor asociado:<input type="text" id="text3"></p>
+
+        <input type="checkbox" id="checkbox1">JavaScript
+        <br>
+        <input type="checkbox" id="checkbox2">PHP
+        <br>
+        <input type="checkbox" id="checkbox3">JSP
+        <br>
+        <input type="checkbox" id="checkbox4">VB.Net
+        <br>
+        <input type="button" value="Mostrar" onClick="contarSeleccionados()">
+
+        <br>
+        <br>
+
+        <input type="radio" id="radio1" name="estudios">Sin estudios
+        <br>
+        <input type="radio" id="radio2" name="estudios">Primarios
+        <br>
+        <input type="radio" id="radio3" name="estudios">Secundarios
+        <br>
+        <input type="radio" id="radio4" name="estudios">Universitarios
+        <br>
+        <input type="button" value="Mostrar" onClick="mostrarSeleccionado()">
+    </form>
+
+    <script>
+        function mostrarSeleccionado() {
+            if (document.getElementById('radio1').checked) {
+                alert('no tienes estudios');
+            }
+            if (document.getElementById('radio2').checked) {
+                alert('tienes estudios primarios');
+            }
+            if (document.getElementById('radio3').checked) {
+                alert('tienes estudios secundarios');
+            }
+            if (document.getElementById('radio4').checked) {
+                alert('tienes estudios universitarios');
+            }
+        }
+        function contarSeleccionados() {
+            let cant = 0;
+            if (document.getElementById('checkbox1').checked) {
+                cant++;
+            }
+            if (document.getElementById('checkbox2').checked) {
+                cant++;
+            }
+            if (document.getElementById('checkbox3').checked) {
+                cant++;
+            }
+            if (document.getElementById('checkbox4').checked) {
+                cant++;
+            }
+            alert('Conoce ' + cant + ' lenguajes');
+        }
+
+        function cambiarColor() {
+            let seleccion = document.getElementById('select1');
+            document.getElementById('text1').value = seleccion.selectedIndex;
+            document.getElementById('text2').value = seleccion.options[seleccion.selectedIndex].text;
+            document.getElementById('text3').value = seleccion.options[seleccion.selectedIndex].value;
+        }
+
+        function mostrar() {
+            let nom = document.getElementById('nombre').value;
+            let ed = document.getElementById('edad').value;
+            alert('Su nombre es ' + nom);
+            alert('Usted tiene ' + ed + ' años');
+        }
+    </script>
+
+</body>
+
+</html>

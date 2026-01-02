@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¿De qué casa eres?</title>
+    <link rel="icon" href="../image/logo.png">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- AngularJS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../style/menu.css">
+    <link rel="stylesheet" href="quiz.css">
+
+    <!-- Custom JavaScript -->
+    <script src="../javaScript/modo.js"></script>
+    <script src="../javaScript/recarga.js"></script>
+</head>
+
+<body>
+    <div class="contenedor_loader">
+        <div><img src="../image/carga_snichDorada.gif" class="gif"></div>
+    </div>
+    <!-- Navigation -->
+    <div class="navigation-wrap bg-light start-header start-style">
+        <div class="container-fluid">
+            <div class="row justify-content-between align-items-center">
+                <div class="row">
+                    <div class="col">
+                        <!-- Logo -->
+                        <a class="navbar-brand" href="../index.html" target="_self">
+                            <img src="../image/logo.png" alt="Logo" class="logo">
+                        </a>
+                    </div>
+                    <div class="col posicionModo">
+                        <button type="button" class="btn btn-light colorModo" onclick="toggleTheme()">
+                            <img id="lightImage" src="../image/soleado.png" alt="Light Theme">
+                            <img id="darkImage" src="../image/luna.png" alt="Dark Theme">
+                        </button>
+                    </div>
+                </div>
+                <div class="col-auto flex-grow-0 flex-shrink-0">
+                    <!-- Opciones del Navbar -->
+                    <nav class="navbar navbar-expand-md">
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav ms-auto">
+                                <li class="nav-item">
+                                    <a class="nav-link dropdown-toggle" href="../Hogwarts/Hogwart.html" role="button"
+                                        data-bs-toggle="dropdown" aria-haspopup="true"
+                                        aria-expanded="false">Hogwarts</a>
+                                    <div class="dropdown-menu">
+                                        <a class="dropdown-item" href="../Hogwarts/Profesores/Profesores.html">Profesores</a>
+                                        <a class="dropdown-item" href="../Hogwarts/Alumnos/Alumnos.html">Alumnos</a>
+                                        <a class="dropdown-item" href="../Hogwarts/Asignaturas/asignaturas.html">Asignaturas</a>
+                                        <a class="dropdown-item" href="../Hogwarts/Casas/casa.html">Casas</a>
+                                    </div>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link dropdown-toggle" href="../Mortifagos/Mortifagos.html" role="button"
+                                        data-bs-toggle="dropdown" aria-haspopup="true"
+                                        aria-expanded="false">Mortífagos</a>
+                                    <div class="dropdown-menu">
+                                        <a class="dropdown-item"
+                                            href="../Mortifagos/Personajes/Personajes.html">Personajes</a>
+                                        <a class="dropdown-item"
+                                            href="../Mortifagos/Horrocruxes/horrocruxes.html">Horrocruxes</a>
+                                        <a class="dropdown-item" href="../Mortifagos/Mortifagos.html">Marca Tenebrosa</a>
+                                    </div>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link dropdown-toggle" href="../Familias/Familias.html">Familias</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="../Mapa/mapa.html">Mapa</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+                <div class="col-auto">
+                    <!-- Segunda sección de opciones del Navbar -->
+                    <nav class="navbar navbar-expand-md navbar-light">
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav ms-auto">
+                                <li class="nav-item">
+                                    <a class="nav-link dropdown-toggle" href="../Adaptaciones/Adaptaciones.html"
+                                        role="button" data-bs-toggle="dropdown" aria-haspopup="true"
+                                        aria-expanded="false">Adaptaciones</a>
+                                    <div class="dropdown-menu">
+                                        <a class="dropdown-item" href="../Adaptaciones/Libros.html">Libros</a>
+                                        <a class="dropdown-item" href="../Adaptaciones/Peliculas.html">Películas</a>
+                                        <a class="dropdown-item" href="../Adaptaciones/Videojuegos.html">Videojuegos</a>
+                                    </div>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="../Curiosidades/curiosidad.html">Curiosidades</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="../Comentarios/Comentarios.html">Comentarios</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="quiz.html">Quiz</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                    <div class="nav-images-container">
+                        <img src="https://cdn-hogwartslegacy.warnerbrosgames.com/static/bar-left.png" alt
+                            class="nav-bar left">
+                        <img src="https://cdn-hogwartslegacy.warnerbrosgames.com/static/bar-right.png" alt
+                            class="nav-bar right">
+                    </div>
+                    <div>
+                        <div class="nav-bar-corner-container">
+                            <div class="nav-bar-corner left">
+                                <img src="https://cdn-hogwartslegacy.warnerbrosgames.com/static/corner-left.webp" alt=""
+                                    class="img-fluid">
+                            </div>
+                            <div class="nav-bar-corner right">
+                                <img src="https://cdn-hogwartslegacy.warnerbrosgames.com/static/corner-right.webp"
+                                    alt="" class="img-fluid">
+                            </div>
+                        </div>
+                        <div class="nav-bar-corner-container1">
+                            <div class="nav-bar-corner bottomLeft">
+                                <img src="https://cdn-hogwartslegacy.warnerbrosgames.com/static/corner-bottom-left.webp"
+                                    alt="" class="img-fluid">
+                            </div>
+                            <div class="nav-bar-corner bottomRight">
+                                <img src="https://cdn-hogwartslegacy.warnerbrosgames.com/static/corner-bottom-right.webp"
+                                    alt="" class="img-fluid">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="my-5 py-5 content-fluid">
+        <div class="text-center">
+            <picture>
+                <source srcset="../image/titulo-arriba.webp" type="image/webp">
+                <img src="../image/titulo-arriba.webp" class="title-decoration margen">
+            </picture>
+    
+            <h1 class="letraBlanca">¿De qué casa eres?</h1>
+    
+            <picture>
+                <source srcset="../image/titulo-bajo.png" type="image/png">
+                <img src="../image/titulo-bajo.png" class="title-decoration">
+            </picture>
+        </div>
+        <div ng-app="quizApp" class="borde margenArriba content-fluid">
+            <div ng-controller="QuizController">
+                <div ng-repeat="question in questions" class="question-container" ng-class="{'active': $index === currentPage}">
+                    <div class="form-group">
+                        <label class="letraPreg question-label">{{ question.text }}</label>
+                        <div ng-repeat="option in question.options">
+                            <label class="option-label">
+                                <input type="radio" name="q{{$parent.$index + 1}}" value="{{ option.value }}" required> {{ option.text }}
+                            </label>
+                        </div>
+                    </div>
+                </div>
+        
+                <div class="text-center margenAbajo">
+                    <nav aria-label="Page navigation example">
+                        <ul class="pagination">
+                            <li class="page-item" ng-class="{'disabled': pagePrevDisabled()}">
+                                <a class="page-link flecha" href="#" aria-label="Previous" ng-click="prevPage()">
+                                    <span aria-hidden="true">&laquo;</span>
+                                </a>
+                            </li>
+                            <li class="page-item" ng-repeat="n in range()" ng-class="{'active': n == currentPage}">
+                                <a class="page-link paginacion" href="#" ng-click="setPage(n)">{{ n + 1 }}</a>
+                            </li>
+                            <li class="page-item" ng-class="{'disabled': pageNextDisabled()}">
+                                <a class="page-link flecha" href="#" aria-label="Next" ng-click="nextPage()">
+                                    <span aria-hidden="true">&raquo;</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <button type="button" class="btn colorBoton" ng-click="calculateResult()">Terminar</button>
+                </div>
+        
+                <div class="modal" id="resultModal">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="resultModalLabel">Tu casa de Hogwarts</h5>
+                                <button type="button" class="btn-close" ng-click="closeModal()"></button>
+                            </div>
+                            <div class="modal-body" id="resultText">
+                                {{ resultText }}
+                                <!-- Aquí se muestra la imagen -->
+                                <img ng-src="{{ resultImage }}" alt="House Emblem" class="imagenCasa">
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" ng-click="closeModal()">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>                
+            </div>
+        </div>
+    </div>
+    
+    <footer class="text-center fondoFooter">
+        <div class="lineaSeparacion">
+            <img src="https://cdn-hogwartslegacy.warnerbrosgames.com/static/bar-left.png" class="izquierda">
+            <img src="https://cdn-hogwartslegacy.warnerbrosgames.com/static/bar-right.png" class="derecha">
+        </div>
+        <!-- Grid container -->
+        <div class="container-fluid pt-4">
+            <!-- Section: Social media -->
+            <section class="mb-4">
+                <!-- Facebook -->
+                <a data-mdb-ripple-init class="btn btn-link btn-floating btn-lg text-body m-1"
+                    href="https://www.facebook.com/harrypotter" role="button"><img src="../image/facebook.png"
+                        class="footer"></a>
+
+                <!-- Instagram -->
+                <a data-mdb-ripple-init class="btn btn-link btn-floating btn-lg text-body m-1"
+                    href="https://www.instagram.com/harrypotter/?hl=es" role="button"><img src="../image/instagram.png"
+                        class="footer"></a>
+
+                <!-- Twitter -->
+                <a data-mdb-ripple-init class="btn btn-link btn-floating btn-lg text-body m-1"
+                    href="https://x.com/harrypotter" role="button"><img src="../image/twitter.png" class="footer2"></a>
+
+                <!-- YouTube -->
+                <a data-mdb-ripple-init class="btn btn-link btn-floating btn-lg text-body m-1"
+                    href="https://www.youtube.com/@harrypotter" role="button"><img src="../image/youtube.png"
+                        class="footer"></a>
+
+                <!-- TikTok -->
+                <a data-mdb-ripple-init class="btn btn-link btn-floating btn-lg text-body m-1"
+                    href="https://www.tiktok.com/@harrypotter" role="button"><img src="../image/tik-tok.png"
+                        class="footer"></a>
+
+            </section>
+        </div>
+        <!-- Grid container -->
+
+        <!-- Copyright -->
+        <div class="text-center p-3 fondoFooter2">
+            Copyright © 2024
+        </div>
+    </footer>
+
+    <!-- Bootstrap JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+
+    <!-- Custom JavaScript -->
+    <script src="quiz.js"></script>
+</body>
+
+</html>

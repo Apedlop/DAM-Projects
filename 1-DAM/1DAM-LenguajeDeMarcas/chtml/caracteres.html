@@ -1,0 +1,44 @@
+<!--Este documento ha sido generado con XT, de James Clark--><html xmlns:date="http://www.jclark.com/xt/java/java.util.Date"><head><title>Curso de HTML: Caracteres especiales</title><META HTTP-EQUIV="pragma" CONTENT="no-cache"></head><!--Cuerpo del documento--><body bgcolor="#FEFEFE"><table width="630" border="0"><tr><td valign="top" align="center" width="40" rowspan="2"><a href="index.html"><img src="graficos/logo.jpg" border="0"></a></td><td align="center" width="590"><IFRAME SRC="http://ad.es.doubleclick.net/adi/ES-programacion.net/ES-redferca-programacion-html;sz=468x60;ord=44126913875755190?" name="frame1" width="468" height="60" frameborder="no" border="0" MARGINWIDTH="0" MARGINHEIGHT="0" SCROLLING="no"><SCRIPT language="JavaScript1.1" SRC="http://ad.es.doubleclick.net/adj/ES-programacion.net/ES-redferca-programacion-html;abr=!ie;sz=468x60;ord=44126913875755190?"></SCRIPT><NOSCRIPT><A HREF="http://ad.es.doubleclick.net/jump/ES-programacion.net/ES-redferca-programacion-html;abr=!ie;sz=468x60;ord=44126913875755190?"><IMG SRC="http://ad.es.doubleclick.net/ad/ES-programacion.net/ES-redferca-programacion-html;abr=!ie;sz=468x60;ord=44126913875755190?" border="0" height="60" width="468"></A></NOSCRIPT></IFRAME></td></tr><tr><td valign="top"><font face="Arial,Helvetica,sans-serif"><font size="+3" color="#005CA0"><b>5. Caracteres especiales</b></font>
+      <p align="justify">Si os habeis fijado en los ejemplos habr&eacute;is visto que en los
+      textos de los mismos no hay acentos, ni e&ntilde;es, ni s&iacute;mbolos
+      de abrir interrogaci&oacute;n o exclamaci&oacute;n. Esto es debido a
+      los distintos juegos de caracteres que manejan los ordenadores.</p>
+      <p align="justify">Las m&aacute;quinas manejan la informaci&oacute;n en formato binario
+      (es decir, en unos y ceros). Estos, a su vez, forman n&uacute;meros, los
+      cuales se traducen en letras. &iquest;C&oacute;mo? Mediante tablas.
+      Podemos asignar el valor 64 a la letra a, el 65 a la b, etc..</p>
+      <p align="justify">El problema est&aacute; en que cada ordenador es de un fabricante
+      distinto y puede adoptar una tabla diferente al resto. Para evitarlo
+      existen diversos est&aacute;ndares y el m&aacute;s extendido es el ASCII.
+      De hecho, actualmente todos los ordenadores tienen la misma tabla ASCII
+      para los primeros 127 caracteres. Pero esa tabla no contiene vocales
+      con acento, ni e&ntilde;es, ni s&iacute;mbolos de abrir interrogaci&oacute;n
+      o exclamaci&oacute;n... Esto nos pasa por dejar que los norteamericanos
+      sean quienes construyan las computadoras.</p>
+      <p align="justify">El HTML 2.0 eligi&oacute; como tabla est&aacute;ndar la ISO-Latin-1,
+      que comparte con la ASCII los 127 caracteres e incluye unos cuantos
+      m&aacute;s hasta el n&uacute;mero 255.</p>
+    <br><br><a name="1"></a><font size="+2" color="#005CA0">5.1. Caracteres extendidos en HTML</font>
+        <p align="justify">La manera de incluir los caracteres extendidos (cuyo n&uacute;mero
+        est&aacute; m&aacute;s all&aacute; del 127) consiste en encerrar el
+        c&oacute;digo entre los caracteres <tt><font color="#006600" face="monospace">&amp;#</font></tt> y <tt><font color="#006600" face="monospace">;</font></tt>. As&iacute;
+        pues, lo siguiente:</p>
+        <div align="center"><pre><font color="#006600" face="monospace">&amp;#189;</font></pre></div>
+        <p align="justify">nos deber&iacute;a dar un medio (&frac12;). Tambi&eacute; existe una serie
+        de sinonimos para poder recordar con m&aacute;s facilidad estos caracteres.
+        As&iacute;, por ejemplo, <tt><font color="#006600" face="monospace">&amp;#189;</font></tt> tambi&eacute;n se puede escribir
+        como <tt><font color="#006600" face="monospace">&amp;frac12;</font></tt>. Vamos a ver algunos de estos c&oacute;digos,
+        los m&aacute;s &uacute;tiles a la hora de escribir en espa&ntilde;ol:</p>
+        <table align="center" border="1"><tr><th>C&oacute;digo</th><th>Resultado</th></tr><tr><td><tt><font color="#006600" face="monospace">&amp;aacute;, &amp;Aacute;, &amp;eacute;, &amp;Eacute;,...</font></tt></td><td><font face="Arial,Helvetica,sans-serif">&aacute;, &Aacute;, &eacute;, &Eacute;, &iacute;, &Iacute;, &oacute;, &Oacute;, &uacute; y &Uacute;</font></td></tr><tr><td><tt><font color="#006600" face="monospace">&amp;ntilde; y &amp;Ntilde;</font></tt></td><td><font face="Arial,Helvetica,sans-serif">&ntilde; y &Ntilde;</font></td></tr><tr><td><tt><font color="#006600" face="monospace">&amp;iquest;</font></tt></td><td><font face="Arial,Helvetica,sans-serif">&iquest;</font></td></tr><tr><td><tt><font color="#006600" face="monospace">&amp;iexcl;</font></tt></td><td><font face="Arial,Helvetica,sans-serif">&iexcl;</font></td></tr><tr><td><tt><font color="#006600" face="monospace">&amp;ordm;</font></tt></td><td><font face="Arial,Helvetica,sans-serif">&ordm;</font></td></tr><tr><td><tt><font color="#006600" face="monospace">&amp;ordf;</font></tt></td><td><font face="Arial,Helvetica,sans-serif">&ordf;</font></td></tr><tr><td><tt><font color="#006600" face="monospace">&amp;trade;<img src="graficos/explorer.gif" width="26" height="26" border="0" align="middle"> o &amp;#153;</font></tt></td><td><font face="Arial,Helvetica,sans-serif">&trade;o &#153;</font></td></tr><tr><td><tt><font color="#006600" face="monospace">&amp;copy;</font></tt></td><td><font face="Arial,Helvetica,sans-serif">&copy;</font></td></tr><tr><td><tt><font color="#006600" face="monospace">&amp;reg;</font></tt></td><td><font face="Arial,Helvetica,sans-serif">&reg;</font></td></tr><tr><td><tt><font color="#006600" face="monospace">&amp;nbsp;</font></tt></td><td><font face="Arial,Helvetica,sans-serif">(espacio en blanco que no puede ser usado para saltar de l&iacute;nea)</font></td></tr></table>
+      <br><br><a name="2"></a><font size="+2" color="#005CA0">5.2. Caracteres de control</font>
+        <p align="justify">En el HTML existen cuatro caracteres de control, que se usan para formar
+        etiquetas, establecer par&aacute;metros, etc.. Para poder emplearlos sin
+        riesgo deberemos escribir los siguiente c&oacute;digos:</p>
+        <table align="center" border="1"><tr><th>C&oacute;digo</th><th>Resultado</th></tr><tr><td><tt><font color="#006600" face="monospace">&amp;lt;</font></tt></td><td><font face="Arial,Helvetica,sans-serif">&lt;</font></td></tr><tr><td><tt><font color="#006600" face="monospace">&amp;gt;</font></tt></td><td><font face="Arial,Helvetica,sans-serif">&gt;</font></td></tr><tr><td><tt><font color="#006600" face="monospace">&amp;amp;</font></tt></td><td><font face="Arial,Helvetica,sans-serif">&amp;</font></td></tr><tr><td><tt><font color="#006600" face="monospace">&amp;quot;</font></tt></td><td><font face="Arial,Helvetica,sans-serif">"</font></td></tr></table>
+        <p align="justify">Ahora podremos ver el <a href="ejemplos/caracteres.html" target="_new">ejemplo
+        anterior</a> corregido para incluir acentos y dem&aacute;s.
+        Tambi&eacute;n ten&eacute;is a vuestra disposici&oacute;n la
+        <a href="caracteres.txt">tabla completa de caracteres</a>
+        del HTML 2.0.</p>
+      <p></p><img src="graficos/linea.gif" height="1" width="590"><table cellspacing="0" cellpadding="0" border="0" width="100%"><tr><td><img src="graficos/transp.gif" height="2" width="90"></td></tr></table><table cellspacing="0" cellpadding="0" border="0" width="100%"><tr><td align="left"><a href="texto20.html"><img src="graficos/izq.gif" align="MIDDLE" border="0"></a><font size="-1" face="Arial,Helvetica,sans-serif">Formateo b&aacute;sico</font></td><td align="right"><font size="-1" face="Arial,Helvetica,sans-serif">Enlaces</font><a href="enlaces.html"><img src="graficos/der.gif" align="MIDDLE" border="0"></a></td></tr></table><font size="-1"><div align="center">&copy; 1998-2000 <a href="mailto:multivac@idecnet.com">Daniel
+    Rodr&iacute;guez</a><br><a href="index.html"><img src="graficos/loguito.gif" border="0"></a></div></font></font></td></tr></table></body></html>

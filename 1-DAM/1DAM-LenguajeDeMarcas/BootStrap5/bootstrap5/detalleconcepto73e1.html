@@ -1,0 +1,224 @@
+
+<!DOCTYPE html>
+<html>
+
+
+<!-- Mirrored from www.tutorialesprogramacionya.com/bootstrap5ya/detalleconcepto.php?punto=31&codigo=31&inicio=20 by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 19 Dec 2023 11:10:47 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QWKWPBDEFK"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-QWKWPBDEFK');
+</script>
+
+<script async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-4669394804436935",
+    enable_page_level_ads: true
+  });
+</script>
+
+<title>form : tamaño de los controles de formulario</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">    
+<meta name="keywords" content="bootstrap 5,css, html, programación, webmaster, tutorial">
+<meta name="description" content="El objetivo de este tutorial 
+    es presentar los conceptos básicos de bootstrap 5.">
+<meta name="author" content="Diego Moisset">
+
+<link href="../css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="estilos.css">
+
+<style>
+html,body {
+	background-color: #D3E9D0;
+	font-family: sans-serif,arial;
+
+}
+</style>
+
+<style>
+.uno { width: 320px; height: 100px; }
+@media(min-width: 500px) { .uno { width: 320px; height: 100px; } }
+@media(min-width: 800px) { .uno { width: 336px; height: 280px; } }
+
+.dos { width: 320px; height: 100px; }
+@media(min-width: 500px) { .dos { width: 320px; height: 100px; } }
+@media(min-width: 800px) { .dos { width: 336px; height: 280px; } }
+</style>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','../../www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-80268657-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+</head>
+
+<body>
+
+
+<div class="container">
+
+<div class="row">
+  <div class="col-md-12">
+
+<div class="titulodetalle">
+<h1>31 - form : tamaño de los controles de formulario</h1></div>
+
+  </div>
+</div>  
+
+
+<div class="row">
+  <div class="col-md-12">
+
+<div class="cuerpodetalle">
+<div style="display:block;float:left;margin: 5px;"> 
+ <script async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<!-- adaptable1 -->
+<ins class="adsbygoogle uno"
+     style="display:inline-block"
+     data-ad-client="ca-pub-4669394804436935"
+     data-ad-slot="4716538363"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script> 
+</div> 
+
+
+<p>Bootstrap 5 nos permite definir 3 tamaños de controles de formulario. Tenemos el tamaño por defecto, un tamaño grande y un tamaño pequeño.</p>
+<p>Las clases que nos permiten definir los tamaños de los controles:</p>
+<pre>
+form-control-lg
+form-control-sm
+</pre>
+<p>Veamos un formulario que utiliza los tres tamaños disponibles:</p>
+<pre class="recuadro">
+&lt;!doctype html&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;title&gt;Prueba de Bootstrap 5&lt;/title&gt; 
+  &lt;meta charset="utf-8"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"&gt;
+  &lt;link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+  &lt;div class="container"&gt;
+    &lt;p&gt;&lt;strong&gt;Tamaño pequeño&lt;/strong&gt;&lt;/p&gt;
+    &lt;form&gt;
+      &lt;div class="mb-3"&gt; 
+        &lt;label for="nombre2" class="form-label"&gt;Ingrese su nombre:&lt;/label&gt;
+        &lt;input type="text" class="form-control form-control-sm" id="nombre2" name="nombre2"&gt;
+      &lt;/div&gt; 
+      &lt;div class="mb-3"&gt; 
+        &lt;label for="clave2" class="form-label"&gt;Ingrese su clave:&lt;/label&gt;
+        &lt;input type="password" class="form-control form-control-sm" id="clave2" name="clave2"&gt;
+      &lt;/div&gt; 
+      &lt;button type="submit" class="btn btn-primary"&gt;Enviar&lt;/button&gt;       
+    &lt;/form&gt;
+
+    &lt;p&gt;&lt;strong&gt;Tamaño grande&lt;/strong&gt;&lt;/p&gt;
+    &lt;form&gt;
+      &lt;div class="mb-3"&gt; 
+        &lt;label for="nombre3" class="form-label"&gt;Ingrese su nombre:&lt;/label&gt;
+        &lt;input type="text" class="form-control form-control-lg" id="nombre3" name="nombre3"&gt;
+      &lt;/div&gt; 
+      &lt;div class="mb-3"&gt; 
+        &lt;label for="clave3" class="form-label"&gt;Ingrese su clave:&lt;/label&gt;
+        &lt;input type="password" class="form-control form-control-lg" id="clave3" name="clave3"&gt;
+      &lt;/div&gt; 
+      &lt;button type="submit" class="btn btn-primary"&gt;Enviar&lt;/button&gt;       
+    &lt;/form&gt;
+
+    &lt;p&gt;&lt;strong&gt;Tamaño normal&lt;/strong&gt;&lt;/p&gt;
+    &lt;form&gt;
+      &lt;div class="mb-3"&gt; 
+        &lt;label for="nombre" class="form-label"&gt;Ingrese su nombre:&lt;/label&gt;
+        &lt;input type="text" class="form-control" id="nombre" name="nombre"&gt;
+      &lt;/div&gt; 
+      &lt;div class="mb-3"&gt; 
+        &lt;label for="clave" class="form-label"&gt;Ingrese su clave:&lt;/label&gt;
+        &lt;input type="password" class="form-control" id="clave" name="clave"&gt;
+      &lt;/div&gt; 
+      &lt;button type="submit" class="btn btn-primary"&gt;Enviar&lt;/button&gt;       
+    &lt;/form&gt;
+    
+  &lt;/div&gt; 
+
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+<p>Los tres formularios con controles de distinto tamaño tienen una apariencia en el navegador similar a:</p>
+<img src="imagentema/foto048.jpg" border="0" alt="bootstrap 5 tamaño de controles de formulario"><br>
+
+<p>Si queremos que el control de formulario aparezca con un tamaño pequeño agregamos la clase "form-control-sm":</p>
+<pre>
+        &lt;input type="text" class="form-control form-control-sm" id="nombre2" name="nombre2"&gt;
+</pre><h2><a target="_blank" href="ejecutar0370.html?cod=31">Ejecutar Ejemplo</a></h2><h2><a href="index28fa.html?inicio=20">Retornar</a></h2> 
+
+<div>
+<!--publi-->
+<script async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<!-- adaptable2 -->
+<ins class="adsbygoogle dos"
+     style="display:inline-block"
+     data-ad-client="ca-pub-4669394804436935"
+     data-ad-slot="5774469161"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+<!--publi-->
+<script async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<!-- adaptable2 -->
+<ins class="adsbygoogle dos"
+     style="display:inline-block"
+     data-ad-client="ca-pub-4669394804436935"
+     data-ad-slot="5774469161"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+</div>
+
+
+
+
+</div>
+
+  </div>
+</div>  
+
+</div>
+
+<script type="text/javascript">
+function cambiar()
+{
+  var lista=document.getElementsByTagName('pre');
+  for(f=0;f<lista.length;f++)
+  {
+   lista[f].style.display='block';
+  }
+  document.getElementById('solucion').style.display='none';
+}
+
+</script>
+
+</body>
+
+
+<!-- Mirrored from www.tutorialesprogramacionya.com/bootstrap5ya/detalleconcepto.php?punto=31&codigo=31&inicio=20 by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 19 Dec 2023 11:10:48 GMT -->
+</html>

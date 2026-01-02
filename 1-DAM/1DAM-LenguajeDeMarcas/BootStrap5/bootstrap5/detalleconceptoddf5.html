@@ -1,0 +1,197 @@
+
+<!DOCTYPE html>
+<html>
+
+
+<!-- Mirrored from www.tutorialesprogramacionya.com/bootstrap5ya/detalleconcepto.php?punto=46&codigo=46&inicio=40 by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 19 Dec 2023 11:11:02 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QWKWPBDEFK"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-QWKWPBDEFK');
+</script>
+
+<script async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-4669394804436935",
+    enable_page_level_ads: true
+  });
+</script>
+
+<title>Imágenes</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">    
+<meta name="keywords" content="bootstrap 5,css, html, programación, webmaster, tutorial">
+<meta name="description" content="El objetivo de este tutorial 
+    es presentar los conceptos básicos de bootstrap 5.">
+<meta name="author" content="Diego Moisset">
+
+<link href="../css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="estilos.css">
+
+<style>
+html,body {
+	background-color: #D3E9D0;
+	font-family: sans-serif,arial;
+
+}
+</style>
+
+<style>
+.uno { width: 320px; height: 100px; }
+@media(min-width: 500px) { .uno { width: 320px; height: 100px; } }
+@media(min-width: 800px) { .uno { width: 336px; height: 280px; } }
+
+.dos { width: 320px; height: 100px; }
+@media(min-width: 500px) { .dos { width: 320px; height: 100px; } }
+@media(min-width: 800px) { .dos { width: 336px; height: 280px; } }
+</style>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','../../www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-80268657-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+</head>
+
+<body>
+
+
+<div class="container">
+
+<div class="row">
+  <div class="col-md-12">
+
+<div class="titulodetalle">
+<h1>46 - Imágenes</h1></div>
+
+  </div>
+</div>  
+
+
+<div class="row">
+  <div class="col-md-12">
+
+<div class="cuerpodetalle">
+<div style="display:block;float:left;margin: 5px;"> 
+ <script async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<!-- adaptable1 -->
+<ins class="adsbygoogle uno"
+     style="display:inline-block"
+     data-ad-client="ca-pub-4669394804436935"
+     data-ad-slot="4716538363"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script> 
+</div> 
+
+
+<p>Bootstrap 5 define una serie de clases para aplicar al elemento HTML &lt;img&gt;:</p>
+<ul>
+<li><strong>rounded</strong> : Define las esquinas redondeadas en la imagen.<br>Si accedemos al código del archivo bootstrap.css veremos que inicializa la propiedad  border-radius con el valor de 0.25rem.</li>
+<li><strong>rounded-circle</strong> : Convierte la imagen en un círculo, para ello Bootstrap 5 inicializa la propiedad   border-radius: 50%;</li>
+<li><strong>img-thumbnail</strong> : Define un recuadro y muestra la imagen cuando se carga la página en el navegador.</li>
+<li><strong>img-fluid</strong> : Permite escalar correctamente la imagen (Esto lo logra Bootstrap 5 definiendo la propiedad max-width: 100%; y
+  height: auto;)</li>
+<li><strong>float-start</strong> : flota la imagen a la izquierda.</li>
+<li><strong>float-end</strong> : flota la imagen a la derecha.</li>
+</ul>
+<p>Veamos una página que muestra unas imágenes aplicando sucesivamente las distintas clases disponibles en Bootstrap 4:</p>
+<pre class="recuadro">
+&lt;!doctype html&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;title&gt;Prueba de Bootstrap 5&lt;/title&gt; 
+  &lt;meta charset="utf-8"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"&gt;
+  &lt;link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+  &lt;div class="container"&gt;
+    &lt;img src="https://www.tutorialesprogramacionya.com/cssya/imagen1.png" class="rounded"&gt;
+    &lt;hr&gt;
+    &lt;img src="https://www.tutorialesprogramacionya.com/cssya/imagen1.png" class="rounded-circle"&gt;
+    &lt;hr&gt;
+    &lt;img src="https://www.tutorialesprogramacionya.com/cssya/foto1.jpg" class="img-fluid"&gt;    
+    &lt;hr&gt;
+    &lt;img src="https://www.tutorialesprogramacionya.com/cssya/imagen1.png" class="img-thumbnail"&gt;    
+    &lt;hr&gt;
+    &lt;img src="https://www.tutorialesprogramacionya.com/cssya/imagen1.png" class="float-start"&gt;
+    &lt;img src="https://www.tutorialesprogramacionya.com/cssya/imagen1.png" class="float-end"&gt;    
+    &lt;hr&gt;    
+  &lt;/div&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+
+<p>Tenemos como resultado en el navegador:</p>
+<img src="imagentema/foto072.jpg" border="0" alt="img bootstrap 5"><br>
+<h2><a target="_blank" href="ejecutara663.html?cod=46">Ejecutar Ejemplo</a></h2><h2><a href="index1e61.html?inicio=40">Retornar</a></h2> 
+
+<div>
+<!--publi-->
+<script async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<!-- adaptable2 -->
+<ins class="adsbygoogle dos"
+     style="display:inline-block"
+     data-ad-client="ca-pub-4669394804436935"
+     data-ad-slot="5774469161"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+<!--publi-->
+<script async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<!-- adaptable2 -->
+<ins class="adsbygoogle dos"
+     style="display:inline-block"
+     data-ad-client="ca-pub-4669394804436935"
+     data-ad-slot="5774469161"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+</div>
+
+
+
+
+</div>
+
+  </div>
+</div>  
+
+</div>
+
+<script type="text/javascript">
+function cambiar()
+{
+  var lista=document.getElementsByTagName('pre');
+  for(f=0;f<lista.length;f++)
+  {
+   lista[f].style.display='block';
+  }
+  document.getElementById('solucion').style.display='none';
+}
+
+</script>
+
+</body>
+
+
+<!-- Mirrored from www.tutorialesprogramacionya.com/bootstrap5ya/detalleconcepto.php?punto=46&codigo=46&inicio=40 by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 19 Dec 2023 11:11:04 GMT -->
+</html>

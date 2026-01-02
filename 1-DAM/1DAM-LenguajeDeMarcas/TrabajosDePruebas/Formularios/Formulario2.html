@@ -1,0 +1,85 @@
+<html>
+    <head>
+        <title>Datos de alumnos</title>
+    </head>
+    <body>
+
+        <h1 style="text-align: center;">DATOS DE ALUMNO - CONTINUACIÓN</h1>
+
+        <form action="">
+
+            <center> <table border="1" cellpadding="15">
+                <tr>
+                    <td>
+                        <h2 style="color: red; text-align: center;">Teclea más datos</h2>
+
+                        <b>Teclea fehca de nacimiento:</b> <br> <br>
+
+                        Teclea día de nacimiento: <input type="text" name="codigoPostal" size="2" pattern="[0-9]+" maxlength="2" required>
+
+                        Selecciona mes de nacimiento:
+                        <select name="mes" width="75">
+                            <option value="enero" selected="selected">Enero</option>  
+                            <option value="febrero">Febrero</option>
+                            <option value="marzo">Marzo</option>
+                            <option value="abril">Abril</option>
+                            <option value="mayo">Mayo</option>
+                            <option value="junio">Junio</option>
+                            <option value="julio">Julio</option>
+                            <option value="agosto">Agosto</option>
+                            <option value="septiembre">Septiembre</option>
+                            <option value="octubre">Octubre</option>
+                            <option value="noviembre">Noviembre</option>
+                            <option value="diciembre">Diciembre</option>
+                        </select>
+
+                        Teclea año de nacimiento: <input type="text" name="codigoPostal" size="3" pattern="[0-9]+" maxlength="4" required> <br> <br>
+
+                        Selecciona el curso: 
+                        <select name="curso" width="75">
+                            <option value="1ºSMR" selected="selected">Primero SMR</option>  
+                            <option value="2ºSMR">Segundo SMR</option>
+                            <option value="1ºDAM">Primero DAM</option>
+                            <option value="2ºDAM">Segundo DAM</option> 
+                        </select> <hr>
+
+                        Elige 3 materias optativas: 
+                        <input type="checkbox" name="ingles" value="si"> Inglés
+                        <input type="checkbox" name="frances" value="si"> Francés 
+                        <input type="checkbox" name="deporte" value="si"> Deporte
+                        <input type="checkbox" name="astronomia" value="si"> Astronomía
+                        <input type="checkbox" name="historia" value="si"> Historia
+                        <input type="checkbox" name="paginasWeb" value="si"> Páginas Web
+                        <input type="checkbox" name="redes" value="si"> Redes
+                        <hr>
+
+                        Selecciona el turno: 
+                        <input type="radio" name="ninguno" value="si"> Diurno
+                        <input type="radio" name="ninguno" value="si"> Nocturno
+                        <input type="radio" name="ninguno" value="si"> Vesperino
+                        <hr>
+
+                        <center><table>
+                            <tr>
+                                <td width="75">
+                                    <button type="submit"><img src="imagenes/enviarDatos.png" width="50" height="50"></button>
+                                </td>
+                                <td width="75">
+                                    <button type="reset"><img src="imagenes/limpiarDatos.png" width="50" height="50"></button>
+                                </td>
+                                <td width="75">
+                                    <button type = "button" value = " Cerrar ventana " name = "Cerrar" onclick = "window.close();"><img src = "imagenes/xRoja.png" width = "50" height = "50"></button>
+                                </td>
+                                <td width="75">
+                                    <button type = "button" value = " Siguiente formulario " name = "Siguiente" onclick = "window.open('Formulario1.html','_self');"><img src = "imagenes/volver.png" width = "50" height = "50"></button>
+                                </td>
+                            </tr>
+                        </table></center>
+                    </td>
+                </tr>
+            </table> </center>
+
+        </form>
+
+    </body>
+</html>

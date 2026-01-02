@@ -1,0 +1,96 @@
+<!--Este documento ha sido generado con XT, de James Clark--><html xmlns:date="http://www.jclark.com/xt/java/java.util.Date"><head><title>Curso de HTML: Lenguajes de script</title><META HTTP-EQUIV="pragma" CONTENT="no-cache"></head><!--Cuerpo del documento--><body bgcolor="#FEFEFE"><table width="630" border="0"><tr><td valign="top" align="center" width="40" rowspan="2"><a href="index.html"><img src="graficos/logo.jpg" border="0"></a></td><td align="center" width="590"><IFRAME SRC="http://ad.es.doubleclick.net/adi/ES-programacion.net/ES-redferca-programacion-html;sz=468x60;ord=44126913875755190?" name="frame1" width="468" height="60" frameborder="no" border="0" MARGINWIDTH="0" MARGINHEIGHT="0" SCROLLING="no"><SCRIPT language="JavaScript1.1" SRC="http://ad.es.doubleclick.net/adj/ES-programacion.net/ES-redferca-programacion-html;abr=!ie;sz=468x60;ord=44126913875755190?"></SCRIPT><NOSCRIPT><A HREF="http://ad.es.doubleclick.net/jump/ES-programacion.net/ES-redferca-programacion-html;abr=!ie;sz=468x60;ord=44126913875755190?"><IMG SRC="http://ad.es.doubleclick.net/ad/ES-programacion.net/ES-redferca-programacion-html;abr=!ie;sz=468x60;ord=44126913875755190?" border="0" height="60" width="468"></A></NOSCRIPT></IFRAME></td></tr><tr><td valign="top"><font face="Arial,Helvetica,sans-serif"><font size="+3" color="#005CA0"><b>18. Lenguajes de <i>script</i><img src="graficos/40.gif" width="26" height="26" border="0" align="middle"></b></font>
+      <p align="justify">Un lenguaje de <i>script</i> es un peque&ntilde;o lenguaje de
+      programaci&oacute;n cuyo c&oacute;digo se inserta dentro del
+      documento HTML. Este c&oacute;digo se ejecuta en el navegador del
+      usuario al cargar la p&aacute;gina, o cuando sucede algo especial
+      como puede ser el pulsar sobre un enlace.</p>
+      <p align="justify">Estos lenguajes permiten variar din&aacute;micamente el contenido
+      del documento, modificar el comportamiento normal del navegador,
+      validar formularios, realizar peque&ntilde;os trucos visuales, etc...
+      Sin embargo, conviene recordar que se ejecutan en el navegador del
+      usuario y no en la m&aacute;quina donde est&eacute;n alojadas, por lo
+      que no podr&aacute;n realizar cosas como manejar bases de datos. Esto
+      hace que los contadores (por ejemplo) se deban realizar de otra manera,
+      utilizando programas CGI.</p>
+      <p align="justify">El primer lenguaje de <i>script</i> que vi&oacute; la luz fue el
+      JavaScript de Netscape. Nacido con la versi&oacute;n 2.0 de este navegador
+      y basado en la sintaxis de Java, su utilidad y el casi absoluto monopolio
+      que entonces ejerc&iacute;a Netscape en el mercado de navegadores permitieron
+      que se popularizara y extendiera su uso.</p>
+      <p align="justify">El m&aacute;ximo rival del Netscape Navigator, el Internet Explorer
+      de Microsoft, comenz&oacute; a soportar este lenguaje en su versi&oacute;n
+      3.0. Fue tambi&eacute;n entonces cuando introdujo el &uacute;nico rival serio
+      que el JavaScript ha tenido en el mercado de los lenguajes de <i>script</i>:
+      el VBScript. Basado en el lenguaje BASIC, no ha tenido excesiva difusi&oacute;n
+      en Internet debido a la previa implantaci&oacute;n del JavaScript y a que
+      son de parecida funcionalidad, pero s&iacute; es utilizado dentro de
+      Intranets basadas en el Explorer y dentro de otras aplicaciones de Microsoft,
+      como IIS, Access, Word, etc..</p>
+    <br><br><a name="1"></a><font size="+2" color="#005CA0">18.1. Javascript</font>
+        <p align="justify">Como este curso est&aacute; orientado a Internet, no vamos a ver nada
+        de VBScript aqu&iacute; por las razones comentadas anteriormente. Pero para
+        ilustrar la utilidad de los lenguajes de <i>script</i>, vamos a realizar
+        una peque&ntilde;a introducci&oacute;n al Javascript. Si te sientes
+        interesado, visita <a href="http://web.sitio.net/cursos/javascript/">mi
+        curso de JavaScript 1.2</a> para mayor informaci&oacute;n sobre el tema.</p>
+        <p align="justify">Vamos a realizar nuestro primer "programa" en JavaScript. Haremos surgir
+        una ventana que nos muestre el famoso mensaje "hola, mundo". As&iacute;
+        podremos ver los elementos principales del lenguaje. El siguiente
+        c&oacute;digo es una p&aacute;gina Web completa con un bot&oacute;n que,
+        al pulsarlo, muestra el mensaje.</p>
+        <pre><font color="#006600" face="monospace">&lt;HTML&gt;
+&lt;HEAD&gt;
+  &lt;SCRIPT LANGUAGE="JavaScript"&gt;
+  &lt;!---
+    function HolaMundo() {
+      alert("&iexcl;Hola, mundo!");
+    }
+  // ---&gt;
+  &lt;/SCRIPT&gt;
+&lt;/HEAD&gt;
+&lt;BODY&gt;
+&lt;FORM&gt;
+&nbsp; &lt;INPUT TYPE="button" NAME="Boton" VALUE="Pulsame" onClick="HolaMundo()"&gt;
+&lt;/FORM&gt;
+&lt;/BODY&gt;
+&lt;/HTML&gt;</font></pre>
+        <p align="justify">Y aqu&iacute; est&aacute; nuestro ejemplo funcionando:</p>
+        
+            <CENTER><FORM><INPUT TYPE="button" NAME="Boton" VALUE="Pulsame" onClick="alert('&iexcl;Hola, mundo!')"/></FORM></CENTER>
+          
+        <p align="justify">Ahora vamos a ver, paso por paso, que significa cada uno de los elementos
+        extra&ntilde;os que tiene la p&aacute;gina anterior:</p>
+        <pre><font color="#006600" face="monospace">&lt;SCRIPT LANGUAGE="JavaScript"&gt;
+&lt;/SCRIPT&gt;</font></pre>
+        <p align="justify">Dentro de estos elementos ser&aacute; donde se puedan poner funciones en
+        JavaScript. Puedes poner cuantos quieras a lo largo del documento y en el
+        lugar que m&aacute;s te guste. Si un navegador no entiende la etiqueta
+        <tt><font color="#006600" face="monospace">&lt;SCRIPT&gt;</font></tt> escribir&aacute; lo que hay entre medias de estos
+        elementos, as&iacute; que lo encerramos entre comentarios por si las
+        moscas.</p>
+        <pre><font color="#006600" face="monospace">&nbsp; function HolaMundo() {
+&nbsp;&nbsp;&nbsp; alert("&iexcl;Hola, mundo!");
+&nbsp; }</font></pre>
+        <p align="justify">Esta es nuestra primera funci&oacute;n en JavaScript. En el c&oacute;digo
+        de la misma vemos una llamada al m&eacute;todo <tt><font color="#006600" face="monospace">alert</font></tt> (que
+        pertenece al objeto <tt><font color="#006600" face="monospace">window</font></tt>) que es la que se encarga de mostrar
+        el mensaje en pantalla. Por un fallo del Netscape no se pueden poner las
+        etiquetas HTML de caracteres especiales en una funci&oacute;n: no los
+        reconoce. As&iacute; que pondremos directamente "&iexcl;"
+        arriesg&aacute;ndonos a que salga de otra manera en ordenadores con un
+        juego de caracteres distinto al del nuestro.</p>
+        <pre><font color="#006600" face="monospace">&lt;FORM&gt;
+&nbsp; &lt;INPUT TYPE="button" NAME="Boton" VALUE="Pulsame" onClick="HolaMundo()"&gt;
+&lt;/FORM&gt;</font></pre>
+        <p align="justify">Dentro del elemento que usamos para mostrar un bot&oacute;n vemos
+        una cosa nueva: <tt><font color="#006600" face="monospace">onClick</font></tt>. Es un <i>evento</i>. Cuando el usuario
+        pulsa el bot&oacute;n, el evento onClick se dispara y ejecuta el
+        c&oacute;digo que tenga entre comillas, en este caso la llamada a la
+        funci&oacute;n <tt><font color="#006600" face="monospace">HolaMundo()</font></tt>, que tendremos que haber definido
+        con anterioridad.</p>
+        <p align="justify">Este ejemplo muestra una peque&ntilde;a parte de las funcionalidades
+        del JavaScript. De hecho, su utilidad es m&aacute;s bien escasa, por eso
+        te recomiendo de nuevo que eches un vistazo a
+        <a href="">mi curso de JavaScript</a>.</p>
+      <p></p><img src="graficos/linea.gif" height="1" width="590"><table cellspacing="0" cellpadding="0" border="0" width="100%"><tr><td><img src="graficos/transp.gif" height="2" width="90"></td></tr></table><table cellspacing="0" cellpadding="0" border="0" width="100%"><tr><td align="left"><a href="refhojas.html"><img src="graficos/izq.gif" align="MIDDLE" border="0"></a><font size="-1" face="Arial,Helvetica,sans-serif">Hojas de estilo: referencia</font></td><td align="right"><font size="-1" face="Arial,Helvetica,sans-serif">Capas</font><a href="capas.html"><img src="graficos/der.gif" align="MIDDLE" border="0"></a></td></tr></table><font size="-1"><div align="center">&copy; 1998-2000 <a href="mailto:multivac@idecnet.com">Daniel
+    Rodr&iacute;guez</a><br><a href="index.html"><img src="graficos/loguito.gif" border="0"></a></div></font></font></td></tr></table></body></html>

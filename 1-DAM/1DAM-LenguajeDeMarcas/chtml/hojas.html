@@ -1,0 +1,120 @@
+<!--Este documento ha sido generado con XT, de James Clark--><html xmlns:date="http://www.jclark.com/xt/java/java.util.Date"><head><title>Curso de HTML: Hojas de estilo</title><META HTTP-EQUIV="pragma" CONTENT="no-cache"></head><!--Cuerpo del documento--><body bgcolor="#FEFEFE"><table width="630" border="0"><tr><td valign="top" align="center" width="40" rowspan="2"><a href="index.html"><img src="graficos/logo.jpg" border="0"></a></td><td align="center" width="590"><IFRAME SRC="http://ad.es.doubleclick.net/adi/ES-programacion.net/ES-redferca-programacion-html;sz=468x60;ord=44126913875755190?" name="frame1" width="468" height="60" frameborder="no" border="0" MARGINWIDTH="0" MARGINHEIGHT="0" SCROLLING="no"><SCRIPT language="JavaScript1.1" SRC="http://ad.es.doubleclick.net/adj/ES-programacion.net/ES-redferca-programacion-html;abr=!ie;sz=468x60;ord=44126913875755190?"></SCRIPT><NOSCRIPT><A HREF="http://ad.es.doubleclick.net/jump/ES-programacion.net/ES-redferca-programacion-html;abr=!ie;sz=468x60;ord=44126913875755190?"><IMG SRC="http://ad.es.doubleclick.net/ad/ES-programacion.net/ES-redferca-programacion-html;abr=!ie;sz=468x60;ord=44126913875755190?" border="0" height="60" width="468"></A></NOSCRIPT></IFRAME></td></tr><tr><td valign="top"><font face="Arial,Helvetica,sans-serif"><font size="+3" color="#005CA0"><b>16. Hojas de estilo<img src="graficos/40.gif" width="26" height="26" border="0" align="middle"></b></font>
+    <p align="justify">Las hojas de estilo intentan separar el contenido de un p&aacute;gina
+    de la forma de presentarlo en pantalla. Esto lo hacen personificando
+    los cambios que las etiquetas de formato HTML realizan en nuestro
+    texto. Por ejemplo, sabemos que usando <tt><font color="#006600" face="monospace">&lt;P&gt;</font></tt> tendremos
+    una p&aacute;rrafo nuevo con una separaci&oacute;n del anterior determinada,
+    etc.. Con las hojas de estilo tambi&eacute;n podremos decirle a un
+    p&aacute;rrafo que todo su texto sea verde y que adem&aacute;s va a tener
+    un margen izquierdo de 30 pixels. Por ejemplo.</p>
+    <p align="justify">El primer navegador en soportar hojas de estilo fue el Explorer 3.0.
+    Utiliza la llamada sintaxis en cascada. El Communicator acepta esa
+    sintaxis e introduce una nueva basada en JavaScript. Sin embargo,
+    como el est&aacute;ndar m&aacute;s comunmente aceptado de sintaxis
+    de hojas de estilo es el de cascada, ser&aacute; este el &uacute;nico
+    que veamos. Vamos a empezar con un ejemplo:</p>
+    <pre><font color="#006600" face="monospace">&lt;STYLE TYPE="text/css"&gt;
+&nbsp;&nbsp;P {color: green; margin-left: 30;}
+&lt;/STYLE&gt;</font></pre>
+    <p align="justify">Vamos a detenernos en todos los elementos. Para empezar, la etiqueta HTML
+    con la que deberemos englobar las hojas de estilo ser&aacute;
+    <tt><font color="#006600" face="monospace">&lt;STYLE&gt;</font></tt>, que s&oacute;lo podr&aacute; estar situada en la
+    cabecera de la p&aacute;gina. Su par&aacute;metro TYPE indica la sintaxis
+    que utilizaremos para definirlas. En el caso de las hojas en cascada
+    deber&aacute; ser <tt><font color="#006600" face="monospace">text/css</font></tt>.</p>
+    <p align="justify">Ahora examinemos la hoja de estilo propiamente dicha. Indicaremos primero
+    la etiqueta que deseamos personalizar. Ser&aacute; <tt><font color="#006600" face="monospace">&lt;P&gt;</font></tt>.
+    Despu&eacute;s, entre llaves, pondremos una lista de las cosas que queremos
+    modificar. En nuestro caso son dos, el color (en el formato habitual) y
+    el margen, que se define en pixels.</p>
+    <p align="justify">Hay que destacar que, aunque muchas veces los navegadores tengan una
+    cierta manga ancha, la sintaxis CSS (Cascading Style Sheet) es sensible a
+    la diferencia entre may&aacute;sculas y min&uacute;sculas. Conviene tener
+    cuidado.</p>
+    <p align="justify">El HTML 4.0 permite declarar fuera de la p&aacute;gina las hojas de estilo,
+    llevando de este modo al extremos su filosof&iacute;a de separar forma y
+    contenido. Si colocamos nuestras hojas de estilo en un fichero llamado
+    <tt><font color="#006600" face="monospace">estilos.css</font></tt> (solo las hojas, no la etiqueta &lt;STYLE&gt;) no tendremos
+    m&aacute;s que incluir la siguiente l&iacute;nea en la cabecera de nuestro
+    documento HTML para incluirlas en nuestras p&aacute;ginas:</p>
+    <div align="center"><pre><font color="#006600" face="monospace">&lt;LINK REL="stylesheet" HREF="estilos.css" TYPE="text/css"&gt;</font></pre></div>
+    <p align="justify">Vamos a ver c&oacute;mo quedar&iacute;a un p&aacute;rrafo que
+    siguiese la hoja de estilo anterior</p>
+    <p style="color: green; margin-left: 30px;" align="justify">Si
+    la cosa va bien, este p&aacute;rrafo estar&aacute;
+    escrito en verde y con un margen izquierdo de 30 pixels. Precioso,
+    &iquest;no? embargo, estoy convencido de que los m&aacute;s avispados se
+    habr&aacute;n dado cuenta de que les estoy ocultando algo. Por lo que he
+    dicho hasta ahora la personalizaci&oacute;n de una etiqueta deber&iacute;a
+    ser general y en esta p&aacute;gina s&oacute;lo este p&aacute;rrafo
+    est&aacute; modificado. No os preocup&eacute;is demasiado, ahora os cuento
+    como se hace.</p>
+  <br><br><a name="1"></a><font size="+2" color="#005CA0">16.1. Clases</font>
+    <p align="justify">Hasta ahora hab&iacute;amos definido estilos para una etiqueta
+    determinada. Pero tambi&eacute;n podemos hacerlo para una clase determinada.
+    &iquest;Esto que significa? Pues que si, por ejemplo, definimos la hoja de
+    estilo de la clase <font color="green">verde</font> de la siguiente manera:</p>
+    <div align="center"><pre><font color="#006600" face="monospace">P.verde {color: green; margin-left: 30px;}</font></pre></div>
+    <p align="justify">s&oacute;lo estar&aacute;n verdes y con un margen izquierdo de 30 pixels
+    aquellos p&aacute;rrafos definidos con <tt><font color="#006600" face="monospace">&lt;P CLASS="verde"&gt;</font></tt>.
+    As&iacute; de sencillo.</p>
+    <p align="justify">Ampliando un poco m&aacute;s las posibilidades de las clases, se pueden
+    realizar excepciones. Supongamos que tenemos unos p&aacute;rrafos que
+    queremos que tengan unos m&aacute;rgenes determinados y color verde.
+    Y deseamos que uno solo de esos p&aacute;rrafos, con los mismo m&aacute;rgenes,
+    sea azul. Podr&iacute;amos definir dos clases distintas, pero hay un
+    m&eacute;todo mejor: usar el par&aacute;metro <tt><font color="#006600" face="monospace">ID</font></tt>. Por ejemplo:</p>
+    <pre><font color="#006600" face="monospace">all.verde {color: green; margin-left: 10px;}
+#ej1 { color: blue;}</font></pre>
+    <p align="justify">Ahora todos los p&aacute;rrafos de clase <font color="green">verde</font>
+    ser&iacute;an, obviamente, verdes y con un margen de 10 pixels.
+    Sin embargo el p&aacute;rrafo definido por <tt><font color="#006600" face="monospace">&lt;P CLASS="verde" ID="ej1"&gt;</font></tt>
+    ser&aacute; azul:</p>
+    <p style="color: green; margin-left: 10px;">Este p&aacute;rrafo es muy verde.</p>
+    <p style="color: green; margin-left: 10px;">Y anda que este...</p>
+    <p style="color: blue; margin-left: 10px;">Sin embargo, este no, f&iacute;jate que curioso.</p>
+  <br><br><a name="2"></a><font size="+2" color="#005CA0">16.2. Etiquetas &lt;SPAN&gt; y &lt;DIV&gt;</font>
+    <p align="justify">Puede que, a veces, no queramos modificar el comportamiento de un
+    elemento sino que creemos un estilo que queremos act&uacute;e s&oacute;lo,
+    un estilo completo creado de la nada. Una etiqueta nueva y propia.
+    Entonces, &iquest;qu&eacute; hacemos? Utilizar las etiqueta
+    <tt><font color="#006600" face="monospace">&lt;SPAN&gt;</font></tt> y &lt;DIV&gt;.</p>
+    <p align="justify">El m&eacute;todo es simple. Definimos una clase <font color="red">rojo</font>
+    que simplemente modifique el color (que ser&aacute; rojo). Ahora, si
+    queremos que una secci&oacute;n de texto est&eacute; en rojo lo
+    encerraremos entre las etiquetas <tt><font color="#006600" face="monospace">&lt;SPAN CLASS="rojo"&gt;</font></tt> y
+    <tt><font color="#006600" face="monospace">&lt;/SPAN&gt;</font></tt> o entre <tt><font color="#006600" face="monospace">&lt;DIV CLASS="rojo"&gt;</font></tt> y
+    <tt><font color="#006600" face="monospace">&lt;/DIV&gt;</font></tt>.</p>
+    <p align="justify">La diferencia entre ambas es que, mientras <tt><font color="#006600" face="monospace">SPAN</font></tt> realmente no
+    hace nada por s&iacute; misma, <tt><font color="#006600" face="monospace">DIV</font></tt> convierte a todo lo que
+    encierra en un bloque aparte (poniendo un salto de l&iacute;nea tanto al
+    comienzo como al final). Veremos en el siguiente cap&iacute;tulo que a las
+    etiquetas que se comportan como bloques (<tt><font color="#006600" face="monospace">&lt;P&gt;</font></tt>,
+    <tt><font color="#006600" face="monospace">&lt;H1&gt;</font></tt>, las que dijimos modifican un p&aacute;rrafo entero) se
+    les pueden definir atributos propios desde las hojas de estilo. Por
+    ejemplo, si definimos las siguientes hojas:</p>
+    <pre><font color="#006600" face="monospace">all.titulo {
+  margin-top: -24px;
+  color: blue;
+  font-size: 20px;
+}
+all.sombra {
+  margin-top: 2px;
+  margin-left: 2px;
+  color: black;
+  font-size: 20px;
+}</font></pre>
+    <p align="justify">cuyos atributos explicaremos en la referencia de las hojas de estilo, y
+    ponemos el siguiente c&oacute;digo HTML:</p>
+    <pre><font color="#006600" face="monospace">&lt;DIV ALIGN="CENTER" CLASS="sombra"&gt;El maravilloso curso de HTML&lt;/DIV&gt;
+&lt;DIV ALIGN="CENTER" CLASS="titulo"&gt;El maravilloso curso de HTML&lt;/DIV&gt;</font></pre>
+    <p align="justify">obtendremos este bello efecto:</p>
+    
+<DIV ALIGN="CENTER" STYLE="margin-top: 2px; margin-left: 2px; color: black; font-size: 20px;">El maravilloso curso de HTML</DIV>
+<DIV ALIGN="CENTER" STYLE="margin-top: -24px; color: blue; font-size: 20px;">El maravilloso curso de HTML</DIV>
+    
+    <p align="justify">En el siguiente cap&iacute;tulo ten&eacute;is una gu&iacute;a de
+    referencia con todos (o casi todos) los atributos que se pueden modificar
+    con CSS.</p>
+  <p></p><img src="graficos/linea.gif" height="1" width="590"><table cellspacing="0" cellpadding="0" border="0" width="100%"><tr><td><img src="graficos/transp.gif" height="2" width="90"></td></tr></table><table cellspacing="0" cellpadding="0" border="0" width="100%"><tr><td align="left"><a href="marcos.html"><img src="graficos/izq.gif" align="MIDDLE" border="0"></a><font size="-1" face="Arial,Helvetica,sans-serif">Marcos</font></td><td align="right"><font size="-1" face="Arial,Helvetica,sans-serif">Hojas de estilo: referencia</font><a href="refhojas.html"><img src="graficos/der.gif" align="MIDDLE" border="0"></a></td></tr></table><font size="-1"><div align="center">&copy; 1998-2000 <a href="mailto:multivac@idecnet.com">Daniel
+    Rodr&iacute;guez</a><br><a href="index.html"><img src="graficos/loguito.gif" border="0"></a></div></font></font></td></tr></table></body></html>

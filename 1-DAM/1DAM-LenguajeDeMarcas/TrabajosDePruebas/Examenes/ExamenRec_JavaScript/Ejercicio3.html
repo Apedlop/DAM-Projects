@@ -1,0 +1,76 @@
+<html>
+
+<head>
+    <title>Ejercicio 3</title>
+</head>
+
+<body>
+    <h2>Ejercicio 3</h2>
+
+    <script>
+
+        const tamLista = num => {
+            while (num > 5) {
+                num = parseInt(prompt("Introduce un número que sea menor o igual a 5: "));
+            }
+            return num;
+        }
+
+        const insertarNum = lista => {
+            for (let i = 0; i < lista.length; i++) {
+                let palabra = prompt("Inserta una palabra: ");
+                lista[i] = palabra;
+            }
+        }
+
+        const mayusculas = lista => {
+            for (let i = 0; i < lista.length; i++) {
+                lista[i] = lista[i].toUpperCase();
+            }
+        }
+
+        const sumaValores = (l1, l2, l3) => {
+            let contInverso = l2.length - 1;
+            for (let i = 0; i < l1.length; i++) {
+                l3[i] = l1[i].length + l2[contInverso--].length;
+            }
+            return l3;
+        }
+
+        const guiones = l3 => {
+            guion = "";
+            for (let i = 0; i < l3.length; i++) {
+                guion += l3[i];
+                i != l3.length - 1 ? guion += "-" : guion += "";
+            }
+            return guion;
+        }
+
+        const listar = lista => {
+            coma = ""
+            for (let i = 0; i < lista.length; i++) {
+                coma += lista[i];
+                i != lista.length - 1 ? coma += ", " : coma += "";
+            }
+            return coma;
+        }
+
+        let num = parseInt(prompt("Introduce un número: "));
+        num = tamLista(num);
+        let l1 = new Array(num);
+        let l2 = new Array(num);
+        let l3 = new Array(num);
+
+        insertarNum(l1);
+        mayusculas(l1);
+        document.write(`Lista 1: ${listar(l1)} <br>`);
+        insertarNum(l2);
+        mayusculas(l2);
+        document.write(`Lista 2: ${listar(l2)} <br>`);
+        sumaValores(l1, l2, l3);
+        document.write(`Lista 3: ${guiones(l3)}`) // Siempre con un document.write para regerirse a los guiones
+
+    </script>
+</body>
+
+</html>

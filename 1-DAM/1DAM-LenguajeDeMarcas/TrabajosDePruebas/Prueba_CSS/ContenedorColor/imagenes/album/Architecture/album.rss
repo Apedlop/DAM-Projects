@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0"
+     xmlns:media="http://search.yahoo.com/mrss/"
+     xmlns:jalbum="http://jalbum.net/jalbumrss">
+    <channel>
+        <title>Architecture</title>
+   	<link>..</link>
+        <generator>jAlbum 34</generator>
+   		<description></description>
+        <jalbum:absolutePath></jalbum:absolutePath>
+        <item>
+            <title>lubo-minar</title>
+            <link>slides/lubo-minar.jpg</link>
+            <pubDate>Wed, 16 Sep 2020 14:03:33 +0200</pubDate>
+            <description>Photo by &lt;a href=&quot;https://unsplash.com/@bubo?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText&quot;&gt;Lubo Minar&lt;/a&gt; on &lt;a href=&quot;https://unsplash.com/@bubo?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText&quot;&gt;Unsplash&lt;/a&gt;</description>
+            <media:description type="html">Photo by &lt;a href=&quot;https://unsplash.com/@bubo?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText&quot;&gt;Lubo Minar&lt;/a&gt; on &lt;a href=&quot;https://unsplash.com/@bubo?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText&quot;&gt;Unsplash&lt;/a&gt;</media:description>
+            <media:thumbnail url="thumbs/lubo-minar.jpg" width="301" height="200"/>
+            <media:content type="image/jpeg" url="slides/lubo-minar.jpg" width="1200" height="799"/>
+            <guid isPermaLink="false">slides/lubo-minar.jpg</guid>
+        </item>
+        <item>
+            <title>zq-lee</title>
+            <link>slides/zq-lee.jpg</link>
+            <pubDate>Wed, 16 Sep 2020 14:03:33 +0200</pubDate>
+            <description>Photo by &lt;a href=&quot;https://unsplash.com/@zqlee?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText&quot;&gt;ZQ Lee&lt;/a&gt; on &lt;a href=&quot;https://unsplash.com/@zqlee?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText&quot;&gt;Unsplash&lt;/a&gt;</description>
+            <media:description type="html">Photo by &lt;a href=&quot;https://unsplash.com/@zqlee?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText&quot;&gt;ZQ Lee&lt;/a&gt; on &lt;a href=&quot;https://unsplash.com/@zqlee?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText&quot;&gt;Unsplash&lt;/a&gt;</media:description>
+            <media:thumbnail url="thumbs/zq-lee.jpg" width="150" height="200"/>
+            <media:content type="image/jpeg" url="slides/zq-lee.jpg" width="675" height="900"/>
+            <guid isPermaLink="false">slides/zq-lee.jpg</guid>
+        </item>
+        <item>
+            <title>meric-dagli-1</title>
+            <link>slides/meric-dagli-1.jpg</link>
+            <pubDate>Wed, 16 Sep 2020 14:03:33 +0200</pubDate>
+            <description>Photo by &lt;a href=&quot;https://unsplash.com/@meric?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText&quot;&gt;Meriç Dağlı&lt;/a&gt; on &lt;a href=&quot;https://unsplash.com/@meric?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText&quot;&gt;Unsplash&lt;/a&gt;</description>
+            <media:description type="html">Photo by &lt;a href=&quot;https://unsplash.com/@meric?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText&quot;&gt;Meriç Dağlı&lt;/a&gt; on &lt;a href=&quot;https://unsplash.com/@meric?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText&quot;&gt;Unsplash&lt;/a&gt;</media:description>
+            <media:thumbnail url="thumbs/meric-dagli-1.jpg" width="134" height="200"/>
+            <media:content type="image/jpeg" url="slides/meric-dagli-1.jpg" width="600" height="900"/>
+            <guid isPermaLink="false">slides/meric-dagli-1.jpg</guid>
+        </item>
+        <item>
+            <title>victor-garcia</title>
+            <link>slides/victor-garcia.jpg</link>
+            <pubDate>Wed, 23 Jun 2021 13:15:09 +0200</pubDate>
+            <description>Photo by &lt;a href=&quot;https://unsplash.com/@victor_g?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText&quot;&gt;Victor Garcia&lt;/a&gt; on &lt;a href=&quot;https://unsplash.com/s/photos/modern-architecture?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText&quot;&gt;Unsplash&lt;/a&gt;</description>
+            <media:description type="html">Photo by &lt;a href=&quot;https://unsplash.com/@victor_g?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText&quot;&gt;Victor Garcia&lt;/a&gt; on &lt;a href=&quot;https://unsplash.com/s/photos/modern-architecture?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText&quot;&gt;Unsplash&lt;/a&gt;</media:description>
+            <media:thumbnail url="thumbs/victor-garcia.jpg" width="160" height="200"/>
+            <media:content type="image/jpeg" url="slides/victor-garcia.jpg" width="720" height="900"/>
+            <guid isPermaLink="false">slides/victor-garcia.jpg</guid>
+        </item>
+        <item>
+            <title>arnt-oberschmidt</title>
+            <link>slides/arnt-oberschmidt.jpg</link>
+            <pubDate>Wed, 16 Sep 2020 14:03:33 +0200</pubDate>
+            <description>Photo by &lt;a href=&quot;https://unsplash.com/@oace?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText&quot;&gt;Arnt Oberschmidt&lt;/a&gt; on &lt;a href=&quot;https://unsplash.com/@oace?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText&quot;&gt;Unsplash&lt;/a&gt;</description>
+            <media:description type="html">Photo by &lt;a href=&quot;https://unsplash.com/@oace?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText&quot;&gt;Arnt Oberschmidt&lt;/a&gt; on &lt;a href=&quot;https://unsplash.com/@oace?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText&quot;&gt;Unsplash&lt;/a&gt;</media:description>
+            <media:thumbnail url="thumbs/arnt-oberschmidt.jpg" width="250" height="200"/>
+            <media:content type="image/jpeg" url="slides/arnt-oberschmidt.jpg" width="1125" height="900"/>
+            <guid isPermaLink="false">slides/arnt-oberschmidt.jpg</guid>
+        </item>
+        <item>
+            <title>ananth-pai</title>
+            <link>slides/ananth-pai.jpg</link>
+            <pubDate>Wed, 23 Jun 2021 13:15:09 +0200</pubDate>
+            <description>Photo by &lt;a href=&quot;https://unsplash.com/@ananth22by7?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText&quot;&gt;Ananth Pai&lt;/a&gt; on &lt;a href=&quot;https://unsplash.com/s/photos/modern-architecture?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText&quot;&gt;Unsplash&lt;/a&gt;</description>
+            <media:description type="html">Photo by &lt;a href=&quot;https://unsplash.com/@ananth22by7?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText&quot;&gt;Ananth Pai&lt;/a&gt; on &lt;a href=&quot;https://unsplash.com/s/photos/modern-architecture?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText&quot;&gt;Unsplash&lt;/a&gt;</media:description>
+            <media:thumbnail url="thumbs/ananth-pai.jpg" width="143" height="200"/>
+            <media:content type="image/jpeg" url="slides/ananth-pai.jpg" width="642" height="900"/>
+            <guid isPermaLink="false">slides/ananth-pai.jpg</guid>
+        </item>
+        <item>
+            <title>claudio-testa</title>
+            <link>slides/claudio-testa.jpg</link>
+            <pubDate>Wed, 23 Jun 2021 13:15:09 +0200</pubDate>
+            <description>Photo by &lt;a href=&quot;https://unsplash.com/@claudiotesta?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText&quot;&gt;Claudio Testa&lt;/a&gt; on &lt;a href=&quot;https://unsplash.com/@claudiotesta?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText&quot;&gt;Unsplash&lt;/a&gt;</description>
+            <media:description type="html">Photo by &lt;a href=&quot;https://unsplash.com/@claudiotesta?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText&quot;&gt;Claudio Testa&lt;/a&gt; on &lt;a href=&quot;https://unsplash.com/@claudiotesta?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText&quot;&gt;Unsplash&lt;/a&gt;</media:description>
+            <media:thumbnail url="thumbs/claudio-testa.jpg" width="320" height="200"/>
+            <media:content type="image/jpeg" url="slides/claudio-testa.jpg" width="1200" height="750"/>
+            <guid isPermaLink="false">slides/claudio-testa.jpg</guid>
+        </item>
+        <item>
+            <title>david-kovalenko</title>
+            <link>slides/david-kovalenko.jpg</link>
+            <pubDate>Wed, 23 Jun 2021 13:15:09 +0200</pubDate>
+            <description>Photo by &lt;a href=&quot;https://unsplash.com/@davidkovalenkoo?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText&quot;&gt;David Kovalenko&lt;/a&gt; on &lt;a href=&quot;https://unsplash.com/s/photos/modern-architecture?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText&quot;&gt;Unsplash&lt;/a&gt;</description>
+            <media:description type="html">Photo by &lt;a href=&quot;https://unsplash.com/@davidkovalenkoo?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText&quot;&gt;David Kovalenko&lt;/a&gt; on &lt;a href=&quot;https://unsplash.com/s/photos/modern-architecture?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText&quot;&gt;Unsplash&lt;/a&gt;</media:description>
+            <media:thumbnail url="thumbs/david-kovalenko.jpg" width="134" height="200"/>
+            <media:content type="image/jpeg" url="slides/david-kovalenko.jpg" width="600" height="900"/>
+            <guid isPermaLink="false">slides/david-kovalenko.jpg</guid>
+        </item>
+        <item>
+            <title>delaney-van</title>
+            <link>slides/delaney-van.jpg</link>
+            <pubDate>Wed, 23 Jun 2021 13:15:09 +0200</pubDate>
+            <description>Photo by &lt;a href=&quot;https://unsplash.com/@delaneyvan?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText&quot;&gt;Delaney Van&lt;/a&gt; on &lt;a href=&quot;https://unsplash.com/s/photos/urban?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText&quot;&gt;Unsplash&lt;/a&gt;</description>
+            <media:description type="html">Photo by &lt;a href=&quot;https://unsplash.com/@delaneyvan?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText&quot;&gt;Delaney Van&lt;/a&gt; on &lt;a href=&quot;https://unsplash.com/s/photos/urban?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText&quot;&gt;Unsplash&lt;/a&gt;</media:description>
+            <media:thumbnail url="thumbs/delaney-van.jpg" width="300" height="200"/>
+            <media:content type="image/jpeg" url="slides/delaney-van.jpg" width="1200" height="800"/>
+            <guid isPermaLink="false">slides/delaney-van.jpg</guid>
+        </item>
+        <item>
+            <title>drahomir-posteby-mach</title>
+            <link>slides/drahomir-posteby-mach.jpg</link>
+            <pubDate>Wed, 23 Jun 2021 13:15:09 +0200</pubDate>
+            <description>Photo by &lt;a href=&quot;https://unsplash.com/@postebymach?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText&quot;&gt;Drahomír Posteby-Mach&lt;/a&gt; on &lt;a href=&quot;https://unsplash.com/s/photos/modern-architecture?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText&quot;&gt;Unsplash&lt;/a&gt;</description>
+            <media:description type="html">Photo by &lt;a href=&quot;https://unsplash.com/@postebymach?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText&quot;&gt;Drahomír Posteby-Mach&lt;/a&gt; on &lt;a href=&quot;https://unsplash.com/s/photos/modern-architecture?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText&quot;&gt;Unsplash&lt;/a&gt;</media:description>
+            <media:thumbnail url="thumbs/drahomir-posteby-mach.jpg" width="262" height="200"/>
+            <media:content type="image/jpeg" url="slides/drahomir-posteby-mach.jpg" width="1176" height="900"/>
+            <guid isPermaLink="false">slides/drahomir-posteby-mach.jpg</guid>
+        </item>
+        <item>
+            <title>jean-beller</title>
+            <link>slides/jean-beller.jpg</link>
+            <pubDate>Wed, 23 Jun 2021 13:15:09 +0200</pubDate>
+            <description>Photo by &lt;a href=&quot;https://unsplash.com/@jeanbeller?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText&quot;&gt;Jéan Béller&lt;/a&gt; on &lt;a href=&quot;https://unsplash.com/s/photos/modern-architecture?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText&quot;&gt;Unsplash&lt;/a&gt;</description>
+            <media:description type="html">Photo by &lt;a href=&quot;https://unsplash.com/@jeanbeller?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText&quot;&gt;Jéan Béller&lt;/a&gt; on &lt;a href=&quot;https://unsplash.com/s/photos/modern-architecture?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText&quot;&gt;Unsplash&lt;/a&gt;</media:description>
+            <media:thumbnail url="thumbs/jean-beller.jpg" width="134" height="200"/>
+            <media:content type="image/jpeg" url="slides/jean-beller.jpg" width="600" height="900"/>
+            <guid isPermaLink="false">slides/jean-beller.jpg</guid>
+        </item>
+        <item>
+            <title>jimmy-chang</title>
+            <link>slides/jimmy-chang.jpg</link>
+            <pubDate>Wed, 23 Jun 2021 13:15:09 +0200</pubDate>
+            <description>Photo by &lt;a href=&quot;https://unsplash.com/@photohunter?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText&quot;&gt;Jimmy  Chang&lt;/a&gt; on &lt;a href=&quot;https://unsplash.com/s/photos/architecture?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText&quot;&gt;Unsplash&lt;/a&gt;</description>
+            <media:description type="html">Photo by &lt;a href=&quot;https://unsplash.com/@photohunter?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText&quot;&gt;Jimmy  Chang&lt;/a&gt; on &lt;a href=&quot;https://unsplash.com/s/photos/architecture?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText&quot;&gt;Unsplash&lt;/a&gt;</media:description>
+            <media:thumbnail url="thumbs/jimmy-chang.jpg" width="157" height="200"/>
+            <media:content type="image/jpeg" url="slides/jimmy-chang.jpg" width="705" height="900"/>
+            <guid isPermaLink="false">slides/jimmy-chang.jpg</guid>
+        </item>
+        <item>
+            <title>marios-gkortsilas</title>
+            <link>slides/marios-gkortsilas.jpg</link>
+            <pubDate>Wed, 23 Jun 2021 13:15:09 +0200</pubDate>
+            <description>Photo by &lt;a href=&quot;https://unsplash.com/@mrmgk?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText&quot;&gt;Marios Gkortsilas&lt;/a&gt; on &lt;a href=&quot;https://unsplash.com/s/photos/urban?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText&quot;&gt;Unsplash&lt;/a&gt;</description>
+            <media:description type="html">Photo by &lt;a href=&quot;https://unsplash.com/@mrmgk?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText&quot;&gt;Marios Gkortsilas&lt;/a&gt; on &lt;a href=&quot;https://unsplash.com/s/photos/urban?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText&quot;&gt;Unsplash&lt;/a&gt;</media:description>
+            <media:thumbnail url="thumbs/marios-gkortsilas.jpg" width="133" height="200"/>
+            <media:content type="image/jpeg" url="slides/marios-gkortsilas.jpg" width="599" height="900"/>
+            <guid isPermaLink="false">slides/marios-gkortsilas.jpg</guid>
+        </item>
+        <item>
+            <title>meric-dagli-2</title>
+            <link>slides/meric-dagli-2.jpg</link>
+            <pubDate>Wed, 23 Jun 2021 13:15:09 +0200</pubDate>
+            <description>Photo by &lt;a href=&quot;https://unsplash.com/@meric?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText&quot;&gt;Meriç Dağlı&lt;/a&gt; on &lt;a href=&quot;https://unsplash.com/s/photos/architecture?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText&quot;&gt;Unsplash&lt;/a&gt;</description>
+            <media:description type="html">Photo by &lt;a href=&quot;https://unsplash.com/@meric?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText&quot;&gt;Meriç Dağlı&lt;/a&gt; on &lt;a href=&quot;https://unsplash.com/s/photos/architecture?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText&quot;&gt;Unsplash&lt;/a&gt;</media:description>
+            <media:thumbnail url="thumbs/meric-dagli-2.jpg" width="160" height="200"/>
+            <media:content type="image/jpeg" url="slides/meric-dagli-2.jpg" width="720" height="900"/>
+            <guid isPermaLink="false">slides/meric-dagli-2.jpg</guid>
+        </item>
+        <item>
+            <title>orlando-brooke</title>
+            <link>slides/orlando-brooke.jpg</link>
+            <pubDate>Wed, 23 Jun 2021 13:15:09 +0200</pubDate>
+            <description>Photo by &lt;a href=&quot;https://unsplash.com/@adw_photos2002?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText&quot;&gt;Orlando Brooke&lt;/a&gt; on &lt;a href=&quot;https://unsplash.com/s/photos/architecture?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText&quot;&gt;Unsplash&lt;/a&gt;</description>
+            <media:description type="html">Photo by &lt;a href=&quot;https://unsplash.com/@adw_photos2002?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText&quot;&gt;Orlando Brooke&lt;/a&gt; on &lt;a href=&quot;https://unsplash.com/s/photos/architecture?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText&quot;&gt;Unsplash&lt;/a&gt;</media:description>
+            <media:thumbnail url="thumbs/orlando-brooke.jpg" width="300" height="200"/>
+            <media:content type="image/jpeg" url="slides/orlando-brooke.jpg" width="1200" height="800"/>
+            <guid isPermaLink="false">slides/orlando-brooke.jpg</guid>
+        </item>
+        <item>
+            <title>piotr-chrobot</title>
+            <link>slides/piotr-chrobot.jpg</link>
+            <pubDate>Wed, 23 Jun 2021 13:15:09 +0200</pubDate>
+            <description>Photo by &lt;a href=&quot;https://unsplash.com/@chrumo?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText&quot;&gt;Piotr Chrobot&lt;/a&gt; on &lt;a href=&quot;https://unsplash.com/@chrumo?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText&quot;&gt;Unsplash&lt;/a&gt;</description>
+            <media:description type="html">Photo by &lt;a href=&quot;https://unsplash.com/@chrumo?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText&quot;&gt;Piotr Chrobot&lt;/a&gt; on &lt;a href=&quot;https://unsplash.com/@chrumo?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText&quot;&gt;Unsplash&lt;/a&gt;</media:description>
+            <media:thumbnail url="thumbs/piotr-chrobot.jpg" width="356" height="200"/>
+            <media:content type="image/jpeg" url="slides/piotr-chrobot.jpg" width="1200" height="675"/>
+            <guid isPermaLink="false">slides/piotr-chrobot.jpg</guid>
+        </item>
+        <item>
+            <title>sergio-sala</title>
+            <link>slides/sergio-sala.jpg</link>
+            <pubDate>Wed, 23 Jun 2021 13:15:09 +0200</pubDate>
+            <description>Photo by &lt;a href=&quot;https://unsplash.com/@sergiosala?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText&quot;&gt;Sergio Sala&lt;/a&gt; on &lt;a href=&quot;https://unsplash.com/s/photos/gardens-by-the-bay?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText&quot;&gt;Unsplash&lt;/a&gt;</description>
+            <media:description type="html">Photo by &lt;a href=&quot;https://unsplash.com/@sergiosala?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText&quot;&gt;Sergio Sala&lt;/a&gt; on &lt;a href=&quot;https://unsplash.com/s/photos/gardens-by-the-bay?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText&quot;&gt;Unsplash&lt;/a&gt;</media:description>
+            <media:thumbnail url="thumbs/sergio-sala.jpg" width="356" height="200"/>
+            <media:content type="image/jpeg" url="slides/sergio-sala.jpg" width="1200" height="674"/>
+            <guid isPermaLink="false">slides/sergio-sala.jpg</guid>
+        </item>
+    </channel>
+</rss>

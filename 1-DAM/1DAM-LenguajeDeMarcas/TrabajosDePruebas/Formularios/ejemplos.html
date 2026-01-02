@@ -1,0 +1,76 @@
+<html>
+    <head>
+        <title>Ejemplos</title>
+    </head>
+    <body>
+
+        <form action="">
+
+        <h1>Ejemplos</h1><hr>
+
+        <br> Nombre: <input type="text" name="Nombre" size="30" maxlength="40"> <br><br>
+
+        <fieldset>
+            <legend>Datos personales</legend>
+            <label for="nombre">Nombre</label><br>
+            <input type="text" id="nombre" name="nombre" autofocus placeholder="Ángela"> <br>
+            <label for="dni">DNI</label> <br>
+            <input type="text" id="dni" name="dni" size="10" maxlength="9" required readonly> <br>
+            <label for="contraseña">Contraseña</label> <br>
+            <input type="password" id="contraseña" name="contraseña" required disabled>
+        </fieldset>
+
+        <fieldset>
+            <legend>Comentarios</legend>
+            <textarea name="comentario" cols="60" rows="5">Escribe aqui...</textarea>
+        </fieldset>
+
+        <fieldset>
+            <legend>Lista desplegable y menú</legend>
+            <select name="color">
+                <option value="rojo">Rojo</option>
+                <option value="verde">Verde</option> 
+                <option value="otros" selected="selected">Otros</option>  
+            </select> <br> <br>
+            <select name="ciudades" size="3" multiple="multiple">
+                <option value="madrid">Madrid</option>
+                <option value="murcia" selected="selected">Murcia</option>
+                <option value="barcelona" >Barcelona</option>
+            </select>
+        </fieldset>
+
+        <fieldset>
+            <legend>Cajas de selección</legend>
+            Opción 1<input type="checkbox" name="opcion1" value="si" checked="checked">
+            Opción 2<input type="checkbox" name="opcion2" value="si">
+        </fieldset>
+
+        <fieldset>
+            <legend>Botones de radio</legend>
+            Opción 1<input type="radio" name="opcion1" value="si">
+            Opción 2<input type="radio" name="radio" value="si">
+            Opción 3<input type="radio" name="radio" value="si">
+        </fieldset>
+
+        <fieldset>
+            <legend>Examinar carpetas</legend>
+            Fichero: <input type="file" name="fichero" size="40">
+        </fieldset> <br>
+
+        <fieldset>
+            Elige: <legend>Campo de texto numérico y fecha</legend>
+            <input type="number" id="quantity" name="quantity" min="5" max="20"> <br>
+            Fecha de hoy: <input type="date"> <br>
+            Mes de hoy: <input type="month">
+        </fieldset> <br>
+
+        <input type="image" src="imagenes/enviar.png" alt="Enviar" width="50" height="50"> 
+        <input type="reset" name="eliminar" value="Limpiar">
+        
+        <button type="submit">Submit</button>
+        <button type="submit" formaction="imagenes/enviar.png">Submit to another page</button>
+
+
+        </form>
+    </body>
+</html>

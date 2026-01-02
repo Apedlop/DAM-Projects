@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profesores</title>
+    <link rel="icon" href="../image/logo.png">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../../style/menu.css">
+    <link rel="stylesheet" href="../Profesores/style/Profesores.css">
+
+    <script src="../../javaScript/modo.js"></script>
+    <script src="../../javaScript/recarga.js"></script>
+
+</head>
+
+<body>
+    <div class="contenedor_loader">
+        <div><img src="../../image/carga_snichDorada.gif" class="gif"></div>
+    </div>
+    <!-- Navigation -->
+    <div class="navigation-wrap bg-light start-header start-style">
+        <div class="container-fluid">
+            <div class="row justify-content-between align-items-center">
+                <div class="row">
+                    <div class="col">
+                        <!-- Logo -->
+                        <a class="navbar-brand" href="../../index.html" target="_self">
+                            <img src="../../image/logo.png" alt="Logo" class="logo">
+                        </a>
+                    </div>
+                    <div class="col altura">
+                        <b>
+                            <a href="../Hogwart.html" class="decoracion">
+                                <h1 class="titulo">Hogwarts</h1>
+                            </a>
+                        </b>
+                    </div>
+                    <div class="col posicionModo">
+                        <button type="button" class="btn btn-light colorModo" onclick="toggleTheme()">
+                            <img id="lightImage" src="../../image/soleado.png" alt="Light Theme">
+                            <img id="darkImage" src="../../image/luna.png" alt="Dark Theme">
+                        </button>
+                    </div>
+                </div>
+                <div class="col-auto flex-grow-0 flex-shrink-0">
+                    <!-- Opciones del Navbar -->
+                    <nav class="navbar navbar-expand-md">
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav ms-auto">
+                                <li class="nav-item">
+                                    <a class="nav-link dropdown-toggle" href="../../Hogwarts/Hogwart.html" role="button"
+                                        data-bs-toggle="dropdown" aria-haspopup="true"
+                                        aria-expanded="false">Hogwarts</a>
+                                    <div class="dropdown-menu">
+                                        <a class="dropdown-item" href="../../Hogwarts/Profesores/Profesores.html">Profesores</a>
+                                        <a class="dropdown-item" href="../../Hogwarts/Alumnos/Alumnos.html">Alumnos</a>
+                                        <a class="dropdown-item" href="../../Hogwarts/Asignaturas/asignaturas.html">Asignaturas</a>
+                                        <a class="dropdown-item" href="../../Hogwarts/Casas/casa.html">Casas</a>
+                                    </div>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link dropdown-toggle" href="../../Mortifagos/Mortifagos.html" role="button"
+                                        data-bs-toggle="dropdown" aria-haspopup="true"
+                                        aria-expanded="false">Mortífagos</a>
+                                    <div class="dropdown-menu">
+                                        <a class="dropdown-item"
+                                            href="../../Mortifagos/Personajes/Personajes.html">Personajes</a>
+                                        <a class="dropdown-item"
+                                            href="../../Mortifagos/Horrocruxes/horrocruxes.html">Horrocruxes</a>
+                                        <a class="dropdown-item" href="../../Mortifagos/Mortifagos.html">Marca Tenebrosa</a>
+                                    </div>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link dropdown-toggle" href="../../Familias/Familias.html">Familias</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="../../Mapa/mapa.html">Mapa</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+                <div class="col-auto">
+                    <!-- Segunda sección de opciones del Navbar -->
+                    <nav class="navbar navbar-expand-md navbar-light">
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav ms-auto">
+                                <li class="nav-item">
+                                    <a class="nav-link dropdown-toggle" href="../../Adaptaciones/Adaptaciones.html"
+                                        role="button" data-bs-toggle="dropdown" aria-haspopup="true"
+                                        aria-expanded="false">Adaptaciones</a>
+                                    <div class="dropdown-menu">
+                                        <a class="dropdown-item" href="../../Adaptaciones/Libros.html">Libros</a>
+                                        <a class="dropdown-item" href="../../Adaptaciones/Peliculas.html">Películas</a>
+                                        <a class="dropdown-item" href="../../Adaptaciones/Videojuegos.html">Videojuegos</a>
+                                    </div>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="../../Curiosidades/curiosidad.html">Curiosidades</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="../../Comentarios/Comentarios.html">Comentarios</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="../../quiz/quiz.html">Quiz</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                    <div class="nav-images-container">
+                        <img src="https://cdn-hogwartslegacy.warnerbrosgames.com/static/bar-left.png" alt
+                            class="nav-bar left">
+                        <img src="https://cdn-hogwartslegacy.warnerbrosgames.com/static/bar-right.png" alt
+                            class="nav-bar right">
+                    </div>
+                    <div>
+                        <div class="nav-bar-corner-container">
+                            <div class="nav-bar-corner left">
+                                <img src="https://cdn-hogwartslegacy.warnerbrosgames.com/static/corner-left.webp" alt=""
+                                    class="img-fluid">
+                            </div>
+                            <div class="nav-bar-corner right">
+                                <img src="https://cdn-hogwartslegacy.warnerbrosgames.com/static/corner-right.webp"
+                                    alt="" class="img-fluid">
+                            </div>
+                        </div>
+                        <div class="nav-bar-corner-container1">
+                            <div class="nav-bar-corner bottomLeft">
+                                <img src="https://cdn-hogwartslegacy.warnerbrosgames.com/static/corner-bottom-left.webp"
+                                    alt="" class="img-fluid">
+                            </div>
+                            <div class="nav-bar-corner bottomRight">
+                                <img src="https://cdn-hogwartslegacy.warnerbrosgames.com/static/corner-bottom-right.webp"
+                                    alt="" class="img-fluid">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Your main content here -->
+
+    <div class="my-5 py-5 content-fluid text-center">
+
+        <div class="text-center">
+
+            <picture>
+                <source srcset="../../image/titulo-arriba.webp" type="image/webp">
+                <img src="../../image/titulo-arriba.webp" class="title-decoration margen">
+            </picture>
+
+            <h1 class="letraBlanca">Alumnos</h1>
+
+            <picture>
+                <source srcset="../../image/titulo-bajo.png" type="image/png">
+                <img src="../../image/titulo-bajo.png" class="title-decoration">
+            </picture>
+
+        </div>
+
+        <div class="row justify-content-center barra">
+            <div class="row mt-4">
+                <div class="col-md-4">
+                    <figure>
+                        <div class="position-relative">
+                            <button type="button" data-bs-toggle="modal" data-bs-target="#Harry" class="sin-borde">
+                                <img src="image/HarryPotter.jpg" class="rounded-circle img-fluid circulo"
+                                    alt="Cinque Terre">
+                                <img src="../Profesores/image/circulo.png" class="imagenCirculo">
+                            </button>
+
+                            <!-- The Modal -->
+                            <div class="modal" id="Harry">
+                                <div class="modal-dialog modal-xl">
+                                    <div class="modal-content">
+                                        <!-- Modal Header -->
+                                        <div class="modal-header text-center">
+                                            <h2 class="modal-title">Harry Potter</h2>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                                        </div>
+                                        <!-- Modal body -->
+                                        <div class="modal-body">
+                                            <div>
+                                                <img src="image/HarryPotter.jpg" class="fotoModal">
+                                            </div>
+                                            <br>
+                                            <div>
+                                                <h2 class="alineacion">Información:</h2>
+                                                <table>
+                                                    <tr>
+                                                        <th>Casa</th>
+                                                        <td>Gryffindor</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>Fecha de nacimiento</th>
+                                                        <td>31 de julio de 1980 en el Valle de Godric, West Country, Inglaterra, Gran Bretaña</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>Edad </th>
+                                                        <td>17 años (antes de la guerra) <br>36 años (postguerra)</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>Estatus de sangre</th>
+                                                        <td>Mestizo</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>Patronus</th>
+                                                        <td>Ciervo</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>Boggart</th>
+                                                        <td>Dementor</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>Varita </th>
+                                                        <td>Acebo, 27'94cm, flexible, pluma de fénix</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>Biografía</th>
+                                                        <td>Harry Potter nació el 31 de julio de 1980 como el único hijo de James y Lily Potter, una pareja de magos que fueron asesinados por Lord Voldemort poco después de su nacimiento. Harry sobrevivió al ataque con una cicatriz en forma de rayo en la frente y fue entregado a su tía Petunia y su tío Vernon Dursley, quienes lo criaron en el suburbio sin magia de Little Whinging. Durante su infancia, fue maltratado y marginado por sus parientes. A los once años, Harry recibió una carta de admisión a Hogwarts, la escuela de magia, y descubrió su verdadera identidad como un famoso mago, conocido por sobrevivir al ataque de Voldemort. En Hogwarts, Harry se convirtió en parte del trío de amigos inseparables junto a Ron Weasley y Hermione Granger. Durante sus años en la escuela, enfrentó numerosos desafíos, incluyendo enfrentamientos con Lord Voldemort y sus seguidores. Después de graduarse, Harry se unió a la lucha contra las fuerzas oscuras como miembro de la Orden del Fénix. Después de la guerra, se casó con Ginny Weasley y tuvo tres hijos: James, Albus y Lily. Trabajó como auror en el Ministerio de Magia, luchando por la paz y la justicia en el mundo mágico.</td>
+                                                    </tr>
+                                                </table>
+                                            </div>
+
+                                        </div>
+                                        <!-- Modal footer -->
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-danger colorBoton"
+                                                data-bs-dismiss="modal">Close</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <figcaption class="image-description letraBlanca">
+                                Harry Potter
+                            </figcaption>
+                    </figure>
+                </div>
+                <div class="col-md-4">
+                    <figure>
+                        <div class="position-relative">
+                            <button type="button" data-bs-toggle="modal" data-bs-target="#Hermione" class="sin-borde">
+                                <img src="image/HermioneGranger.jpg" class="rounded-circle img-fluid circulo"
+                                    alt="Cinque Terre">
+                                <img src="../Profesores/image/circulo.png" class="imagenCirculo">
+                            </button>
+                            <!-- The Modal -->
+                            <div class="modal" id="Hermione">
+                                <div class="modal-dialog modal-xl">
+                                    <div class="modal-content">
+                                        <!-- Modal Header -->
+                                        <div class="modal-header text-center">
+                                            <h2 class="modal-title">Hermione Granger</h2>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                                        </div>
+                                        <!-- Modal body -->
+                                        <div class="modal-body">
+                                            <div>
+                                                <img src="image/HermioneGranger.jpg" class="fotoModal">
+                                            </div>
+                                            <br>
+                                            <div>
+                                                <h2 class="alineacion">Información:</h2>
+                                                <table>
+                                                    <tr>
+                                                        <th>Casa</th>
+                                                        <td>Gryffindor</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>Fecha de nacimiento</th>
+                                                        <td>19 de septiembre de 1979
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>Edad </th>
+                                                        <td>18 años (antes de la guerra) <br>36 años (postguerra)</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>Estatus de sangre</th>
+                                                        <td>Nacida de Muggles</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>Patronus</th>
+                                                        <td>Nutria</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>Boggart </th>
+                                                        <td>La profesora McGonagall diciéndole que reprobó todo</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>Varita </th>
+                                                        <td>Vid, 10 ¾ ", nervio de corazón de dragón</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>Biografía</th>
+                                                        <td>Hermione Granger, nacida el 19 de septiembre de 1979, es una brillante bruja nacida de padres muggles. Antes de ingresar a Hogwarts, demostró una notable habilidad académica y una determinación excepcional. Su primer encuentro con Harry Potter y Ron Weasley fue en el Expreso de Hogwarts, donde rápidamente se hizo amiga de ellos. Durante su tiempo en la escuela, Hermione se destacó como una estudiante ejemplar, con un enfoque particular en el estudio y la investigación. Fue fundamental en la resolución de muchos problemas y desafíos que enfrentaron, gracias a su inteligencia y su capacidad para pensar de manera lógica. Después de graduarse, trabajó en el Ministerio de Magia en el Departamento de Regulación y Control de Criaturas Mágicas, y posteriormente luchó contra las injusticias en el mundo mágico, abogando por los derechos de los elfos domésticos y otras criaturas. Hermione también jugó un papel crucial en la derrota de Lord Voldemort como miembro activo de la Orden del Fénix. Después de la guerra, continuó su trabajo en el Ministerio y más tarde se convirtió en la Ministra de Magia, siendo la primera persona nacida de padres muggles en ocupar ese cargo.</td>
+                                                    </tr>
+                                                </table>
+                                            </div>
+
+                                        </div>
+                                        <!-- Modal footer -->
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-danger colorBoton"
+                                                data-bs-dismiss="modal">Close</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <figcaption class="image-description letraBlanca">
+                                Hermione Granger
+                            </figcaption>
+                    </figure>
+                </div>
+                <div class="col-md-4">
+                    <figure>
+                        <div class="position-relative">
+                            <button type="button" data-bs-toggle="modal" data-bs-target="#Ron" class="sin-borde">
+                                <img src="image/RonWeasley.jpg" class="rounded-circle img-fluid circulo"
+                                    alt="Cinque Terre">
+                                <img src="../Profesores/image/circulo.png" class="imagenCirculo">
+                            </button>
+                            <!-- The Modal -->
+                            <div class="modal" id="Ron">
+                                <div class="modal-dialog modal-xl">
+                                    <div class="modal-content">
+                                        <!-- Modal Header -->
+                                        <div class="modal-header text-center">
+                                            <h2 class="modal-title">Ron Weasley</h2>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                                        </div>
+                                        <!-- Modal body -->
+                                        <div class="modal-body">
+                                            <div>
+                                                <img src="image/RonWeasley.jpg" class="fotoModal">
+                                            </div>
+                                            <br>
+                                            <div>
+                                                <h2 class="alineacion">Información:</h2>
+                                                <table>
+                                                    <tr>
+                                                        <th>Casa</th>
+                                                        <td>Gryffindor</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>Fecha de nacimiento</th>
+                                                        <td>1 de marzo de 1980</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>Edad </th>
+                                                        <td>18 años (antes de la guerra) <br>36 años (postguerra)</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>Estatus de sangre</th>
+                                                        <td>Pura</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>Patronus</th>
+                                                        <td>Jack Russell Terrier</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>Boggart</th>
+                                                        <td>Acromántula</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>Varita</th>
+                                                        <td>Acromántula</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>Biografía</th>
+                                                        <td>Ronald Bilius Weasley, nacido el 1 de marzo de 1980, es conocido por ser uno de los mejores amigos de Harry Potter desde su primer año en Hogwarts. Proveniente de una familia numerosa y amorosa de magos, Ron creció en la Casa de los Weasley junto con sus hermanos. Aunque no siempre tuvieron abundancia económica, la calidez y el apoyo de su familia lo ayudaron a enfrentar cualquier desafío. En Hogwarts, Ron se destacó por su lealtad y valentía, aunque a veces luchó con la sombra de sus hermanos mayores. A lo largo de su tiempo en la escuela, demostró su habilidad como jugador de ajedrez mágico y su astucia en momentos de peligro. Después de graduarse, trabajó para el Ministerio de Magia en la Oficina de Regulación y Control de Criaturas Mágicas. Durante la Segunda Guerra Mundial de magos, Ron se unió a Harry y Hermione en la búsqueda de Horrocruxes para derrotar a Lord Voldemort, demostrando su valentía y lealtad una vez más. Después de la guerra, ayudó a su hermano George a dirigir la tienda de bromas Weasley y se casó con Hermione Granger, con quien tuvo dos hijos, Rose y Hugo.</td>
+                                                    </tr>
+                                                </table>
+                                            </div>
+
+                                        </div>
+                                        <!-- Modal footer -->
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-danger colorBoton"
+                                                data-bs-dismiss="modal">Close</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <figcaption class="image-description letraBlanca">
+                                Ron Weasley
+                            </figcaption>
+                    </figure>
+                </div>
+            </div>
+            <div class="row mt-4"> <!-- Añadido un margen top de 4 -->
+                <div class="col-md-4">
+                    <figure>
+                        <div class="position-relative">
+                            <button type="button" data-bs-toggle="modal" data-bs-target="#Luna" class="sin-borde">
+                                <img src="image/LunaLovegood.jpeg" class="rounded-circle img-fluid circulo"
+                                    alt="Cinque Terre">
+                                <img src="../Profesores/image/circulo.png" class="imagenCirculo">
+                            </button>
+                            <!-- The Modal -->
+                            <div class="modal" id="Luna">
+                                <div class="modal-dialog modal-xl">
+                                    <div class="modal-content">
+                                        <!-- Modal Header -->
+                                        <div class="modal-header text-center">
+                                            <h2 class="modal-title">Luna Lovegodd</h2>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                                        </div>
+                                        <!-- Modal body -->
+                                        <div class="modal-body">
+                                            <div>
+                                                <img src="image/LunaLovegood.jpeg" class="fotoModal">
+                                            </div>
+                                            <br>
+                                            <div>
+                                                <h2 class="alineacion">Información:</h2>
+                                                <table>
+                                                    <tr>
+                                                        <th>Casa</th>
+                                                        <td>Ravenclaw</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>Fecha de nacimiento</th>
+                                                        <td>13 de febrero de 1981, Gran Bretaña</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>Edad </th>
+                                                        <td>17 años (antes de la guerra) <br>35 años (postguerra)</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>Estatus de sangre</th>
+                                                        <td>Mestiza o Pura</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>Patronus</th>
+                                                        <td>Liebre</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>Biografía</th>
+                                                        <td>
+                                                            Luna Lovegood, una bruja singular y fascinante, fue conocida por su peculiar personalidad y su profundo sentido de la amistad. Desde su infancia, Luna mostró un interés único por las criaturas mágicas y las teorías extravagantes, lo que la llevó a ser a menudo objeto de burlas por parte de sus compañeros de clase. Sin embargo, su espíritu optimista y su capacidad para ver lo bueno en los demás la convirtieron en una amiga leal y valiosa para Harry Potter y sus compañeros. Durante su tiempo en Hogwarts, Luna se destacó por su participación en el Ejército de Dumbledore y su valentía durante la Batalla de Hogwarts, donde demostró su determinación y coraje. Después de la guerra, Luna continuó explorando su pasión por las criaturas mágicas y se convirtió en una exitosa magizoóloga, dejando un legado de amistad, valentía y autenticidad en el mundo mágico.
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </div>
+
+                                        </div>
+                                        <!-- Modal footer -->
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-danger colorBoton"
+                                                data-bs-dismiss="modal">Close</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <figcaption class="image-description letraBlanca">
+                                Luna Lovegood
+                            </figcaption>
+                    </figure>
+                </div>
+                <div class="col-md-4">
+                    <figure>
+                        <div class="position-relative">
+                            <button type="button" data-bs-toggle="modal" data-bs-target="#Cedric" class="sin-borde">
+                                <img src="image/CedricDiggory.jpg" class="rounded-circle img-fluid circulo"
+                                    alt="Cinque Terre">
+                                <img src="../Profesores/image/circulo.png" class="imagenCirculo">
+                            </button>
+                            <!-- The Modal -->
+                            <div class="modal" id="Cedric">
+                                <div class="modal-dialog modal-xl">
+                                    <div class="modal-content">
+                                        <!-- Modal Header -->
+                                        <div class="modal-header text-center">
+                                            <h2 class="modal-title">Cedric Diggory</h2>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                                        </div>
+                                        <!-- Modal body -->
+                                        <div class="modal-body">
+                                            <div>
+                                                <img src="image/CedricDiggory.jpg" class="fotoModal">
+                                            </div>
+                                            <br>
+                                            <div>
+                                                <h2 class="alineacion">Información:</h2>
+                                                <table>
+                                                    <tr>
+                                                        <th>Casa</th>
+                                                        <td>Hufflepuff</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>Fecha de nacimiento</th>
+                                                        <td>Entre el 1 de septiembre y el 31 de octubre de 1977</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>Edad </th>
+                                                        <td>24 de junio de 1995 (durante la tercera ronda del caliz de fuego)</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>Estatus de sangre</th>
+                                                        <td>Mestiza o Pura</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>Varita</th>
+                                                        <td>Fresno, 30.5 cm, pelo de unicornio, flexible.</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>Biografía</th>
+                                                        <td>
+                                                            Cedric Diggory, un estudiante destacado en Hogwarts, era conocido por su amabilidad, integridad y habilidades en el Quidditch. Representante de Hufflepuff, destacó en varias competiciones escolares y fue elegido como Campeón de Hogwarts en el Torneo de los Tres Magos. Cedric fue un competidor justo y respetuoso, ganándose el afecto y la admiración de sus compañeros y profesores por igual. Trágicamente, su vida fue truncada durante el mismo torneo, cuando fue asesinado por el mortífago Peter Pettigrew bajo las órdenes de Lord Voldemort. Su muerte fue un momento devastador para la comunidad mágica, recordándose como una pérdida injusta de un joven talentoso y noble. Cedric se convirtió en un símbolo de valentía y sacrificio, inspirando a muchos a luchar contra las fuerzas oscuras que amenazaban su mundo.
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </div>
+
+                                        </div>
+                                        <!-- Modal footer -->
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-danger colorBoton"
+                                                data-bs-dismiss="modal">Close</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <figcaption class="image-description letraBlanca">
+                                Cedric Diggory
+                            </figcaption>
+                    </figure>
+                </div>
+                <div class="col-md-4">
+                    <figure>
+                        <div class="position-relative">
+                            <button type="button" data-bs-toggle="modal" data-bs-target="#Draco" class="sin-borde">
+                                <img src="image/DracoMalfoy.jpg" class="rounded-circle img-fluid circulo"
+                                    alt="Cinque Terre">
+                                <img src="../Profesores/image/circulo.png" class="imagenCirculo">
+                            </button>
+                            <!-- The Modal -->
+                            <div class="modal" id="Draco">
+                                <div class="modal-dialog modal-xl">
+                                    <div class="modal-content">
+                                        <!-- Modal Header -->
+                                        <div class="modal-header text-center">
+                                            <h2 class="modal-title">Draco Malfoy</h2>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                                        </div>
+                                        <!-- Modal body -->
+                                        <div class="modal-body">
+                                            <div>
+                                                <img src="image/DracoMalfoy.jpg" class="fotoModal">
+                                            </div>
+                                            <br>
+                                            <div>
+                                                <h2 class="alineacion">Información:</h2>
+                                                <table>
+                                                    <tr>
+                                                        <th>Casa</th>
+                                                        <td>Slytherin</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>Fecha de nacimiento</th>
+                                                        <td>5 de junio de 1980</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>Edad </th>
+                                                        <td>17 años (antes de la guerra) <br>36 años (postguerra)</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>Estatus de sangre</th>
+                                                        <td>Pura</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>Varita</th>
+                                                        <td>Espino, 25,4 cm, pelo de unicornio, elástica[</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>Biografía</th>
+                                                        <td>
+                                                            Draco Malfoy nació en una familia de sangre pura con fuertes conexiones con los mortífagos y la oscuridad. Desde temprana edad, fue criado en un entorno que promovía la superioridad de la sangre pura y el desprecio hacia los nacidos de muggles y los sangre sucia. Esto influyó en su actitud desde la infancia, marcando su personalidad con un aire de arrogancia y prepotencia cuando llegó a Hogwarts. En la escuela, fue seleccionado para la Casa Slytherin, donde rápidamente se rodeó de amigos con ideologías similares. Sin embargo, a medida que avanzaba la serie, Draco se enfrentó a desafíos personales y morales, especialmente durante la guerra contra Voldemort. Su lealtad fue puesta a prueba, y aunque inicialmente se alineó con su familia y los mortífagos, mostró signos de conflicto interno y dudas sobre el camino que había elegido. Después de la guerra, Draco enfrentó las repercusiones de sus acciones y luchó por encontrar su lugar en un mundo mágico transformado.
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </div>
+
+                                        </div>
+                                        <!-- Modal footer -->
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-danger colorBoton"
+                                                data-bs-dismiss="modal">Close</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <figcaption class="image-description letraBlanca">
+                                Draco Malfoy
+                            </figcaption>
+                    </figure>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="text-center fondoFooter">
+        <div class="lineaSeparacion">
+            <img src="https://cdn-hogwartslegacy.warnerbrosgames.com/static/bar-left.png" class="izquierda">
+            <img src="https://cdn-hogwartslegacy.warnerbrosgames.com/static/bar-right.png" class="derecha">
+        </div>
+        <!-- Grid container -->
+        <div class="container pt-4">
+            <!-- Section: Social media -->
+            <section class="mb-4">
+                <!-- Facebook -->
+                <a data-mdb-ripple-init class="btn btn-link btn-floating btn-lg text-body m-1"
+                    href="https://www.facebook.com/harrypotter" role="button"><img src="../../image/facebook.png"
+                        class="footer"></a>
+
+                <!-- Instagram -->
+                <a data-mdb-ripple-init class="btn btn-link btn-floating btn-lg text-body m-1"
+                    href="https://www.instagram.com/harrypotter/?hl=es" role="button"><img
+                        src="../../image/instagram.png" class="footer"></a>
+
+                <!-- Twitter -->
+                <a data-mdb-ripple-init class="btn btn-link btn-floating btn-lg text-body m-1"
+                    href="https://x.com/harrypotter" role="button"><img src="../../image/twitter.png"
+                        class="footer2"></a>
+
+                <!-- YouTube -->
+                <a data-mdb-ripple-init class="btn btn-link btn-floating btn-lg text-body m-1"
+                    href="https://www.youtube.com/@harrypotter" role="button"><img src="../../image/youtube.png"
+                        class="footer"></a>
+
+                <!-- TikTok -->
+                <a data-mdb-ripple-init class="btn btn-link btn-floating btn-lg text-body m-1"
+                    href="https://www.tiktok.com/@harrypotter" role="button"><img src="../../image/tik-tok.png"
+                        class="footer"></a>
+
+            </section>
+        </div>
+        <!-- Grid container -->
+
+        <!-- Copyright -->
+        <div class="text-center p-3 fondoFooter2">
+            Copyright © 2024
+        </div>
+    </footer>
+</body>
+
+</html>

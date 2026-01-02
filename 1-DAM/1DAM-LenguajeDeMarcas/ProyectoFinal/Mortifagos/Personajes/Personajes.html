@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personajes</title>
+    <link rel="icon" href="../../image/logo.png">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../../style/menu.css">
+    <link rel="stylesheet" href="../../Hogwarts/Profesores/style/Profesores.css">
+
+    <script src="../../javaScript/modo.js"></script>
+    <script src="../../javaScript/recarga.js"></script>
+
+</head>
+
+<body>
+    <div class="contenedor_loader">
+        <div><img src="../../image/carga_snichDorada.gif" class="gif"></div>
+    </div>
+    <!-- Navigation -->
+    <div class="navigation-wrap bg-light start-header start-style">
+        <div class="container-fluid">
+            <div class="row justify-content-between align-items-center">
+                <div class="row">
+                    <div class="col">
+                        <!-- Logo -->
+                        <a class="navbar-brand" href="../../index.html" target="_self">
+                            <img src="../../image/logo.png" alt="Logo" class="logo">
+                        </a>
+                    </div>
+                    <div class="col altura">
+                        <b>
+                            <a href="../Mortifagos.html" class="decoracion">
+                                <h1 class="titulo">Mortífagos</h1>
+                            </a>
+                        </b>
+                    </div>
+                    <div class="col posicionModo">
+                        <button type="button" class="btn btn-light colorModo" onclick="toggleTheme()">
+                            <img id="lightImage" src="../../image/soleado.png" alt="Light Theme">
+                            <img id="darkImage" src="../../image/luna.png" alt="Dark Theme">
+                        </button>
+                    </div>
+                </div>
+                <div class="col-auto flex-grow-0 flex-shrink-0">
+                    <!-- Opciones del Navbar -->
+                    <nav class="navbar navbar-expand-md">
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav ms-auto">
+                                <li class="nav-item">
+                                    <a class="nav-link dropdown-toggle" href="../../Hogwarts/Hogwart.html" role="button"
+                                        data-bs-toggle="dropdown" aria-haspopup="true"
+                                        aria-expanded="false">Hogwarts</a>
+                                    <div class="dropdown-menu">
+                                        <a class="dropdown-item" href="../../Hogwarts/Profesores/Profesores.html">Profesores</a>
+                                        <a class="dropdown-item" href="../../Hogwarts/Alumnos/Alumnos.html">Alumnos</a>
+                                        <a class="dropdown-item" href="../../Hogwarts/Asignaturas/asignaturas.html">Asignaturas</a>
+                                        <a class="dropdown-item" href="../../Hogwarts/Casas/casa.html">Casas</a>
+                                    </div>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link dropdown-toggle" href="../Mortifagos.html" role="button"
+                                        data-bs-toggle="dropdown" aria-haspopup="true"
+                                        aria-expanded="false">Mortífagos</a>
+                                    <div class="dropdown-menu">
+                                        <a class="dropdown-item"
+                                            href="Personajes.html">Personajes</a>
+                                        <a class="dropdown-item"
+                                            href="../Horrocruxes/horrocruxes.html">Horrocruxes</a>
+                                        <a class="dropdown-item" href="../Mortifagos.html">Marca Tenebrosa</a>
+                                    </div>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link dropdown-toggle" href="../../Familias/Familias.html">Familias</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="../../Mapa/mapa.html">Mapa</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+                <div class="col-auto">
+                    <!-- Segunda sección de opciones del Navbar -->
+                    <nav class="navbar navbar-expand-md navbar-light">
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav ms-auto">
+                                <li class="nav-item">
+                                    <a class="nav-link dropdown-toggle" href="../../Adaptaciones/Adaptaciones.html"
+                                        role="button" data-bs-toggle="dropdown" aria-haspopup="true"
+                                        aria-expanded="false">Adaptaciones</a>
+                                    <div class="dropdown-menu">
+                                        <a class="dropdown-item" href="../../Adaptaciones/Libros.html">Libros</a>
+                                        <a class="dropdown-item" href="../../Adaptaciones/Peliculas.html">Películas</a>
+                                        <a class="dropdown-item" href="../../Adaptaciones/Videojuegos.html">Videojuegos</a>
+                                    </div>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="../../Curiosidades/curiosidad.html">Curiosidades</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="../../Comentarios/Comentarios.html">Comentarios</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="../../quiz/quiz.html">Quiz</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                    <div class="nav-images-container">
+                        <img src="https://cdn-hogwartslegacy.warnerbrosgames.com/static/bar-left.png" alt
+                            class="nav-bar left">
+                        <img src="https://cdn-hogwartslegacy.warnerbrosgames.com/static/bar-right.png" alt
+                            class="nav-bar right">
+                    </div>
+                    <div>
+                        <div class="nav-bar-corner-container">
+                            <div class="nav-bar-corner left">
+                                <img src="https://cdn-hogwartslegacy.warnerbrosgames.com/static/corner-left.webp" alt=""
+                                    class="img-fluid">
+                            </div>
+                            <div class="nav-bar-corner right">
+                                <img src="https://cdn-hogwartslegacy.warnerbrosgames.com/static/corner-right.webp"
+                                    alt="" class="img-fluid">
+                            </div>
+                        </div>
+                        <div class="nav-bar-corner-container1">
+                            <div class="nav-bar-corner bottomLeft">
+                                <img src="https://cdn-hogwartslegacy.warnerbrosgames.com/static/corner-bottom-left.webp"
+                                    alt="" class="img-fluid">
+                            </div>
+                            <div class="nav-bar-corner bottomRight">
+                                <img src="https://cdn-hogwartslegacy.warnerbrosgames.com/static/corner-bottom-right.webp"
+                                    alt="" class="img-fluid">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Your main content here -->
+
+    <div class="my-5 py-5 content-fluid text-center">
+
+        <div class="text-center">
+
+            <picture>
+                <source srcset="../../image/titulo-arriba.webp" type="image/webp">
+                <img src="../../image/titulo-arriba.webp" class="title-decoration margen">
+            </picture>
+
+            <h1 class="letraBlanca">Personajes</h1>
+
+            <picture>
+                <source srcset="../../image/titulo-bajo.png" type="image/png">
+                <img src="../../image/titulo-bajo.png" class="title-decoration">
+            </picture>
+
+        </div>
+
+        <div class="row justify-content-center barra">
+            <div class="row mt-4">
+                <div class="col-md-6">
+                    <figure>
+                        <div class="position-relative">
+                            <button type="button" data-bs-toggle="modal" data-bs-target="#Voldemort" class="sin-borde">
+                                <img src="../image/Lordvoldemort.jpg" class="rounded-circle img-fluid circulo">
+                                <img src="../../Hogwarts/Profesores/image/circulo.png" class="imagenCirculo">
+                            </button>
+
+                            <!-- The Modal -->
+                            <div class="modal" id="Voldemort">
+                                <div class="modal-dialog modal-xl">
+                                    <div class="modal-content">
+                                        <!-- Modal Header -->
+                                        <div class="modal-header text-center">
+                                            <h2 class="modal-title">Lord Voldemort</h2>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                                        </div>
+                                        <!-- Modal body -->
+                                        <div class="modal-body">
+                                            <div>
+                                                <img src="../image/Lordvoldemort.jpg" class="fotoModal">
+                                            </div>
+                                            <br>
+                                            <div>
+                                                <h2 class="alineacion">Información:</h2>
+                                                <table>
+                                                    <tr>
+                                                        <th>Casa</th>
+                                                        <td>Slytherin</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>Fecha de nacimiento</th>
+                                                        <td>31 de diciembre de 1926, Orfanato de Wool, Londres,
+                                                            Inglaterra</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>Fecha de muerte </th>
+                                                        <td>2 de mayo de 1998 (71 años), Gran Comedor, Castillo Hogwarts
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>Estatus de sangre</th>
+                                                        <td>Mestizo</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>Boggart</th>
+                                                        <td>Su propia muerte</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>Varita </th>
+                                                        <td>34 cm, tejo, pluma de fénix<br>38 cm, saúco, pelo de cola de
+                                                            thestral</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>Biografía</th>
+                                                        <td>
+                                                            <p>Lord Voldemort, nacido como Tom Marvolo Riddle el 31 de
+                                                                diciembre de 1926 en un orfanato de Londres, mostró
+                                                                desde joven habilidades mágicas y crueldad. Asistió a
+                                                                Hogwarts y fue seleccionado para Slytherin, destacándose
+                                                                académicamente mientras investigaba las Artes Oscuras y
+                                                                los Horrocruxes. Tras graduarse, trabajó en Borgin and
+                                                                Burkes y asesinó a su familia paterna para ocultar su
+                                                                ascendencia muggle. Adoptó el nombre de Lord Voldemort y
+                                                                reunió seguidores conocidos como mortífagos, desatando
+                                                                una ola de terror.
+                                                            </p>
+                                                            <p>
+                                                                En 1981, al intentar matar al bebé Harry Potter, una
+                                                                maldición rebotó y lo dejó sin cuerpo. Con la ayuda de
+                                                                seguidores como Peter Pettigrew, recuperó una forma
+                                                                física en 1995 y comenzó su segundo ascenso al poder.
+                                                                Durante la Batalla de Hogwarts en 1998, Voldemort fue
+                                                                derrotado definitivamente por Harry Potter. La
+                                                                destrucción de sus Horrocruxes y su propia maldición
+                                                                rebotada marcaron su final y el fin de la Segunda Guerra
+                                                                Mágica.
+                                                            </p>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </div>
+
+                                        </div>
+                                        <!-- Modal footer -->
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-danger colorBoton"
+                                                data-bs-dismiss="modal">Close</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <figcaption class="image-description letraBlanca">
+                                Lord Voldemort
+                            </figcaption>
+                    </figure>
+                </div>
+                <div class="col-md-6">
+                    <figure>
+                        <div class="position-relative">
+                            <button type="button" data-bs-toggle="modal" data-bs-target="#Bellatrix" class="sin-borde">
+                                <img src="../image/BellatrixLestrange.jpg" class="rounded-circle img-fluid circulo"
+                                    alt="Cinque Terre">
+                                <img src="../../Hogwarts/Profesores/image/circulo.png" class="imagenCirculo">
+                            </button>
+                            <!-- The Modal -->
+                            <div class="modal" id="Bellatrix">
+                                <div class="modal-dialog modal-xl">
+                                    <div class="modal-content">
+                                        <!-- Modal Header -->
+                                        <div class="modal-header text-center">
+                                            <h2 class="modal-title">Bellatrix Lestrange</h2>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                                        </div>
+                                        <!-- Modal body -->
+                                        <div class="modal-body">
+                                            <div>
+                                                <img src="../image/BellatrixLestrange.jpg" class="fotoModal">
+                                            </div>
+                                            <br>
+                                            <div>
+                                                <h2 class="alineacion">Información:</h2>
+                                                <table>
+                                                    <tr>
+                                                        <th>Casa</th>
+                                                        <td>Slytherin</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>Fecha de nacimiento</th>
+                                                        <td>
+                                                            1951
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>Fecha de muerte </th>
+                                                        <td>2 de mayo de 1998 (47 años), Gran Comedor, Castillo Hogwarts
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>Estatus de sangre</th>
+                                                        <td>Pura</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>Varita </th>
+                                                        <td>
+                                                            Nogal y nervio de dragón, 12 pulgadas y 3/4, Inflexible</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>Biografía</th>
+                                                        <td>
+                                                            <p>Bellatrix Lestrange, nacida como Bellatrix Black, fue una
+                                                                de las más leales y sádicas seguidoras de Lord
+                                                                Voldemort. Nacida en una familia de sangre pura, los
+                                                                Black, mostró una temprana afinidad por las Artes
+                                                                Oscuras y un desprecio por los no-mágicos. Asistió a
+                                                                Hogwarts y fue seleccionada para Slytherin, donde se
+                                                                destacó por su talento y crueldad. Después de la
+                                                                escuela, se casó con Rodolphus Lestrange, pero su
+                                                                verdadera devoción siempre fue hacia Voldemort.
+                                                            </p>
+                                                            <p>
+                                                                Durante la Primera Guerra Mágica, Bellatrix se ganó la
+                                                                reputación de ser una mortífaga feroz y despiadada. Tras
+                                                                la caída temporal de Voldemort en 1981, Bellatrix fue
+                                                                capturada y encarcelada en Azkaban por torturar a los
+                                                                Aurores Frank y Alice Longbottom hasta la locura. Escapó
+                                                                de Azkaban en 1996 y rápidamente retomó su papel como
+                                                                una de las principales seguidoras de Voldemort.
+                                                            </p>
+                                                            <p>
+                                                                Bellatrix participó en varios enfrentamientos
+                                                                importantes durante la Segunda Guerra Mágica, incluyendo
+                                                                la Batalla del Departamento de Misterios y la Batalla de
+                                                                Hogwarts. Fue responsable de la muerte de su prima
+                                                                Sirius Black y torturó a Hermione Granger en la Mansión
+                                                                Malfoy. Bellatrix murió en la Batalla de Hogwarts en
+                                                                1998 a manos de Molly Weasley, poniendo fin a su brutal
+                                                                legado.</p>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </div>
+
+                                        </div>
+                                        <!-- Modal footer -->
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-danger colorBoton"
+                                                data-bs-dismiss="modal">Close</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <figcaption class="image-description letraBlanca">
+                                Bellatrix Lestrange
+                            </figcaption>
+                    </figure>
+                </div>
+            </div>
+            <div class="row mt-4"> <!-- Añadido un margen top de 4 -->
+                <div class="col-md-6">
+                    <figure>
+                        <div class="position-relative">
+                            <button type="button" data-bs-toggle="modal" data-bs-target="#Lucius" class="sin-borde">
+                                <img src="../image/LuciusMalfoy.jpg" class="rounded-circle img-fluid circulo">
+                                <img src="../../Hogwarts/Profesores/image/circulo.png" class="imagenCirculo">
+                            </button>
+                            <!-- The Modal -->
+                            <div class="modal" id="Lucius">
+                                <div class="modal-dialog modal-xl">
+                                    <div class="modal-content">
+                                        <!-- Modal Header -->
+                                        <div class="modal-header text-center">
+                                            <h2 class="modal-title">Lucius Malfoy</h2>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                                        </div>
+                                        <!-- Modal body -->
+                                        <div class="modal-body">
+                                            <div>
+                                                <img src="../image/LuciusMalfoy.jpg" class="fotoModal">
+                                            </div>
+                                            <br>
+                                            <div>
+                                                <h2 class="alineacion">Información:</h2>
+                                                <table>
+                                                    <tr>
+                                                        <th>Casa</th>
+                                                        <td>Slytherin</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>Fecha de nacimiento</th>
+                                                        <td> 1954</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>Estatus de sangre</th>
+                                                        <td>Pura</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>Patronus</th>
+                                                        <td>Ninguno</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>Boggart</th>
+                                                        <td>Lord Voldemort</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>Varita</th>
+                                                        <td>Olmo, Nervio de Corazón de Dragón</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>Biografía</th>
+                                                        <td>
+                                                            <p>
+                                                                Lucius Malfoy, nacido en 1954, es un mago de sangre pura
+                                                                de una familia rica y antigua. Fue educado en Hogwarts,
+                                                                en la casa de Slytherin. Después de graduarse, se casó
+                                                                con Narcissa Black y tuvo un hijo, Draco Malfoy. Como
+                                                                uno de los seguidores más influyentes de Lord Voldemort,
+                                                                participó activamente en la Primera Guerra Mágica,
+                                                                aunque afirmó haber actuado bajo la influencia de la
+                                                                maldición Imperius tras la caída de Voldemort para
+                                                                evitar la prisión.
+                                                            </p>
+                                                            <p>
+                                                                Cuando Voldemort resurgió en 1995, Lucius volvió a su
+                                                                servicio y se involucró en eventos clave como la Batalla
+                                                                del Departamento de Misterios. Sin embargo, su fracaso y
+                                                                la captura de varios mortífagos llevaron a la caída en
+                                                                desgracia de su familia. Durante la Segunda Guerra
+                                                                Mágica, su mansión fue utilizada como cuartel general de
+                                                                los mortífagos. Tras la derrota de Voldemort en 1998,
+                                                                Lucius fue arrestado pero evitó una sentencia severa al
+                                                                cooperar con el nuevo gobierno, tratando luego de
+                                                                reconstruir su vida y reputación.
+                                                            </p>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </div>
+
+                                        </div>
+                                        <!-- Modal footer -->
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-danger colorBoton"
+                                                data-bs-dismiss="modal">Close</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <figcaption class="image-description letraBlanca">
+                                Lucius Malfoy
+                            </figcaption>
+                    </figure>
+                </div>
+                <div class="col-md-6">
+                    <figure>
+                        <div class="position-relative">
+                            <button type="button" data-bs-toggle="modal" data-bs-target="#Barty" class="sin-borde">
+                                <img src="../image/BartyCrouchJR.jpg" class="rounded-circle img-fluid circulo"
+                                    alt="Cinque Terre">
+                                <img src="../../Hogwarts/Profesores/image/circulo.png" class="imagenCirculo">
+                            </button>
+                            <!-- The Modal -->
+                            <div class="modal" id="Barty">
+                                <div class="modal-dialog modal-xl">
+                                    <div class="modal-content">
+                                        <!-- Modal Header -->
+                                        <div class="modal-header text-center">
+                                            <h2 class="modal-title">Barty Crouch Junior</h2>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                                        </div>
+                                        <!-- Modal body -->
+                                        <div class="modal-body">
+                                            <div>
+                                                <img src="../image/BartyCrouchJR.jpg" class="fotoModal">
+                                            </div>
+                                            <br>
+                                            <div>
+                                                <h2 class="alineacion">Información:</h2>
+                                                <table>
+                                                    <tr>
+                                                        <th>Fecha de nacimiento</th>
+                                                        <td>1962, Gran Bretaña</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>Fecha de muerte </th>
+                                                        <td>1995-1996 (de 33 a 34 años) (Recibió el beso del Dementor el
+                                                            24 de junio de 1995)</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>Estatus de sangre</th>
+                                                        <td>Pura</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>Boggart</th>
+                                                        <td>
+                                                            Lord Voldemort</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>Biografía</th>
+                                                        <td>
+                                                            <p>
+                                                                Barty Crouch Jr., nacido en 1962, es el hijo de Barty
+                                                                Crouch Sr., un alto funcionario del Ministerio de Magia.
+                                                                Aunque provenía de una familia que defendía la pureza de
+                                                                sangre, fue criado con una estricta disciplina. Barty
+                                                                Jr. se convirtió en un seguidor fanático de Lord
+                                                                Voldemort durante la Primera Guerra Mágica y participó
+                                                                en torturas junto a Bellatrix Lestrange. Fue capturado y
+                                                                sentenciado a Azkaban, pero escapó con la ayuda de su
+                                                                madre, quien tomó su lugar en prisión usando una Poción
+                                                                Multijugos.
+                                                            </p>
+                                                            <p>
+                                                                Oculto bajo la protección de su padre, Barty Jr. fue
+                                                                descubierto y castigado con el control de un
+                                                                Encantamiento Imperius. Sin embargo, logró escapar y se
+                                                                unió nuevamente a los mortífagos. En 1994, secuestró a
+                                                                Alastor Moody y, disfrazado como él, se infiltró en
+                                                                Hogwarts como profesor de Defensa Contra las Artes
+                                                                Oscuras. Manipuló el Torneo de los Tres Magos para
+                                                                asegurar el regreso de Voldemort, capturando a Harry
+                                                                Potter en el proceso. Finalmente, fue descubierto por
+                                                                Harry y Dumbledore, y tras ser interrogado con
+                                                                Veritaserum, fue entregado a los Dementores y recibió el
+                                                                beso del Dementor, que lo dejó en un estado peor que la
+                                                                muerte.
+                                                            </p>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </div>
+
+                                        </div>
+                                        <!-- Modal footer -->
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-danger colorBoton"
+                                                data-bs-dismiss="modal">Close</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <figcaption class="image-description letraBlanca">
+                                Barty Crouch Junior
+                            </figcaption>
+                    </figure>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="text-center fondoFooter">
+        <div class="lineaSeparacion">
+            <img src="https://cdn-hogwartslegacy.warnerbrosgames.com/static/bar-left.png" class="izquierda">
+            <img src="https://cdn-hogwartslegacy.warnerbrosgames.com/static/bar-right.png" class="derecha">
+        </div>
+        <!-- Grid container -->
+        <div class="container pt-4">
+            <!-- Section: Social media -->
+            <section class="mb-4">
+                <!-- Facebook -->
+                <a data-mdb-ripple-init class="btn btn-link btn-floating btn-lg text-body m-1"
+                    href="https://www.facebook.com/harrypotter" role="button"><img src="../../image/facebook.png"
+                        class="footer"></a>
+
+                <!-- Instagram -->
+                <a data-mdb-ripple-init class="btn btn-link btn-floating btn-lg text-body m-1"
+                    href="https://www.instagram.com/harrypotter/?hl=es" role="button"><img
+                        src="../../image/instagram.png" class="footer"></a>
+
+                <!-- Twitter -->
+                <a data-mdb-ripple-init class="btn btn-link btn-floating btn-lg text-body m-1"
+                    href="https://x.com/harrypotter" role="button"><img src="../../image/twitter.png"
+                        class="footer2"></a>
+
+                <!-- YouTube -->
+                <a data-mdb-ripple-init class="btn btn-link btn-floating btn-lg text-body m-1"
+                    href="https://www.youtube.com/@harrypotter" role="button"><img src="../../image/youtube.png"
+                        class="footer"></a>
+
+                <!-- TikTok -->
+                <a data-mdb-ripple-init class="btn btn-link btn-floating btn-lg text-body m-1"
+                    href="https://www.tiktok.com/@harrypotter" role="button"><img src="../../image/tik-tok.png"
+                        class="footer"></a>
+
+            </section>
+        </div>
+        <!-- Grid container -->
+
+        <!-- Copyright -->
+        <div class="text-center p-3 fondoFooter2">
+            Copyright © 2024
+        </div>
+    </footer>
+</body>
+
+</html>

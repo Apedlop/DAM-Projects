@@ -1,0 +1,258 @@
+
+<!DOCTYPE html>
+<html>
+
+
+<!-- Mirrored from www.tutorialesprogramacionya.com/bootstrap5ya/detalleconcepto.php?punto=75&codigo=75&inicio=60 by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 19 Dec 2023 11:11:40 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QWKWPBDEFK"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-QWKWPBDEFK');
+</script>
+
+<script async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-4669394804436935",
+    enable_page_level_ads: true
+  });
+</script>
+
+<title>Componente : Offcanvas</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">    
+<meta name="keywords" content="bootstrap 5,css, html, programación, webmaster, tutorial">
+<meta name="description" content="El objetivo de este tutorial 
+    es presentar los conceptos básicos de bootstrap 5.">
+<meta name="author" content="Diego Moisset">
+
+<link href="../css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="estilos.css">
+
+<style>
+html,body {
+	background-color: #D3E9D0;
+	font-family: sans-serif,arial;
+
+}
+</style>
+
+<style>
+.uno { width: 320px; height: 100px; }
+@media(min-width: 500px) { .uno { width: 320px; height: 100px; } }
+@media(min-width: 800px) { .uno { width: 336px; height: 280px; } }
+
+.dos { width: 320px; height: 100px; }
+@media(min-width: 500px) { .dos { width: 320px; height: 100px; } }
+@media(min-width: 800px) { .dos { width: 336px; height: 280px; } }
+</style>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','../../www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-80268657-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+</head>
+
+<body>
+
+
+<div class="container">
+
+<div class="row">
+  <div class="col-md-12">
+
+<div class="titulodetalle">
+<h1>75 - Componente : Offcanvas</h1></div>
+
+  </div>
+</div>  
+
+
+<div class="row">
+  <div class="col-md-12">
+
+<div class="cuerpodetalle">
+<div style="display:block;float:left;margin: 5px;"> 
+ <script async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<!-- adaptable1 -->
+<ins class="adsbygoogle uno"
+     style="display:inline-block"
+     data-ad-client="ca-pub-4669394804436935"
+     data-ad-slot="4716538363"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script> 
+</div> 
+
+
+<p>La componente Offcanvas permite crear una barra lateral oculta que se hará visible cuando se dispare un evento. Muy útil en dispositivos móviles donde tenemos poco espacio en pantalla.</p>
+<p>Offcanvas es un componente de la barra lateral que se puede alternar a través de JavaScript para que aparezca desde el borde izquierdo, derecho, superior o inferior de la ventana del navegador.</p>
+<p>Comparten muchas similitudes con los diálogos que dispone Bootstrap, igual que los diálogos solo se puede mostrar una componente Offcanvas a la vez.</p>
+<p>Veamos un ejemplo para su implementación:</p>
+<img src="imagentema/foto142b.jpg" border="0" alt="bootstrap 5 offcanvas"><br>
+<p>El código necesario es:</p>
+<pre class="recuadro">
+&lt;!doctype html&gt;
+&lt;html&gt;
+
+&lt;head&gt;
+  &lt;title&gt;Prueba de Bootstrap 5&lt;/title&gt;
+  &lt;meta charset="utf-8"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"&gt;
+  &lt;link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous"&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+
+  &lt;div class="container"&gt;
+
+    &lt;a class="btn btn-primary" data-bs-toggle="offcanvas" href="#offcanvas1"&gt;
+      Login
+    &lt;/a&gt;   
+    &lt;div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvas1"&gt;
+      &lt;div class="offcanvas-header"&gt;
+        &lt;h5 class="offcanvas-title"&gt;Login&lt;/h5&gt;
+        &lt;button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"&gt;&lt;/button&gt;
+      &lt;/div&gt;
+      &lt;div class="offcanvas-body"&gt;
+        &lt;form&gt;
+          &lt;div class="mb-3"&gt;
+            &lt;label for="nombre" class="form-label"&gt;Ingrese su nombre:&lt;/label&gt;
+            &lt;input type="text" class="form-control" id="nombre" name="nombre"&gt;        
+          &lt;/div&gt;
+          &lt;div class="mb-3"&gt;
+            &lt;label for="clave" class="form-label"&gt;Ingrese su clave:&lt;/label&gt;
+            &lt;input type="password" class="form-control" id="clave" name="clave"&gt;
+          &lt;/div&gt;
+          &lt;button type="submit" class="btn btn-primary"&gt;Confirmar&lt;/button&gt;
+        &lt;/form&gt;            
+      &lt;/div&gt;
+    &lt;/div&gt;    
+  &lt;/div&gt;
+
+  &lt;script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8"
+    crossorigin="anonymous"&gt;&lt;/script&gt;
+&lt;/body&gt;
+
+&lt;/html&gt;
+</pre>
+
+<p>Mediante la clase 'offcanvas' creamos este panel oculto, que en este caso aparece de izquierda a derecha gracias a la clase 'offcanvas-start':</p>
+<pre>
+    &lt;div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvas1"&gt;
+</pre>
+<p>Definimos una cabecera mediante la clase 'offcanvas-header':</p>
+<pre>
+      &lt;div class="offcanvas-header"&gt;
+</pre>
+<p>En la cabecera definimos un botón que será la cruz para cerrar el panel:</p>
+<pre>
+        &lt;button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"&gt;&lt;/button&gt;
+</pre>
+<p>Por otro lado mediante la clase 'offcanvas-body' definimos el área donde dispondremos los distintos controles visuales que se deben mostrar cuando el offcanvas se encuentre visible (En nuestro ejemplo disponemos un formulario de login):</p>
+<pre>
+      &lt;div class="offcanvas-body"&gt;
+        &lt;form&gt;
+          &lt;div class="mb-3"&gt;
+            &lt;label for="nombre" class="form-label"&gt;Ingrese su nombre:&lt;/label&gt;
+            &lt;input type="text" class="form-control" id="nombre" name="nombre"&gt;        
+          &lt;/div&gt;
+          &lt;div class="mb-3"&gt;
+            &lt;label for="clave" class="form-label"&gt;Ingrese su clave:&lt;/label&gt;
+            &lt;input type="password" class="form-control" id="clave" name="clave"&gt;
+          &lt;/div&gt;
+          &lt;button type="submit" class="btn btn-primary"&gt;Confirmar&lt;/button&gt;
+        &lt;/form&gt;            
+      &lt;/div&gt;
+</pre>
+<p>Podemos utilizar las clases:</p>
+<ul>
+<li>
+offcanvas-start<br>
+aparece de izquierda a derecha
+</li>
+
+<li>
+offcanvas-end<br> 
+aparece de derecha a izquierda
+</li>
+
+<li>
+offcanvas-top<br>
+aparece de arriba hacia abajo
+</li>
+
+<li>
+offcanvas-bottom <br>
+aparece de abajo hacia arriba
+</li>
+</ul><h2><a target="_blank" href="ejecutar118b.html?cod=75">Ejecutar Ejemplo</a></h2><h2><a href="indexd6cc.html?inicio=60">Retornar</a></h2> 
+
+<div>
+<!--publi-->
+<script async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<!-- adaptable2 -->
+<ins class="adsbygoogle dos"
+     style="display:inline-block"
+     data-ad-client="ca-pub-4669394804436935"
+     data-ad-slot="5774469161"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+<!--publi-->
+<script async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<!-- adaptable2 -->
+<ins class="adsbygoogle dos"
+     style="display:inline-block"
+     data-ad-client="ca-pub-4669394804436935"
+     data-ad-slot="5774469161"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+</div>
+
+
+
+
+</div>
+
+  </div>
+</div>  
+
+</div>
+
+<script type="text/javascript">
+function cambiar()
+{
+  var lista=document.getElementsByTagName('pre');
+  for(f=0;f<lista.length;f++)
+  {
+   lista[f].style.display='block';
+  }
+  document.getElementById('solucion').style.display='none';
+}
+
+</script>
+
+</body>
+
+
+<!-- Mirrored from www.tutorialesprogramacionya.com/bootstrap5ya/detalleconcepto.php?punto=75&codigo=75&inicio=60 by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 19 Dec 2023 11:11:40 GMT -->
+</html>

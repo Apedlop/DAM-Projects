@@ -1,0 +1,105 @@
+body {
+    overflow-x: hidden;
+}
+
+.imagen {
+    width: 300px;
+    height: 170px;
+    object-fit: cover;
+    margin-top: 9px;
+    margin-left: 25px;
+    filter: brightness(50%);
+}
+
+h1.image-description:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+}
+
+.marco {
+    width: 350px;
+    height: 200px;
+    position: absolute;
+    top: 0;
+    z-index: -1; /* Mueve el marco detrás de la imagen */
+}
+
+.image-description {
+    position: absolute;
+    top: 60px;
+    left: 25px;
+    right: 0;
+    bottom: 0;
+    padding: 20px; /* Ajusta el espaciado según sea necesario */
+}
+.img-container::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 56px;
+    width: 80%;
+    height: 110%;
+    background-image: repeating-radial-gradient(circle at center, #8a6a28, transparent 100%);
+    opacity: 0;
+    transition: opacity 0.5s;
+    z-index: -1; /* Asegura que la sombra esté detrás de la imagen */
+    /*border-radius: 15%;*/
+}
+
+.img-container:hover::after {
+    opacity: 1; /* Muestra la sombra cuando se pasa el cursor sobre el contenedor */
+}
+
+h1.aumento:hover {
+    transform: scale(1.1);
+    transition: 0.5s;
+}
+
+.col-md-4 {
+    padding: 0px;
+}
+
+.position-relative {
+    margin-left: -10px;
+}
+
+.btn{
+    border: none;
+}
+
+.separado {
+    margin-top: 20px;
+    width: 1150px;
+}
+
+img.separador {
+    width: 200px;
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+
+.collapse {
+    color: white;
+}
+
+.izquierda {
+    float: left;
+    width: 400px;
+    padding-right: 20px;
+}
+
+.izquierda2 {
+    float: left;
+    width: 300px;
+    padding-right: 20px;
+}
+
+.derecha {
+    float: right;
+    width: 400px;
+    padding-left: 20px;
+}
+
+.justificada {
+    text-align: justify;
+}

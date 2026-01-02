@@ -1,0 +1,298 @@
+<html>
+
+
+<!-- Mirrored from www.tutorialesprogramacionya.com/javascriptya/temarios/descripcion.php?inicio=0&cod=6 by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 18 Mar 2024 10:31:42 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QWKWPBDEFK"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-QWKWPBDEFK');
+</script>
+
+<script async src="../../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-4669394804436935",
+    enable_page_level_ads: true
+  });
+</script>
+<title>Tutorial de JavaScript : Conceptos</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="../css/estilos.css" rel="stylesheet" type="text/css">
+  <meta charset="UTF-8">
+
+<style>
+html,body {
+	background-color: #D3E9D0;
+	font-family: Trebuchet MS, Verdana, Arial, sans-serif;
+	font-size: 10pt;
+	text-align:center;
+}
+
+h1 {
+	font-size: 14pt;
+	margin: 0%;
+}
+
+div#contentdetalle{clear:left;
+                   max-width:900px;
+				   border-top:0px solid #999;
+				   padding-top:15px;
+				   background-color: #aed7a8;
+				   text-align:left;
+				   font-size:1.3em;
+				   font-weight:normal;
+				   font-family:arial;
+				   padding:20px}
+				   
+.recuadro {
+  background-color:#ffffcc;
+  text-align:left;
+  font-family:courier;
+  font-size:1em;
+  border-width:0;
+  padding:5px;
+
+  border: 1px dotted #ffaa00;
+  margin-left:5px;  
+}		
+
+.tablajs {
+    border-collapse: collapse;
+    background-color: #fff;
+    border: 1px solid #dee2e6;    
+    padding: 0.3rem;    
+}
+
+.tablajs th,
+.tablajs td {
+  padding: 0.75rem;
+  vertical-align: top;
+  border-top: 1px solid #dee2e6;
+}
+
+		   
+</style>
+
+<style>
+.uno { width: 320px; height: 100px; }
+@media(min-width: 500px) { .uno { width: 320px; height: 100px; } }
+@media(min-width: 800px) { .uno { width: 336px; height: 280px; } }
+
+.dos { width: 320px; height: 100px; }
+@media(min-width: 500px) { .dos { width: 320px; height: 100px; } }
+@media(min-width: 800px) { .dos { width: 336px; height: 280px; } }
+</style>
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','../../../www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-80268657-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</head>
+
+<body>
+
+<div class="upperleft">
+  <div class="upperright">
+    <div class="lowerleft">
+      <div class="lowerright">
+<table width="98%">
+<tr>
+<td>
+<span style="float:right"><a target="_blank" style="margin-right:0.1em;" href="https://www.tutorialesprogramacionya.com/">Listado completo de tutoriales</a></span>
+<h1>Estructuras condicionales simples.</h1></td>
+<td align="right">
+
+
+</td>
+</tr>
+</table>
+
+      </div>
+    </div>
+  </div>
+</div>
+<br>
+
+
+<div class="upperleft">
+  <div class="upperright">
+    <div class="lowerleft">
+      <div class="lowerright">
+
+<div id="contentdetalle">
+
+<div style="display:block;float:left;margin: 5px;"> 
+ <script async src="../../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<!-- adaptable1 -->
+<ins class="adsbygoogle uno"
+     style="display:inline-block"
+     data-ad-client="ca-pub-4669394804436935"
+     data-ad-slot="4716538363"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script> 
+</div> 
+
+<p>No todos los problemas pueden resolverse empleando estructuras secuenciales. Cuando hay que tomar una decisión aparecen las estructuras condicionales.</p>
+<p>En nuestra vida diaria se nos presentan situaciones donde debemos decidir.</p>
+<p>¿Elijo la carrera A o la carrera B ?<br>
+¿Me pongo este pantalón ?<br>
+¿Entro al sitio A o al sitio B ?<br>
+Para ir al trabajo, ¿elijo el camino A o el camino B ?<br>
+Al cursar una carrera, ¿elijo el turno mañana, tarde o noche ?<br>
+</p>
+<p>Por supuesto que en un problema se combinan estructuras secuenciales y condicionales.<br>
+Cuando se presenta la elección tenemos la opción de realizar una actividad o no realizarla.</p>
+<p>En una estructura CONDICIONAL SIMPLE por el camino del verdadero hay actividades y por el camino del falso no hay actividades. Por el camino del verdadero pueden existir varias operaciones, entradas y salidas, inclusive ya veremos que puede haber otras estructuras condicionales.
+</p>
+<p>Ejemplo: Realizar la carga de una nota de un alumno. Mostrar un mensaje que aprobó si tiene una nota mayor o igual a 4:</p>
+<pre class="recuadro">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+
+&lt;head&gt;
+    &lt;title&gt;Ejemplo de JavaScript&lt;/title&gt;
+    &lt;meta charset="UTF-8"&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+
+    &lt;script&gt;
+        let nombre;
+        let nota;
+        nombre = prompt('Ingrese nombre:');
+        nota = parseInt(prompt('Ingrese su nota:'));
+        if (nota &gt;= 4) {
+            document.write(nombre + ' esta aprobado con un ' + nota);
+        }
+    &lt;/script&gt;
+
+&lt;/body&gt;
+
+&lt;/html&gt;
+</pre>
+<p>Aparece la instrucción if en el lenguaje JavaScript. La condición debe ir entre paréntesis. Si la condición se verifica verdadera se ejecuta todas las instrucciones que se encuentran encerradas entre las llaves de apertura y cerrado seguidas al if.</p>
+<p>Para disponer condiciones en un if podemos utilizar alguno de los siguientes operadores relacionales:</p>
+<pre>
+&gt;  mayor
+&gt;= mayor o igual
+&lt;  menor
+&lt;= menor o igual
+!= distinto
+== igual
+</pre>
+<p>Siempre debemos tener en cuenta que en la condición del if deben intervenir una variable un operador relacional y otra variable o valor fijo.</p>
+<p>Como queremos que en la variable 'nota' se guarde como entero lo convertimos llamando a parseInt (esta es la forma más concisa de almacenar como entero el valor ingresado con prompt):</p>
+<pre>
+        nota = parseInt(prompt('Ingrese su nota:'));
+</pre>
+
+<p>Otra cosa que hemos incorporado es el operador + para cadenas de caracteres:</p>
+<pre>
+document.write(nombre+' esta aprobado con un '+nota);
+</pre>
+<p>Con esto hacemos más corto la cantidad de líneas de nuestro programa, recordemos que veníamos haciéndolo de la siguiente forma:</p>
+<pre>
+document.write(nombre);
+document.write(' esta aprobado con un ');
+document.write(nota);
+</pre>
+
+<p>Ejemplo: Se ingresa por teclado el sueldo de un empleado (se puede ingresar un valor con decimales), si el sueldo supera los 3000 pesos, luego mostrar un mensaje indicando que debe abonar impuestas.</p>
+
+<pre class="recuadro">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+
+&lt;head&gt;
+    &lt;title&gt;Ejemplo de JavaScript&lt;/title&gt;
+    &lt;meta charset="UTF-8"&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+
+    &lt;script&gt;
+        let sueldo;
+        sueldo = parseFloat(prompt('Ingrese el sueldo del empleado:'));
+        if (sueldo &gt;= 3000) {
+            document.write('Como el sueldo es de ' + sueldo + ' debe abonar impuestos');
+        }
+    &lt;/script&gt;
+
+&lt;/body&gt;
+
+&lt;/html&gt;
+</pre>
+<p>Si ingresamos por teclado el sueldo: 3000.67 luego se muestra el mensaje debido que la condición del if se verifica verdadera:</p>
+<img src="imagentema/foto005d.jpg" border="0" alt="estructura condicional simple javascript"><br>
+<p>Para convertir un string que nos retorna prompt debemos utilizar la función parseFloat:</p>
+<pre>
+        sueldo = parseFloat(prompt('Ingrese el sueldo del empleado:', ''));
+</pre>
+<p>Para resumir tener en cuenta que si queremos guardar el dato retornado por prompt como cadena utilizamos la sintaxis:</p>
+<pre>
+nombre = prompt('Ingrese el nombre:')
+</pre>
+<p>Si queremos guardarlo como entero:</p>
+<pre>
+edad = parseInt(prompt('Ingrese los años:'))
+</pre>
+<p>y finalmente si queremos que se guarde en la variable como valor flotante con coma:</p>
+<pre>
+sueldo = parseFloat(prompt('Ingrese el sueldo del empleado:'));
+</pre>
+</p>
+</div>
+
+<div>
+<!--publi-->
+<script async src="../../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<!-- adaptable2 -->
+<ins class="adsbygoogle dos"
+     style="display:inline-block"
+     data-ad-client="ca-pub-4669394804436935"
+     data-ad-slot="5774469161"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+<!--publi-->
+<script async src="../../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<!-- adaptable2 -->
+<ins class="adsbygoogle dos"
+     style="display:inline-block"
+     data-ad-client="ca-pub-4669394804436935"
+     data-ad-slot="5774469161"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+</div>
+
+
+   <h2><a href="../index2904.html?inicio=0">Retornar</a></h2>   
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+</body>
+
+
+<!-- Mirrored from www.tutorialesprogramacionya.com/javascriptya/temarios/descripcion.php?inicio=0&cod=6 by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 18 Mar 2024 10:31:42 GMT -->
+</html>

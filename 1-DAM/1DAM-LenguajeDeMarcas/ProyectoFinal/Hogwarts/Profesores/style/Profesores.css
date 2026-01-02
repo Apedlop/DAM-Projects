@@ -1,0 +1,85 @@
+.image-description {
+    margin-top: 10px; /* Ajusta según sea necesario */
+}
+
+img.circulo {
+    width: 200px; 
+    height: 200px; 
+    object-fit: cover;
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+}
+
+.content-fluid {
+    min-height: 100vh; /* Establece la altura mínima como 100% de la altura de la ventana */
+}
+
+/* Escalar la imagen cuando se pasa el cursor por encima */
+.circulo:hover {
+    transform: scale(1.1); /* Escala la imagen al 120% de su tamaño original */
+    transition: transform 0.3s ease; /* Agrega una transición suave */
+}
+
+div.barra {
+    margin-right: 0px;
+    margin-top: 50px;
+}
+
+img.imagenCirculo { 
+    z-index: -1; 
+    margin-left: auto;
+    width: 230px; 
+    position: absolute; 
+    top: calc(-10% + 15px); /*Para hacer que se centre el modal cambiar a 15px*/
+    left: 50%; 
+    transform: translateX(-50%);
+}
+
+div.altura2 {
+    margin-top: 160px;
+}
+
+img.separacion {
+    width: 250px;
+}
+
+div.informacion {
+    display: block; 
+    float: left;
+}
+
+p.informacion {
+    text-align: justify;
+    margin-left: 175px;
+}
+
+.sin-borde {
+    border: none !important;
+    background-color: transparent !important;
+}
+
+.fotoModal {
+    width: 20vw;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 8px 12px;
+    border: 3px solid #b69451 !important; /* Añade el borde con !important */
+    text-align: left; /* Alinea el texto a la izquierda */
+}
+
+th {
+    font-weight: bold; /* Hace que el texto en th sea negrita */
+    width: 100px;
+    text-align: center;
+}
+
+
+.alineacion {
+    text-align: left;
+}

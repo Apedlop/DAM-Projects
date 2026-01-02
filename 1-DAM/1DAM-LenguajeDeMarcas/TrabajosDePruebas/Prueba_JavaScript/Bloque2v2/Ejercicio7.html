@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Ejercicio 7</title>
+</head>
+
+<body>
+
+    <h1>Ejercicio 7</h1>
+
+    <script>
+
+        const carga = () => {
+            let num;
+            let pos = 0;
+            let neg = 0;
+            let numPares = 0;
+            let mult = 0;
+
+            for (let i = 0; i < 10; i++) {
+                num = parseInt(prompt('Ingrese un número entero:'));
+
+                num % 2 == 0 ? 
+                    numPares++ 
+                :
+                '';
+
+                num < 0 ?
+                    neg++
+                :
+                '';
+
+                num >= 0 ?
+                    pos++
+                :
+                '';
+                
+                num % 15 == 0 ?
+                    mult++
+                : '';
+
+            }
+
+            document.write(`Cantidad de números negativos: ${neg}<br>`);
+            document.write(`Cantidad de números positivos: ${pos}<br>`);
+            document.write(`Cantidad de números múltiplos de 15: ${mult}<br>`);
+            document.write(`Cantidad de números pares ingresados: ${numPares}<br>`);
+
+        }
+
+        carga();
+
+    </script>
+
+</body>
+
+</html>

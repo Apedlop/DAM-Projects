@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mapa</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../style/menu.css">
+    <link rel="stylesheet" href="style/mapa.css">
+
+    <script src="../javaScript/recarga.js"></script>
+    <script src="../javaScript/modo.js"></script>
+
+</head>
+
+<body>
+    <div class="contenedor_loader">
+        <div><img src="../image/carga_snichDorada.gif" class="gif"></div>
+    </div>
+    <!-- Navigation -->
+    <div class="navigation-wrap bg-light start-header start-style">
+        <div class="container-fluid">
+            <div class="row justify-content-between align-items-center">
+                <div class="row">
+                    <div class="col">
+                        <!-- Logo -->
+                        <a class="navbar-brand" href="../index.html" target="_self">
+                            <img src="../image/logo.png" alt="Logo" class="logo">
+                        </a>
+                    </div>
+                    <div class="col posicionModo">
+                        <button type="button" class="btn btn-light colorModo" onclick="toggleTheme()">
+                            <img id="lightImage" src="../image/soleado.png" alt="Light Theme">
+                            <img id="darkImage" src="../image/luna.png" alt="Dark Theme">
+                        </button>
+                    </div>
+                </div>
+                <div class="col-auto flex-grow-0 flex-shrink-0">
+                    <!-- Opciones del Navbar -->
+                    <nav class="navbar navbar-expand-md">
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav ms-auto">
+                                <li class="nav-item">
+                                    <a class="nav-link dropdown-toggle" href="../Hogwarts/Hogwart.html" role="button"
+                                        data-bs-toggle="dropdown" aria-haspopup="true"
+                                        aria-expanded="false">Hogwarts</a>
+                                    <div class="dropdown-menu">
+                                        <a class="dropdown-item" href="../Hogwarts/Profesores/Profesores.html">Profesores</a>
+                                        <a class="dropdown-item" href="../Hogwarts/Alumnos/Alumnos.html">Alumnos</a>
+                                        <a class="dropdown-item" href="../Hogwarts/Asignaturas/asignaturas.html">Asignaturas</a>
+                                        <a class="dropdown-item" href="../Hogwarts/Casas/casa.html">Casas</a>
+                                    </div>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link dropdown-toggle" href="../Mortifagos/Mortifagos.html" role="button"
+                                        data-bs-toggle="dropdown" aria-haspopup="true"
+                                        aria-expanded="false">Mortífagos</a>
+                                    <div class="dropdown-menu">
+                                        <a class="dropdown-item"
+                                            href="../Mortifagos/Personajes/Personajes.html">Personajes</a>
+                                        <a class="dropdown-item"
+                                            href="../Mortifagos/Horrocruxes/horrocruxes.html">Horrocruxes</a>
+                                        <a class="dropdown-item" href="../Mortifagos/Mortifagos.html">Marca Tenebrosa</a>
+                                    </div>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link dropdown-toggle" href="../Familias/Familias.html">Familias</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="../Mapa/mapa.html">Mapa</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+                <div class="col-auto">
+                    <!-- Segunda sección de opciones del Navbar -->
+                    <nav class="navbar navbar-expand-md navbar-light">
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav ms-auto">
+                                <li class="nav-item">
+                                    <a class="nav-link dropdown-toggle" href="../Adaptaciones/Adaptaciones.html"
+                                        role="button" data-bs-toggle="dropdown" aria-haspopup="true"
+                                        aria-expanded="false">Adaptaciones</a>
+                                    <div class="dropdown-menu">
+                                        <a class="dropdown-item" href="../Adaptaciones/Libros.html">Libros</a>
+                                        <a class="dropdown-item" href="../Adaptaciones/Peliculas.html">Películas</a>
+                                        <a class="dropdown-item" href="../Adaptaciones/Videojuegos.html">Videojuegos</a>
+                                    </div>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="../Curiosidades/curiosidad.html">Curiosidades</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="../Comentarios/Comentarios.html">Comentarios</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="../quiz/quiz.html">Quiz</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                    <div class="nav-images-container">
+                        <img src="https://cdn-hogwartslegacy.warnerbrosgames.com/static/bar-left.png" alt
+                            class="nav-bar left">
+                        <img src="https://cdn-hogwartslegacy.warnerbrosgames.com/static/bar-right.png" alt
+                            class="nav-bar right">
+                    </div>
+                    <div>
+                        <div class="nav-bar-corner-container">
+                            <div class="nav-bar-corner left">
+                                <img src="https://cdn-hogwartslegacy.warnerbrosgames.com/static/corner-left.webp" alt=""
+                                    class="img-fluid">
+                            </div>
+                            <div class="nav-bar-corner right">
+                                <img src="https://cdn-hogwartslegacy.warnerbrosgames.com/static/corner-right.webp"
+                                    alt="" class="img-fluid">
+                            </div>
+                        </div>
+                        <div class="nav-bar-corner-container1">
+                            <div class="nav-bar-corner bottomLeft">
+                                <img src="https://cdn-hogwartslegacy.warnerbrosgames.com/static/corner-bottom-left.webp"
+                                    alt="" class="img-fluid">
+                            </div>
+                            <div class="nav-bar-corner bottomRight">
+                                <img src="https://cdn-hogwartslegacy.warnerbrosgames.com/static/corner-bottom-right.webp"
+                                    alt="" class="img-fluid">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Your main content here -->
+
+    <div class="py-5 content-fluid ancho">
+
+        <div class="text-center">
+
+            <picture>
+                <source srcset="../image/titulo-arriba.webp" type="image/webp">
+                <img src="../image/titulo-arriba.webp" class="title-decoration margen">
+            </picture>
+
+            <h1 class="letraBlanca">Mapa</h1>
+
+            <picture>
+                <source srcset="../image/titulo-bajo.png" type="image/webp">
+                <img src="../image/titulo-bajo.png" class="title-decoration">
+            </picture>
+
+        </div>
+
+        <br>
+
+        <div class="text-center">
+            <!-- Image Map Generated by http://www.image-map.net/ -->
+            <img src="image/mapa.png" usemap="#image-map">
+
+            <map name="image-map">
+                <area target="" alt="Privet Drive" title="Privet Drive" href="#section1" coords="92,166,196,285"
+                    shape="rect">
+                <area target="" alt="King's Cross" title="King's Cross" href="#section2" coords="90,291,196,371"
+                    shape="rect">
+                <area target="" alt="La Madrigera" title="La Madrigera" href="#section3" coords="91,380,195,470"
+                    shape="rect">
+                <area target="" alt="Diagon Alley" title="Diagon Alley" href="#section4" coords="90,475,195,560"
+                    shape="rect">
+                <area target="" alt="El Refujio" title="El Refujio" href="#section5" coords="91,565,194,684"
+                    shape="rect">
+                <area target="" alt="Malfoy Manor" title="Malfoy Manor" href="#section6" coords="880,167,986,290"
+                    shape="rect">
+                <area target="" alt="Valle de Godric" title="Valle de Godric" href="#section7" coords="879,294,988,375"
+                    shape="rect">
+                <area target="" alt="Ministerio de Magia" title="Ministerio de Magia" href="#section8"
+                    coords="879,379,986,474" shape="rect">
+                <area target="" alt="Grimmauld Place" title="Grimmauld Place" href="#section9" coords="878,477,984,562"
+                    shape="rect">
+                <area target="" alt="Azkaban" title="Azkaban" href="#section10" coords="880,568,985,687" shape="rect">
+                <area target="" alt="Lago Negro" title="Lago Negro" href="#section11"
+                    coords="346,686,351,677,348,671,357,665,385,641,372,626,373,614,377,604,380,594,391,585,396,560,417,541,426,535,435,522,448,518,455,508,468,497,483,495,493,497,486,514,487,530,499,542,511,549,529,557,546,562,556,579,568,597,583,599,604,596,611,577,612,562,624,562,650,563,661,568,668,574,680,586,682,596,687,608,695,620,698,633,699,642,702,652,712,668,704,687"
+                    shape="poly">
+                <area target="" alt="Hogwarts" title="Hogwarts" href="#section12"
+                    coords="496,498,489,507,483,516,491,526,500,536,519,543,535,554,555,558,557,572,566,589,581,595,597,591,605,573,606,557,615,557,639,557,654,561,670,554,685,549,704,540,719,537,739,521,744,513,736,500,722,487,716,476,706,467,697,455,692,445,690,432,694,404,681,396,668,421,652,394,643,380,628,383,617,418,592,423,587,400,570,388,545,382,534,381,528,415,505,384,507,416,531,447,497,429"
+                    shape="poly">
+                <area target="" alt="Sauce Boxeador" title="Sauce Boxeador" href="#section13"
+                    coords="716,471,722,476,732,480,745,473,767,431,729,409,701,429" shape="poly">
+                <area target="" alt="Estación de Hogsmeade" title="Estación de Hogsmeade" href="#section14"
+                    coords="873,493,858,488,841,493,799,503,781,533,755,534,724,578,727,630,740,649,766,663,799,687,871,689"
+                    shape="poly">
+                <area target="" alt="Bosque Prohibido" title="Bosque Prohibido" href="#section15"
+                    coords="872,266,857,263,834,262,809,270,759,267,724,275,696,276,672,288,654,311,665,325,679,341,699,356,722,368,735,377,751,390,775,404,778,416,782,431,804,432,825,436,857,439,874,447"
+                    shape="poly">
+                <area target="" alt="Cabaña de Hagrid" title="Cabaña de Hagrid" href="#section16"
+                    coords="215,400,332,480" shape="rect">
+                <area target="" alt="Hogsmeade" title="Hogsmeade" href="#section17" coords="244,258,418,363"
+                    shape="rect">
+                <area target="" alt="Estadio de Quidditch" title="Estadio de Quidditch" href="#section18"
+                    coords="469,271,548,357" shape="rect">
+                <area target="" alt="Lechucería" title="Lechucería" href="#section19" coords="563,306,610,381"
+                    shape="rect">
+            </map>
+
+            <div>
+                <div id="section1" class="container-fluid text-white text-justify margenes">
+                    <div class="separador">
+                        <img src="../image/separador.png" class="tamanoSeparador">
+                    </div>
+                    <h1 class="titulo">Privet Drive</h1>
+                    <img src="image/Privet-drive.webp" class="tamanoFotoIzquierda">
+                    <p>El número 4 de Privet Drive es el hogar de la familia Dursley, y de Harry Potter desde 1981 hasta
+                        1998. La calle está compuesta por casas similares y tiene un aspecto muy pulcro. Es un lugar muy
+                        tranquilo y definitivamente sin ninguna magia.
+                    </p>
+                    <p>
+                        Está ubicado en Little Whinging, Surrey, al suroeste de Londres. Además de Privet Drive, hay
+                        otras calles en el vecindario, como Magnolia Road, Magnolia Crescent y Wisteria Walk. El Número
+                        4 de Privet Drive es una casa grande y cuadrada, con jardines trasero y delantero, como
+                        corresponde al estatus de tío Vernon como director de empresa.
+                    </p>
+                    <p>
+                        Después de que los padres de Harry Potter fueran asesinados por Lord Voldemort en el Valle de
+                        Godric el 31 de octubre de 1981, Albus Dumbledore organizó todo para que Harry se quedara a
+                        vivir en el numero 4 de Privet Drive, con sus familiares los Dursley: tía Petunia, tío Vernon y
+                        el primo Dudley.
+                    </p>
+                </div>
+
+                <div id="section2" class="container-fluid text-white text-justify margenes">
+                    <div class="separador">
+                        <img src="../image/separador.png" class="tamanoSeparador">
+                    </div>
+                    <h1 class="titulo">King's Cross</h1>
+                    <img src="image/kingsCross.webp" class="tamanoFotoDerecha">
+                    <p>King's Cross aparece en los libros de Harry Potter, de J. K. Rowling, como el punto de partida del Expreso de Hogwarts. El tren utiliza un andén secreto, el 9¾, situado entre los andenes 9 y 10, al cual se accede por la barrera localizada entre dichos andenes 9 y 10.
+                    </p>
+                    <p>
+                        Paradójicamente, los andenes 9 y 10 se encuentran en un edificio secundario separado del principal y se encuentran uno frente al otro con las vías del tren en medio. Al parecer, Rowling pretendía que ese andén secreto estuviera en la parte principal de la estación pero confundió los números de los andenes. En una entrevista concedida en el año 2001 reconoció que realmente había confundido las estación de King's Cross con la de Euston, lo cual explica la confusión en los números de los andenes.
+                    </p>
+                    <p>
+                        En las películas basadas en los libros, se utilizó la estación principal de King's Cross, con los andenes 4 y 5 renumerados como 9 y 10 para el rodaje. En la película 'Harry Potter y la Cámara de los Secretos', se utilizó el exterior de la vecina estación de St. Pancras, dada la estética mucho más llamativa de la fachada gótica de ésta. En la actualidad, en reconocimiento a la fama que la serie de "Harry Potter" ha dado a la estación, se ha instalado una señal en hierro forjado del "Andén 9¾" sobre una pared del edificio secundario en el que se encuentran los andenes auténticos 9 y 10. También hay un carrito porta equipaje que parece que está a medio atravesar la pared, en referencia a la obra, en la que para acceder al susodicho andén hay que atravesar la pared.
+                    </p>
+                    </div>
+
+                <div id="section3" class="container-fluid text-white text-justify margenes">
+                    <div class="separador">
+                        <img src="../image/separador.png" class="tamanoSeparador">
+                    </div>
+                    <h1 class="titulo">La Madrigera</h1>
+                    <img src="image/LaMadriguera.webp" class="tamanoFotoIzquierda">
+                    <p>La Madriguera es la casa de la familia Weasley en la serie de Harry Potter, creada por J.K. Rowling. Situada en las afueras de Ottery St Catchpole, en Devon, Inglaterra, esta estructura caótica y encantadora desafía las leyes de la física muggle gracias a la magia. Es el hogar de Arthur y Molly Weasley y sus siete hijos: Bill, Charlie, Percy, Fred, George, Ron y Ginny. La casa, aunque pequeña y algo deteriorada, refleja el carácter amoroso y desorganizado de la familia, llena de calidez y hospitalidad. La vida en La Madriguera está llena de magia cotidiana, con Molly manejando las tareas domésticas mediante encantamientos y Arthur con su fascinación por los objetos muggles.
+                    </p>
+                    <p>
+                        La Madriguera es un refugio para Harry Potter, ofreciéndole el cariño y apoyo que le faltan en su vida con los Dursley. Este hogar sirve como escenario para muchas escenas importantes en los libros, desde celebraciones de cumpleaños hasta reuniones de la Orden del Fénix. Entre los momentos clave están el rescate de Harry en "La Cámara Secreta", el ataque de los Mortífagos en "El Príncipe Mestizo" y la boda de Bill y Fleur en "Las Reliquias de la Muerte". Cada uno de estos eventos resalta la importancia de La Madriguera como un lugar de seguridad y comunidad en medio de la lucha contra Voldemort.
+                    </p>
+                    <p>
+                        Más allá de ser un simple hogar, La Madriguera simboliza la resistencia, el amor y la comunidad en la serie. A pesar de su falta de riquezas materiales, los Weasley poseen una abundante riqueza de espíritu y solidaridad, que inspiran a Harry y a otros personajes. La casa destaca los valores fundamentales de amistad, familia y valentía en tiempos de adversidad, recordando a los lectores la importancia de estos valores en la lucha contra la oscuridad.</p>
+                </div>
+                <div id="section4" class="container-fluid text-white text-justify margenes">
+                    <div class="separador">
+                        <img src="../image/separador.png" class="tamanoSeparador">
+                    </div>
+                    <h1 class="titulo">Diagon Alley</h1>
+                    <img src="image/diagonAlley.jpg" class="tamanoFotoDerecha">
+                    <p>El Callejón Diagon es una calle oculta en Londres, accesible solo para aquellos en el mundo mágico. Es el principal centro comercial de la comunidad mágica, donde brujas y magos pueden encontrar una variedad de tiendas y servicios especializados. Para los muggles, el callejón es invisible y puede ser accesado a través del Caldero Chorreante, un pub oculto que sirve de conexión entre el mundo mágico y el muggle. Una vez dentro, el Callejón Diagon ofrece un espectáculo vibrante de actividad, con edificios antiguos y calles empedradas llenas de tiendas que venden todo tipo de productos mágicos.
+                    </p>
+                    <p>
+                        Entre los establecimientos más destacados del Callejón Diagon se encuentran Ollivanders, la famosa tienda de varitas donde Harry Potter obtiene su primera varita; Gringotts, el banco de los magos custodiado por duendes; y Flourish and Blotts, la librería mágica que abastece a los estudiantes de Hogwarts. También se pueden encontrar tiendas especializadas en ropa como Madame Malkin, artículos de Quidditch, ingredientes de pociones, animales mágicos y artículos de broma como los de Sortilegios Weasley, la tienda de los hermanos Fred y George Weasley.
+                    </p>
+                    <p> 
+                        El Callejón Diagon no solo es un centro comercial, sino también un lugar lleno de historia y cultura mágicas. Es donde los jóvenes magos experimentan su primera inmersión en el mundo mágico y se preparan para su educación en Hogwarts. A lo largo de los libros, el callejón es un lugar recurrente que refleja tanto la vibrante vida diaria de los magos como los tiempos oscuros bajo la amenaza de Voldemort, mostrando cómo la comunidad mágica persevera y se adapta a los cambios y desafíos.</p>
+                </div>
+
+                <div id="section5" class="container-fluid text-white text-justify margenes">
+                    <div class="separador">
+                        <img src="../image/separador.png" class="tamanoSeparador">
+                    </div>
+                    <h1 class="titulo">El Refujio</h1>
+                    <img src="image/ElRefugio.webp" class="tamanoFotoIzquierda">
+                    <p>El Refugio es una casa segura utilizada por Harry Potter, Hermione Granger y Ron Weasley durante su búsqueda de los Horrocruxes de Voldemort en "Harry Potter y las Reliquias de la Muerte". Situada en la costa cerca de Tinworth en Cornwall, es el hogar de Bill Weasley y Fleur Delacour después de su matrimonio.
+                    </p>
+                    <p>
+                        Después de escapar de la Mansión Malfoy, Harry, Ron, Hermione, Luna Lovegood, Dean Thomas, el Sr. Ollivander y Griphook el duende son llevados al Refugio por Dobby, el elfo doméstico, quien muere en el rescate. En el Refugio, se recuperan de sus heridas y planean su siguiente movimiento. Es un lugar de descanso y planificación crucial en su misión contra Voldemort.
+                    </p>
+                    <p>
+                        El Refugio no solo sirve como un escondite, sino que también representa un símbolo de resistencia y esperanza. Proporciona un breve respiro del peligro constante y permite a los personajes reflexionar sobre sus objetivos y prepararse para las batallas finales que los esperan. En medio de la guerra, este lugar seguro y protegido es fundamental para su lucha contra las fuerzas oscuras.</p>
+                </div>
+
+                <div id="section6" class="container-fluid text-white text-justify margenes">
+                    <div class="separador">
+                        <img src="../image/separador.png" class="tamanoSeparador">
+                    </div>
+                    <h1 class="titulo">Malfoy Manor</h1>
+                    <img src="image/MalfoyManor.webp" class="tamanoFotoDerecha">
+                    <p>La Mansión Malfoy es la ancestral residencia de la familia Malfoy, ubicada en el campo de Wiltshire, Inglaterra. Es una imponente mansión rodeada de extensos terrenos, jardines bien cuidados y protegida por hechizos poderosos. La casa refleja el estatus y la riqueza de la familia Malfoy, caracterizada por su opulencia y antigüedad.
+                    </p>
+                    <p>
+                        Durante la Segunda Guerra Mágica, la Mansión Malfoy se convierte en la sede de Lord Voldemort y sus Mortífagos. Lucius Malfoy, el patriarca de la familia, permite que la mansión sea utilizada como base de operaciones del grupo oscuro, buscando restaurar su estatus y favor con Voldemort después de su caída en desgracia. La mansión es testigo de numerosos eventos oscuros y crueles, incluyendo torturas y encarcelamientos. Uno de los eventos más significativos que tienen lugar en la Mansión Malfoy es la captura y encarcelamiento de Harry Potter, Hermione Granger y Ron Weasley junto con otros personajes como Luna Lovegood, Dean Thomas, el Sr. Ollivander y Griphook el duende. Durante su cautiverio, Hermione es torturada por Bellatrix Lestrange en una de las habitaciones de la mansión.
+                    </p>
+                    <p>
+                        La mansión también es el escenario de un audaz rescate, llevado a cabo por Dobby, el elfo doméstico liberado por Harry. Dobby ayuda a los prisioneros a escapar, aunque sacrifica su vida en el proceso. Este evento marca un punto de inflexión en la guerra contra Voldemort, ya que los héroes logran escapar y continuar su lucha. La Mansión Malfoy, por tanto, no solo simboliza el poder y la riqueza de la familia, sino también el miedo y la opresión que Voldemort y sus seguidores intentan imponer sobre el mundo mágico.</p>
+                </div>
+
+                <div id="section7" class="container-fluid text-white text-justify margenes">
+                    <div class="separador">
+                        <img src="../image/separador.png" class="tamanoSeparador">
+                    </div>
+                    <h1 class="titulo">Valle de Godric</h1>
+                    <img src="image/valleGodric.jpg" class="tamanoFotoIzquierda">
+                    <p>El Valle de Godric es un lugar emblemático dentro del mundo mágico de Harry Potter, ubicado en algún punto del sur de Inglaterra. Este valle es conocido por ser el sitio donde se fundó el pueblo de Godric's Hollow, una comunidad mágica con una larga historia y rica en tradiciones. El valle es nombrado en honor a Godric Gryffindor, uno de los cuatro fundadores de la escuela Hogwarts de Magia y Hechicería.
+                    </p>
+                    <p>
+                        Godric's Hollow es famoso por varias razones. En primer lugar, es el lugar de nacimiento de Godric Gryffindor, quien es venerado como uno de los más grandes magos de la historia. Además, la familia Potter tiene una conexión profunda con el pueblo, ya que tanto Harry Potter como sus padres, James y Lily Potter, vivieron allí. La casa donde nació y vivió Harry, conocida como la Casa de los Potter, es un destino de peregrinación para muchos seguidores de la saga.
+                    </p>
+                    <p>
+                        Sin embargo, el Valle de Godric también es conocido por un evento trágico y significativo en la historia de Harry Potter: la noche en que Voldemort asesinó a los padres de Harry, Lily y James Potter, y trató de matar al propio Harry cuando era un bebé. Este intento fallido de asesinato condujo a la derrota inicial de Voldemort y lo marcó como el "niño que vivió". El valle, por tanto, es un lugar cargado de historia y emociones, representando tanto la grandeza como la tragedia del mundo mágico.</p>
+                </div>
+
+                <div id="section8" class="container-fluid text-white text-justify margenes">
+                    <div class="separador">
+                        <img src="../image/separador.png" class="tamanoSeparador">
+                    </div>
+                    <h1 class="titulo">Ministerio de Magia</h1>
+                    <img src="image/MinisterioMagia.webp" class="tamanoFotoDerecha">
+                    <p>El Ministerio de Magia es la máxima autoridad del mundo mágico en la serie de Harry Potter. Ubicado en Londres, Inglaterra, el Ministerio es responsable de regular y gestionar todos los asuntos relacionados con la comunidad mágica británica. Este organismo desempeña un papel crucial en la aplicación de la ley mágica, la administración de la justicia y la regulación de la magia en general.
+                    </p>
+                    <p>
+                        El Ministerio de Magia está dividido en varios departamentos, cada uno encargado de diferentes aspectos de la vida mágica. Entre ellos se encuentran el Departamento de Regulación y Control de Criaturas Mágicas, el Departamento de Coordinación de Hechizos Experimentales, y el Departamento de Seguridad Mágica. Además, el Ministerio cuenta con la Oficina del Magistrado, encargada de llevar a cabo juicios y aplicar sanciones a los infractores de la ley mágica.
+                    </p>
+                    <p>
+                        El edificio del Ministerio de Magia es un lugar impresionante y misterioso, oculto a la vista de los muggles por medio de encantamientos. Se accede al Ministerio a través de la estación de metro de King's Cross, donde los magos y brujas utilizan una entrada secreta en forma de una cabina telefónica que conduce a los atrios del edificio. Dentro del Ministerio, los empleados utilizan una red de chimeneas conectadas para desplazarse rápidamente entre diferentes departamentos y lugares.
+                    </p>
+                    <p>
+                        A lo largo de la serie de Harry Potter, el Ministerio de Magia es un escenario importante para la trama, ya que representa la institución encargada de mantener el orden y la seguridad en el mundo mágico. Sin embargo, también se muestra que el Ministerio está plagado de corrupción y burocracia, lo que lo hace vulnerable a la influencia de individuos como Voldemort y sus seguidores.</p>
+                </div>
+
+                <div id="section9" class="container-fluid text-white text-justify margenes">
+                    <div class="separador">
+                        <img src="../image/separador.png" class="tamanoSeparador">
+                    </div>
+                    <h1 class="titulo">Grimmauld Place</h1>
+                    <img src="image/GrimmauldPlace.webp" class="tamanoFotoIzquierda">
+                    <p>Grimmauld Place es una dirección significativa en la serie de Harry Potter, situada en el número 12 de la calle del mismo nombre, en Londres. Esta casa, que pertenecía a la familia Black, es un lugar clave en la lucha contra Lord Voldemort y sus seguidores, los Mortífagos. Originalmente, Grimmauld Place sirvió como la residencia de la familia de Sirius Black, quien heredó la propiedad después de la muerte de su madre, Walburga Black.
+                    </p>
+                    <p>
+                        La casa es descrita como sombría y lúgubre, con una fachada deteriorada que refleja la decadencia de la familia Black. Sin embargo, detrás de su apariencia desaliñada, Grimmauld Place alberga secretos importantes y un vínculo con la Orden del Fénix, una organización dedicada a combatir a Voldemort y proteger a la comunidad mágica.
+                    </p>
+                    <p>
+                        Después de la muerte de Sirius, la casa se convierte en la sede de la Orden del Fénix en la lucha contra Voldemort durante la Segunda Guerra Mágica. Bajo el liderazgo de Albus Dumbledore, la casa se utiliza como un lugar seguro para planificar estrategias y coordinar operaciones contra las fuerzas oscuras.
+                    </p>
+                    <p>
+                        A lo largo de la serie, Grimmauld Place se convierte en un símbolo de resistencia y solidaridad, donde los miembros de la Orden del Fénix se reúnen para enfrentar los desafíos del mal que amenaza al mundo mágico. Aunque inicialmente asociada con la oscuridad y el prejuicio de la familia Black, la casa se transforma en un refugio para aquellos que luchan por la libertad y la justicia en la comunidad mágica.</p>
+                </div>
+                <div id="section10" class="container-fluid text-white text-justify margenes">
+                    <div class="separador">
+                        <img src="../image/separador.png" class="tamanoSeparador">
+                    </div>
+                    <h1 class="titulo">Azkaban</h1>
+                    <img src="image/Azkaban.webp" class="tamanoFotoDerecha">
+                    <p>Azkaban es una infame prisión mágica ubicada en una isla remota en el Mar del Norte. Construida en el siglo XV como una fortaleza para albergar a magos oscuros y peligrosos, Azkaban se convirtió en una prisión de alta seguridad exclusivamente para magos y brujas condenados por crímenes mágicos.
+                    </p>
+                    <p>
+                        La prisión está rodeada por un mar embravecido y está custodiada por los Dementores, criaturas mágicas siniestras que se alimentan de las emociones humanas, particularmente del miedo y la desesperación. La presencia constante de los Dementores convierte a Azkaban en un lugar extremadamente desolador y aterrador, lo que hace que incluso los prisioneros más fuertes y valientes sufran un grave deterioro emocional y mental durante su encarcelamiento.
+                    </p>
+                    <p>
+                        Los prisioneros de Azkaban son encerrados en celdas individuales sin ventanas y pasan sus días en completa oscuridad, aislamiento y desesperación. La mayoría de ellos son sometidos a un estado de depresión y desesperanza debido al constante acecho de los Dementores y las condiciones inhumanas de la prisión.
+                    </p>
+                    <p>
+                        A lo largo de la serie de Harry Potter, Azkaban es el lugar donde se encierra a algunos de los antagonistas más temidos, como Sirius Black y Bellatrix Lestrange. Su mera mención evoca terror y desesperación en la comunidad mágica, y su reputación como un lugar de sufrimiento extremo y desesperanza lo convierte en un símbolo de la crueldad del sistema de justicia mágico.</p>
+                </div>
+
+                <div id="section11" class="container-fluid text-white text-justify margenes">
+                    <div class="separador">
+                        <img src="../image/separador.png" class="tamanoSeparador">
+                    </div>
+                    <h1 class="titulo">Lago Negro</h1>
+                    <img src="image/Lago_Negro.webp" class="tamanoFotoIzquierda">
+                    <p>El Lago Negro es un cuerpo de agua oscuro y misterioso ubicado en los terrenos de Hogwarts, la escuela de magia y hechicería. Se encuentra al pie de las colinas que rodean el castillo y es conocido por su profunda oscuridad y sus aguas tranquilas, que reflejan las sombras de los árboles circundantes y las nubes que se deslizan sobre el cielo.
+                    </p>
+                    <p>
+                        El lago es el hogar de varias criaturas mágicas, como el Calamar Gigante, una criatura marina de enormes proporciones que vive en las profundidades del lago y es conocida por su comportamiento pacífico. También se dice que el lago alberga a los Sirenos, seres mitológicos con aspecto humano y cola de pez que cantan hermosamente para atraer a los incautos.
+                    </p>
+                    <p>
+                        Durante el año escolar, los estudiantes de Hogwarts pueden disfrutar de actividades junto al lago, como paseos en botes o relajarse en sus orillas. Sin embargo, también se considera un lugar peligroso, especialmente para aquellos que se aventuran demasiado cerca de sus profundidades desconocidas. A lo largo de la serie de Harry Potter, el Lago Negro sirve como telón de fondo para varias escenas importantes y misteriosas, agregando un aura de intriga y maravilla al mundo mágico de Hogwarts.</p>
+                </div>
+
+                <div id="section12" class="container-fluid text-white text-justify margenes">
+                    <div class="separador">
+                        <img src="../image/separador.png" class="tamanoSeparador">
+                    </div>
+                    <h1 class="titulo">Hogwarts</h1>
+                    <img src="image/hogwarts.jpg" class="tamanoFotoDerecha">
+                    <p>Hogwarts es la prestigiosa escuela de magia y hechicería ubicada en algún lugar de Escocia. Fundada hace más de mil años por los cuatro grandes magos Godric Gryffindor, Helga Hufflepuff, Rowena Ravenclaw y Salazar Slytherin, Hogwarts es el hogar de jóvenes brujas y magos de todo el Reino Unido y más allá. La escuela se encuentra en un castillo antiguo y majestuoso, rodeado de terrenos extensos que incluyen un lago, un bosque prohibido y muchos otros lugares de interés mágico.
+                    </p>
+                    <p>
+                        Hogwarts está dividida en cuatro casas: Gryffindor, Hufflepuff, Ravenclaw y Slytherin, cada una representada por uno de los fundadores y cada una con sus propias cualidades y valores. Los estudiantes son seleccionados para sus casas a través del famoso Sombrero Seleccionador, que evalúa sus características y preferencias antes de tomar una decisión. A lo largo del año escolar, los estudiantes asisten a clases de una variedad de materias mágicas, como Pociones, Defensa contra las Artes Oscuras, Transformaciones y muchas más.
+                    </p>
+                    <p>
+                        Además de las clases académicas, Hogwarts ofrece una amplia gama de actividades extracurriculares, como el Quidditch, un deporte de escoba voladora muy popular entre los estudiantes, y clubes como el Club de Duelo y la Sociedad de Protección de Criaturas Mágicas. La escuela también alberga eventos especiales, como el Baile de Navidad y el Torneo de los Tres Magos, que atraen a estudiantes y visitantes de todo el mundo mágico.
+                    </p>
+                    <p>
+                        A lo largo de la serie de Harry Potter, Hogwarts sirve como escenario principal para las aventuras de Harry Potter y sus amigos, Ron Weasley y Hermione Granger, mientras luchan contra las fuerzas del mal, descubren secretos antiguos y aprenden valiosas lecciones sobre la amistad, el coraje y el poder del amor. Es un lugar de magia, misterio y aprendizaje, donde los jóvenes magos y brujas descubren su verdadero potencial y forjan vínculos que durarán toda la vida.</p>
+                </div>
+
+                <div id="section13" class="container-fluid text-white text-justify margenes">
+                    <div class="separador">
+                        <img src="../image/separador.png" class="tamanoSeparador">
+                    </div>
+                    <h1 class="titulo">Sauce Boxeador</h1>
+                    <img src="image/SauceBoxeador.png" class="tamanoFotoIzquierda">
+                    <p>El Sauce Boxeador es un árbol mágico ubicado en el terreno de Hogwarts, específicamente en el Bosque Prohibido. Este árbol posee una peculiaridad única: puede mover sus ramas y tronco de manera violenta y rápida, como si estuviera boxeando, de ahí su nombre.
+                    </p>
+                    <p>
+                        El Sauce Boxeador es conocido por su agresividad y peligrosidad, ya que ataca todo lo que se encuentre a su alcance cuando se siente amenazado o provocado. Su comportamiento lo convierte en un obstáculo temido por los estudiantes y profesores que deben cruzar el Bosque Prohibido.
+                    </p>
+                    <p>
+                        En la trama de la serie de Harry Potter, el Sauce Boxeador juega un papel importante en la tercera entrega, "Harry Potter y el Prisionero de Azkaban". En esta historia, Harry, Ron y Hermione se ven obligados a cruzar el Bosque Prohibido para llegar a una ubicación específica en la escuela. En su camino, son atacados por el Sauce Boxeador y se ven obligados a descubrir el secreto para evitar ser golpeados por sus ramas en movimiento.
+                    </p>
+                    <p>
+                        El Sauce Boxeador es un ejemplo de la diversidad y la magia que habita en el mundo de Harry Potter, agregando un elemento de peligro y emoción a las aventuras de los personajes en Hogwarts.</p>
+                </div>
+
+                <div id="section14" class="container-fluid text-white text-justify margenes">
+                    <div class="separador">
+                        <img src="../image/separador.png" class="tamanoSeparador">
+                    </div>
+                    <h1 class="titulo">Estación de Hogsmeade</h1>
+                    <img src="image/EstacionHogsmeade.jpg" class="tamanoFotoDerecha">
+                    <p>La Estación de Hogsmeade es el punto de llegada para los estudiantes de Hogwarts que desean visitar el pueblo de Hogsmeade durante el año escolar. Situada cerca del colegio, es la única estación de tren en la que el Expreso de Hogwarts hace parada, facilitando así el acceso de los estudiantes al pueblo.
+                    </p>
+                    <p>
+                        Esta estación es de vital importancia para la comunidad mágica, ya que conecta Hogwarts con el mundo exterior y permite a los estudiantes disfrutar de las visitas autorizadas a Hogsmeade, el único pueblo completamente mágico en Gran Bretaña. Aquí, los estudiantes pueden explorar las tiendas, cafés y otros lugares de interés, como La Cabeza de Puerco o Las Tres Escobas.
+                    </p>
+                    <p>
+                        La Estación de Hogsmeade es un punto de encuentro importante durante los viajes escolares y eventos especiales, como las visitas programadas a Hogsmeade durante el año académico. Su atmósfera acogedora y su conexión con el mágico pueblo hacen de esta estación un lugar querido tanto por los estudiantes como por los habitantes de Hogwarts y sus alrededores.</p>
+                </div>
+
+                <div id="section15" class="container-fluid text-white text-justify margenes">
+                    <div class="separador">
+                        <img src="../image/separador.png" class="tamanoSeparador">
+                    </div>
+                    <h1 class="titulo">Bosque Prohibido</h1>
+                    <img src="image/BosqueProhibido.gif" class="tamanoFotoIzquierda">
+                    <p>El Bosque Prohibido es un lugar misterioso y peligroso dentro del terreno de Hogwarts. Este bosque denso y oscuro, ubicado en las afueras de la escuela, está lleno de criaturas mágicas, plantas venenosas y otros peligros que hacen que los profesores de Hogwarts lo declaren fuera de los límites para los estudiantes sin supervisión.
+                    </p>
+                    <p>
+                        A pesar de las advertencias, el Bosque Prohibido a menudo se convierte en escenario de aventuras para los estudiantes valientes y curiosos de Hogwarts. Harry Potter, Ron Weasley, Hermione Granger y otros personajes protagonizan varias incursiones en este bosque a lo largo de la serie, enfrentándose a peligros como arañas gigantes, centauros y otras criaturas fantásticas.
+                    </p>
+                    <p>
+                        El Bosque Prohibido también desempeña un papel importante en la trama de la serie, ya que varios eventos clave tienen lugar en su interior, incluyendo encuentros con Voldemort y la búsqueda de objetos mágicos importantes. A pesar de su nombre y reputación, el Bosque Prohibido atrae la curiosidad de los estudiantes y sirve como un recordatorio constante de la naturaleza misteriosa y peligrosa del mundo mágico.</p>
+                </div>
+                <div id="section16" class="container-fluid text-white text-justify margenes">
+                    <div class="separador">
+                        <img src="../image/separador.png" class="tamanoSeparador">
+                    </div>
+                    <h1 class="titulo">Cabaña de Hagrid</h1>
+                    <img src="image/CabañaHagrid.avif" class="tamanoFotoDerecha">
+                    <p>La Cabaña de Hagrid es el hogar de Rubeus Hagrid, el guardabosques de Hogwarts y querido amigo de Harry Potter y sus compañeros. Situada en las afueras del Bosque Prohibido, esta cabaña rústica es un lugar acogedor y lleno de peculiaridades, reflejando la personalidad excéntrica y el amor de Hagrid por las criaturas mágicas.
+                    </p>
+                    <p>
+                        Construida con madera y piedra, la cabaña es de aspecto tosco pero acogedor, con un techo de paja y ventanas pequeñas que dejan entrar la luz natural. En su interior, la cabaña está decorada con una mezcla de muebles rústicos y objetos curiosos, como calderos, jaulas para criaturas y una gran cantidad de libros sobre cuidado de animales mágicos.
+                    </p>
+                    <p>
+                        La cabaña de Hagrid sirve como refugio tanto para él como para las criaturas mágicas que cuida. A lo largo de la serie, Harry y sus amigos visitan la cabaña en numerosas ocasiones, ya sea para buscar ayuda o consejo de Hagrid, o para encontrarse con las fascinantes criaturas que habitan en sus alrededores.
+                    </p>
+                    <p>
+                        Además de ser el hogar de Hagrid, la cabaña también es un lugar importante en la trama de la serie, ya que varios eventos cruciales tienen lugar allí, incluyendo reuniones secretas, revelaciones importantes y momentos emotivos entre los personajes. Con su atmósfera cálida y acogedora, la cabaña de Hagrid se convierte en un símbolo de amistad, aventura y magia en el mundo de Harry Potter.</p>
+                </div>
+
+                <div id="section17" class="container-fluid text-white text-justify margenes">
+                    <div class="separador">
+                        <img src="../image/separador.png" class="tamanoSeparador">
+                    </div>
+                    <h1 class="titulo">Hogsmeade</h1>
+                    <img src="image/Hogsmeade.jpg" class="tamanoFotoIzquierda">
+                    <p>Hogsmeade es el único pueblo completamente mágico en Gran Bretaña y es un destino favorito para los estudiantes de Hogwarts en sus excursiones fuera del castillo. Ubicado cerca de la escuela, Hogsmeade es conocido por sus pintorescas calles adoquinadas y sus encantadoras tiendas, restaurantes y pubs, todos ellos atendidos por brujas y magos.
+                    </p>
+                    <p>
+                        Entre los lugares más destacados de Hogsmeade se encuentra Las Tres Escobas, un popular pub donde los magos pueden disfrutar de una cerveza de mantequilla o socializar con amigos. También está Honeydukes, la tienda de golosinas más famosa del mundo mágico, donde se pueden encontrar todo tipo de dulces y chocolates mágicos.
+                    </p>
+                    <p>
+                        La tienda de bromas Zonko's es otro lugar favorito entre los estudiantes, que pueden comprar todo tipo de artículos para sus travesuras. Además, los visitantes de Hogsmeade pueden explorar el famoso Emporio de la Lechuza, donde pueden adquirir todo lo necesario para sus mascotas mágicas.
+                    </p>
+                    <p>
+                        Hogsmeade también es el lugar de encuentro de la estación de tren de Hogwarts Express, donde los estudiantes llegan en el tren desde la estación de King's Cross en Londres al comienzo de cada año escolar. Con su encanto único y su atmósfera mágica, Hogsmeade es un lugar especial en el mundo de Harry Potter, lleno de aventuras y experiencias emocionantes para los estudiantes de Hogwarts y los lectores por igual.</p>
+                </div>
+
+                <div id="section18" class="container-fluid text-white text-justify margenes">
+                    <div class="separador">
+                        <img src="../image/separador.png" class="tamanoSeparador">
+                    </div>
+                    <h1 class="titulo">Estadio de Quidditch</h1>
+                    <img src="image/EstadioQuidditch.jpg" class="tamanoFotoDerecha">
+                    <p>El Estadio de Quidditch es el lugar donde se celebran los emocionantes partidos de Quidditch, el deporte más popular del mundo mágico. Estos estadios suelen ser grandes y están equipados con todo lo necesario para albergar a miles de espectadores y proporcionar un entorno emocionante para el juego.
+                    </p>
+                    <p>
+                        Los estadios de Quidditch suelen tener una forma circular o de cuenco, con gradas que rodean el campo de juego. Estas gradas están encantadas para garantizar la seguridad de los espectadores durante los partidos, ya que el Quidditch es un deporte rápido y peligroso que involucra a jugadores volando a gran velocidad en sus escobas.
+                    </p>
+                    <p>
+                        En el centro del estadio se encuentra el campo de juego, que consta de tres aros de diferentes alturas en cada extremo. Estos aros son el objetivo para los cazadores y el guardián que intentan anotar puntos lanzando la quaffle a través de ellos. Además, en cada extremo del campo hay también un par de postes más altos, llamados aros, que son el objetivo para los buscadores que intentan atrapar la snitch dorada, una pelota pequeña y rápida que otorga a su equipo 150 puntos y termina el juego.
+                    </p>
+                    <p>
+                        Los estadios de Quidditch suelen estar llenos de aficionados entusiastas que animan a sus equipos favoritos y disfrutan del espectáculo emocionante y lleno de acción que ofrece el deporte. Además de los partidos de Quidditch regulares, los estadios también pueden albergar eventos especiales como la Copa Mundial de Quidditch y otros torneos importantes. Sin duda, el Estadio de Quidditch es un lugar emblemático en el mundo mágico, donde se viven momentos emocionantes y se celebra la pasión por este deporte único.</p>
+                </div>
+
+                <div id="section19" class="container-fluid text-white text-justify margenes">
+                    <div class="separador">
+                        <img src="../image/separador.png" class="tamanoSeparador">
+                    </div>
+                    <h1 class="titulo">Lechucería</h1>
+                    <img src="image/lechuceria.webp" class="tamanoFotoIzquierda">
+                    <p>La lechucería es un lugar crucial en el mundo mágico donde se gestionan las comunicaciones mediante lechuzas, las fieles aves mensajeras de los magos y brujas. Estas lechucías suelen ubicarse en lugares estratégicos, como en el caso de Hogwarts, donde se encuentra en la Torre Oeste del Castillo. En la lechucería, se pueden enviar y recibir cartas, paquetes e incluso periódicos a través de las lechuzas que están entrenadas para llevar los mensajes a su destino.
+                    </p>
+                    <p>
+                        Las lechuzas son animales inteligentes y confiables, capaces de encontrar el camino a cualquier destino, incluso si el destinatario se encuentra en un lugar desconocido o escondido. Además, cada lechucía tiene su propia personalidad y habilidades únicas, lo que las convierte en compañeras valiosas para los magos y brujas en su vida cotidiana.
+                    </p>
+                    <p>
+                        En Hogwarts, la lechucería es un lugar bullicioso y animado, donde las lechuzas entran y salen constantemente, llevando mensajes entre los estudiantes, el personal y sus familias. Los estudiantes pueden enviar mensajes a sus hogares, recibir noticias de sus amigos y familiares, e incluso solicitar suministros especiales a través de las lechuzas de la escuela.
+                    </p>
+                    <p>
+                        Además de servir como un medio de comunicación, la lechucería también es un lugar de encuentro para los amantes de las aves y aquellos que desean aprender más sobre el cuidado y la crianza de las lechuzas. En resumen, la lechucería es un elemento esencial en el mundo mágico, facilitando la comunicación y conectando a las personas de una manera única y especial.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+        <footer class="text-center fondoFooter">
+            <div class="lineaSeparacion">
+                <img src="https://cdn-hogwartslegacy.warnerbrosgames.com/static/bar-left.png" class="izquierda">
+                <img src="https://cdn-hogwartslegacy.warnerbrosgames.com/static/bar-right.png" class="derecha">
+            </div>
+            <!-- Grid container -->
+            <div class="container pt-4">
+                <!-- Section: Social media -->
+                <section class="mb-4">
+                    <!-- Facebook -->
+                    <a data-mdb-ripple-init class="btn btn-link btn-floating btn-lg text-body m-1"
+                        href="https://www.facebook.com/harrypotter" role="button"><img src="../image/facebook.png"
+                            class="footer"></a>
+
+                    <!-- Instagram -->
+                    <a data-mdb-ripple-init class="btn btn-link btn-floating btn-lg text-body m-1"
+                        href="https://www.instagram.com/harrypotter/?hl=es" role="button"><img
+                            src="../image/instagram.png" class="footer"></a>
+
+                    <!-- Twitter -->
+                    <a data-mdb-ripple-init class="btn btn-link btn-floating btn-lg text-body m-1"
+                        href="https://x.com/harrypotter" role="button"><img src="../image/twitter.png"
+                            class="footer2"></a>
+
+                    <!-- YouTube -->
+                    <a data-mdb-ripple-init class="btn btn-link btn-floating btn-lg text-body m-1"
+                        href="https://www.youtube.com/@harrypotter" role="button"><img src="../image/youtube.png"
+                            class="footer"></a>
+
+                    <!-- TikTok -->
+                    <a data-mdb-ripple-init class="btn btn-link btn-floating btn-lg text-body m-1"
+                        href="https://www.tiktok.com/@harrypotter" role="button"><img src="../image/tik-tok.png"
+                            class="footer"></a>
+
+                </section>
+            </div>
+            <!-- Grid container -->
+
+            <!-- Copyright -->
+            <div class="text-center p-3 fondoFooter2">
+                Copyright © 2024
+            </div>
+        </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,133 @@
+body {
+    background-color: #003a61;
+}
+
+div.div {
+    margin-left: 20%;   
+}
+
+div.div1 {
+    width: 60vw;
+    height: 12vh;
+    background-image: url('../imagenes/fondoCabecera.avif');
+    border-left: 20%;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 40px;
+    font-weight: bold;
+    color: white;
+}
+
+div.div2 {
+    height: 75vh;
+    background-color: #3285a7;
+    width: 16vw;
+    border-left: 300px;
+    float: left;
+    color: white;
+}
+
+div.div3 {
+    height: 75vh;
+    background-color: #31addf;
+    width: 44vw;
+    float: left;
+}
+
+div.div4 {
+    width: 60vw;
+    height: 10vh;
+    background-color: #135d80;
+    float: left;
+}
+
+#menuVertical a {
+    padding: 0px 25px 0px;
+    text-decoration: none;
+    display: block;
+    color: black;
+    background: #a1a1a1;
+}
+
+#menuVertical a:hover, #menuHorizontal a:active {
+    background: #ffffff;
+}
+
+#menuVertical {
+    width: 200px;
+    border: 3px solid grey;
+}
+
+#menuVertical2 a {
+    padding: 0px 25px 0px;
+    text-decoration: none;
+    display: block;
+    color: black;
+    background: #a1a1a1;
+}
+
+#menuVertical2 a:hover, #menuVertical2 a:active {
+    background: #70a8ee;
+}
+
+#menuVertical2 {
+    width: 200px;
+    border: 3px solid grey;
+}
+
+.fuente {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.tab div {
+    display: none;
+}
+
+.tab div:target {
+    display: block;
+}
+
+.class div:target {
+    display: none;
+}
+
+h4.fondo {
+    background-color: #ffffff;
+}
+
+p {
+    text-align: justify;
+    margin: 5px;
+}
+
+p.clase1 img {
+    float: right;
+    width: 300px;
+    height: 250px;
+    padding: 2px;
+    margin: 5px;
+}
+
+#pie {
+    clear: both;
+    background-color: #135d80;
+    height: 30px;
+    color: white;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+a.formato {
+    float: left;
+    text-decoration: none;
+    color: white;
+    margin: 13px;
+}
+
+span a:hover, #menuHorizontal a:active {
+    background: #70a8ee;
+}
+
+.creador {
+    float: right;
+    margin: 13px;
+}

@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <title>Ejercicio 14</title>
+    </head>
+
+    <body>
+
+        <h1>Ejercicio 14</h1>
+
+        <script>
+
+            let sueldo = parseFloat(prompt('Introduce su sueldo:'));
+            let antiguedad = parseInt(prompt('Introduce cuantos años ha estado en la empresa:'));
+
+            if (sueldo < 500 && antiguedad >= 10) {
+                let aumento = sueldo * 0.2 + sueldo;
+                document.write('Su sueldo a aumentado un 2%, por tanto su sueldo actual es:' + aumento + '€');
+            } else if (sueldo < 500 && antiguedad < 10) {
+                let aumento = sueldo * 0.05 + sueldo;
+                document.write('Su sueldo a aumentado un 5%, por tanto su sueldo actual es:' + aumento + '€');
+            } else if (sueldo >= 500) {
+                document.write('Su sueldo actual es: ' + sueldo + '€');
+            }
+
+        </script>
+
+    </body>
+</html>

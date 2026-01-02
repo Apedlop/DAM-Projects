@@ -1,0 +1,233 @@
+
+<!DOCTYPE html>
+<html>
+
+
+<!-- Mirrored from www.tutorialesprogramacionya.com/bootstrap5ya/detalleconcepto.php?punto=27&codigo=27&inicio=20 by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 19 Dec 2023 11:10:43 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QWKWPBDEFK"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-QWKWPBDEFK');
+</script>
+
+<script async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-4669394804436935",
+    enable_page_level_ads: true
+  });
+</script>
+
+<title>form : formulario horizontal</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">    
+<meta name="keywords" content="bootstrap 5,css, html, programación, webmaster, tutorial">
+<meta name="description" content="El objetivo de este tutorial 
+    es presentar los conceptos básicos de bootstrap 5.">
+<meta name="author" content="Diego Moisset">
+
+<link href="../css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="estilos.css">
+
+<style>
+html,body {
+	background-color: #D3E9D0;
+	font-family: sans-serif,arial;
+
+}
+</style>
+
+<style>
+.uno { width: 320px; height: 100px; }
+@media(min-width: 500px) { .uno { width: 320px; height: 100px; } }
+@media(min-width: 800px) { .uno { width: 336px; height: 280px; } }
+
+.dos { width: 320px; height: 100px; }
+@media(min-width: 500px) { .dos { width: 320px; height: 100px; } }
+@media(min-width: 800px) { .dos { width: 336px; height: 280px; } }
+</style>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','../../www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-80268657-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+</head>
+
+<body>
+
+
+<div class="container">
+
+<div class="row">
+  <div class="col-md-12">
+
+<div class="titulodetalle">
+<h1>27 - form : formulario horizontal</h1></div>
+
+  </div>
+</div>  
+
+
+<div class="row">
+  <div class="col-md-12">
+
+<div class="cuerpodetalle">
+<div style="display:block;float:left;margin: 5px;"> 
+ <script async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<!-- adaptable1 -->
+<ins class="adsbygoogle uno"
+     style="display:inline-block"
+     data-ad-client="ca-pub-4669394804436935"
+     data-ad-slot="4716538363"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script> 
+</div> 
+
+
+<p>Otra variante de formulario que nos permite Bootstrap 5 son los formularios horizontales. En este estilo de formularios se dispone la descripción del dato a ingresar en el lado izquierdo y el control del formulario a derecha.</p>
+<p>Para resolver este tipo de problemas debemos utilizar el sistema de grillas de Bootstrap.</p>
+<h3>Problema</h3>
+<p>Construir un formulario de login que muestre a la izquierda "Nombre de usuario:" y a la derecha el control donde se ingresa el nombre. Hacer lo mismo para el campo de ingreso de la clave, mostrar "Ingrese clave" y del lado de la derecha el control HTML password. Mostrar finalmente un botón a la altura de los controles de entrada de datos. La interfaz debe ser similar a esta:</p>
+<img src="imagentema/foto043.jpg" border="0" alt="bootstrap 5 formulario horizontal"><br>
+<pre class="recuadro">
+&lt;!doctype html&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;title&gt;Prueba de Bootstrap 5&lt;/title&gt; 
+  &lt;meta charset="utf-8"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"&gt;
+  &lt;link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+  &lt;div class="container"&gt;
+
+    &lt;form&gt;
+      &lt;div class="mb-3 row"&gt;
+        &lt;label for="usuario" class="col-sm-3 col-form-label"&gt;Nombre de usuario:&lt;/label&gt;
+        &lt;div class="col-sm-9"&gt;
+          &lt;input type="text" class="form-control" id="usuario"&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class="mb-3 row"&gt;
+        &lt;label for="clave" class="col-sm-3 col-form-label"&gt;Ingrese clave:&lt;/label&gt;
+        &lt;div class="col-sm-9"&gt;
+          &lt;input type="password" class="form-control" id="clave"&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class="mb-3 row"&gt;
+        &lt;div class="offset-sm-3 col-sm-9"&gt;
+          &lt;button type="submit" class="btn btn-primary"&gt;Confirmar&lt;/button&gt; 
+        &lt;/div&gt;
+      &lt;/div&gt;  
+    &lt;/form&gt;
+
+  &lt;/div&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+
+
+<p>Definimos una fila "row" para cada label y control input:</p>
+<pre>
+      &lt;div class="mb-3 row"&gt;
+        &lt;label for="usuario" class="col-sm-3 col-form-label"&gt;Nombre de usuario:&lt;/label&gt;
+        &lt;div class="col-sm-9"&gt;
+          &lt;input type="text" class="form-control" id="usuario"&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+</pre>
+<p>Dendro del div disponemos un "label" y especificamos cuando espacio del sistema de grillas utilizará: "col-sm-3", además de la clase "col-form-label" (Es importante agregar la clase "col-form-label" para el correcto alineamiento vertical de la "label").<br>
+Luego en un div disponemos el espacio requerido para el control de formulario propiamente dicho: "col-sm-9".</p>
+
+<p>En forma similar implementamos la fila donde se pide la clave:</p>
+<pre>
+      &lt;div class="mb-3 row"&gt;
+        &lt;label for="clave" class="col-sm-3 col-form-label"&gt;Ingrese clave:&lt;/label&gt;
+        &lt;div class="col-sm-9"&gt;
+          &lt;input type="password" class="form-control" id="clave"&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+</pre>
+<p>El botón para que aparezca debajo de los controles input efectuamos un offset:</p>
+<pre>
+      &lt;div class="mb-3 row"&gt;
+        &lt;div class="offset-sm-3 col-sm-9"&gt;
+          &lt;button type="submit" class="btn btn-primary"&gt;Confirmar&lt;/button&gt; 
+        &lt;/div&gt;
+      &lt;/div&gt;  
+</pre>
+<p>Nuestro formulario se comporta responsive. Si el tamaño del dispositivo es grande:</p>
+<img src="imagentema/foto044.jpg" border="0" alt="bootstrap 5 formulario horizontal"><br>
+
+<p>Pero si reducimos su ancho podremos ver como sucede en el sistema de grillas de Bootstrap que las columnas de la fila colapsan:</p>
+<img src="imagentema/foto045.jpg" border="0" alt="bootstrap 5 formulario horizontal"><br><h2><a target="_blank" href="ejecutar24be.html?cod=27">Ejecutar Ejemplo</a></h2><h2><a href="index28fa.html?inicio=20">Retornar</a></h2> 
+
+<div>
+<!--publi-->
+<script async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<!-- adaptable2 -->
+<ins class="adsbygoogle dos"
+     style="display:inline-block"
+     data-ad-client="ca-pub-4669394804436935"
+     data-ad-slot="5774469161"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+<!--publi-->
+<script async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<!-- adaptable2 -->
+<ins class="adsbygoogle dos"
+     style="display:inline-block"
+     data-ad-client="ca-pub-4669394804436935"
+     data-ad-slot="5774469161"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+</div>
+
+
+
+
+</div>
+
+  </div>
+</div>  
+
+</div>
+
+<script type="text/javascript">
+function cambiar()
+{
+  var lista=document.getElementsByTagName('pre');
+  for(f=0;f<lista.length;f++)
+  {
+   lista[f].style.display='block';
+  }
+  document.getElementById('solucion').style.display='none';
+}
+
+</script>
+
+</body>
+
+
+<!-- Mirrored from www.tutorialesprogramacionya.com/bootstrap5ya/detalleconcepto.php?punto=27&codigo=27&inicio=20 by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 19 Dec 2023 11:10:44 GMT -->
+</html>

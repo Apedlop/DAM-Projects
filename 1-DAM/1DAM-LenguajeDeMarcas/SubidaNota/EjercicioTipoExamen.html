@@ -1,0 +1,63 @@
+<html>
+    <head>
+        <title>Ejercicico Tipo Examen</title>
+    </head>
+    <body>
+        <script>
+            const insertarPalabra = t => {
+                for (let i = 0; i < t.length; i++) {
+                    let palabra = prompt("Introduce una palabra");
+                    t[i] = palabra;
+                }
+            }
+
+            const mayusculas = t => {
+                for (let i = 0; i < t.length; i++) {
+                    t[i] = t[i].toUpperCase();
+                }
+            }
+
+            const sumaLongitud = (t1, t2, t3) => {
+                for (let i = 0; i < t1.length; i++) {
+                    t3[i] = t1[i].length + t2[i].length;
+                }
+            }
+
+            const listar = t => {
+            coma = ""
+            for (let i = 0; i < t.length; i++) {
+                coma += t[i];
+                i != t.length - 1 ? coma += ", " : coma += "";
+            }
+            return coma;
+        }
+
+        const guiones = l3 => {
+            guion = "";
+            for (let i = 0; i < l3.length; i++) {
+                guion += l3[i];
+                i != l3.length - 1 ? guion += "-" : guion += "";
+            }
+            return guion;
+        }
+
+            let n = parseInt(prompt("Introduce un número: "));
+            let t1 = new Array(n);
+            let t2 = new Array(n);
+            let t3 = new Array(n);
+            
+            insertarPalabra(t1);
+            mayusculas(t1);
+            insertarPalabra(t2);
+            mayusculas(t2);
+            sumaLongitud(t1, t2, t3);
+
+                document.write(`Lista 1: ${listar(t1)} <br>`);
+            
+                document.write(`Lista 2: ${listar(t2)} <br>`);
+            
+                document.write(`Lista 3: ${guiones(t3)} <br>`);
+            
+        </script>
+    </body>
+</html>

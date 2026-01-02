@@ -1,0 +1,66 @@
+<html>
+    <head>
+
+        <title>Formulario Examen</title>
+
+        <link rel="stylesheet" href="style/formulario.css">
+
+    </head>
+
+    <body>
+
+        <h1>Formulario Examen</h1>
+
+        <form action="">
+
+            <fieldset>
+
+                <legend>
+                    Información personal
+                </legend>
+
+                Tratamiento <br>
+                <select name="tratamiento">
+                    <option value="ninguno" selected="selected">--Ninguno--</option>
+                    <option value="sr">Sr.</option> 
+                    <option value="sra">Sra.</option>  
+                    <option value="srta">Srta.</option> 
+                    <option value="dr">Dr.</option> 
+                    <option value="prof">Prof.</option> 
+                </select> <br> <br>
+
+                Nombre: <input type="text" name="nombre" size="15" maxlength="40"> <br> <br>
+
+                Apellido: <input type="text" name="apellido" size="15" maxlength="40"> <br> <br>
+
+                Sexo: 
+                <input type="radio" name="radio" value="si"> Masculino
+                <input type="radio" name="radio" value="si"> Femenino
+
+                <br> <br>
+
+                Email: <input type="text" name="apellido" size="15" maxlength="100"> <br> <br>
+
+                Fecha de nacimiento: <input type="date"> <br> <br>
+
+                Dirección:<br>
+                <textarea name="comentario" cols="30" rows="4"></textarea> <br><br>
+
+                <button type="submit">
+                    <img src="imagenes/sobre.png">
+                </button>
+
+                <button type="reset">
+                    <img src="imagenes/escoba.png">
+                </button>
+
+                <button type = "button" value = " Cerrar ventana " name = "Cerrar" onclick = "window.close();">
+                    <img src = "imagenes/x.png">
+                </button>
+
+            </fieldset>
+
+        </form>
+
+    </body>
+</html>

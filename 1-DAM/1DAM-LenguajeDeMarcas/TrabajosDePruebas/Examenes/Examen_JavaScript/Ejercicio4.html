@@ -1,0 +1,38 @@
+<html>
+
+<head>
+    <title>Ejercicio 4</title>
+</head>
+
+<body>
+
+    <button onClick="mas()">+</button>
+    <button onClick="menos()">-</button>
+
+    <script>
+
+        let ancho = screen.width / 2;
+
+        const mas = ancho => {
+
+
+            for (let i = 0; i < 5; i++) {
+                open('', '', `width=${ancho}+10, height=100%`);
+                
+            }
+        }
+
+        const menos = ancho => {
+            let num = ancho - 10;
+            let ventana = 0;
+            while (ventana < 5) {
+                let ventana = open('', '', `width=${num}, height=100%, menubar=yes`);
+                ventana++;
+                ancho-10;
+            }
+            
+        }
+    </script>
+</body>
+
+</html>

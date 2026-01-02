@@ -1,0 +1,283 @@
+
+<!DOCTYPE html>
+<html>
+
+
+<!-- Mirrored from www.tutorialesprogramacionya.com/bootstrap5ya/detalleconcepto.php?punto=35&codigo=35&inicio=20 by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 19 Dec 2023 11:10:51 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QWKWPBDEFK"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-QWKWPBDEFK');
+</script>
+
+<script async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-4669394804436935",
+    enable_page_level_ads: true
+  });
+</script>
+
+<title>button : estilos</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">    
+<meta name="keywords" content="bootstrap 5,css, html, programación, webmaster, tutorial">
+<meta name="description" content="El objetivo de este tutorial 
+    es presentar los conceptos básicos de bootstrap 5.">
+<meta name="author" content="Diego Moisset">
+
+<link href="../css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="estilos.css">
+
+<style>
+html,body {
+	background-color: #D3E9D0;
+	font-family: sans-serif,arial;
+
+}
+</style>
+
+<style>
+.uno { width: 320px; height: 100px; }
+@media(min-width: 500px) { .uno { width: 320px; height: 100px; } }
+@media(min-width: 800px) { .uno { width: 336px; height: 280px; } }
+
+.dos { width: 320px; height: 100px; }
+@media(min-width: 500px) { .dos { width: 320px; height: 100px; } }
+@media(min-width: 800px) { .dos { width: 336px; height: 280px; } }
+</style>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','../../www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-80268657-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+</head>
+
+<body>
+
+
+<div class="container">
+
+<div class="row">
+  <div class="col-md-12">
+
+<div class="titulodetalle">
+<h1>35 - button : estilos</h1></div>
+
+  </div>
+</div>  
+
+
+<div class="row">
+  <div class="col-md-12">
+
+<div class="cuerpodetalle">
+<div style="display:block;float:left;margin: 5px;"> 
+ <script async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<!-- adaptable1 -->
+<ins class="adsbygoogle uno"
+     style="display:inline-block"
+     data-ad-client="ca-pub-4669394804436935"
+     data-ad-slot="4716538363"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script> 
+</div> 
+
+
+<p>Para crear botones Bootstrap 5 propone utilizar la etiqueta "button", "a" o "input" y define una serie de clases:</p>
+<pre>
+btn 
+btn-primary
+btn-secondary
+btn-success
+btn-info
+btn-warning
+btn-danger
+btn-dark
+btn-light
+btn-link
+</pre>
+<p>Siempre debemos asignar la clase btn y alguna de las otras clases con un significado propio indicado por su color.</p>
+<p>Cada una de estas clases define un estilo particular para un botón y tiene un significado que nos ayudan a definir en que caso los debemos utilizar:</p>
+<ul>
+<li>
+btn-primary : Es un botón que se destaca entre un conjunto de botones.
+</li>
+<li>
+btn-secondary : Es un botón no tan importante como btn-primary.
+</li>
+<li>
+btn-success : Se utiliza para indicar una acción exitosa (por ejemplo luego de registrarse a un servicio donde se muestra un botón para ir a la página principal del sitio)
+</li>
+<li>
+btn-info : Es un botón para información.
+</li>
+<li>
+btn-warning : Es un botón que nos informa que debemos tener cuidado con la acción que tiene asociado el botón.
+</li>
+<li>
+btn-danger : Indica que la acción que tiene asociado el botón es peligrosa.
+</li>
+<li>
+btn-dark : Muestra un botón oscuro.
+</li>
+<li>
+btn-light : Muestra un botón claro.
+</li>
+<li>
+btn-link : Convierte al botón como un hipervínculo, haciendo que disminuya su importancia.
+</li>
+</ul>
+
+<h3>Problema</h3>
+<p>Mostrar una lista de button asociando a cada uno una clase distinta propuesta por Bootstrap 5 y mostrando como leyenda su significado.</p>
+<pre class="recuadro">
+&lt;!doctype html&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;title&gt;Prueba de Bootstrap 5&lt;/title&gt; 
+  &lt;meta charset="utf-8"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"&gt;
+  &lt;link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  
+  &lt;div class="container"&gt;
+    &lt;form&gt;
+      &lt;div class="mb-3"&gt;
+        &lt;button type="submit" class="btn btn-primary"&gt;
+        btn-primary : Es un botón que se destaca entre un conjunto de botones.&lt;/button&gt;       
+      &lt;/div&gt; 
+      &lt;div class="mb-3"&gt;
+        &lt;button type="submit" class="btn btn-secondary"&gt;
+        btn-secondary : Es un botón no tan importante como btn-primary.&lt;/button&gt;       
+      &lt;/div&gt;       
+      &lt;div class="mb-3"&gt;
+        &lt;button type="submit" class="btn btn-success"&gt;
+        btn-success : Se utiliza para indicar una acción exitosa.&lt;/button&gt;       
+      &lt;/div&gt; 
+      &lt;div class="mb-3"&gt;
+        &lt;button type="submit" class="btn btn-info"&gt;
+        btn-info : Es un botón para información.&lt;/button&gt;       
+      &lt;/div&gt; 
+      &lt;div class="mb-3"&gt;
+        &lt;button type="submit" class="btn btn-warning"&gt;
+        btn-warning : Es un botón que nos informa que debemos tener 
+        cuidado con la acción que tiene asociado el botón.&lt;/button&gt;       
+      &lt;/div&gt; 
+      &lt;div class="mb-3"&gt;
+        &lt;button type="submit" class="btn btn-danger"&gt;
+        btn-danger : Indica que la acción que tiene asociado el botón 
+        es peligrosa.&lt;/button&gt;       
+      &lt;/div&gt; 
+      &lt;div class="mb-3"&gt;
+        &lt;button type="submit" class="btn btn-dark"&gt;
+        btn-dark : Muestra un botón oscuro.&lt;/button&gt;       
+      &lt;/div&gt;       
+      &lt;div class="mb-3"&gt;
+        &lt;button type="submit" class="btn btn-light"&gt;
+        btn-light : Muestra un botón claro.&lt;/button&gt;       
+      &lt;/div&gt;             
+      &lt;div class="mb-3"&gt;
+        &lt;button type="submit" class="btn btn-link"&gt;
+        btn-link : Convierte al botón como un hipervínculo, haciendo
+        que disminuya su importancia.&lt;/button&gt;       
+      &lt;/div&gt; 
+    &lt;/form&gt;
+
+  &lt;/div&gt; 
+
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+<p>El resultado de ejecutar este página es:</p>
+<img src="imagentema/foto051.jpg" border="0" alt="button tipos en bootstrap 5"><br> 
+
+<p>Utilizar este estándar ayuda que nuestros visitantes se sientan muy cómodos navegando nuestro sitio ya que seguramente ha visitado otros sitios que lo utilizan.</p>
+<p>Ya asociarán el color azul en un botón con un botón importante del sitio, el amarillo con acciones que debemos tener cuidado, el rojo con acciones peligrosas (por ejemplo borrar una cuenta) etc.</p>
+
+<p>Bootstrap 5 dispone los mismos botones y significados pero solo pintando su contorno por medio de las clases (menos el de btn-link):</p>
+
+<pre>
+btn 
+btn-outline-primary
+btn-outline-secondary
+btn-outline-success
+btn-outline-info
+btn-outline-warning
+btn-outline-danger
+btn-outline-dark
+btn-outline-light
+</pre>
+
+<p>Si modificamos la página con estas clases ahora tenemos en el navegador el siguiente resultado:</p>
+<img src="imagentema/foto052.jpg" border="0" alt="button tipos en bootstrap 5"><br> 
+<h2><a target="_blank" href="ejecutar27b0.html?cod=35">Ejecutar Ejemplo</a></h2><h2><a href="index28fa.html?inicio=20">Retornar</a></h2> 
+
+<div>
+<!--publi-->
+<script async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<!-- adaptable2 -->
+<ins class="adsbygoogle dos"
+     style="display:inline-block"
+     data-ad-client="ca-pub-4669394804436935"
+     data-ad-slot="5774469161"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+<!--publi-->
+<script async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<!-- adaptable2 -->
+<ins class="adsbygoogle dos"
+     style="display:inline-block"
+     data-ad-client="ca-pub-4669394804436935"
+     data-ad-slot="5774469161"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+</div>
+
+
+
+
+</div>
+
+  </div>
+</div>  
+
+</div>
+
+<script type="text/javascript">
+function cambiar()
+{
+  var lista=document.getElementsByTagName('pre');
+  for(f=0;f<lista.length;f++)
+  {
+   lista[f].style.display='block';
+  }
+  document.getElementById('solucion').style.display='none';
+}
+
+</script>
+
+</body>
+
+
+<!-- Mirrored from www.tutorialesprogramacionya.com/bootstrap5ya/detalleconcepto.php?punto=35&codigo=35&inicio=20 by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 19 Dec 2023 11:10:51 GMT -->
+</html>

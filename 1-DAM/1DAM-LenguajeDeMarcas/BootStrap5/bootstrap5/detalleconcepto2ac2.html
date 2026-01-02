@@ -1,0 +1,353 @@
+
+<!DOCTYPE html>
+<html>
+
+
+<!-- Mirrored from www.tutorialesprogramacionya.com/bootstrap5ya/detalleconcepto.php?punto=3&codigo=3&inicio=0 by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 19 Dec 2023 11:09:58 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QWKWPBDEFK"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-QWKWPBDEFK');
+</script>
+
+<script async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-4669394804436935",
+    enable_page_level_ads: true
+  });
+</script>
+
+<title>Sistema de grillas de Bootstrap 5</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">    
+<meta name="keywords" content="bootstrap 5,css, html, programación, webmaster, tutorial">
+<meta name="description" content="El objetivo de este tutorial 
+    es presentar los conceptos básicos de bootstrap 5.">
+<meta name="author" content="Diego Moisset">
+
+<link href="../css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="estilos.css">
+
+<style>
+html,body {
+	background-color: #D3E9D0;
+	font-family: sans-serif,arial;
+
+}
+</style>
+
+<style>
+.uno { width: 320px; height: 100px; }
+@media(min-width: 500px) { .uno { width: 320px; height: 100px; } }
+@media(min-width: 800px) { .uno { width: 336px; height: 280px; } }
+
+.dos { width: 320px; height: 100px; }
+@media(min-width: 500px) { .dos { width: 320px; height: 100px; } }
+@media(min-width: 800px) { .dos { width: 336px; height: 280px; } }
+</style>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','../../www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-80268657-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+</head>
+
+<body>
+
+
+<div class="container">
+
+<div class="row">
+  <div class="col-md-12">
+
+<div class="titulodetalle">
+<h1>3 - Sistema de grillas de Bootstrap 5</h1></div>
+
+  </div>
+</div>  
+
+
+<div class="row">
+  <div class="col-md-12">
+
+<div class="cuerpodetalle">
+<div style="display:block;float:left;margin: 5px;"> 
+ <script async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<!-- adaptable1 -->
+<ins class="adsbygoogle uno"
+     style="display:inline-block"
+     data-ad-client="ca-pub-4669394804436935"
+     data-ad-slot="4716538363"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script> 
+</div> 
+
+
+<p>Lo más importante de entender en un principio es el sistema de grillas que plantea la librería Bootstrap.</p>
+<p>Debemos pensar para armar nuestro esquema de la página que tenemos la posibilidad de definir filas y en cada fila definir de 1 hasta 12 columnas. Cada columna con un ancho relativo a ese número 12.</p>
+<p>Luego Bootstrap se encarga de colapsar las columnas cuando se accede al sitio desde un dispositivo con una capacidad limitada en cuanto al ancho en píxeles (esto permite una experiencia más placentera al visitante que accede a nuestra página desde un celular con capacidades limitadas)</p>
+<p>Para ver y entender como creamos las columnas en cada fila y como colapsan según el ancho del dispositivo podemos analizar el siguiente código:</p>
+
+<pre class="recuadro">
+&lt;!doctype html&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;title&gt;Prueba de Bootstrap 5&lt;/title&gt; 
+  &lt;meta charset="utf-8"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"&gt;
+  &lt;link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;div class="container"&gt;
+    &lt;div class="row"&gt;
+      &lt;div class="col-xxl-4"  style="background-color:#aaa"&gt;
+        &lt;h1&gt;Columna 1&lt;/h1&gt; 
+        &lt;p&gt;Esto es una prueba de bootstrap.&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div class="col-xxl-4"  style="background-color:#bbb"&gt;
+        &lt;h1&gt;Columna 2&lt;/h1&gt; 
+        &lt;p&gt;Esto es una prueba de bootstrap.&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div class="col-xxl-4"  style="background-color:#ccc"&gt;
+        &lt;h1&gt;Columna 3&lt;/h1&gt; 
+        &lt;p&gt;Esto es una prueba de bootstrap.&lt;/p&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;hr&gt;
+
+    &lt;div class="row"&gt;
+      &lt;div class="col-xl-4"  style="background-color:#aaa"&gt;
+        &lt;h1&gt;Columna 1&lt;/h1&gt; 
+        &lt;p&gt;Esto es una prueba de bootstrap.&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div class="col-xl-4"  style="background-color:#bbb"&gt;
+        &lt;h1&gt;Columna 2&lt;/h1&gt; 
+        &lt;p&gt;Esto es una prueba de bootstrap.&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div class="col-xl-4"  style="background-color:#ccc"&gt;
+        &lt;h1&gt;Columna 3&lt;/h1&gt; 
+        &lt;p&gt;Esto es una prueba de bootstrap.&lt;/p&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;hr&gt;
+  
+    &lt;div class="row"&gt;
+      &lt;div class="col-lg-4"  style="background-color:#aaa"&gt;
+        &lt;h1&gt;Columna 1&lt;/h1&gt; 
+        &lt;p&gt;Esto es una prueba de bootstrap.&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div class="col-lg-4"  style="background-color:#bbb"&gt;
+        &lt;h1&gt;Columna 2&lt;/h1&gt; 
+        &lt;p&gt;Esto es una prueba de bootstrap.&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div class="col-lg-4"  style="background-color:#ccc"&gt;
+        &lt;h1&gt;Columna 3&lt;/h1&gt; 
+        &lt;p&gt;Esto es una prueba de bootstrap.&lt;/p&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;hr&gt;
+
+    &lt;div class="row"&gt;
+      &lt;div class="col-md-4"  style="background-color:#aaa"&gt;
+        &lt;h1&gt;Columna 1&lt;/h1&gt; 
+        &lt;p&gt;Esto es una prueba de bootstrap.&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div class="col-md-4"  style="background-color:#bbb"&gt;
+        &lt;h1&gt;Columna 2&lt;/h1&gt; 
+        &lt;p&gt;Esto es una prueba de bootstrap.&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div class="col-md-4"  style="background-color:#ccc"&gt;
+        &lt;h1&gt;Columna 3&lt;/h1&gt; 
+        &lt;p&gt;Esto es una prueba de bootstrap.&lt;/p&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;hr&gt;
+
+    &lt;div class="row"&gt;
+      &lt;div class="col-sm-4"  style="background-color:#aaa"&gt;
+        &lt;h1&gt;Columna 1&lt;/h1&gt; 
+        &lt;p&gt;Esto es una prueba de bootstrap.&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div class="col-sm-4"  style="background-color:#bbb"&gt;
+        &lt;h1&gt;Columna 2&lt;/h1&gt; 
+        &lt;p&gt;Esto es una prueba de bootstrap.&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div class="col-sm-4"  style="background-color:#ccc"&gt;
+        &lt;h1&gt;Columna 3&lt;/h1&gt; 
+        &lt;p&gt;Esto es una prueba de bootstrap.&lt;/p&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;hr&gt;
+
+    &lt;div class="row"&gt;
+      &lt;div class="col-4"  style="background-color:#aaa"&gt;
+        &lt;h1&gt;Columna 1&lt;/h1&gt; 
+        &lt;p&gt;Esto es una prueba de bootstrap.&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div class="col-4"  style="background-color:#bbb"&gt;
+        &lt;h1&gt;Columna 2&lt;/h1&gt; 
+        &lt;p&gt;Esto es una prueba de bootstrap.&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div class="col-4"  style="background-color:#ccc"&gt;
+        &lt;h1&gt;Columna 3&lt;/h1&gt; 
+        &lt;p&gt;Esto es una prueba de bootstrap.&lt;/p&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+
+  &lt;/div&gt; 
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+
+<p>Si abrimos esta página en un monitor con un ancho superior a 1400 px podemos ver que se muestran tres columnas por fila:</p>
+
+<img src="imagentema/foto001.jpg" border="0" alt="grid bootstrap 5"><br>
+
+<p>Debemos utilizar la clase "row" para indicar el comienzo de una fila. Dentro de la fila dispondremos tantos div como columnas tenga dicha fila. Para indicar cada columna debemos utilizar la siguiente sintaxis para cada columna:</p>
+<pre>
+  col-xxl-*
+</pre>
+<p>Donde aparece el asterisco lo remplazamos por un valor entre 1 y 12 (en nuestro ejemplo hemos dispuesto un 4, esto quiere decir que quedan 8 unidades de columna para repartir entre las otras columnas)</p>
+<p>En nuestro ejemplo cada una de las columnas tiene un valor 4 (siempre la suma de dichos valores de una fila debe sumar 12 o quedarán columnas vacías en dicho caso)<br>
+Como asignamos cuatro a cada columna las tres columnas tienen el mismo ancho:</p>
+<pre>
+    &lt;div class="row"&gt;
+      &lt;div class="col-xxl-4"  style="background-color:#aaa"&gt;
+        &lt;h1&gt;Columna 1&lt;/h1&gt; 
+        &lt;p&gt;Esto es una prueba de bootstrap.&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div class="col-xxl-4"  style="background-color:#bbb"&gt;
+        &lt;h1&gt;Columna 2&lt;/h1&gt; 
+        &lt;p&gt;Esto es una prueba de bootstrap.&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div class="col-xxl-4"  style="background-color:#ccc"&gt;
+        &lt;h1&gt;Columna 3&lt;/h1&gt; 
+        &lt;p&gt;Esto es una prueba de bootstrap.&lt;/p&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+</pre>
+<p>Probemos ahora de empezar a disminuir el ancho del navegador mediante el mouse achicamos la ventana y veremos que cuando el ancho del navegador es menor a 1400 px colapsan las columnas de la primer fila y se muestran una debajo de otra (esto sucede en cualquier dispositivo cuyo ancho en píxeles es menor a 1400):</p>
+
+<img src="imagentema/foto002.jpg" border="0" alt="grid bootstrap 5"><br>
+
+<p>Pero ahora nos preguntamos porque la segunda fila que hemos definido no colapsa cuando el ancho del navegador baja de 1400px, esto es debido que hemos definido cada columna con la siguiente sintaxis:</p>
+<pre>
+    &lt;div class="row"&gt;
+      &lt;div class="col-xl-4"  style="background-color:#aaa"&gt;
+        &lt;h1&gt;Columna 1&lt;/h1&gt; 
+        &lt;p&gt;Esto es una prueba de bootstrap.&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div class="col-xl-4"  style="background-color:#bbb"&gt;
+        &lt;h1&gt;Columna 2&lt;/h1&gt; 
+        &lt;p&gt;Esto es una prueba de bootstrap.&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div class="col-xl-4"  style="background-color:#ccc"&gt;
+        &lt;h1&gt;Columna 3&lt;/h1&gt; 
+        &lt;p&gt;Esto es una prueba de bootstrap.&lt;/p&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+</pre>
+
+<pre>
+  col-xl-4
+</pre>
+<p>Cuando utilizamos las clases "col-xl-*" luego la fila colapsará cuando el ancho del navegador se reduzca a menos de 1200px, podemos probarlo fácilmente reduciendo más el ancho del navegador y ver que ahora colapsan tanto la primera fila como la segunda fila:</p>
+
+<img src="imagentema/foto003.jpg" border="0" alt="grid bootstrap 5"><br>
+
+<p>Lo mismo sucederá cuando utilicemos "col-lg-*" y reduzcamos los 992px:</p>
+<img src="imagentema/foto004.jpg" border="0" alt="grid bootstrap 5"><br>
+
+<p>La cuarta fila utilizamos "col-md-*" y colapsa al llegar a un valor menor de 768px.</p>
+<p>La quinta fila utilizamos "col-sm-*" y colapsa al llegar a un valor menor de 576px.</p>
+
+<p>Por último hay que decir que cuando utilizamos las clases "col-*" nunca colapsarán las columnas.</p>
+<img src="imagentema/foto005.jpg" border="0" alt="grid bootstrap 5"><br>
+
+
+<p>Es bueno analizar de que palabras vienen los nombres de reglas de estilo que provee Bootstrap:</p>
+<pre>
+  col-*
+  col-sm-*               (sm)all
+  col-md-*               (m)e(d)ium
+  col-lg-*               (l)ar(g)e
+  col-xl-*               (e)xtra (l)arge  
+  col-xxl-*              (e)xtra (e)xtra (l)arge  
+</pre>
+
+<p>Ahora depende del tipo de página que uno tiene que implementar el definir en que momento queremos que nuestra estructura de página colapse sus columnas. Si no queremos que colapse luego empleamos col-* para definir las distintas columnas.</p>
+<h2><a target="_blank" href="ejecutar930c.html?cod=3">Ejecutar Ejemplo</a></h2><h2><a href="index2904.html?inicio=0">Retornar</a></h2> 
+
+<div>
+<!--publi-->
+<script async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<!-- adaptable2 -->
+<ins class="adsbygoogle dos"
+     style="display:inline-block"
+     data-ad-client="ca-pub-4669394804436935"
+     data-ad-slot="5774469161"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+<!--publi-->
+<script async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<!-- adaptable2 -->
+<ins class="adsbygoogle dos"
+     style="display:inline-block"
+     data-ad-client="ca-pub-4669394804436935"
+     data-ad-slot="5774469161"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+</div>
+
+
+
+
+</div>
+
+  </div>
+</div>  
+
+</div>
+
+<script type="text/javascript">
+function cambiar()
+{
+  var lista=document.getElementsByTagName('pre');
+  for(f=0;f<lista.length;f++)
+  {
+   lista[f].style.display='block';
+  }
+  document.getElementById('solucion').style.display='none';
+}
+
+</script>
+
+</body>
+
+
+<!-- Mirrored from www.tutorialesprogramacionya.com/bootstrap5ya/detalleconcepto.php?punto=3&codigo=3&inicio=0 by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 19 Dec 2023 11:10:00 GMT -->
+</html>

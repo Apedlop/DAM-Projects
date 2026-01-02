@@ -1,0 +1,277 @@
+<html>
+
+
+<!-- Mirrored from www.tutorialesprogramacionya.com/javascriptya/temarios/descripcion.php?inicio=80&cod=88 by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 18 Mar 2024 10:33:21 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QWKWPBDEFK"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-QWKWPBDEFK');
+</script>
+
+<script async src="../../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-4669394804436935",
+    enable_page_level_ads: true
+  });
+</script>
+<title>Tutorial de JavaScript : Conceptos</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="../css/estilos.css" rel="stylesheet" type="text/css">
+  <meta charset="UTF-8">
+
+<style>
+html,body {
+	background-color: #D3E9D0;
+	font-family: Trebuchet MS, Verdana, Arial, sans-serif;
+	font-size: 10pt;
+	text-align:center;
+}
+
+h1 {
+	font-size: 14pt;
+	margin: 0%;
+}
+
+div#contentdetalle{clear:left;
+                   max-width:900px;
+				   border-top:0px solid #999;
+				   padding-top:15px;
+				   background-color: #aed7a8;
+				   text-align:left;
+				   font-size:1.3em;
+				   font-weight:normal;
+				   font-family:arial;
+				   padding:20px}
+				   
+.recuadro {
+  background-color:#ffffcc;
+  text-align:left;
+  font-family:courier;
+  font-size:1em;
+  border-width:0;
+  padding:5px;
+
+  border: 1px dotted #ffaa00;
+  margin-left:5px;  
+}		
+
+.tablajs {
+    border-collapse: collapse;
+    background-color: #fff;
+    border: 1px solid #dee2e6;    
+    padding: 0.3rem;    
+}
+
+.tablajs th,
+.tablajs td {
+  padding: 0.75rem;
+  vertical-align: top;
+  border-top: 1px solid #dee2e6;
+}
+
+		   
+</style>
+
+<style>
+.uno { width: 320px; height: 100px; }
+@media(min-width: 500px) { .uno { width: 320px; height: 100px; } }
+@media(min-width: 800px) { .uno { width: 336px; height: 280px; } }
+
+.dos { width: 320px; height: 100px; }
+@media(min-width: 500px) { .dos { width: 320px; height: 100px; } }
+@media(min-width: 800px) { .dos { width: 336px; height: 280px; } }
+</style>
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','../../../www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-80268657-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</head>
+
+<body>
+
+<div class="upperleft">
+  <div class="upperright">
+    <div class="lowerleft">
+      <div class="lowerright">
+<table width="98%">
+<tr>
+<td>
+<span style="float:right"><a target="_blank" style="margin-right:0.1em;" href="https://www.tutorialesprogramacionya.com/">Listado completo de tutoriales</a></span>
+<h1>Expresiones regulares: modificadores i (insensitive) g (global) m (multiline)</h1></td>
+<td align="right">
+
+
+</td>
+</tr>
+</table>
+
+      </div>
+    </div>
+  </div>
+</div>
+<br>
+
+
+<div class="upperleft">
+  <div class="upperright">
+    <div class="lowerleft">
+      <div class="lowerright">
+
+<div id="contentdetalle">
+
+<div style="display:block;float:left;margin: 5px;"> 
+ <script async src="../../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<!-- adaptable1 -->
+<ins class="adsbygoogle uno"
+     style="display:inline-block"
+     data-ad-client="ca-pub-4669394804436935"
+     data-ad-slot="4716538363"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script> 
+</div> 
+
+<p>El objeto RegExp se le puede aplicar tres modificadores que actúan sobre el patrón completo.<br>
+<pre>
+i: especifica que la búsqueda se realiza sin 
+   diferenciar entre mayúsculas y minúsculas.
+g: indica que los caracteres a buscar pueden 
+   ser encontrados varias veces en la cadena 
+   de caracteres.
+m: el modificador m realiza coincidencia de
+   patrones en el modo multilínea. En este modo, 
+   si la cadena a buscar contiene varias líneas, 
+   el metacaracter ^ y $ deben coincidir con el
+   inicio y final de una línea, además de que 
+   coincida con el comienzo y el final de una cadena.
+</pre>
+<p>Estos modificadores pueden aplicarse en forma independiente o conjunta a una expresión regular.</p>
+<p>Veamos un ejemplo del modificador i sobre una expresión regular:</p>
+<pre class="recuadro">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+
+&lt;head&gt;
+    &lt;title&gt;Ejemplo de JavaScript&lt;/title&gt;
+    &lt;meta charset="UTF-8"&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+
+    &lt;script&gt;
+        let palabra = 'Administracion';
+        let patron = /adm/i;
+        if (patron.test(palabra))
+            document.write('La palabra ' + palabra + ' contiene la cadena adm sin tener en cuenta mayúsculas/minúsculas');
+    &lt;/script&gt;
+
+&lt;/body&gt;
+
+&lt;/html&gt;
+</pre>
+<p>Los modificadores se ubican luego de la segundo barra donde declaramos la expresión regular:</p>
+<pre>
+        let patron = /adm/i;
+</pre>
+
+<p>Ahora veamos un problema donde activamos dos modificadores:</p>
+<pre class="recuadro">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+
+&lt;head&gt;
+    &lt;title&gt;Ejemplo de JavaScript&lt;/title&gt;
+    &lt;meta charset="UTF-8"&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+
+    &lt;script&gt;
+        let oracion = 'El auto tiene el mejor motor que elegimos';
+        let patron = /el/gi;
+        let vec = patron.exec(oracion);
+        document.write(vec.index); //0
+        document.write('&lt;br&gt;');
+        vec = patron.exec(oracion);
+        document.write(vec.index); //14
+        document.write('&lt;br&gt;');
+        vec = patron.exec(oracion);
+        document.write(vec.index); //33
+        document.write('&lt;br&gt;');
+        vec = patron.exec(oracion);
+        document.write(vec); //null
+    &lt;/script&gt;
+
+&lt;/body&gt;
+
+&lt;/html&gt;
+</pre>
+<p>Hemos definido el patron los modificadores g (global) e i (insensitive):</p>
+<pre>
+        let patron = /el/gi;
+</pre>
+<p>Estamos buscando el patrón 'el' dentro de la oración 'El auto tiene el mejor motor que elegimos'. Como vemos la cadena 'el' se repite tres veces en la oración sin tener en cuenta mayúsculas y minúsculas:</p>
+<pre>
+<strong>El</strong> auto tiene <strong>el</strong> mejor motor que <strong>el</strong>egimos
+</pre>
+<p>Utilizamos el método exec ya que el método test solo tiene en cuenta la primera ocurrencia.</p>
+<p>Para que tenga sentido la llamada de sucesivas veces del método exec debemos activar el modificador g (global)</p>
+<p>Si no activamos el modificador global cada vez que llamamos al método exec la búsqueda comienza desde el principio.</p>
+
+</p>
+</div>
+
+<div>
+<!--publi-->
+<script async src="../../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<!-- adaptable2 -->
+<ins class="adsbygoogle dos"
+     style="display:inline-block"
+     data-ad-client="ca-pub-4669394804436935"
+     data-ad-slot="5774469161"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+<!--publi-->
+<script async src="../../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<!-- adaptable2 -->
+<ins class="adsbygoogle dos"
+     style="display:inline-block"
+     data-ad-client="ca-pub-4669394804436935"
+     data-ad-slot="5774469161"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+</div>
+
+
+   <h2><a href="../index20ff.html?inicio=80">Retornar</a></h2>   
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+</body>
+
+
+<!-- Mirrored from www.tutorialesprogramacionya.com/javascriptya/temarios/descripcion.php?inicio=80&cod=88 by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 18 Mar 2024 10:33:21 GMT -->
+</html>

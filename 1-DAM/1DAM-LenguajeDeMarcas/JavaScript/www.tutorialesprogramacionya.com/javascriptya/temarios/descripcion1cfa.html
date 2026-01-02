@@ -1,0 +1,287 @@
+<html>
+
+
+<!-- Mirrored from www.tutorialesprogramacionya.com/javascriptya/temarios/descripcion.php?inicio=60&cod=71 by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 18 Mar 2024 10:33:18 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QWKWPBDEFK"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-QWKWPBDEFK');
+</script>
+
+<script async src="../../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-4669394804436935",
+    enable_page_level_ads: true
+  });
+</script>
+<title>Tutorial de JavaScript : Conceptos</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="../css/estilos.css" rel="stylesheet" type="text/css">
+  <meta charset="UTF-8">
+
+<style>
+html,body {
+	background-color: #D3E9D0;
+	font-family: Trebuchet MS, Verdana, Arial, sans-serif;
+	font-size: 10pt;
+	text-align:center;
+}
+
+h1 {
+	font-size: 14pt;
+	margin: 0%;
+}
+
+div#contentdetalle{clear:left;
+                   max-width:900px;
+				   border-top:0px solid #999;
+				   padding-top:15px;
+				   background-color: #aed7a8;
+				   text-align:left;
+				   font-size:1.3em;
+				   font-weight:normal;
+				   font-family:arial;
+				   padding:20px}
+				   
+.recuadro {
+  background-color:#ffffcc;
+  text-align:left;
+  font-family:courier;
+  font-size:1em;
+  border-width:0;
+  padding:5px;
+
+  border: 1px dotted #ffaa00;
+  margin-left:5px;  
+}		
+
+.tablajs {
+    border-collapse: collapse;
+    background-color: #fff;
+    border: 1px solid #dee2e6;    
+    padding: 0.3rem;    
+}
+
+.tablajs th,
+.tablajs td {
+  padding: 0.75rem;
+  vertical-align: top;
+  border-top: 1px solid #dee2e6;
+}
+
+		   
+</style>
+
+<style>
+.uno { width: 320px; height: 100px; }
+@media(min-width: 500px) { .uno { width: 320px; height: 100px; } }
+@media(min-width: 800px) { .uno { width: 336px; height: 280px; } }
+
+.dos { width: 320px; height: 100px; }
+@media(min-width: 500px) { .dos { width: 320px; height: 100px; } }
+@media(min-width: 800px) { .dos { width: 336px; height: 280px; } }
+</style>
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','../../../www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-80268657-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</head>
+
+<body>
+
+<div class="upperleft">
+  <div class="upperright">
+    <div class="lowerleft">
+      <div class="lowerright">
+<table width="98%">
+<tr>
+<td>
+<span style="float:right"><a target="_blank" style="margin-right:0.1em;" href="https://www.tutorialesprogramacionya.com/">Listado completo de tutoriales</a></span>
+<h1>Parámetro del método asociado al addEventListener.</h1></td>
+<td align="right">
+
+
+</td>
+</tr>
+</table>
+
+      </div>
+    </div>
+  </div>
+</div>
+<br>
+
+
+<div class="upperleft">
+  <div class="upperright">
+    <div class="lowerleft">
+      <div class="lowerright">
+
+<div id="contentdetalle">
+
+<div style="display:block;float:left;margin: 5px;"> 
+ <script async src="../../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<!-- adaptable1 -->
+<ins class="adsbygoogle uno"
+     style="display:inline-block"
+     data-ad-client="ca-pub-4669394804436935"
+     data-ad-slot="4716538363"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script> 
+</div> 
+
+<p>Hasta ahora siempre hemos asociado una función distinta para procesar los eventos de distintos elementos HTML. Pero veremos que está permitido asociar una único función a varios eventos de distintos objetos.</p>
+<p>Debemos definir un parámetro en la función a implementar que llega la referencia del objeto que emitió el evento.</p>
+<p>Implementaremos un panel con un conjunto de botones que nos permitan ingresar un valor numérico presionando botones.<br>
+Asociaremos el click de cada botón con una única función.</p>
+<br>
+<pre class="recuadro">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+
+&lt;head&gt;
+    &lt;title&gt;Ejemplo de JavaScript&lt;/title&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;style&gt;
+        .boton {
+            width: 50px;
+            height: 50px;
+        }
+        
+        #resultado {
+            font-size: 40px;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+
+    &lt;input type="button" id="boton0" name="boton0" value="0" class="boton"&gt;
+    &lt;input type="button" id="boton1" name="boton1" value="1" class="boton"&gt;
+    &lt;input type="button" id="boton2" name="boton2" value="2" class="boton"&gt;
+    &lt;input type="button" id="boton3" name="boton3" value="3" class="boton"&gt;
+    &lt;input type="button" id="boton4" name="boton4" value="4" class="boton"&gt;
+    &lt;input type="button" id="boton5" name="boton5" value="5" class="boton"&gt;
+    &lt;input type="button" id="boton6" name="boton6" value="6" class="boton"&gt;
+    &lt;input type="button" id="boton7" name="boton7" value="7" class="boton"&gt;
+    &lt;input type="button" id="boton8" name="boton8" value="8" class="boton"&gt;
+    &lt;input type="button" id="boton9" name="boton9" value="9" class="boton"&gt;
+    &lt;br&gt;
+    &lt;div id="resultado"&gt;&lt;/div&gt;
+
+    &lt;script&gt;
+        for (let x = 0; x &lt;= 9; x++) {
+            document.getElementById('boton' + x).addEventListener('click', presion);
+        }
+
+        function presion(evt) {
+            document.getElementById('resultado').innerHTML =
+                document.getElementById('resultado').innerHTML + evt.target.value;
+        }
+    &lt;/script&gt;
+
+&lt;/body&gt;
+
+&lt;/html&gt;
+</pre>
+
+<p>En el body definimos 10 botones y un div donde mostraremos todos los números ingresados.</p>
+<pre>
+&lt;input type="button" id="boton0" name="boton0" value="0" class="boton"&gt;
+&lt;input type="button" id="boton1" name="boton1" value="1" class="boton"&gt;
+&lt;input type="button" id="boton2" name="boton2" value="2" class="boton"&gt;
+&lt;input type="button" id="boton3" name="boton3" value="3" class="boton"&gt;
+&lt;input type="button" id="boton4" name="boton4" value="4" class="boton"&gt;
+&lt;input type="button" id="boton5" name="boton5" value="5" class="boton"&gt;
+&lt;input type="button" id="boton6" name="boton6" value="6" class="boton"&gt;
+&lt;input type="button" id="boton7" name="boton7" value="7" class="boton"&gt;
+&lt;input type="button" id="boton8" name="boton8" value="8" class="boton"&gt;
+&lt;input type="button" id="boton9" name="boton9" value="9" class="boton"&gt;
+&lt;br&gt;
+&lt;div id="resultado"&gt;&lt;/div&gt;
+</pre>
+
+<p>Asociamos los diez botones con la función presion y para reducir el código disponemos un for que se repita 10 veces y llamamos en la misma al método addEventListener (debemos ir obteniendo el id del botón concatenando 'boton' y el contador del for):</p>
+<pre>
+        for (let x = 0; x &lt;= 9; x++) {
+            document.getElementById('boton' + x).addEventListener('click', presion);
+        }
+</pre>
+
+<p>Lo nuevo aparece en la función presion:</p>
+<pre>
+        function presion(evt) {
+            document.getElementById('resultado').innerHTML =
+                document.getElementById('resultado').innerHTML + evt.target.value;
+        }
+</pre>
+<p>La función presion tiene un parámetro llamado evt (podemos darle cualquier nombre) y el mismo es un objeto que tiene las siguientes propiedades:</p>
+<pre>
+target: Referencia del objeto que generó el evento (en nuestro ejemplo alguno de los 10 botones)
+type: El nombre del evento (en nuestro caso click)
+button: El botón del mouse presionado (0 = izquierdo, 1 = medio, 2 = derecho)
+keyCode: El caracter del teclado presionado (en caso que corresponda)
+shiftKey: true o false en caso de estar presionada esta tecla.
+</pre>
+<p>Como en este problema debemos ir concatenando el número presionado procedemos a obtener la referencia del div y asignarle el valor actual más la propiedad value del botón presionado:</p>
+<pre>
+            document.getElementById('resultado').innerHTML =
+                document.getElementById('resultado').innerHTML + evt.target.value;
+</pre></p>
+</div>
+
+<div>
+<!--publi-->
+<script async src="../../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<!-- adaptable2 -->
+<ins class="adsbygoogle dos"
+     style="display:inline-block"
+     data-ad-client="ca-pub-4669394804436935"
+     data-ad-slot="5774469161"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+<!--publi-->
+<script async src="../../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<!-- adaptable2 -->
+<ins class="adsbygoogle dos"
+     style="display:inline-block"
+     data-ad-client="ca-pub-4669394804436935"
+     data-ad-slot="5774469161"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+</div>
+
+
+   <h2><a href="../indexd6cc.html?inicio=60">Retornar</a></h2>   
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+</body>
+
+
+<!-- Mirrored from www.tutorialesprogramacionya.com/javascriptya/temarios/descripcion.php?inicio=60&cod=71 by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 18 Mar 2024 10:33:18 GMT -->
+</html>

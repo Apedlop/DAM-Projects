@@ -1,0 +1,20 @@
+<html>
+    <head>
+        <title>Imprimir un arreglo</title>
+    </head>
+    <body>
+        <h1>Ejercicio 4 // Imprimir un Arreglo</h1>
+        <script>
+            const imprimirArreglo = (...arreglo) => {
+                let resultado = '';
+                for (let i = 0; i < arreglo.length; i++) {
+                    resultado += `${arreglo[i]} <br>`;
+                }
+                return resultado;
+            }
+            
+            const resultado = imprimirArreglo(1, "Hola", 12, "Buenas");
+            document.write(resultado);
+        </script>
+    </body>
+</html>

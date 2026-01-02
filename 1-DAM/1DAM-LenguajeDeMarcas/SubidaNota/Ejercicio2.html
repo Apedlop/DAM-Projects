@@ -1,0 +1,15 @@
+<html>
+    <head>
+        <title>Calcular impuestos</title>
+    </head>
+    <body>
+        <h1>Ejercicio 2 // Calcular Impuestos</h1>
+        <script>
+            const calcularImpuestos = (edad, ingresos) => edad >= 18 && ingresos >= 1000 ? ingresos * 0.4 : 0
+                
+            let edad = parseInt(prompt("Introduce una edad: "));
+            let ingresos = parseFloat(prompt("Introduce una cantidad de ingresos: "));
+            document.write(`Ingresos: ${calcularImpuestos(edad, ingresos)}`)
+        </script>
+    </body>
+</html>

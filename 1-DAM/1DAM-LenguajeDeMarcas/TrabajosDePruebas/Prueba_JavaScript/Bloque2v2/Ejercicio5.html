@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Ejercicio 5</title>
+</head>
+
+<body>
+
+    <h1>Ejercicio 5</h1>
+
+    <script>
+
+        const realizarCenso = () => {
+            let numDocu;
+            let totalPersonas = 0;
+            let varones = 0;
+            let mujeres = 0;
+            let varonesEdad = 0;
+
+            do {
+
+                numDocu = parseInt(prompt('Introduce el número de documento: '));
+
+                if (numDocu !== 0) {
+                    let edad = parseInt(prompt('Introduce su edad: '));
+                    let sexo = prompt('Introduce su género (femenino/masculino): ').toLowerCase();
+
+                    while (sexo !== 'femenino' && sexo !== 'masculino') {
+                        sexo = prompt('Por favor, introduce un valor válido ("femenino" o "masculino"): ').toLowerCase();
+                    }
+
+                    totalPersonas++;
+
+                    if (sexo === 'masculino') {
+                        varones++;
+                        if (edad >= 16 && edad <= 65) {
+                            varonesEdad++;
+                        }
+                    } else if (sexo === 'femenino') {
+                        mujeres++;
+                    }
+                    
+                }
+
+            } while (numDocu !== 0);
+
+            document.write(`Cantidad total de personas censadas: ${totalPersonas} <br>`);
+            document.write(`Cantidad de varones: ${varones} <br>`);
+            document.write(`Cantidad de mujeres: ${mujeres} <br>`);
+            document.write(`Cantidad de varones cuya edad varía entre 16 y 65 años: ${varonesEdad}`);
+            
+        }
+
+        realizarCenso();
+
+    </script>
+
+</body>
+
+</html>

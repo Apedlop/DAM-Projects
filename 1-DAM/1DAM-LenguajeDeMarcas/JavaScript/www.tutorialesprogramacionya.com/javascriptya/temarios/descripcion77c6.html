@@ -1,0 +1,294 @@
+<html>
+
+
+<!-- Mirrored from www.tutorialesprogramacionya.com/javascriptya/temarios/descripcion.php?inicio=50&cod=61 by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 18 Mar 2024 10:33:16 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QWKWPBDEFK"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-QWKWPBDEFK');
+</script>
+
+<script async src="../../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-4669394804436935",
+    enable_page_level_ads: true
+  });
+</script>
+<title>Tutorial de JavaScript : Conceptos</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="../css/estilos.css" rel="stylesheet" type="text/css">
+  <meta charset="UTF-8">
+
+<style>
+html,body {
+	background-color: #D3E9D0;
+	font-family: Trebuchet MS, Verdana, Arial, sans-serif;
+	font-size: 10pt;
+	text-align:center;
+}
+
+h1 {
+	font-size: 14pt;
+	margin: 0%;
+}
+
+div#contentdetalle{clear:left;
+                   max-width:900px;
+				   border-top:0px solid #999;
+				   padding-top:15px;
+				   background-color: #aed7a8;
+				   text-align:left;
+				   font-size:1.3em;
+				   font-weight:normal;
+				   font-family:arial;
+				   padding:20px}
+				   
+.recuadro {
+  background-color:#ffffcc;
+  text-align:left;
+  font-family:courier;
+  font-size:1em;
+  border-width:0;
+  padding:5px;
+
+  border: 1px dotted #ffaa00;
+  margin-left:5px;  
+}		
+
+.tablajs {
+    border-collapse: collapse;
+    background-color: #fff;
+    border: 1px solid #dee2e6;    
+    padding: 0.3rem;    
+}
+
+.tablajs th,
+.tablajs td {
+  padding: 0.75rem;
+  vertical-align: top;
+  border-top: 1px solid #dee2e6;
+}
+
+		   
+</style>
+
+<style>
+.uno { width: 320px; height: 100px; }
+@media(min-width: 500px) { .uno { width: 320px; height: 100px; } }
+@media(min-width: 800px) { .uno { width: 336px; height: 280px; } }
+
+.dos { width: 320px; height: 100px; }
+@media(min-width: 500px) { .dos { width: 320px; height: 100px; } }
+@media(min-width: 800px) { .dos { width: 336px; height: 280px; } }
+</style>
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','../../../www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-80268657-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</head>
+
+<body>
+
+<div class="upperleft">
+  <div class="upperright">
+    <div class="lowerleft">
+      <div class="lowerright">
+<table width="98%">
+<tr>
+<td>
+<span style="float:right"><a target="_blank" style="margin-right:0.1em;" href="https://www.tutorialesprogramacionya.com/">Listado completo de tutoriales</a></span>
+<h1>Funciones: anidadas</h1></td>
+<td align="right">
+
+
+</td>
+</tr>
+</table>
+
+      </div>
+    </div>
+  </div>
+</div>
+<br>
+
+
+<div class="upperleft">
+  <div class="upperright">
+    <div class="lowerleft">
+      <div class="lowerright">
+
+<div id="contentdetalle">
+
+<div style="display:block;float:left;margin: 5px;"> 
+ <script async src="../../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<!-- adaptable1 -->
+<ins class="adsbygoogle uno"
+     style="display:inline-block"
+     data-ad-client="ca-pub-4669394804436935"
+     data-ad-slot="4716538363"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script> 
+</div> 
+
+<p>JavaScript permite definir funciones dentro de otras funciones:</p>
+<pre class="recuadro">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+
+&lt;head&gt;
+    &lt;title&gt;Ejemplo de JavaScript&lt;/title&gt;
+    &lt;meta charset="UTF-8"&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+    &lt;div id="div1"&gt;&lt;/div&gt;
+
+    &lt;script&gt;
+        function generarListaOrdenada(vec) {
+            function comienzo() {
+                s = '&lt;ol&gt;';
+            }
+
+            function fin() {
+                s = s + '&lt;/ol&gt;';
+            }
+
+            let s = '';
+            comienzo();
+            for (let f = 0; f &lt; vec.length; f++) {
+                s = s + '&lt;li&gt;' + vec[f] + '&lt;/li&gt;';
+            }
+            fin();
+            return s;
+        }
+
+        let opciones = ['Opción a', 'Opción b', 'Opción c', 'Opción d'];
+        document.getElementById('div1').innerHTML = generarListaOrdenada(opciones);
+    &lt;/script&gt;
+
+&lt;/body&gt;
+
+&lt;/html&gt;
+</pre>
+<p>Como vemos en el ejemplo la función generarListaOrdenada contiene el algoritmo propiamente dicho y además declara dos funciones llamadas comienzo y fin.</p>
+<p>Las funciones anidadas solo pueden ser llamadas desde el interior de la función que las contiene. En este ejemplo la función generarListaOrdenada tiene por objetivo generar un string con una serie de marcas HTML que genere una lista ordenada.</p>
+<p>Lo primero en la función generarListaOrdenada es declarar las dos funciones anidadas:<p/>
+<pre>
+            function comienzo() {
+                s = '&lt;ol&gt;';
+            }
+
+            function fin() {
+                s = s + '&lt;/ol&gt;';
+            }
+</pre>
+<p>Pero lo primero que se ejecuta al llamar a la función generarListaOrdenada es:</p>
+<pre>
+            let s = '';
+            comienzo();
+            for (let f = 0; f &lt; vec.length; f++) {
+                s = s + '&lt;li&gt;' + vec[f] + '&lt;/li&gt;';
+            }
+            fin();
+            return s;
+</pre>
+<p>Es decir primero se define la variable local s y se inicializa con un string vacío. Seguidamente se llama a la función comienzo que tiene por objetivo cargar en la variable s el valor '&lt;ol&gt;'.</p>
+<p>Cuando finaliza de ejecutarse la función interna continua con el for definido en la función generarListaOrdenada:</p>
+<pre>
+            for (let f = 0; f &lt; vec.length; f++) {
+                s = s + '&lt;li&gt;' + vec[f] + '&lt;/li&gt;';
+            }
+</pre>
+<p>Finalmente cuando sale del for se llama a la segunda función anidada llamada fin:</p>
+<pre>
+            fin();
+</pre>
+<p>Las funciones anidadas pueden acceder a las variables locales de la función que las contiene (en este caso pueden acceder a la variable s)</p>
+<p>Luego la función generarListaOrdenada completa queda con la sintaxis:</p>
+<pre>
+        function generarListaOrdenada(vec) {
+            function comienzo() {
+                s = '&lt;ol&gt;';
+            }
+
+            function fin() {
+                s = s + '&lt;/ol&gt;';
+            }
+
+            let s = '';
+            comienzo();
+            for (let f = 0; f &lt; vec.length; f++) {
+                s = s + '&lt;li&gt;' + vec[f] + '&lt;/li&gt;';
+            }
+            fin();
+            return s;
+        }
+</pre>
+<p>A la función generarListaOrdenada la llamamos luego de definir el arreglo. Cargamos en el elemento div definido dentro de la página el código HTML que genera una lista ordenada:</p>
+<pre>
+        let opciones = ['Opción a', 'Opción b', 'Opción c', 'Opción d'];
+        document.getElementById('div1').innerHTML = generarListaOrdenada(opciones);
+</pre>
+<p>Las funciones anidadas no se las puede llamar desde fuera de la función que las contiene, por ejemplo produce un error si intentamos llamar a la función "comienzo" desde fuera de la función generarListaOrdenada:</p>
+<pre>
+        let opciones = ['Opción a', 'Opción b', 'Opción c', 'Opción d'];
+        comienzo();  //Error
+        document.getElementById('div1').innerHTML = generarListaOrdenada(opciones);
+</pre></p>
+</div>
+
+<div>
+<!--publi-->
+<script async src="../../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<!-- adaptable2 -->
+<ins class="adsbygoogle dos"
+     style="display:inline-block"
+     data-ad-client="ca-pub-4669394804436935"
+     data-ad-slot="5774469161"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+<!--publi-->
+<script async src="../../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<!-- adaptable2 -->
+<ins class="adsbygoogle dos"
+     style="display:inline-block"
+     data-ad-client="ca-pub-4669394804436935"
+     data-ad-slot="5774469161"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+</div>
+
+
+   <h2><a href="../indexefd7.html?inicio=50">Retornar</a></h2>   
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+</body>
+
+
+<!-- Mirrored from www.tutorialesprogramacionya.com/javascriptya/temarios/descripcion.php?inicio=50&cod=61 by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 18 Mar 2024 10:33:16 GMT -->
+</html>

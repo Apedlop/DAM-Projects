@@ -1,0 +1,24 @@
+<HTML>
+<HEAD>
+  <TITLE>Ejemplo de capas</TITLE>
+  <STYLE TYPE="text/css">
+    #normal { position: absolute; top: 200px; left: 100px; width:200px; height:200px; visibility: visible;}
+    #flotante { position: relative; left: 100px; visibility: visible;}
+  </STYLE>
+</HEAD>
+<BODY BGCOLOR="#FFFFFF" onLoad="window.defaultStatus='Ejemplo de capas';return true">
+<P>Esto no es ninguna capa. Es la p&aacute;gina "normal".
+<SPAN ID="normal">
+Esta capa es normal, y est&aacute; colocada a 100 pixels a la izquierda del margen del 
+documento y a 200 m&aacute;s abajo del comienzo del mismo.
+</SPAN>
+<SPAN ID="flotante">
+Esta capa relativa, en cambio, se coloca exactamente 100 pixels a la izquierda
+de lo &uacute;ltimo que hayamos escrito en la p&aacute;gina "normal". Podemos ver
+c&oacute;mo se sit&uacute;a tambi&eacute;n a 100 pixels del margen izquierdo en cuanto
+se corta la primera l&iacute;nea.
+</SPAN>
+<P>Esto tampoco est&aacute; en ninguna capa. Se supone que debe aparecer justo debajo
+de la capa relativa
+</BODY>
+</HTML>

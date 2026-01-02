@@ -1,0 +1,26 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+<HEAD>
+  <TITLE>Ejemplo de sonidos</TITLE>
+</HEAD>
+
+<BODY>
+<DIV ALIGN=CENTER><H1>Ejemplo de sonidos</H1></DIV>
+
+<P>Si todo va bien, estar&eacute;is escuchando una melod&iacute;a
+de mi invenci&oacute;n. Mis m&aacute;s sinceras disculpas.</P>
+
+<P>El c&oacute;digo utilizado ha sido el siguiente:</P>
+<PRE>&lt;BGSOUND SRC="../sonidos/cpet.mid" LOOP="infinite">
+&lt;SCRIPT LANGUAGE="Javascript">
+if (navigator.appName=="Netscape")
+  document.write('&lt;EMBED SRC="../sonidos/cpet.mid" WIDTH=20 HEIGHT=30 HIDDEN="true" AUTOSTART="true" LOOP="true">');
+&lt;/SCRIPT></PRE>
+
+<BGSOUND SRC="../sonidos/cpet.mid" LOOP="infinite">
+<SCRIPT LANGUAGE="Javascript">
+if (navigator.appName=="Netscape")
+  document.write('<EMBED SRC="../sonidos/cpet.mid" WIDTH=1 HEIGHT=1 HIDDEN="true" AUTOSTART="true" LOOP="true">');
+</SCRIPT>
+</BODY>
+</HTML>

@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <title>Ejercicio 13</title>
+    </head>
+
+    <body>
+
+        <h1>Ejercicio 13</h1>
+
+        <script>
+
+            let num1 = parseInt(prompt('Introduce un número:'));
+            let num2 = parseInt(prompt('Introduce un segundo número:'));
+            let num3 = parseInt(prompt('Introduce un tercer número:'));
+
+            if (num1 == num2 && num1 == num3) {
+                let total = num1 + num2 * num3;
+                document.write('El resultado de: ' + num1 + ' + ' + num2 + ' x ' + num3 + ' = ' + total);
+            } else {
+                document.write('No hay operación disponible :)');
+            }
+
+        </script>
+
+    </body>
+</html>

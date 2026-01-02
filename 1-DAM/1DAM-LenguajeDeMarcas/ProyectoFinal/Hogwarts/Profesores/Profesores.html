@@ -1,0 +1,803 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profesores</title>
+    <link rel="icon" href="../image/logo.png">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../../style/menu.css">
+    <link rel="stylesheet" href="style/Profesores.css">
+
+    <script src="../../javaScript/modo.js"></script>
+    <script src="../../javaScript/recarga.js"></script>
+
+</head>
+
+<body>
+    <div class="contenedor_loader">
+        <div><img src="../../image/carga_snichDorada.gif" class="gif"></div>
+    </div>
+    <!-- Navigation -->
+    <div class="navigation-wrap bg-light start-header start-style">
+        <div class="container-fluid">
+            <div class="row justify-content-between align-items-center">
+                <div class="row">
+                    <div class="col">
+                        <!-- Logo -->
+                        <a class="navbar-brand" href="../../index.html" target="_self">
+                            <img src="../../image/logo.png" alt="Logo" class="logo">
+                        </a>
+                    </div>
+                    <div class="col altura">
+                        <b>
+                            <a href="../Hogwart.html" class="decoracion">
+                                <h1 class="titulo">Hogwarts</h1>
+                            </a>
+                        </b>
+                    </div>
+                    <div class="col posicionModo">
+                        <button type="button" class="btn btn-light colorModo" onclick="toggleTheme()">
+                            <img id="lightImage" src="../../image/soleado.png" alt="Light Theme">
+                            <img id="darkImage" src="../../image/luna.png" alt="Dark Theme">
+                        </button>
+                    </div>
+                </div>
+                <div class="col-auto flex-grow-0 flex-shrink-0">
+                    <!-- Opciones del Navbar -->
+                    <nav class="navbar navbar-expand-md">
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav ms-auto">
+                                <li class="nav-item">
+                                    <a class="nav-link dropdown-toggle" href="../../Hogwarts/Hogwart.html" role="button"
+                                        data-bs-toggle="dropdown" aria-haspopup="true"
+                                        aria-expanded="false">Hogwarts</a>
+                                    <div class="dropdown-menu">
+                                        <a class="dropdown-item" href="../../Hogwarts/Profesores/Profesores.html">Profesores</a>
+                                        <a class="dropdown-item" href="../../Hogwarts/Alumnos/Alumnos.html">Alumnos</a>
+                                        <a class="dropdown-item" href="../../Hogwarts/Asignaturas/asignaturas.html">Asignaturas</a>
+                                        <a class="dropdown-item" href="../../Hogwarts/Casas/casa.html">Casas</a>
+                                    </div>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link dropdown-toggle" href="../../Mortifagos/Mortifagos.html" role="button"
+                                        data-bs-toggle="dropdown" aria-haspopup="true"
+                                        aria-expanded="false">Mortífagos</a>
+                                    <div class="dropdown-menu">
+                                        <a class="dropdown-item"
+                                            href="../../Mortifagos/Personajes/Personajes.html">Personajes</a>
+                                        <a class="dropdown-item"
+                                            href="../../Mortifagos/Horrocruxes/horrocruxes.html">Horrocruxes</a>
+                                        <a class="dropdown-item" href="../../Mortifagos/Mortifagos.html">Marca Tenebrosa</a>
+                                    </div>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link dropdown-toggle" href="../../Familias/Familias.html">Familias</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="../../Mapa/mapa.html">Mapa</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+                <div class="col-auto">
+                    <!-- Segunda sección de opciones del Navbar -->
+                    <nav class="navbar navbar-expand-md navbar-light">
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav ms-auto">
+                                <li class="nav-item">
+                                    <a class="nav-link dropdown-toggle" href="../../Adaptaciones/Adaptaciones.html"
+                                        role="button" data-bs-toggle="dropdown" aria-haspopup="true"
+                                        aria-expanded="false">Adaptaciones</a>
+                                    <div class="dropdown-menu">
+                                        <a class="dropdown-item" href="../../Adaptaciones/Libros.html">Libros</a>
+                                        <a class="dropdown-item" href="../../Adaptaciones/Peliculas.html">Películas</a>
+                                        <a class="dropdown-item" href="../../Adaptaciones/Videojuegos.html">Videojuegos</a>
+                                    </div>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="../../Curiosidades/curiosidad.html">Curiosidades</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="../../Comentarios/Comentarios.html">Comentarios</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="../../quiz/quiz.html">Quiz</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                    <div class="nav-images-container">
+                        <img src="https://cdn-hogwartslegacy.warnerbrosgames.com/static/bar-left.png" alt
+                            class="nav-bar left">
+                        <img src="https://cdn-hogwartslegacy.warnerbrosgames.com/static/bar-right.png" alt
+                            class="nav-bar right">
+                    </div>
+                    <div>
+                        <div class="nav-bar-corner-container">
+                            <div class="nav-bar-corner left">
+                                <img src="https://cdn-hogwartslegacy.warnerbrosgames.com/static/corner-left.webp" alt=""
+                                    class="img-fluid">
+                            </div>
+                            <div class="nav-bar-corner right">
+                                <img src="https://cdn-hogwartslegacy.warnerbrosgames.com/static/corner-right.webp"
+                                    alt="" class="img-fluid">
+                            </div>
+                        </div>
+                        <div class="nav-bar-corner-container1">
+                            <div class="nav-bar-corner bottomLeft">
+                                <img src="https://cdn-hogwartslegacy.warnerbrosgames.com/static/corner-bottom-left.webp"
+                                    alt="" class="img-fluid">
+                            </div>
+                            <div class="nav-bar-corner bottomRight">
+                                <img src="https://cdn-hogwartslegacy.warnerbrosgames.com/static/corner-bottom-right.webp"
+                                    alt="" class="img-fluid">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Your main content here -->
+
+    <div class="my-5 py-5 content-fluid text-center">
+
+        <div class="text-center">
+
+            <picture>
+                <source srcset="../../image/titulo-arriba.webp" type="image/webp">
+                <img src="../../image/titulo-arriba.webp" class="title-decoration margen">
+            </picture>
+
+            <h1 class="letraBlanca">Profesores</h1>
+
+            <picture>
+                <source srcset="../../image/titulo-bajo.png" type="image/png">
+                <img src="../../image/titulo-bajo.png" class="title-decoration">
+            </picture>
+
+        </div>
+
+        <div class="row justify-content-center barra">
+            <div class="row mt-4">
+                <div class="col-md-4">
+                    <figure>
+                        <div class="position-relative">
+                            <button type="button" data-bs-toggle="modal" data-bs-target="#Dumbledore" class="sin-borde">
+                                <img src="image/AlbusDumbledore.jpg" class="rounded-circle img-fluid circulo"
+                                    alt="Cinque Terre">
+                                <img src="image/circulo.png" class="imagenCirculo">
+                            </button>
+
+                            <!-- The Modal -->
+                            <div class="modal" id="Dumbledore">
+                                <div class="modal-dialog modal-xl">
+                                    <div class="modal-content">
+                                        <!-- Modal Header -->
+                                        <div class="modal-header text-center">
+                                            <h2 class="modal-title">Albus Dumbledore</h2>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                                        </div>
+                                        <!-- Modal body -->
+                                        <div class="modal-body">
+                                            <div>
+                                                <img src="image/AlbusDumbledore.jpg" class="fotoModal">
+                                            </div>
+                                            <br>
+                                            <div>
+                                                <h2 class="alineacion">Información:</h2>
+                                                <table>
+                                                    <tr>
+                                                        <th>Casa</th>
+                                                        <td>Gryffindor</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>Fecha de nacimiento</th>
+                                                        <td>Finales de Agosto de 1881, Mould-on-the-Wold</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>Fecha de muerte </th>
+                                                        <td>30 de junio de 1997 (116 años), Torre de Astronomía,
+                                                            Castillo Hogwarts</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>Asignatura</th>
+                                                        <td>Transformaciones (antes de ser director)</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>Título</th>
+                                                        <td>Director de la escuela de magia y hechicería Hogwarts</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>Estatus de sangre</th>
+                                                        <td>Mestizo</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>Patronus</th>
+                                                        <td>Fenix</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>Boggart</th>
+                                                        <td>El cuerpo de su hermana Ariana</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>Varita </th>
+                                                        <td>38'1 cm, Saúco, núcleo de pelo de cola de Thestral (Variata
+                                                            de Saúco, uno de las tres reliquias de la muerte)</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>Biografía</th>
+                                                        <td>Albus Percival Wulfric Brian Dumbledore nació en 1881 y
+                                                            desde joven demostró ser un mago prodigioso, aunque su vida
+                                                            estuvo marcada por la tragedia, incluyendo la muerte de su
+                                                            hermana Ariana. Durante su tiempo en Hogwarts, se destacó
+                                                            como estudiante y más tarde como profesor y director,
+                                                            influyendo significativamente en la historia mágica
+                                                            contemporánea. Tuvo una relación tumultuosa y trágica con
+                                                            Gellert Grindelwald, a quien derrotó en 1945.
+                                                            Posteriormente, vigiló de cerca a Tom Ryddle (Voldemort) y
+                                                            jugó un papel crucial en la lucha contra este, apoyando a
+                                                            Harry Potter y la Orden del Fénix. Dumbledore murió en 1997,
+                                                            habiendo preparado a Harry para enfrentarse a Voldemort y
+                                                            asegurando su propia muerte para proteger a Draco Malfoy y
+                                                            mantener la confianza de Severus Snape como espía. Su legado
+                                                            perdura como uno de los magos más poderosos y sabios de la
+                                                            historia.</td>
+                                                    </tr>
+                                                </table>
+                                            </div>
+
+                                        </div>
+                                        <!-- Modal footer -->
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-danger colorBoton"
+                                                data-bs-dismiss="modal">Close</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <figcaption class="image-description letraBlanca">
+                                Albus Dumbledore
+                            </figcaption>
+                    </figure>
+                </div>
+                <div class="col-md-4">
+                    <figure>
+                        <div class="position-relative">
+                            <button type="button" data-bs-toggle="modal" data-bs-target="#McGonagall" class="sin-borde">
+                                <img src="image/McGonagall.jpg" class="rounded-circle img-fluid circulo"
+                                    alt="Cinque Terre">
+                                <img src="image/circulo.png" class="imagenCirculo">
+                            </button>
+                            <!-- The Modal -->
+                            <div class="modal" id="McGonagall">
+                                <div class="modal-dialog modal-xl">
+                                    <div class="modal-content">
+                                        <!-- Modal Header -->
+                                        <div class="modal-header text-center">
+                                            <h2 class="modal-title">Minerva McGonagall</h2>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                                        </div>
+                                        <!-- Modal body -->
+                                        <div class="modal-body">
+                                            <div>
+                                                <img src="image/McGonagall.jpg" class="fotoModal">
+                                            </div>
+                                            <br>
+                                            <div>
+                                                <h2 class="alineacion">Información:</h2>
+                                                <table>
+                                                    <tr>
+                                                        <th>Casa</th>
+                                                        <td>Gryffindor</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>Fecha de nacimiento</th>
+                                                        <td>4 de octubre de 1935, en Caithness, Tierras Altas, Escocia.
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>Edad </th>
+                                                        <td>63 años</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>Asignatura</th>
+                                                        <td>Transformaciones</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>Título</th>
+                                                        <td>Profesora (antes) <br> Directora de la escuela de magia y
+                                                            hechicería Hogwarts (actual)</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>Estatus de sangre</th>
+                                                        <td>Mestiza</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>Patronus</th>
+                                                        <td>Gato con lineas alrededor de los ojos</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>Animago </th>
+                                                        <td>Gato atigrado con marcas alrededor de los ojos</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>Varita </th>
+                                                        <td>Abeto y fibra de corazón de dragón, veinticuatro
+                                                            centímetros, rígida</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>Biografía</th>
+                                                        <td>Minerva McGonagall, nacida el 4 de octubre de 1935 en
+                                                            Caithness, Escocia, es una destacada bruja y animaga que se
+                                                            convierte en gato. Proviene de una familia de magos y mostró
+                                                            habilidades mágicas desde temprana edad. Asistió a Hogwarts,
+                                                            donde fue seleccionada en la casa Gryffindor. Destacó en sus
+                                                            estudios y se convirtió en una de las alumnas más brillantes
+                                                            de su generación. Tras graduarse, McGonagall se unió al
+                                                            Ministerio de Magia antes de aceptar un puesto como
+                                                            profesora en Hogwarts, donde enseñó Transformaciones durante
+                                                            décadas. En su carrera como educadora, demostró ser una
+                                                            figura autoritaria pero compasiva, ganándose el respeto y la
+                                                            admiración de sus estudiantes. Además, desempeñó un papel
+                                                            crucial en la lucha contra Lord Voldemort como miembro
+                                                            activo de la Orden del Fénix. Con el tiempo, ascendió a
+                                                            Subdirectora y más tarde a Directora de Hogwarts, liderando
+                                                            la escuela con sabiduría y coraje durante momentos de gran
+                                                            peligro y adversidad. Su dedicación a la enseñanza y su
+                                                            compromiso con la protección de sus alumnos la convierten en
+                                                            una figura venerada en el mundo mágico.</td>
+                                                    </tr>
+                                                </table>
+                                            </div>
+
+                                        </div>
+                                        <!-- Modal footer -->
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-danger colorBoton"
+                                                data-bs-dismiss="modal">Close</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <figcaption class="image-description letraBlanca">
+                                Minerva McGonagall
+                            </figcaption>
+                    </figure>
+                </div>
+                <div class="col-md-4">
+                    <figure>
+                        <div class="position-relative">
+                            <button type="button" data-bs-toggle="modal" data-bs-target="#Filius" class="sin-borde">
+                                <img src="image/FiliusFlitwick.jpg" class="rounded-circle img-fluid circulo"
+                                    alt="Cinque Terre">
+                                <img src="image/circulo.png" class="imagenCirculo">
+                            </button>
+                            <!-- The Modal -->
+                            <div class="modal" id="Filius">
+                                <div class="modal-dialog modal-xl">
+                                    <div class="modal-content">
+                                        <!-- Modal Header -->
+                                        <div class="modal-header text-center">
+                                            <h2 class="modal-title">Filius Flitwick</h2>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                                        </div>
+                                        <!-- Modal body -->
+                                        <div class="modal-body">
+                                            <div>
+                                                <img src="image/FiliusFlitwick.jpg" class="fotoModal">
+                                            </div>
+                                            <br>
+                                            <div>
+                                                <h2 class="alineacion">Información:</h2>
+                                                <table>
+                                                    <tr>
+                                                        <th>Casa</th>
+                                                        <td>Ravenclaw</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>Fecha de nacimiento</th>
+                                                        <td>
+                                                            17 de octubre de 1958 o antes Gran Bretaña o Irlanda</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>Edad </th>
+                                                        <td>76 años</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>Asignatura</th>
+                                                        <td>Encantamientos</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>Título</th>
+                                                        <td>Profesor</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>Estatus de sangre</th>
+                                                        <td>Mestiza (ascendencia de duende)</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>Boggart</th>
+                                                        <td>Lord Voldemort</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>Biografía</th>
+                                                        <td>
+                                                            <p>
+                                                                El Profesor Filius Flitwick, un carismático y habilidoso
+                                                                mago, deslumbra a todos en Hogwarts con su pasión por
+                                                                los encantamientos. A pesar de su diminuto tamaño, su
+                                                                conocimiento y destreza en la magia son inmensos.
+                                                                Flitwick, antiguo alumno de la misma escuela donde ahora
+                                                                enseña, fue seleccionado en la casa Ravenclaw durante su
+                                                                juventud, y eventualmente regresó como profesor para
+                                                                compartir su sabiduría con las generaciones futuras. No
+                                                                solo se destaca por su enseñanza académica, sino también
+                                                                por su papel como Jefe de Casa de Ravenclaw, donde guía
+                                                                y apoya a los estudiantes bajo su cuidado.
+                                                            </p>
+                                                            <p>
+                                                                Durante la Segunda Guerra Mágica, Flitwick demostró su
+                                                                valentía y lealtad a Hogwarts al participar activamente
+                                                                en la defensa del castillo contra las fuerzas de Lord
+                                                                Voldemort y sus seguidores. Su magia formidable y su
+                                                                ingenio fueron recursos vitales en la batalla, y su
+                                                                liderazgo inspiró a estudiantes y colegas por igual. A
+                                                                pesar de los desafíos y peligros, Flitwick se mantuvo
+                                                                firme en la protección de la escuela y sus ocupantes,
+                                                                encarnando el espíritu de resistencia contra la
+                                                                oscuridad.
+                                                            </p>
+                                                            <p>
+                                                                Además de su papel heroico durante la guerra, Flitwick
+                                                                es conocido por su amabilidad y apoyo hacia los
+                                                                estudiantes, creando un ambiente de aprendizaje cálido y
+                                                                estimulante en el aula de Encantamientos. Su entusiasmo
+                                                                contagioso por la magia ha inspirado a numerosos jóvenes
+                                                                magos y brujas a explorar y dominar el arte de los
+                                                                encantamientos. En resumen, el Profesor Flitwick es una
+                                                                figura emblemática en Hogwarts, cuyo legado perdura no
+                                                                solo por su magia, sino también por su dedicación
+                                                                inquebrantable a la causa de la educación mágica y la
+                                                                defensa de la luz contra las tinieblas.
+                                                            </p>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </div>
+
+                                        </div>
+                                        <!-- Modal footer -->
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-danger colorBoton"
+                                                data-bs-dismiss="modal">Close</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <figcaption class="image-description letraBlanca">
+                                Filius Flitwick
+                            </figcaption>
+                    </figure>
+                </div>
+            </div>
+            <div class="row mt-4"> <!-- Añadido un margen top de 4 -->
+                <div class="col-md-4">
+                    <figure>
+                        <div class="position-relative">
+                            <button type="button" data-bs-toggle="modal" data-bs-target="#Lupin" class="sin-borde">
+                                <img src="image/RemusLupin.jpg" class="rounded-circle img-fluid circulo"
+                                    alt="Cinque Terre">
+                                <img src="image/circulo.png" class="imagenCirculo">
+                            </button>
+                            <!-- The Modal -->
+                            <div class="modal" id="Lupin">
+                                <div class="modal-dialog modal-xl">
+                                    <div class="modal-content">
+                                        <!-- Modal Header -->
+                                        <div class="modal-header text-center">
+                                            <h2 class="modal-title">Remus Lupin</h2>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                                        </div>
+                                        <!-- Modal body -->
+                                        <div class="modal-body">
+                                            <div>
+                                                <img src="image/RemusLupin.jpg" class="fotoModal">
+                                            </div>
+                                            <br>
+                                            <div>
+                                                <h2 class="alineacion">Información:</h2>
+                                                <table>
+                                                    <tr>
+                                                        <th>Casa</th>
+                                                        <td>Gryffindor</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>Fecha de nacimiento</th>
+                                                        <td>10 de marzo de 1960</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>Fecha de muerta </th>
+                                                        <td>2 de mayo de 1998 (38 años), Hogwarts, Escocia</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>Asignatura</th>
+                                                        <td>DCAO (Defensa Contra las Artes Oscuras)</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>Título</th>
+                                                        <td>Profesor (1992-1993)</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>Estatus de sangre</th>
+                                                        <td>Mestiza</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>Patronus</th>
+                                                        <td>Lobo</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>Boggart</th>
+                                                        <td>Luna llena</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>Varita</th>
+                                                        <td>Ciprés y pelo de unicornio, 26cm, flexible[</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>Biografía</th>
+                                                        <td>
+                                                            Nacido de una madre bruja y un padre muggle, Lupin lucha con la condición de hombre lobo desde una edad temprana. Sin embargo, a pesar de los desafíos que enfrenta debido a su condición, muestra una increíble valentía y perseverancia en su búsqueda de una vida normal y significativa. En Hogwarts, fue un miembro destacado de la Casa Gryffindor y formó parte del grupo de amigos conocido como los Merodeadores, junto con James Potter, Sirius Black y Peter Pettigrew. Lupin, apodado "Moony", era considerado el más tranquilo y reflexivo del grupo, y su amistad con ellos perduró incluso en la edad adulta. Después de graduarse, Lupin se convirtió en un valiente luchador en la Primera Guerra Mágica, uniéndose a la Orden del Fénix para luchar contra las fuerzas de Voldemort. A pesar de las dificultades que enfrentó debido a su condición de hombre lobo, Lupin se convirtió en un destacado defensor de los derechos de los hombres lobo, abogando por la igualdad y la comprensión en la comunidad mágica. Su dedicación a la causa lo llevó a convertirse en profesor de Defensa Contra las Artes Oscuras en Hogwarts durante el tercer año de Harry Potter, donde dejó una profunda impresión en sus estudiantes, incluido Harry. Como mentor, Lupin mostró una mezcla única de compasión, sabiduría y coraje, y su papel en la vida de Harry fue fundamental en su crecimiento como mago y como persona. A pesar de sus desafíos personales y su trágica muerte durante la Batalla de Hogwarts, Lupin sigue siendo recordado como un hombre de gran integridad y valentía, cuyo legado perdura en el mundo mágico.
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </div>
+
+                                        </div>
+                                        <!-- Modal footer -->
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-danger colorBoton"
+                                                data-bs-dismiss="modal">Close</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <figcaption class="image-description letraBlanca">
+                                Remus Lupin
+                            </figcaption>
+                    </figure>
+                </div>
+                <div class="col-md-4">
+                    <figure>
+                        <div class="position-relative">
+                            <button type="button" data-bs-toggle="modal" data-bs-target="#Snape" class="sin-borde">
+                                <img src="image/SeverusSnape.jpg" class="rounded-circle img-fluid circulo"
+                                    alt="Cinque Terre">
+                                <img src="image/circulo.png" class="imagenCirculo">
+                            </button>
+                            <!-- The Modal -->
+                            <div class="modal" id="Snape">
+                                <div class="modal-dialog modal-xl">
+                                    <div class="modal-content">
+                                        <!-- Modal Header -->
+                                        <div class="modal-header text-center">
+                                            <h2 class="modal-title">Severus Snape</h2>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                                        </div>
+                                        <!-- Modal body -->
+                                        <div class="modal-body">
+                                            <div>
+                                                <img src="image/SeverusSnape.jpg" class="fotoModal">
+                                            </div>
+                                            <br>
+                                            <div>
+                                                <h2 class="alineacion">Información:</h2>
+                                                <table>
+                                                    <tr>
+                                                        <th>Casa</th>
+                                                        <td>Slytherin</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>Fecha de nacimiento</th>
+                                                        <td>9 de enero de 1960, Cokeworth, Inglaterra</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>Edad </th>
+                                                        <td>2 de mayo de 1998 (38 años), Casa de los Gritos, Hogsmeade</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>Asignatura</th>
+                                                        <td>Posiones</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>Título</th>
+                                                        <td>Profesor</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>Estatus de sangre</th>
+                                                        <td>Mestiza</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>Patronus</th>
+                                                        <td>Cierva</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>Boggart</th>
+                                                        <td>Lord Voldemort</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>Biografía</th>
+                                                        <td>
+                                                            Nacido de una madre bruja y un padre muggle, Snape creció en circunstancias difíciles que lo dejaron marcado de por vida. Su adolescencia en Hogwarts estuvo marcada por la exclusión social y el acoso, pero también por su destacado talento en las artes mágicas, especialmente en las pociones y en la magia oscura. A pesar de su amistad con Lily Evans, quien eventualmente se convirtió en Lily Potter, Snape cayó en las filas de los mortífagos, sirviendo a Lord Voldemort durante la Primera Guerra Mágica. Sin embargo, su amor no correspondido por Lily y el remordimiento por su papel en la muerte de James y Lily Potter lo llevaron a cambiar de bando y a unirse a la Orden del Fénix como espía doble. Durante su tiempo como profesor de Pociones y más tarde como profesor de Defensa Contra las Artes Oscuras en Hogwarts, Snape fue un personaje enigmático y, a menudo, intimidante, pero también demostró ser un maestro excepcionalmente talentoso y un guardián ferozmente dedicado de la seguridad de la escuela. Su papel en la historia se caracteriza por su complejidad moral, su lucha interna entre el bien y el mal, y su sacrificio final en la Batalla de Hogwarts, donde protegió secretamente a Harry Potter mientras continuaba trabajando para derrotar a Voldemort. 
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </div>
+
+                                        </div>
+                                        <!-- Modal footer -->
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-danger colorBoton"
+                                                data-bs-dismiss="modal">Close</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <figcaption class="image-description letraBlanca">
+                                Severus Snape
+                            </figcaption>
+                    </figure>
+                </div>
+                <div class="col-md-4">
+                    <figure>
+                        <div class="position-relative">
+                            <button type="button" data-bs-toggle="modal" data-bs-target="#Pomona" class="sin-borde">
+                                <img src="image/PomonaSprout.jpg" class="rounded-circle img-fluid circulo"
+                                    alt="Cinque Terre">
+                                <img src="image/circulo.png" class="imagenCirculo">
+                            </button>
+                            <!-- The Modal -->
+                            <div class="modal" id="Pomona">
+                                <div class="modal-dialog modal-xl">
+                                    <div class="modal-content">
+                                        <!-- Modal Header -->
+                                        <div class="modal-header text-center">
+                                            <h2 class="modal-title">Pomona Sprout</h2>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                                        </div>
+                                        <!-- Modal body -->
+                                        <div class="modal-body">
+                                            <div>
+                                                <img src="image/PomonaSprout.jpg" class="fotoModal">
+                                            </div>
+                                            <br>
+                                            <div>
+                                                <h2 class="alineacion">Información:</h2>
+                                                <table>
+                                                    <tr>
+                                                        <th>Casa</th>
+                                                        <td>Hufflepuff</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>Fecha de nacimiento</th>
+                                                        <td>15 de mayo de 1931</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>Edad </th>
+                                                        <td>67 años</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>Asignatura</th>
+                                                        <td>Herbología</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>Título</th>
+                                                        <td>Profesora</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>Estatus de sangre</th>
+                                                        <td>Pura o Mestiza</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>Patronus</th>
+                                                        <td>Incorpóreo</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>Boggart</th>
+                                                        <td>Lord Voldemort</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>Biografía</th>
+                                                        <td>
+                                                            La profesora Pomona Sprout, reconocida por su expertise en herbología, es un pilar esencial en la comunidad mágica, especialmente en Hogwarts, donde ha enseñado la materia durante décadas. Su amor por las plantas y su dedicación a enseñar a las jóvenes mentes la importancia y el arte de cuidarlas y comprenderlas han dejado una marca indeleble en generaciones de estudiantes. Además de su labor como educadora, Sprout ha demostrado ser una bruja habilidosa y una miembro valiosa de la comunidad mágica durante tiempos de crisis, como durante la Segunda Guerra Mágica, cuando luchó valientemente en la Batalla de Hogwarts para proteger a la escuela y a sus alumnos. Su presencia amable pero firme y su profundo conocimiento de la flora mágica la convierten en una figura respetada y querida por todos aquellos que tienen el privilegio de conocerla.
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </div>
+
+                                        </div>
+                                        <!-- Modal footer -->
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-danger colorBoton"
+                                                data-bs-dismiss="modal">Close</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <figcaption class="image-description letraBlanca">
+                                Pomona Sprout
+                            </figcaption>
+                    </figure>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="text-center fondoFooter">
+        <div class="lineaSeparacion">
+            <img src="https://cdn-hogwartslegacy.warnerbrosgames.com/static/bar-left.png" class="izquierda">
+            <img src="https://cdn-hogwartslegacy.warnerbrosgames.com/static/bar-right.png" class="derecha">
+        </div>
+        <!-- Grid container -->
+        <div class="container pt-4">
+            <!-- Section: Social media -->
+            <section class="mb-4">
+                <!-- Facebook -->
+                <a data-mdb-ripple-init class="btn btn-link btn-floating btn-lg text-body m-1"
+                    href="https://www.facebook.com/harrypotter" role="button"><img src="../../image/facebook.png"
+                        class="footer"></a>
+
+                <!-- Instagram -->
+                <a data-mdb-ripple-init class="btn btn-link btn-floating btn-lg text-body m-1"
+                    href="https://www.instagram.com/harrypotter/?hl=es" role="button"><img
+                        src="../../image/instagram.png" class="footer"></a>
+
+                <!-- Twitter -->
+                <a data-mdb-ripple-init class="btn btn-link btn-floating btn-lg text-body m-1"
+                    href="https://x.com/harrypotter" role="button"><img src="../../image/twitter.png"
+                        class="footer2"></a>
+
+                <!-- YouTube -->
+                <a data-mdb-ripple-init class="btn btn-link btn-floating btn-lg text-body m-1"
+                    href="https://www.youtube.com/@harrypotter" role="button"><img src="../../image/youtube.png"
+                        class="footer"></a>
+
+                <!-- TikTok -->
+                <a data-mdb-ripple-init class="btn btn-link btn-floating btn-lg text-body m-1"
+                    href="https://www.tiktok.com/@harrypotter" role="button"><img src="../../image/tik-tok.png"
+                        class="footer"></a>
+
+            </section>
+        </div>
+        <!-- Grid container -->
+
+        <!-- Copyright -->
+        <div class="text-center p-3 fondoFooter2">
+            Copyright © 2024
+        </div>
+    </footer>
+</body>
+
+</html>

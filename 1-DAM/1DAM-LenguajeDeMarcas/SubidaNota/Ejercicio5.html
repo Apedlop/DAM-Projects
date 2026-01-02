@@ -1,0 +1,26 @@
+<html>
+
+<head>
+    <title>Número de Likes</title>
+</head>
+
+<body>
+    <h1>Ejercicio 5 // Número de Likes</h1>
+    <script>
+        const likes = num => {
+            if (num < 1000) {
+                return num;
+            } else if (num >= 1000 && num < 1000000) {
+                let mil = parseInt(num / 1000);
+                return mil + "K";
+            } else {
+                let millon = parseInt(num / 1000000);
+                return millon + "M";
+            }
+        }
+        let num = parseInt(prompt("Introduce un número: "));
+        document.write(`${likes(num)}`);
+    </script>
+</body>
+
+</html>

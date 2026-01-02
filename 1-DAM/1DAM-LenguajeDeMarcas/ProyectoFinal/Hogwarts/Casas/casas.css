@@ -1,0 +1,61 @@
+body {
+    overflow-x: hidden;
+}
+
+img.tamaño {
+    width: 250px;
+    height: 250px;
+}
+
+img.tamaño:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+}
+
+.img-container::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centra el brillo */
+    width: 300px; /* Ancho de la imagen */
+    height: 270px; /* Alto de la imagen */
+    background: radial-gradient(circle at center, rgba(138, 106, 40, 0.5) 50%, transparent); /* Degradado radial */
+    opacity: 0;
+    transition: opacity 0.5s;
+    z-index: -1; /* Asegura que el brillo esté detrás de la imagen */
+    border-radius: 15%; /* Para hacer el degradado más circular */
+}
+
+
+
+.img-container:hover::after {
+    opacity: 1; /* Muestra la sombra cuando se pasa el cursor sobre el contenedor */
+}
+
+.barra {
+    margin-top: 30px;
+}
+
+/*Slytherin*/
+.anchoContenedor {
+    width: 80vw;
+    text-align: justify;
+    color: white;
+}
+
+.fotoCasa {
+    width: 300px;
+    height: auto;
+    float: left;
+}
+
+.fotoCasaDerecha {
+    width: 300px;
+    height: auto;
+    float: right;
+}
+
+.margenTexto {
+    margin-top: -30px;
+}

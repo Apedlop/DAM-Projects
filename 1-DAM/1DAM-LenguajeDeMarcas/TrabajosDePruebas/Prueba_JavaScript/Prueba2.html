@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <title>Ejemplo de JavaScript</title>
+        <meta charset="UTF-8">
+    </head>
+
+    <body>
+
+        <script>
+            
+            function sumar(v1, v2) {
+                return v1 + v2;
+            }
+
+            function restar(v1, v2) {
+                return v1 - v2;
+            }
+
+            function calcular(x, y, fu) {
+                let resu = fu(x, y);
+                return resu;
+            }
+
+            let s1 = calcular(10, 5, sumar); 
+            document.write(`${s1} <br>`); //Las plantillas de caraceteres es: ${...}
+            let s2 = calcular(10, 5, restar);
+            document.write(`${s2} <br>`);
+    
+        </script>
+
+    </body>
+</html>

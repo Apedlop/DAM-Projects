@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ejercicio 3</title>
+</head>
+<body>
+
+    <h1>Ejercicio 3</h1>
+
+    <select id="pregunta4" onchange="abrirEnlaceSeleccionado()">
+        <option value="yahoo">yahoo</option>
+        <option value="google">google</option>
+    </select>
+
+    <script>
+        const enlaces = new Map ();
+        enlaces.set("yahoo", "https://yahoo.es");
+        enlaces.set("google", "https://www.google.es");
+
+        // Función para abrir el enlace seleccionado en el <select>
+        function abrirEnlaceSeleccionado() {
+            const selectElement = document.getElementById("pregunta4");
+            const seleccionado = selectElement.value;
+            const url = enlaces.get(seleccionado);
+            if (url) {
+                window.open(url, "_blank");
+            } else {
+                console.log("El enlace no existe en el sistema.");
+            }
+        }
+    </script>
+</body>
+</html>

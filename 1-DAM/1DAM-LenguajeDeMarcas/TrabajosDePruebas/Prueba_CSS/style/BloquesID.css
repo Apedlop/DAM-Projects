@@ -1,0 +1,76 @@
+#div1 {
+    float: left;
+    border: red solid 4px;
+    width: 200px;
+}
+
+#div2{
+    float: right;
+    border: red solid 4px;
+    width: 200px;
+}
+
+#div11 {
+    background-color: blue;
+    color: white;
+}
+
+#div12 {
+    background-color: aquamarine;
+    color: white;
+    position: relative;
+    left: 5px;
+    top: 5px;
+}
+
+#div122 {
+    background-color: aquamarine;
+    color: white;
+    position: relative;
+    left: 5px;
+    top: 5px;
+    z-index: -1;
+}
+#div13 {
+    background-color: bisque;
+    color: white;
+}
+
+div.div1 {
+    float: left;
+    border: red solid 4px;
+    width: 200px;
+}
+
+div.div2 {
+    float: right;
+    border: red solid 4px;
+    width: 200px;
+}
+
+div.div11 {
+    background-color: blue;
+    color: white;
+}
+
+div.div12 {
+    background-color: aquamarine;
+    color: white;
+    position: relative;
+    left: 5px;
+    top: 5px;
+}
+
+div.div122 {
+    background-color: aquamarine;
+    color: white;
+    position: relative;
+    left: 5px;
+    top: 5px;
+    z-index: -1;
+}
+
+div.div13 {
+    background-color: bisque;
+    color: white;
+}

@@ -1,0 +1,16 @@
+#menuVertical a {
+    padding: 0px 25px 0px;
+    text-decoration: none;
+    display: block;
+    color: black;
+    background: #F4F4F4;
+}
+
+#menuVertical a:hover, #menuHorizontal a:active {
+    background: #58FA58;
+}
+
+#menuVertical {
+    width: 200px;
+    border: 3px solid grey;
+}

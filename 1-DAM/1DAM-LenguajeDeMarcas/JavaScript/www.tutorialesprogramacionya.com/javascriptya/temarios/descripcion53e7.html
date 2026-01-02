@@ -1,0 +1,515 @@
+<html>
+
+
+<!-- Mirrored from www.tutorialesprogramacionya.com/javascriptya/temarios/descripcion.php?inicio=100&cod=102 by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 18 Mar 2024 10:33:26 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QWKWPBDEFK"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-QWKWPBDEFK');
+</script>
+
+<script async src="../../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-4669394804436935",
+    enable_page_level_ads: true
+  });
+</script>
+<title>Tutorial de JavaScript : Conceptos</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="../css/estilos.css" rel="stylesheet" type="text/css">
+  <meta charset="UTF-8">
+
+<style>
+html,body {
+	background-color: #D3E9D0;
+	font-family: Trebuchet MS, Verdana, Arial, sans-serif;
+	font-size: 10pt;
+	text-align:center;
+}
+
+h1 {
+	font-size: 14pt;
+	margin: 0%;
+}
+
+div#contentdetalle{clear:left;
+                   max-width:900px;
+				   border-top:0px solid #999;
+				   padding-top:15px;
+				   background-color: #aed7a8;
+				   text-align:left;
+				   font-size:1.3em;
+				   font-weight:normal;
+				   font-family:arial;
+				   padding:20px}
+				   
+.recuadro {
+  background-color:#ffffcc;
+  text-align:left;
+  font-family:courier;
+  font-size:1em;
+  border-width:0;
+  padding:5px;
+
+  border: 1px dotted #ffaa00;
+  margin-left:5px;  
+}		
+
+.tablajs {
+    border-collapse: collapse;
+    background-color: #fff;
+    border: 1px solid #dee2e6;    
+    padding: 0.3rem;    
+}
+
+.tablajs th,
+.tablajs td {
+  padding: 0.75rem;
+  vertical-align: top;
+  border-top: 1px solid #dee2e6;
+}
+
+		   
+</style>
+
+<style>
+.uno { width: 320px; height: 100px; }
+@media(min-width: 500px) { .uno { width: 320px; height: 100px; } }
+@media(min-width: 800px) { .uno { width: 336px; height: 280px; } }
+
+.dos { width: 320px; height: 100px; }
+@media(min-width: 500px) { .dos { width: 320px; height: 100px; } }
+@media(min-width: 800px) { .dos { width: 336px; height: 280px; } }
+</style>
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','../../../www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-80268657-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</head>
+
+<body>
+
+<div class="upperleft">
+  <div class="upperright">
+    <div class="lowerleft">
+      <div class="lowerright">
+<table width="98%">
+<tr>
+<td>
+<span style="float:right"><a target="_blank" style="margin-right:0.1em;" href="https://www.tutorialesprogramacionya.com/">Listado completo de tutoriales</a></span>
+<h1>ES6 - Módulos</h1></td>
+<td align="right">
+
+
+</td>
+</tr>
+</table>
+
+      </div>
+    </div>
+  </div>
+</div>
+<br>
+
+
+<div class="upperleft">
+  <div class="upperright">
+    <div class="lowerleft">
+      <div class="lowerright">
+
+<div id="contentdetalle">
+
+<div style="display:block;float:left;margin: 5px;"> 
+ <script async src="../../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<!-- adaptable1 -->
+<ins class="adsbygoogle uno"
+     style="display:inline-block"
+     data-ad-client="ca-pub-4669394804436935"
+     data-ad-slot="4716538363"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script> 
+</div> 
+
+<p>Un módulo es un archivo de JavaScript que agrupa funciones, clases, variables que luego pueden ser exportadas y utilizadas en otras partes de nuestra aplicación. Un módulo permite ocultar funcionalidad del mismo y solo exportar aquello para lo que ha sido implementado.</p>
+<p>Esta característica agregada a JavaScript nos permite implementar programas mucho más ordenados y facilita la reutilización del código.</p>
+<h3>export e import</h3>
+<p>Veamos un ejemplo donde implementamos un módulo y luego lo consumimos:</p>
+<p>modulo1.js</p>
+<pre class="recuadro">
+export function sumar(x, y) {
+    return x + y;
+}
+
+export function restar(x, y) {
+    return x - y;
+}
+</pre>
+<p>El módulo consta de 2 funciones exportadas, podría haber dentro del módulo otras funciones, clases, variables etc. sin la palabra export que solo se pueden acceder dentro del módulo.</p>
+<p>Para consumir un módulo desde otro módulo o una página HTML debemos utilizar la palabra clave import:</p>
+<pre class="recuadro">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+
+&lt;head&gt;
+    &lt;title&gt;Ejemplo de JavaScript&lt;/title&gt;
+    &lt;meta charset="UTF-8"&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+
+    &lt;script type="module"&gt;
+
+        import {sumar, restar} from './modulo1.js'; 
+        alert(sumar(3,8)); 
+        alert(restar(10,3));
+
+    &lt;/script&gt;
+&lt;/body&gt;
+
+&lt;/html&gt;
+</pre>
+
+<p>Luego de la palabra clave import indicamos entre llaves los nombres de las funciones, clases, variables, constantes etc. que importamos, también debemos indicar entre comillas el nombre del módulo y el path o dirección donde se almacena (con ./ indicamos que se encuentra en la misma carpeta):</p>
+<pre>
+        import {sumar, restar} from './modulo1.js'; 
+</pre>
+<p>Una vez importado los recursos del paquete los podemos acceder por su nombre:</p>
+<pre>
+        alert(sumar(3,8)); 
+</pre>
+<p>Es muy importante indicarle al navegador que estamos utilizando la nueva tecnología de módulos asignando a la propiedad type el valor de 'module':</p>
+<pre>
+    &lt;script type="module"&gt;
+</pre>
+
+<p>Para exportar recursos de un módulo podemos utilizar otra sintaxis:</p>
+<pre>
+function sumar(x,y) {
+    return x+y;
+}
+
+function restar(x,y) {
+    return x-y;
+}
+
+export {sumar, restar};
+</pre>
+<p>En un principio se definen dos funciones privadas al módulo y luego mediante la palabra clave export y entre llaves indicamos los nombres de las funciones a exportar.</p>
+
+<h3>default export</h3>
+<p>Es una práctica común en JavaScript crear módulos que exporten un único valor. En estos casos tenemos una sintaxis distinta para indicar el recurso a exportar mediante las palabras claves 'default export'.</p>
+<p>Veamos un ejemplo donde almacenamos en un módulo la clase Dado y la exportamos por defecto:</p>
+<p>dado.js</p>
+<pre class="recuadro">
+export default class Dado {
+    constructor() {
+        this.tirar();
+    }
+  
+    get valor() {
+        return this._valor;
+    }
+  
+    tirar() {
+        this._valor=Math.trunc(Math.random()*6)+1;
+    }
+}
+</pre>
+<p>Luego cambia la sintaxis cuando tenemos que importar la clase:</p>
+<pre class="recuadro">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+
+&lt;head&gt;
+    &lt;title&gt;Ejemplo de JavaScript&lt;/title&gt;
+    &lt;meta charset="UTF-8"&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+
+    &lt;script type="module"&gt;
+
+        import Dado from './dado.js';
+        const dado1 = new Dado();
+        alert(dado1.valor);
+        dado1.tirar();
+        alert(dado1.valor);
+
+    &lt;/script&gt;
+&lt;/body&gt;
+
+&lt;/html&gt;
+</pre>
+<p>No debemos indicar entre llaves el recurso a importar (si las disponemos se genera un error sintáctico):</p>
+<pre>
+        import Dado from './dado.js';
+</pre>
+
+<p>Otra práctica común es no indicar el nombre de la clase en el módulo, luego el nombre del módulo representa la clase:</p>
+<pre>
+export default class {
+    constructor() {
+        this.tirar();
+    }
+  
+    get valor() {
+        return this._valor;
+    }
+  
+    tirar() {
+        this._valor=Math.trunc(Math.random()*6)+1;
+    }
+}
+</pre>
+<p>Hemos indicado export default para la clase, luego el archivo se llama 'dado.js' y representa dicha clase. No hay cambios para hacer uso de la clase:</p>
+<pre>
+    import Dado from './dado.js';
+</pre>
+
+<h3>export y default export en el mismo módulo</h3>
+<p>Un módulo solo puede exportar por defecto un solo recurso pero puede tener otros recursos que se exportan. Veamos un ejemplo:</p>
+<pre class="recuadro">
+export default class{
+    constructor() {
+        this.tirar();
+    }
+  
+    get valor() {
+        return this._valor;
+    }
+  
+    tirar() {
+        this._valor=Math.trunc(Math.random()*6)+1;
+    }
+}
+
+export const lados=6;
+</pre>
+<p>En éste módulo se exporta por defecto la clase y además se exporta una constante llamada lados.</p>
+<p>Para consumir los dos valores exportados por este módulo tenemos la siguiente sintaxis:</p>
+<pre class="recuadro">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+
+&lt;head&gt;
+    &lt;title&gt;Ejemplo de JavaScript&lt;/title&gt;
+    &lt;meta charset="UTF-8"&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+
+    &lt;script type="module"&gt;
+
+        import Dado, { lados } from './dado.js';
+        const dado1 = new Dado();
+        alert('valor del dado:' + dado1.valor);
+        alert('lados del dado:' + lados);
+
+    &lt;/script&gt;
+&lt;/body&gt;
+
+&lt;/html&gt;
+</pre>
+<p>Importamos la clase por defecto y la constante lados:</p>
+<pre>
+  import Dado, {lados} from './dado.js';
+</pre>
+
+<h3>Importar todos los recursos definidos con export.</h3>
+<p>Si un módulo tiene varios recursos definidos con la palabra clave export luego los podemos importar a todos juntos utilizando la siguiente sintaxis:</p>
+<pre>
+&lt;script type="module"&gt;
+
+    import * as operacion from './modulo1.js';
+    alert(operacion.sumar(3,8));
+    alert(operacion.restar(10,3));
+
+&lt;/script&gt;  
+</pre>
+<p>Importamos el módulo1.js que tiene dos funciones export y definimos luego de la palabra clave as el nombre de un objeto que tendrá como propiedades los recursos exportados por dicho módulo.</p>
+<p>Llamamos ahora a cada función antecediendo el nombre del objeto creado:</p>
+<pre>
+    alert(operacion.sumar(3,8));
+</pre>
+
+<h3>Importar un valor por defecto definiendo un alias.</h3>
+<p>Otra sintaxis para importar un recurso definido con 'export default' es mediante la sintaxis:</p>
+<pre class="recuadro">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+
+&lt;head&gt;
+    &lt;title&gt;Ejemplo de JavaScript&lt;/title&gt;
+    &lt;meta charset="UTF-8"&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+
+    &lt;script type="module"&gt;
+
+        import { default as Dado, lados } from './dado.js';
+        const dado1 = new Dado();
+        alert('valor del dado:' + dado1.valor);
+        alert('lados del dado:' + lados);
+
+    &lt;/script&gt;
+&lt;/body&gt;
+
+&lt;/html&gt;
+</pre>
+<p>Utilizamos la palabra clave default y seguidamente el nombre o alias que se asigna al recurso importado (debe ir entre llaves como cuando importamos valores definidos con 'export'):</p>
+<pre>
+    import {default as Dado, lados} from './dado.js';
+</pre>
+
+<h3>Reexportar un recurso importado en un módulo.</h3>
+<p>Un módulo que importa un recurso puede reexportar el mismo. Veamos un ejemplo con dos módulos y el archivo html:</p>
+<p>dado.js</p>
+<pre class="recuadro">
+export default class{
+    constructor() {
+        this.tirar();
+    }
+  
+    get valor() {
+        return this._valor;
+    }
+  
+    tirar() {
+        this._valor=Math.trunc(Math.random()*6)+1;
+    }
+}
+
+export const lados=6;
+</pre>
+
+<p>juegodedados.js</p>
+<pre class="recuadro">
+import Dado, {lados} from './dado.js'
+
+export class JuegoDeDados {
+    constructor() {
+        this.dado1=new Dado();
+        this.dado2=new Dado();
+        this.dado3=new Dado();
+    }
+
+    sumaDados() {
+        return this.dado1.valor+this.dado2.valor+this.dado3.valor;
+    }
+}
+
+export {lados};
+</pre>
+
+<p>El módulo 'juegodedados.js' importa la clase por defecto 'Dado' y la constante 'lados'. Luego este módulo exporta la clase JuegoDeDados y reexporta 'lados':</p>
+<pre>
+export {lados};
+</pre>
+
+<p>pagina1.html</p>
+<pre class="recuadro">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+
+&lt;head&gt;
+    &lt;title&gt;Ejemplo de JavaScript&lt;/title&gt;
+    &lt;meta charset="UTF-8"&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+
+    &lt;script type="module"&gt;
+
+        import { JuegoDeDados, lados } from './juegodedados.js';
+        const juego = new JuegoDeDados();
+        alert('suma de los tres dados:' + juego.sumaDados());
+        alert('lados del dado:' + lados);
+
+    &lt;/script&gt;
+&lt;/body&gt;
+
+&lt;/html&gt;
+</pre>
+
+<p>Como vemos solo importamos el módulo 'juegodedados.js' y recuperamos la clase JuegoDeDados y lados:</p>
+<pre>
+        import { JuegoDeDados, lados } from './juegodedados.js';
+</pre>
+<p>No hace falta importar el módulo 'dado.js' para acceder a la constante 'lados'.</p>
+
+<p>Si en el módulo 'juegodedados.js' no haremos uso de la constante 'lados' pero queremos reexportar la misma podemos utilizar ésta otra sintaxis:</p>
+<pre>
+import Dado from './dado.js'
+
+export class JuegoDeDados {
+    constructor() {
+        this.dado1=new Dado();
+        this.dado2=new Dado();
+        this.dado3=new Dado();
+    }
+
+    sumaDados() {
+        return this.dado1.valor+this.dado2.valor+this.dado3.valor;
+    }
+}
+
+export {lados} from './dado.js';
+</pre></p>
+</div>
+
+<div>
+<!--publi-->
+<script async src="../../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<!-- adaptable2 -->
+<ins class="adsbygoogle dos"
+     style="display:inline-block"
+     data-ad-client="ca-pub-4669394804436935"
+     data-ad-slot="5774469161"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+<!--publi-->
+<script async src="../../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<!-- adaptable2 -->
+<ins class="adsbygoogle dos"
+     style="display:inline-block"
+     data-ad-client="ca-pub-4669394804436935"
+     data-ad-slot="5774469161"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+</div>
+
+
+   <h2><a href="../indexf6ce.html?inicio=100">Retornar</a></h2>   
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+</body>
+
+
+<!-- Mirrored from www.tutorialesprogramacionya.com/javascriptya/temarios/descripcion.php?inicio=100&cod=102 by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 18 Mar 2024 10:33:26 GMT -->
+</html>

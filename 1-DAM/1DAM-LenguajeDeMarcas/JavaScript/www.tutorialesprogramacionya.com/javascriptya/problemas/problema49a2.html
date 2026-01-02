@@ -1,0 +1,506 @@
+<!doctype html>
+<html>
+
+<!-- Mirrored from www.tutorialesprogramacionya.com/javascriptya/problemas/problema.php?cod=12&inicio=10 by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 18 Mar 2024 10:33:04 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QWKWPBDEFK"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-QWKWPBDEFK');
+</script>
+<script async src="../../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-4669394804436935",
+    enable_page_level_ads: true
+  });
+</script>
+    <title>JavaScript Ya</title>
+    <meta charset="UTF-8">    
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="estilos.css" rel="stylesheet">
+    <link href='../../../ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/themes/smoothness/jquery-ui.css' rel='stylesheet'>     
+    <script src='../../../ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js'></script> 
+    <script src='../../../ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.min.js'></script>     
+	
+    <link rel="stylesheet" href="../../../cdnjs.cloudflare.com/ajax/libs/codemirror/5.62.2/codemirror.min.css">
+    <script type="text/javascript" src="../../../cdnjs.cloudflare.com/ajax/libs/codemirror/5.62.2/codemirror.min.js"></script>
+    <script type="text/javascript" src="../../../cdnjs.cloudflare.com/ajax/libs/codemirror/5.62.2/mode/javascript/javascript.min.js"></script>
+    <script type="text/javascript" src="../../../cdnjs.cloudflare.com/ajax/libs/codemirror/5.62.2/mode/htmlmixed/htmlmixed.min.js"></script>
+    <script type="text/javascript" src="../../../cdnjs.cloudflare.com/ajax/libs/codemirror/5.62.2/mode/xml/xml.min.js"></script>	
+	<script type="text/javascript" src="../../../cdnjs.cloudflare.com/ajax/libs/codemirror/5.62.2/mode/css/css.min.js"></script>	
+	
+    
+<script type="text/javascript">	
+$(document).ready(function(){
+  var opciones = {
+                   select:tabSeleccionado
+                 };                 
+  $("#pesta").tabs(opciones);
+});
+
+function tabSeleccionado(event,tab) {
+ /* if (tab.index==1) {
+	parent.documentodinamico.location.reload();	
+  }*/
+  /*if (tab.index==2) {
+    var d = parent.documentodinamico.document; 	
+    d.open();
+	d.write(String.fromCharCode(60)+"script ");
+	d.write(' src="debug.js">');
+	d.write(String.fromCharCode(60)+"/script"+String.fromCharCode(62));
+	d.write($('#editor').val());
+    d.close();	*/
+ if (tab.index==2) {
+	document.getElementById('documentodinamico').src += ' ';
+	document.getElementById('documentodinamico').addEventListener('load',registrar)
+  }		
+  	
+}
+
+
+
+function registrar(e){
+	
+	
+	
+    var d = parent.documentodinamico.document; 	
+    d.open();
+	d.write(String.fromCharCode(60)+"script ");
+	d.write(' src="debug.js">');
+	d.write(String.fromCharCode(60)+"/script"+String.fromCharCode(62));
+	
+	
+	d.write(editor.getValue());
+
+	
+	
+    d.close();	
+	document.getElementById('documentodinamico').removeEventListener("click", registrar);
+	}
+
+
+</script>
+	
+<style type="text/css">	
+.recuadrooculto {
+  background-color:#ffffcc;
+  text-align:left;
+  font-family:courier;
+
+  border-width:0;
+  padding:5px;
+
+  border: 1px dotted #ffaa00;
+  display: none;
+}
+
+ li {
+    padding:10px;
+ }
+</style>	
+<style>
+.uno { width: 320px; height: 100px; }
+@media(min-width: 500px) { .uno { width: 320px; height: 100px; } }
+@media(min-width: 800px) { .uno { width: 300px; height: 250px; } }
+
+.dos { width: 320px; height: 100px; }
+@media(min-width: 500px) { .dos { width: 320px; height: 100px; } }
+@media(min-width: 800px) { .dos { width: 970px; height: 250px; } }
+</style>
+	
+<script type="text/javascript">
+function cambiar()
+{
+  var lista=document.getElementsByTagName('pre');
+  for(f=0;f<lista.length;f++)
+  {
+   lista[f].style.display='block';
+  }
+  document.getElementById('solucion').style.display='none';
+}
+
+</script>	
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','../../../www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-80268657-1', 'auto');
+  ga('send', 'pageview');
+
+</script>	
+</head>
+<body>
+
+
+
+
+<h1>Concepto de acumulador.</h1>
+
+
+<div id="pesta">
+	<ul>
+		<li><a href="#p1">Problemas</a></li>    	
+		<li><a href="#p2">Codificar problema</a></li>
+		<li><a href="#p3">Ejecución problema</a></li>
+	</ul>
+	<div id="p1" style="background:#fafafa;padding:30px; max-height: 700px; min-height: 700px;;overflow: auto;font-size:13pt">
+		
+	<b>PROBLEMAS</b><br><br>
+Ha llegado la parte fundamental, que es el momento donde uno desarrolla individualmente un algoritmo para la resolución de problemas.<br>
+El tiempo a dedicar a esta sección EJERCICIOS PROPUESTOS debe ser mucho mayor que el empleado al ver EJERCICIOS RESUELTOS.<br>
+La experiencia dice que debemos dedicar el 80 % del tiempo a la resolución individual de problemas y el otro 20 % al análisis y codificación de problemas ya resueltos por otras personas.<br>
+Es de vital importancia para llegar a ser un buen PROGRAMADOR poder resolver problemas en forma individual.<br>
+<br>
+<ol>
+<li>
+Escribir un programa que lea 10 notas de alumnos y nos informe cuántos tienen notas mayores o iguales a 7 y cuántos menores.
+</li>
+<li>
+Se ingresan un conjunto de 5 alturas de personas por teclado. Mostrar la altura promedio de las personas.
+</li>
+<li>
+En una empresa trabajan 5 empleados cuyos sueldos oscilan entre $100 y $500, realizar un programa que lea los sueldos que cobra cada empleado e informe cuántos empleados cobran entre $100 y $300 y cuántos cobran más de $300. Además el programa deberá informar el importe que gasta la empresa en sueldos al personal.
+</li>
+<li>
+Realizar un programa que imprima 20 términos de la serie 5 - 10 - 15 - 20, etc. (No se ingresan valores por teclado)
+</li>
+<li>
+Mostrar los múltiplos de 10 hasta el valor 1500.<br>
+Debe aparecer en pantalla 10 - 20 -30 etc.
+</li>
+<li>
+Realizar un programa que permita cargar dos listas de 3 valores cada una. Informar con un mensaje cual de las dos listas tiene un valor acumulado mayor (mensajes 'Lista 1 mayor', 'Lista 2 mayor', 'Listas iguales')<br>
+Tener en cuenta que puede haber dos o más estructuras repetitivas en un algoritmo.
+</li>
+<li>
+Desarrollar un programa que permita cargar 5 números enteros y luego nos informe cuántos valores fueron pares y cuántos impares.<br>
+Emplear el operador "%" en la condición de la estructura condicional.
+<pre>
+	if (valor%2==0)
+</pre>
+El operador "%" retorna el resto de la división valor / 2. Por ejemplo: 12 % 2, retorna 0; 13 % 2, retorna 1, porque el resto de dividir 13 en 2 es 1.
+</li>
+</ol>
+
+<div style="margin-top:20px">
+<a href="javascript:cambiar()" id="solucion">Solución</a>
+</div>
+<pre class="recuadrooculto">
+Problema 1.
+
+
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+
+&lt;head&gt;
+    &lt;title&gt;Ejemplo de JavaScript&lt;/title&gt;
+    &lt;meta charset="UTF-8"&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+
+    &lt;script&gt;
+        let x = 0; 
+        let cant1 = 0;
+        let cant2 = 0;
+        while (x &lt; 10) {
+            let nota;
+            nota = parseInt(prompt('Ingrese nota'));
+            if (nota &gt;= 7) {
+                cant1 = cant1 + 1;
+            } else {
+                cant2 = cant2 + 1;
+            }
+            x = x + 1;
+        }
+        document.write('Cantidad de alumnos con notas mayores o iguales a 7:' + cant1);
+        document.write('&lt;br&gt;');
+        document.write('Cantidad de alumnos con notas menores a 7:' + cant2);
+    &lt;/script&gt;
+
+&lt;/body&gt;
+
+&lt;/html&gt;
+     
+
+
+Problema 2.
+
+
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+
+&lt;head&gt;
+    &lt;title&gt;Ejemplo de JavaScript&lt;/title&gt;
+    &lt;meta charset="UTF-8"&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+
+    &lt;script&gt;
+        let x = 0;
+        let suma = 0;
+        while (x &lt; 5) {
+            let altura;
+            altura = parseInt(prompt('Ingrese la altura en centímetros(Ej. 175)'));
+            suma = suma + altura;
+            x = x + 1;
+        }
+        let promedio = suma / 5;
+        document.write('La altura promedio de las cinco personas es:' + promedio);
+    &lt;/script&gt;
+
+&lt;/body&gt;
+
+&lt;/html&gt;
+     
+
+
+Problema 3.
+
+
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+
+&lt;head&gt;
+    &lt;title&gt;Ejemplo de JavaScript&lt;/title&gt;
+    &lt;meta charset="UTF-8"&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+
+    &lt;script&gt;
+        let cont1 = 0;
+        let cont2 = 0;
+        let total = 0;
+        let sueldo;
+        let x = 0;
+        while (x &lt; 5) {
+            sueldo = parseInt(prompt('Ingrese el sueldo'));
+            if (sueldo &lt;= 300) {
+                cont1 = cont1 + 1;
+            } else {
+                cont2 = cont2 + 1;
+            }
+            total = total + sueldo;
+            x = x + 1;
+        }
+        document.write('Cantidad de empleados que cobran 300 o menos:' + cont1);
+        document.write('&lt;br&gt;');
+        document.write('Cantidad de empleados que cobran más de 300:' + cont2);
+        document.write('&lt;br&gt;');
+        document.write('Gastos en sueldos en la empresa:' + total);
+    &lt;/script&gt;
+
+&lt;/body&gt;
+
+&lt;/html&gt;
+     
+
+
+Problema 4.
+
+
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+
+&lt;head&gt;
+    &lt;title&gt;Ejemplo de JavaScript&lt;/title&gt;
+    &lt;meta charset="UTF-8"&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+
+    &lt;script&gt;
+        let serie = 5;
+        let x = 0;
+        while (x &lt; 20) {
+            document.write(serie + ' ');
+            x = x + 1;
+            serie = serie + 5;
+        }
+    &lt;/script&gt;
+
+&lt;/body&gt;
+
+&lt;/html&gt;
+
+
+
+Problema 5.
+
+
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+
+&lt;head&gt;
+    &lt;title&gt;Ejemplo de JavaScript&lt;/title&gt;
+    &lt;meta charset="UTF-8"&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+
+    &lt;script&gt;
+        document.write('Múltiplos de 10 hasta el 1500&lt;br&gt;');
+        let multiplo = 10;
+        while (multiplo &lt;= 1500) {
+            document.write(multiplo + ' ');
+            multiplo = multiplo + 10;
+        }
+    &lt;/script&gt;
+
+&lt;/body&gt;
+
+&lt;/html&gt;     
+
+
+
+Problema 6.     
+
+
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+
+&lt;head&gt;
+    &lt;title&gt;Ejemplo de JavaScript&lt;/title&gt;
+    &lt;meta charset="UTF-8"&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+
+    &lt;script&gt;
+        let total1 = 0;
+        let x = 0;
+        let nro;
+        while (x &lt; 3) {
+            nro = parseInt(prompt('Ingrese valor de la primer lista:'));
+            total1 = total1 + nro;
+            x = x + 1;
+        }
+        let total2 = 0;
+        x = 0;
+        while (x &lt; 3) {
+            nro = parseInt(prompt('Ingrese valor de la segunda lista:', ''));
+            total2 = total2 + nro;
+            x = x + 1;
+        }
+        if (total1 &gt; total1) {
+            document.write('Tiene mayor valor la lista1');
+        } else {
+            if (total1 &lt; total2) {
+                document.write('Tiene mayor valor la lista2');
+            } else {
+                document.write('Tienen el mismo valor acumulado las dos listas');
+            }
+        }
+    &lt;/script&gt;
+
+&lt;/body&gt;
+
+&lt;/html&gt;
+
+
+
+Problema 7.
+
+
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+
+&lt;head&gt;
+    &lt;title&gt;Ejemplo de JavaScript&lt;/title&gt;
+    &lt;meta charset="UTF-8"&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+
+    &lt;script&gt;
+        let cantpares = 0;
+        let cantimpares = 0;
+        let x = 0;
+        let valor;
+        while (x &lt; 5) {
+            valor = parseInt(prompt('Ingrese un valor'));
+            if (valor % 2 == 0) {
+                cantpares = cantpares + 1;
+            } else {
+                cantimpares = cantimpares + 1;
+            }
+            x = x + 1;
+        }
+        document.write('Cantidad de valores pares ingresados:' + cantpares);
+        document.write('&lt;br&gt;');
+        document.write('Cantidad de valores impares ingresados:' + cantimpares);
+    &lt;/script&gt;
+
+&lt;/body&gt;
+
+&lt;/html&gt;
+    
+</pre>	</div>    	
+	<div id="p2">
+    <textarea name="editor" id="editor" rows="28" style="width:890px;height:700px;font-size:16px;font-family:courier">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;Ejemplo de JavaScript&lt;/title&gt;
+    &lt;meta charset="UTF-8"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+    &lt;script&gt;
+
+    &lt;/script&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+    
+</textarea>
+	</div>
+	<div id="p3">
+<iframe width="900" height="700" id="documentodinamico" name="documentodinamico" src="vacio.html">
+No tiene disponible el navegador la capacidad de iframe
+</iframe>
+	</div>
+</div>
+<br>
+<div>
+<!--publi-->
+<script async src="../../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<!-- adaptable2 -->
+<ins class="adsbygoogle dos"
+     style="display:inline-block"
+     data-ad-client="ca-pub-4669394804436935"
+     data-ad-slot="5774469161"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+
+<br>
+   <h2><a href="../index4231.html?inicio=10">Retornar al menu</a></h2>   
+<br>
+
+<script>
+var editor = CodeMirror.fromTextArea(document.getElementById('editor'), {
+    mode: "htmlmixed",
+    lineNumbers: true,
+	indentUnit: 4,
+});
+editor.setSize(890, 700);
+
+window.dispatchEvent(new Event('resize'));
+</script>
+</body>
+
+<!-- Mirrored from www.tutorialesprogramacionya.com/javascriptya/problemas/problema.php?cod=12&inicio=10 by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 18 Mar 2024 10:33:04 GMT -->
+</html>

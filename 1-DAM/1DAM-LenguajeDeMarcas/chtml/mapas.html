@@ -1,0 +1,68 @@
+<!--Este documento ha sido generado con XT, de James Clark--><html xmlns:date="http://www.jclark.com/xt/java/java.util.Date"><head><title>Curso de HTML: Mapas</title><META HTTP-EQUIV="pragma" CONTENT="no-cache"></head><!--Cuerpo del documento--><body bgcolor="#FEFEFE"><table width="630" border="0"><tr><td valign="top" align="center" width="40" rowspan="2"><a href="index.html"><img src="graficos/logo.jpg" border="0"></a></td><td align="center" width="590"><IFRAME SRC="http://ad.es.doubleclick.net/adi/ES-programacion.net/ES-redferca-programacion-html;sz=468x60;ord=44126913875755190?" name="frame1" width="468" height="60" frameborder="no" border="0" MARGINWIDTH="0" MARGINHEIGHT="0" SCROLLING="no"><SCRIPT language="JavaScript1.1" SRC="http://ad.es.doubleclick.net/adj/ES-programacion.net/ES-redferca-programacion-html;abr=!ie;sz=468x60;ord=44126913875755190?"></SCRIPT><NOSCRIPT><A HREF="http://ad.es.doubleclick.net/jump/ES-programacion.net/ES-redferca-programacion-html;abr=!ie;sz=468x60;ord=44126913875755190?"><IMG SRC="http://ad.es.doubleclick.net/ad/ES-programacion.net/ES-redferca-programacion-html;abr=!ie;sz=468x60;ord=44126913875755190?" border="0" height="60" width="468"></A></NOSCRIPT></IFRAME></td></tr><tr><td valign="top"><font face="Arial,Helvetica,sans-serif"><font size="+3" color="#005CA0"><b>13. Mapas<img src="graficos/32.gif" width="26" height="26" border="0" align="middle"></b></font>
+      <p align="justify">Hemos visto que podemos hacer enlaces de texto y de gr&aacute;ficos. Pero
+      tambi&eacute;n existe otra posibilidad: que dentro de una sola imagen podamos
+      acceder a varios enlaces. Se hace declarando zonas dentro de la imagen
+      (rect&aacute;ngulos, c&iacute;rculos, etc..), siendo cada una de ellas un
+    enlace distinto. Tradicionalmente, siempre han existido dos maneras de hacerlo:</p>
+    <ul>
+      <li>Mapas gestionados por el cliente (el navegador).</li>
+      <li>Mapas gestionados por el servidor.</li>
+    </ul>
+    <p align="justify">Los segundos fueron los primeros en desarrollarse y estaban incluidos
+    dentro del est&aacute;ndar HTML 2.0. Sin embargo, nunca hubo una manera
+    com&uacute;n de gestionar esos mapas. Debido a ello, Netscape elabor&oacute;
+    un sistema propio que fue incluido en el est&aacute;ndar 3.2: los mapas
+    gestionados por el navegador.</p>
+  <br><br><a name="1"></a><font size="+2" color="#005CA0">13.1. Mapas gestionados por el cliente</font>
+    <p align="justify">Para utilizarlos necesitaremos dos cosas: declarar el mapa y asignarlo
+    a una imagen. Vamos primero a declarar nuestro mapa:</p>
+    <pre><font color="#006600" face="monospace">&lt;MAP NAME="mi_mapa"&gt;
+&nbsp;&nbsp;&lt;AREA SHAPE=... COORDS=... ALT="Enlace a.."&gt;
+&nbsp;&nbsp;...
+&lt;/MAP&gt;</font></pre>
+    <p align="justify">Dentro de la etiqueta <tt><font color="#006600" face="monospace">MAP</font></tt> s&oacute;lo podremos definir el
+    nombre del mapa (algo imprescindible, por otra parte). Es dentro de cada
+    elemento <tt><font color="#006600" face="monospace">AREA</font></tt> donde podremos definir cosas m&aacute;s
+    interesantes:</p>
+    <table align="center" border="1"><tr><th>Par&aacute;metro</th><th>Utilidad</th></tr><tr><td><tt><font color="#006600" face="monospace">SHAPE</font></tt></td><td><font face="Arial,Helvetica,sans-serif">Define la forma de la zona, que podr&aacute; ser rectangular,
+        circular o poligonal.</font></td></tr><tr><td><tt><font color="#006600" face="monospace">COORDS</font></tt></td><td><font face="Arial,Helvetica,sans-serif">Coordenadas (separadas por comas) que definen la zona. El
+        n&uacute;mero y significado de esas coordenadas depender&aacute; de la
+        zona.</font></td></tr><tr><td><tt><font color="#006600" face="monospace">HREF</font></tt></td><td><font face="Arial,Helvetica,sans-serif">URL a donde ir&aacute; el usuario si pulsa sobre esa
+        zona.</font></td></tr><tr><td><tt><font color="#006600" face="monospace">NOHREF</font></tt></td><td><font face="Arial,Helvetica,sans-serif">Especifica que esa zona no tiene asignado enlace alguno.</font></td></tr><tr><td><tt><font color="#006600" face="monospace">ALT</font></tt></td><td><font face="Arial,Helvetica,sans-serif">Texto que se presentar&aacute; en lugar de la imagen en
+        navegadores no gr&aacute;ficos para acceder al enlace.</font></td></tr></table>
+    <p align="justify">Como podemos ver, para declarar correctamente una zona necesitamos conocer
+    c&oacute;mo se definen exactamente las formas y coordenadas:</p>
+    <table align="center" border="1"><tr><th></th><th>SHAPE</th><th>COORDS</th></tr><tr><td><font face="Arial,Helvetica,sans-serif">Rectangular</font></td><td><tt><font color="#006600" face="monospace">RECT</font></tt></td><td><font face="Arial,Helvetica,sans-serif">"x1,y1,x2,y2" siendo (x1,y1) la esquina superior izquierda y
+        (x2,y2) la inferior derecha.</font></td></tr><tr><td><font face="Arial,Helvetica,sans-serif">Circular</font></td><td><tt><font color="#006600" face="monospace">CIRC</font></tt></td><td><font face="Arial,Helvetica,sans-serif">"x,y,radio" siendo (x,y) el centro del c&iacute;rculo y radio
+        su... eehh.. &iquest;c&oacute;mo lo dir&iacute;a yo? &iquest;Su radio?.</font></td></tr><tr><td><font face="Arial,Helvetica,sans-serif">Pol&iacute;gono irregular</font></td><td><tt><font color="#006600" face="monospace">POLY</font></tt></td><td><font face="Arial,Helvetica,sans-serif">"x1,y1,x2,y2,x3,y3,..." definiendo cada pareja (x,y) una esquina
+        del pol&iacute;gono. La &uacute;ltima pareja de coordenadas se unir&aacute;
+        a la primera para cerrar el pol&iacute;gono.</font></td></tr><tr><td><font face="Arial,Helvetica,sans-serif">Toda la imagen</font></td><td><tt><font color="#006600" face="monospace">DEFAULT</font></tt></td><td><font face="Arial,Helvetica,sans-serif">No se indican.</font></td></tr></table>
+  <br><br><a name="2"></a><font size="+2" color="#005CA0">13.2. C&oacute;mo usar un mapa</font>
+    <p align="justify">Ahora que hemos definido un mapa, s&oacute;lo queda asignarlo a una
+    imagen. Esto se hace del siguiente modo:</p>
+    <div align="center"><pre><font color="#006600" face="monospace">&lt;IMG SRC=... USEMAP="#mi_mapa"&gt;</font></pre></div>
+    <p align="justify">Siempre tenemos que a&ntilde;adir al comienzo del nombre de nuestro mapa
+    una almohadilla (#). Vamos a ver un ejemplo:</p>
+    <pre><font color="#006600" face="monospace">&lt;MAP NAME="navegadores"&gt;
+  &lt;AREA SHAPE=RECT COORDS="0,0,24,31"
+        HREF="http://www.netscape.com" ALT="Netscape"&gt;
+  &lt;AREA SHAPE=RECT COORDS="26,0,53,31"
+        HREF="http://www.microsoft.com" ALT="Microsoft"&gt;
+  &lt;AREA SHAPE=DEFAULT NOHREF ALT="Nada"&gt;
+&lt;/MAP&gt;
+&lt;IMG SRC="nav.gif" WIDTH=53 HEIGHT=31 BORDER=0 USEMAP="#navegadores"&gt;</font></pre>
+    <p align="justify">Se ve tal que as&iacute;:</p>
+    
+<MAP NAME="navegadores">
+  <AREA SHAPE="RECT" COORDS="0,0,24,31" HREF="http://www.netscape.com" ALT="Netscape"/>
+  <AREA SHAPE="RECT" COORDS="26,0,53,31" HREF="http://www.microsoft.com" ALT="Microsoft"/>
+  <AREA SHAPE="DEFAULT" NOHREF="NOHREF" ALT="Nada"/>
+</MAP>
+<DIV ALIGN="CENTER"><IMG SRC="graficos/nav.gif" WIDTH="53" HEIGHT="31" BORDER="0" USEMAP="#navegadores"/></DIV>
+      
+    <p align="justify">Hay que tener en cuenta que, cuando dos zonas se solapan, la que est&eacute;
+    declarada primero es la que tiene preferencia. Por eso declaramos al final una
+    zona que no conduce a ning&uacute;n URL por si el usuario pulsa con el rat&oacute;n
+    donde no debe.</p>
+  <p></p><img src="graficos/linea.gif" height="1" width="590"><table cellspacing="0" cellpadding="0" border="0" width="100%"><tr><td><img src="graficos/transp.gif" height="2" width="90"></td></tr></table><table cellspacing="0" cellpadding="0" border="0" width="100%"><tr><td align="left"><a href="formularios40.html"><img src="graficos/izq.gif" align="MIDDLE" border="0"></a><font size="-1" face="Arial,Helvetica,sans-serif">Controles avanzados para formularios</font></td><td align="right"><font size="-1" face="Arial,Helvetica,sans-serif">Tablas</font><a href="tablas.html"><img src="graficos/der.gif" align="MIDDLE" border="0"></a></td></tr></table><font size="-1"><div align="center">&copy; 1998-2000 <a href="mailto:multivac@idecnet.com">Daniel
+    Rodr&iacute;guez</a><br><a href="index.html"><img src="graficos/loguito.gif" border="0"></a></div></font></font></td></tr></table></body></html>

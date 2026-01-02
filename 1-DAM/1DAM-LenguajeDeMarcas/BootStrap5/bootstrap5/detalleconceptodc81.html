@@ -1,0 +1,479 @@
+
+<!DOCTYPE html>
+<html>
+
+
+<!-- Mirrored from www.tutorialesprogramacionya.com/bootstrap5ya/detalleconcepto.php?punto=63&codigo=63&inicio=60 by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 19 Dec 2023 11:11:23 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QWKWPBDEFK"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-QWKWPBDEFK');
+</script>
+
+<script async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-4669394804436935",
+    enable_page_level_ads: true
+  });
+</script>
+
+<title>Componente : dropdown (lista desplegable)</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">    
+<meta name="keywords" content="bootstrap 5,css, html, programación, webmaster, tutorial">
+<meta name="description" content="El objetivo de este tutorial 
+    es presentar los conceptos básicos de bootstrap 5.">
+<meta name="author" content="Diego Moisset">
+
+<link href="../css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="estilos.css">
+
+<style>
+html,body {
+	background-color: #D3E9D0;
+	font-family: sans-serif,arial;
+
+}
+</style>
+
+<style>
+.uno { width: 320px; height: 100px; }
+@media(min-width: 500px) { .uno { width: 320px; height: 100px; } }
+@media(min-width: 800px) { .uno { width: 336px; height: 280px; } }
+
+.dos { width: 320px; height: 100px; }
+@media(min-width: 500px) { .dos { width: 320px; height: 100px; } }
+@media(min-width: 800px) { .dos { width: 336px; height: 280px; } }
+</style>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','../../www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-80268657-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+</head>
+
+<body>
+
+
+<div class="container">
+
+<div class="row">
+  <div class="col-md-12">
+
+<div class="titulodetalle">
+<h1>63 - Componente : dropdown (lista desplegable)</h1></div>
+
+  </div>
+</div>  
+
+
+<div class="row">
+  <div class="col-md-12">
+
+<div class="cuerpodetalle">
+<div style="display:block;float:left;margin: 5px;"> 
+ <script async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<!-- adaptable1 -->
+<ins class="adsbygoogle uno"
+     style="display:inline-block"
+     data-ad-client="ca-pub-4669394804436935"
+     data-ad-slot="4716538363"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script> 
+</div> 
+
+
+<p>Una lista desplegable es una interfaz visual que al ser presionada muestra una lista de opciones que puede elegir el visitante.</p>
+<p>La funcionalidad de los dropdowns o listas desplegables se logra gracias a Javascript, por lo que no debemos olvidar de agregar el archivo bootstrap.bundle.min.js</p>
+<p>Veamos el código para implementar una lista desplegable básica:</p>
+<pre class="recuadro">
+&lt;!doctype html&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;title&gt;Prueba de Bootstrap 5&lt;/title&gt; 
+  &lt;meta charset="utf-8"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"&gt;
+  &lt;link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+  &lt;div class="container"&gt;
+    &lt;div class="dropdown"&gt;
+      &lt;button class="btn btn-primary dropdown-toggle" type="button" id="dropdown1" data-bs-toggle="dropdown"&gt;
+        Buscadores
+      &lt;/button&gt;
+      &lt;div class="dropdown-menu"&gt;
+        &lt;a class="dropdown-item" href="http://www.google.com"&gt;Google&lt;/a&gt;
+        &lt;a class="dropdown-item" href="http://www.bing.com"&gt;Bing&lt;/a&gt;
+        &lt;a class="dropdown-item" href="http://www.yahoo.com"&gt;Yahoo&lt;/a&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;  
+  &lt;/div&gt;
+
+  &lt;script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8" crossorigin="anonymous"&gt;&lt;/script&gt;  
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+<p>Cuando la lista desplegable se encuentra cerrada tiene una interfaz similar a esta:</p>
+
+<img src="imagentema/foto108.jpg" border="0" alt="bootstrap 5 dropdown"><br>
+
+<p>Cuando el usuario la presiona se despliegan las opciones ocultas:</p>
+<img src="imagentema/foto109.jpg" border="0" alt="bootstrap 5 dropdown"><br>
+
+<p>El div principal debe definir la clase "dropdown":</p>
+<pre>
+    &lt;div class="dropdown"&gt;
+</pre>
+<p>Dentro de este div disponemos un "button" que debe agregar a parte de las clases que conocemos btn, btn-primary la clase dropdown-toggle. Debemos definir la propiedad id con un nombre:</p>
+<pre>
+      &lt;button class="btn btn-primary dropdown-toggle" type="button" id="dropdown1" data-bs-toggle="dropdown"&gt;
+        Buscadores
+      &lt;/button&gt;
+</pre>
+<p>La lista de opciones que se mostrarán deben estar agrupadas en un div con la clase "dropdown-menu", y las opciones son anclas que deben tener definida la clase "dropdown-item":</p>
+<pre>
+      &lt;div class="dropdown-menu"&gt;
+        &lt;a class="dropdown-item" href="http://www.google.com"&gt;Google&lt;/a&gt;
+        &lt;a class="dropdown-item" href="http://www.bing.com"&gt;Bing&lt;/a&gt;
+        &lt;a class="dropdown-item" href="http://www.yahoo.com"&gt;Yahoo&lt;/a&gt;
+      &lt;/div&gt;
+</pre>
+
+<h3>Línea separadora entre opciones.</h3>
+<p>Si queremos que haya una línea separadora entre opciones debemos agregar un div vacío con la clase "dropdown-divider":</p>
+<pre>
+      &lt;div class="dropdown-menu"&gt;
+        &lt;a class="dropdown-item" href="http://www.google.com"&gt;Google&lt;/a&gt;
+        &lt;div class="dropdown-divider"&gt;&lt;/div&gt;
+        &lt;a class="dropdown-item" href="http://www.bing.com"&gt;Bing&lt;/a&gt;
+        &lt;a class="dropdown-item" href="http://www.yahoo.com"&gt;Yahoo&lt;/a&gt;
+      &lt;/div&gt;
+</pre>
+<p>El aspecto de la línea separadora es:</p>
+<img src="imagentema/foto110.jpg" border="0" alt="bootstrap 5 dropdown dropdown-divider"><br>
+
+<h3>Tamaño de la lista desplegable.</h3>
+<p>Para definir el tamaño del dropdown lo hacemos indicando el tamaño del botón: btn-sm, btn-lg o el tamaño por defecto visto en el ejercicio anterior:</p>
+<pre class="recuadro">
+&lt;!doctype html&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;title&gt;Prueba de Bootstrap 5&lt;/title&gt; 
+  &lt;meta charset="utf-8"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"&gt;
+  &lt;link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+  &lt;div class="container mt-3"&gt;
+    &lt;div class="dropdown"&gt;
+      &lt;button class="btn btn-primary btn-sm dropdown-toggle" type="button" id="dropdown1" data-bs-toggle="dropdown"&gt;
+        Buscadores
+      &lt;/button&gt;
+      &lt;div class="dropdown-menu"&gt;
+        &lt;a class="dropdown-item" href="http://www.google.com"&gt;Google&lt;/a&gt;
+        &lt;div class="dropdown-divider"&gt;&lt;/div&gt;
+        &lt;a class="dropdown-item" href="http://www.bing.com"&gt;Bing&lt;/a&gt;
+        &lt;a class="dropdown-item" href="http://www.yahoo.com"&gt;Yahoo&lt;/a&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;  
+    &lt;br&gt;
+    &lt;div class="dropdown"&gt;
+      &lt;button class="btn btn-primary dropdown-toggle" type="button" id="dropdown2" data-bs-toggle="dropdown"&gt;
+        Buscadores
+      &lt;/button&gt;
+      &lt;div class="dropdown-menu"&gt;
+        &lt;a class="dropdown-item" href="http://www.google.com"&gt;Google&lt;/a&gt;
+        &lt;div class="dropdown-divider"&gt;&lt;/div&gt;
+        &lt;a class="dropdown-item" href="http://www.bing.com"&gt;Bing&lt;/a&gt;
+        &lt;a class="dropdown-item" href="http://www.yahoo.com"&gt;Yahoo&lt;/a&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;  
+    &lt;br&gt;
+    &lt;div class="dropdown"&gt;
+      &lt;button class="btn btn-primary btn-lg dropdown-toggle" type="button" id="dropdown3" data-bs-toggle="dropdown"&gt;
+        Buscadores
+      &lt;/button&gt;
+      &lt;div class="dropdown-menu"&gt;
+        &lt;a class="dropdown-item" href="http://www.google.com"&gt;Google&lt;/a&gt;
+        &lt;div class="dropdown-divider"&gt;&lt;/div&gt;
+        &lt;a class="dropdown-item" href="http://www.bing.com"&gt;Bing&lt;/a&gt;
+        &lt;a class="dropdown-item" href="http://www.yahoo.com"&gt;Yahoo&lt;/a&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;  
+    &lt;br&gt;        
+  &lt;/div&gt;
+
+  &lt;script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8" crossorigin="anonymous"&gt;&lt;/script&gt;  
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+<p>El aspecto de los tres tamaños:</p>
+<img src="imagentema/foto111.jpg" border="0" alt="bootstrap 5 dropdown tamaños"><br>
+
+<h3>Despliegue hacia arriba.</h3>
+<p>Si queremos que la lista desplegable se muestre hacia arriba (en el caso que haya espacio) debemos cambiar el div principal por la clase: "dropup":</p>
+<pre>
+  &lt;div class="container" style="margin-top:12rem;"&gt;
+    &lt;div class="dropup"&gt;
+      &lt;button class="btn btn-primary btn dropdown-toggle" type="button" id="dropdown1" data-bs-toggle="dropdown"&gt;
+        Buscadores
+      &lt;/button&gt;
+      &lt;div class="dropdown-menu"&gt;
+        &lt;a class="dropdown-item" href="http://www.google.com"&gt;Google&lt;/a&gt;
+        &lt;div class="dropdown-divider"&gt;&lt;/div&gt;
+        &lt;a class="dropdown-item" href="http://www.bing.com"&gt;Bing&lt;/a&gt;
+        &lt;a class="dropdown-item" href="http://www.yahoo.com"&gt;Yahoo&lt;/a&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;  
+  &lt;/div&gt;
+</pre>
+
+<p>Luego se muestra:</p>
+<img src="imagentema/foto112.jpg" border="0" alt="bootstrap 5 dropup"><br>
+
+<h3>Encabezado informativo en la lista desplegable.</h3>
+<p>Podemos agregar un div dentro de las opciones con un mensaje informativo. Para esto agregamos la clase "dropdown-header":</p>
+<pre>
+     &lt;div class="dropdown"&gt;
+        &lt;button class="btn btn-primary dropdown-toggle" type="button" id="dropdown1" data-bs-toggle="dropdown"&gt;
+          Buscadores
+        &lt;/button&gt;
+        &lt;div class="dropdown-menu"&gt;
+          &lt;div class="dropdown-header"&gt;Buscadores más populares&lt;/div&gt;
+          &lt;a class="dropdown-item" href="http://www.google.com"&gt;Google&lt;/a&gt;
+          &lt;a class="dropdown-item" href="http://www.bing.com"&gt;Bing&lt;/a&gt;
+          &lt;a class="dropdown-item" href="http://www.yahoo.com"&gt;Yahoo&lt;/a&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;  
+</pre>
+<p>Luego se muestra:</p>
+<img src="imagentema/foto113.jpg" border="0" alt="bootstrap 4 dropdown-header"><br>
+
+<h3>Deshabilitar opciones de la lista.</h3>
+<p>Debemos agregar la clase "disabled" a la opción que no queremos que sea seleccionable:</p>
+<pre>
+          &lt;a class="dropdown-item disabled" href="http://www.yahoo.com"&gt;Yahoo&lt;/a&gt;
+</pre>
+
+<p>Luego se muestra:</p>
+<img src="imagentema/foto114.jpg" border="0" alt="bootstrap 4 disabled"><br>
+
+<h3>Lista desplegable a izquierda o derecha.</h3>
+<p>Podemos utilizar una presentación alternativa de la lista desplegable mostrando la misma a la izquierda o derecha del dropdown.</p>
+<p>Para que se muestra a la izquierda debemos fijar el div con las dos clases: btn-group dropstart</p>
+<p>Para que se muestra a la derecha debemos fijar el div con las dos clases: btn-group dropend</p>
+<pre class="recuadro">
+&lt;!doctype html&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;title&gt;Prueba de Bootstrap 5&lt;/title&gt; 
+  &lt;meta charset="utf-8"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"&gt;
+  &lt;link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+  &lt;div class="container mt-3"&gt;      
+    &lt;div class="row justify-content-center"&gt;
+      &lt;div class="col-6"&gt;
+        &lt;div class="btn-group dropstart"&gt;
+          &lt;button class="btn btn-primary dropdown-toggle" type="button" id="dropdown1" data-bs-toggle="dropdown"&gt;
+            Buscadores
+          &lt;/button&gt;
+          &lt;div class="dropdown-menu"&gt;
+            &lt;a class="dropdown-item" href="http://www.google.com"&gt;Google&lt;/a&gt;
+            &lt;a class="dropdown-item" href="http://www.bing.com"&gt;Bing&lt;/a&gt;
+            &lt;a class="dropdown-item disabled" href="http://www.yahoo.com"&gt;Yahoo&lt;/a&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;  
+        &lt;div class="btn-group dropend"&gt;
+            &lt;button class="btn btn-primary dropdown-toggle" type="button" id="dropdown2" data-bs-toggle="dropdown"&gt;
+              Buscadores
+            &lt;/button&gt;
+            &lt;div class="dropdown-menu"&gt;
+              &lt;a class="dropdown-item" href="http://www.google.com"&gt;Google&lt;/a&gt;
+              &lt;a class="dropdown-item" href="http://www.bing.com"&gt;Bing&lt;/a&gt;
+              &lt;a class="dropdown-item disabled" href="http://www.yahoo.com"&gt;Yahoo&lt;/a&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;            
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8" crossorigin="anonymous"&gt;&lt;/script&gt;  
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+
+<p>Luego si seleccionamos el que debe mostrarse a derecha:</p>
+<img src="imagentema/foto115.jpg" border="0" alt="bootstrap 5"><br>
+
+<h3>Lista desplegable con un formulario.</h3>
+<p>Una variante es disponer un formulario en vez de una lista de opciones dentro del dropdown.</p>
+<pre class="recuadro">
+&lt;!doctype html&gt;
+&lt;html&gt;
+
+&lt;head&gt;
+  &lt;title&gt;Prueba de Bootstrap 5&lt;/title&gt;
+  &lt;meta charset="utf-8"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"&gt;
+  &lt;link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous"&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+
+  &lt;div class="container"&gt;
+    &lt;div class="dropdown"&gt;
+      &lt;button class="btn btn-primary dropdown-toggle" type="button" id="dropdown1" data-bs-toggle="dropdown"&gt;
+        Login
+      &lt;/button&gt;
+      &lt;div class="dropdown-menu"&gt;
+        &lt;form class="ps-4 pe-4"&gt;
+          &lt;div class="mb-3"&gt;
+            &lt;label for="nombre" class="form-label"&gt;Ingrese su nombre:&lt;/label&gt;
+            &lt;input type="text" class="form-control" id="nombre" name="nombre"&gt;
+          &lt;/div&gt;
+          &lt;div class="mb-3"&gt;
+            &lt;label for="clave" class="form-label"&gt;Ingrese su clave:&lt;/label&gt;
+            &lt;input type="password" class="form-control" id="clave" name="clave"&gt;
+          &lt;/div&gt;
+          &lt;button type="submit" class="btn btn-primary"&gt;Confirmar&lt;/button&gt;
+        &lt;/form&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8"
+    crossorigin="anonymous"&gt;&lt;/script&gt;
+&lt;/body&gt;
+
+&lt;/html&gt;
+</pre>
+<p>Luego en el navegador cuando presionamos el dropdown se muestra el formulario:</p>
+<img src="imagentema/foto116.jpg" border="0" alt="bootstrap 5"><br>
+<p>La clases ps-4 pe-4 definen un padding-left y padding-right de 1.5rem para que los controles de formulario no salgan pegados a los bordes.</p>
+
+<h3>Split Button.</h3>
+<p>Con esta variante solo se desplega el menú cuando se presiona un pequeño botón de la derecha:</p>
+<pre class="recuadro">
+&lt;!doctype html&gt;
+&lt;html&gt;
+
+&lt;head&gt;
+  &lt;title&gt;Prueba de Bootstrap 5&lt;/title&gt;
+  &lt;meta charset="utf-8"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"&gt;
+  &lt;link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous"&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+
+  &lt;div class="container"&gt;
+
+    &lt;div class="btn-group"&gt;
+      &lt;button type="button" class="btn btn-danger"&gt;Buscadores&lt;/button&gt;
+      &lt;button type="button" class="btn btn-danger dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown"&gt;
+      &lt;/button&gt;
+      &lt;div class="dropdown-menu"&gt;
+        &lt;a class="dropdown-item" href="http://www.google.com"&gt;Google&lt;/a&gt;
+        &lt;a class="dropdown-item" href="http://www.bing.com"&gt;Bing&lt;/a&gt;
+        &lt;a class="dropdown-item" href="http://www.yahoo.com"&gt;Yahoo&lt;/a&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+
+  &lt;/div&gt;
+
+  &lt;script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8"
+    crossorigin="anonymous"&gt;&lt;/script&gt;
+&lt;/body&gt;
+
+&lt;/html&gt;
+</pre>
+
+<p>Luego en el navegador cuando presionamos el botón de la derecha tenemos:</p>
+<img src="imagentema/foto116b.jpg" border="0" alt="bootstrap 5"><br>
+
+<h3>Lista desplegable oscura.</h3>
+<p>Para que la lista desplegable se muestre oscura debemos agregar la clase 'dropdown-menu-dark':</p>
+<pre>
+      &lt;div class="dropdown-menu dropdown-menu-dark"&gt;
+</pre>
+<p>Teniendo como resultado:</p>
+<img src="imagentema/foto116c.jpg" border="0" alt="bootstrap 5"><br>
+<h2><a target="_blank" href="ejecutar80e0.html?cod=63">Ejecutar Ejemplo</a></h2><h2><a href="indexd6cc.html?inicio=60">Retornar</a></h2> 
+
+<div>
+<!--publi-->
+<script async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<!-- adaptable2 -->
+<ins class="adsbygoogle dos"
+     style="display:inline-block"
+     data-ad-client="ca-pub-4669394804436935"
+     data-ad-slot="5774469161"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+<!--publi-->
+<script async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<!-- adaptable2 -->
+<ins class="adsbygoogle dos"
+     style="display:inline-block"
+     data-ad-client="ca-pub-4669394804436935"
+     data-ad-slot="5774469161"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+</div>
+
+
+
+
+</div>
+
+  </div>
+</div>  
+
+</div>
+
+<script type="text/javascript">
+function cambiar()
+{
+  var lista=document.getElementsByTagName('pre');
+  for(f=0;f<lista.length;f++)
+  {
+   lista[f].style.display='block';
+  }
+  document.getElementById('solucion').style.display='none';
+}
+
+</script>
+
+</body>
+
+
+<!-- Mirrored from www.tutorialesprogramacionya.com/bootstrap5ya/detalleconcepto.php?punto=63&codigo=63&inicio=60 by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 19 Dec 2023 11:11:27 GMT -->
+</html>

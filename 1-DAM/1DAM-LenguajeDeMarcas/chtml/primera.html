@@ -1,0 +1,69 @@
+<!--Este documento ha sido generado con XT, de James Clark--><html xmlns:date="http://www.jclark.com/xt/java/java.util.Date"><head><title>Curso de HTML: Mi primera p&aacute;gina</title><META HTTP-EQUIV="pragma" CONTENT="no-cache"></head><!--Cuerpo del documento--><body bgcolor="#FEFEFE"><table width="630" border="0"><tr><td valign="top" align="center" width="40" rowspan="2"><a href="index.html"><img src="graficos/logo.jpg" border="0"></a></td><td align="center" width="590"><IFRAME SRC="http://ad.es.doubleclick.net/adi/ES-programacion.net/ES-redferca-programacion-html;sz=468x60;ord=44126913875755190?" name="frame1" width="468" height="60" frameborder="no" border="0" MARGINWIDTH="0" MARGINHEIGHT="0" SCROLLING="no"><SCRIPT language="JavaScript1.1" SRC="http://ad.es.doubleclick.net/adj/ES-programacion.net/ES-redferca-programacion-html;abr=!ie;sz=468x60;ord=44126913875755190?"></SCRIPT><NOSCRIPT><A HREF="http://ad.es.doubleclick.net/jump/ES-programacion.net/ES-redferca-programacion-html;abr=!ie;sz=468x60;ord=44126913875755190?"><IMG SRC="http://ad.es.doubleclick.net/ad/ES-programacion.net/ES-redferca-programacion-html;abr=!ie;sz=468x60;ord=44126913875755190?" border="0" height="60" width="468"></A></NOSCRIPT></IFRAME></td></tr><tr><td valign="top"><font face="Arial,Helvetica,sans-serif"><font size="+3" color="#005CA0"><b>3. Mi primera p&aacute;gina</b></font><br><br><a name="1"></a><font size="+2" color="#005CA0">3.1. El c&oacute;digo</font>
+        <pre><font color="#006600" face="monospace">&lt;HTML&gt;
+  &lt;HEAD&gt;
+    &lt;TITLE&gt;Mi primera pagina&lt;/TITLE&gt;
+  &lt;/HEAD&gt;
+
+  &lt;BODY&gt;
+    &lt;CENTER&gt;&lt;H1&gt;Mi Primera pagina&lt;/H1&gt;&lt;/CENTER&gt; 
+    &lt;HR&gt;
+    &lt;P&gt;Esta es mi primera pagina (chispas). Por el
+    momento no se que tendra, pero dentro de poco
+    pondre aqui muchas cosas interesantes.
+  &lt;/BODY&gt;
+&lt;/HTML&gt;</font></pre>
+        <p align="justify">Tambi&eacute;n puedes ver
+        <a href="ejemplos/primera.html" target="_new">el resultado</a>
+        de este ejemplo.</p>
+      <br><br><a name="2"></a><font size="+2" color="#005CA0">3.2. La explicaci&oacute;n</font>
+        <p align="justify">Lo primero que conviene explicar es en qu&eacute; consisten todos
+        esos s&iacute;mbolos de mayor y menor que est&aacute;n distribuidos por
+        ah&iacute;. El lenguaje HTML se basa en la sintaxis SGML (toma siglas).
+        Esto quiere decir que cualquier cosa que hagamos en HTML estar&aacute;
+        encerrada entre dos etiquetas de esta manera:</p>
+        <div align="center"><pre><font color="#006600" face="monospace">&lt;ETIQUETA par&aacute;metros&gt; ... &lt;/ETIQUETA&gt;</font></pre></div>
+        <p align="justify">Hay ocasiones en que no es necesario <i>cerrar</i> la etiqueta.
+        Mirando el c&oacute;digo habr&eacute;is visto un par de ejemplo que ya
+        explicar&eacute; m&aacute;s adelante. Pero como lo primero que debemos
+        indicar es que el texto que estamos componiendo es un documento HTML pues
+        lo indicamos as&iacute;:</p>
+        <div align="center"><pre><font color="#006600" face="monospace">&lt;HTML&gt; ... &lt;/HTML&gt;</font></pre></div>
+        <p align="justify">Un documento HTML tiene una estructura que lo separa en dos partes:
+        cuerpo y cabecera. En la primera estar&aacute; la p&aacute;gina en
+        s&iacute;, mientras que en la segunda incluiremos algunas cosas que no
+        se ven al principio pero que pueden llegar a ser muy importantes. Lo
+        primero que hay que incluir en el c&oacute;digo es la cabecera. La
+        escribimos:</p>
+        <pre><font color="#006600" face="monospace">&lt;HEAD&gt;
+  &lt;TITLE&gt;Mi primera pagina&lt;/TITLE&gt;
+&lt;/HEAD&gt;</font></pre>
+        <p align="justify">Dentro de la cabecera s&oacute;lo hay otra etiqueta. Es la &uacute;nica
+        imprescindible: el t&iacute;tulo de la p&aacute;gina. Es lo que veremos
+        como t&iacute;tulo de la ventana en los navegadores que lo permitan. Es
+        como se conocer&aacute; nuestra p&aacute;gina en algunos buscadores y en
+        la agenda de direcciones (<i>bookmarks</i>) de los usuarios. Por tanto,
+        parece importante pensarnos bien como llamarla.</p>
+      <br><br><a name="3"></a><font size="+2" color="#005CA0">3.3. El cuerpo del documento</font>
+        <p align="justify">Ahora vamos a indicar el contenido. Lo primero ser&aacute; indicar
+        que estamos en el cuerpo del documento:</p>
+        <div align="center"><pre><font color="#006600" face="monospace">&lt;BODY&gt; ... &lt;/BODY&gt;</font></pre></div>
+        <p align="justify">Luego pondremos el t&iacute;tulo algo recalcado:</p>
+        <div align="center"><pre><font color="#006600" face="monospace">&lt;CENTER&gt;&lt;H1&gt; ... &lt;/H1&gt;&lt;/CENTER&gt;</font></pre></div>
+        <p align="justify">Con esto colocaremos el texto centrado (<tt><font color="#006600" face="monospace">&lt;CENTER&gt;</font></tt>) y en formato
+        <tt><font color="#006600" face="monospace">&lt;H1&gt;</font></tt> (cabecera 1) que nos asegura que aumentar&aacute; el
+        tama&ntilde;o del tipo de letra lo suficiente como para que se vea bastante
+        resaltado. Luego separamos ese t&iacute;tulo que le hemos puesto a la
+        p&aacute;gina del texto por medio de una l&iacute;nea horizontal:</p>
+        <div align="center"><pre><font color="#006600" face="monospace">&lt;HR&gt;</font></pre></div>
+        <p align="justify">La l&iacute;nea horizontal carece de etiqueta de cierre. Esto es normal en
+        etiquetas que no var&iacute;an los atributos de un texto, sino que insertan
+        un elemento. Por ejemplo, para indicarle que queremos separar el texto de
+        la l&iacute;nea horizontal con un espacio vertical correspondiente a un
+        p&aacute;rrafo nuevo le decimos:</p>
+        <pre><font color="#006600" face="monospace">&lt;P&gt;Esta es mi primera pagina (chispas). Por el
+        momento no s&eacute; que tendr&aacute;, pero dentro de
+        poco pondr&eacute; aqu&iacute; muchas cosas interesantes.</font></pre>
+        <p align="justify">En el siguiente cap&iacute;tulo veremos muchas etiquetas que nos
+        permitir&aacute;n cambiar el aspecto de nuestros textos.</p>
+      <p></p><img src="graficos/linea.gif" height="1" width="590"><table cellspacing="0" cellpadding="0" border="0" width="100%"><tr><td><img src="graficos/transp.gif" height="2" width="90"></td></tr></table><table cellspacing="0" cellpadding="0" border="0" width="100%"><tr><td align="left"><a href="versiones.html"><img src="graficos/izq.gif" align="MIDDLE" border="0"></a><font size="-1" face="Arial,Helvetica,sans-serif">Versiones del HTML</font></td><td align="right"><font size="-1" face="Arial,Helvetica,sans-serif">Formateo b&aacute;sico</font><a href="texto20.html"><img src="graficos/der.gif" align="MIDDLE" border="0"></a></td></tr></table><font size="-1"><div align="center">&copy; 1998-2000 <a href="mailto:multivac@idecnet.com">Daniel
+    Rodr&iacute;guez</a><br><a href="index.html"><img src="graficos/loguito.gif" border="0"></a></div></font></font></td></tr></table></body></html>

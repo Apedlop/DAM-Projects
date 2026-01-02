@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <title>Ejercicio 4</title>
+    </head>
+    <body>
+        
+        <h2>Ejercicio 4</h2>
+
+        <button onclick="abrirVentana(10)" style="height: 100px; width: 100px; font-size: 50px;">+</button>
+        <button onclick="abrirVentana(-10)" style="height: 100px; width: 100px; font-size: 50px;">-</button>
+
+        <script>
+            let contador = 0;
+            let anchoPantalla = screen.availWidth / 2;
+
+        const abrirVentana = (cantidad) => {
+            if (contador < 5) {
+                anchoPantalla += cantidad;
+                let ventana = window.open("https://www.google.com", "_blank", `width=${anchoPantalla}, height=${screen.height}`);
+                contador++;
+            } else {
+                alert("No se puede abrir más veces la pantalla.")
+            }
+        }
+        </script>
+        
+    </body>
+</html>

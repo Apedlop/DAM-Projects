@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio Preparación Examen</title>
+</head>
+
+<body>
+
+    <div style="background-color: red; height: 25vh;" onmouseover="abrirVentana(20)">
+
+    </div>
+
+    <div style="background-color: green; height: 25vh;" onmouseover="abrirVentana(-20)">
+
+    </div>
+
+    <script>
+        let contador = 0;
+        let anchoPantalla = screen.availWidth / 2;
+
+        const abrirVentana = (cantidad) => {
+            if (contador < 3) {
+                anchoPantalla += cantidad;
+                let ventana = window.open("https://www.google.com", "_blank", `width=${anchoPantalla}, height=${screen.height}`);
+                contador++;
+            } else {
+                alert("No se puede abrir más veces la pantalla.")
+            }
+        }
+
+    </script>
+
+</body>
+
+</html>

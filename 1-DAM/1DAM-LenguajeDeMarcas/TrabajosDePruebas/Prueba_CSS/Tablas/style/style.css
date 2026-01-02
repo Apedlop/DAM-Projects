@@ -1,0 +1,47 @@
+table {
+    text-align: center;
+}
+
+tr.color1 {
+    background-color: #fff7ec;
+    
+}
+
+tr.color2 {
+    background-color: #ebfffe;
+}
+
+tr.color3 {
+    background-color: #ffe5c4;
+}
+
+.letra {
+    color:blue;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.letra2 {
+    font-weight: bold;
+}
+
+.letra3 {
+    color: purple;
+    font-weight: bold;
+}
+
+.class1 img {
+    float: left;
+    width: 190px;
+    height: 100px;
+}
+
+table tr:hover {
+    background-color: aquamarine;
+}
+
+div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

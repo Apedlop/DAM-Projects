@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 2</title>
+</head>
+<body>
+    <h2>Ejercicio 2</h2>
+
+    <table border="1" id="tablaColores" style="width: 200px; height: 100px;">
+    </table>
+
+    <script>
+        const colores = new Map();
+        colores.set("rojo", "red");
+        colores.set("azul", "blue");
+
+        let tabla = document.getElementById('tablaColores');
+
+        colores.forEach((valor, clave) => {
+            let columna = tabla.insertRow();
+
+            let celda1 = columna.insertCell();
+            celda1.textContent = clave;
+
+            let celda2 = columna.insertCell();
+            celda2.style.backgroundColor = '';
+
+            celda2.addEventListener('mouseover', () => {
+                celda2.style.backgroundColor = valor;
+            });
+            celda2.addEventListener('mouseout', () => {
+                celda2.style.backgroundColor = ''; 
+            });
+        });
+    </script>
+</body>
+</html>

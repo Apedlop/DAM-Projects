@@ -1,0 +1,344 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Familias</title>
+    <link rel="icon" href="../image/logo.png">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../style/menu.css">
+    <link rel="stylesheet" href="familia.css">
+
+    <script src="../javaScript/recarga.js"></script>
+    <script src="../javaScript/modo.js"></script>
+    <script src="familias.js"></script>
+
+</head>
+
+<body>
+    <div class="contenedor_loader">
+        <div><img src="../image/carga_snichDorada.gif" class="gif"></div>
+    </div>
+    <!-- Navigation -->
+    <div class="navigation-wrap bg-light start-header start-style">
+        <div class="container-fluid">
+            <div class="row justify-content-between align-items-center">
+                <div class="row">
+                    <div class="col">
+                        <!-- Logo -->
+                        <a class="navbar-brand" href="../index.html" target="_self">
+                            <img src="../image/logo.png" alt="Logo" class="logo">
+                        </a>
+                    </div>
+                    <div class="col posicionModo">
+                        <button type="button" class="btn btn-light colorModo" onclick="toggleTheme()">
+                            <img id="lightImage" src="../image/soleado.png" alt="Light Theme">
+                            <img id="darkImage" src="../image/luna.png" alt="Dark Theme">
+                        </button>
+                    </div>
+                </div>
+                <div class="col-auto flex-grow-0 flex-shrink-0">
+                    <!-- Opciones del Navbar -->
+                    <nav class="navbar navbar-expand-md">
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav ms-auto">
+                                <li class="nav-item">
+                                    <a class="nav-link dropdown-toggle" href="../Hogwarts/Hogwart.html" role="button"
+                                        data-bs-toggle="dropdown" aria-haspopup="true"
+                                        aria-expanded="false">Hogwarts</a>
+                                    <div class="dropdown-menu">
+                                        <a class="dropdown-item" href="../Hogwarts/Profesores/Profesores.html">Profesores</a>
+                                        <a class="dropdown-item" href="../Hogwarts/Alumnos/Alumnos.html">Alumnos</a>
+                                        <a class="dropdown-item" href="../Hogwarts/Asignaturas/asignaturas.html">Asignaturas</a>
+                                        <a class="dropdown-item" href="../Hogwarts/Casas/casa.html">Casas</a>
+                                    </div>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link dropdown-toggle" href="../Mortifagos/Mortifagos.html" role="button"
+                                        data-bs-toggle="dropdown" aria-haspopup="true"
+                                        aria-expanded="false">Mortífagos</a>
+                                    <div class="dropdown-menu">
+                                        <a class="dropdown-item"
+                                            href="../Mortifagos/Personajes/Personajes.html">Personajes</a>
+                                        <a class="dropdown-item"
+                                            href="../Mortifagos/Horrocruxes/horrocruxes.html">Horrocruxes</a>
+                                        <a class="dropdown-item" href="../Mortifagos/Mortifagos.html">Marca Tenebrosa</a>
+                                    </div>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link dropdown-toggle" href="../Familias/Familias.html">Familias</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="../Mapa/mapa.html">Mapa</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+                <div class="col-auto">
+                    <!-- Segunda sección de opciones del Navbar -->
+                    <nav class="navbar navbar-expand-md navbar-light">
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav ms-auto">
+                                <li class="nav-item">
+                                    <a class="nav-link dropdown-toggle" href="../Adaptaciones/Adaptaciones.html"
+                                        role="button" data-bs-toggle="dropdown" aria-haspopup="true"
+                                        aria-expanded="false">Adaptaciones</a>
+                                    <div class="dropdown-menu">
+                                        <a class="dropdown-item" href="../Adaptaciones/Libros.html">Libros</a>
+                                        <a class="dropdown-item" href="../Adaptaciones/Peliculas.html">Películas</a>
+                                        <a class="dropdown-item" href="../Adaptaciones/Videojuegos.html">Videojuegos</a>
+                                    </div>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="../Curiosidades/curiosidad.html">Curiosidades</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="../Comentarios/Comentarios.html">Comentarios</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="../quiz/quiz.html">Quiz</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                    <div class="nav-images-container">
+                        <img src="https://cdn-hogwartslegacy.warnerbrosgames.com/static/bar-left.png" alt
+                            class="nav-bar left">
+                        <img src="https://cdn-hogwartslegacy.warnerbrosgames.com/static/bar-right.png" alt
+                            class="nav-bar right">
+                    </div>
+                    <div>
+                        <div class="nav-bar-corner-container">
+                            <div class="nav-bar-corner left">
+                                <img src="https://cdn-hogwartslegacy.warnerbrosgames.com/static/corner-left.webp" alt=""
+                                    class="img-fluid">
+                            </div>
+                            <div class="nav-bar-corner right">
+                                <img src="https://cdn-hogwartslegacy.warnerbrosgames.com/static/corner-right.webp"
+                                    alt="" class="img-fluid">
+                            </div>
+                        </div>
+                        <div class="nav-bar-corner-container1">
+                            <div class="nav-bar-corner bottomLeft">
+                                <img src="https://cdn-hogwartslegacy.warnerbrosgames.com/static/corner-bottom-left.webp"
+                                    alt="" class="img-fluid">
+                            </div>
+                            <div class="nav-bar-corner bottomRight">
+                                <img src="https://cdn-hogwartslegacy.warnerbrosgames.com/static/corner-bottom-right.webp"
+                                    alt="" class="img-fluid">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="my-5 py-5 content-fluid text-center">
+
+        <div class="text-center">
+
+            <picture>
+                <source srcset="../image/titulo-arriba.webp" type="image/webp">
+                <img src="../image/titulo-arriba.webp" class="title-decoration margen">
+            </picture>
+
+            <h1 class="letraBlanca">Familias</h1>
+
+            <picture>
+                <source srcset="../image/titulo-bajo.png" type="image/webp">
+                <img src="../image/titulo-bajo.png" class="title-decoration">
+            </picture>
+
+        </div>
+
+        <div class="row justify-content-center barra">
+            <div class="row mt-4 justify-content-center">
+                <div class="col-md-4">
+                    <figure>
+                        <div>
+                            <div class="position-relative">
+                                <div class="img-container btn" onclick="mostrarTexto('SangrePura')"  data-bs-toggle="collapse" data-bs-target="#SangrePura"
+                                    aria-expanded="false" aria-controls="SangrePura">
+                                    <img src="../image/borde.png" class="img-fluid marco">
+                                    <img src="image/familia-malfoy.webp" class="imagen">
+                                    <figcaption class="image-description letraBlanca">
+                                        <h1 class="aumento">Sangre Pura</h1>
+                                    </figcaption>
+                                </div>
+                            </div>
+                        </div>
+                    </figure>
+                </div>
+                <div class="col-md-4">
+                    <figure>
+                        <div>
+                            <div class="position-relative">
+                                <div class="img-container btn" onclick="mostrarTexto('Mestizos')" data-bs-toggle="collapse" data-bs-target="#Mestizos"
+                                    aria-expanded="false" aria-controls="Mestizos">
+                                    <img src="../image/borde.png" class="img-fluid marco">
+                                    <img src="image/familia-potter.webp" class="imagen">
+                                    <figcaption class="image-description letraBlanca">
+                                        <h1 class="aumento">Mestizos</h1>
+                                    </figcaption>
+                                </div>
+                            </div>
+                        </div>
+                    </figure>
+                </div>
+                <div class="col-md-4">
+                    <figure>
+                        <div>
+                            <div class="position-relative">
+                                <div class="img-container btn" onclick="mostrarTexto('Muggles')" data-bs-toggle="collapse" data-bs-target="#Muggles"
+                                    aria-expanded="false" aria-controls="Muggles">
+                                    <img src="../image/borde.png" class="img-fluid marco">
+                                    <img src="image/familia-granger.jpg" class="imagen">
+                                    <figcaption class="image-description letraBlanca">
+                                        <h1 class="aumento muggles">Nacidos de Muggles</h1>
+                                    </figcaption>
+                                </div>
+                            </div>
+                        </div>
+                    </figure>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid d-flex justify-content-center">
+            <div class="collapse-horizontal-container separado">
+                <div class="collapse collapse-horizontal" id="SangrePura">
+                    <div>
+                        <img src="../image/separador.png" class="separador">
+                    </div>
+                    <div class="justificada">
+                        <img src="image/familiaBlack.jpg" class="anchoImagen izquierda">
+                        <p>Los Sangre Pura son aquellos que mantienen una línea de ascendencia mágica "pura", libre de
+                            mestizaje o descendencia de padres no mágicos. Esta ideología, arraigada en la creencia en
+                            la superioridad de ciertas familias mágicas, ha sido históricamente promovida por aquellos
+                            que buscan preservar la pureza de la sangre y mantener una élite dentro de la sociedad
+                            mágica. Para ellos, la pureza de la sangre es un criterio fundamental para determinar el
+                            valor y el estatus de un individuo en la comunidad mágica.</p>
+                        <p>En contraste, los traidores a la sangre desafían activamente esta ideología, rechazando la
+                            noción de superioridad basada en el linaje mágico y abogando por la igualdad y la inclusión
+                            en la sociedad mágica. Estos individuos, a menudo provenientes de familias de Sangre Pura,
+                            se oponen firmemente a la discriminación hacia los mestizos y los nacidos de padres no
+                            mágicos, promoviendo la idea de que el valor de un mago o bruja no debe depender de su
+                            ascendencia.</p>
+                        <img src="image/familiaWeasley.webp" class="derecha anchoImagen">
+                        <p>Los traidores a la sangre, como la familia Weasley, Sirius Black, Nymphadora Tonks y Hermione
+                            Granger, enfrentan la intolerancia y la discriminación dentro de sus propias familias y
+                            comunidades, desafiando las normas establecidas y defendiendo los derechos de todos los
+                            miembros de la comunidad mágica. Su activismo los lleva a luchar contra las leyes y
+                            políticas discriminatorias, así como a proteger a los nacidos de padres no mágicos y a los
+                            mestizos de la opresión y el prejuicio.</p>
+                        <p>En la serie de Harry Potter, la tensión entre los Sangre Pura y los traidores a la sangre es
+                            un tema recurrente, reflejando los conflictos sociales y políticos presentes en la sociedad
+                            mágica. A través de la narrativa, se destaca la importancia del valor y la tolerancia, así
+                            como la necesidad de desafiar las injusticias y trabajar hacia un mundo mágico más inclusivo
+                            y equitativo.</p>
+                    </div>
+
+                </div>
+                <div class="collapse collapse-horizontal" id="Mestizos">
+                    <div>
+                        <img src="../image/separador.png" class="separador">
+                    </div>
+                    <div class="justificada">
+                        <img src="image/familiaMeztiza.webp" class="izquierda">
+                        <p>
+                        Los mestizos en el mundo mágico de Harry Potter son aquellos individuos que tienen al menos un
+                        progenitor muggle (no mágico) y uno mágico. Esta mezcla de sangre entre personas no mágicas y
+                        aquellas con habilidades mágicas es vista por algunos como una disminución de la pureza de la
+                        sangre, mientras que otros la ven como una riqueza de diversidad y habilidades. Los mestizos
+                        enfrentan a menudo discriminación y prejuicios por parte de los puristas de la sangre, quienes
+                        consideran que su ascendencia muggle los hace inferiores. Sin embargo, muchos mestizos desafían
+                        estas percepciones y demuestran ser tan hábiles y valiosos como los magos y brujas de
+                        ascendencia pura.
+                        </p>
+                        <p>
+                        Personajes destacados como Harry Potter y Severus Snape son mestizos en la
+                        serie de Harry Potter. A través de sus historias, se muestra cómo enfrentan los desafíos y la
+                        discriminación debido a su herencia mixta, pero también cómo demuestran su valía y contribuyen
+                        significativamente al mundo mágico. La inclusión de personajes mestizos en la narrativa de Harry
+                        Potter resalta la importancia de la diversidad y la aceptación en la sociedad, así como la idea
+                        de que el valor de una persona no debe estar determinado por su linaje mágico.
+                        </p>
+                    </div>
+                </div>
+                <div class="collapse collapse-horizontal" id="Muggles">
+                    <div>
+                        <img src="../image/separador.png" class="separador">
+                    </div>
+                    <div class="justificada">
+                        <img src="image/Lily_Evans_bambina.webp" class="izquierda2">
+                        <p>
+                        Los nacidos de muggles, también conocidos como nacidos de padres no mágicos, son individuos nacidos en familias sin ascendencia mágica. A menudo, enfrentan desafíos y discriminación en el mundo mágico debido a la percepción de que son menos dignos o talentosos que aquellos con sangre pura. Esta discriminación se manifiesta en diversas formas, desde actitudes condescendientes hasta políticas institucionales que limitan sus oportunidades dentro de la sociedad mágica. Sin embargo, a lo largo de la serie de Harry Potter, se destacan numerosos personajes nacidos de muggles que desafían estos prejuicios y demuestran su valía a través de su coraje, habilidades mágicas y contribuciones significativas al mundo mágico. Por ejemplo, Lily Evans Potter, madre de Harry Potter, era una poderosa bruja nacida de padres muggles cuya valentía y sacrificio fueron fundamentales en la derrota de Lord Voldemort. Del mismo modo, personajes como Hermione Granger, aunque nacida de padres no mágicos, destaca por su inteligencia, habilidades mágicas y dedicación a la lucha contra la oscuridad. Su papel en la serie destaca la importancia de la inclusión y la igualdad en la comunidad mágica, desafiando la noción de que el linaje mágico determina el valor de un individuo.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+
+    <footer class="text-center fondoFooter">
+        <div class="lineaSeparacion">
+            <img src="https://cdn-hogwartslegacy.warnerbrosgames.com/static/bar-left.png" class="izquierda">
+            <img src="https://cdn-hogwartslegacy.warnerbrosgames.com/static/bar-right.png" class="derecha">
+        </div>
+        <!-- Grid container -->
+        <div class="container pt-4">
+            <!-- Section: Social media -->
+            <section class="mb-4">
+                <!-- Facebook -->
+                <a data-mdb-ripple-init class="btn btn-link btn-floating btn-lg text-body m-1"
+                    href="https://www.facebook.com/harrypotter" role="button"><img src="../image/facebook.png"
+                        class="footer"></a>
+
+                <!-- Instagram -->
+                <a data-mdb-ripple-init class="btn btn-link btn-floating btn-lg text-body m-1"
+                    href="https://www.instagram.com/harrypotter/?hl=es" role="button"><img src="../image/instagram.png"
+                        class="footer"></a>
+
+                <!-- Twitter -->
+                <a data-mdb-ripple-init class="btn btn-link btn-floating btn-lg text-body m-1"
+                    href="https://x.com/harrypotter" role="button"><img src="../image/twitter.png" class="footer2"></a>
+
+                <!-- YouTube -->
+                <a data-mdb-ripple-init class="btn btn-link btn-floating btn-lg text-body m-1"
+                    href="https://www.youtube.com/@harrypotter" role="button"><img src="../image/youtube.png"
+                        class="footer"></a>
+
+                <!-- TikTok -->
+                <a data-mdb-ripple-init class="btn btn-link btn-floating btn-lg text-body m-1"
+                    href="https://www.tiktok.com/@harrypotter" role="button"><img src="../image/tik-tok.png"
+                        class="footer"></a>
+
+            </section>
+        </div>
+        <!-- Grid container -->
+
+        <!-- Copyright -->
+        <div class="text-center p-3 fondoFooter2">
+            Copyright © 2024
+        </div>
+    </footer>
+    
+</body>
+
+</html>

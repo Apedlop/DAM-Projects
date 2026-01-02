@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MUERTOS>
+  <PERSONAJE>
+    <NOMBRE>James Potter</NOMBRE>
+    <ASESINO>Lord Volvemort</ASESINO>
+    <CAUSA>Mardición Avada Kedavra</CAUSA>
+    <DIA>31/10/1981</DIA>
+  </PERSONAJE>
+  <PERSONAJE>
+    <NOMBRE>Lily Potter (Evans)</NOMBRE>
+    <ASESINO>Lord Volvemort</ASESINO>
+    <CAUSA>Maldición Avada Kedavra</CAUSA>
+    <DIA>31/10/1981</DIA>
+  </PERSONAJE>
+  <PERSONAJE>
+    <NOMBRE>Basilisco de Salazar Slytherin</NOMBRE>
+    <ASESINO>Harry Potter</ASESINO>
+    <CAUSA>Herido con la espada de Godric Gryffindor</CAUSA>
+    <DIA>29/05/1993</DIA>
+  </PERSONAJE>
+  <PERSONAJE>
+    <NOMBRE>Cedric Diggory</NOMBRE>
+    <ASESINO>Peter Pettigrew</ASESINO>
+    <CAUSA>Maldición Avada Kedavra</CAUSA>
+    <DIA>24/06/1995</DIA>
+  </PERSONAJE>
+  <PERSONAJE>
+    <NOMBRE>Sirius Black</NOMBRE>
+    <ASESINO>Bellatrix Lestrange</ASESINO>
+    <CAUSA>Velo de la muerte</CAUSA>
+    <DIA>18/06/1996</DIA>
+  </PERSONAJE>
+  <PERSONAJE>
+    <NOMBRE>Albus Dumbledore</NOMBRE>
+    <ASESINO>Severus Snape</ASESINO>
+    <CAUSA>Maldición Avada Kedavra</CAUSA>
+    <DIA>30/06/1997</DIA>
+  </PERSONAJE>
+  <PERSONAJE>
+    <NOMBRE>Alastor Moody</NOMBRE>
+    <ASESINO>Lord Voldemort</ASESINO>
+    <CAUSA>Maldición Avada Kedavra</CAUSA>
+    <DIA>27/07/1997</DIA>
+  </PERSONAJE>
+  <PERSONAJE>
+    <NOMBRE>Oreja de George Weasley</NOMBRE>
+    <ASESINO>Severus Snape</ASESINO>
+    <CAUSA>Maleficio Sectumsempra</CAUSA>
+    <DIA>27/07/1997</DIA>
+  </PERSONAJE>
+ <PERSONAJE>
+    <NOMBRE>Peter Pettigrew</NOMBRE>
+    <ASESINO>Asesinado por su propia mano mágica</ASESINO>
+    <CAUSA>Estrangulación</CAUSA>
+    <DIA>03/1997</DIA>
+  </PERSONAJE>
+  <PERSONAJE>
+    <NOMBRE>Hedwig</NOMBRE>
+    <ASESINO>Mortífago</ASESINO>
+    <CAUSA>Maldición Avada Kedavra</CAUSA>
+    <DIA>27/07/1997</DIA>
+  </PERSONAJE>
+ <PERSONAJE>
+    <NOMBRE>Dobby</NOMBRE>
+    <ASESINO>Bellatrix Lestrange</ASESINO>
+    <CAUSA>Herida por cuchillo</CAUSA>
+    <DIA>03/1998</DIA>
+  </PERSONAJE>
+  <PERSONAJE>
+    <NOMBRE>Vincent Crabbe</NOMBRE>
+    <ASESINO>Él mismo</ASESINO>
+    <CAUSA>Fuego Maligno</CAUSA>
+    <DIA>02/05/1997</DIA>
+  </PERSONAJE>
+  <PERSONAJE>
+    <NOMBRE>Fred Weasley</NOMBRE>
+    <ASESINO>Augustus Rookwood</ASESINO>
+    <CAUSA>Explosión</CAUSA>
+    <DIA>02/05/1998</DIA>
+  </PERSONAJE>
+ <PERSONAJE>
+    <NOMBRE>Severus Snape</NOMBRE>
+    <ASESINO>Nagini</ASESINO>
+    <CAUSA>Exanguinación</CAUSA>
+    <DIA>02/05/1998</DIA>
+  </PERSONAJE>
+  <PERSONAJE>
+    <NOMBRE>Lord Voldemort</NOMBRE>
+    <ASESINO>Harry Potter/Él mismo</ASESINO>
+    <CAUSA>Maldición Avada Kedavra</CAUSA>
+    <DIA>02/05/1998</DIA>
+  </PERSONAJE>
+</MUERTOS>

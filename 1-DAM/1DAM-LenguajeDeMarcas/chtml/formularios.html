@@ -1,0 +1,118 @@
+<!--Este documento ha sido generado con XT, de James Clark--><html xmlns:date="http://www.jclark.com/xt/java/java.util.Date"><head><title>Curso de HTML: Formularios</title><META HTTP-EQUIV="pragma" CONTENT="no-cache"></head><!--Cuerpo del documento--><body bgcolor="#FEFEFE"><table width="630" border="0"><tr><td valign="top" align="center" width="40" rowspan="2"><a href="index.html"><img src="graficos/logo.jpg" border="0"></a></td><td align="center" width="590"><IFRAME SRC="http://ad.es.doubleclick.net/adi/ES-programacion.net/ES-redferca-programacion-html;sz=468x60;ord=44126913875755190?" name="frame1" width="468" height="60" frameborder="no" border="0" MARGINWIDTH="0" MARGINHEIGHT="0" SCROLLING="no"><SCRIPT language="JavaScript1.1" SRC="http://ad.es.doubleclick.net/adj/ES-programacion.net/ES-redferca-programacion-html;abr=!ie;sz=468x60;ord=44126913875755190?"></SCRIPT><NOSCRIPT><A HREF="http://ad.es.doubleclick.net/jump/ES-programacion.net/ES-redferca-programacion-html;abr=!ie;sz=468x60;ord=44126913875755190?"><IMG SRC="http://ad.es.doubleclick.net/ad/ES-programacion.net/ES-redferca-programacion-html;abr=!ie;sz=468x60;ord=44126913875755190?" border="0" height="60" width="468"></A></NOSCRIPT></IFRAME></td></tr><tr><td valign="top"><font face="Arial,Helvetica,sans-serif"><font size="+3" color="#005CA0"><b>11. Formularios</b></font>
+      <p align="justify">Una de las mayores ventajas de la web es que resulta tremendamente
+      interactiva. Los usuarios de una p&aacute;gina no tienen m&aacute;s que
+      escribir al autor de la misma para comentarle cualquier cosa de la misma.
+      Sin embargo, si deseamos que nos digan s&oacute;lo unas cosas concretas
+      (responder a alguna pregunta, seleccionar entre varias opciones, etc..)
+      deberemos utilizar formularios. Por ejemplo,</p>
+      <pre><font color="#006600" face="monospace">&lt;FORM ACTION="" METHOD=POST&gt;
+Nombre:&lt;BR&gt;&lt;INPUT NAME="nombre" TYPE=TEXT SIZE=32&gt;
+&lt;BR&gt;&iquest;Cuantos son dos y dos?&lt;BR&gt;
+&lt;INPUT NAME="Respuesta" TYPE=RADIO VALUE="mal"&gt;3&lt;BR&gt;
+&lt;INPUT NAME="Respuesta" TYPE=RADIO VALUE="bien"&gt;4&lt;BR&gt;
+&lt;INPUT NAME="Respuesta" TYPE=RADIO VALUE="mal"&gt;5&lt;BR&gt;
+&lt;INPUT TYPE="Submit" VALUE="Comprobar"&gt;
+&lt;/FORM&gt;</font></pre>
+      <p align="justify">se ver&aacute; as&iacute;:</p>
+      
+          <FORM ACTION="" METHOD="POST" onSubmit="alert('Te he dicho que no me pulses');">
+          Nombre:<BR><INPUT NAME="nombre" TYPE="TEXT" SIZE="32"/>
+          <BR>&iquest;Cuantos son dos y dos?<BR>
+          <INPUT NAME="Respuesta" TYPE="RADIO" VALUE="mal"/>3<BR>
+          <INPUT NAME="Respuesta" TYPE="RADIO" VALUE="bien"/>4<BR>
+          <INPUT NAME="Respuesta" TYPE="RADIO" VALUE="mal"/>5<BR>
+          <INPUT TYPE="Submit" VALUE="Comprobar">
+          </FORM>
+        
+      <p align="justify">El bot&oacute;n no hace nada porque no hemos definido qu&eacute; debe
+      hacer, as&iacute; que sed buenos y no lo puls&eacute;is.</p>
+      <p align="justify">Todos los elementos de un formulario deben estar encerrados entre
+      <tt><font color="#006600" face="monospace">&lt;FORM&gt;</font></tt> y <tt><font color="#006600" face="monospace">&lt;/FORM&gt;</font></tt>. Como par&aacute;metros cabe
+      destacar tres. <tt><font color="#006600" face="monospace">ACTION</font></tt> define el URL que deber&aacute; gestionar
+      el formulario. Puede ser una direcci&oacute;n de correo (precedida del
+      inevitable <tt><font color="#006600" face="monospace">mailto:</font></tt>, en cuyo caso deberemos a&ntilde;adir el
+      par&aacute;metro <tt><font color="#006600" face="monospace">ENCTYPE="text/plain"</font></tt> para que lo que recibamos
+      resulte legible.</p>
+      <p align="justify">Por otro lado, tenemos el par&aacute;metro <tt><font color="#006600" face="monospace">METHOD</font></tt> define la
+      manera en que se mandar&aacute; el formulario. Es recomendable utilizar
+      <tt><font color="#006600" face="monospace">POST</font></tt>. En el caso de que estemos mandando el formulario a
+      nuestra direcci&oacute;n de correo electr&oacute;nico es obligado usarlo.</p>
+      <p align="justify">Ahora vamos a ver uno a uno todos los elementos que podemos incluir en un
+      formulario. Veremos que todos ellos tienen algo en com&uacute;n. Como el
+      resultado de cualquier formulario es una lista de variables y valores
+      asignados a las mismas, todos ellos tendr&aacute;n un atributo en com&uacute;n:
+      el nombre de su variable. El par&aacute;metro tambi&eacute;n ser&aacute;
+      com&uacute;n a todos: <tt><font color="#006600" face="monospace">NAME</font></tt>.</p>
+    <br><br><a name="1"></a><font size="+2" color="#005CA0">11.1. Cajas de texto</font>
+        <p align="justify">Existen tres maneras de conseguir que el usuario introduzca texto en
+        nuestro formulario. Las dos primeras se obtienen por medio de la etiqueta
+        <tt><font color="#006600" face="monospace">&lt;INPUT&gt;</font></tt>:</p>
+        <form method="post"><table border="0" width="100%"><tr><td valign="top" align="left"><tt><font color="#006600" face="monospace">&lt;INPUT TYPE=TEXT&gt;</font></tt></td><td align="right"><font face="Arial,Helvetica,sans-serif"><input type="text"></font></td></tr><tr><td valign="top" align="left"><tt><font color="#006600" face="monospace">&lt;INPUT TYPE=PASSWORD&gt;</font></tt></td><td align="right"><font face="Arial,Helvetica,sans-serif"><input type="password"></font></td></tr></table></form>
+        <p align="justify">El primero nos dibujar&aacute; una caja donde escribir un texto (de una
+        sola l&iacute;nea). El segundo es equivalente, pero no veremos lo que
+        tecleemos en &eacute;l. Estos son los atributos para modificarlos:</p>
+        <table align="center" border="1"><tr><th>Par&aacute;metro</th><th>Utilidad</th></tr><tr><td><tt><font color="#006600" face="monospace">SIZE</font></tt></td><td><font face="Arial,Helvetica,sans-serif">Tama&ntilde;o de la caja de texto.</font></td></tr><tr><td><tt><font color="#006600" face="monospace">MAXLENGTH</font></tt></td><td><font face="Arial,Helvetica,sans-serif">N&uacute;mero m&aacute;ximo de caracteres que puede introducir
+            el usuario.</font></td></tr><tr><td><tt><font color="#006600" face="monospace">VALUE</font></tt></td><td><font face="Arial,Helvetica,sans-serif">Texto por defecto que contendr&aacute; la caja.</font></td></tr></table>
+        <p align="justify">Por otro lado, puede que necesitemos que el usuario pueda introducir
+        m&aacute;s de una l&iacute;nea. En ese caso se utilizar&aacute; la siguiente
+        etiqueta:</p>
+        <form method="post"><table border="0" width="100%"><tr><td valign="top" align="left"><tt><font color="#006600" face="monospace">&lt;TEXTAREA&gt;<br>Por defecto<br>&lt;/TEXTAREA&gt;</font></tt></td><td align="right"><font face="Arial,Helvetica,sans-serif"><textarea>Por defecto</textarea></font></td></tr></table></form>
+        <p align="justify">Lo que incluyamos entre las dos etiquetas ser&aacute; lo que se muestre
+        por defecto dentro de la caja. Admite estos par&aacute;metros:</p>
+        <table align="center" border="1"><tr><th>Par&aacute;metro</th><th>Utilidad</th></tr><tr><td><tt><font color="#006600" face="monospace">ROWS</font></tt></td><td><font face="Arial,Helvetica,sans-serif">Filas que ocupar&aacute; la caja de texto.</font></td></tr><tr><td><tt><font color="#006600" face="monospace">COLS</font></tt></td><td><font face="Arial,Helvetica,sans-serif">Columnas que ocupar&aacute; la caja de texto.</font></td></tr></table>
+      <br><br><a name="2"></a><font size="+2" color="#005CA0">11.2. Opciones</font>
+        <p align="justify">Si lo que deseamos es que el usuario decida entre varias opciones podremos
+        hacerlo de dos modos. El primero es el que vimos en el ejemplo inicial:</p>
+        <form method="post"><table border="0" width="100%"><tr><td valign="top" align="left"><tt><font color="#006600" face="monospace">3&lt;INPUT NAME="Respuesta" TYPE=RADIO VALUE="mal"&gt;&lt;BR&gt;<br>4&lt;INPUT NAME="Respuesta" TYPE=RADIO VALUE="bien"&gt;&lt;BR&gt;<br>5&lt;INPUT NAME="Respuesta" TYPE=RADIO VALUE="mal"&gt;&lt;BR&gt;</font></tt></td><td align="right"><font face="Arial,Helvetica,sans-serif">3<input name="Respuesta" type="radio" VALUE="mal"><br>4<input name="Respuesta" type="radio" VALUE="bien"><br>5<input name="Respuesta" type="radio" VALUE="mal"></font></td></tr></table></form>
+        <p align="justify">Para asociar varios botones de radio a una misma variable les
+        pondremos a todos ellos el mismo <tt><font color="#006600" face="monospace">NAME</font></tt>. Aparte de esto acepta los
+        siguientes par&aacute;metros:</p>
+        <table align="center" border="1"><tr><th>Par&aacute;metro</th><th>Utilidad</th></tr><tr><td><tt><font color="#006600" face="monospace">VALUE</font></tt></td><td><font face="Arial,Helvetica,sans-serif">Este es el valor que asignar&aacute; a la variable.</font></td></tr><tr><td><tt><font color="#006600" face="monospace">CHECKED</font></tt></td><td><font face="Arial,Helvetica,sans-serif">Si lo indicamos en una de las opciones esta ser&aacute; la
+            que est&eacute; activada por defecto.</font></td></tr></table>
+        <p align="justify">Pero tambi&eacute;n tenemos una posibilidad que ocupa bastante menos:
+        las listas desplegables. Para emplearlas deberemos utilizar dos etiquetas,
+        <tt><font color="#006600" face="monospace">SELECT</font></tt> y <tt><font color="#006600" face="monospace">OPTION</font></tt>:</p>
+        <form method="post"><table border="0" width="100%"><tr><td valign="top" align="left"><tt><font color="#006600" face="monospace">&lt;SELECT NAME="Navegador"&gt;
+              <br>&nbsp;&nbsp;&lt;OPTION&gt;Netscape
+              <br>&nbsp;&nbsp;&lt;OPTION&gt;Explorer
+              <br>&nbsp;&nbsp;&lt;OPTION&gt;Opera
+              <br>&nbsp;&nbsp;&lt;OPTION&gt;Lynx
+              <br>&nbsp;&nbsp;&lt;OPTION&gt;Otros
+              <br>&nbsp;&nbsp;&lt;/SELECT&gt;</font></tt></td><td align="right"><font face="Arial,Helvetica,sans-serif"><select name="Navegador">
+              <option>Netscape</option>
+              <option>Explorer</option>
+              <option>Opera</option>
+              <option>Lynx</option>
+              <option>Otros</option>
+              </select></font></td></tr></table></form>
+        <p align="justify">Los par&aacute;metros que admite <tt><font color="#006600" face="monospace">SELECT</font></tt> son las siguientes:</p>
+        <table align="center" border="1"><tr><th>Par&aacute;metro</th><th>Utilidad</th></tr><tr><td><tt><font color="#006600" face="monospace">SIZE</font></tt></td><td><font face="Arial,Helvetica,sans-serif">El n&uacute;mero de opciones que podremos ver. Si es mayor que
+            1 veremos una lista de selecci&oacute;n y, si no, veremos una lista
+            desplegable.</font></td></tr><tr><td><tt><font color="#006600" face="monospace">MULTIPLE</font></tt></td><td><font face="Arial,Helvetica,sans-serif">Si lo indicamos podremos elegir m&aacute;s de una
+            opci&oacute;n.</font></td></tr></table>
+        <p align="justify">Y <tt><font color="#006600" face="monospace">OPTION</font></tt> estos:</p>
+        <table align="center" border="1"><tr><th>Par&aacute;metro</th><th>Utilidad</th></tr><tr><td><tt><font color="#006600" face="monospace">VALUE</font></tt></td><td><font face="Arial,Helvetica,sans-serif">Este es el valor que asignar&aacute; a la variable.</font></td></tr><tr><td><tt><font color="#006600" face="monospace">SELECTED</font></tt></td><td><font face="Arial,Helvetica,sans-serif">Si lo indicamos en una de las opciones esta ser&aacute; la
+            seleccionada por defecto.</font></td></tr></table>
+      <br><br><a name="3"></a><font size="+2" color="#005CA0">11.3. Botones del formulario</font>
+        <p align="justify">Existen dos: uno que se utiliza para mandar el formulario y otro que sirve
+        para limpiar todo lo que haya rellenado el usuario:</p>
+        <form method="post"><table border="0" width="100%"><tr><td valign="top" align="left"><tt><font color="#006600" face="monospace">&lt;INPUT TYPE=SUBMIT&gt;&lt;BR&gt;<br>&lt;INPUT TYPE=RESET&gt;</font></tt></td><td align="right"><font face="Arial,Helvetica,sans-serif"><input type="submit"><br><input type="reset"></font></td></tr></table></form>
+        <p align="justify">Podemos cambiar el texto que el navegador pone por defecto en esos botones
+        utilizando el par&aacute;metro <tt><font color="#006600" face="monospace">VALUE</font></tt>.</p>
+      <br><br><a name="4"></a><font size="+2" color="#005CA0">11.4. Otros elementos</font>
+        <p align="justify">Puede que necesitos que el usuario sencillamente nos confirme o niegue
+        algo. Lo podremos conseguir por medio de controles de confirmaci&oacute;n:</p>
+        <form method="post"><table border="0" width="100%"><tr><td valign="top" align="left"><tt><font color="#006600" face="monospace">&lt;INPUT NAME="Belleza" TYPE=CHECKBOX&gt;Me considero guapo/a</font></tt></td><td align="right"><font face="Arial,Helvetica,sans-serif"><input name="Belleza" type="checkbox">Me considero guapo/a</font></td></tr></table></form>
+        <p align="justify">Si queremos que el control est&eacute; activado por defecto le
+        a&ntilde;adiremos el par&aacute;metro <tt><font color="#006600" face="monospace">CHECKED</font></tt>. El formulario
+        asignar&aacute; a la variable <tt><font color="#006600" face="monospace">NAME</font></tt> el valor <i>on</i>
+        u <i>off</i>.</p>
+        <p align="justify">Por &uacute;ltimo, existe la posibilidad de que necesitemos que, en el
+        formulario, tengamos alguna variable con un valor previamente asignado.
+        Por ejemplo, en todos los cursos que tengo el formulario es el mismo. Y de
+        alguna manera tendr&eacute; que distinguirlos cuando me lleguen, digo yo.
+        As&iacute; que incluyo algo como esto:</p>
+        <div align="center"><pre><font color="#006600" face="monospace">&lt;INPUT TYPE=HIDDEN NAME="Curso" VALUE="HTML 4.0"&gt;</font></pre></div>
+        <p align="justify">De este modo ya s&eacute; de que curso me est&aacute;n hablando.</p>
+      <p></p><img src="graficos/linea.gif" height="1" width="590"><table cellspacing="0" cellpadding="0" border="0" width="100%"><tr><td><img src="graficos/transp.gif" height="2" width="90"></td></tr></table><table cellspacing="0" cellpadding="0" border="0" width="100%"><tr><td align="left"><a href="estructura.html"><img src="graficos/izq.gif" align="MIDDLE" border="0"></a><font size="-1" face="Arial,Helvetica,sans-serif">Estructura del documento</font></td><td align="right"><font size="-1" face="Arial,Helvetica,sans-serif">Controles avanzados para formularios</font><a href="formularios40.html"><img src="graficos/der.gif" align="MIDDLE" border="0"></a></td></tr></table><font size="-1"><div align="center">&copy; 1998-2000 <a href="mailto:multivac@idecnet.com">Daniel
+    Rodr&iacute;guez</a><br><a href="index.html"><img src="graficos/loguito.gif" border="0"></a></div></font></font></td></tr></table></body></html>

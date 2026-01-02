@@ -1,0 +1,19 @@
+#menuHorizontal {
+    width: 400px;
+    border: 3px solid grey;
+}
+
+#menuHorizontal a {
+    padding: 0px 25px 0px;
+    text-decoration: none;
+    color: black;
+    background: #F4F4F4;
+}
+
+#menuHorizontal a:hover, #menuHorizontal a:active {
+    background: #58FA58;
+}
+
+#menuHorizontal a:visited {
+    color: black;
+}

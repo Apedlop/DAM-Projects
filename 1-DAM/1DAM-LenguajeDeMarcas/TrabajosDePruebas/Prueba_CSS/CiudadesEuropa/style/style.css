@@ -1,0 +1,76 @@
+div.div0 {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 17px;
+}
+
+div.div {
+    text-indent: 177px;
+    padding: 20px;
+    color: rgb(182, 110, 43);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+div.div1 {
+    float: left;
+    width: 200px;
+    height: 160px;
+    margin-top: 0px;
+}
+
+div.div2 {
+    float: left;
+    border: solid 5px rgb(182, 110, 43);
+    width: 685px;
+    text-align: justify;
+    padding: 15px;
+    background-color: rgb(221, 203, 153);
+}
+
+div.div3 img {
+    float: right;
+    width: 450px;
+    height: 350px;
+    border: solid 5px rgb(182, 110, 43);
+}
+
+ul{
+    margin-top: 0px;
+    height: 175px;
+}
+
+.menu {
+    width: 180px;
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+    border: 5px solid rgb(182, 110, 43);
+}
+
+.menu li a {
+    padding: .2em 0 .2em 1.5em;
+    display: block;
+    color: #000000;
+}
+
+.menu li {
+    border-bottom: 1px solid #7C7C7C;
+    border-top: 1px solid #FFFFFF;
+}
+
+.menu li a:hover, ul.menu li a:active {
+    background: rgb(97, 196, 226) url(../imagenes/flecha_activa.png) no-repeat 3px;
+}
+
+#sevilla {
+    display: block;
+}
+
+#madrid {
+    display: block;
+}
+
+#barcelona {
+    display: block;
+}

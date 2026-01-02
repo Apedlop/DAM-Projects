@@ -1,0 +1,17 @@
+HTTrack3.49-2+htsswf+htsjava launched on Mon, 18 Mar 2024 11:31:11 at https://www.tutorialesprogramacionya.com/javascriptya/ +*.png +*.gif +*.jpg +*.jpeg +*.css +*.js -ad.doubleclick.net/* -mime:application/foobar
+(winhttrack -qwC2%Ps2u1%s%u%I0H0%kf2A25000%f#f -F "Mozilla/4.5 (compatible; HTTrack 3.0x; Windows 98)" -%F "<!-- Mirrored from %s%s by HTTrack Website Copier/3.x [XR&CO'2014], %s -->" -%l "es, en, *" https://www.tutorialesprogramacionya.com/javascriptya/ -O1 "C:\Users\jacobo\Desktop\misc\javascript CURSO 2\CURSO_JS2_JSYA" +*.png +*.gif +*.jpg +*.jpeg +*.css +*.js -ad.doubleclick.net/* -mime:application/foobar )
+
+Information, Warnings and Errors reported for this mirror:
+note:	the hts-log.txt file, and hts-cache folder, may contain sensitive information,
+	such as username/password authentication for websites mirrored in this project
+	do not share these files/folders if you want these information to remain private
+
+11:31:34	Warning: 	Moved Temporarily for www.tutorialesprogramacionya.com/robots.txt
+11:31:34	Warning: 	Redirected link is identical because of 'URL Hack' option: www.tutorialesprogramacionya.com/robots.txt and https://www.tutorialesprogramacionya.com/robots.txt
+11:31:34	Warning: 	Warning moved treated for www.tutorialesprogramacionya.com/robots.txt (real one is https://www.tutorialesprogramacionya.com/robots.txt)
+11:31:34	Warning: 	Moved Temporarily for www.tutorialesprogramacionya.com/javascriptya/nodejsya/
+11:31:34	Warning: 	Redirected link is identical because of 'URL Hack' option: www.tutorialesprogramacionya.com/javascriptya/nodejsya/ and https://www.tutorialesprogramacionya.com/javascriptya/nodejsya/
+11:31:34	Warning: 	File has moved from www.tutorialesprogramacionya.com/javascriptya/nodejsya/ to https://www.tutorialesprogramacionya.com/javascriptya/nodejsya/
+
+HTTrack Website Copier/3.49-2 mirror complete in 2 minutes 20 seconds : 379 links scanned, 376 files written (4275229 bytes overall) [2612714 bytes received at 18662 bytes/sec], 2670817 bytes transferred using HTTP compression in 311 files, ratio 32%, 13.5 requests per connection
+(No errors, 6 warnings, 0 messages)

@@ -1,0 +1,335 @@
+
+<!DOCTYPE html>
+<html>
+
+
+<!-- Mirrored from www.tutorialesprogramacionya.com/bootstrap5ya/detalleconcepto.php?punto=71&codigo=71&inicio=60 by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 19 Dec 2023 11:11:35 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QWKWPBDEFK"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-QWKWPBDEFK');
+</script>
+
+<script async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-4669394804436935",
+    enable_page_level_ads: true
+  });
+</script>
+
+<title>Componente : nav (con contenido para cada opción)</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">    
+<meta name="keywords" content="bootstrap 5,css, html, programación, webmaster, tutorial">
+<meta name="description" content="El objetivo de este tutorial 
+    es presentar los conceptos básicos de bootstrap 5.">
+<meta name="author" content="Diego Moisset">
+
+<link href="../css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="estilos.css">
+
+<style>
+html,body {
+	background-color: #D3E9D0;
+	font-family: sans-serif,arial;
+
+}
+</style>
+
+<style>
+.uno { width: 320px; height: 100px; }
+@media(min-width: 500px) { .uno { width: 320px; height: 100px; } }
+@media(min-width: 800px) { .uno { width: 336px; height: 280px; } }
+
+.dos { width: 320px; height: 100px; }
+@media(min-width: 500px) { .dos { width: 320px; height: 100px; } }
+@media(min-width: 800px) { .dos { width: 336px; height: 280px; } }
+</style>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','../../www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-80268657-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+</head>
+
+<body>
+
+
+<div class="container">
+
+<div class="row">
+  <div class="col-md-12">
+
+<div class="titulodetalle">
+<h1>71 - Componente : nav (con contenido para cada opción)</h1></div>
+
+  </div>
+</div>  
+
+
+<div class="row">
+  <div class="col-md-12">
+
+<div class="cuerpodetalle">
+<div style="display:block;float:left;margin: 5px;"> 
+ <script async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<!-- adaptable1 -->
+<ins class="adsbygoogle uno"
+     style="display:inline-block"
+     data-ad-client="ca-pub-4669394804436935"
+     data-ad-slot="4716538363"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script> 
+</div> 
+
+
+<p>Una funcionalidad más compleja que podemos utilizar para los menús con pestañas o píldoras es asociarle un div con contenido.</p>
+<p>Solo se muestra la información de la opción seleccionada. Mediante Javascript Bootstrap 5 resuelve el problema de hacer visible el div de la opción que se selecciona y ocultar la otra.</p>
+<p>Veamos un ejemplo con tres pestañas que muestran distintos contenidos al ser presionados:</p>
+<pre class="recuadro">
+&lt;!doctype html&gt;
+&lt;html&gt;
+
+&lt;head&gt;
+  &lt;title&gt;Prueba de Bootstrap 5&lt;/title&gt;
+  &lt;meta charset="utf-8"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"&gt;
+  &lt;link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous"&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+
+  &lt;div class="container"&gt;
+    &lt;ul class="nav nav-tabs mt-3"&gt;
+      &lt;li class="nav-item"&gt;
+        &lt;a class="nav-link active"  data-bs-toggle="tab" href="#opcion1" &gt;Opción 1&lt;/a&gt;
+      &lt;/li&gt;
+      &lt;li class="nav-item"&gt;
+        &lt;a class="nav-link"  data-bs-toggle="tab" href="#opcion2"&gt;Opción 2&lt;/a&gt;
+      &lt;/li&gt;
+      &lt;li class="nav-item"&gt;
+        &lt;a class="nav-link"  data-bs-toggle="tab" href="#opcion3"&gt;Opción 3&lt;/a&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;div class="tab-content"&gt;
+      &lt;div class="tab-pane fade show active" id="opcion1"&gt;
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas vestibulum magna vitae
+      lectus iaculis ultricies. Donec nibh massa, ornare eget diam et, mattis sodales augue. 
+      Etiam tempus turpis id tellus vehicula egestas efficitur a nisi. Pellentesque eget justo
+      tellus. Vivamus hendrerit leo neque, et sagittis lorem blandit sed. Cras fringilla lorem
+      libero, a tempus lorem iaculis ut. Mauris ex purus, porta vitae tristique consectetur, 
+      posuere quis nibh. In ut laoreet nisi. Etiam elementum eget justo in hendrerit. Morbi ut
+      orci a nisi porta vulputate non a libero. Lorem ipsum dolor sit amet, consectetur
+      adipiscing elit. Praesent malesuada lorem arcu, convallis scelerisque turpis dignissim quis.
+      &lt;/div&gt;
+      &lt;div class="tab-pane fade" id="opcion2" &gt;
+      Cras non purus urna. Vestibulum nec felis felis. Quisque luctus vehicula ipsum,
+      id pellentesque nulla luctus at. Maecenas ut sodales velit. Sed orci leo, consequat
+      in lacus ac, pulvinar ullamcorper ex. Cras vulputate vel tortor eget posuere.
+      Quisque sit amet metus sed urna ultrices placerat eu a nunc.
+      &lt;/div&gt;
+      &lt;div class="tab-pane fade" id="opcion3"&gt;
+      Etiam congue, metus eu ultricies euismod, est magna condimentum sem, eget commodo
+      elit nisl id sapien. Proin sodales accumsan nulla non molestie. Nulla tempus
+      congue arcu, a sagittis ante dapibus vitae. Proin tincidunt tincidunt accumsan.
+      Morbi pretium venenatis tempor. Sed sollicitudin ante odio, non commodo eros 
+      egestas et. Nulla efficitur eros non quam vestibulum feugiat. Aliquam libero magna,
+      dignissim id dapibus eget, posuere eu nibh.
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8"
+    crossorigin="anonymous"&gt;&lt;/script&gt;
+&lt;/body&gt;
+
+&lt;/html&gt;
+</pre>
+<p>En el navegador tenemos el siguiente resultado cuando está seleccionada la primera opción:</p>
+<img src="imagentema/foto133.jpg" border="0" alt="bootstrap 5 nav tab-content"><br>
+<p>Y cuando seleccionamos la segunda opción cambia el contenido que se muestra:</p>
+<img src="imagentema/foto134.jpg" border="0" alt="bootstrap 5 nav tab-content"><br>
+
+<p>Definimos una lista no ordenada (ul) con las clases "nav" y "nav-tabs":</p>
+<pre>
+    &lt;ul class="nav nav-tabs mt-3"&gt;
+</pre>
+<p>Cada "li" debe agregar la clase "nav-item" y el ancla contenida debe definir la propiedad data-bs-toggle con el valor "tab" y la propiedad href con un valor que debe coincidir con el div definido más abajo:</p>
+<pre>
+      &lt;li class="nav-item"&gt;
+        &lt;a class="nav-link active"  data-bs-toggle="tab" href="#opcion1" &gt;Opción 1&lt;/a&gt;
+      &lt;/li&gt;
+</pre>
+<p>De forma similar definimos las otras pestañas:</p>
+<pre>
+      &lt;li class="nav-item"&gt;
+        &lt;a class="nav-link"  data-bs-toggle="tab" href="#opcion2"&gt;Opción 2&lt;/a&gt;
+      &lt;/li&gt;
+      &lt;li class="nav-item"&gt;
+        &lt;a class="nav-link"  data-bs-toggle="tab" href="#opcion3"&gt;Opción 3&lt;/a&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+</pre>
+<p>Luego debemos declarar un div con la clase "tab-content" y dentro de este div tantos div como pestañas tenga nuestro menú definiendo la propiedad id con los valores iniciados en la propiedad href de las anclas, además a cada div debemos inicializarlos con la clase "tab-pane":</p>
+<pre>
+    &lt;div class="tab-content"&gt;
+      &lt;div class="tab-pane fade show active" id="opcion1"&gt;
+      ...
+      &lt;/div&gt;
+      &lt;div class="tab-pane fade" id="opcion2" &gt;
+      ...
+      &lt;/div&gt;
+      &lt;div class="tab-pane fade" id="opcion3"&gt;
+      ...
+      &lt;/div&gt;
+    &lt;/div&gt;
+</pre>
+
+<p>Una pequeña variante es utilizar la clase "nav-pills" en lugar de "nav-tabs":</p>
+<img src="imagentema/foto135.jpg" border="0" alt="bootstrap 5 nav tab-content nav-pills"><br>
+
+<h3>Menú vertical y panel de contenido en la misma fila.</h3>
+<p>Podemos utilizar el sistema de grillas de Bootstrap 4 para hacer variantes de las barras de navegación. Por ejemplo dispondremos el menú de navegación en forma vertical en una columna y en otra el contenido de cada una de las opciones.</p>
+<pre class="recuadro">
+&lt;!doctype html&gt;
+&lt;!doctype html&gt;
+&lt;html&gt;
+
+&lt;head&gt;
+  &lt;title&gt;Prueba de Bootstrap 5&lt;/title&gt;
+  &lt;meta charset="utf-8"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"&gt;
+  &lt;link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous"&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+
+  &lt;div class="container"&gt;
+    &lt;div class="row"&gt;
+      &lt;div class="col-3"&gt;
+        &lt;ul class="nav flex-column nav-pills"&gt;
+          &lt;li class="nav-item"&gt;
+            &lt;a class="nav-link active"  data-bs-toggle="tab" href="#opcion1" &gt;Opción 1&lt;/a&gt;
+          &lt;/li&gt;
+          &lt;li class="nav-item"&gt;
+            &lt;a class="nav-link"  data-bs-toggle="tab" href="#opcion2"&gt;Opción 2&lt;/a&gt;
+          &lt;/li&gt;
+          &lt;li class="nav-item"&gt;
+            &lt;a class="nav-link"  data-bs-toggle="tab" href="#opcion3"&gt;Opción 3&lt;/a&gt;
+          &lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/div&gt;
+      &lt;div class="col-9"&gt;
+      &lt;div class="tab-content"&gt;
+        &lt;div class="tab-pane fade show active" id="opcion1"&gt;
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas vestibulum magna vitae
+        lectus iaculis ultricies. Donec nibh massa, ornare eget diam et, mattis sodales augue. 
+        Etiam tempus turpis id tellus vehicula egestas efficitur a nisi. Pellentesque eget justo
+        tellus. Vivamus hendrerit leo neque, et sagittis lorem blandit sed. Cras fringilla lorem
+        libero, a tempus lorem iaculis ut. Mauris ex purus, porta vitae tristique consectetur, 
+        posuere quis nibh. In ut laoreet nisi. Etiam elementum eget justo in hendrerit. Morbi ut
+        orci a nisi porta vulputate non a libero. Lorem ipsum dolor sit amet, consectetur
+        adipiscing elit. Praesent malesuada lorem arcu, convallis scelerisque turpis dignissim quis.
+        &lt;/div&gt;
+        &lt;div class="tab-pane fade" id="opcion2" &gt;
+        Cras non purus urna. Vestibulum nec felis felis. Quisque luctus vehicula ipsum,
+        id pellentesque nulla luctus at. Maecenas ut sodales velit. Sed orci leo, consequat
+        in lacus ac, pulvinar ullamcorper ex. Cras vulputate vel tortor eget posuere.
+        Quisque sit amet metus sed urna ultrices placerat eu a nunc.
+        &lt;/div&gt;
+        &lt;div class="tab-pane fade" id="opcion3"&gt;
+        Etiam congue, metus eu ultricies euismod, est magna condimentum sem, eget commodo
+        elit nisl id sapien. Proin sodales accumsan nulla non molestie. Nulla tempus
+        congue arcu, a sagittis ante dapibus vitae. Proin tincidunt tincidunt accumsan.
+        Morbi pretium venenatis tempor. Sed sollicitudin ante odio, non commodo eros 
+        egestas et. Nulla efficitur eros non quam vestibulum feugiat. Aliquam libero magna,
+        dignissim id dapibus eget, posuere eu nibh.
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  
+  &lt;script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8"
+    crossorigin="anonymous"&gt;&lt;/script&gt;
+&lt;/body&gt;
+
+&lt;/html&gt;
+</pre>
+
+<p>En el navegador tenemos:</p>
+<img src="imagentema/foto136.jpg" border="0" alt="bootstrap 5 nav tab-content vertical"><br>
+<h2><a target="_blank" href="ejecutar6e8d.html?cod=71">Ejecutar Ejemplo</a></h2><h2><a href="indexd6cc.html?inicio=60">Retornar</a></h2> 
+
+<div>
+<!--publi-->
+<script async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<!-- adaptable2 -->
+<ins class="adsbygoogle dos"
+     style="display:inline-block"
+     data-ad-client="ca-pub-4669394804436935"
+     data-ad-slot="5774469161"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+<!--publi-->
+<script async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<!-- adaptable2 -->
+<ins class="adsbygoogle dos"
+     style="display:inline-block"
+     data-ad-client="ca-pub-4669394804436935"
+     data-ad-slot="5774469161"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+</div>
+
+
+
+
+</div>
+
+  </div>
+</div>  
+
+</div>
+
+<script type="text/javascript">
+function cambiar()
+{
+  var lista=document.getElementsByTagName('pre');
+  for(f=0;f<lista.length;f++)
+  {
+   lista[f].style.display='block';
+  }
+  document.getElementById('solucion').style.display='none';
+}
+
+</script>
+
+</body>
+
+
+<!-- Mirrored from www.tutorialesprogramacionya.com/bootstrap5ya/detalleconcepto.php?punto=71&codigo=71&inicio=60 by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 19 Dec 2023 11:11:37 GMT -->
+</html>

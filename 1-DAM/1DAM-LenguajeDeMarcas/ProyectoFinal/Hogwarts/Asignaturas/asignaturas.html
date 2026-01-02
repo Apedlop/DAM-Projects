@@ -1,0 +1,339 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asignaturas</title>
+    <link rel="icon" href="../../image/logo.png">
+
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../../style/menu.css">
+    <link rel="stylesheet" href="asignatura.css">
+
+    <script src="../../javaScript/modo.js"></script>
+    <script src="../../javaScript/recarga.js"></script>
+
+</head>
+
+<body>
+    <div class="contenedor_loader">
+        <div><img src="../../image/carga_snichDorada.gif" class="gif"></div>
+    </div>
+    <!-- Navigation -->
+    <div class="navigation-wrap bg-light start-header start-style">
+        <div class="container-fluid">
+            <div class="row justify-content-between align-items-center">
+                <div class="row">
+                    <div class="col">
+                        <!-- Logo -->
+                        <a class="navbar-brand" href="../../index.html" target="_self">
+                            <img src="../../image/logo.png" alt="Logo" class="logo">
+                        </a>
+                    </div>
+                    <div class="col altura">
+                        <b>
+                            <a href="../Hogwart.html" class="decoracion">
+                                <h1 class="titulo">Hogwarts</h1>
+                            </a>
+                        </b>
+                    </div>
+                    <div class="col posicionModo">
+                        <button type="button" class="btn btn-light colorModo" onclick="toggleTheme()">
+                            <img id="lightImage" src="../../image/soleado.png" alt="Light Theme">
+                            <img id="darkImage" src="../../image/luna.png" alt="Dark Theme">
+                        </button>
+                    </div>
+                </div>
+                <div class="col-auto flex-grow-0 flex-shrink-0">
+                    <!-- Opciones del Navbar -->
+                    <nav class="navbar navbar-expand-md">
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav ms-auto">
+                                <li class="nav-item">
+                                    <a class="nav-link dropdown-toggle" href="../../Hogwarts/Hogwart.html" role="button"
+                                        data-bs-toggle="dropdown" aria-haspopup="true"
+                                        aria-expanded="false">Hogwarts</a>
+                                    <div class="dropdown-menu">
+                                        <a class="dropdown-item" href="../../Hogwarts/Profesores/Profesores.html">Profesores</a>
+                                        <a class="dropdown-item" href="../../Hogwarts/Alumnos/Alumnos.html">Alumnos</a>
+                                        <a class="dropdown-item" href="../../Hogwarts/Asignaturas/asignaturas.html">Asignaturas</a>
+                                        <a class="dropdown-item" href="../../Hogwarts/Casas/casa.html">Casas</a>
+                                    </div>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link dropdown-toggle" href="../../Mortifagos/Mortifagos.html" role="button"
+                                        data-bs-toggle="dropdown" aria-haspopup="true"
+                                        aria-expanded="false">Mortífagos</a>
+                                    <div class="dropdown-menu">
+                                        <a class="dropdown-item"
+                                            href="../../Mortifagos/Personajes/Personajes.html">Personajes</a>
+                                        <a class="dropdown-item"
+                                            href="../../Mortifagos/Horrocruxes/horrocruxes.html">Horrocruxes</a>
+                                        <a class="dropdown-item" href="../../Mortifagos/Mortifagos.html">Marca Tenebrosa</a>
+                                    </div>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link dropdown-toggle" href="../../Familias/Familias.html">Familias</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="../../Mapa/mapa.html">Mapa</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+                <div class="col-auto">
+                    <!-- Segunda sección de opciones del Navbar -->
+                    <nav class="navbar navbar-expand-md navbar-light">
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav ms-auto">
+                                <li class="nav-item">
+                                    <a class="nav-link dropdown-toggle" href="../../Adaptaciones/Adaptaciones.html"
+                                        role="button" data-bs-toggle="dropdown" aria-haspopup="true"
+                                        aria-expanded="false">Adaptaciones</a>
+                                    <div class="dropdown-menu">
+                                        <a class="dropdown-item" href="../../Adaptaciones/Libros.html">Libros</a>
+                                        <a class="dropdown-item" href="../../Adaptaciones/Peliculas.html">Películas</a>
+                                        <a class="dropdown-item" href="../../Adaptaciones/Videojuegos.html">Videojuegos</a>
+                                    </div>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="../../Curiosidades/curiosidad.html">Curiosidades</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="../../Comentarios/Comentarios.html">Comentarios</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="../../quiz/quiz.html">Quiz</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                    <div class="nav-images-container">
+                        <img src="https://cdn-hogwartslegacy.warnerbrosgames.com/static/bar-left.png" alt
+                            class="nav-bar left">
+                        <img src="https://cdn-hogwartslegacy.warnerbrosgames.com/static/bar-right.png" alt
+                            class="nav-bar right">
+                    </div>
+                    <div>
+                        <div class="nav-bar-corner-container">
+                            <div class="nav-bar-corner left">
+                                <img src="https://cdn-hogwartslegacy.warnerbrosgames.com/static/corner-left.webp" alt=""
+                                    class="img-fluid">
+                            </div>
+                            <div class="nav-bar-corner right">
+                                <img src="https://cdn-hogwartslegacy.warnerbrosgames.com/static/corner-right.webp"
+                                    alt="" class="img-fluid">
+                            </div>
+                        </div>
+                        <div class="nav-bar-corner-container1">
+                            <div class="nav-bar-corner bottomLeft">
+                                <img src="https://cdn-hogwartslegacy.warnerbrosgames.com/static/corner-bottom-left.webp"
+                                    alt="" class="img-fluid">
+                            </div>
+                            <div class="nav-bar-corner bottomRight">
+                                <img src="https://cdn-hogwartslegacy.warnerbrosgames.com/static/corner-bottom-right.webp"
+                                    alt="" class="img-fluid">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="my-5 py-5 content-fluid text-center">
+        <div class="text-center">
+            <picture>
+                <source srcset="../../image/titulo-arriba.webp" type="image/webp">
+                <img src="../../image/titulo-arriba.webp" class="title-decoration margen">
+            </picture>
+
+            <h1 class="letraBlanca">Asignaturas</h1>
+
+            <picture>
+                <source srcset="../../image/titulo-bajo.png" type="image/png">
+                <img src="../../image/titulo-bajo.png" class="title-decoration">
+            </picture>
+        </div>
+        <div class="container-fluid justify-content-center">
+            <div class="row justify-content-center barra">
+                <div class="row mt-4 justify-content-center margen-izquierdo">
+                    <div class="col-md-4 mb-4"> <!-- Agregamos la clase mb-4 para agregar margen inferior -->
+                        <figure>
+                            <div class="flip-card">
+                                <div class="flip-card-inner">
+                                    <div class="flip-card-front">
+                                        <img src="image/Encantamientos.png" class="carta">
+                                    </div>
+                                    <div class="flip-card-back">
+                                        <h1>Encantamientos</h1>
+                                        <hr>
+                                        <p>
+                                            Encantamientos es una asignatura esencial en Hogwarts, impartida por el amable profesor Filius Flitwick. Los estudiantes aprenden movimientos de varita y pronunciación de hechizos, trabajando en parejas. La materia es obligatoria durante los primeros cinco años, culminando en los exámenes T.I.M.O., que incluyen partes teóricas y prácticas. Solo aquellos con altas calificaciones pueden avanzar al nivel ÉXTASIS, requerido para carreras como Auror o Sanador. Hermione Granger, Harry Potter y sus amigos disfrutaron de las enseñanzas y la compañía del profesor Flitwick, conocido por su carácter amable.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </figure>
+                    </div>
+                    <div class="col-md-4 mb-4"> <!-- Agregamos la clase mb-4 para agregar margen inferior -->
+                        <figure>
+                            <div class="position-relative">
+                                <div class="flip-card">
+                                    <div class="flip-card-inner">
+                                        <div class="flip-card-front">
+                                            <img src="image/Transformaciones.png" class="carta">
+                                        </div>
+                                        <div class="flip-card-back">
+                                            <h1 class="letraPequeña">Transformaciones</h1>
+                                            <hr>
+                                            <p>En Transformaciones, los estudiantes aprenden a alterar la forma o la apariencia de los objetos o criaturas mediante el uso de hechizos específicos y habilidades prácticas. Se centra en la magia que cambia la naturaleza de las cosas, desde convertir animales en vasijas hasta modificar la estructura molecular de los objetos. Los estudiantes exploran una variedad de técnicas y teorías detrás de la transformación mágica, desarrollando habilidades tanto teóricas como prácticas para dominar este arte complejo y poderoso.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </figure>
+                    </div>
+                    <div class="col-md-4 mb-4"> <!-- Agregamos la clase mb-4 para agregar margen inferior -->
+                        <figure>
+                            <div class="position-relative">
+                                <div class="flip-card">
+                                    <div class="flip-card-inner">
+                                        <div class="flip-card-front">
+                                            <img src="image/DCAO.png" class="carta">
+                                        </div>
+                                        <div class="flip-card-back">
+                                            <h1>DCAO</h1>
+                                            <hr>
+                                            <p>La clase de Defensa Contra las Artes Oscuras en Hogwarts enseña a los estudiantes a protegerse contra las fuerzas malignas. El currículo incluye el estudio y práctica de hechizos defensivos, el aprendizaje sobre criaturas oscuras, y la defensa contra maleficios y maldiciones. Los estudiantes practican encantamientos protectores y ofensivos, como el encantamiento Patronus y los escudos mágicos. Además, se les instruye en tácticas para enfrentar a los magos tenebrosos y en cómo reconocer y neutralizar diferentes tipos de magia oscura. La clase enfatiza tanto la teoría como la práctica.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </figure>
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-center barra">
+                <div class="row mt-4 justify-content-center margen-izquierdo">
+                    <div class="col-md-4 mb-4"> <!-- Agregamos la clase mb-4 para agregar margen inferior -->
+                        <figure>
+                            <div class="flip-card">
+                                <div class="flip-card-inner">
+                                    <div class="flip-card-front">
+                                        <img src="image/Posiones.png" class="carta">
+                                    </div>
+                                    <div class="flip-card-back">
+                                        <h1>Posiones</h1>
+                                        <hr>
+                                        <p>La clase de Pociones en Hogwarts enseña a los estudiantes a crear brebajes mágicos con efectos específicos, siguiendo recetas detalladas y utilizando ingredientes raros y a menudo peligrosos. El currículo abarca pociones curativas, transformadoras, venenosas y antídotos, destacando la importancia de la precisión y la paciencia, ya que cualquier error puede resultar en consecuencias inesperadas. Además, los estudiantes aprenden sobre las propiedades mágicas de los ingredientes y cómo interactúan para formar pociones efectivas, desarrollando habilidades en la mezcla y preparación meticulosa.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </figure>
+                    </div>
+                    <div class="col-md-4 mb-4"> <!-- Agregamos la clase mb-4 para agregar margen inferior -->
+                        <figure>
+                            <div class="position-relative">
+                                <div class="flip-card">
+                                    <div class="flip-card-inner">
+                                        <div class="flip-card-front">
+                                            <img src="image/Herbología.png" class="carta">
+                                        </div>
+                                        <div class="flip-card-back">
+                                            <h1>Herbología</h1>
+                                            <hr>
+                                            <p>
+                                                La clase de Herbología en Hogwarts se centra en el estudio de las plantas mágicas y sus propiedades. Los estudiantes aprenden a identificar y cuidar una amplia variedad de plantas, desde las más simples hasta las más peligrosas. Además, exploran las aplicaciones prácticas de estas plantas en pociones, encantamientos y otras áreas de la magia. La asignatura se imparte en invernaderos especialmente diseñados, donde los estudiantes tienen la oportunidad de interactuar directamente con las plantas y aprender técnicas de cultivo y recolección.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </figure>
+                    </div>
+                    <div class="col-md-4 mb-4"> <!-- Agregamos la clase mb-4 para agregar margen inferior -->
+                        <figure>
+                            <div class="position-relative">
+                                <div class="flip-card">
+                                    <div class="flip-card-inner">
+                                        <div class="flip-card-front">
+                                            <img src="image/HistoriaDeLaMagia.png" class="carta">
+                                        </div>
+                                        <div class="flip-card-back">
+                                            <h1>Historia de la Magia</h1>
+                                            <hr>
+                                            <p>
+                                                La asignatura de Historia de la Magia en Hogwarts explora la evolución de la magia a lo largo de los siglos, desde los primeros registros hasta los desarrollos recientes. Los estudiantes estudian eventos importantes, figuras destacadas y descubrimientos clave en la historia mágica mundial, examinando textos históricos y artefactos mágicos para comprender el legado mágico que ha dado forma al mundo mágico actual.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </figure>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        
+
+        
+    </div>
+
+    
+    <footer class="text-center fondoFooter">
+        <div class="lineaSeparacion">
+            <img src="https://cdn-hogwartslegacy.warnerbrosgames.com/static/bar-left.png" class="izquierda">
+            <img src="https://cdn-hogwartslegacy.warnerbrosgames.com/static/bar-right.png" class="derecha">
+        </div>
+        <!-- Grid container -->
+        <div class="container pt-4">
+            <!-- Section: Social media -->
+            <section class="mb-4">
+                <!-- Facebook -->
+                <a data-mdb-ripple-init class="btn btn-link btn-floating btn-lg text-body m-1"
+                    href="https://www.facebook.com/harrypotter" role="button"><img src="../../image/facebook.png"
+                        class="footer"></a>
+
+                <!-- Instagram -->
+                <a data-mdb-ripple-init class="btn btn-link btn-floating btn-lg text-body m-1"
+                    href="https://www.instagram.com/harrypotter/?hl=es" role="button"><img src="../../image/instagram.png"
+                        class="footer"></a>
+
+                <!-- Twitter -->
+                <a data-mdb-ripple-init class="btn btn-link btn-floating btn-lg text-body m-1"
+                    href="https://x.com/harrypotter" role="button"><img src="../../image/twitter.png" class="footer2"></a>
+
+                <!-- YouTube -->
+                <a data-mdb-ripple-init class="btn btn-link btn-floating btn-lg text-body m-1"
+                    href="https://www.youtube.com/@harrypotter" role="button"><img src="../../image/youtube.png"
+                        class="footer"></a>
+
+                <!-- TikTok -->
+                <a data-mdb-ripple-init class="btn btn-link btn-floating btn-lg text-body m-1"
+                    href="https://www.tiktok.com/@harrypotter" role="button"><img src="../../image/tik-tok.png"
+                        class="footer"></a>
+
+            </section>
+        </div>
+        <!-- Grid container -->
+
+        <!-- Copyright -->
+        <div class="text-center p-3 fondoFooter2">
+            Copyright © 2024
+        </div>
+    </footer>
+</body>
+
+</html>

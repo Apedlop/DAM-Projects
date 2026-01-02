@@ -1,0 +1,338 @@
+<html>
+
+
+<!-- Mirrored from www.tutorialesprogramacionya.com/javascriptya/temarios/descripcion.php?inicio=100&cod=104 by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 18 Mar 2024 10:33:26 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QWKWPBDEFK"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-QWKWPBDEFK');
+</script>
+
+<script async src="../../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-4669394804436935",
+    enable_page_level_ads: true
+  });
+</script>
+<title>Tutorial de JavaScript : Conceptos</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="../css/estilos.css" rel="stylesheet" type="text/css">
+  <meta charset="UTF-8">
+
+<style>
+html,body {
+	background-color: #D3E9D0;
+	font-family: Trebuchet MS, Verdana, Arial, sans-serif;
+	font-size: 10pt;
+	text-align:center;
+}
+
+h1 {
+	font-size: 14pt;
+	margin: 0%;
+}
+
+div#contentdetalle{clear:left;
+                   max-width:900px;
+				   border-top:0px solid #999;
+				   padding-top:15px;
+				   background-color: #aed7a8;
+				   text-align:left;
+				   font-size:1.3em;
+				   font-weight:normal;
+				   font-family:arial;
+				   padding:20px}
+				   
+.recuadro {
+  background-color:#ffffcc;
+  text-align:left;
+  font-family:courier;
+  font-size:1em;
+  border-width:0;
+  padding:5px;
+
+  border: 1px dotted #ffaa00;
+  margin-left:5px;  
+}		
+
+.tablajs {
+    border-collapse: collapse;
+    background-color: #fff;
+    border: 1px solid #dee2e6;    
+    padding: 0.3rem;    
+}
+
+.tablajs th,
+.tablajs td {
+  padding: 0.75rem;
+  vertical-align: top;
+  border-top: 1px solid #dee2e6;
+}
+
+		   
+</style>
+
+<style>
+.uno { width: 320px; height: 100px; }
+@media(min-width: 500px) { .uno { width: 320px; height: 100px; } }
+@media(min-width: 800px) { .uno { width: 336px; height: 280px; } }
+
+.dos { width: 320px; height: 100px; }
+@media(min-width: 500px) { .dos { width: 320px; height: 100px; } }
+@media(min-width: 800px) { .dos { width: 336px; height: 280px; } }
+</style>
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','../../../www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-80268657-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</head>
+
+<body>
+
+<div class="upperleft">
+  <div class="upperright">
+    <div class="lowerleft">
+      <div class="lowerright">
+<table width="98%">
+<tr>
+<td>
+<span style="float:right"><a target="_blank" style="margin-right:0.1em;" href="https://www.tutorialesprogramacionya.com/">Listado completo de tutoriales</a></span>
+<h1>ES6 - Set</h1></td>
+<td align="right">
+
+
+</td>
+</tr>
+</table>
+
+      </div>
+    </div>
+  </div>
+</div>
+<br>
+
+
+<div class="upperleft">
+  <div class="upperright">
+    <div class="lowerleft">
+      <div class="lowerright">
+
+<div id="contentdetalle">
+
+<div style="display:block;float:left;margin: 5px;"> 
+ <script async src="../../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<!-- adaptable1 -->
+<ins class="adsbygoogle uno"
+     style="display:inline-block"
+     data-ad-client="ca-pub-4669394804436935"
+     data-ad-slot="4716538363"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script> 
+</div> 
+
+<p>Hemos visto en conceptos anteriores que JavaScript implementa los siguientes objetos:</p>
+<ul>
+<li>
+Array
+</li>
+<li>
+Map
+</li>
+</ul>
+<p>Con ES6 se presenta el objeto llamado 'Set' que nos evita tener que implementar desde cero una estructura de datos tipo conjunto.</p>
+<p>El objeto 'Set' permite almacenar una colección de elementos que pueden ser de tipo primitivo u objeto y que no se pueden repetir.</p>
+
+
+<h3>Creación de un conjunto (Set).</h3>
+<ol>
+<li>
+<p>Podemos crear un Set vacío y posteriormente añadir elementos al conjunto mediante el método 'add':</p>
+<pre class="recuadro">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+
+&lt;head&gt;
+    &lt;title&gt;Ejemplo de JavaScript&lt;/title&gt;
+    &lt;meta charset="UTF-8"&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+    &lt;script&gt;
+        const conjunto1 = new Set();
+        conjunto1.add("C");
+        conjunto1.add("Pascal");
+        conjunto1.add("PHP");
+        conjunto1.add("Python");
+        console.log(conjunto1);
+    &lt;/script&gt;
+&lt;/body&gt;
+
+&lt;/html&gt;
+</pre>
+<p>Utilizamos el método log del objeto console para mostrar el contenido del mapa (recordar que en Chrome y FireFox debemos presionar la tecla 'F12' para que se muestre la ventana de la console):</p>
+<img src="imagentema/foto013.jpg" border="0" alt="Set javascript"><br>
+</li>
+
+<li>
+<p>Podemos crear un Set e inmediatamente pasar los datos iniciales en el constructor del mismo mediante un arreglo:</p>
+<pre>
+  &lt;script&gt;
+      const conjunto1 = new Set(["C", "Pascal", "PHP", "Python"]);
+      console.log(conjunto1);
+  &lt;/script&gt;
+</pre>
+</li>
+</ol>
+
+
+<h3>Verificar la existencia de un determinado valor y la cantidad de valores del Set.</h3>
+<p>Disponemos del método 'has' que nos retorna si el conjunto almacena un determinado valor.</p>
+<p><strong>Problema</strong></p>
+<p>Generar 10 números aleatorios comprendidos entre 1 y 50. Almacenar los mismos en un Set. Verificar luego si el conjunto tiene el valor 12.</p>
+<pre class="recuadro">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+
+&lt;head&gt;
+    &lt;title&gt;Ejemplo de JavaScript&lt;/title&gt;
+    &lt;meta charset="UTF-8"&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+    &lt;script&gt;
+        const conjunto1 = new Set();
+        for (let x = 0; x &lt; 10; x++)
+            conjunto1.add(parseInt(Math.random() * 50) + 1);
+        document.write(`La cantidad de números aleatorios distintos son ${conjunto1.size}&lt;br&gt;`)
+        if (conjunto1.has(12))
+            document.write("Si se generó el número 12")
+        else
+            document.write("No se generó el número 12")
+    &lt;/script&gt;
+&lt;/body&gt;
+</pre>
+<p>Como un conjunto no puede almacenar valores repetidos luego si queremos saber la cantidad de números aleatorios distintos debemos acceder a la propiedad 'size' del 'Set':</p>
+<pre>
+        document.write(`La cantidad de números aleatorios distintos son ${conjunto1.size}&lt;br&gt;`)
+</pre>
+<p>El método 'has' retorna true si el conjunto almacena el dato que le pasamos como parámetro:</p>
+<pre>
+        if (conjunto1.has(12))
+</pre>
+
+
+<h3>Eliminación de elementos del Set.</h3>
+<p>Podemos eliminar elementos mediante el método 'delete':</p>
+<pre>
+  &lt;script&gt;
+      const conjunto1 = new Set(["C", "Pascal", "PHP", "Python"]);
+      console.log(conjunto1.size);  // 4
+      conjunto1.delete("Pascal");
+      console.log(conjunto1.size);  // 3
+  &lt;/script&gt;
+</pre>
+<p>El método 'delete' retorna true si se eliminó la entrada en el Set y false en caso que le hayamos pasado un valor que no exista.</p>
+<p>Para eliminar todos los elementos del conjunto disponemos del método 'clear':</p>
+<pre>
+  &lt;script&gt;
+      const conjunto1 = new Set(["C", "Pascal", "PHP", "Python"]);
+      console.log(conjunto1.size);  // 4
+      conjunto1.clear();
+      console.log(conjunto1.size);  // 0
+  &lt;/script&gt;
+</pre>
+
+
+
+
+
+<h3>Recorrido de un Set.</h3>
+<p>Los elementos almacenado en el 'Set' mantienen el orden en que se agregaron.</p>
+<p>Podemos recorrer un 'Set' mediante la estructura repetitiva 'for of':</p>
+<pre class="recuadro">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+
+&lt;head&gt;
+    &lt;title&gt;Ejemplo de JavaScript&lt;/title&gt;
+    &lt;meta charset="UTF-8"&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+    &lt;script&gt;
+        const conjunto1 = new Set(["C", "Pascal", "PHP", "Python"]);
+        for (let elemento of conjunto1)
+            document.write(`${elemento}&lt;br&gt;`);
+    &lt;/script&gt;
+&lt;/body&gt;
+
+&lt;/html&gt;
+</pre>
+
+<p>Al ejecutar el algoritmo podemos ver como recorrer el conjunto y recuperar en forma individual cada uno de los elementos que conforman el 'Set'.</p>
+
+<p>El objeto Set igual que los objetos Array y Map dispone de un método 'forEach' para iterar sobre los elementos del 'Set':</p>
+<pre>
+  &lt;script&gt;
+      const conjunto1 = new Set(["C", "Pascal", "PHP", "Python"]);
+      conjunto1.forEach((elemento) =&gt; document.write(`${elemento}&lt;br&gt;`));
+  &lt;/script&gt;
+</pre>
+</p>
+</div>
+
+<div>
+<!--publi-->
+<script async src="../../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<!-- adaptable2 -->
+<ins class="adsbygoogle dos"
+     style="display:inline-block"
+     data-ad-client="ca-pub-4669394804436935"
+     data-ad-slot="5774469161"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+<!--publi-->
+<script async src="../../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<!-- adaptable2 -->
+<ins class="adsbygoogle dos"
+     style="display:inline-block"
+     data-ad-client="ca-pub-4669394804436935"
+     data-ad-slot="5774469161"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+</div>
+
+
+   <h2><a href="../indexf6ce.html?inicio=100">Retornar</a></h2>   
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+</body>
+
+
+<!-- Mirrored from www.tutorialesprogramacionya.com/javascriptya/temarios/descripcion.php?inicio=100&cod=104 by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 18 Mar 2024 10:33:27 GMT -->
+</html>

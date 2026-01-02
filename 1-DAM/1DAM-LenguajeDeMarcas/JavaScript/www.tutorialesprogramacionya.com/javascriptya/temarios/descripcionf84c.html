@@ -1,0 +1,272 @@
+<html>
+
+
+<!-- Mirrored from www.tutorialesprogramacionya.com/javascriptya/temarios/descripcion.php?inicio=40&cod=50 by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 18 Mar 2024 10:33:14 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QWKWPBDEFK"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-QWKWPBDEFK');
+</script>
+
+<script async src="../../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-4669394804436935",
+    enable_page_level_ads: true
+  });
+</script>
+<title>Tutorial de JavaScript : Conceptos</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="../css/estilos.css" rel="stylesheet" type="text/css">
+  <meta charset="UTF-8">
+
+<style>
+html,body {
+	background-color: #D3E9D0;
+	font-family: Trebuchet MS, Verdana, Arial, sans-serif;
+	font-size: 10pt;
+	text-align:center;
+}
+
+h1 {
+	font-size: 14pt;
+	margin: 0%;
+}
+
+div#contentdetalle{clear:left;
+                   max-width:900px;
+				   border-top:0px solid #999;
+				   padding-top:15px;
+				   background-color: #aed7a8;
+				   text-align:left;
+				   font-size:1.3em;
+				   font-weight:normal;
+				   font-family:arial;
+				   padding:20px}
+				   
+.recuadro {
+  background-color:#ffffcc;
+  text-align:left;
+  font-family:courier;
+  font-size:1em;
+  border-width:0;
+  padding:5px;
+
+  border: 1px dotted #ffaa00;
+  margin-left:5px;  
+}		
+
+.tablajs {
+    border-collapse: collapse;
+    background-color: #fff;
+    border: 1px solid #dee2e6;    
+    padding: 0.3rem;    
+}
+
+.tablajs th,
+.tablajs td {
+  padding: 0.75rem;
+  vertical-align: top;
+  border-top: 1px solid #dee2e6;
+}
+
+		   
+</style>
+
+<style>
+.uno { width: 320px; height: 100px; }
+@media(min-width: 500px) { .uno { width: 320px; height: 100px; } }
+@media(min-width: 800px) { .uno { width: 336px; height: 280px; } }
+
+.dos { width: 320px; height: 100px; }
+@media(min-width: 500px) { .dos { width: 320px; height: 100px; } }
+@media(min-width: 800px) { .dos { width: 336px; height: 280px; } }
+</style>
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','../../../www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-80268657-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</head>
+
+<body>
+
+<div class="upperleft">
+  <div class="upperright">
+    <div class="lowerleft">
+      <div class="lowerright">
+<table width="98%">
+<tr>
+<td>
+<span style="float:right"><a target="_blank" style="margin-right:0.1em;" href="https://www.tutorialesprogramacionya.com/">Listado completo de tutoriales</a></span>
+<h1>Array: instrucción delete</h1></td>
+<td align="right">
+
+
+</td>
+</tr>
+</table>
+
+      </div>
+    </div>
+  </div>
+</div>
+<br>
+
+
+<div class="upperleft">
+  <div class="upperright">
+    <div class="lowerleft">
+      <div class="lowerright">
+
+<div id="contentdetalle">
+
+<div style="display:block;float:left;margin: 5px;"> 
+ <script async src="../../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<!-- adaptable1 -->
+<ins class="adsbygoogle uno"
+     style="display:inline-block"
+     data-ad-client="ca-pub-4669394804436935"
+     data-ad-slot="4716538363"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script> 
+</div> 
+
+<p>Javascript tiene una instrucción que permite eliminar un elemento de un vector llamada delete.</p>
+<p>Al comando delete le pasamos el nombre del vector y la posición que queremos borrar:</p>
+<pre>
+  delete vec[3];
+</pre>
+<p>Con el comando anterior estamos eliminando la componente de la posición 3 del vector. Cuando se elimina una componente no se modifica la propiedad length y el vector se convierte en no denso. Si luego tratamos de acceder a dicha posición el resultado es el valor undefined.</p>
+<strong>Problema</strong>
+<p>Crear un vector de 10 elementos y almacenar valores aleatorios en el mismo. Luego borrar los elementos de las posiciones pares e imprimir el vector antes y después de borrar las componentes, inclusive tratar de acceder a las componentes que acabamos de borrar.</p>
+<pre class="recuadro">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+
+&lt;head&gt;
+    &lt;title&gt;Ejemplo de JavaScript&lt;/title&gt;
+    &lt;meta charset="UTF-8"&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+
+    &lt;script&gt;
+        let vec = [];
+        for (let f = 0; f &lt; 10; f++) {
+            let valor = parseInt(Math.random() * 1000);
+            vec.push(valor);
+        }
+        document.write('Vector antes de borrar&lt;br&gt;');
+        for (let f = 0; f &lt; 10; f++) {
+            document.write(vec[f] + '&lt;br&gt;');
+        }
+        for (let f = 0; f &lt; 10; f = f + 2) {
+            delete vec[f];
+        }
+        document.write('Vector luego de borrar las posiciones pares&lt;br&gt;');
+        for (let f = 0; f &lt; 10; f++) {
+            document.write(vec[f] + '&lt;br&gt;');
+        }
+    &lt;/script&gt;
+
+&lt;/body&gt;
+
+&lt;/html&gt;
+</pre>
+<p>Creamos y cargamos el vector con 10 enteros aleatorios:
+<pre>
+        let vec = [];
+        for (let f = 0; f &lt; 10; f++) {
+            let valor = parseInt(Math.random() * 1000);
+            vec.push(valor);
+        }
+
+</pre>
+<p>Procedemos a borrar los elementos de las posiciones pares del vector utilizando el comando Javascript delete (veamos que dentro del for incrementamos f en 2 en cada vuelta del ciclo):</p>
+<pre>
+        for (let f = 0; f &lt; 10; f = f + 2) {
+            delete vec[f];
+        }
+</pre>
+<p>Por último procedemos a mostrar el vector donde podemos comprobar que al tratar de acceder a componentes que se han eliminado el resultado es el valor undefined, el resultado completo de la ejecución del programa es:</p>
+<pre>
+Vector antes de borrar
+931
+354
+246
+876
+802
+980
+957
+307
+998
+640
+Vector luego de borrar las posiciones pares
+undefined
+354
+undefined
+876
+undefined
+980
+undefined
+307
+undefined
+640
+</pre>
+<p>Los valores que aparecen en pantalla siempre serán diferentes debido a que cargamos valores aleatorios.</p>
+</div>
+
+<div>
+<!--publi-->
+<script async src="../../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<!-- adaptable2 -->
+<ins class="adsbygoogle dos"
+     style="display:inline-block"
+     data-ad-client="ca-pub-4669394804436935"
+     data-ad-slot="5774469161"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+<!--publi-->
+<script async src="../../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<!-- adaptable2 -->
+<ins class="adsbygoogle dos"
+     style="display:inline-block"
+     data-ad-client="ca-pub-4669394804436935"
+     data-ad-slot="5774469161"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+</div>
+
+
+   <h2><a href="../index1e61.html?inicio=40">Retornar</a></h2>   
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+</body>
+
+
+<!-- Mirrored from www.tutorialesprogramacionya.com/javascriptya/temarios/descripcion.php?inicio=40&cod=50 by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 18 Mar 2024 10:33:14 GMT -->
+</html>

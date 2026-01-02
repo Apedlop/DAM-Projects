@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Redirigir y Redimensionar Ventana</title>
+<script>
+let contador = 0;
+
+function redirigirYRedimensionar() {
+    if (contador < 5) {
+        let nuevaAnchura = (screen.width / 2) - (20 * contador);
+        let nuevaAltura = screen.height / 2;
+        let nuevaVentana = window.open("https://www.google.com", "_blank", `width=${nuevaAnchura}, height=${nuevaAltura}`);
+        contador++;
+    } else {
+        alert("¡Ya no puedes redimensionar la ventana más veces!");
+    }
+}
+</script>
+</head>
+<body>
+<button onclick="redirigirYRedimensionar()">Abrir Ventana</button>
+</body>
+</html>

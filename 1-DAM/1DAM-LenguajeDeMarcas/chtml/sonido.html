@@ -1,0 +1,55 @@
+<!--Este documento ha sido generado con XT, de James Clark--><html xmlns:date="http://www.jclark.com/xt/java/java.util.Date"><head><title>Curso de HTML: Sonido</title><META HTTP-EQUIV="pragma" CONTENT="no-cache"></head><!--Cuerpo del documento--><body bgcolor="#FEFEFE"><table width="630" border="0"><tr><td valign="top" align="center" width="40" rowspan="2"><a href="index.html"><img src="graficos/logo.jpg" border="0"></a></td><td align="center" width="590"><IFRAME SRC="http://ad.es.doubleclick.net/adi/ES-programacion.net/ES-redferca-programacion-html;sz=468x60;ord=44126913875755190?" name="frame1" width="468" height="60" frameborder="no" border="0" MARGINWIDTH="0" MARGINHEIGHT="0" SCROLLING="no"><SCRIPT language="JavaScript1.1" SRC="http://ad.es.doubleclick.net/adj/ES-programacion.net/ES-redferca-programacion-html;abr=!ie;sz=468x60;ord=44126913875755190?"></SCRIPT><NOSCRIPT><A HREF="http://ad.es.doubleclick.net/jump/ES-programacion.net/ES-redferca-programacion-html;abr=!ie;sz=468x60;ord=44126913875755190?"><IMG SRC="http://ad.es.doubleclick.net/ad/ES-programacion.net/ES-redferca-programacion-html;abr=!ie;sz=468x60;ord=44126913875755190?" border="0" height="60" width="468"></A></NOSCRIPT></IFRAME></td></tr><tr><td valign="top"><font face="Arial,Helvetica,sans-serif"><font size="+3" color="#005CA0"><b>20. Sonido<img src="graficos/explorer.gif" width="26" height="26" border="0" align="middle"><img src="graficos/netscape.gif" width="26" height="26" border="0" align="middle"></b></font>
+      <p align="justify">A&uacute;n cuando les pueda parecer incre&iacute;ble a algunos hombres de
+      poca fe, es posible escuchar sonidos (o m&uacute;sica) desde el propio
+      navegador. Tanto Netscape como Explorer incorporan desde hace tiempo la
+      capacidad de reproducir sonido. El &uacute;nico problema es que los archivos
+      suelen ser grandes y, siendo algo innecesario y superfluo, poca gente
+      incluye melod&iacute;as en sus p&aacute;ginas.</p>
+      <p align="justify">Los formatos que se puede asegurar que los navegadores
+      reproducir&aacute;n son los archivos WAV y MID. Para poder reproducir otros
+      necesitar&aacute;n el <i>plug-in</i> o a&ntilde;adido necesario, como puede
+      ser el Real Audio para los archivos RA o el ModPlug para los MOD y
+      derivados.</p>
+    <br><br><a name="1"></a><font size="+2" color="#005CA0">20.1. Sonido activado por el usuario</font>
+        <p align="justify">La manera m&aacute;s sencilla de incluir sonidos es dejando al usuario
+        la decisi&oacute;n de escucharlos o no. Para hacerlo incluiremos el sonido
+        en el par&aacute;metro <tt><font color="#006600" face="monospace">HREF</font></tt> de un enlace, como si fuera una
+        p&aacute;gina HTML:</p>
+        <div align="center"><pre><font color="#006600" face="monospace">&lt;A HREF="hola.wav"&gt;<a href="sonidos/hola.wav">Si pulsas te saludo</a>&lt;A&gt;</font></pre></div>
+      <br><br><a name="2"></a><font size="+2" color="#005CA0">20.2. Sonido de fondo</font>
+        <p align="justify">Lo del sonido de fondo ya es m&aacute;s complicado, ya que Netscape y
+        Explorer ofrecen soluciones propietarias, distintas e incompatibles de hacer
+        sonar un archivo de fondo.</p>
+        <p align="justify">En Explorer, desde la versi&oacute;n 2.0, se pueden incluir fondos
+        sonoros utilizando la etiqueta <tt><font color="#006600" face="monospace">BGSOUND</font></tt>:</p>
+        <div align="center"><pre><font color="#006600" face="monospace">&lt;BGSOUND SRC="musica.mid"&gt;</font></pre></div>
+        <p align="justify">El par&aacute;metro <tt><font color="#006600" face="monospace">SRC</font></tt> indicar&aacute; el archivo a reproducir.
+        Esta etiqueta admite tambi&ntilde;en otro par&aacute;metro, <tt><font color="#006600" face="monospace">LOOP</font></tt>,
+        que indica el n&uacute;mero de veces consecutivas que sonar&aacute; el
+        fichero. Si se indica <tt><font color="#006600" face="monospace">LOOP="infinite"</font></tt>, el archivo se
+        reproducir&aacute; indefinidamente, mientras estemos en la p&aacute;gina.</p>
+        <p align="justify">Netscape utiliza su etiqueta <tt><font color="#006600" face="monospace">&lt;EMBED&gt;</font></tt>. Te&oacute;ricamente,
+        esta etiqueta deber&iacute;a servir para unir objetos de varios tipos a la
+        p&aacute;gina web, pero en la pr&aacute;ctica s&oacute;lo se utiliza para
+        esto. Esta etiqueta tiene los siguiente par&aacute;metros:</p>
+        <table align="center" border="1"><tr><th>Par&aacute;metro</th><th>Utilidad</th></tr><tr><td><tt><font color="#006600" face="monospace">SRC</font></tt></td><td><font face="Arial,Helvetica,sans-serif">Contiene el nombre de archivo de sonido a reproducir</font></td></tr><tr><td><tt><font color="#006600" face="monospace">WIDTH y HEIGHT</font></tt></td><td><font face="Arial,Helvetica,sans-serif">En Netscape aparece un peque&ntilde;o reproductor, estos
+            par&aacute;metros especifican su tama&ntilde;o.</font></td></tr><tr><td><tt><font color="#006600" face="monospace">AUTOSTART="true"</font></tt></td><td><font face="Arial,Helvetica,sans-serif">Arranca autom&aacute;ticamente la reproducci&oacute;n.</font></td></tr><tr><td><tt><font color="#006600" face="monospace">LOOP="true"</font></tt></td><td><font face="Arial,Helvetica,sans-serif">Reproduce ininterrumpidamente el fichero hasta que salimos
+            de la p&aacute;gina.</font></td></tr><tr><td><tt><font color="#006600" face="monospace">HIDDEN="true"</font></tt></td><td><font face="Arial,Helvetica,sans-serif">Oculta el reproductor.</font></td></tr></table>
+        <p align="justify">Sin embargo, y debido a algunos bugs, si queremos reproducir infinitamente
+        un archivo con el reproductor oculto, deberemos incluir todos los
+        par&aacute;metros, incluyendo <tt><font color="#006600" face="monospace">WIDTH</font></tt> y <tt><font color="#006600" face="monospace">HEIGHT</font></tt>.
+        Adem&aacute;s, si el usuario tiene alg&uacute;n <i>plug-in</i> de sonido
+        extra&ntilde;o, en lugar del que viene con Netscape, es posible que deje
+        de funcionar correctamente.</p>
+        <p align="justify">Dado que ambas etiquetas son incompatibles entre s&iacute;, basta con
+        incluir las dos... o, mejor dicho, bastaba. Ahora el Explorer es capaz
+        de interpretar &lt;EMBED&gt;, pero no exactamente de la misma manera, lo
+        que provoca que aparezca una ventana aparte con el reproductor. En
+        definitiva, la mejor manera de mostrar una m&uacute;sica de fondo es
+        usando un peque&ntilde;o <i>script</i> que averigue en qu&eacute;
+        navegador est&aacute; instalado y discrimine.</p>
+        <p align="justify">Como no pod&iacute;a ser menos, en este
+        <a href="ejemplos/sonido.html" target="_new">ejemplo</a>
+        pod&eacute;is ver c&oacute;mo suena algo de fondo y el c&oacute;digo necesario.</p>
+      <p></p><img src="graficos/linea.gif" height="1" width="590"><table cellspacing="0" cellpadding="0" border="0" width="100%"><tr><td><img src="graficos/transp.gif" height="2" width="90"></td></tr></table><table cellspacing="0" cellpadding="0" border="0" width="100%"><tr><td align="left"><a href="capas.html"><img src="graficos/izq.gif" align="MIDDLE" border="0"></a><font size="-1" face="Arial,Helvetica,sans-serif">Capas</font></td><td align="right"><font size="-1" face="Arial,Helvetica,sans-serif">Gu&iacute;a de estilo</font><a href="estilo.html"><img src="graficos/der.gif" align="MIDDLE" border="0"></a></td></tr></table><font size="-1"><div align="center">&copy; 1998-2000 <a href="mailto:multivac@idecnet.com">Daniel
+    Rodr&iacute;guez</a><br><a href="index.html"><img src="graficos/loguito.gif" border="0"></a></div></font></font></td></tr></table></body></html>

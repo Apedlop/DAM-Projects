@@ -1,0 +1,327 @@
+
+<!DOCTYPE html>
+<html>
+
+
+<!-- Mirrored from www.tutorialesprogramacionya.com/bootstrap5ya/detalleconcepto.php?punto=38&codigo=38&inicio=20 by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 19 Dec 2023 11:10:53 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QWKWPBDEFK"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-QWKWPBDEFK');
+</script>
+
+<script async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-4669394804436935",
+    enable_page_level_ads: true
+  });
+</script>
+
+<title>button : grupo de botones, barra de herramientas, tamaños y orientación</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">    
+<meta name="keywords" content="bootstrap 5,css, html, programación, webmaster, tutorial">
+<meta name="description" content="El objetivo de este tutorial 
+    es presentar los conceptos básicos de bootstrap 5.">
+<meta name="author" content="Diego Moisset">
+
+<link href="../css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="estilos.css">
+
+<style>
+html,body {
+	background-color: #D3E9D0;
+	font-family: sans-serif,arial;
+
+}
+</style>
+
+<style>
+.uno { width: 320px; height: 100px; }
+@media(min-width: 500px) { .uno { width: 320px; height: 100px; } }
+@media(min-width: 800px) { .uno { width: 336px; height: 280px; } }
+
+.dos { width: 320px; height: 100px; }
+@media(min-width: 500px) { .dos { width: 320px; height: 100px; } }
+@media(min-width: 800px) { .dos { width: 336px; height: 280px; } }
+</style>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','../../www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-80268657-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+</head>
+
+<body>
+
+
+<div class="container">
+
+<div class="row">
+  <div class="col-md-12">
+
+<div class="titulodetalle">
+<h1>38 - button : grupo de botones, barra de herramientas, tamaños y orientación</h1></div>
+
+  </div>
+</div>  
+
+
+<div class="row">
+  <div class="col-md-12">
+
+<div class="cuerpodetalle">
+<div style="display:block;float:left;margin: 5px;"> 
+ <script async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<!-- adaptable1 -->
+<ins class="adsbygoogle uno"
+     style="display:inline-block"
+     data-ad-client="ca-pub-4669394804436935"
+     data-ad-slot="4716538363"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script> 
+</div> 
+
+
+<p>Boostrap nos provee la posibilidad de agrupar un conjunto de botones mediante la clase "btn-group". Los botones se agrupan pegados en la misma fila.</p>
+<p>En algunas situaciones podemos agrupar un conjunto de grupos de botones y crear una barra de herramientas.</p>
+<h3>Problema</h3>
+<p>Crear una grupo de botones con los números de 1 al 4. Por otro lado crear una barra de herramientas con dos grupos de botones mostrando los números del 1 al 4 en castellano y en inglés.</p>
+<pre class="recuadro">
+&lt;!doctype html&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;title&gt;Prueba de Bootstrap 5&lt;/title&gt; 
+  &lt;meta charset="utf-8"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"&gt;
+  &lt;link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  
+  &lt;div class="container"&gt;
+    
+    &lt;div class="btn-group"&gt;
+      &lt;button type="button" class="btn btn-primary"&gt;1&lt;/button&gt;
+      &lt;button type="button" class="btn btn-primary"&gt;2&lt;/button&gt;
+      &lt;button type="button" class="btn btn-primary"&gt;3&lt;/button&gt;
+    &lt;/div&gt;
+    &lt;hr&gt;
+    &lt;div class="btn-toolbar"&gt;
+      &lt;div class="btn-group me-3"&gt;
+        &lt;button type="button" class="btn btn-primary"&gt;uno&lt;/button&gt;
+        &lt;button type="button" class="btn btn-primary"&gt;dos&lt;/button&gt;
+        &lt;button type="button" class="btn btn-primary"&gt;tres&lt;/button&gt;
+        &lt;button type="button" class="btn btn-primary"&gt;cuatro&lt;/button&gt;
+      &lt;/div&gt; 
+      &lt;div class="btn-group"&gt;
+        &lt;button type="button" class="btn btn-primary"&gt;one&lt;/button&gt;
+        &lt;button type="button" class="btn btn-primary"&gt;two&lt;/button&gt;
+        &lt;button type="button" class="btn btn-primary"&gt;three&lt;/button&gt;
+        &lt;button type="button" class="btn btn-primary"&gt;four&lt;/button&gt;
+      &lt;/div&gt;
+     &lt;/div&gt;
+
+  &lt;/div&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+<p>En el navegador tenemos una representación similar a:</p>
+<img src="imagentema/foto055.jpg" border="0" alt="button btn-group btn-toolbar bootstrap 5"><br> 
+
+<p>Es decir debemos agrupar un conjunto de elementos button con un div definiendo la clase "btn-group":</p>
+<pre>
+    &lt;div class="btn-group"&gt;
+      &lt;button type="button" class="btn btn-primary"&gt;1&lt;/button&gt;
+      &lt;button type="button" class="btn btn-primary"&gt;2&lt;/button&gt;
+      &lt;button type="button" class="btn btn-primary"&gt;3&lt;/button&gt;
+    &lt;/div&gt;
+</pre>
+<p>Para crear una barra de herramientas debemos agrupar un conjunto de "btn-group" encerrando los mismos en un div definiendo la clase ""btn-toolbar":</p>
+<pre>
+    &lt;div class="btn-toolbar"&gt;
+      &lt;div class="btn-group me-3"&gt;
+        &lt;button type="button" class="btn btn-primary"&gt;uno&lt;/button&gt;
+        &lt;button type="button" class="btn btn-primary"&gt;dos&lt;/button&gt;
+        &lt;button type="button" class="btn btn-primary"&gt;tres&lt;/button&gt;
+        &lt;button type="button" class="btn btn-primary"&gt;cuatro&lt;/button&gt;
+      &lt;/div&gt; 
+      &lt;div class="btn-group"&gt;
+        &lt;button type="button" class="btn btn-primary"&gt;one&lt;/button&gt;
+        &lt;button type="button" class="btn btn-primary"&gt;two&lt;/button&gt;
+        &lt;button type="button" class="btn btn-primary"&gt;three&lt;/button&gt;
+        &lt;button type="button" class="btn btn-primary"&gt;four&lt;/button&gt;
+      &lt;/div&gt;
+     &lt;/div&gt;
+</pre>
+
+<p>Para que las barras de botones se muestren separadas agregamos la clase me-3 (margin end con el valor 3).</p>
+
+<p>Para definir tamaños de los botones en forma conjunta para un grupo de botones podemos utilizar alguna de las siguientes clases:</p>
+<pre>
+btn-group-lg
+btn-group-sm
+</pre>
+<p>Que definen los tamaños grande y pequeño.</p>
+<p>Un ejemplo asignando esto dos tipos de clases a dos grupos de botones es:</p>
+
+<pre class="recuadro">
+&lt;!doctype html&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;title&gt;Prueba de Bootstrap 5&lt;/title&gt; 
+  &lt;meta charset="utf-8"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"&gt;
+  &lt;link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  
+  &lt;div class="container"&gt;
+    
+    &lt;div class="btn-group btn-group-lg"&gt;
+      &lt;button type="button" class="btn btn-primary"&gt;one&lt;/button&gt;
+      &lt;button type="button" class="btn btn-primary"&gt;two&lt;/button&gt;
+      &lt;button type="button" class="btn btn-primary"&gt;three&lt;/button&gt;
+    &lt;/div&gt;
+    &lt;hr&gt;
+    &lt;div class="btn-group btn-group-sm"&gt;
+      &lt;button type="button" class="btn btn-primary"&gt;one&lt;/button&gt;
+      &lt;button type="button" class="btn btn-primary"&gt;two&lt;/button&gt;
+      &lt;button type="button" class="btn btn-primary"&gt;three&lt;/button&gt;
+    &lt;/div&gt;
+
+  &lt;/div&gt;
+  
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+<p>Y tenemos como resultado en el navegador una página similar a:</p>
+<img src="imagentema/foto056.jpg" border="0" alt="button btn-group btn-group-sm btn-group-lg bootstrap 5">
+
+<p>Otra clase relacionada a los grupos de botones es "btn-group-vertical", la misma dispone los botones en forma vertical, probemos de modificar el ejemplo primero:</p>
+<pre>
+    &lt;div class="btn-group-vertical"&gt;
+      &lt;button type="button" class="btn btn-primary"&gt;1&lt;/button&gt;
+      &lt;button type="button" class="btn btn-primary"&gt;2&lt;/button&gt;
+      &lt;button type="button" class="btn btn-primary"&gt;3&lt;/button&gt;
+    &lt;/div&gt;
+</pre>
+<p>Luego en el navegador tenemos como resultado:</p>
+<img src="imagentema/foto057.jpg" border="0" alt="button btn-group-vertical btn-group-sm btn-group-lg bootstrap 5">
+
+<h3>Grupos de Checkbox y RadioButton mostrandose como botones.</h3>
+<p>Podemos agrupar un conjunto de RadioButton y que se muestren como botones, de forma similar con controles Checkbox:</p>
+
+<img src="imagentema/foto057b.jpg" border="0" alt="btn-group checkbox radio bootstrap 5">
+<p>Y lo obtenemos con el siguiente código:</p>
+<pre class="recuadro">
+&lt;!doctype html&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;title&gt;Prueba de Bootstrap 5&lt;/title&gt; 
+  &lt;meta charset="utf-8"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"&gt;
+  &lt;link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  
+  &lt;div class="container"&gt;
+    
+    &lt;div class="btn-group"&gt;
+      &lt;input type="checkbox" class="btn-check" id="btncheck1"&gt;
+      &lt;label class="btn btn-outline-primary" for="btncheck1"&gt;Checkbox 1&lt;/label&gt;
+    
+      &lt;input type="checkbox" class="btn-check" id="btncheck2"&gt;
+      &lt;label class="btn btn-outline-primary" for="btncheck2"&gt;Checkbox 2&lt;/label&gt;
+    
+      &lt;input type="checkbox" class="btn-check" id="btncheck3"&gt;
+      &lt;label class="btn btn-outline-primary" for="btncheck3"&gt;Checkbox 3&lt;/label&gt;
+    &lt;/div&gt;        
+    &lt;hr&gt;
+    &lt;div class="btn-group"&gt;
+      &lt;input type="radio" class="btn-check" name="radio" id="radio1" checked&gt;
+      &lt;label class="btn btn-outline-primary" for="radio1"&gt;Radio 1&lt;/label&gt;
+    
+      &lt;input type="radio" class="btn-check" name="radio" id="radio2"&gt;
+      &lt;label class="btn btn-outline-primary" for="radio2"&gt;Radio 2&lt;/label&gt;
+    
+      &lt;input type="radio" class="btn-check" name="radio" id="radio3"&gt;
+      &lt;label class="btn btn-outline-primary" for="radio3"&gt;Radio 3&lt;/label&gt;
+    &lt;/div&gt;
+
+  &lt;/div&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+
+<h2><a target="_blank" href="ejecutar671f.html?cod=38">Ejecutar Ejemplo</a></h2><h2><a href="index28fa.html?inicio=20">Retornar</a></h2> 
+
+<div>
+<!--publi-->
+<script async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<!-- adaptable2 -->
+<ins class="adsbygoogle dos"
+     style="display:inline-block"
+     data-ad-client="ca-pub-4669394804436935"
+     data-ad-slot="5774469161"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+<!--publi-->
+<script async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<!-- adaptable2 -->
+<ins class="adsbygoogle dos"
+     style="display:inline-block"
+     data-ad-client="ca-pub-4669394804436935"
+     data-ad-slot="5774469161"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+</div>
+
+
+
+
+</div>
+
+  </div>
+</div>  
+
+</div>
+
+<script type="text/javascript">
+function cambiar()
+{
+  var lista=document.getElementsByTagName('pre');
+  for(f=0;f<lista.length;f++)
+  {
+   lista[f].style.display='block';
+  }
+  document.getElementById('solucion').style.display='none';
+}
+
+</script>
+
+</body>
+
+
+<!-- Mirrored from www.tutorialesprogramacionya.com/bootstrap5ya/detalleconcepto.php?punto=38&codigo=38&inicio=20 by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 19 Dec 2023 11:10:55 GMT -->
+</html>

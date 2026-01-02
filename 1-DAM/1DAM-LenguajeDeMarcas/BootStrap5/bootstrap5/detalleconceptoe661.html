@@ -1,0 +1,326 @@
+
+<!DOCTYPE html>
+<html>
+
+
+<!-- Mirrored from www.tutorialesprogramacionya.com/bootstrap5ya/detalleconcepto.php?punto=72&codigo=72&inicio=60 by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 19 Dec 2023 11:11:37 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QWKWPBDEFK"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-QWKWPBDEFK');
+</script>
+
+<script async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-4669394804436935",
+    enable_page_level_ads: true
+  });
+</script>
+
+<title>Componente : Scrollspy</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">    
+<meta name="keywords" content="bootstrap 5,css, html, programación, webmaster, tutorial">
+<meta name="description" content="El objetivo de este tutorial 
+    es presentar los conceptos básicos de bootstrap 5.">
+<meta name="author" content="Diego Moisset">
+
+<link href="../css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="estilos.css">
+
+<style>
+html,body {
+	background-color: #D3E9D0;
+	font-family: sans-serif,arial;
+
+}
+</style>
+
+<style>
+.uno { width: 320px; height: 100px; }
+@media(min-width: 500px) { .uno { width: 320px; height: 100px; } }
+@media(min-width: 800px) { .uno { width: 336px; height: 280px; } }
+
+.dos { width: 320px; height: 100px; }
+@media(min-width: 500px) { .dos { width: 320px; height: 100px; } }
+@media(min-width: 800px) { .dos { width: 336px; height: 280px; } }
+</style>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','../../www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-80268657-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+</head>
+
+<body>
+
+
+<div class="container">
+
+<div class="row">
+  <div class="col-md-12">
+
+<div class="titulodetalle">
+<h1>72 - Componente : Scrollspy</h1></div>
+
+  </div>
+</div>  
+
+
+<div class="row">
+  <div class="col-md-12">
+
+<div class="cuerpodetalle">
+<div style="display:block;float:left;margin: 5px;"> 
+ <script async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<!-- adaptable1 -->
+<ins class="adsbygoogle uno"
+     style="display:inline-block"
+     data-ad-client="ca-pub-4669394804436935"
+     data-ad-slot="4716538363"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script> 
+</div> 
+
+
+<p>Bootstrap 5 nos provee la posibilidad que según en que parte de la página nos encontremos se ilumine la opción de dicha sección.</p>
+<p>Se requiere para su funcionamiento tener importada la librería de Javascript.</p>
+<h3>Problema</h3>
+<p>Implementaremos una página que tenga un menú de navegación fijo en la parte superior de la página con los enlaces "card", "form" y "accordion". Cuando se presione alguno de los hipervínculos saltaremos a la sección que muestra un ejemplo de dicha componente.</p>
+<pre class="recuadro">
+&lt;!doctype html&gt;
+&lt;html&gt;
+
+&lt;head&gt;
+  &lt;title&gt;Prueba de Bootstrap 5&lt;/title&gt;
+  &lt;meta charset="utf-8"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"&gt;
+  &lt;link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous"&gt;
+&lt;/head&gt;
+
+&lt;body data-spy="scroll"&gt;
+
+  &lt;div class="container-fluid"&gt;
+    &lt;nav id="menu1" class="navbar navbar-expand-sm navbar-dark bg-dark fixed-top"&gt;
+      &lt;!-- enlaces --&gt;
+      &lt;ul class="navbar-nav"&gt;
+        &lt;li class="nav-item"&gt;
+          &lt;a class="nav-link" href="#seccion1"&gt;card&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li class="nav-item"&gt;
+          &lt;a class="nav-link" href="#seccion2"&gt;form&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li class="nav-item"&gt;
+          &lt;a class="nav-link" href="#seccion3"&gt;accordion&lt;/a&gt;
+        &lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/nav&gt;
+
+    &lt;!-- Seccion 1 --&gt;
+    &lt;div id="seccion1" style="min-height:100vh; padding-top:70px"&gt;
+      &lt;h1&gt;Prueba de tarjetas&lt;/h1&gt;
+      &lt;div class="row"&gt;
+        &lt;div class="col-md"&gt;
+          &lt;div class="card"&gt;
+            &lt;img class="card-img-top" src="https://www.tutorialesprogramacionya.com/imagenes/cuadro1.jpg"&gt;
+            &lt;div class="card-body"&gt;
+              &lt;h4 class="card-title"&gt;Titulo de la tarjeta 1&lt;/h4&gt;
+              &lt;p class="card-text"&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam lectus sem,
+                tempor vitae mattis malesuada, ornare sed erat. Pellentesque nulla dui, congue
+                nec tortor sit amet, maximus mattis dui. &lt;/p&gt;
+              &lt;a href="#" class="btn btn-primary"&gt;Entrar&lt;/a&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class="col-md"&gt;
+          &lt;div class="card"&gt;
+            &lt;div class="card-body"&gt;
+              &lt;h4 class="card-title"&gt;Titulo de la tarjeta 2&lt;/h4&gt;
+              &lt;p class="card-text"&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam lectus sem,
+                tempor vitae mattis malesuada, ornare sed erat. Pellentesque nulla dui, congue
+                nec tortor sit amet, maximus mattis dui. &lt;/p&gt;
+              &lt;a href="#" class="btn btn-primary"&gt;Entrar&lt;/a&gt;
+            &lt;/div&gt;
+            &lt;img class="card-img-bottom" src="https://www.tutorialesprogramacionya.com/imagenes/cuadro2.jpg"&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;!-- Seccion 2 --&gt;
+    &lt;div id="seccion2" style="min-height:100vh; padding-top:70px"&gt;
+      &lt;h1&gt;Contacto&lt;/h1&gt;
+      &lt;form&gt;
+        &lt;div class="mb-3"&gt;
+          &lt;label for="nombre" class="form-label"&gt;Ingrese su nombre:&lt;/label&gt;
+          &lt;input type="text" class="form-control" id="nombre" name="nombre"&gt;
+        &lt;/div&gt;
+        &lt;div class="mb-3"&gt;
+          &lt;label for="clave" class="form-label"&gt;Ingrese su clave:&lt;/label&gt;
+          &lt;input type="password" class="form-control" id="clave" name="clave"&gt;
+        &lt;/div&gt;
+        &lt;button type="submit" class="btn btn-primary"&gt;Confirmar&lt;/button&gt;
+      &lt;/form&gt;
+    &lt;/div&gt;
+    &lt;!-- Seccion 3 --&gt;
+    &lt;div id="seccion3" style="min-height:100vh; padding-top:70px"&gt;
+      &lt;h1&gt;Prueba de accordion&lt;/h1&gt;
+      &lt;div id="accordion1"&gt;
+        &lt;div class="accordion-item"&gt;
+          &lt;div class="accordion-header" id="cabecera1"&gt;
+            &lt;h5 class="mb-0"&gt;
+              &lt;button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#respuesta1"
+                aria-expanded="true" aria-controls="respuesta1"&gt;
+                Pregunta frecuente 1
+              &lt;/button&gt;
+            &lt;/h5&gt;
+          &lt;/div&gt;
+          &lt;div id="respuesta1" class="accordion-collapse collapse show" aria-labelledby="cabecera1"
+            data-bs-parent="#accordion1"&gt;
+            &lt;div class="accordion-body"&gt;
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+              dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+              ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+              fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+              mollit anim id est laborum.
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;div class="accordion-item"&gt;
+          &lt;div class="accordion-header" id="cabecera2"&gt;
+            &lt;h5 class="mb-0"&gt;
+              &lt;button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#respuesta2"
+                aria-expanded="true" aria-controls="respuesta2"&gt;
+                Pregunta frecuente 2
+              &lt;/button&gt;
+            &lt;/h5&gt;
+          &lt;/div&gt;
+          &lt;div id="respuesta2" class="accordion-collapse collapse" aria-labelledby="cabecera2"
+            data-bs-parent="#accordion1"&gt;
+            &lt;div class="accordion-body"&gt;
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+              dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+              ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+              fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+              mollit anim id est laborum.
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;div class="accordion-item"&gt;
+          &lt;div class="accordion-header" id="cabecera3"&gt;
+            &lt;h5 class="mb-0"&gt;
+              &lt;button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#respuesta3"
+                aria-expanded="true" aria-controls="respuesta3"&gt;
+                Pregunta frecuente 3
+              &lt;/button&gt;
+            &lt;/h5&gt;
+          &lt;/div&gt;
+          &lt;div id="respuesta3" class="accordion-collapse collapse" aria-labelledby="cabecera3"
+            data-bs-parent="#accordion1"&gt;
+            &lt;div class="accordion-body"&gt;
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+              dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+              ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+              fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+              mollit anim id est laborum.
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8"
+      crossorigin="anonymous"&gt;&lt;/script&gt;
+&lt;/body&gt;
+
+&lt;/html&gt;
+</pre>
+<p>Todo el contenido está en la misma página y lo que hacemos con los enlaces es desplazarnos hasta la sección respectiva.</p>
+<p>Si seleccionamos la primer opción:</p>
+<img src="imagentema/foto137.jpg" border="0" alt="bootstrap 5 scrollspy"><br>
+<p>Luego cuando seleccionamos la segunda opción:</p>
+<img src="imagentema/foto138.jpg" border="0" alt="bootstrap 5 scrollspy"><br>
+<p>Y cuando seleccionamos la tercer opción se desplaza y aparece:</p>
+<img src="imagentema/foto139.jpg" border="0" alt="bootstrap 5 scrollspy"><br>
+<p>Si nos desplazamos con la barra de scroll veremos que según en que sección estamos la opción del menú se activa.</p>
+<p>Cada sección tiene que definir una propiedad id con el mismo valor que almacenamos en la propiedad href del menú:</p>
+<pre>
+    &lt;div id="seccion1" style="min-height:100vh; padding-top:70px"&gt;
+</pre>
+<p>El padding-top lo definimos ya que el menú es fijo y evitamos que datos de la sección no se muestren. Con la propiedad min-height con el valor 100vh estamos indicando que en la pantalla solo se muestre este div (es decir que ocupe el 100% el alto del dispositivo) y no otro que se encuentre más abajo.</p>
+<p>Para que funcione esta componente debemos iniciar la propiedad data-bs-spy con el valor "scroll":</p>
+<pre>
+&lt;body  data-bs-spy="scroll"&gt;
+</pre><h2><a target="_blank" href="ejecutara558.html?cod=72">Ejecutar Ejemplo</a></h2><h2><a href="indexd6cc.html?inicio=60">Retornar</a></h2> 
+
+<div>
+<!--publi-->
+<script async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<!-- adaptable2 -->
+<ins class="adsbygoogle dos"
+     style="display:inline-block"
+     data-ad-client="ca-pub-4669394804436935"
+     data-ad-slot="5774469161"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+<!--publi-->
+<script async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<!-- adaptable2 -->
+<ins class="adsbygoogle dos"
+     style="display:inline-block"
+     data-ad-client="ca-pub-4669394804436935"
+     data-ad-slot="5774469161"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+</div>
+
+
+
+
+</div>
+
+  </div>
+</div>  
+
+</div>
+
+<script type="text/javascript">
+function cambiar()
+{
+  var lista=document.getElementsByTagName('pre');
+  for(f=0;f<lista.length;f++)
+  {
+   lista[f].style.display='block';
+  }
+  document.getElementById('solucion').style.display='none';
+}
+
+</script>
+
+</body>
+
+
+<!-- Mirrored from www.tutorialesprogramacionya.com/bootstrap5ya/detalleconcepto.php?punto=72&codigo=72&inicio=60 by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 19 Dec 2023 11:11:38 GMT -->
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Ejemplo de JavaScript</title>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+
+    <p>Este programa permite analizar la llamada a distintas responsabilidades del objeto window.</p>
+    <form>
+        <br>
+        <input type="button" value="open()" onClick="abrir()">
+        <br>
+        <input type="button" value="open con parámetros" onClick="abrirParametros()">
+        <br>
+        <input type="button" value="alert" onClick="mostrarAlerta()">
+        <br>
+        <input type="button" value="confirm" onClick="confirmar()">
+        <br>
+        <input type="button" value="prompt" onClick="cargarCadena()">
+    </form>
+    <button onClick="verificarEntrada()">Ingresar a La Nación</button>
+    
+    <br>
+    <br>
+
+    <a href="https://www.google.com">Ir a la página 2</a>
+    <br>
+    <br>
+    <a href="javascript:avanzar()">Extraer del cache la segunda página</a>
+
+    <br>
+    <br>
+
+    <script>
+        function avanzar() {
+            window.history.go(1);
+        }
+        function verificarEntrada() {
+            if (window.confirm('Desea salir del sitio e ingresar al periódico La Nación?')) {
+                window.location = 'https://www.lanacion.com.ar';
+            } else {
+                window.alert('No hay problema');
+            }
+        }
+        function abrir() {
+            let ventana = open();
+            ventana.document.write("Estoy escribiendo en la nueva ventana<br>");
+            ventana.document.write("Segunda linea");
+        }
+
+        function abrirParametros() {
+            let ventana = open('https://www.google.com', 'Google', 'status=yes,width=200,height=250,menubar=yes');
+            // ventana.document.write("Esto es lo primero que aparece<br>");
+        }
+
+        function mostrarAlerta() {
+            alert("Esta ventana de alerta ya la utilizamos en otros problemas.");
+        }
+
+        function confirmar() {
+            let respuesta = confirm("Presione alguno de los dos botones");
+            if (respuesta == true)
+                alert("presionó aceptar");
+            else
+                alert("presionó cancelar");
+        }
+
+        function cargarCadena() {
+            let cad = prompt("cargue una cadena:");
+            alert("Usted ingreso " + cad);
+        }
+
+        document.write('Valores de las propiedades del objeto screen:<br>');
+        document.write('availHeight :' + screen.availHeight + '<br>');
+        document.write('availWidth :' + screen.availWidth + '<br>');
+        document.write('height :' + screen.height + '<br>');
+        document.write('width :' + screen.width + '<br>');
+        document.write('colorDepth :' + screen.colorDepth);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,235 @@
+body,
+html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    font-family: Arial, sans-serif;
+}
+
+#video-container {
+    position: relative;
+    height: 100vh;
+    /* Altura fija del contenedor del video */
+    overflow: hidden;
+    /* Oculta el desbordamiento del video */
+}
+
+#video-background {
+    position: absolute;
+    top: 5.5em;
+    left: 0;
+    width: 100%;
+    height: auto;
+    z-index: -1;
+    /* Envía el video al fondo */
+}
+
+.content {
+    padding-top: 100vh;
+    /* Espacio equivalente a la altura del contenedor de video */
+}
+
+.div1 {
+    position: absolute;
+    top: 5.5em;
+    /* Centra verticalmente el contenido */
+    left: 50%;
+    /* Centra horizontalmente el contenido */
+    transform: translate(-50%, -50%);
+    /* Centra el contenido en el centro del video */
+    z-index: 1;
+    /* Asegura que el contenido esté por encima del video */
+    color: white;
+    /* Cambia el color del texto si es necesario */
+    text-align: center;
+    /* Centra el texto horizontalmente */
+}
+
+.reglas {
+    padding: 20px;
+}
+
+button.borde {
+    border-radius: 0;
+    background-color: #b69451;
+    border-color: #b69451;
+    width: 300px;
+    height: 50px;
+    font-size: 20px;
+}
+
+button.borde:hover {
+    background-color: #8d6d2ec2;
+    color: white;
+    border-color: #8d6d2ec2;
+}
+
+button.borde:active {
+    background-color: #6a4c26;
+    /* Cambia el color cuando se hace clic */
+    border-color: #6a4c26;
+    /* Cambia el color del borde cuando se hace clic */
+}
+
+div.col {
+    margin-right: 0px;
+}
+
+div.card {
+    width: auto;
+}
+
+#bgVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    filter: brightness(30%);
+    z-index: -1;
+    /* Asegura que el video esté detrás de otros elementos */
+    top: 100px;
+}
+
+div.alto {
+    margin-top: 100px;
+}
+
+/*Prueba carrusel*/
+.circulo:hover {
+    transform: scale(1.1);
+    /* Escala la imagen al 120% de su tamaño original */
+    transition: transform 0.3s ease;
+    /* Agrega una transición suave */
+}
+
+img.circulo {
+    width: 800px;
+    height: 450px;
+    object-fit: cover;
+    position: absolute;
+    margin-left: -400px;
+    margin-top: -225px;
+}
+
+img.imagenCirculo {
+    width: 1000px;
+    height: 550px;
+    position: absolute;
+    left: 163%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+}
+
+div.barra {
+    margin: 0 auto;
+    /* Centra horizontalmente el div */
+    margin-top: 500px;
+    width: fit-content;
+    /* Hace que el ancho del div se ajuste al contenido */
+    position: relative;
+    /* Asegura que la posición relativa sea efectiva */
+}
+
+.carousel-control-prev {
+    left: -200px;
+    top: -450px
+}
+
+.carousel-control-next {
+    right: -220px;
+    top: -450px
+}
+
+.carousel {
+    width: 800px;
+    top: -225px;
+}
+
+img.flechas {
+    width: 80px;
+}
+
+.fondo img {
+    width: 100%;
+    position: relative;
+}
+
+.fondo img {
+    width: 100%;
+}
+
+.fondo::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background-image: linear-gradient(to top, #000000c0, transparent);
+}
+
+.carousel-caption {
+    position: absolute;
+    bottom: 0;
+    left: 30px;
+    right: 0;
+    bottom: 50px;
+    padding: 20px;
+    color: white; /* Color del texto */
+    z-index: 2; /* Asegura que el texto esté por encima del degradado */
+    text-align: left;
+}
+
+.carousel-caption h1 {
+    transition: transform 0.3s ease; /* Agrega una transición suave */
+}
+
+.carousel-caption h1:hover {
+    transform: scale(1.1); /* Amplía el texto en un 10% */
+}
+
+div.posicion {
+    margin: 0;
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.tamaño {
+    width: 40vw;
+}
+
+#carouselExampleCaptions {
+    width: 800px;
+    height: 450px;
+    margin: 0 auto; /* Centra el carrusel */
+}
+
+.carousel-inner {
+    height: 100%; /* Asegura que el contenedor interno tome toda la altura */
+}
+
+.carousel-item {
+    height: 100%; /* Asegura que cada item tome toda la altura */
+}
+
+.carousel-link {
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Asegura que la imagen cubra todo el contenedor */
+    object-position: center; /* Centra la imagen dentro del contenedor */
+}
+

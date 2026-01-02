@@ -1,0 +1,240 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ravenclaw</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../../style/menu.css">
+    <link rel="stylesheet" href="casas.css">
+    <link rel="icon" href="image/logo.png">
+
+    <script src="../../javaScript/modo.js"></script>
+    <script src="../../javaScript/recarga.js"></script>
+
+</head>
+
+<body>
+    <div class="contenedor_loader">
+        <div><img src="../../image/carga_snichDorada.gif" class="gif"></div>
+    </div>
+    <!-- Navigation -->
+    <div class="navigation-wrap bg-light start-header start-style">
+        <div class="container-fluid">
+            <div class="row justify-content-between align-items-center">
+                <div class="row">
+                    <div class="col">
+                        <!-- Logo -->
+                        <a class="navbar-brand" href="../../index.html" target="_self">
+                            <img src="../../image/logo.png" alt="Logo" class="logo">
+                        </a>
+                    </div>
+                    <div class="col altura">
+                        <b>
+                            <a href="casa.html" class="decoracion">
+                                <h1 class="titulo">Casas</h1>
+                            </a>
+                        </b>
+                    </div>
+                    <div class="col posicionModo">
+                        <button type="button" class="btn btn-light colorModo" onclick="toggleTheme()">
+                            <img id="lightImage" src="../../image/soleado.png" alt="Light Theme">
+                            <img id="darkImage" src="../../image/luna.png" alt="Dark Theme">
+                        </button>
+                    </div>
+                </div>
+                <div class="col-auto flex-grow-0 flex-shrink-0">
+                    <!-- Opciones del Navbar -->
+                    <nav class="navbar navbar-expand-md">
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav ms-auto">
+                                <li class="nav-item">
+                                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                        aria-haspopup="true" aria-expanded="false">Hogwarts</a>
+                                    <div class="dropdown-menu">
+                                        <a class="dropdown-item" href="Profesores.html">Profesores</a>
+                                        <a class="dropdown-item" href="#">Alumnos</a>
+                                        <a class="dropdown-item" href="#">Asignaturas</a>
+                                        <a class="dropdown-item" href="#">Casas</a>
+                                    </div>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                        aria-haspopup="true" aria-expanded="false">Mortífagos</a>
+                                    <div class="dropdown-menu">
+                                        <a class="dropdown-item" href="#">Personajes</a>
+                                        <a class="dropdown-item" href="#">Horrocruxes</a>
+                                        <a class="dropdown-item" href="#">Marca Tenebrosa</a>
+                                    </div>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                        aria-haspopup="true" aria-expanded="false">Familias</a>
+                                    <div class="dropdown-menu">
+                                        <a class="dropdown-item" href="#">Sangre Pura</a>
+                                        <a class="dropdown-item" href="#">Mestizos</a>
+                                        <a class="dropdown-item" href="#">Nacidos de Muggles</a>
+                                    </div>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                        aria-haspopup="true" aria-expanded="false">Mágico</a>
+                                    <div class="dropdown-menu">
+                                        <a class="dropdown-item" href="#">Reliquias de la Muerte</a>
+                                        <a class="dropdown-item" href="#">Hechizos</a>
+                                        <a class="dropdown-item" href="#">Animales</a>
+                                        <a class="dropdown-item" href="#">Objetos Mágicos</a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+                <div class="col-auto">
+                    <!-- Segunda sección de opciones del Navbar -->
+                    <nav class="navbar navbar-expand-md navbar-light">
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav ms-auto">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="../../Mapa/mapa.html">Mapa</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Adaptaciones</a>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link" href="#">Curiosidades</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                    <div class="nav-images-container">
+                        <img src="https://cdn-hogwartslegacy.warnerbrosgames.com/static/bar-left.png" alt
+                            class="nav-bar left">
+                        <img src="https://cdn-hogwartslegacy.warnerbrosgames.com/static/bar-right.png" alt
+                            class="nav-bar right">
+                    </div>
+                    <div>
+                        <div class="nav-bar-corner-container">
+                            <div class="nav-bar-corner left">
+                                <img src="https://cdn-hogwartslegacy.warnerbrosgames.com/static/corner-left.webp" alt=""
+                                    class="img-fluid">
+                            </div>
+                            <div class="nav-bar-corner right">
+                                <img src="https://cdn-hogwartslegacy.warnerbrosgames.com/static/corner-right.webp"
+                                    alt="" class="img-fluid">
+                            </div>
+                        </div>
+                        <div class="nav-bar-corner-container1">
+                            <div class="nav-bar-corner bottomLeft">
+                                <img src="https://cdn-hogwartslegacy.warnerbrosgames.com/static/corner-bottom-left.webp"
+                                    alt="" class="img-fluid">
+                            </div>
+                            <div class="nav-bar-corner bottomRight">
+                                <img src="https://cdn-hogwartslegacy.warnerbrosgames.com/static/corner-bottom-right.webp"
+                                    alt="" class="img-fluid">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="my-5 py-5 content-fluid text-center">
+        <div class="text-center">
+            <picture>
+                <source srcset="../../image/titulo-arriba.webp" type="image/webp">
+                <img src="../../image/titulo-arriba.webp" class="title-decoration margen">
+            </picture>
+
+            <h1 class="letraBlanca">Ravenclaw</h1>
+
+            <picture>
+                <source srcset="../../image/titulo-bajo.png" type="image/png">
+                <img src="../../image/titulo-bajo.png" class="title-decoration">
+            </picture>
+        </div>
+
+        <div class="row justify-content-center barra">
+            <div class="row mt-4 anchoContenedor">
+                <div class="col-4">
+                    <!-- Agrega una columna para contener la imagen -->
+                    <img src="image/RavenclawPresentacion.jpg" class="fotoCasa img-fluid">
+                </div>
+                <div class="col-8">
+                    La Casa Ravenclaw en la Escuela Hogwarts de Magia y Hechicería es conocida por su énfasis en la sabiduría, la creatividad y la originalidad. Sus miembros son reconocidos por su inteligencia aguda y su sed insaciable de conocimiento. La sala común de Ravenclaw se encuentra en una torre, desde la cual se puede disfrutar de una vista espectacular del terreno circundante. La decoración está inspirada en el cielo estrellado, con amplios ventanales que permiten la entrada de luz natural y brindan un ambiente propicio para el estudio y la reflexión. Los estudiantes de Ravenclaw tienen acceso a una amplia variedad de recursos académicos y se les anima constantemente a explorar nuevas ideas y perspectivas. La competencia intelectual es alta en esta casa, pero también existe un fuerte sentido de camaradería y apoyo mutuo entre sus miembros. En Ravenclaw, se valora tanto la excelencia académica como la creatividad, y se fomenta el pensamiento crítico y la curiosidad sin límites.
+                </div>
+            </div>
+            <div class="row mt-4 anchoContenedor">
+                <div class="col-8 margenTexto">
+                    <br>
+                    Rowena Ravenclaw, una de las cuatro brujas y magos fundadores de la Escuela Hogwarts de Magia y Hechicería, era conocida por su inmensa sabiduría y su amor por el conocimiento. Su visión de la educación mágica estaba arraigada en la idea de que la inteligencia y la creatividad son fundamentales para el éxito en el mundo mágico. Como experta en magia y artefactos antiguos, Rowena valoraba el pensamiento analítico y la originalidad, y deseaba crear un ambiente donde los estudiantes pudieran desarrollar sus mentes y talentos al máximo. Inspirada por esta visión, fundó la Casa Ravenclaw en Hogwarts, que se convirtió en un hogar para aquellos que compartían su pasión por el aprendizaje y la exploración intelectual. El emblema de la casa, el águila, simboliza la agudeza mental y la visión clara, características que Rowena valoraba profundamente. A través de su dedicación al conocimiento y su compromiso con la excelencia académica, Rowena Ravenclaw dejó un legado perdurable en la comunidad mágica, y su casa continúa inspirando a generaciones de estudiantes en Hogwarts.
+                </div>
+                <div class="col-4">
+                    <!-- Agrega una columna para contener la imagen -->
+                    <img src="image/RowenaRavenclaw.webp" class="fotoCasa img-fluid">
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+    <footer class="text-center fondoFooter">
+        <div class="lineaSeparacion">
+            <img src="https://cdn-hogwartslegacy.warnerbrosgames.com/static/bar-left.png" class="izquierda">
+            <img src="https://cdn-hogwartslegacy.warnerbrosgames.com/static/bar-right.png" class="derecha">
+        </div>
+        <!-- Grid container -->
+        <div class="container pt-4">
+            <!-- Section: Social media -->
+            <section class="mb-4">
+                <!-- Facebook -->
+                <a data-mdb-ripple-init class="btn btn-link btn-floating btn-lg text-body m-1"
+                    href="https://www.facebook.com/harrypotter" role="button"><img src="../../image/facebook.png"
+                        class="footer"></a>
+
+                <!-- Instagram -->
+                <a data-mdb-ripple-init class="btn btn-link btn-floating btn-lg text-body m-1"
+                    href="https://www.instagram.com/harrypotter/?hl=es" role="button"><img
+                        src="../../image/instagram.png" class="footer"></a>
+
+                <!-- Twitter -->
+                <a data-mdb-ripple-init class="btn btn-link btn-floating btn-lg text-body m-1"
+                    href="https://x.com/harrypotter" role="button"><img src="../../image/twitter.png"
+                        class="footer2"></a>
+
+                <!-- YouTube -->
+                <a data-mdb-ripple-init class="btn btn-link btn-floating btn-lg text-body m-1"
+                    href="https://www.youtube.com/@harrypotter" role="button"><img src="../../image/youtube.png"
+                        class="footer"></a>
+
+                <!-- TikTok -->
+                <a data-mdb-ripple-init class="btn btn-link btn-floating btn-lg text-body m-1"
+                    href="https://www.tiktok.com/@harrypotter" role="button"><img src="../../image/tik-tok.png"
+                        class="footer"></a>
+
+            </section>
+        </div>
+        <!-- Grid container -->
+
+        <!-- Copyright -->
+        <div class="text-center p-3 fondoFooter2">
+            Copyright © 2024
+        </div>
+    </footer>
+</body>
+
+</html>

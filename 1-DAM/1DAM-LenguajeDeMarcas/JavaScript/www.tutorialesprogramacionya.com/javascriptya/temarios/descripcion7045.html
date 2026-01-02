@@ -1,0 +1,327 @@
+<html>
+
+
+<!-- Mirrored from www.tutorialesprogramacionya.com/javascriptya/temarios/descripcion.php?inicio=60&cod=69 by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 18 Mar 2024 10:33:18 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QWKWPBDEFK"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-QWKWPBDEFK');
+</script>
+
+<script async src="../../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-4669394804436935",
+    enable_page_level_ads: true
+  });
+</script>
+<title>Tutorial de JavaScript : Conceptos</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="../css/estilos.css" rel="stylesheet" type="text/css">
+  <meta charset="UTF-8">
+
+<style>
+html,body {
+	background-color: #D3E9D0;
+	font-family: Trebuchet MS, Verdana, Arial, sans-serif;
+	font-size: 10pt;
+	text-align:center;
+}
+
+h1 {
+	font-size: 14pt;
+	margin: 0%;
+}
+
+div#contentdetalle{clear:left;
+                   max-width:900px;
+				   border-top:0px solid #999;
+				   padding-top:15px;
+				   background-color: #aed7a8;
+				   text-align:left;
+				   font-size:1.3em;
+				   font-weight:normal;
+				   font-family:arial;
+				   padding:20px}
+				   
+.recuadro {
+  background-color:#ffffcc;
+  text-align:left;
+  font-family:courier;
+  font-size:1em;
+  border-width:0;
+  padding:5px;
+
+  border: 1px dotted #ffaa00;
+  margin-left:5px;  
+}		
+
+.tablajs {
+    border-collapse: collapse;
+    background-color: #fff;
+    border: 1px solid #dee2e6;    
+    padding: 0.3rem;    
+}
+
+.tablajs th,
+.tablajs td {
+  padding: 0.75rem;
+  vertical-align: top;
+  border-top: 1px solid #dee2e6;
+}
+
+		   
+</style>
+
+<style>
+.uno { width: 320px; height: 100px; }
+@media(min-width: 500px) { .uno { width: 320px; height: 100px; } }
+@media(min-width: 800px) { .uno { width: 336px; height: 280px; } }
+
+.dos { width: 320px; height: 100px; }
+@media(min-width: 500px) { .dos { width: 320px; height: 100px; } }
+@media(min-width: 800px) { .dos { width: 336px; height: 280px; } }
+</style>
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','../../../www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-80268657-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</head>
+
+<body>
+
+<div class="upperleft">
+  <div class="upperright">
+    <div class="lowerleft">
+      <div class="lowerright">
+<table width="98%">
+<tr>
+<td>
+<span style="float:right"><a target="_blank" style="margin-right:0.1em;" href="https://www.tutorialesprogramacionya.com/">Listado completo de tutoriales</a></span>
+<h1>Evento: change</h1></td>
+<td align="right">
+
+
+</td>
+</tr>
+</table>
+
+      </div>
+    </div>
+  </div>
+</div>
+<br>
+
+
+<div class="upperleft">
+  <div class="upperright">
+    <div class="lowerleft">
+      <div class="lowerright">
+
+<div id="contentdetalle">
+
+<div style="display:block;float:left;margin: 5px;"> 
+ <script async src="../../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<!-- adaptable1 -->
+<ins class="adsbygoogle uno"
+     style="display:inline-block"
+     data-ad-client="ca-pub-4669394804436935"
+     data-ad-slot="4716538363"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script> 
+</div> 
+
+<p>El evento change se lo puede asociar a distintos elementos de formularios HTML y su comportamiento depende de cada uno.<p>
+<p>Cuando asociamos el evento change a un control de tipo checkbox el mismo se dispara inmediatamente después que lo chequeamos o sacamos la selección. Para los controles de tipo radio también se dispara luego que cambia el estado de selección del mismo.</p>
+<p>Para los controles select se dispara el evento change cuando cambiamos el item seleccionado.<p>
+<p>Para los controles text y textarea se dispara cuando pierde el foco del control (porque seleccionamos otro control) y hemos cambiando el contenido del mismo.</p>
+<strong>Problema</strong>
+<p>Implementaremos una aplicación que muestre un alert cada vez que sucede el evento change para los controles checkbox, radio, select, text y textarea.</p>
+<pre class="recuadro">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+
+&lt;head&gt;
+    &lt;title&gt;Ejemplo de JavaScript&lt;/title&gt;
+    &lt;meta charset="UTF-8"&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+
+    Evento change del checkbox:
+    &lt;input type="checkbox" id="checkbox1" name="checkbox1" checked&gt;
+    &lt;br&gt; Evento change del radio:&lt;br&gt;
+    &lt;input type="radio" name="radio1" id="radioa"&gt;&lt;br&gt;
+    &lt;input type="radio" name="radio1" id="radiob"&gt;&lt;br&gt;
+    &lt;input type="radio" name="radio1" id="radioc"&gt;&lt;br&gt; Evento change del select:
+    &lt;select name="select1" id="select1"&gt;
+    &lt;option value="argentina"&gt;Argentina&lt;/option&gt;
+    &lt;option value="chile"&gt;Chile&lt;/option&gt;
+    &lt;option value="uruguay"&gt;Uruguay&lt;/option&gt;
+    &lt;option value="paraguay"&gt;Paraguay&lt;/option&gt;
+    &lt;option value="bolivia"&gt;Bolivia&lt;/option&gt;
+  &lt;/select&gt;
+    &lt;br&gt;
+    &lt;input type="text" name="text1" id="text1"&gt;
+    &lt;br&gt;
+    &lt;textarea name="text1" id="textarea1" rows="6" cols="80"&gt;&lt;/textarea&gt;
+    &lt;br&gt;
+
+    &lt;script&gt;
+        document.getElementById('checkbox1').addEventListener('change', cambiocheckbox);
+        document.getElementById('radioa').addEventListener('change', cambioradio);
+        document.getElementById('radiob').addEventListener('change', cambioradio);
+        document.getElementById('radioc').addEventListener('change', cambioradio);
+        document.getElementById('select1').addEventListener('change', cambioselect);
+        document.getElementById('text1').addEventListener('change', cambiotext);
+        document.getElementById('textarea1').addEventListener('change', cambiotextarea);
+
+        function cambiocheckbox() {
+            alert(document.getElementById('checkbox1').checked);
+        }
+
+        function cambioradio() {
+            alert(document.getElementById('radioa').checked + ' ' +
+                document.getElementById('radiob').checked + ' ' +
+                document.getElementById('radioc').checked);
+        }
+
+        function cambioselect() {
+            alert(document.getElementById('select1').value);
+        }
+
+        function cambiotext() {
+            alert(document.getElementById('text1').value);
+        }
+
+        function cambiotextarea() {
+            alert(document.getElementById('textarea1').value);
+        }
+    &lt;/script&gt;
+
+&lt;/body&gt;
+
+&lt;/html&gt;
+</pre>
+<p>Creamos una serie de controles de formulario HTML en el body de la página:</p>
+<pre>
+Evento change del checkbox:
+&lt;input type="checkbox" id="checkbox1" name="checkbox1" checked&gt;
+&lt;br&gt;
+Evento change del radio:&lt;br&gt;
+&lt;input type="radio" name="radio1" id="radioa"&gt;&lt;br&gt;
+&lt;input type="radio" name="radio1" id="radiob"&gt;&lt;br&gt;
+&lt;input type="radio" name="radio1" id="radioc"&gt;&lt;br&gt;
+Evento change del select:
+&lt;select name="select1" id="select1"&gt;
+  &lt;option value="argentina"&gt;Argentina&lt;/option&gt;
+  &lt;option value="chile"&gt;Chile&lt;/option&gt;
+  &lt;option value="uruguay"&gt;Uruguay&lt;/option&gt;
+  &lt;option value="paraguay"&gt;Paraguay&lt;/option&gt;
+  &lt;option value="bolivia"&gt;Bolivia&lt;/option&gt;
+&lt;/select&gt;
+&lt;br&gt;
+&lt;input type="text" name="text1" id="text1"&gt;
+&lt;br&gt;
+&lt;textarea name="text1" id="textarea1" rows="6" cols="80"&gt;&lt;/textarea&gt;
+&lt;br&gt;
+</pre>
+<p>Asociamos a todos los controles para el evento change un método:</p>
+<pre>
+        document.getElementById('checkbox1').addEventListener('change', cambiocheckbox);
+        document.getElementById('radioa').addEventListener('change', cambioradio);
+        document.getElementById('radiob').addEventListener('change', cambioradio);
+        document.getElementById('radioc').addEventListener('change', cambioradio);
+        document.getElementById('select1').addEventListener('change', cambioselect);
+        document.getElementById('text1').addEventListener('change', cambiotext);
+        document.getElementById('textarea1').addEventListener('change', cambiotextarea);
+</pre>
+
+<p>La función cambiocheckbox se dispara cada vez que cambiamos el estado del checkbox (tanto cuando lo seleccionamos como cuando lo deseleccionamos):</p>
+<pre>
+        function cambiocheckbox() {
+            alert(document.getElementById('checkbox1').checked);
+        }
+</pre>
+<p>La función cambioradio se dispara cada vez que seleccionamos alguno de los tres radio:</p>
+<pre>
+        function cambioradio() {
+            alert(document.getElementById('radioa').checked + ' ' +
+                document.getElementById('radiob').checked + ' ' +
+                document.getElementById('radioc').checked);
+        }
+</pre>
+
+<p>La función cambioselect se dispara cuando cambiamos de item del control select:</p>
+<pre>
+        function cambioselect() {
+            alert(document.getElementById('select1').value);
+        }
+</pre>
+<p>La función cambiotext y cambiotextarea se ejecuta cuando perdemos el foco del control y hemos producido un cambio en su contenido (agregado o borrado caracteres de su interior):</p>
+<pre>
+        function cambiotext() {
+            alert(document.getElementById('text1').value);
+        }
+
+        function cambiotextarea() {
+            alert(document.getElementById('textarea1').value);
+        }
+</pre>
+</p>
+</div>
+
+<div>
+<!--publi-->
+<script async src="../../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<!-- adaptable2 -->
+<ins class="adsbygoogle dos"
+     style="display:inline-block"
+     data-ad-client="ca-pub-4669394804436935"
+     data-ad-slot="5774469161"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+<!--publi-->
+<script async src="../../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<!-- adaptable2 -->
+<ins class="adsbygoogle dos"
+     style="display:inline-block"
+     data-ad-client="ca-pub-4669394804436935"
+     data-ad-slot="5774469161"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+</div>
+
+
+   <h2><a href="../indexd6cc.html?inicio=60">Retornar</a></h2>   
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+</body>
+
+
+<!-- Mirrored from www.tutorialesprogramacionya.com/javascriptya/temarios/descripcion.php?inicio=60&cod=69 by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 18 Mar 2024 10:33:18 GMT -->
+</html>

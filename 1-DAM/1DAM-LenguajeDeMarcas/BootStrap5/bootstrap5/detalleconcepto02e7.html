@@ -1,0 +1,321 @@
+
+<!DOCTYPE html>
+<html>
+
+
+<!-- Mirrored from www.tutorialesprogramacionya.com/bootstrap5ya/detalleconcepto.php?punto=68&codigo=68&inicio=60 by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 19 Dec 2023 11:11:32 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QWKWPBDEFK"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-QWKWPBDEFK');
+</script>
+
+<script async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-4669394804436935",
+    enable_page_level_ads: true
+  });
+</script>
+
+<title>Componente : nav (básica)</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">    
+<meta name="keywords" content="bootstrap 5,css, html, programación, webmaster, tutorial">
+<meta name="description" content="El objetivo de este tutorial 
+    es presentar los conceptos básicos de bootstrap 5.">
+<meta name="author" content="Diego Moisset">
+
+<link href="../css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="estilos.css">
+
+<style>
+html,body {
+	background-color: #D3E9D0;
+	font-family: sans-serif,arial;
+
+}
+</style>
+
+<style>
+.uno { width: 320px; height: 100px; }
+@media(min-width: 500px) { .uno { width: 320px; height: 100px; } }
+@media(min-width: 800px) { .uno { width: 336px; height: 280px; } }
+
+.dos { width: 320px; height: 100px; }
+@media(min-width: 500px) { .dos { width: 320px; height: 100px; } }
+@media(min-width: 800px) { .dos { width: 336px; height: 280px; } }
+</style>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','../../www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-80268657-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+</head>
+
+<body>
+
+
+<div class="container">
+
+<div class="row">
+  <div class="col-md-12">
+
+<div class="titulodetalle">
+<h1>68 - Componente : nav (básica)</h1></div>
+
+  </div>
+</div>  
+
+
+<div class="row">
+  <div class="col-md-12">
+
+<div class="cuerpodetalle">
+<div style="display:block;float:left;margin: 5px;"> 
+ <script async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<!-- adaptable1 -->
+<ins class="adsbygoogle uno"
+     style="display:inline-block"
+     data-ad-client="ca-pub-4669394804436935"
+     data-ad-slot="4716538363"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script> 
+</div> 
+
+
+<p>Para crear un simple menú horizontal en Bootstrap 5 disponemos de la clase "nav", podemos asignar dicha clase a un elemento HTML: nav, ul, div etc. Si queremos respetar el concepto semántico de un menú de navegación es más conveniente utilizar la etiqueta nav.</p>
+<p>Las dos clases básicas que debemos utilizar para definir un menú de navegación son:</p>
+
+<ul>
+<li>
+nav
+</li>
+<li>
+nav-link
+</li>
+</ul>
+<p>Vemos un menú de navegación básico implementado con la clase "nav":</p>
+<pre class="recuadro">
+&lt;!doctype html&gt;
+&lt;html&gt;
+
+&lt;head&gt;
+  &lt;title&gt;Prueba de Bootstrap 5&lt;/title&gt;
+  &lt;meta charset="utf-8"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"&gt;
+  &lt;link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous"&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+
+  &lt;div class="container"&gt;
+    &lt;nav class="nav"&gt;
+      &lt;a class="nav-link" href="#"&gt;Opción 1&lt;/a&gt;
+      &lt;a class="nav-link" href="#"&gt;Opción 2&lt;/a&gt;
+      &lt;a class="nav-link" href="#"&gt;Opción 3&lt;/a&gt;
+      &lt;a class="nav-link" href="#"&gt;Opción 4&lt;/a&gt;      
+      &lt;a class="nav-link disabled" href="#"&gt;Opción 5&lt;/a&gt;
+    &lt;/nav&gt;    
+  &lt;/div&gt;
+  
+&lt;/body&gt;
+
+&lt;/html&gt;
+</pre>
+
+<p>En el navegador se muestra:</p>
+<img src="imagentema/foto126.jpg" border="0" alt="bootstrap 5 nav nav-link"><br>
+<p>El menú de navegación dispone de 5 enlaces y el quinto se muestra desactivo debido a la clase disabled.</p>
+
+<h3>Alineación de las opciones.</h3>
+<p>A la etiqueta HTML "nav" le podemos agregar alguna de las siguientes clases para que las opciones aparezcan alineadas:</p>
+<ul>
+<li>
+justify-content-end
+</li>
+<li>
+justify-content-start (valor por defecto de la clase "nav")
+</li>
+<li>
+justify-content-center
+</li>
+<li>
+justify-content-between
+</li>
+<li>
+justify-content-around
+</li>
+</ul>
+
+<p>Empleadas estas clases en una página:</p>
+<pre class="recuadro">
+&lt;!doctype html&gt;
+&lt;html&gt;
+
+&lt;head&gt;
+  &lt;title&gt;Prueba de Bootstrap 5&lt;/title&gt;
+  &lt;meta charset="utf-8"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"&gt;
+  &lt;link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous"&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+
+  &lt;div class="container"&gt;
+    &lt;h2&gt;justify-content-end&lt;/h2&gt;
+    &lt;nav class="nav justify-content-end"&gt;
+      &lt;a class="nav-link" href="#"&gt;Opción 1&lt;/a&gt;
+      &lt;a class="nav-link" href="#"&gt;Opción 2&lt;/a&gt;
+      &lt;a class="nav-link" href="#"&gt;Opción 3&lt;/a&gt;
+      &lt;a class="nav-link" href="#"&gt;Opción 4&lt;/a&gt;
+      &lt;a class="nav-link disabled" href="#"&gt;Opción 5&lt;/a&gt;
+    &lt;/nav&gt;
+    &lt;hr&gt;
+    &lt;h2&gt;justify-content-start&lt;/h2&gt;
+    &lt;nav class="nav justify-content-start"&gt;
+      &lt;a class="nav-link" href="#"&gt;Opción 1&lt;/a&gt;
+      &lt;a class="nav-link" href="#"&gt;Opción 2&lt;/a&gt;
+      &lt;a class="nav-link" href="#"&gt;Opción 3&lt;/a&gt;
+      &lt;a class="nav-link" href="#"&gt;Opción 4&lt;/a&gt;
+      &lt;a class="nav-link disabled" href="#"&gt;Opción 5&lt;/a&gt;
+    &lt;/nav&gt;
+    &lt;hr&gt;
+    &lt;h2&gt;justify-content-center&lt;/h2&gt;
+    &lt;nav class="nav justify-content-center"&gt;
+      &lt;a class="nav-link" href="#"&gt;Opción 1&lt;/a&gt;
+      &lt;a class="nav-link" href="#"&gt;Opción 2&lt;/a&gt;
+      &lt;a class="nav-link" href="#"&gt;Opción 3&lt;/a&gt;
+      &lt;a class="nav-link" href="#"&gt;Opción 4&lt;/a&gt;
+      &lt;a class="nav-link disabled" href="#"&gt;Opción 5&lt;/a&gt;
+    &lt;/nav&gt;
+    &lt;hr&gt;
+    &lt;h2&gt;justify-content-between&lt;/h2&gt;
+    &lt;nav class="nav justify-content-between"&gt;
+      &lt;a class="nav-link" href="#"&gt;Opción 1&lt;/a&gt;
+      &lt;a class="nav-link" href="#"&gt;Opción 2&lt;/a&gt;
+      &lt;a class="nav-link" href="#"&gt;Opción 3&lt;/a&gt;
+      &lt;a class="nav-link" href="#"&gt;Opción 4&lt;/a&gt;
+      &lt;a class="nav-link disabled" href="#"&gt;Opción 5&lt;/a&gt;
+    &lt;/nav&gt;
+    &lt;hr&gt;
+    &lt;h2&gt;justify-content-around&lt;/h2&gt;
+    &lt;nav class="nav justify-content-around"&gt;
+      &lt;a class="nav-link" href="#"&gt;Opción 1&lt;/a&gt;
+      &lt;a class="nav-link" href="#"&gt;Opción 2&lt;/a&gt;
+      &lt;a class="nav-link" href="#"&gt;Opción 3&lt;/a&gt;
+      &lt;a class="nav-link" href="#"&gt;Opción 4&lt;/a&gt;
+      &lt;a class="nav-link disabled" href="#"&gt;Opción 5&lt;/a&gt;
+    &lt;/nav&gt;
+  &lt;/div&gt;
+
+&lt;/body&gt;
+
+&lt;/html&gt;
+</pre>
+<p>En el navegador tenemos el siguiente resultado:</p>
+<img src="imagentema/foto127.jpg" border="0" alt="bootstrap 5 nav nav-link justify-content-end justify-content-start justify-content-center justify-content-between justify-content-around"><br>
+
+<h3>Menú vertical.</h3>
+<p>Para mostrar las opciones una debajo del la otra debemos agregar la clase "flex-column" a la etiqueta HTML "nav":</p>
+<pre class="recuadro">
+&lt;!doctype html&gt;
+&lt;html&gt;
+
+&lt;head&gt;
+  &lt;title&gt;Prueba de Bootstrap 5&lt;/title&gt;
+  &lt;meta charset="utf-8"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"&gt;
+  &lt;link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous"&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+
+  &lt;div class="container"&gt;
+    &lt;nav class="nav flex-column"&gt;
+      &lt;a class="nav-link" href="#"&gt;Opción 1&lt;/a&gt;
+      &lt;a class="nav-link" href="#"&gt;Opción 2&lt;/a&gt;
+      &lt;a class="nav-link" href="#"&gt;Opción 3&lt;/a&gt;
+      &lt;a class="nav-link" href="#"&gt;Opción 4&lt;/a&gt;      
+      &lt;a class="nav-link disabled" href="#"&gt;Opción 5&lt;/a&gt;
+    &lt;/nav&gt;
+    &lt;/div&gt;
+
+&lt;/body&gt;
+
+&lt;/html&gt;
+</pre>
+<p>En el navegador tenemos el siguiente resultado:</p>
+<img src="imagentema/foto128.jpg" border="0" alt="bootstrap 5 nav nav-link flex-column"><br>
+<h2><a target="_blank" href="ejecutar465b.html?cod=68">Ejecutar Ejemplo</a></h2><h2><a href="indexd6cc.html?inicio=60">Retornar</a></h2> 
+
+<div>
+<!--publi-->
+<script async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<!-- adaptable2 -->
+<ins class="adsbygoogle dos"
+     style="display:inline-block"
+     data-ad-client="ca-pub-4669394804436935"
+     data-ad-slot="5774469161"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+<!--publi-->
+<script async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<!-- adaptable2 -->
+<ins class="adsbygoogle dos"
+     style="display:inline-block"
+     data-ad-client="ca-pub-4669394804436935"
+     data-ad-slot="5774469161"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+</div>
+
+
+
+
+</div>
+
+  </div>
+</div>  
+
+</div>
+
+<script type="text/javascript">
+function cambiar()
+{
+  var lista=document.getElementsByTagName('pre');
+  for(f=0;f<lista.length;f++)
+  {
+   lista[f].style.display='block';
+  }
+  document.getElementById('solucion').style.display='none';
+}
+
+</script>
+
+</body>
+
+
+<!-- Mirrored from www.tutorialesprogramacionya.com/bootstrap5ya/detalleconcepto.php?punto=68&codigo=68&inicio=60 by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 19 Dec 2023 11:11:33 GMT -->
+</html>

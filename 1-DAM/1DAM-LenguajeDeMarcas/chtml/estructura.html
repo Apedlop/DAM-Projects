@@ -1,0 +1,79 @@
+<!--Este documento ha sido generado con XT, de James Clark--><html xmlns:date="http://www.jclark.com/xt/java/java.util.Date"><head><title>Curso de HTML: Estructura del documento</title><META HTTP-EQUIV="pragma" CONTENT="no-cache"></head><!--Cuerpo del documento--><body bgcolor="#FEFEFE"><table width="630" border="0"><tr><td valign="top" align="center" width="40" rowspan="2"><a href="index.html"><img src="graficos/logo.jpg" border="0"></a></td><td align="center" width="590"><IFRAME SRC="http://ad.es.doubleclick.net/adi/ES-programacion.net/ES-redferca-programacion-html;sz=468x60;ord=44126913875755190?" name="frame1" width="468" height="60" frameborder="no" border="0" MARGINWIDTH="0" MARGINHEIGHT="0" SCROLLING="no"><SCRIPT language="JavaScript1.1" SRC="http://ad.es.doubleclick.net/adj/ES-programacion.net/ES-redferca-programacion-html;abr=!ie;sz=468x60;ord=44126913875755190?"></SCRIPT><NOSCRIPT><A HREF="http://ad.es.doubleclick.net/jump/ES-programacion.net/ES-redferca-programacion-html;abr=!ie;sz=468x60;ord=44126913875755190?"><IMG SRC="http://ad.es.doubleclick.net/ad/ES-programacion.net/ES-redferca-programacion-html;abr=!ie;sz=468x60;ord=44126913875755190?" border="0" height="60" width="468"></A></NOSCRIPT></IFRAME></td></tr><tr><td valign="top"><font face="Arial,Helvetica,sans-serif"><font size="+3" color="#005CA0"><b>10. Estructura del documento</b></font>
+      <p align="justify">La estructura de un documento HTML se puede resumir as&iacute;:</p>
+      <pre><font color="#006600" face="monospace">tipo de documento
+&lt;HTML&gt;
+&lt;HEAD&gt;
+  &lt;TITLE&gt;titulo de la p&aacute;gina&lt;/TITLE&gt;
+  cosas que afectan a la p&aacute;gina pero no a su contenido
+&lt;/HEAD&gt;
+&lt;BODY par&aacute;metros&gt;
+  contenido de la p&aacute;gina
+&lt;/BODY&gt;
+&lt;/HTML&gt;</font></pre>
+      <p align="justify">En el tipo de documento deberemos especificar a que est&aacute;ndar del
+      HTML responde nuestra p&aacute;gina entre una de las siguientes opciones:</p>
+      <dl>
+        <dt></dt><b><pre><font color="#006600" face="monospace">&lt;!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN"&gt;</font></pre></b>
+        <dd></dd>Cumple el est&aacute;ndar HTML 2.0
+        <dt></dt><b><pre><font color="#006600" face="monospace">&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN"&gt;</font></pre></b>
+        <dd></dd>Cumple el est&aacute;ndar HTML 3.2
+        <dt></dt><b><pre><font color="#006600" face="monospace">&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"
+        "http://w3.org/TR/REC-html40/loose.dtd"&gt;</font></pre></b>
+        <dd></dd>Cumple el est&aacute;ndar HTML 4.0
+        <dt></dt><b><pre><font color="#006600" face="monospace">&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN"
+        "http://w3.org/TR/REC-html40/strict.dtd"&gt;</font></pre></b>
+        <dd></dd>Cumple el est&aacute;ndar HTML 4.0 y no contiene adem&aacute;s elementos
+        desaconsejables
+        <dt></dt><b><pre><font color="#006600" face="monospace">&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Frameset//EN"
+        "http://w3.org/TR/REC-html40/frameset.dtd"&gt;</font></pre></b>
+        <dd></dd>Es una definici&oacute;n de marcos
+        que cumple el est&aacute;ndar HTML 4.0
+      </dl>
+      <p align="justify">El HTML 4.0 considera desaconsejables aquellos elementos que, a&uacute;n
+      siendo soportados, han sido sustituidos por otros m&aacute;s potentes y, por
+      ello, es posible que sean eliminados del est&aacute;ndar HTML en el futuro.</p>
+    <br><br><a name="1"></a><font size="+2" color="#005CA0">10.1. La cabecera</font>
+        <p align="justify">Suele ser el lugar m&aacute;s indicado para colocar aquellos elementos de
+        la p&aacute;gina que no alteren el contenido de la misma, aunque si la forma
+        de presentarlo y su comportamiento. Es por eso que es el lugar m&aacute;s
+        recomendable para colocar los <a href="script.html"><i>scripts</i></a>
+        y las <a href="hojas.html">hojas de estilo</a>, como
+        veremos en los cap&iacute;tulos correspondientes.</p>
+        <p align="justify">Adem&aacute;s del t&iacute;tulo de la p&aacute;gina, uno de los elementos
+        que se pueden incluir aqu&iacute; son los <tt><font color="#006600" face="monospace">META</font></tt>. Entre otras cosas,
+        sirven para indicar propiedades de la p&aacute;gina como pueda ser el nombre
+        de su autor. Por ejemplo,</p>
+        <div align="center"><pre><font color="#006600" face="monospace">&lt;META NAME="GENERATOR" CONTENT="Mozilla/4.03 [es] (Win95; I) [Netscape]"&gt;</font></pre></div>
+        <p align="justify">nos indicar&iacute;a la herramienta con que hemos creado la p&aacute;gina
+        (en este caso la versi&oacute;n 4.03 en espa&ntilde;ol para Windows 95 del
+        Composer de Netscape). Estas son las propiedades m&aacute;s comunes:</p>
+        <table align="center" border="1"><tr><th>Propiedad</th><th>Utilidad</th></tr><tr><td><tt><font color="#006600" face="monospace">AUTHOR</font></tt></td><td><font face="Arial,Helvetica,sans-serif">Autor de la p&aacute;gina.</font></td></tr><tr><td><tt><font color="#006600" face="monospace">GENERATOR</font></tt></td><td><font face="Arial,Helvetica,sans-serif">Herramienta utilizada para hacer la p&aacute;gina.</font></td></tr><tr><td><tt><font color="#006600" face="monospace">CLASSIFICATION</font></tt></td><td><font face="Arial,Helvetica,sans-serif">Palabras que permite clasificar la p&aacute;gina dentro de un
+            buscador jer&aacute;rquico (como Yahoo).</font></td></tr><tr><td><tt><font color="#006600" face="monospace">KEYWORDS</font></tt></td><td><font face="Arial,Helvetica,sans-serif">Palabras clave por las que encontrar&acute;n la p&aacute;gina
+            en los buscadores.</font></td></tr><tr><td><tt><font color="#006600" face="monospace">DESCRIPTION</font></tt></td><td><font face="Arial,Helvetica,sans-serif">Descripci&oacute;n del contenido de la p&aacute;gina.</font></td></tr></table>
+        <p align="justify">Hay tambi&eacute;n otro elemento interesante que podremos incluir en
+        nuestras cabeceras. Cuando especificamos una URL relativa en un enlace, en
+        principio es para acceder a una p&aacute;gina situada en nuestro mismo
+        servidor. Sin embargo, si especificamos:</p>
+        <div align="center"><pre><font color="#006600" face="monospace">&lt;BASE HREF="http://www.hornet.org/music"&gt;</font></pre></div>
+        <p align="justify">Ahora todas nuestras URLs relativas se referir&aacute;n al directorio
+        <samp>/music</samp> dentro del servidor
+        <samp>http://www.hornet.org</samp>.</p>
+      <br><br><a name="2"></a><font size="+2" color="#005CA0">10.2. El cuerpo</font>
+        <p align="justify">Obviamente no voy a explicar lo que entra dentro del cuerpo
+        (pr&aacute;cticamente todos los cap&iacute;tulos del curso intentan hacerlo)
+        sino los par&aacute;metros que admite la etiqueta <tt><font color="#006600" face="monospace">&lt;BODY&gt;</font></tt>:</p>
+        <table align="center" border="1"><tr><th>Par&aacute;metro</th><th>Utilidad</th></tr><tr><td><tt><font color="#006600" face="monospace">BACKGROUND</font></tt></td><td><font face="Arial,Helvetica,sans-serif">Permite definir un gr&aacute;fico de fondo para la
+            p&aacute;gina.</font></td></tr><tr><td><tt><font color="#006600" face="monospace">BGCOLOR</font></tt></td><td><font face="Arial,Helvetica,sans-serif">Permite definir el color de fondo de la p&aacute;gina.</font></td></tr><tr><td><tt><font color="#006600" face="monospace">BGPROPERTIES<img src="graficos/explorer.gif" width="26" height="26" border="0" align="middle"></font></tt></td><td><font face="Arial,Helvetica,sans-serif">Cuando es igual a <tt><font color="#006600" face="monospace">FIXED</font></tt> el gr&aacute;fico definido
+            como fondo de la p&aacute;gina permanecer&aacute; inm&oacute;vil aunque
+            utilicemos las barras de desplazamiento.</font></td></tr><tr><td><tt><font color="#006600" face="monospace">TEXT</font></tt></td><td><font face="Arial,Helvetica,sans-serif">Cambia el color del texto.</font></td></tr><tr><td><tt><font color="#006600" face="monospace">LINK</font></tt></td><td><font face="Arial,Helvetica,sans-serif">Cambia el color de un enlace no visitado (por defecto azul).</font></td></tr><tr><td><tt><font color="#006600" face="monospace">VLINK</font></tt></td><td><font face="Arial,Helvetica,sans-serif">Cambia el color de un enlace ya visitado (por defecto
+            p&uacute;rpura).</font></td></tr><tr><td><tt><font color="#006600" face="monospace">ALINK</font></tt></td><td><font face="Arial,Helvetica,sans-serif">Cambia el color que toma un enlace mientras lo estamos
+            pulsando (por defecto rojo).</font></td></tr><tr><td><tt><font color="#006600" face="monospace">LEFTMARGIN y TOPMARGIN<img src="graficos/explorer.gif" width="26" height="26" border="0" align="middle"></font></tt></td><td><font face="Arial,Helvetica,sans-serif">Especifican el n&uacute;mero de pixels que dejar&aacute; de
+            margen entre el borde de la ventana y el contenido de la p&aacute;gina.
+            Se suelen utilizar para dejarlos a cero.</font></td></tr><tr><td><tt><font color="#006600" face="monospace">MARGINWIDTH y MARGINHEIGHT<img src="graficos/netscape.gif" width="26" height="26" border="0" align="middle"></font></tt></td><td><font face="Arial,Helvetica,sans-serif">M&aacute;s o menos equivalentes a los anteriores, pero
+            &eacute;stos funcionan en Netscape.</font></td></tr></table>
+        <p align="justify">No resulta recomendable cambiar los colores del texto y enlaces a no ser
+        que exista alguna dificultad al leerlos por haber cambiado el fondo, ya que
+        en muchas ocasiones el usuario ha podido cambiarlos en las opciones de su
+        navegador y estar&aacute;n ya a su gusto.</p>
+      <p></p><img src="graficos/linea.gif" height="1" width="590"><table cellspacing="0" cellpadding="0" border="0" width="100%"><tr><td><img src="graficos/transp.gif" height="2" width="90"></td></tr></table><table cellspacing="0" cellpadding="0" border="0" width="100%"><tr><td align="left"><a href="font.html"><img src="graficos/izq.gif" align="MIDDLE" border="0"></a><font size="-1" face="Arial,Helvetica,sans-serif">Formateo fino</font></td><td align="right"><font size="-1" face="Arial,Helvetica,sans-serif">Formularios</font><a href="formularios.html"><img src="graficos/der.gif" align="MIDDLE" border="0"></a></td></tr></table><font size="-1"><div align="center">&copy; 1998-2000 <a href="mailto:multivac@idecnet.com">Daniel
+    Rodr&iacute;guez</a><br><a href="index.html"><img src="graficos/loguito.gif" border="0"></a></div></font></font></td></tr></table></body></html>

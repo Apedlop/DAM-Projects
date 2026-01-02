@@ -1,0 +1,23 @@
+.menu {
+    width: 180px;
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+    border: 1px solid #7C7C7C;
+}
+
+.menu li a {
+    padding: .2em 0 .2em 1.5em;
+    display: block;
+    color: #610B0B;
+    background: #F6CEF5 url(../../imagenes/CSS.png) no-repeat 3px;
+}
+
+.menu li {
+    border-bottom: 1px solid #7C7C7C;
+    border-top: 1px solid #FFFFFF;
+}
+
+.menu li a:hover, ul.menu li a:active {
+    background: #58FA58 url(../../imagenes/fondo.avif) no-repeat 3px;
+}

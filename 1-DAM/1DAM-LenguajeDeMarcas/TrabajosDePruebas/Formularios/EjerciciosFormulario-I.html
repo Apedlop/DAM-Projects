@@ -1,0 +1,155 @@
+<html>
+    <head>
+        <title>Ejercicios Formulario I</title>
+    </head>
+    <body>
+
+        <form action="">
+        <hr><center><h1>Ejercicio 1</h1></center> <hr>
+
+        <h2>Información sobre el producto</h2>
+
+        <fieldset>
+            <legend>Datos básicos</legend>
+            Nombre: <br>
+            <input type="text" name="Nombre" size="30" maxlength="40"> <br><br>
+            Descripción: <br>
+            <textarea name="comentario" cols="60" rows="5"></textarea> <br> <br>
+            Foto: <input type="file" name="fichero" size="40"> <br><br>
+            <input type="checkbox" name="controladorVistas" value="si">Añadir controlador de vistas
+        </fieldset>
+
+        <fieldset>
+            <legend>Datos económicos</legend>
+            Precio: <input type="text" name="precio" pattern="[0-9]+" size="5"> €
+            &nbsp &nbsp &nbsp &nbsp Impuestos: 
+            <select name="color">
+                <option value="rojo">15%</option>
+                <option value="verde">10%</option> 
+                <option value="otros" selected="selected">4%</option>  
+            </select> <br> <br>
+            Promoción: <br>
+            <input type="radio" name="ninguno" value="si"> Ninguno <br>
+            <input type="radio" name="ninguno" value="si"> Transporte público <br>
+            <input type="radio" name="ninguno" value="si"> Descuento 5% <br>
+        </fieldset>
+
+        <hr><center><h1>Ejercicio 2 - Formulario inicial</h1></center><hr>
+
+        <h2>Formulario de Alta</h2>
+
+        <h3>Nombre y apellidos *</h3>
+        <input type="text" name="nombre" size="20" maxlength="40" required> Nombre
+        <input type="text" name="apellido1" size="20" maxlength="40" required> Primer apellido
+        <input type="text" name="apellido2" size="20" maxlength="40" required> Segundo apellido
+
+        <h3>Dirección *</h3>
+        <input type="text" name="direccion" size="20" required> Calle, número, piso, puerta
+        <input type="text" name="codigoPostal" size="20" pattern="[0-9]+" required> Código postal 
+        <input type="text" name="municipio" size="20" required> Municipio
+        <select name="provincia" required>
+            <option value="nada" selected></option>
+            <option value="provincia1">Provincia 1</option>
+            <option value="provincia2">Provincia 2</option>
+            <option value="provincia3">Provincia 3</option>
+        </select> Provincia
+        <select name="pais" required>
+            <option value="nada" selected></option>
+            <option value="pais1">País 1</option>
+            <option value="pais2">País 2</option>
+            <option value="pais3">País 3</option>
+        </select>
+
+        <h3>Email *</h3>
+        <input type="text" name="email" required>
+
+        <h3>Teléfono *</h3>
+        <input type="text" name="fijo" pattern="[0-9]+" maxlength="9" required> Fijo
+        <input type="text" name="movil" pattern="[0-9]+" maxlength="9" required> Móvil <br><br>
+
+        <input type="submit" name="enviar">
+
+        <hr><center><h1>Ejercicio 2 - Estilos 1</h1></center> <hr>
+
+        <center><h2>Formulario de Alta</h2></center>
+
+        <center><table cellspacing="0" cellpadding="30">
+            <tr>
+                <td style="border-top: 1px solid grey;border-left: 1px solid grey; vertical-align: top;">
+                    <h3>Nombre y apellidos <font color="red">*</font></h3>
+                    <input type="text" name="nombre" size="10" maxlength="40" required><br>
+                    Nombre <br> <br>
+                    <input type="text" name="apellido1" size="20" maxlength="40"> <br>
+                    Primer apellido <br> <br>
+                    <input type="text" name="apellido2" size="20" maxlength="40"> <br>
+                    Segundo apellido <br><br>
+                </td>
+                <td style="border-top: 1px solid grey;border-right: 1px solid grey;">
+                    <h3>Dirección <font color="red">*</font></h3>
+                    <input type="text" name="dirección" size="20" required><br>
+                    Calle, número, piso, puerta <br><br>
+                    <input type="text" name="codigoPostal" size="20" pattern="[0-9]+" required> <br>
+                    Código postal  <br><br>
+                    <input type="text" name="municipio" size="20" required><br>
+                    Municipio <br> <br>
+
+                    <table>
+                        <tr>
+                            <td>
+                                <select name="provincia" required>
+                                    <option value="nada" selected></option>
+                                    <option value="provincia1">Provincia 1</option>
+                                    <option value="provincia2">Provincia 2</option>
+                                    <option value="provincia3">Provincia 3</option>
+                                </select> <br>
+                                Provincia 
+                            </td>
+                            <td>
+                                <select name="pais" required>
+                                    <option value="nada" selected></option>
+                                    <option value="pais1">País 1</option>
+                                    <option value="pais2">País 2</option>
+                                    <option value="pais3">País 3</option>
+                                </select> <br>
+                                País
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td style="border-left: 1px solid grey;">
+                    <h3>Email <font color="red">*</font> </h3>
+                    <input type="text" name="email" size="10" required>
+                </td>
+                <td style="border-right: 1px solid grey;">
+                    <h3>Teléfono <font color="red">*</font></h3>
+
+                    <table>
+                        <tr>
+                            <td>
+                                <input type="text" name="fijo" pattern="[0-9]+" maxlength="9" size="10" required> <br>
+                                Fijo
+                            </td>
+                            <td>
+                                <input type="text" name="movil" pattern="[0-9]+" maxlength="9" size="10" required> <br>
+                                Móvil
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td style="border-bottom: 1px solid grey;border-left: 1px solid grey;">
+                    <input type="submit">
+                </td>
+                <td style="border-bottom: 1px solid grey;border-right: 1px solid grey;">
+
+                </td>
+            </tr>
+        </table></center>
+
+        </form>
+
+    </body>
+</html>

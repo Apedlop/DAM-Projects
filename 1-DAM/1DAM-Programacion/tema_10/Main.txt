@@ -1,0 +1,42 @@
+package actRes;
+
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+
+public class ActRes10_3 {
+
+    public static void main(String[] args) {
+        // Declaración e inicialización de variables
+        String texto = ""; // Almacenará el contenido del archivo de texto
+        BufferedReader in = null; // Para leer el archivo
+
+        try {
+            // Abrir el archivo para lectura
+            in = new BufferedReader(new FileReader("Main.txt"));
+
+            // Leer línea por línea del archivo
+            String linea = in.readLine();
+            while (linea != null) {
+                texto = texto + linea + '\n'; // Agregar la línea al contenido del texto
+                linea = in.readLine(); // Leer la siguiente línea
+            }
+        } catch (IOException ex) {
+            // Manejar la excepción en caso de error de lectura del archivo
+            System.out.println("Error al leer el archivo: " + ex.getMessage());
+        } finally {
+            // Cerrar el archivo en el bloque finally para asegurarse de que se cierre incluso si ocurre una excepción
+            if (in != null) {
+                try {
+                    in.close();
+                } catch (IOException ex) {
+                    // Manejar la excepción en caso de error al cerrar el archivo
+                    System.out.println("Error al cerrar el archivo: " + ex.getMessage());
+                }
+            }
+        }
+
+        // Imprimir el contenido del archivo
+        System.out.println(texto);
+    }
+}

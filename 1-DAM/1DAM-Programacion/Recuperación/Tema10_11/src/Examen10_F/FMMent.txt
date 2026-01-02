@@ -1,0 +1,20 @@
+Nombre: Juan Perez
+Fecha de Nacimiento: 12-10-2004
+Departamento: Ventas
+Salario: 2500
+---
+Nombre: Maria Lopez
+Fecha de Nacimiento: 22-10-2004
+Departamento: Recursos Humanos
+Salario: 3200
+---
+Nombre: Natalia Limon
+Fecha de Nacimiento: 22-10-2003
+Departamento: Programacion
+Salario: 3200
+---
+Nombre: Daniel Caro
+Fecha de Nacimiento: 2-8-2005
+Departamento: Programacion
+Salario: 3200
+---

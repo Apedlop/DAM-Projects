@@ -1,0 +1,3 @@
+Nombre: Juan Pedro Pérez Gómez	Estatura: 1.8
+Nombre: Ana Ruiz del Val	Estatura: 1.75
+Nombre: Manolo Pardo López	Estatura: 1.68

@@ -1,0 +1,3 @@
+DNI: 12, Nombre: Luis, Apellido: Fuente, Nota 1: 5.0, Nota 2: 5.0, Nota 3: 8.0, Nota Media: 6.0
+DNI: 20, Nombre: María, Apellido: López, Nota 1: 4.0, Nota 2: 7.0, Nota 3: 5.0, Nota Media: 5.333333333333333
+DNI: 30, Nombre: çMartin, Apellido: Benito, Nota 1: 4.0, Nota 2: 2.0, Nota 3: 4.0, Nota Media: 3.3333333333333335

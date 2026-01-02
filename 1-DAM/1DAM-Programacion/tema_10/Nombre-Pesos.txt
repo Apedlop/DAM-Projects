@@ -1,0 +1,3 @@
+Nombre: Juan Pedro Pérez Gómez	Peso: 71.5
+Nombre: Ana Ruiz del Val	Peso: 60.0
+Nombre: Manolo Pardo López	Peso: 80.75

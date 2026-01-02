@@ -1,0 +1,4 @@
+NOMBRE: Daniel Caro EDAD: 19
+NOMBRE: Juan Perez EDAD: 20
+NOMBRE: Maria Lopez EDAD: 20
+NOMBRE: Natalia Limon EDAD: 21
